@@ -96,14 +96,14 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "cd9bad294253869ff9d0cd3716304828f0997e94bdc743f776720944c104fc79",
-      "bytes": 15332,
+      "sha256": "d50e9b25cf0c6758d0f11cb489e2611992bfb591e43e87a4f52c78ecd33443c4",
+      "bytes": 15327,
       "rows": null
     },
     {
       "path": "assets/site.js",
-      "sha256": "526eed2c8078441c217d421160e0afaf71821b9e7832f5ae2ebb577f83adcd86",
-      "bytes": 16863,
+      "sha256": "5ced57516f0f612cd0c9ff83e84bad9ce6d5faacbd7268b727a4569a7ad29e5b",
+      "bytes": 17074,
       "rows": null
     },
     {
@@ -396,8 +396,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "536e1ef8a3829fb81474b57115f4c45b39d7663a0bd0043e86efcefaebbfcf60",
-      "bytes": 6217,
+      "sha256": "ef49951e00995666ec8603cae089b04a7e755f56b72572d71cbb6b78dc15cc99",
+      "bytes": 6450,
       "rows": null
     },
     {
@@ -437,14 +437,14 @@
       "rows": 1726
     },
     {
-      "path": "public/data/releases/v2.4.0/cards.json",
-      "sha256": "ce9757ca4bc83c3031d4dc22e99919ef1b570d7ae23f1875e0f48acf344334e7",
-      "bytes": 3989062,
+      "path": "public/data/releases/v2.5.0/cards.json",
+      "sha256": "6c5796cec3cea7013e08d65e6a50580865fd7fbc89dad446ac28b0823e7242fb",
+      "bytes": 4550349,
       "rows": 1711
     },
     {
-      "path": "public/data/releases/v2.4.0/hierarchy.json",
-      "sha256": "e2b90cc756e923ea89fb88395cd8e5462764911d0de501ccc8aad22b27598384",
+      "path": "public/data/releases/v2.5.0/hierarchy.json",
+      "sha256": "4d631441c3190874545306ab5cc1871ba2450b6f7bcd373eb5c4c275aada2d89",
       "bytes": 52472,
       "rows": 60
     },
@@ -504,8 +504,8 @@
     },
     {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
-      "sha256": "77cfb3c7dc3525604956ed045546036682197cd04ab8feb88babeee9e1874d0d",
-      "bytes": 23301,
+      "sha256": "3c9463861225d5e5bf0e5bfc3c080a5582ce403c07c5d0c29cd057aa2ae81324",
+      "bytes": 24480,
       "rows": null
     },
     {
@@ -540,8 +540,8 @@
     },
     {
       "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf",
-      "sha256": "f6bd35a072ca270a5b7c02a28543cbe63c0bce9a772002aa54862ef905376c80",
-      "bytes": 149418,
+      "sha256": "a8f3810d4295f806cd6f083d13ed900430a76f5fa82e2833d0b91e141167512d",
+      "bytes": 152037,
       "rows": null
     },
     {
@@ -570,8 +570,8 @@
     },
     {
       "path": "reports/statistics/top_down_evidence_funnel.json",
-      "sha256": "fcf31b4869d6cc8ac994d67844f267a6e51f578cc9757cdc4e9c7e40d62ae289",
-      "bytes": 3377,
+      "sha256": "c80b63e2ba38577414f8eca2a948c961fc2a813287121ceaa82d079260e91f21",
+      "bytes": 3640,
       "rows": null
     },
     {
@@ -756,8 +756,8 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "06354947e58843710f6240c916082bae408c3b1c45e4fa27652279dbed12610d",
-      "bytes": 113079,
+      "sha256": "b0766cb54a80052751b8d643a476ce12d0bf20a0cbe8b55b971f14ea0c68437f",
+      "bytes": 113073,
       "rows": null
     },
     {
@@ -881,6 +881,12 @@
       "rows": null
     },
     {
+      "path": "scripts/localize_nonphysical_cards_v2_5.py",
+      "sha256": "3c4d3ae9e96c3a6fb6620783d47fadfd8264442b3d118bb3d6a93cd7acb3d64e",
+      "bytes": 10838,
+      "rows": null
+    },
+    {
       "path": "scripts/remove_physical_l3_leakage_v2_3.py",
       "sha256": "0948ff44a4ea3091d631eeeef54a19cb163633fb737fd771d1b6fbce20563be9",
       "bytes": 5708,
@@ -906,8 +912,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "ca38d3100fb2c81e7b18db5101137be24e2cdb3c2e578c3a4795fd687b446fa7",
-      "bytes": 54370,
+      "sha256": "1ab133acb6d33d6ebe646c053c15e5ac8fa3998e88c7ad102e0ee302817c4ec8",
+      "bytes": 54364,
       "rows": null
     },
     {
@@ -948,7 +954,7 @@
     },
     {
       "path": "tests/test_release.py",
-      "sha256": "5a084ea41b7a7909dcce6cb3a33bdaab2e600eed8b766e45929baf70130b2523",
+      "sha256": "7c08aa97e2c8fcf591419cfc97dae30239877992501ef24dacdd76c1d7843789",
       "bytes": 8707,
       "rows": null
     },
@@ -966,8 +972,8 @@
     },
     {
       "path": "tests/test_site_v2.py",
-      "sha256": "b492e7e90ff9021e6568ac3609f8beaa24a81c02a68cd0b0312501fd168c035a",
-      "bytes": 5891,
+      "sha256": "01e43f5d90f24876f54c17e8f63aac842b78346d572560e036e1f8245f8d5326",
+      "bytes": 7118,
       "rows": null
     }
   ],

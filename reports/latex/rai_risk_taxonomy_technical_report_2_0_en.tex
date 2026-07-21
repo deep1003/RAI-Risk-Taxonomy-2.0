@@ -190,6 +190,23 @@ not displayed for any card because the cards do not constitute a common
 measurement population suitable for relative ranking. Existing percentile
 fields remain provenance data only.
 
+\subsection{Complete English--Korean localization}
+
+Release v2.5 requires bilingual display at every taxonomy level. The supplied
+L0--L3 terminology and Korean definitions are used as the controlled glossary.
+The 182 Physical L4 cards retain their authoritative bilingual source text. For
+the remaining 1,529 cards, the localization pipeline removes the repeated
+provenance boilerplate from each English definition, selects the first sentence
+that states the core failure mechanism, generates a concise Korean definition,
+and normalizes risk-domain terminology. Context-sensitive corrections include
+\textit{poisoning} as ``data or model contamination'' rather than substance
+addiction, \textit{washing} as false compliance presentation, and
+\textit{rubber stamping} as nominal approval. Every generated row retains the
+English source-sentence hash, method, and \code{human\_review\_status=pending}.
+Thus all 1,711 cards contain non-empty English and Korean labels and definitions,
+while automated Korean drafts remain explicitly reviewable rather than being
+represented as human-approved ground truth.
+
 \subsection{Stage E: L3 assignment policy}
 
 The final policy view assigns all 1,711 canonical L4 cards to one of 50 L3 nodes
@@ -469,7 +486,7 @@ The 182 Physical mappings and 37 Stage 1 expert-consensus mappings remain
 unchanged in later stages. Repeated Stage 2 and Stage 3 builds produce
 byte-identical placement hashes. The Stage 2 validator reports 13 PASS, 0 FAIL,
 and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and 4 WARN. The
-release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 24 repository
+release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 28 repository
 tests pass at the time of this report revision.
 
 Three limitations directly affect interpretation. First, cross-category
@@ -498,11 +515,12 @@ available in the repository:
 \begin{itemize}[leftmargin=2em]
   \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
   \item \small\nolinkurl{data/experiments/stage3-forced-policy-v2/placements.json}
-  \item \small\nolinkurl{public/data/releases/v2.4.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.5.0/cards.json}
   \item \small\nolinkurl{reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json}
   \item \small\nolinkurl{reports/expert_review/v2.1/consensus_result.json}
   \item \small\nolinkurl{reports/data_quality/physical_l3_label_leakage_v2.3.json}
   \item \small\nolinkurl{reports/data_quality/physical_card_sync_v2.4.json}
+  \item \small\nolinkurl{reports/localization/nonphysical_l4_ko_v2.5.json}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.

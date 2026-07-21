@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class SiteV2Tests(unittest.TestCase):
     def test_site_bundle_matches_review_hold_policy(self) -> None:
-        bundle = ROOT / "public/data/releases/v2.4.0"
+        bundle = ROOT / "public/data/releases/v2.5.0"
         cards = json.loads((bundle / "cards.json").read_text())["cards"]
         manifest = json.loads((bundle / "manifest.json").read_text())
         self.assertEqual(len(cards), 1711)
@@ -23,7 +23,7 @@ class SiteV2Tests(unittest.TestCase):
 
     def test_hold_marked_cards_remain_inside_the_l3_tree(self) -> None:
         cards = json.loads(
-            (ROOT / "public/data/releases/v2.4.0/cards.json").read_text()
+            (ROOT / "public/data/releases/v2.5.0/cards.json").read_text()
         )["cards"]
         holds = [row for row in cards if row["decision_required"]]
         self.assertEqual(len(holds), 76)
@@ -31,7 +31,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertTrue(all(row["operational_bucket_id"] is None for row in holds))
 
     def test_physical_cards_and_duplicate_crosswalk_are_preserved(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.4.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
         crosswalk = json.loads(
             (ROOT / "reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json").read_text()
         )
@@ -40,7 +40,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertTrue(all(row["retired_l4_id"] != row["canonical_l4_id"] for row in crosswalk))
 
     def test_no_exact_label_and_core_definition_duplicates_remain(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.4.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
 
         def normalized(value: str) -> str:
             value = unicodedata.normalize("NFKC", value or "").casefold()
@@ -53,7 +53,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertEqual(len(keys), len(set(keys)))
 
     def test_two_reviewer_consensus_amendment_is_applied(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.4.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
         card = next(row for row in cards if row["l4_id"] == "RAI4-0888")
         self.assertEqual(card["original_label_en"], "Privacy concerns")
         self.assertEqual(card["label_en"], "Anthropomorphic trust-induced privacy disclosure")
@@ -62,7 +62,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertFalse(card["decision_required"])
 
     def test_physical_l3_labels_are_excluded_from_l4_pool(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.4.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
         audit = json.loads((ROOT / "reports/data_quality/physical_l3_label_leakage_v2.3.json").read_text())
         excluded_ids = {row["l4_id"] for row in audit["excluded"]}
         self.assertEqual(len(excluded_ids), 14)
@@ -71,7 +71,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertEqual(sum(row["primary_l3_id"].startswith("RAI3-P-") for row in cards), 182)
 
     def test_all_physical_cards_are_synced_from_authoritative_source(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.4.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
         physical = [row for row in cards if row["assignment_status"] == "locked_physical"]
         self.assertEqual(len(physical), 182)
         self.assertTrue(all(row["physical_source_sync"] == "v2.4.0" for row in physical))
@@ -100,9 +100,27 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn('href="?domain=RAI1-G"', page)
         self.assertIn('href="?domain=RAI1-A"', page)
         self.assertIn('href="?domain=RAI1-P"', page)
-        self.assertIn("General-purpose AI", page)
+        self.assertIn("General-purpose AI (범용 AI)", page)
+        self.assertIn("Agentic AI (에이전틱 AI)", page)
+        self.assertIn("Physical AI (피지컬 AI)", page)
         nav = page.split('<nav class="domain-nav"', 1)[1].split("</nav>", 1)[0]
         self.assertNotRegex(nav, r">\s*[\d,]+\s*<")
+
+    def test_every_card_has_english_korean_bilingual_content(self) -> None:
+        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        self.assertEqual(len(cards), 1711)
+        self.assertTrue(all(row["label_en"].strip() and row["definition_en"].strip() for row in cards))
+        self.assertTrue(all(re.search(r"[가-힣]", row["label_ko"]) for row in cards))
+        self.assertTrue(all(re.search(r"[가-힣]", row["definition_ko"]) for row in cards))
+        nonphysical = [row for row in cards if row["assignment_status"] != "locked_physical"]
+        self.assertEqual(len(nonphysical), 1529)
+        self.assertTrue(all(row["localization_review_status"] == "pending" for row in nonphysical))
+
+    def test_all_levels_render_english_korean_labels(self) -> None:
+        script = (ROOT / "assets/site.js").read_text()
+        self.assertIn("function bilingualLabel(english, korean)", script)
+        self.assertIn("bilingualLabel(card.label_en, card.label_ko)", script)
+        self.assertIn("bilingualLabel(l3.label_en, l3.label_ko)", script)
 
 
 if __name__ == "__main__":

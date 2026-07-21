@@ -123,8 +123,8 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .status--proposed { color: #5925dc; background: #f4f3ff; }
 .status--decision { color: #b54708; background: #fffaeb; }
 .risk-card h3 { margin: 12px 0 7px; font-size: 14px; line-height: 1.35; letter-spacing: -.012em; }
-.risk-card__ko { margin: -3px 0 7px; color: #475467; font-size: 11px; }
 .risk-card__definition { display: -webkit-box; overflow: hidden; margin: 0; color: #667085; font-size: 11px; line-height: 1.55; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+.risk-card__definition span { color: #475467; }
 .risk-card__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; }
 .breadcrumb { display: -webkit-box; overflow: hidden; color: #667085; font-size: 9px; line-height: 1.45; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .metric { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; color: #98a2b3; font-size: 8px; }
@@ -145,11 +145,11 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .dialog-close { position: absolute; top: 14px; right: 14px; z-index: 2; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; background: white; color: #475467; font-size: 22px; line-height: 1; }
 .dialog-body { padding: 28px; }
 .dialog-body h2 { margin: 12px 45px 5px 0; font-size: 23px; line-height: 1.25; letter-spacing: -.03em; }
-.dialog-ko { margin: 0 0 18px; color: #667085; }
 .dialog-path { margin: 13px 0; padding: 9px 11px; border-radius: 8px; background: #f2f4f7; color: #475467; font-size: 10px; }
 .dialog-section { margin-top: 22px; }
 .dialog-section h3 { margin: 0 0 7px; color: #344054; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
 .dialog-section p { margin: 0; color: #475467; font-size: 13px; line-height: 1.68; }
+.dialog-section .definition-ko { margin-top: 8px; color: #667085; }
 .dialog-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 18px; }
 .dialog-metrics div { padding: 10px; border: 1px solid var(--line); border-radius: 8px; }
 .dialog-metrics span { display: block; color: #98a2b3; font-size: 9px; }

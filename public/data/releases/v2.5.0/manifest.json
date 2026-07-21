@@ -1,0 +1,38 @@
+{
+  "release_id": "v2.5.0",
+  "source_release": "v2.4.0",
+  "release_status": "complete_english_korean_bilingual_display",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "physical_total": 182,
+    "nonphysical_cards_localized": 1529,
+    "cards_with_korean_label": 1711,
+    "cards_with_korean_definition": 1711,
+    "decision_required": 76,
+    "l3_nodes": 50
+  },
+  "localization_quality_checks": {
+    "expected_rows": true,
+    "unique_ids": true,
+    "all_labels_have_korean": true,
+    "all_definitions_have_korean": true,
+    "no_empty_fields": true,
+    "definition_length_max": true
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "6c5796cec3cea7013e08d65e6a50580865fd7fbc89dad446ac28b0823e7242fb"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "4d631441c3190874545306ab5cc1871ba2450b6f7bcd373eb5c4c275aada2d89"
+    },
+    {
+      "path": "reports/localization/nonphysical_l4_ko_v2.5.json",
+      "sha256": "1ea7955b95a2d8dba798e685e49dd7e043ff7d46d50cceaac74f57fbc44a612e"
+    }
+  ]
+}

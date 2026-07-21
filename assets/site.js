@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.4.0";
+const DATA_ROOT = "public/data/releases/v2.5.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -148,7 +148,7 @@ function refreshDependentFilters() {
 }
 
 function fillSelect(select, nodes, allLabel, selected = "all") {
-  select.innerHTML = `<option value="all">${allLabel}</option>${nodes.map((node) => `<option value="${node.node_id}">${escapeHtml(node.label_en)}</option>`).join("")}`;
+  select.innerHTML = `<option value="all">${allLabel}</option>${nodes.map((node) => `<option value="${node.node_id}">${bilingualLabel(node.label_en, node.label_ko)}</option>`).join("")}`;
   select.value = selected;
 }
 
@@ -173,10 +173,10 @@ function renderTree() {
   const hierarchy = domains.map((domain) => {
     const l2Nodes = childrenByParent.get(domain.node_id) || [];
     return `<details class="tree-domain" open style="--domain-color:${DOMAIN_COLORS[domain.node_id]}">
-      <summary><span class="tree-dot"></span>${escapeHtml(domain.label_en)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
+      <summary><span class="tree-dot"></span>${bilingualLabel(domain.label_en, domain.label_ko)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
       <div class="tree-children">
-        ${l2Nodes.map((l2) => `<button class="tree-node" type="button" data-node="${l2.node_id}"><code>${l2.node_id.replace("RAI2-", "")}</code><span>${escapeHtml(l2.label_en)}</span><b>${counts.get(l2.node_id) || 0}</b></button>
-          <div class="tree-children">${(childrenByParent.get(l2.node_id) || []).map((l3) => `<button class="tree-node" type="button" data-node="${l3.node_id}"><code>${l3.node_id.replace("RAI3-", "")}</code><span>${escapeHtml(l3.label_en)}</span><b>${counts.get(l3.node_id) || 0}</b></button>`).join("")}</div>`).join("")}
+        ${l2Nodes.map((l2) => `<button class="tree-node" type="button" data-node="${l2.node_id}"><code>${l2.node_id.replace("RAI2-", "")}</code><span>${bilingualLabel(l2.label_en, l2.label_ko)}</span><b>${counts.get(l2.node_id) || 0}</b></button>
+          <div class="tree-children">${(childrenByParent.get(l2.node_id) || []).map((l3) => `<button class="tree-node" type="button" data-node="${l3.node_id}"><code>${l3.node_id.replace("RAI3-", "")}</code><span>${bilingualLabel(l3.label_en, l3.label_ko)}</span><b>${counts.get(l3.node_id) || 0}</b></button>`).join("")}</div>`).join("")}
       </div>
     </details>`;
   }).join("");
@@ -278,12 +278,11 @@ function render() {
 
 function cardTemplate(card) {
   const path = cardPath.get(card.l4_id);
-  const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "L3 not assigned";
+  const pathLabel = path.nodes.length ? path.nodes.map((node) => `${node.label_en} (${node.label_ko})`).join(" › ") : "L3 not assigned";
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:#3867d6" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
     <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
-    <h3>${escapeHtml(card.label_en)}</h3>
-    ${card.label_ko ? `<p class="risk-card__ko">${escapeHtml(card.label_ko)}</p>` : ""}
-    <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")}</p>
+    <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
+    <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
       ${card.severity_1to5 != null ? `<span class="metric"><small>SEVERITY</small><strong>${formatMetric(card.severity_1to5)}</strong></span>` : ""}
@@ -315,7 +314,10 @@ function renderActiveFilter() {
   const labels = [];
   if (state.query) labels.push(`검색 “${state.query}”`);
   if (state.status !== "all") labels.push(ASSIGNMENT_META[state.status].label);
-  [state.l1, state.l2, state.l3].filter((value) => value !== "all").forEach((id) => labels.push(`${id} ${nodeById.get(id)?.label_en || ""}`));
+  [state.l1, state.l2, state.l3].filter((value) => value !== "all").forEach((id) => {
+    const node = nodeById.get(id);
+    labels.push(`${id} ${node?.label_en || ""} (${node?.label_ko || ""})`);
+  });
   ui.activeFilter.hidden = labels.length === 0;
   ui.activeFilter.textContent = labels.length ? `적용 필터 · ${labels.join(" · ")}` : "";
 }
@@ -332,11 +334,9 @@ function openCard(l4Id) {
   const tags = card.three_h_one_r || [];
   ui.dialogContent.innerHTML = `<div class="dialog-body">
     <div><span class="risk-id">${card.l4_id}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
-    <h2>${escapeHtml(card.label_en)}</h2>
-    ${card.label_ko ? `<p class="dialog-ko">${escapeHtml(card.label_ko)}</p>` : ""}
-    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : "L3 not assigned"}</div>
-    <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p></section>
-    ${card.definition_ko ? `<section class="dialog-section"><h3>한국어 정의</h3><p>${escapeHtml(card.definition_ko)}</p></section>` : ""}
+    <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
+    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
+    <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>
     <div class="dialog-metrics">
       <div><span>Severity</span><strong>${formatMetric(card.severity_1to5)}</strong></div>
       <div><span>Probability</span><strong>${formatMetric(card.probability_0to1)}</strong></div>
@@ -361,6 +361,10 @@ function formatMetric(value) {
   if (value == null || Number.isNaN(Number(value))) return "–";
   const numeric = Number(value);
   return numeric.toFixed(Math.abs(numeric) < 1 ? 3 : 1);
+}
+
+function bilingualLabel(english, korean) {
+  return korean ? `${escapeHtml(english)} (${escapeHtml(korean)})` : escapeHtml(english);
 }
 
 function escapeHtml(value) {

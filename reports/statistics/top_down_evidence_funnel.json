@@ -49,5 +49,6 @@
   "expert_review": {"reviewers": 2, "reviewed_per_reviewer": 1725, "proposal_counts": [30, 14], "consensus_amendments": 1, "no_consensus_cards": 42},
   "taxonomy_level_validation": {"authoritative_physical_l3_labels": 24, "exact_label_leaks_excluded": 14, "physical_l4_lock_retained": 182, "matching_policy": "normalized exact label only"},
   "physical_content_sync": {"release": "v2.4.0", "cards": 182, "reference_rows": 360, "references_with_justification": 359, "missing_justification_rows": 1, "percentile_displayed": false},
+  "bilingual_localization": {"release": "v2.5.0", "cards_with_english_korean_labels": 1711, "cards_with_english_korean_definitions": 1711, "nonphysical_generated_drafts": 1529, "physical_authoritative_bilingual_cards": 182, "generated_review_status": "pending"},
   "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
 }

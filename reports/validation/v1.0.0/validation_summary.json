@@ -126,11 +126,11 @@
       "check_id": "INT-001",
       "description": "Checksum ledger exactly covers the project integrity scope",
       "expected": {
-        "files": 151,
+        "files": 152,
         "mismatches": 0
       },
       "actual": {
-        "files": 151,
+        "files": 152,
         "mismatches": 0
       },
       "status": "PASS",
@@ -4550,7 +4550,7 @@
     },
     {
       "check_id": "SITE-009",
-      "description": "Static HTML explorer targets the Physical-synced v2.4.0 policy bundle",
+      "description": "Static HTML explorer targets the bilingual v2.5.0 policy bundle",
       "expected": 0,
       "actual": 0,
       "status": "PASS",
