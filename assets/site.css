@@ -51,6 +51,10 @@ a { color: inherit; }
 .domain-pill--agentic { color: var(--agentic); }
 .domain-pill--physical { color: var(--physical); }
 .domain-pill--decision { color: var(--decision); }
+.report-pill { display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto; margin-left: auto; padding: 7px 12px; border-radius: 999px; background: #173458; color: white; text-decoration: none; font-size: 12px; font-weight: 750; }
+.report-pill:hover { background: #102b4d; }
+.report-pill:focus-visible { outline: 3px solid rgba(23,52,88,.24); outline-offset: 2px; }
+.report-pill b { padding: 2px 7px; border-radius: 999px; background: #c7352c; color: white; font-size: 9px; letter-spacing: .04em; }
 
 main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .overview, .explorer { margin-bottom: 34px; }
@@ -86,7 +90,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .clear-button { height: 38px; padding: 0 12px; border: 1px solid #d0d5dd; border-radius: 8px; background: #f9fafb; color: #475467; font-size: 11px; font-weight: 650; }
 .clear-button:hover { background: #f2f4f7; }
 
-.explorer-layout { display: grid; grid-template-columns: 286px minmax(0, 1fr); gap: 12px; align-items: start; }
+.explorer-layout { display: grid; grid-template-columns: 312px minmax(0, 1fr); gap: 12px; align-items: start; }
 .taxonomy-panel { position: sticky; top: 72px; max-height: calc(100vh - 90px); overflow: hidden; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .taxonomy-panel__head { display: flex; align-items: center; justify-content: space-between; padding: 14px 15px; border-bottom: 1px solid var(--line); }
 .taxonomy-panel__head div { display: flex; flex-direction: column; gap: 2px; }
@@ -116,7 +120,10 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .risk-card:hover { transform: translateY(-2px); border-color: #c4c9d2; box-shadow: 0 8px 20px rgba(16,24,40,.08); }
 .risk-card:focus-visible { outline: 3px solid rgba(56,103,214,.25); outline-offset: 2px; }
 .risk-card__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.risk-card__identity, .dialog-identity { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
 .risk-id { color: #475467; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 750; letter-spacing: .03em; }
+.risk-id--domain { padding: 4px 7px; border-radius: 6px; background: var(--card-accent); color: white; }
+.domain-badge { padding: 3px 6px; border-radius: 999px; background: color-mix(in srgb, var(--card-accent) 10%, white); color: var(--card-accent); font-size: 8px; font-weight: 750; letter-spacing: .02em; }
 .status-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px; border-radius: 999px; font-size: 9px; font-weight: 750; white-space: nowrap; }
 .status-badge::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 .status--locked { color: #b42318; background: #fef3f2; }
@@ -144,6 +151,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .card-dialog::backdrop { background: rgba(16,24,40,.58); backdrop-filter: blur(3px); }
 .dialog-close { position: absolute; top: 14px; right: 14px; z-index: 2; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; background: white; color: #475467; font-size: 22px; line-height: 1; }
 .dialog-body { padding: 28px; }
+.dialog-identity { padding-right: 44px; }
 .dialog-body h2 { margin: 12px 45px 5px 0; font-size: 23px; line-height: 1.25; letter-spacing: -.03em; }
 .dialog-path { margin: 13px 0; padding: 9px 11px; border-radius: 8px; background: #f2f4f7; color: #475467; font-size: 10px; }
 .dialog-section { margin-top: 22px; }
@@ -182,6 +190,7 @@ footer p { margin: 0; }
   .taxonomy-panel { position: static; max-height: none; }
   .taxonomy-tree { max-height: 360px; }
   footer { padding: 22px 18px; align-items: flex-start; flex-direction: column; }
+  .report-pill { margin-left: 6px; }
 }
 @media (max-width: 560px) {
   .hero__inner { padding-top: 24px; padding-bottom: 22px; }

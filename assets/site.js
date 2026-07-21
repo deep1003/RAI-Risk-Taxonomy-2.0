@@ -29,6 +29,12 @@ const DOMAIN_COLORS = {
   "RAI1-P": "#c0392b",
 };
 
+const DOMAIN_LABELS = {
+  "RAI1-G": "General-purpose AI",
+  "RAI1-A": "Agentic AI",
+  "RAI1-P": "Physical AI",
+};
+
 document.addEventListener("DOMContentLoaded", init);
 
 async function init() {
@@ -287,8 +293,10 @@ function render() {
 function cardTemplate(card) {
   const path = cardPath.get(card.l4_id);
   const pathLabel = path.nodes.length ? path.nodes.map((node) => `${node.label_en} (${node.label_ko})`).join(" › ") : "L3 not assigned";
-  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:#3867d6" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
-    <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
+  const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
+  const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
+  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
+    <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge">${escapeHtml(domainLabel)}</span></div>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
     <div class="risk-card__bottom">
@@ -344,8 +352,10 @@ function openCard(l4Id) {
   const path = cardPath.get(card.l4_id);
   const references = card.references || [];
   const tags = card.three_h_one_r || [];
-  ui.dialogContent.innerHTML = `<div class="dialog-body">
-    <div><span class="risk-id">${card.l4_id}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
+  const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
+  const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
+  ui.dialogContent.innerHTML = `<div class="dialog-body" style="--card-accent:${domainColor}">
+    <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge">${escapeHtml(domainLabel)}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>

@@ -135,6 +135,26 @@ class SiteV2Tests(unittest.TestCase):
         self.assertEqual({row["label_en"] for row in l2_path_nodes}, {row["label_en"] for row in categories})
         self.assertTrue(all(row["canonical_l2_id"] for row in l2_path_nodes))
 
+    def test_hierarchy_width_and_l1_card_colors(self) -> None:
+        css = (ROOT / "assets/site.css").read_text()
+        script = (ROOT / "assets/site.js").read_text()
+        self.assertIn("grid-template-columns: 312px minmax(0, 1fr)", css)
+        self.assertIn("risk-id--domain", css)
+        self.assertIn("domain-badge", css)
+        self.assertIn('"RAI1-G": "#3867d6"', script)
+        self.assertIn('"RAI1-A": "#148f77"', script)
+        self.assertIn('"RAI1-P": "#c0392b"', script)
+        self.assertIn("DOMAIN_COLORS[path.l1]", script)
+        self.assertIn("DOMAIN_LABELS[path.l1]", script)
+
+    def test_technical_report_draft_button(self) -> None:
+        page = (ROOT / "index.html").read_text()
+        css = (ROOT / "assets/site.css").read_text()
+        self.assertIn('class="report-pill"', page)
+        self.assertIn("Technical Report <b>DRAFT</b>", page)
+        self.assertIn('href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf"', page)
+        self.assertIn(".report-pill", css)
+
 
 if __name__ == "__main__":
     unittest.main()
