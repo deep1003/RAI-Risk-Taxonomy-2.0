@@ -1,0 +1,50 @@
+{
+  "stage2_id": "stage2-v1",
+  "base_release_id": "v1.0.0",
+  "classification_authority": "algorithmic_proposal_only_not_human_approved",
+  "target_unclassified_rate": 0.1,
+  "target_unclassified_count": 173,
+  "actual_unclassified_count": 173,
+  "actual_unclassified_rate": 0.100232,
+  "actual_classified_count": 1553,
+  "actual_classified_rate": 0.899768,
+  "status_counts": {
+    "algorithm_proposed_stage2": 1334,
+    "needs_taxonomy_decision": 173,
+    "stage1_algorithm_proposed": 37,
+    "locked_physical": 182
+  },
+  "fit_tier_counts": {
+    "stage2_medium": 475,
+    "stage2_high": 206,
+    "stage2_low": 653,
+    "stage2_hold": 173,
+    "stage1_consensus": 37,
+    "physical_gold": 182
+  },
+  "hard_hold_count": 55,
+  "quota_hold_count": 118,
+  "hold_reason_counts": {
+    "PHYSICAL_OUTSIDE_LOCK": 23,
+    "BOTTOM_10_PERCENT_SUITABILITY_RESERVE": 118,
+    "FRONTIER_EXPERT_REJECTED": 17,
+    "FRONTIER_EXPERT_DISAGREEMENT": 7,
+    "MULTI_MECHANISM": 6,
+    "LOW_ABSOLUTE_FIT": 2
+  },
+  "new_stage2_assignments": 1334,
+  "new_assignments_without_rule_support": 1214,
+  "new_assignments_with_taxonomy_gap_override": 247,
+  "soft_hold_threshold_last_hold": 0.250476,
+  "soft_hold_threshold_first_assignment": 0.251094,
+  "largest_l3_count": 228,
+  "largest_l3_share_of_all_assigned": 0.146813,
+  "legacy_hierarchy_used_as_feature": false,
+  "physical_locks_changed": 0,
+  "stage1_consensus_changed": 0,
+  "warnings": [
+    "Stage 2 assignments are not human-approved ground truth.",
+    "Quota calibration deliberately assigns many cards that lacked Stage 1 rule eligibility.",
+    "Taxonomy-gap overrides require priority human review before publication as authoritative placements."
+  ]
+}

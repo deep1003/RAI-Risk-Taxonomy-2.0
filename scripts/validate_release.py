@@ -218,7 +218,11 @@ def project_integrity_paths(
         PROJECT_ROOT / "data" / "current.json",
         PROJECT_ROOT / "index.html",
         PROJECT_ROOT / "output" / "jupyter-notebook" / "rai_taxonomy_v1_data_quality_audit.ipynb",
+        PROJECT_ROOT / "output" / "jupyter-notebook" / "stage2_classification_calibration_audit.ipynb",
+        PROJECT_ROOT / "output" / "jupyter-notebook" / "stage3_forced_matching_audit.ipynb",
         PROJECT_ROOT / "reports" / "latex" / "rai_taxonomy_v1_data_generation_report_ko.tex",
+        PROJECT_ROOT / "reports" / "latex" / "stage2_classification_criteria_and_results_ko.tex",
+        PROJECT_ROOT / "reports" / "latex" / "stage3_forced_matching_results_ko.tex",
     ]
     return integrity_paths(
         release_dir,
@@ -231,6 +235,9 @@ def project_integrity_paths(
         PROJECT_ROOT / "tests",
         PROJECT_ROOT / "docs",
         PROJECT_ROOT / "assets",
+        PROJECT_ROOT / "data" / "experiments",
+        PROJECT_ROOT / "reports" / "validation" / "stage2-v1",
+        PROJECT_ROOT / "reports" / "validation" / "stage3-v1",
         PROJECT_ROOT / "reports" / "latex" / "generated",
         extras=extras,
     )

@@ -1,0 +1,10 @@
+{
+  "stage3_id": "stage3-v1",
+  "input_stage2_id": "stage2-v1",
+  "selection_rule": "Preserve every non-null Stage 2 placement. For each of the 173 Stage 2 holds, assign the existing hierarchy-blind BGE/rule top1_l3_id regardless of hard-hold or quota-hold reason.",
+  "forced_status": "forced_match_stage3",
+  "preserve_original_hold_reason": true,
+  "confidence_calibrated": false,
+  "human_approved": false,
+  "legacy_hierarchy_used_as_feature": false
+}

@@ -1,0 +1,111 @@
+{
+  "stage2_id": "stage2-v1",
+  "status": "PASS_WITH_WARNINGS",
+  "passed_checks": 13,
+  "failed_checks": 0,
+  "warning_count": 3,
+  "warnings": [
+    "Stage 2 assignments are not human-approved ground truth.",
+    "Quota calibration deliberately assigns many cards that lacked Stage 1 rule eligibility.",
+    "Taxonomy-gap overrides require priority human review before publication as authoritative placements."
+  ],
+  "checks": [
+    {
+      "check_id": "S2-001",
+      "description": "Exactly one Stage 2 row per baseline L4",
+      "status": "PASS",
+      "expected": 1726,
+      "actual": 1726
+    },
+    {
+      "check_id": "S2-002",
+      "description": "Stage 2 L4 IDs remain unique",
+      "status": "PASS",
+      "expected": 1726,
+      "actual": 1726
+    },
+    {
+      "check_id": "S2-003",
+      "description": "Physical 182 placements remain locked",
+      "status": "PASS",
+      "expected": 182,
+      "actual": 182
+    },
+    {
+      "check_id": "S2-004",
+      "description": "Every Physical card preserves its exact L3",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-005",
+      "description": "All 37 Stage 1 consensus proposals remain unchanged",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-006",
+      "description": "Stage 2 leaves exactly 173 cards unresolved",
+      "status": "PASS",
+      "expected": 173,
+      "actual": 173
+    },
+    {
+      "check_id": "S2-007",
+      "description": "Stage 2 unresolved rate is approximately 10%",
+      "status": "PASS",
+      "expected": 0.1,
+      "actual": 0.100232
+    },
+    {
+      "check_id": "S2-008",
+      "description": "No Stage 2 row claims human approval",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-009",
+      "description": "Legacy global hierarchy remains excluded",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-010",
+      "description": "Only unresolved cards have null Stage 2 L3",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-011",
+      "description": "Every hard-hold reason remains unresolved",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S2-012",
+      "description": "Largest L3 share stays below 20% of assigned cards",
+      "status": "PASS",
+      "expected": "<0.20",
+      "actual": 0.146813
+    },
+    {
+      "check_id": "S2-013",
+      "description": "Stage 2 configuration remains explicitly uncalibrated",
+      "status": "PASS",
+      "expected": false,
+      "actual": false
+    }
+  ],
+  "artifact_hashes": {
+    "stage2_config.json": "6af874ff24f3610d8f996fb5a885f1183130929622b54a6387615e516c5455a8",
+    "stage2_placements.json": "5e4110e9f14e5d1a8067b89345c75bf21493946df54e9899970ae9ead2380195",
+    "stage2_summary.json": "d179b1fe0e0870dc2341b16e08bd59865ee4d7e9d538e84d5e726eb683ca8e21",
+    "stage2_hold_queue.json": "c7da57b6fd48fe7f8ab52da75e7a96b8ffb6e6453215dee19e257e47739664b0"
+  }
+}

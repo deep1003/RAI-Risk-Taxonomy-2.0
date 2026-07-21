@@ -1,0 +1,228 @@
+% !TEX program = xelatex
+% Stage 2 report source only. Per user instruction, do not compile to PDF.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
+\definecolor{navy}{HTML}{173458}
+\definecolor{blue}{HTML}{3867D6}
+\definecolor{green}{HTML}{148F77}
+\definecolor{amber}{HTML}{B54708}
+\definecolor{red}{HTML}{B42318}
+\definecolor{light}{HTML}{F5F7FA}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy}
+\rhead{Stage 2 Classification Report}
+\cfoot{\thepage}
+
+\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]
+Stage 2 분류 기준 및 적용 결과}
+\author{Hierarchy-blind quota-calibrated experimental proposal}
+\date{2026년 7월 21일}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{amber}{light}{\parbox{0.91\linewidth}{
+\textbf{권한 경계.} 본 결과는 기존 v1.0.0을 덮어쓰지 않는 별도 실험 제안이다.
+\code{algorithm\_proposed\_stage2}는 사람 승인 정답이 아니며 모든 신규 배치는
+\code{human\_approved=false}, \code{confidence\_calibrated=false}로 관리한다.}}
+\end{center}
+
+\section*{요약}
+
+Stage 2의 목표는 1단계의 보수적 open-set 원칙을 완화하여 전체 1,726개 L4 중
+미분류를 약 10\%만 남기는 것이다. 적용 결과 1,553개(89.9768\%)가 L3에 연결되고
+173개(10.0232\%)가 \code{needs\_taxonomy\_decision}으로 남았다. Physical AI
+182개 잠금과 1단계 전문가 합의 37개는 한 건도 변경하지 않았다.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+상태 & 카드 수 & 전체 비율 \\
+\midrule
+Physical 정답 잠금 & 182 & 10.5446\% \\
+1단계 전문가 합의 제안 유지 & 37 & 2.1437\% \\
+Stage 2 신규 알고리즘 제안 & 1,334 & 77.2885\% \\
+분류체계 결정 보류 & 173 & 10.0232\% \\
+\midrule
+합계 & 1,726 & 100.0000\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{단계별 역할}
+
+\begin{tabularx}{\linewidth}{p{0.13\linewidth}p{0.18\linewidth}Y}
+\toprule
+단계 & 목표 & 판정 성격 \\
+\midrule
+Stage 1 & 정확 적합성 우선 & rule--semantic--anchor 일치와 두 전문 에이전트의 exact-L3 합의를 요구한다. 미충족 카드는 강제 배치하지 않는다. \\
+Stage 2 & 약 90\% 배치 & Stage 1 보호 집합을 유지하고 기존 hierarchy-blind top-1 의미 후보를 적극적으로 수용한다. 약 10\%만 검토 큐로 보존한다. \\
+Stage 3 & 100\% 배치 & Stage 2 잔여 173개도 top-1 L3로 강제 연결한다. 단, \code{forced\_match\_stage3}와 원래 보류 사유를 영구 보존한다. \\
+\bottomrule
+\end{tabularx}
+
+\section{Stage 1 기준: 보수적 기준선}
+
+비-Physical 카드의 입력은 L4 라벨, 계층 재진술을 제거한 직접 메커니즘 정의,
+evidence title뿐이다. 기존 글로벌 L0--L3, source family와 source ID prefix는
+예측 특징으로 사용하지 않는다. Stage 1 자동 후보는 다음을 모두 충족해야 한다.
+
+\begin{enumerate}[leftmargin=2em]
+  \item 정확히 하나의 L3 rule eligibility가 있어야 한다.
+  \item rule 최상위, semantic 최상위, composite 최상위가 동일 L3여야 한다.
+  \item top-1 semantic score $\ge 0.55$, composite score $\ge 0.54$여야 한다.
+  \item semantic 및 composite margin이 각각 $\ge 0.035$여야 한다.
+  \item 세 anchor view 중 최소 두 개가 같은 L3를 top-1으로 선택해야 한다.
+  \item gap sentinel, 다중 메커니즘, Physical-outside-lock 등이 없어야 한다.
+  \item 마지막으로 두 독립 전문 에이전트가 동일한 exact L3를 모두 승인해야 한다.
+\end{enumerate}
+
+이 기준에서는 Physical 잠금 182개 외 비-Physical 1,544개 중 37개만 최종
+\code{algorithm\_proposed}가 되었고 1,507개가 보류되었다.
+
+\section{Stage 2 완화 기준}
+
+\subsection{변경하지 않는 보호 규칙}
+
+\begin{itemize}[leftmargin=2em]
+  \item Physical AI 182개와 기존 L3 경로를 그대로 잠근다.
+  \item Stage 1의 두 전문가 합의 37개를 그대로 유지한다.
+  \item RAI4 영구 ID, source crosswalk, frozen source와 registry는 변경하지 않는다.
+  \item 기존 글로벌 L1--L3는 여전히 예측 특징으로 사용하지 않는다.
+  \item 신규 배치는 사람 승인 또는 calibrated probability로 표현하지 않는다.
+\end{itemize}
+
+\subsection{Stage 2 적합도 점수}
+
+Stage 1 보류 카드마다 기존 BGE-M3/rule 실행 결과만 사용하여 다음 정규화 항을 계산한다.
+
+\begin{align*}
+q_{sem} &= \operatorname{clip}\left(\frac{s_{sem}-0.45}{0.25},0,1\right),\\
+q_{sm} &= \operatorname{clip}\left(\frac{m_{sem}}{0.05},0,1\right),\\
+q_{cm} &= \operatorname{clip}\left(\frac{m_{comp}}{0.05},0,1\right),\\
+q_{vote} &= \frac{v_{anchor}}{3},\\
+q_{rule} &= \mathbf{1}[\text{eligible L3가 하나 이상 존재}],\\
+p_{gap} &= 0.05\,\mathbf{1}[\text{gap sentinel 존재}].
+\end{align*}
+
+Stage 2 suitability score는 다음과 같다.
+
+\[
+S_2 = 0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap}.
+\]
+
+이 값은 정확도나 확률이 아니라, Stage 2에서 검토 우선순위를 정하기 위한
+결정적 순위 점수다. 동점은 영구 \code{RAI4} ID 오름차순으로 해소한다.
+
+\subsection{Hard hold와 10\% 보류 규칙}
+
+다음 55개는 suitability score와 무관하게 Stage 2에서도 보류한다.
+
+\begin{longtable}{lr}
+\toprule
+Hard-hold 사유 & 카드 수 \\
+\midrule
+\endhead
+PHYSICAL\_OUTSIDE\_LOCK & 23 \\
+FRONTIER\_EXPERT\_REJECTED & 17 \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 \\
+MULTI\_MECHANISM & 6 \\
+LOW\_ABSOLUTE\_FIT & 2 \\
+\midrule
+합계 & 55 \\
+\bottomrule
+\end{longtable}
+
+그 다음 hard hold가 아닌 보류 카드를 $S_2$ 오름차순으로 정렬해 118개를 추가로
+보류한다. 따라서 최종 보류는 $55+118=173$개다. 마지막 soft hold의 점수는
+0.250476, 최초 신규 배치의 점수는 0.251094다. 나머지 카드는 기존 hierarchy-blind
+top-1 L3에 연결한다.
+
+\section{Stage 2 적용 결과}
+
+신규 1,334개의 적합도 tier는 high 206개, medium 475개, low 653개다.
+보류 173개, Stage 1 합의 37개, Physical gold 182개는 별도 tier로 유지한다.
+
+\begin{longtable}{llrr}
+\toprule
+L3 ID & L3 이름 & 전체 배치 & Stage 2 신규 \\
+\midrule
+\endhead
+RAI3-G-INT-10 & Anthropomorphism & 228 & 227 \\
+RAI3-G-SYS-08 & Goal Misalignment & 146 & 146 \\
+RAI3-G-SYS-03 & Misinformation/Disinformation & 104 & 101 \\
+RAI3-G-INT-08 & Copyrights & 100 & 94 \\
+RAI3-G-INT-06 & Privacy & 81 & 74 \\
+RAI3-G-INT-11 & Policy Exposure & 79 & 77 \\
+RAI3-A-SYS-01 & Excessive Authority & 70 & 70 \\
+RAI3-A-SYS-03 & Network Effects & 69 & 69 \\
+RAI3-A-SYS-04 & Destabilising Dynamics & 62 & 62 \\
+RAI3-A-SYS-05 & Conflict & 57 & 57 \\
+RAI3-G-SYS-09 & Non-Contestability & 51 & 50 \\
+RAI3-G-INT-09 & Weaponization & 47 & 39 \\
+\bottomrule
+\end{longtable}
+
+가장 큰 단일 L3는 Anthropomorphism 228개이며 전체 배치 1,553개의 14.6813\%다.
+사전 설정한 집중도 경고선 20\% 미만이다.
+
+\section{품질 경고와 해석 제한}
+
+Stage 2가 90\% 목표를 달성한 대가를 다음과 같이 명시한다.
+
+\begin{itemize}[leftmargin=2em]
+  \item 신규 1,334개 중 1,214개는 Stage 1 rule eligibility 없이 의미 top-1 중심으로 배치됐다.
+  \item 신규 247개는 taxonomy-gap sentinel이 존재하지만 가장 가까운 현행 L3에 연결됐다.
+  \item Stage 2 low tier는 653개이며 우선적인 사람 검토가 필요하다.
+  \item 모든 신규 결과는 \code{requires\_human\_review=true}다.
+  \item 이 결과만으로 50개 L3의 충분성이 입증되었다고 결론 내리지 않는다.
+\end{itemize}
+
+Validator는 13개 검사를 통과했고 실패는 0건이다. 경고 3건은 사람 승인 부재,
+rule-free 배치, taxonomy-gap override다. 분석 노트북은 그래프 없이 위 수량,
+경계 점수, 집중도와 불변 조건을 재확인한다.
+
+\section{Stage 3로 넘기는 계약}
+
+Stage 3는 Stage 2 결과를 변경하지 않고, 잔여 173개만 다음 규칙으로 처리한다.
+
+\begin{enumerate}[leftmargin=2em]
+  \item Stage 2의 1,553개 L3를 그대로 보존한다.
+  \item 잔여 173개를 기존 hierarchy-blind top-1 L3에 강제 연결한다.
+  \item 상태를 \code{forced\_match\_stage3}로 기록한다.
+  \item \code{stage2\_hold\_reason}, hard/soft hold 구분, gap sentinel과 suitability score를 보존한다.
+  \item \code{human\_approved=false}, \code{confidence\_calibrated=false}, \code{requires\_human\_review=true}를 유지한다.
+  \item 100\% 배치는 운영상 완전한 경로를 제공하지만 taxonomy 타당성 또는 사람 정답을 의미하지 않는다.
+\end{enumerate}
+
+\section*{산출물}
+
+\begin{itemize}[leftmargin=2em]
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_config.json}
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_placements.json}
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_hold_queue.json}
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_l3_distribution.csv}
+  \item \nolinkurl{reports/validation/stage2-v1/validation_summary.json}
+  \item \nolinkurl{output/jupyter-notebook/stage2_classification_calibration_audit.ipynb}
+\end{itemize}
+
+\vfill
+\noindent\textbf{문서 상태:} LaTeX source only. PDF 컴파일은 수행하지 않는다.
+
+\end{document}

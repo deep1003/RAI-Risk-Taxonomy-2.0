@@ -365,7 +365,7 @@ Physical 잠금과 잠정 자동 제안을 합친 apparent placement는 219개(1
 
 출처 해시, 행 수, ID 연속성, parent-child 무결성, crosswalk, Physical 잠금, JSON Schema, 사이트 파생 번들, 전문가 합의 조건을 포함해 \ValidationPassed{}개 검사가 통과했고 실패는 \ValidationFailed{}건이다. 경고 2건은 의도적으로 남은 사람 골드셋 부재와 명시적 보류 카드 존재다. 최종 상태는 \code{\ValidationStatus}다.
 
-별도의 자동 smoke 12개도 모두 통과했다. 기존 grain·ID·open-set·전문가 합의 검사에 더해 모든 source ID의 결정적 RAI4 대응, Physical 카드별 전체 사슬·근거·3H 보존, 고정 algorithm configuration, 사이트의 exact canonical join과 정적 HTML의 v1.0.0 데이터 경로 계약을 검사했다. 마지막 통합 smoke는 격리 복제본에 후속 릴리스를 실제 작성하고 validator를 한 번 실행해 통과하는지, 미변경 1,506개 결정 ID가 모두 유지되는지를 확인했다. 데이터 품질 노트북은 9개 셀 중 코드 6개를 위에서 아래로 실행했으며 오류 0건, display/image output 0건이었다.
+별도의 자동 smoke 14개도 모두 통과했다. 기존 grain·ID·open-set·전문가 합의 검사에 더해 모든 source ID의 결정적 RAI4 대응, Physical 카드별 전체 사슬·근거·3H 보존, 고정 algorithm configuration, 사이트의 exact canonical join, 정적 HTML의 v1.0.0 데이터 경로 계약, Stage 2 약 90\% 배치와 Stage 3 100\% 강제 매칭의 순차 불변 조건을 검사했다. 후속 릴리스 통합 smoke는 격리 복제본에 릴리스를 실제 작성하고 validator를 한 번 실행해 통과하는지, 미변경 1,506개 결정 ID가 모두 유지되는지를 확인했다. 데이터 품질 노트북은 그래프·이미지 없이 위에서 아래로 실행했다.
 
 \subsection{독립 아키텍처 감사와 보강}
 

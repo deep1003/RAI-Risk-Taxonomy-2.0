@@ -1,0 +1,34 @@
+{
+  "stage2_id": "stage2-v1",
+  "base_release_id": "v1.0.0",
+  "target": {
+    "unclassified_rate": 0.1,
+    "unclassified_count": 173,
+    "rounding": "round(1726 * 0.10)"
+  },
+  "preserved": [
+    "182 Physical locked placements",
+    "37 Stage 1 frontier-consensus proposals",
+    "RAI4 permanent identifiers",
+    "legacy hierarchy exclusion"
+  ],
+  "hard_hold_reasons": [
+    "FRONTIER_EXPERT_DISAGREEMENT",
+    "FRONTIER_EXPERT_REJECTED",
+    "LOW_ABSOLUTE_FIT",
+    "MULTI_MECHANISM",
+    "PHYSICAL_OUTSIDE_LOCK"
+  ],
+  "suitability_formula": {
+    "semantic_component": "clip((top1_semantic_score - 0.45) / 0.25, 0, 1)",
+    "semantic_margin_component": "clip(semantic_margin / 0.05, 0, 1)",
+    "composite_margin_component": "clip(composite_margin / 0.05, 0, 1)",
+    "anchor_agreement_component": "anchor_top1_votes / 3",
+    "rule_support_component": "1 if eligible_l3_ids is non-empty else 0",
+    "gap_penalty": "0.05 if gap_sentinels is non-empty else 0",
+    "weighted_total": "0.55*semantic + 0.20*semantic_margin + 0.10*composite_margin + 0.10*anchor_agreement + 0.05*rule_support - gap_penalty"
+  },
+  "selection_rule": "After hard holds, reserve the lowest suitability scores with L4 ID as deterministic tie-break until 173 total cards remain unresolved; assign every other unresolved non-Physical card to its existing hierarchy-blind top1 L3.",
+  "confidence_calibrated": false,
+  "human_approved": false
+}

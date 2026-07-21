@@ -1,0 +1,119 @@
+{
+  "stage3_id": "stage3-v1",
+  "status": "PASS_WITH_WARNINGS",
+  "passed_checks": 14,
+  "failed_checks": 0,
+  "warning_count": 4,
+  "warnings": [
+    "Stage 3 is a 100% forced mapping, not a validated taxonomy ground truth.",
+    "All 173 former holds require human review; 55 originated from hard-hold reasons.",
+    "Forced mappings preserve the original hold reason and must remain visibly distinguishable in any UI or export.",
+    "Coverage completeness must not be interpreted as evidence that the 50 L3 taxonomy is sufficient."
+  ],
+  "checks": [
+    {
+      "check_id": "S3-001",
+      "description": "Exactly one Stage 3 row per Stage 2 L4",
+      "status": "PASS",
+      "expected": 1726,
+      "actual": 1726
+    },
+    {
+      "check_id": "S3-002",
+      "description": "Every Stage 3 card has a non-null L3",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-003",
+      "description": "Stage 3 classified rate is exactly 100%",
+      "status": "PASS",
+      "expected": 1.0,
+      "actual": 1.0
+    },
+    {
+      "check_id": "S3-004",
+      "description": "Exactly the 173 Stage 2 holds are forced",
+      "status": "PASS",
+      "expected": 173,
+      "actual": 173
+    },
+    {
+      "check_id": "S3-005",
+      "description": "Every forced card was unresolved in Stage 2",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-006",
+      "description": "Every Stage 2 hold is forced in Stage 3",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-007",
+      "description": "All 1,553 Stage 2 placements remain unchanged",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-008",
+      "description": "Every forced match uses its recorded hierarchy-blind top1 L3",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-009",
+      "description": "Every forced match preserves its Stage 2 hold reason",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-010",
+      "description": "Physical 182 remain locked and unforced",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-011",
+      "description": "No Stage 3 row claims human approval",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-012",
+      "description": "Legacy hierarchy remains excluded",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-013",
+      "description": "All forced matches remain explicitly uncalibrated",
+      "status": "PASS",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check_id": "S3-014",
+      "description": "Largest final L3 share stays below 20%",
+      "status": "PASS",
+      "expected": "<0.20",
+      "actual": 0.147161
+    }
+  ],
+  "artifact_hashes": {
+    "stage3_config.json": "e12da6c82b255bd53fe997e5a6c8c178828989ca730a84caa0df6b208795ad8a",
+    "stage3_placements.json": "5737f1f3317e014f6e449ada37c6f5cee8e6e2a705c00c335cd416f960e2f620",
+    "stage3_forced_matches.json": "0728051a22f1d3eff87e1305a0eefa5603ad2e1a3253fa3c0db58a363c1b3ee5",
+    "stage3_summary.json": "6a1c7bbe09499bafaa0309d69190264a7c7965600118cdc98ef17d57021f024c"
+  }
+}

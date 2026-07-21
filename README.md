@@ -24,6 +24,8 @@ data/source_snapshots/v1.0.0/  frozen read-only inputs
 data/releases/v1.0.0/          canonical normalized release data
 public/data/releases/v1.0.0/   site-ready derived bundle
 index.html, assets/             local/GitHub Pages risk explorer
+data/experiments/stage2-v1/    approximately 90% Stage 2 proposal
+data/experiments/stage3-v1/    100% forced Stage 3 proposal
 reports/validation/v1.0.0/     quality, coverage, and decision-queue evidence
 reports/latex/                  LaTeX process report source (compiled PDF intentionally omitted)
 schemas/                        JSON Schema contracts
@@ -41,6 +43,14 @@ RAI_PYTHON=/opt/anaconda3/bin/python3
 ```
 
 Open `http://127.0.0.1:8765/`. The explorer reads the exact validated public bundle and provides L1–L3 navigation, search, assignment-status filters, the 1,507-card decision queue, pagination, and L4 detail dialogs.
+
+## Experimental classification stages
+
+- **Stage 1 (`v1.0.0`)** is the conservative baseline: 182 Physical locks, 37 frontier-consensus proposals, and 1,507 unresolved cards.
+- **Stage 2 (`stage2-v1`)** preserves Stage 1 and assigns 1,334 additional cards, leaving 173 unresolved (10.0232%). These are algorithmic proposals, not human-approved truth.
+- **Stage 3 (`stage3-v1`)** preserves all 1,553 Stage 2 placements and force-matches the remaining 173 to their recorded hierarchy-blind top-1 L3, producing 100% operational coverage. Forced status and original hold reasons remain explicit.
+
+The Stage 2 and Stage 3 LaTeX reports are source-only and are intentionally not compiled to PDF.
 
 ## Reproduce locally
 

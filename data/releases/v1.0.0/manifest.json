@@ -90,8 +90,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "78b4f57e4a5dfbfa84bac47a87d08023fda19cf6f97d32d632e372edc3809658",
-      "bytes": 4452,
+      "sha256": "fed046ae66c958fa87dde160d4a153fe3e3060733ad3ba17a742ee0cc07ddbc5",
+      "bytes": 5269,
       "rows": null
     },
     {
@@ -110,6 +110,96 @@
       "path": "data/current.json",
       "sha256": "d58065b9cd37bed8c2006079e14e424b40e62fcba8541cbf2de49daf2dc6d85e",
       "bytes": 130,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage1_stage2_transition.csv",
+      "sha256": "289be950aa3ca312c28a408a993f25ba93ab421838660690b2ac351ff664f352",
+      "bytes": 137024,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_config.json",
+      "sha256": "6af874ff24f3610d8f996fb5a885f1183130929622b54a6387615e516c5455a8",
+      "bytes": 1427,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_hold_queue.csv",
+      "sha256": "27fddf6442014f3a791f96b07d7c3fc284a0b5825d03b54359f92627a41d0509",
+      "bytes": 48214,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_hold_queue.json",
+      "sha256": "c7da57b6fd48fe7f8ab52da75e7a96b8ffb6e6453215dee19e257e47739664b0",
+      "bytes": 156812,
+      "rows": 173
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_l3_distribution.csv",
+      "sha256": "90caf16c550aa13de3d178f869011f24189a1873a8765aa5c15c8f1212b6bbe5",
+      "bytes": 1496,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_placements.csv",
+      "sha256": "a1f7ec6e97a1e2c54b34cde03a91e7f1069733f96b22c83f179d5535c583d476",
+      "bytes": 463187,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_placements.json",
+      "sha256": "5e4110e9f14e5d1a8067b89345c75bf21493946df54e9899970ae9ead2380195",
+      "bytes": 1550109,
+      "rows": 1726
+    },
+    {
+      "path": "data/experiments/stage2-v1/stage2_summary.json",
+      "sha256": "d179b1fe0e0870dc2341b16e08bd59865ee4d7e9d538e84d5e726eb683ca8e21",
+      "bytes": 1699,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_config.json",
+      "sha256": "e12da6c82b255bd53fe997e5a6c8c178828989ca730a84caa0df6b208795ad8a",
+      "bytes": 457,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_forced_matches.csv",
+      "sha256": "2ee813e7cd38a7845daf0f95bc001b044697caff79ff88599cbd1e777459ea84",
+      "bytes": 71412,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_forced_matches.json",
+      "sha256": "0728051a22f1d3eff87e1305a0eefa5603ad2e1a3253fa3c0db58a363c1b3ee5",
+      "bytes": 222064,
+      "rows": 173
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_l3_distribution.csv",
+      "sha256": "1c2b1e44dfc84eb6bfdb9bf0b4e4da92b6274bd2b5662e79a797dbf09deb9d11",
+      "bytes": 1506,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_placements.csv",
+      "sha256": "664458fe8a618b0980a193872c31dff1ebc1daf24a60300430891fea0ca1858d",
+      "bytes": 637669,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_placements.json",
+      "sha256": "5737f1f3317e014f6e449ada37c6f5cee8e6e2a705c00c335cd416f960e2f620",
+      "bytes": 2151789,
+      "rows": 1726
+    },
+    {
+      "path": "data/experiments/stage3-v1/stage3_summary.json",
+      "sha256": "6a1c7bbe09499bafaa0309d69190264a7c7965600118cdc98ef17d57021f024c",
+      "bytes": 2073,
       "rows": null
     },
     {
@@ -269,6 +359,18 @@
       "rows": null
     },
     {
+      "path": "output/jupyter-notebook/stage2_classification_calibration_audit.ipynb",
+      "sha256": "0022ffe4d6c51e795ee3b2dbe2333ff25b1def1738ab0ba161f8d0c88425c1e6",
+      "bytes": 9452,
+      "rows": null
+    },
+    {
+      "path": "output/jupyter-notebook/stage3_forced_matching_audit.ipynb",
+      "sha256": "1c372d7c66424fa0a69f338e8866d5a38102f832890dbdecdefe366f21e47fc3",
+      "bytes": 9282,
+      "rows": null
+    },
+    {
       "path": "public/data/releases/v1.0.0/cards.json",
       "sha256": "8fc76b9009aab96e955826f042060523a198bbca6207366cab848100b4987c04",
       "bytes": 3668544,
@@ -342,8 +444,68 @@
     },
     {
       "path": "reports/latex/rai_taxonomy_v1_data_generation_report_ko.tex",
-      "sha256": "e0091961c283770db931b49eb270b4749d074bb000fa0ac515e641d7a570c25d",
-      "bytes": 29251,
+      "sha256": "3e9f3e5e69898081731b339f6ecf6ef9fb7c564b6216d0a21bfa5cb8d978dcbc",
+      "bytes": 29278,
+      "rows": null
+    },
+    {
+      "path": "reports/latex/stage2_classification_criteria_and_results_ko.tex",
+      "sha256": "256b958732a5d05b661d2c8bbc203183e671b375802098232ac852ab5bf1a370",
+      "bytes": 9645,
+      "rows": null
+    },
+    {
+      "path": "reports/latex/stage3_forced_matching_results_ko.tex",
+      "sha256": "3f95d26325ab3010a170e7b09033fd62fbad7f1c2cb495a935a06e220176faf4",
+      "bytes": 8047,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage2-v1/stage2_hold_queue.json",
+      "sha256": "c7da57b6fd48fe7f8ab52da75e7a96b8ffb6e6453215dee19e257e47739664b0",
+      "bytes": 156812,
+      "rows": 173
+    },
+    {
+      "path": "reports/validation/stage2-v1/stage2_l3_distribution.csv",
+      "sha256": "90caf16c550aa13de3d178f869011f24189a1873a8765aa5c15c8f1212b6bbe5",
+      "bytes": 1496,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage2-v1/stage2_summary.json",
+      "sha256": "d179b1fe0e0870dc2341b16e08bd59865ee4d7e9d538e84d5e726eb683ca8e21",
+      "bytes": 1699,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage2-v1/validation_summary.json",
+      "sha256": "1dee087b830322a7d22638dc19bb9cce82c83725c18ccd121a37ee29ddd44e75",
+      "bytes": 3122,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage3-v1/stage3_forced_matches.json",
+      "sha256": "0728051a22f1d3eff87e1305a0eefa5603ad2e1a3253fa3c0db58a363c1b3ee5",
+      "bytes": 222064,
+      "rows": 173
+    },
+    {
+      "path": "reports/validation/stage3-v1/stage3_l3_distribution.csv",
+      "sha256": "1c2b1e44dfc84eb6bfdb9bf0b4e4da92b6274bd2b5662e79a797dbf09deb9d11",
+      "bytes": 1506,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage3-v1/stage3_summary.json",
+      "sha256": "6a1c7bbe09499bafaa0309d69190264a7c7965600118cdc98ef17d57021f024c",
+      "bytes": 2073,
+      "rows": null
+    },
+    {
+      "path": "reports/validation/stage3-v1/validation_summary.json",
+      "sha256": "eabeffb2fa2ebd1763b883a67b3ecb3c3ba08d93d847e520b05bdc3424883b8a",
+      "bytes": 3396,
       "rows": null
     },
     {
@@ -480,8 +642,8 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "9e276ea975cc6f6081d0bfdb5c040b7284c1c2c64c2f2567097d6b30396e3782",
-      "bytes": 113082,
+      "sha256": "3cd297a2fcdf50c1c46bb20ee2063fcbd9a3818abbf9be3621d42d892ed28390",
+      "bytes": 113084,
       "rows": null
     },
     {
@@ -557,6 +719,18 @@
       "rows": null
     },
     {
+      "path": "scripts/build_stage2_classification.py",
+      "sha256": "f2032977063509f80ea92e411e0dcc927a1e96e0558edb63dc549dec7d6c93c0",
+      "bytes": 14440,
+      "rows": null
+    },
+    {
+      "path": "scripts/build_stage3_forced_matching.py",
+      "sha256": "8c6be58de12f503451f9ddce7e6bb09c5774af1adee281da63d47fdafcc26c7e",
+      "bytes": 7748,
+      "rows": null
+    },
+    {
       "path": "scripts/create_remap_release.py",
       "sha256": "8de5ad36c79b357af70683e41e018f1afc5e710c887ee42f3ba6f95333f44ee7",
       "bytes": 15570,
@@ -576,8 +750,20 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "20a6ec0495705823d1c45f18b74f392b0b055d92b418007dca38c53b2d22a72a",
-      "bytes": 53253,
+      "sha256": "794b5e9ae105b7d2f66db00b90c8440dae6f55192fd0925023e914ab38988043",
+      "bytes": 53807,
+      "rows": null
+    },
+    {
+      "path": "scripts/validate_stage2.py",
+      "sha256": "66f302e579e65e370d06167c5692f0422e1bc2f43b826b2689fe77d2daf99b0f",
+      "bytes": 5389,
+      "rows": null
+    },
+    {
+      "path": "scripts/validate_stage3.py",
+      "sha256": "e69211b81102bbd82e9ae47c199634afac7ee708494072eeb94e13de96dc82f9",
+      "bytes": 5321,
       "rows": null
     },
     {
@@ -597,6 +783,12 @@
       "sha256": "d0d3d14afde8fa9811f28491f19aa683090736264e4c467c5f48cf5e91665e3d",
       "bytes": 229,
       "rows": 1
+    },
+    {
+      "path": "tests/test_classification_stages.py",
+      "sha256": "d78c1585b184e92ebb23af4820e20f0092915cc7f18ca2ad1c6bbc30363dfd0d",
+      "bytes": 2371,
+      "rows": null
     },
     {
       "path": "tests/test_release.py",

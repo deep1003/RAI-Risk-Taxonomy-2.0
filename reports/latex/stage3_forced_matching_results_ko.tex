@@ -1,0 +1,207 @@
+% !TEX program = xelatex
+% Stage 3 report source only. Per user instruction, do not compile to PDF.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
+\definecolor{navy}{HTML}{173458}
+\definecolor{red}{HTML}{B42318}
+\definecolor{amber}{HTML}{B54708}
+\definecolor{light}{HTML}{F5F7FA}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy}
+\rhead{Stage 3 Forced Matching Report}
+\cfoot{\thepage}
+
+\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]
+Stage 3 100\% 강제 매칭 적용 결과}
+\author{Forced hierarchy-blind top-1 experimental mapping}
+\date{2026년 7월 21일}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{red}{light}{\parbox{0.91\linewidth}{
+\textbf{중요 경고.} 100\% 배치는 운영상 모든 카드에 경로를 제공한다는 뜻이며,
+50개 L3의 충분성이나 사람 정답을 입증하지 않는다. Stage 3에서 새로 연결된 173개는
+반드시 \code{forced\_match\_stage3}, \code{human\_approved=false}로 표시해야 한다.}}
+\end{center}
+
+\section*{요약 결론}
+
+Stage 2에서 보류된 173개를 기존 hierarchy-blind BGE/rule 실행의 top-1 L3로
+강제 연결했다. Stage 2에서 이미 경로가 있던 1,553개는 한 건도 변경하지 않았다.
+따라서 전체 1,726개가 non-null L3를 가지며 배치율은 100\%다.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+최종 Stage 3 상태 & 카드 수 & 전체 비율 \\
+\midrule
+Physical 정답 잠금 & 182 & 10.5446\% \\
+Stage 1 전문가 합의 제안 유지 & 37 & 2.1437\% \\
+Stage 2 알고리즘 제안 유지 & 1,334 & 77.2885\% \\
+Stage 3 강제 매칭 & 173 & 10.0232\% \\
+\midrule
+합계 & 1,726 & 100.0000\% \\
+미분류 & 0 & 0.0000\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{입력과 순차 적용 계약}
+
+Stage 3의 직접 입력은 \code{stage2-v1} 배치 1,726행이다. 처리 순서는 다음과 같다.
+
+\begin{enumerate}[leftmargin=2em]
+  \item Stage 2 L3가 non-null인 1,553개를 byte-level 의미로 그대로 보존한다.
+  \item Stage 2 상태가 \code{needs\_taxonomy\_decision}인 173개만 처리 대상으로 삼는다.
+  \item 각 카드의 기존 \code{algorithm\_scores.json}에서 hierarchy-blind \code{top1\_l3\_id}를 읽는다.
+  \item threshold, margin, rule eligibility, gap sentinel과 관계없이 해당 top-1 L3에 연결한다.
+  \item 원래 Stage 2 hold reason과 hard/quota hold 구분을 별도 필드로 보존한다.
+\end{enumerate}
+
+기존 글로벌 L0--L3는 Stage 3에서도 입력 특징으로 사용하지 않았다. 강제 매칭은
+새로운 모델 추론이 아니라 이미 고정된 top-1 후보를 잔여 카드에 적용하는 결정적 변환이다.
+
+\section{강제 매칭 173개의 구성}
+
+\subsection{검토 등급}
+
+\begin{tabularx}{\linewidth}{p{0.22\linewidth}rp{0.23\linewidth}Y}
+\toprule
+원래 hold class & 수 & Stage 3 검토 등급 & 의미 \\
+\midrule
+Hard hold & 55 & critical & 전문가 거절·불일치, Physical outside lock, multi-mechanism, 낮은 절대 적합도였으나 강제 배치됨 \\
+Quota hold & 118 & high & Stage 2 적합도 하위 10\% reserve였으나 강제 배치됨 \\
+\midrule
+합계 & 173 & --- & 모두 사람 검토 필요 \\
+\bottomrule
+\end{tabularx}
+
+\subsection{원래 보류 사유}
+
+\begin{longtable}{lr}
+\toprule
+Stage 2 hold reason & Stage 3 강제 수 \\
+\midrule
+\endhead
+BOTTOM\_10\_PERCENT\_SUITABILITY\_RESERVE & 118 \\
+PHYSICAL\_OUTSIDE\_LOCK & 23 \\
+FRONTIER\_EXPERT\_REJECTED & 17 \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 \\
+MULTI\_MECHANISM & 6 \\
+LOW\_ABSOLUTE\_FIT & 2 \\
+\midrule
+합계 & 173 \\
+\bottomrule
+\end{longtable}
+
+\section{최종 L3 분포}
+
+\begin{longtable}{llrr}
+\toprule
+L3 ID & L3 이름 & 최종 카드 & Stage 3 강제 \\
+\midrule
+\endhead
+RAI3-G-INT-10 & Anthropomorphism & 254 & 26 \\
+RAI3-G-SYS-08 & Goal Misalignment & 153 & 7 \\
+RAI3-G-INT-08 & Copyrights & 118 & 18 \\
+RAI3-G-SYS-03 & Misinformation/Disinformation & 110 & 6 \\
+RAI3-G-INT-06 & Privacy & 90 & 9 \\
+RAI3-G-INT-11 & Policy Exposure & 89 & 10 \\
+RAI3-A-SYS-03 & Network Effects & 80 & 11 \\
+RAI3-A-SYS-01 & Excessive Authority & 74 & 4 \\
+RAI3-A-SYS-04 & Destabilising Dynamics & 74 & 12 \\
+RAI3-A-SYS-05 & Conflict & 64 & 7 \\
+RAI3-G-INT-09 & Weaponization & 59 & 12 \\
+RAI3-G-SYS-09 & Non-Contestability & 56 & 5 \\
+\bottomrule
+\end{longtable}
+
+가장 큰 L3는 Anthropomorphism 254개로 전체 1,726개의 14.7161\%다. 단일 L3
+집중도는 20\% 경고선 미만이지만, 이는 의미적 타당성을 검증하는 지표가 아니다.
+
+\section{필드 수준 표시 규칙}
+
+Stage 3 강제 카드는 다음 필드를 반드시 제공한다.
+
+\begin{longtable}{p{0.34\linewidth}Y}
+\toprule
+필드 & 규칙 \\
+\midrule
+\endhead
+\code{stage3\_status} & 항상 \code{forced\_match\_stage3} \\
+\code{stage3\_l3\_id} & 기존 hierarchy-blind top-1 L3 \\
+\code{forced\_match} & \code{true} \\
+\code{forced\_from\_stage2\_hold\_reason} & Stage 2의 원래 hold reason 원문 \\
+\code{forced\_hold\_class} & \code{hard\_hold} 또는 \code{quota\_hold} \\
+\code{stage3\_review\_priority} & hard는 \code{critical}, quota는 \code{high} \\
+\code{requires\_human\_review} & \code{true} \\
+\code{human\_approved} & \code{false} \\
+\code{confidence\_calibrated} & \code{false} \\
+\code{legacy\_hierarchy\_used\_as\_feature} & \code{false} \\
+\bottomrule
+\end{longtable}
+
+홈페이지에 Stage 3를 표시할 때도 forced badge와 원래 hold reason을 숨기지 않아야 한다.
+사용자가 ``완전 분류''와 ``검증된 분류''를 혼동하지 않도록 Stage 1, Stage 2, Stage 3
+상태를 별도의 시각적 등급으로 표시하는 것이 필수다.
+
+\section{검증 결과}
+
+Stage 3 validator는 다음 핵심 조건을 포함한 14개 검사를 모두 통과했다.
+
+\begin{itemize}[leftmargin=2em]
+  \item 1,726개 L4 ID 완전성과 유일성
+  \item non-null L3 1,726개, 미분류 0개
+  \item 강제 매칭 수 173개와 Stage 2 hold 집합의 양방향 동일성
+  \item Stage 2의 기존 1,553개 배치 변경 0건
+  \item 강제 L3와 기록된 hierarchy-blind top-1의 전수 일치
+  \item 원래 hold reason 보존 173/173
+  \item Physical 182개 잠금 및 unforced 상태 유지
+  \item human approval 주장 0건, legacy hierarchy feature 사용 0건
+\end{itemize}
+
+최종 상태는 \code{PASS\_WITH\_WARNINGS}, 실패 0건, 경고 4건이다. 경고는
+강제 배치가 사람 정답이 아니라는 점, hard hold 55개 포함, UI에서 forced 상태를
+보존해야 한다는 점, 100\% coverage가 50개 L3 충분성을 증명하지 않는다는 점이다.
+
+\section{권고 검토 순서}
+
+\begin{enumerate}[leftmargin=2em]
+  \item critical 55개를 먼저 전문가가 전수 검토한다.
+  \item quota hold 118개를 suitability score 오름차순으로 검토한다.
+  \item 신규 Stage 2 중 taxonomy-gap override 247개를 검토한다.
+  \item 신규 Stage 2 중 rule support가 없던 1,214개를 L3별 층화 표본으로 검토한다.
+  \item 사람 승인 후에만 공식 placement release로 승격한다.
+\end{enumerate}
+
+\section*{산출물}
+
+\begin{itemize}[leftmargin=2em]
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_config.json}
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_placements.json}
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_forced_matches.json}
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_l3_distribution.csv}
+  \item \nolinkurl{reports/validation/stage3-v1/validation_summary.json}
+  \item \nolinkurl{output/jupyter-notebook/stage3_forced_matching_audit.ipynb}
+\end{itemize}
+
+\vfill
+\noindent\textbf{문서 상태:} LaTeX source only. PDF 컴파일은 수행하지 않는다.
+
+\end{document}
