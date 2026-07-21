@@ -241,7 +241,7 @@ def project_integrity_paths(
         PROJECT_ROOT / "docs",
         PROJECT_ROOT / "assets",
         PROJECT_ROOT / "data" / "experiments",
-        PROJECT_ROOT / "public" / "data" / "releases" / "v2.5.0",
+        PROJECT_ROOT / "public" / "data" / "releases" / "v2.6.0",
         PROJECT_ROOT / "reports" / "validation" / "stage2-v1",
         PROJECT_ROOT / "reports" / "validation" / "stage3-v1",
         PROJECT_ROOT / "reports" / "statistics",
@@ -807,13 +807,13 @@ def main() -> None:
         site_contract_failures.append("css_link")
     if 'src="assets/site.js"' not in site_shell:
         site_contract_failures.append("js_link")
-    if 'const DATA_ROOT = "public/data/releases/v2.5.0"' not in site_js:
+    if 'const DATA_ROOT = "public/data/releases/v2.6.0"' not in site_js:
         site_contract_failures.append("release_data_root")
     if not site_css_path.is_file() or not site_js_path.is_file():
         site_contract_failures.append("site_assets")
     audit.add(
         "SITE-009",
-        "Static HTML explorer targets the bilingual v2.5.0 policy bundle",
+        "Static HTML explorer targets the three-L2 v2.6.0 policy bundle",
         0,
         len(site_contract_failures),
         not site_contract_failures,

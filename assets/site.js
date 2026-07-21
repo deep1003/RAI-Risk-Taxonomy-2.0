@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.5.0";
+const DATA_ROOT = "public/data/releases/v2.6.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -10,6 +10,7 @@ const state = {
   page: 1,
   cards: [],
   nodes: [],
+  l2Categories: [],
   manifest: null,
 };
 
@@ -40,6 +41,7 @@ async function init() {
       fetchJson(`${DATA_ROOT}/manifest.json`),
     ]);
     state.nodes = hierarchy.nodes;
+    state.l2Categories = hierarchy.canonical_l2_categories || [];
     state.cards = cards.cards;
     state.manifest = manifest;
     initializeDomainFromUrl();
@@ -120,13 +122,13 @@ function indexHierarchy() {
   childrenByParent.forEach((nodes) => nodes.sort((a, b) => a.sequence - b.sequence));
   state.cards.forEach((card) => {
     if (!card.primary_l3_id) {
-      cardPath.set(card.l4_id, { l1: null, l2: null, l3: null, nodes: [] });
+      cardPath.set(card.l4_id, { l1: null, l2: null, l2Category: null, l3: null, nodes: [] });
       return;
     }
     const l3 = nodeById.get(card.primary_l3_id);
     const l2 = nodeById.get(l3?.parent_id);
     const l1 = nodeById.get(l2?.parent_id);
-    cardPath.set(card.l4_id, { l1: l1?.node_id, l2: l2?.node_id, l3: l3?.node_id, nodes: [l1, l2, l3].filter(Boolean) });
+    cardPath.set(card.l4_id, { l1: l1?.node_id, l2: l2?.node_id, l2Category: l2?.canonical_l2_id, l3: l3?.node_id, nodes: [l1, l2, l3].filter(Boolean) });
   });
 }
 
@@ -138,10 +140,16 @@ function populateFilters() {
 
 function refreshDependentFilters() {
   const l2Nodes = state.nodes.filter((node) => node.level === 2 && (state.l1 === "all" || node.parent_id === state.l1));
-  fillSelect(ui.l2, l2Nodes, "모든 L2", state.l2);
+  const availableCategoryIds = new Set(l2Nodes.map((node) => node.canonical_l2_id));
+  const l2Categories = state.l2Categories
+    .filter((category) => availableCategoryIds.has(category.category_id))
+    .map((category) => ({ node_id: category.category_id, label_en: category.label_en, label_ko: category.label_ko }));
+  fillSelect(ui.l2, l2Categories, "모든 L2", state.l2);
   if (![...ui.l2.options].some((option) => option.value === state.l2)) state.l2 = "all";
-  const allowedL2 = new Set(l2Nodes.map((node) => node.node_id));
-  const l3Nodes = state.nodes.filter((node) => node.level === 3 && (state.l2 !== "all" ? node.parent_id === state.l2 : allowedL2.has(node.parent_id)));
+  const allowedL2 = new Set(l2Nodes
+    .filter((node) => state.l2 === "all" || node.canonical_l2_id === state.l2)
+    .map((node) => node.node_id));
+  const l3Nodes = state.nodes.filter((node) => node.level === 3 && allowedL2.has(node.parent_id));
   fillSelect(ui.l3, l3Nodes, "모든 L3", state.l3);
   if (![...ui.l3.options].some((option) => option.value === state.l3)) state.l3 = "all";
   syncControls();
@@ -162,7 +170,7 @@ function initializeDomainFromUrl() {
 
 function renderStats() {
   document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1).length.toLocaleString();
-  document.querySelector("#stat-l2").textContent = state.nodes.filter((node) => node.level === 2).length.toLocaleString();
+  document.querySelector("#stat-l2").textContent = state.l2Categories.length.toLocaleString();
   document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3).length.toLocaleString();
   document.querySelector("#stat-l4").textContent = state.manifest.counts.l4.toLocaleString();
 }
@@ -198,12 +206,12 @@ function selectTreeNode(nodeId) {
   if (!node) return;
   if (node.level === 2) {
     state.l1 = node.parent_id;
-    state.l2 = node.node_id;
+    state.l2 = node.canonical_l2_id;
     state.l3 = "all";
   } else if (node.level === 3) {
     const parent = nodeById.get(node.parent_id);
     state.l1 = parent.parent_id;
-    state.l2 = parent.node_id;
+    state.l2 = parent.canonical_l2_id;
     state.l3 = node.node_id;
   }
   state.status = "all";
@@ -251,7 +259,7 @@ function filteredCards() {
     return matchesQuery
       && (state.status === "all" || (state.status === "decision_required" && card.decision_required))
       && (state.l1 === "all" || path.l1 === state.l1)
-      && (state.l2 === "all" || path.l2 === state.l2)
+      && (state.l2 === "all" || path.l2Category === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
   });
 }
@@ -315,7 +323,7 @@ function renderActiveFilter() {
   if (state.query) labels.push(`검색 “${state.query}”`);
   if (state.status !== "all") labels.push(ASSIGNMENT_META[state.status].label);
   [state.l1, state.l2, state.l3].filter((value) => value !== "all").forEach((id) => {
-    const node = nodeById.get(id);
+    const node = nodeById.get(id) || state.l2Categories.find((category) => category.category_id === id);
     labels.push(`${id} ${node?.label_en || ""} (${node?.label_ko || ""})`);
   });
   ui.activeFilter.hidden = labels.length === 0;
@@ -323,7 +331,11 @@ function renderActiveFilter() {
 }
 
 function syncTreeActive() {
-  ui.tree.querySelectorAll(".tree-node").forEach((button) => button.classList.toggle("active", [state.l2, state.l3].includes(button.dataset.node)));
+  ui.tree.querySelectorAll(".tree-node").forEach((button) => {
+    const node = nodeById.get(button.dataset.node);
+    const isActiveL2 = node?.level === 2 && node.canonical_l2_id === state.l2;
+    button.classList.toggle("active", isActiveL2 || state.l3 === button.dataset.node);
+  });
 }
 
 function openCard(l4Id) {

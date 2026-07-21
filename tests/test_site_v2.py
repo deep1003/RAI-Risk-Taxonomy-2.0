@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class SiteV2Tests(unittest.TestCase):
     def test_site_bundle_matches_review_hold_policy(self) -> None:
-        bundle = ROOT / "public/data/releases/v2.5.0"
+        bundle = ROOT / "public/data/releases/v2.6.0"
         cards = json.loads((bundle / "cards.json").read_text())["cards"]
         manifest = json.loads((bundle / "manifest.json").read_text())
         self.assertEqual(len(cards), 1711)
@@ -23,7 +23,7 @@ class SiteV2Tests(unittest.TestCase):
 
     def test_hold_marked_cards_remain_inside_the_l3_tree(self) -> None:
         cards = json.loads(
-            (ROOT / "public/data/releases/v2.5.0/cards.json").read_text()
+            (ROOT / "public/data/releases/v2.6.0/cards.json").read_text()
         )["cards"]
         holds = [row for row in cards if row["decision_required"]]
         self.assertEqual(len(holds), 76)
@@ -31,7 +31,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertTrue(all(row["operational_bucket_id"] is None for row in holds))
 
     def test_physical_cards_and_duplicate_crosswalk_are_preserved(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
         crosswalk = json.loads(
             (ROOT / "reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json").read_text()
         )
@@ -40,7 +40,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertTrue(all(row["retired_l4_id"] != row["canonical_l4_id"] for row in crosswalk))
 
     def test_no_exact_label_and_core_definition_duplicates_remain(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
 
         def normalized(value: str) -> str:
             value = unicodedata.normalize("NFKC", value or "").casefold()
@@ -53,7 +53,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertEqual(len(keys), len(set(keys)))
 
     def test_two_reviewer_consensus_amendment_is_applied(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
         card = next(row for row in cards if row["l4_id"] == "RAI4-0888")
         self.assertEqual(card["original_label_en"], "Privacy concerns")
         self.assertEqual(card["label_en"], "Anthropomorphic trust-induced privacy disclosure")
@@ -62,7 +62,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertFalse(card["decision_required"])
 
     def test_physical_l3_labels_are_excluded_from_l4_pool(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
         audit = json.loads((ROOT / "reports/data_quality/physical_l3_label_leakage_v2.3.json").read_text())
         excluded_ids = {row["l4_id"] for row in audit["excluded"]}
         self.assertEqual(len(excluded_ids), 14)
@@ -71,7 +71,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertEqual(sum(row["primary_l3_id"].startswith("RAI3-P-") for row in cards), 182)
 
     def test_all_physical_cards_are_synced_from_authoritative_source(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
         physical = [row for row in cards if row["assignment_status"] == "locked_physical"]
         self.assertEqual(len(physical), 182)
         self.assertTrue(all(row["physical_source_sync"] == "v2.4.0" for row in physical))
@@ -92,7 +92,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn("전체 AI 리스크 분류 현황", page)
         self.assertNotIn("글로벌 AI 리스크 분류 현황", page)
         self.assertNotIn("coverage-note", page)
-        for level, count in (("l1", "3"), ("l2", "6"), ("l3", "50"), ("l4", "1,711")):
+        for level, count in (("l1", "3"), ("l2", "3"), ("l3", "50"), ("l4", "1,711")):
             self.assertIn(f'id="stat-{level}">{count}', page)
 
     def test_domain_navigation_uses_links_without_counts(self) -> None:
@@ -107,7 +107,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertNotRegex(nav, r">\s*[\d,]+\s*<")
 
     def test_every_card_has_english_korean_bilingual_content(self) -> None:
-        cards = json.loads((ROOT / "public/data/releases/v2.5.0/cards.json").read_text())["cards"]
+        cards = json.loads((ROOT / "public/data/releases/v2.6.0/cards.json").read_text())["cards"]
         self.assertEqual(len(cards), 1711)
         self.assertTrue(all(row["label_en"].strip() and row["definition_en"].strip() for row in cards))
         self.assertTrue(all(re.search(r"[가-힣]", row["label_ko"]) for row in cards))
@@ -121,6 +121,19 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn("function bilingualLabel(english, korean)", script)
         self.assertIn("bilingualLabel(card.label_en, card.label_ko)", script)
         self.assertIn("bilingualLabel(l3.label_en, l3.label_ko)", script)
+
+    def test_l2_is_consolidated_to_three_canonical_categories(self) -> None:
+        hierarchy = json.loads((ROOT / "public/data/releases/v2.6.0/hierarchy.json").read_text())
+        categories = hierarchy["canonical_l2_categories"]
+        self.assertEqual(len(categories), 3)
+        self.assertEqual(
+            {row["label_en"] for row in categories},
+            {"Interaction Safety", "System Safety", "Societal Safety"},
+        )
+        l2_path_nodes = [row for row in hierarchy["nodes"] if row["level"] == 2]
+        self.assertEqual(len(l2_path_nodes), 6)
+        self.assertEqual({row["label_en"] for row in l2_path_nodes}, {row["label_en"] for row in categories})
+        self.assertTrue(all(row["canonical_l2_id"] for row in l2_path_nodes))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,111 @@
+{
+  "release_id": "v2.6.0",
+  "policy": "L2 count means three unique canonical categories; six L1-specific path nodes remain only to preserve the L0-L1-L2-L3 tree and existing L3 parent paths.",
+  "canonical_l2_category_count": 3,
+  "l1_specific_l2_path_node_count": 6,
+  "categories": [
+    {
+      "category_id": "RAI2-INT",
+      "label_en": "Interaction Safety",
+      "label_ko": "상호작용 안전성",
+      "path_node_ids": [
+        "RAI2-G-INT",
+        "RAI2-P-INT"
+      ]
+    },
+    {
+      "category_id": "RAI2-SYS",
+      "label_en": "System Safety",
+      "label_ko": "시스템 안전성",
+      "path_node_ids": [
+        "RAI2-G-SYS",
+        "RAI2-A-SYS",
+        "RAI2-P-SYS"
+      ]
+    },
+    {
+      "category_id": "RAI2-SOC",
+      "label_en": "Societal Safety",
+      "label_ko": "사회적 안전성",
+      "path_node_ids": [
+        "RAI2-P-SOC"
+      ]
+    }
+  ],
+  "node_changes": [
+    {
+      "node_id": "RAI2-G-INT",
+      "before": {
+        "label_en": "Interaction",
+        "label_ko": "상호작용"
+      },
+      "after": {
+        "label_en": "Interaction Safety",
+        "label_ko": "상호작용 안전성",
+        "canonical_l2_id": "RAI2-INT"
+      }
+    },
+    {
+      "node_id": "RAI2-G-SYS",
+      "before": {
+        "label_en": "System",
+        "label_ko": "시스템"
+      },
+      "after": {
+        "label_en": "System Safety",
+        "label_ko": "시스템 안전성",
+        "canonical_l2_id": "RAI2-SYS"
+      }
+    },
+    {
+      "node_id": "RAI2-A-SYS",
+      "before": {
+        "label_en": "System",
+        "label_ko": "시스템"
+      },
+      "after": {
+        "label_en": "System Safety",
+        "label_ko": "시스템 안전성",
+        "canonical_l2_id": "RAI2-SYS"
+      }
+    },
+    {
+      "node_id": "RAI2-P-SYS",
+      "before": {
+        "label_en": "System Safety",
+        "label_ko": "시스템 안전성"
+      },
+      "after": {
+        "label_en": "System Safety",
+        "label_ko": "시스템 안전성",
+        "canonical_l2_id": "RAI2-SYS"
+      }
+    },
+    {
+      "node_id": "RAI2-P-INT",
+      "before": {
+        "label_en": "Interaction Safety",
+        "label_ko": "상호작용 안전성"
+      },
+      "after": {
+        "label_en": "Interaction Safety",
+        "label_ko": "상호작용 안전성",
+        "canonical_l2_id": "RAI2-INT"
+      }
+    },
+    {
+      "node_id": "RAI2-P-SOC",
+      "before": {
+        "label_en": "Societal Safety",
+        "label_ko": "사회적 안전성"
+      },
+      "after": {
+        "label_en": "Societal Safety",
+        "label_ko": "사회적 안전성",
+        "canonical_l2_id": "RAI2-SOC"
+      }
+    }
+  ],
+  "l3_paths_changed": 0,
+  "l4_assignments_changed": 0
+}

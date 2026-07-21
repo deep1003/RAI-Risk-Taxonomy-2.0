@@ -1,0 +1,30 @@
+{
+  "release_id": "v2.6.0",
+  "source_release": "v2.5.0",
+  "release_status": "three_canonical_l2_categories",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "physical_total": 182,
+    "decision_required": 76,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "18013d3f098fa4c5c4aa2e0a52dacef69ce154558c557779418ac0ef70bcd31d"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "4582a79c4f13b53e45660e21a7ba17bc4c751d5a52a228ea3966078e0b1d00ee"
+    },
+    {
+      "path": "reports/data_quality/l2_category_consolidation_v2.6.json",
+      "sha256": "d696496cb6fdd11be143e37a25972d2ffa25744dcc1b96ad28383ce27502bc63"
+    }
+  ]
+}

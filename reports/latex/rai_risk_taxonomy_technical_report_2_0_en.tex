@@ -207,6 +207,17 @@ Thus all 1,711 cards contain non-empty English and Korean labels and definitions
 while automated Korean drafts remain explicitly reviewable rather than being
 represented as human-approved ground truth.
 
+\subsection{Canonical L2 consolidation}
+
+Release v2.6 normalizes L2 to three canonical categories:
+\textit{Interaction Safety}, \textit{System Safety}, and \textit{Societal
+Safety}. The former General labels \textit{Interaction} and \textit{System},
+and the former Agentic label \textit{System}, are renamed accordingly. Six
+L1-specific path nodes remain as implementation edges so that the strict
+L0--L1--L2--L3 tree and all 50 existing L3 parent paths are preserved; each
+edge references one of the three canonical L2 identifiers. Thus the reported
+L2 category count is three, while no L3 path or L4 assignment changes.
+
 \subsection{Stage E: L3 assignment policy}
 
 The final policy view assigns all 1,711 canonical L4 cards to one of 50 L3 nodes
@@ -486,7 +497,7 @@ The 182 Physical mappings and 37 Stage 1 expert-consensus mappings remain
 unchanged in later stages. Repeated Stage 2 and Stage 3 builds produce
 byte-identical placement hashes. The Stage 2 validator reports 13 PASS, 0 FAIL,
 and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and 4 WARN. The
-release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 28 repository
+release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 29 repository
 tests pass at the time of this report revision.
 
 Three limitations directly affect interpretation. First, cross-category
@@ -515,12 +526,13 @@ available in the repository:
 \begin{itemize}[leftmargin=2em]
   \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
   \item \small\nolinkurl{data/experiments/stage3-forced-policy-v2/placements.json}
-  \item \small\nolinkurl{public/data/releases/v2.5.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.6.0/cards.json}
   \item \small\nolinkurl{reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json}
   \item \small\nolinkurl{reports/expert_review/v2.1/consensus_result.json}
   \item \small\nolinkurl{reports/data_quality/physical_l3_label_leakage_v2.3.json}
   \item \small\nolinkurl{reports/data_quality/physical_card_sync_v2.4.json}
   \item \small\nolinkurl{reports/localization/nonphysical_l4_ko_v2.5.json}
+  \item \small\nolinkurl{reports/data_quality/l2_category_consolidation_v2.6.json}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.
