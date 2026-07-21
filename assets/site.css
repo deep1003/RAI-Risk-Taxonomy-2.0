@@ -113,11 +113,6 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .tree-node code { flex: 0 0 auto; color: #98a2b3; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 8px; }
 .tree-node span { flex: 1; }
 .tree-node b { color: #98a2b3; font-size: 9px; font-weight: 600; }
-.tree-hold { display: flex; align-items: center; gap: 7px; width: 100%; margin-top: 8px; padding: 9px 8px; border: 1px solid #fedf89; border-radius: 7px; background: #fffaeb; color: var(--decision); text-align: left; font-size: 11px; font-weight: 700; }
-.tree-hold:hover, .tree-hold.active { background: #fef0c7; border-color: #fec84b; }
-.tree-hold .tree-dot { background: var(--decision); }
-.tree-hold span:nth-child(2) { flex: 1; }
-.tree-hold b { color: #b54708; font-size: 9px; }
 
 .results { min-width: 0; }
 .active-filter { margin-bottom: 10px; padding: 9px 12px; border-radius: 8px; background: #eef4ff; color: #3538cd; font-size: 11px; }

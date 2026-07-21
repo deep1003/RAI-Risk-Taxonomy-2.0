@@ -20,7 +20,7 @@
       <div class="hero__row">
         <div>
           <h1>RAI Risk Taxonomy 2.0</h1>
-          <p>L0–L4 global risk taxonomy · 50 L3 nodes · 55 cards pending L3 review</p>
+          <p>L0–L4 global risk taxonomy · 50 L3 nodes · 100% L3 placement</p>
         </div>
         <div class="hero__count" aria-label="전체 L4 카드 수">
           <strong>1,726</strong>
@@ -36,7 +36,6 @@
       <button class="domain-pill domain-pill--general" data-domain="RAI1-G" type="button"><i></i>General</button>
       <button class="domain-pill domain-pill--agentic" data-domain="RAI1-A" type="button"><i></i>Agentic AI</button>
       <button class="domain-pill domain-pill--physical" data-domain="RAI1-P" type="button"><i></i>Physical AI <span>182</span></button>
-      <button class="domain-pill domain-pill--decision" data-status="unassigned" type="button"><i></i>Taxonomy Decision Hold <span>55</span></button>
     </div>
   </nav>
 
@@ -58,16 +57,16 @@
           <span>Physical 정답 잠금</span><strong id="stat-locked">182</strong><small>169 exact + 13 explicit aliases</small>
         </article>
         <article class="stat-card stat-card--proposed">
-          <span>Assigned to 50 L3 nodes</span><strong id="stat-proposed">1,671</strong><small>Provisional · human review required</small>
+          <span>Assigned to 50 L3 nodes</span><strong id="stat-proposed">1,726</strong><small>100% operational placement</small>
         </article>
         <article class="stat-card stat-card--decision">
-          <span>Taxonomy Decision Hold</span><strong id="stat-needs">55</strong><small>Separate L1-level review collection</small>
+          <span>HOLD</span><strong id="stat-needs">55</strong><small>Decision required within assigned L3 paths</small>
         </article>
       </div>
 
       <div class="coverage-note">
         <strong>50-L3 sufficiency: NOT DEMONSTRATED</strong>
-        <span>96.8134% policy coverage and use of all 50 L3 nodes do not establish taxonomy validity. Forced and held cards require human review.</span>
+        <span>100% operational placement and use of all 50 L3 nodes do not establish taxonomy validity. Forced cards, including 55 marked HOLD, require human review.</span>
       </div>
     </section>
 
@@ -88,11 +87,10 @@
           <kbd>/</kbd>
         </label>
         <label>
-          <span>L3 배치</span>
+          <span>검토 표시</span>
           <select id="status-filter">
             <option value="all">전체</option>
-            <option value="assigned">L3 assigned</option>
-            <option value="unassigned">Taxonomy Decision Hold</option>
+            <option value="decision_required">HOLD</option>
           </select>
         </label>
         <label>
@@ -136,7 +134,7 @@
   <footer>
     <div>
       <strong>RAI Risk Taxonomy 2.0</strong>
-      <span>1,671 classified · 55 held · Technical Report 2.0</span>
+      <span>1,726 classified · 55 decision-required · Technical Report 2.0</span>
     </div>
     <p>Algorithmic and forced placements are provisional and are not human-approved ground truth.</p>
   </footer>

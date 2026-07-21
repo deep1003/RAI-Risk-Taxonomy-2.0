@@ -19,8 +19,7 @@ const childrenByParent = new Map();
 const cardPath = new Map();
 
 const ASSIGNMENT_META = {
-  assigned: { label: "L3 assigned" },
-  unassigned: { label: "Taxonomy Decision Hold" },
+  decision_required: { label: "HOLD" },
 };
 
 const DOMAIN_COLORS = {
@@ -173,7 +172,7 @@ function renderStats() {
   document.querySelector("#stat-total").textContent = counts.l4.toLocaleString();
   document.querySelector("#stat-locked").textContent = counts.physical_locked.toLocaleString();
   document.querySelector("#stat-proposed").textContent = counts.classified.toLocaleString();
-  document.querySelector("#stat-needs").textContent = counts.needs_taxonomy_decision.toLocaleString();
+  document.querySelector("#stat-needs").textContent = counts.decision_required.toLocaleString();
 }
 
 function renderTree() {
@@ -189,22 +188,8 @@ function renderTree() {
       </div>
     </details>`;
   }).join("");
-  const holdCount = state.cards.filter((card) => !card.primary_l3_id).length;
-  ui.tree.innerHTML = `${hierarchy}<button class="tree-hold" type="button" data-assignment="unassigned">
-    <span class="tree-dot"></span><span>Taxonomy Decision Hold</span><b>${holdCount}</b>
-  </button>`;
+  ui.tree.innerHTML = hierarchy;
   ui.tree.querySelectorAll("[data-node]").forEach((button) => button.addEventListener("click", () => selectTreeNode(button.dataset.node)));
-  ui.tree.querySelector("[data-assignment='unassigned']").addEventListener("click", selectDecisionHold);
-}
-
-function selectDecisionHold() {
-  Object.assign(state, { status: "unassigned", l1: "all", l2: "all", l3: "all", page: 1 });
-  clearNavActive();
-  document.querySelector('[data-status="unassigned"]').classList.add("active");
-  refreshDependentFilters();
-  syncControls();
-  render();
-  document.querySelector("#risk-results").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function countCardsByNode() {
@@ -271,9 +256,7 @@ function filteredCards() {
     const matchesQuery = !query || [card.l4_id, card.label_en, card.label_ko, card.definition_en, card.definition_ko]
       .filter(Boolean).join(" ").toLocaleLowerCase().includes(query);
     return matchesQuery
-      && (state.status === "all"
-        || (state.status === "assigned" && Boolean(card.primary_l3_id))
-        || (state.status === "unassigned" && !card.primary_l3_id))
+      && (state.status === "all" || (state.status === "decision_required" && card.decision_required))
       && (state.l1 === "all" || path.l1 === state.l1)
       && (state.l2 === "all" || path.l2 === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
@@ -304,7 +287,7 @@ function cardTemplate(card) {
   const path = cardPath.get(card.l4_id);
   const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "L3 not assigned";
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:#3867d6" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
-    <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span></div>
+    <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h3>${escapeHtml(card.label_en)}</h3>
     ${card.label_ko ? `<p class="risk-card__ko">${escapeHtml(card.label_ko)}</p>` : ""}
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")}</p>
@@ -346,7 +329,6 @@ function renderActiveFilter() {
 
 function syncTreeActive() {
   ui.tree.querySelectorAll(".tree-node").forEach((button) => button.classList.toggle("active", [state.l2, state.l3].includes(button.dataset.node)));
-  ui.tree.querySelector("[data-assignment='unassigned']")?.classList.toggle("active", state.status === "unassigned");
 }
 
 function openCard(l4Id) {
@@ -356,7 +338,7 @@ function openCard(l4Id) {
   const references = card.references || [];
   const tags = card.three_h_one_r || [];
   ui.dialogContent.innerHTML = `<div class="dialog-body">
-    <div><span class="risk-id">${card.l4_id}</span></div>
+    <div><span class="risk-id">${card.l4_id}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h2>${escapeHtml(card.label_en)}</h2>
     ${card.label_ko ? `<p class="dialog-ko">${escapeHtml(card.label_ko)}</p>` : ""}
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : "L3 not assigned"}</div>

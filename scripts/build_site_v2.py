@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "public/data/releases/v1.0.0"
-POLICY = ROOT / "data/experiments/stage3-review-hold-v1/placements.json"
+POLICY = ROOT / "data/experiments/stage3-forced-policy-v2/placements.json"
 OUT = ROOT / "public/data/releases/v2.0.0"
 
 
@@ -39,7 +39,6 @@ def main() -> None:
         "stage1_algorithm_proposed": "stage1_consensus",
         "algorithm_proposed_stage2": "stage2_proposed",
         "forced_match_stage3": "stage3_forced",
-        "needs_taxonomy_decision": "needs_taxonomy_decision",
     }
     cards = []
     for base in base_cards:
@@ -50,10 +49,12 @@ def main() -> None:
                 "release_id": "v2.0.0",
                 "primary_l3_id": placement["policy_l3_id"],
                 "assignment_status": status_map[placement["policy_status"]],
-                "review_status": "taxonomy_decision_hold" if placement["policy_l3_id"] is None else "human_review_required",
-                "operational_bucket_id": placement["operational_bucket_id"],
+                "review_status": "decision_required" if placement["decision_required"] else "human_review_required",
+                "decision_required": placement["decision_required"],
+                "decision_reason": placement["decision_reason"],
+                "operational_bucket_id": None,
                 "stage2_hold_reason": placement["stage2_hold_reason"],
-                "forced_candidate_l3_id": placement["stage3_l3_id"] if placement["policy_l3_id"] is None else None,
+                "forced_candidate_l3_id": None,
                 "stage2_suitability_score": placement["stage2_suitability_score"],
                 "human_approved": placement["human_approved"],
             }
@@ -72,7 +73,7 @@ def main() -> None:
         "release_status": "technical_report_2.0_policy_view",
         "provisional": True,
         "created_at": "2026-07-21T00:00:00+09:00",
-        "policy_view_id": "stage3-review-hold-v1",
+        "policy_view_id": "stage3-forced-policy-v2",
         "counts": {
             "l4": len(cards),
             "classified": sum(card["primary_l3_id"] is not None for card in cards),
@@ -80,12 +81,13 @@ def main() -> None:
             "stage1_consensus": counts["stage1_consensus"],
             "stage2_proposed": counts["stage2_proposed"],
             "stage3_forced": counts["stage3_forced"],
-            "needs_taxonomy_decision": counts["needs_taxonomy_decision"],
+            "decision_required": sum(card["decision_required"] for card in cards),
+            "needs_taxonomy_decision": 0,
             "l3_nodes": sum(node["level"] == 3 for node in hierarchy["nodes"]),
         },
         "human_approval": {
             "algorithmic_placements_approved": False,
-            "hold_is_taxonomy_node": False,
+            "decision_required_is_taxonomy_node": False,
         },
         "artifacts": [
             {"path": "hierarchy.json", "sha256": sha256(hierarchy_path)},

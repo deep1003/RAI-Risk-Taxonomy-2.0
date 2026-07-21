@@ -32,11 +32,11 @@
       "stage": 4,
       "unit": "L4 risk card with non-null policy L3",
       "label": "Assigned to one of 50 L3 nodes",
-      "count": 1671,
-      "share_of_previous_percent": 96.81344148319815,
-      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or retained Stage 3 quota candidate; exclusion of 55 hard holds into RAI-HOLD."
+      "count": 1726,
+      "share_of_previous_percent": 100.0,
+      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All cards receive an L3; 55 difficult cases retain a decision_required marker."
     }
   ],
-  "review_hold": {"count": 55, "share_of_l4_percent": 3.186558516801854},
+  "decision_required": {"count": 55, "share_of_l4_percent": 3.186558516801854, "is_taxonomy_node": false},
   "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
 }
