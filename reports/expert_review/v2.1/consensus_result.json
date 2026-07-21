@@ -1,0 +1,653 @@
+{
+  "reviewed_count_per_reviewer": [
+    1725,
+    1725
+  ],
+  "reviewer_proposal_counts": [
+    30,
+    14
+  ],
+  "consensus_count": 1,
+  "consensus_amendments": [
+    {
+      "l4_id": "RAI4-0888",
+      "old_label": "Privacy concerns",
+      "new_label": "Anthropomorphic trust-induced privacy disclosure",
+      "l3_id": "RAI3-G-INT-10"
+    }
+  ],
+  "no_consensus_count": 42,
+  "no_consensus": [
+    {
+      "l4_id": "RAI4-0520",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0520",
+        "current_label": "Labour displacement",
+        "proposed_label": "Embodied-AI displacement of physical labour",
+        "proposed_l3_id": "RAI3-P-SOC-02",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The definition specifically concerns embodied AI replacing physical labour. Anthropomorphism is not the mechanism; the locked hierarchy contains an exact labour-displacement family for embodied systems.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0521",
+      "reviewer_a": {
+        "l4_id": "RAI4-0521",
+        "current_label": "Labour market risks",
+        "proposed_label": "AI automation-induced job displacement",
+        "proposed_l3_id": null,
+        "issue_type": "generic_label_and_no_fitting_l3",
+        "rationale": "The definition specifically describes broad task automation, job loss, and transitional unemployment. The current Network Effects path is not causal or definitional, and the current General/Agentic L3 set has no socioeconomic labor-displacement class.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0532",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0532",
+        "current_label": "Power concentration",
+        "proposed_label": "Embodied-AI ownership-driven power concentration",
+        "proposed_l3_id": "RAI3-P-SOC-04",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The definition identifies increasing returns to embodied-AI ownership as the mechanism concentrating economic and political power. It is not an anthropomorphism risk.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0539",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0539",
+        "current_label": "Socioeconomic inequality",
+        "proposed_label": "Embodied-AI access-driven wealth inequality",
+        "proposed_l3_id": "RAI3-P-SOC-03",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The stated mechanism is unequal access to or ownership of embodied AI creating productivity and wealth disparities. The Physical AI socioeconomic-inequality L3 directly captures it.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0552",
+      "reviewer_a": {
+        "l4_id": "RAI4-0552",
+        "current_label": "Accident risks",
+        "proposed_label": "Cascading safety-critical AI operational failure",
+        "proposed_l3_id": "RAI3-A-SYS-04",
+        "issue_type": "generic_outcome_label",
+        "rationale": "The definition is not about accidents generally; it identifies operational or model failure at a single point that cascades through safety-critical infrastructure. The proposed label exposes that mechanism while retaining the current destabilising-dynamics path.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0553",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0553",
+        "current_label": "Accidental harm",
+        "proposed_label": "Accidental physical injury from embodied AI",
+        "proposed_l3_id": "RAI3-P-SYS-01",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The definition concerns unintended physical injuries caused by embodied systems in close human contact. Destabilising multi-agent dynamics are not described.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0597",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0597",
+        "current_label": "Lack of transparency, explainability, and trust",
+        "proposed_label": "Opaque embodied-AI decisions undermining trust",
+        "proposed_l3_id": "RAI3-P-SOC-07",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The definition emphasizes opaque physical-system actions and the resulting loss of societal trust. The assigned Anthropomorphism L3 does not cover opacity or explainability.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0634",
+      "reviewer_a": {
+        "l4_id": "RAI4-0634",
+        "current_label": "Large-scale persuasion and harmful manipulation risks",
+        "proposed_label": "Synthetic-content-enabled mass persuasion",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The definition concerns intentional influence operations using deepfakes, false narratives, targeting, and platform manipulation. Copyrights does not fit. The existing misinformation L3 is expressly limited to unintentional incorrect information, so no current L3 is a clean destination.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0639",
+      "reviewer_a": {
+        "l4_id": "RAI4-0639",
+        "current_label": "Physical harm and injury risks",
+        "proposed_label": "Malicious exploitation of embodied AI autonomy",
+        "proposed_l3_id": "RAI3-P-INT-01",
+        "issue_type": "outcome_label_and_wrong_l3",
+        "rationale": "The definition explicitly requires embodied autonomous action and malicious exploitation; physical injury is the outcome, not the mechanism. Purposeful / Malicious Harm is the matching Physical AI L3.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0640",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0640",
+        "current_label": "Purposeful or malicious harm",
+        "proposed_label": "Malicious weaponization of embodied AI",
+        "proposed_l3_id": "RAI3-P-INT-01",
+        "issue_type": "generic_label_and_l3_mismatch",
+        "rationale": "The definition describes deliberate repurposing or deployment of embodied systems for lethal or other physical harm. Its primary mechanism is malicious physical use, not humanlike representation.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0660",
+      "reviewer_a": {
+        "l4_id": "RAI4-0660",
+        "current_label": "Biological risks",
+        "proposed_label": "AI-enabled hazardous pathogen and genetic modification",
+        "proposed_l3_id": "RAI3-G-INT-09",
+        "issue_type": "generic_label_and_wrong_l3",
+        "rationale": "The card describes dangerous pathogen modification and genetic manipulation rather than safeguard over-refusal. Its operative mechanism is biological weapon or hazardous-agent enablement, which fits Weaponization.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0672",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0672",
+        "current_label": "Bias and discrimination",
+        "proposed_label": "Embodied-AI enactment of discriminatory bias",
+        "proposed_l3_id": "RAI3-P-SOC-05",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The definition concerns discrimination enacted by embodied systems in positions of power. It has no anthropomorphic mechanism and maps directly to Physical AI bias and discrimination.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0881",
+      "reviewer_a": {
+        "l4_id": "RAI4-0881",
+        "current_label": "Interaction risks",
+        "proposed_label": "Human–AI interaction overtrust and manipulation",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label",
+        "rationale": "The definition bundles anthropomorphic overtrust, content-authenticity uncertainty, mental-wellbeing effects, displaced human contact, manipulation, and incitement. Anthropomorphism captures only one mechanism, so this composite needs decomposition or an explicit cross-cutting decision rather than a single automatic L3 assignment.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0889",
+      "reviewer_a": {
+        "l4_id": "RAI4-0889",
+        "current_label": "Risks from product functionality issues",
+        "proposed_label": "Capability misconception-induced overreliance",
+        "proposed_l3_id": "RAI3-G-SYS-02",
+        "issue_type": "generic_label_and_wrong_l3",
+        "rationale": "The mechanism is a mistaken or misleading representation of system capability that creates unrealistic expectations and overreliance. This aligns more directly with Over-Extension than with factual Misinformation/Disinformation.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0931",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0931",
+        "current_label": "Broken systems",
+        "proposed_label": "Opaque biased decision systems causing uncontestable harm",
+        "proposed_l3_id": "RAI3-G-SYS-09",
+        "issue_type": "non_mechanistic_label_and_l3_mismatch",
+        "rationale": "The label is too vague. The definition emphasizes biased, opaque decisions that affected people cannot challenge, making non-contestability more central than overconfidence.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0938",
+      "reviewer_a": {
+        "l4_id": "RAI4-0938",
+        "current_label": "Ethics and morality issues",
+        "proposed_label": "Failure to align outputs with societal moral norms",
+        "proposed_l3_id": "RAI3-G-SYS-08",
+        "issue_type": "generic_label_and_wrong_l3",
+        "rationale": "The definition concerns judgments that fail to follow socially accepted values and norms. Policy Exposure is unrelated; Goal Misalignment is the closest available system-level failure class, although the taxonomy may later warrant a dedicated values L3.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0986",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0986",
+        "current_label": "AI jurisprudence",
+        "proposed_label": "Legal accountability gap for autonomous-agent harms",
+        "proposed_l3_id": null,
+        "issue_type": "topic_label_and_taxonomy_gap",
+        "rationale": "The definition describes the absence of a legal framework assigning blame and responsibility for autonomous-agent actions. 'AI jurisprudence' is a topic, not a risk mechanism, and the current non-contestability L3 concerns appeal procedures rather than liability allocation.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0987",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-0987",
+        "current_label": "Liability and negligence",
+        "proposed_label": "Unallocated liability for autonomous-system failures",
+        "proposed_l3_id": null,
+        "issue_type": "generic_legal_label_and_taxonomy_gap",
+        "rationale": "The risk is a legal responsibility gap after autonomous-system malfunction. Goal misalignment is not the mechanism, while the available general hierarchy lacks a direct liability-allocation L3.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-0995",
+      "reviewer_a": {
+        "l4_id": "RAI4-0995",
+        "current_label": "Usurpation of jobs by automation",
+        "proposed_label": "Automation-induced job elimination",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The risk is direct employment displacement. Copyrights is unrelated, and the available non-Physical L3 vocabulary lacks a labor-displacement category.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1050",
+      "reviewer_a": {
+        "l4_id": "RAI4-1050",
+        "current_label": "Other ethical risks",
+        "proposed_label": "Scaled psychological manipulation and dehumanization",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label_and_wrong_l3",
+        "rationale": "The definition lists manipulation, dehumanization, and exploitation at scale; it does not describe sexual harm. These are multiple mechanisms and no single current L3 covers the composite faithfully.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1085",
+      "reviewer_a": {
+        "l4_id": "RAI4-1085",
+        "current_label": "Influence operations",
+        "proposed_label": "AI-enabled targeted public-opinion manipulation",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The definition is an intentional malicious influence campaign. The current misinformation L3 is restricted to unintentional incorrect information, leaving no exact existing L3 despite the current path being nearer than most alternatives.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1104",
+      "reviewer_a": {
+        "l4_id": "RAI4-1104",
+        "current_label": "Workforce substitution and transformation",
+        "proposed_label": "AI-driven workforce substitution and unemployment",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The definition is socioeconomic job substitution and unemployment. Copyrights is unrelated, and no existing General or Agentic L3 represents labor displacement.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1182",
+      "reviewer_a": {
+        "l4_id": "RAI4-1182",
+        "current_label": "Society manipulation",
+        "proposed_label": "AI-enabled manipulation of social dynamics",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The sparse definition points to social manipulation, not conflict among competing agents. The evidence is insufficient to select one current content L3, so reassignment should await clarification.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1231",
+      "reviewer_a": {
+        "l4_id": "RAI4-1231",
+        "current_label": "Labor market",
+        "proposed_label": "Generative-AI-induced job displacement",
+        "proposed_l3_id": null,
+        "issue_type": "topic_label_and_no_fitting_l3",
+        "rationale": "A market is a topic rather than a risk mechanism. The definition specifically identifies worker displacement and job redundancy, which Anthropomorphism does not cover; the current L3 set has no labor-displacement destination.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1255",
+      "reviewer_a": {
+        "l4_id": "RAI4-1255",
+        "current_label": "Trust concerns",
+        "proposed_label": "Cross-cutting AI trustworthiness failures",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label_and_wrong_l3",
+        "rationale": "The definition aggregates privacy, misuse, action errors, bias, robustness, opacity, and transparency. Privacy alone is not an adequate parent; the item should be decomposed or explicitly retained as cross-cutting.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1256",
+      "reviewer_a": {
+        "l4_id": "RAI4-1256",
+        "current_label": "Ethical concerns",
+        "proposed_label": "Socioeconomic and human-capability harms from AI",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label",
+        "rationale": "The definition combines unemployment, inequality, unfairness, social anxiety, deskilling, redundancy, and human-machine relations. Anthropomorphism covers only the last component and is not a valid parent for the full card.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1257",
+      "reviewer_a": {
+        "l4_id": "RAI4-1257",
+        "current_label": "Disruption concerns",
+        "proposed_label": "AI-induced organizational and supply-chain disruption",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label_and_wrong_l3",
+        "rationale": "The definition covers disruption to organizational culture, supply chains, and power structures. Copyrights is unrelated, and no current L3 represents this socioeconomic-systemic mechanism.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1258",
+      "reviewer_a": {
+        "l4_id": "RAI4-1258",
+        "current_label": "Balancing AI's risks",
+        "proposed_label": "Cross-domain AI design and unpredictability risks",
+        "proposed_l3_id": null,
+        "issue_type": "non_risk_topic_label_and_composite_definition",
+        "rationale": "The current phrase describes a literature topic or management activity, not a failure mode. The definition spans design, unpredictability, military use, emergencies, and takeover, so a single Anthropomorphism placement is not defensible.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1270",
+      "reviewer_a": {
+        "l4_id": "RAI4-1270",
+        "current_label": "Data issues",
+        "proposed_label": "Training-data insufficiency, imbalance, and bias",
+        "proposed_l3_id": "RAI3-G-SYS-06",
+        "issue_type": "generic_label_and_l3_refinement",
+        "rationale": "The definition identifies heterogeneous, insufficient, imbalanced, untrusted, biased, and uncertain data that cause biased or unreliable generalization. Overgeneralization is a closer available mechanism than misinformation, while the more specific label makes the source conditions auditable.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1373",
+      "reviewer_a": {
+        "l4_id": "RAI4-1373",
+        "current_label": "Environmental cost (energy consumption)",
+        "proposed_label": "Large-model training energy consumption",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The card describes compute-driven energy consumption. Copyrights is unrelated, and the current taxonomy has no non-Physical environmental-resource L3.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1374",
+      "reviewer_a": {
+        "l4_id": "RAI4-1374",
+        "current_label": "Environmental cost (water consumption)",
+        "proposed_label": "AI data-center cooling water consumption",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The mechanism is water use for data-center cooling and local resource pressure. Copyrights is unrelated, and no non-Physical environmental-resource L3 exists.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1410",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-1410",
+        "current_label": "Specification gaming",
+        "proposed_label": "Proxy-objective exploitation through specification gaming",
+        "proposed_l3_id": "RAI3-G-SYS-08",
+        "issue_type": "label_specificity_and_l3_mismatch",
+        "rationale": "The example concerns satisfying a proxy signal while defeating the intended goal. This is goal misalignment, not anthropomorphic representation.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1456",
+      "reviewer_a": {
+        "l4_id": "RAI4-1456",
+        "current_label": "Excessive water consumption",
+        "proposed_label": "Data-center cooling water depletion",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The definition concerns local water shortages created by data-center cooling. Excessive Authority is unrelated, and the current taxonomy lacks an environmental-resource L3 for General or Agentic AI.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1476",
+      "reviewer_a": {
+        "l4_id": "RAI4-1476",
+        "current_label": "Operational data issues",
+        "proposed_label": "Operational distribution-shift failure",
+        "proposed_l3_id": "RAI3-G-SYS-06",
+        "issue_type": "generic_label_and_wrong_l3",
+        "rationale": "The definition describes deployment data deviating from the test distribution, causing unreliable behavior. This is not goal misalignment; Overgeneralization is the closest available L3 for failure beyond observed training or test scope.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1481",
+      "reviewer_a": {
+        "l4_id": "RAI4-1481",
+        "current_label": "Reliability issues",
+        "proposed_label": "Functionality failure from hallucinated or erroneous outputs",
+        "proposed_l3_id": "RAI3-G-SYS-03",
+        "issue_type": "generic_label",
+        "rationale": "The definition specifically cites fabricated facts, erroneous code, and inaccurate medical information. The existing misinformation path is suitable, but the label should expose the output-failure mechanism.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1537",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-1537",
+        "current_label": "Situational awareness in AI systems",
+        "proposed_label": "Evaluation-aware situational awareness enabling deception",
+        "proposed_l3_id": "RAI3-G-SYS-08",
+        "issue_type": "capability_label_missing_harm_and_l3_mismatch",
+        "rationale": "Situational awareness alone is a capability, not a risk. The definition identifies harm when awareness of evaluation or deployment context enables deceptive behaviour; this is closer to misaligned goal pursuit than anthropomorphism.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1612",
+      "reviewer_a": {
+        "l4_id": "RAI4-1612",
+        "current_label": "Misuse risks",
+        "proposed_label": "Frontier-AI uplift of cyber, influence, and CBRN misuse",
+        "proposed_l3_id": null,
+        "issue_type": "generic_composite_label",
+        "rationale": "The definition bundles cyberattack, disinformation, and biological or chemical weapon enablement. Weaponization covers only part of the card; decomposition or a cross-cutting malicious-use decision is needed.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1629",
+      "reviewer_a": {
+        "l4_id": "RAI4-1629",
+        "current_label": "Physical (mechanical ) risks",
+        "proposed_label": "Robotic equipment malfunction and laboratory injury",
+        "proposed_l3_id": "RAI3-P-SYS-03",
+        "issue_type": "generic_label_and_wrong_l1_l3",
+        "rationale": "The definition explicitly requires robotics, equipment malfunction, and physical harm in a laboratory. Hardware & Mechanical Failures is the direct Physical AI L3. This source card is not one of the 182 locked records, so the proposal does not alter the protected set.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1630",
+      "reviewer_a": {
+        "l4_id": "RAI4-1630",
+        "current_label": "Information science risks",
+        "proposed_label": "Scientific-data misuse, misinterpretation, and leakage",
+        "proposed_l3_id": null,
+        "issue_type": "topic_label_and_composite_definition",
+        "rationale": "The definition combines erroneous inference, sensitive-data leakage, malicious literature generation, and knowledge-graph poisoning. Misinformation captures only part of this composite, so the card needs decomposition or an explicit cross-cutting decision.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1644",
+      "reviewer_a": {
+        "l4_id": "RAI4-1644",
+        "current_label": "Agentic LLMs pose novel risks",
+        "proposed_label": "Autonomous LLM-agent action beyond direct oversight",
+        "proposed_l3_id": "RAI3-A-SYS-01",
+        "issue_type": "assertion_label_not_mechanism",
+        "rationale": "The current label states that risk exists but does not identify it. The definition emphasizes autonomous planning, tool use, real-world action, longer horizons, and limited user oversight; the proposed label names that mechanism while retaining Excessive Authority.",
+        "confidence": "medium",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1696",
+      "reviewer_a": {
+        "l4_id": "RAI4-1696",
+        "current_label": "Social-world-model influence operations",
+        "proposed_label": "Social-world-model-enabled microtargeted persuasion",
+        "proposed_l3_id": null,
+        "issue_type": "wrong_l3_no_fitting_l3",
+        "rationale": "The mechanism is psychologically targeted influence based on predicted demographic responses, not privacy exposure. No existing L3 cleanly covers intentional persuasion operations because the misinformation class is limited to unintentional falsehood.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "reviewer_b": null,
+      "action": "retain_current_card_and_mark_hold"
+    },
+    {
+      "l4_id": "RAI4-1712",
+      "reviewer_a": null,
+      "reviewer_b": {
+        "l4_id": "RAI4-1712",
+        "current_label": "Detrimental content",
+        "proposed_label": "Cross-domain harmful content generation and distribution",
+        "proposed_l3_id": null,
+        "issue_type": "overbroad_multi_mechanism_card",
+        "rationale": "The definition combines deepfakes, threats, self-harm, extremism, misinformation, sexual abuse material, and scams. Sexual content alone does not summarize the card; no single existing L3 contains this cross-domain bundle without losing information.",
+        "confidence": "high",
+        "physical_protected": false
+      },
+      "action": "retain_current_card_and_mark_hold"
+    }
+  ],
+  "physical_cards_changed": 0
+}

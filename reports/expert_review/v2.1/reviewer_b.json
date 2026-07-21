@@ -1,0 +1,159 @@
+{
+  "reviewer": {
+    "id": "reviewer_b",
+    "role": "Independent AI safety evidence and risk-card editorial reviewer",
+    "scope": "All active L4 cards in release v2.1.0, their cited references, and the v2.1.0 hierarchy",
+    "independence_note": "The review assessed the card text and assigned taxonomy path independently. It did not treat legacy L1-L3 paths as ground truth. The 182 locked Physical AI cards were treated as a protected reference set and were not proposed for automatic change."
+  },
+  "criteria": [
+    "The L4 label must name the concrete risk mechanism or harmful outcome expressed by the definition, rather than only a broad topic.",
+    "The label must preserve the causal qualifier needed to distinguish the card from other cards with similar generic names.",
+    "The assigned L3 definition must contain the card's primary mechanism; topical word overlap alone is insufficient.",
+    "Where a definition contains several independent mechanisms and no single L3 dominates, the card is flagged rather than editorially forced into a misleading category.",
+    "Label changes preserve the permanent L4 ID and should retain the former label as provenance metadata.",
+    "Physical AI locked cards are protected from automatic label or path changes; any future concern requires separate human adjudication."
+  ],
+  "reviewed_count": 1725,
+  "proposals": [
+    {
+      "l4_id": "RAI4-0520",
+      "current_label": "Labour displacement",
+      "proposed_label": "Embodied-AI displacement of physical labour",
+      "proposed_l3_id": "RAI3-P-SOC-02",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The definition specifically concerns embodied AI replacing physical labour. Anthropomorphism is not the mechanism; the locked hierarchy contains an exact labour-displacement family for embodied systems.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0532",
+      "current_label": "Power concentration",
+      "proposed_label": "Embodied-AI ownership-driven power concentration",
+      "proposed_l3_id": "RAI3-P-SOC-04",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The definition identifies increasing returns to embodied-AI ownership as the mechanism concentrating economic and political power. It is not an anthropomorphism risk.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0539",
+      "current_label": "Socioeconomic inequality",
+      "proposed_label": "Embodied-AI access-driven wealth inequality",
+      "proposed_l3_id": "RAI3-P-SOC-03",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The stated mechanism is unequal access to or ownership of embodied AI creating productivity and wealth disparities. The Physical AI socioeconomic-inequality L3 directly captures it.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0553",
+      "current_label": "Accidental harm",
+      "proposed_label": "Accidental physical injury from embodied AI",
+      "proposed_l3_id": "RAI3-P-SYS-01",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The definition concerns unintended physical injuries caused by embodied systems in close human contact. Destabilising multi-agent dynamics are not described.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0597",
+      "current_label": "Lack of transparency, explainability, and trust",
+      "proposed_label": "Opaque embodied-AI decisions undermining trust",
+      "proposed_l3_id": "RAI3-P-SOC-07",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The definition emphasizes opaque physical-system actions and the resulting loss of societal trust. The assigned Anthropomorphism L3 does not cover opacity or explainability.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0640",
+      "current_label": "Purposeful or malicious harm",
+      "proposed_label": "Malicious weaponization of embodied AI",
+      "proposed_l3_id": "RAI3-P-INT-01",
+      "issue_type": "generic_label_and_l3_mismatch",
+      "rationale": "The definition describes deliberate repurposing or deployment of embodied systems for lethal or other physical harm. Its primary mechanism is malicious physical use, not humanlike representation.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0672",
+      "current_label": "Bias and discrimination",
+      "proposed_label": "Embodied-AI enactment of discriminatory bias",
+      "proposed_l3_id": "RAI3-P-SOC-05",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The definition concerns discrimination enacted by embodied systems in positions of power. It has no anthropomorphic mechanism and maps directly to Physical AI bias and discrimination.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0888",
+      "current_label": "Privacy concerns",
+      "proposed_label": "Anthropomorphic trust-induced privacy disclosure",
+      "proposed_l3_id": "RAI3-G-INT-10",
+      "issue_type": "generic_outcome_label_missing_causal_mechanism",
+      "rationale": "The definition's distinguishing mechanism is humanlike assistant behaviour creating emotional trust that induces disclosure of private data. The proposed label retains the privacy outcome while making the anthropomorphism pathway explicit; the current L3 is therefore appropriate.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0931",
+      "current_label": "Broken systems",
+      "proposed_label": "Opaque biased decision systems causing uncontestable harm",
+      "proposed_l3_id": "RAI3-G-SYS-09",
+      "issue_type": "non_mechanistic_label_and_l3_mismatch",
+      "rationale": "The label is too vague. The definition emphasizes biased, opaque decisions that affected people cannot challenge, making non-contestability more central than overconfidence.",
+      "confidence": "medium",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0986",
+      "current_label": "AI jurisprudence",
+      "proposed_label": "Legal accountability gap for autonomous-agent harms",
+      "proposed_l3_id": null,
+      "issue_type": "topic_label_and_taxonomy_gap",
+      "rationale": "The definition describes the absence of a legal framework assigning blame and responsibility for autonomous-agent actions. 'AI jurisprudence' is a topic, not a risk mechanism, and the current non-contestability L3 concerns appeal procedures rather than liability allocation.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-0987",
+      "current_label": "Liability and negligence",
+      "proposed_label": "Unallocated liability for autonomous-system failures",
+      "proposed_l3_id": null,
+      "issue_type": "generic_legal_label_and_taxonomy_gap",
+      "rationale": "The risk is a legal responsibility gap after autonomous-system malfunction. Goal misalignment is not the mechanism, while the available general hierarchy lacks a direct liability-allocation L3.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-1410",
+      "current_label": "Specification gaming",
+      "proposed_label": "Proxy-objective exploitation through specification gaming",
+      "proposed_l3_id": "RAI3-G-SYS-08",
+      "issue_type": "label_specificity_and_l3_mismatch",
+      "rationale": "The example concerns satisfying a proxy signal while defeating the intended goal. This is goal misalignment, not anthropomorphic representation.",
+      "confidence": "high",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-1537",
+      "current_label": "Situational awareness in AI systems",
+      "proposed_label": "Evaluation-aware situational awareness enabling deception",
+      "proposed_l3_id": "RAI3-G-SYS-08",
+      "issue_type": "capability_label_missing_harm_and_l3_mismatch",
+      "rationale": "Situational awareness alone is a capability, not a risk. The definition identifies harm when awareness of evaluation or deployment context enables deceptive behaviour; this is closer to misaligned goal pursuit than anthropomorphism.",
+      "confidence": "medium",
+      "physical_protected": false
+    },
+    {
+      "l4_id": "RAI4-1712",
+      "current_label": "Detrimental content",
+      "proposed_label": "Cross-domain harmful content generation and distribution",
+      "proposed_l3_id": null,
+      "issue_type": "overbroad_multi_mechanism_card",
+      "rationale": "The definition combines deepfakes, threats, self-harm, extremism, misinformation, sexual abuse material, and scams. Sexual content alone does not summarize the card; no single existing L3 contains this cross-domain bundle without losing information.",
+      "confidence": "high",
+      "physical_protected": false
+    }
+  ]
+}

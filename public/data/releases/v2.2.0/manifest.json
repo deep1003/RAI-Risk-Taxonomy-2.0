@@ -1,0 +1,27 @@
+{
+  "release_id": "v2.2.0",
+  "source_release": "v2.1.0",
+  "release_status": "two_reviewer_consensus_amended",
+  "counts": {
+    "l4": 1725,
+    "classified": 1725,
+    "physical_locked": 182,
+    "decision_required": 83,
+    "expert_consensus_amendments": 1,
+    "expert_no_consensus": 42,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "122e397950ea1fe4bfd39925070c9d4dd909eab4d37ae698a63c1b8443de6e62"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "44e82efdb41a1d3f27bf63ae06e6bd31d3d545474aed1afaf121f77adb887017"
+    },
+    {
+      "path": "reports/expert_review/v2.1/consensus_result.json"
+    }
+  ]
+}

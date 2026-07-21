@@ -34,9 +34,10 @@
       "label": "Assigned to one of 50 L3 nodes",
       "count": 1725,
       "share_of_previous_percent": 100.0,
-      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All cards receive an L3; 55 difficult cases retain a decision_required marker."
+      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All cards receive an L3; after two independent expert reviews, 83 cards retain a HOLD marker and one consensus label amendment is applied."
     }
   ],
-  "decision_required": {"count": 55, "share_of_l4_percent": 3.1884057971014492, "is_taxonomy_node": false},
+  "decision_required": {"count": 83, "share_of_l4_percent": 4.811594202898551, "is_taxonomy_node": false},
+  "expert_review": {"reviewers": 2, "reviewed_per_reviewer": 1725, "proposal_counts": [30, 14], "consensus_amendments": 1, "no_consensus_cards": 42},
   "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
 }

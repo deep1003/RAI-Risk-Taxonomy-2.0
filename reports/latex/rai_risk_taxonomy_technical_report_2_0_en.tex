@@ -74,8 +74,9 @@ contains 3,906,767 AI records: 1,749,159 papers, 125,372 policy reports, and
 (2.1\% of the AI evidence space). Canonicalization, source crosswalking, and
 risk-card construction yields 1,726 candidate rows. A conservative exact-match
 check merges one duplicate, yielding 1,725 L4 cards. A staged hierarchy-blind
-classification procedure assigns all 1,725 cards (100.0\%) to 50 L3 nodes and
-marks 55 cards (3.2\%) as requiring a taxonomy decision. We specify the
+classification procedure assigns all 1,725 cards (100.0\%) to 50 L3 nodes.
+Two independent expert reviews yield one consensus label amendment and leave
+83 cards (4.8\%) marked \code{HOLD}. We specify the
 filter at each transition, the mathematical decision rules, the protected
 Physical AI set, and the limits of interpreting record-level evidence as
 card-level taxonomy coverage.
@@ -159,7 +160,7 @@ rate.
 \subsection{Stage D: L3 assignment policy}
 
 The final policy view assigns all 1,725 canonical L4 cards to one of 50 L3 nodes
-(100.0\%). Fifty-five difficult cards (3.2\%) retain a \code{decision\_required}
+(100.0\%). Following independent expert review, 83 cards (4.8\%) retain a \code{decision\_required}
 marker, displayed as \code{HOLD}. This marker is metadata on an assigned card,
 not an L1, L2, or L3 taxonomy node.
 
@@ -213,7 +214,7 @@ Stage & Count & Unit & Principal filter \\
 AI evidence & 3,906,767 & Document or patent record & AI source collections; valid title; standardized schema; within-type/category deduplication. \\
 AI-risk evidence & 82,971 & Document or patent record & Curated/integrated risk sources; record-type inclusion; valid title; within-type/category deduplication. \\
 Canonical L4 & 1,725 & Risk card & Exact normalized label and core-definition match only; one retired ID mapped to its canonical card; all 182 Physical cards preserved. \\
-L3 assigned & 1,725 & Risk card & Protected Physical mapping or staged non-Physical placement; all 55 difficult cases remain assigned and marked \code{HOLD}. \\
+L3 assigned & 1,725 & Risk card & Protected Physical mapping or staged non-Physical placement; 83 decision-required cards remain assigned and marked \code{HOLD}. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -282,9 +283,24 @@ new path retains its original hold reason, score, review priority, and
 
 The final policy marks five difficult-case families for decision review:
 23 Physical-scope reviews, 17 expert rejections, 7 expert disagreements,
-6 multi-mechanism cases, and 2 low-absolute-fit cases. Their policy L3 becomes
-their forced L3 path remains populated and \code{decision\_required=true}. The
+6 multi-mechanism cases, and 2 low-absolute-fit cases. Their forced L3 path
+remains populated and \code{decision\_required=true}. The
 remaining 118 quota holds also retain their forced paths and review metadata.
+
+\subsection{Independent expert card review}
+
+Two reviewers independently inspected all 1,725 cards for agreement among the
+L4 label, mechanism definition, evidence, and assigned L3. Reviewer A proposed
+30 amendments and Reviewer B proposed 14. Automatic amendment required both
+reviewers to propose the same label and L3 at high confidence. One card met this
+rule: \code{RAI4-0888} changed from ``Privacy concerns'' to
+``Anthropomorphic trust-induced privacy disclosure'', while retaining
+\code{RAI3-G-INT-10}. Its original label remains in provenance metadata.
+Forty-two cards had a proposal from only one reviewer or incompatible proposals;
+their labels and paths were not changed. Thirteen were already marked \code{HOLD}
+and 29 newly received the marker. The consensus amendment cleared the prior hold
+on \code{RAI4-0888}, giving $55-1+29=83$ final \code{HOLD} cards. No protected
+Physical AI card was changed.
 
 \begin{figure}[H]
 \centering
@@ -356,7 +372,7 @@ view.}
 
 \subsection{Final hierarchy coverage}
 
-The final policy assigns all 1,725 canonical cards (100.0\%); 55 assigned cards (3.2\%)
+The final policy assigns all 1,725 canonical cards (100.0\%); 83 assigned cards (4.8\%)
 carry the \code{HOLD} marker. Of all cards, 1,191 are General, 352 are Agentic
 AI, and 182 are Physical AI. Their shares are 69.0\%, 20.4\%, and 10.6\%, respectively.
 All 50 L3 nodes contain at least one card. Anthropomorphism is the largest L3
@@ -388,7 +404,7 @@ with 254 cards (14.7\%); the five largest L3 nodes jointly contain 42.0\%.
 \end{axis}
 \end{tikzpicture}
 \caption{\textbf{Largest L3 nodes in the final policy view.} The figure shows
-the twelve largest L3 nodes. Counts include the 55 assigned cards marked
+the twelve largest L3 nodes. Counts include the 83 assigned cards marked
 \code{HOLD}.}
 \label{fig:l3}
 \end{figure}
@@ -400,7 +416,7 @@ third decimal place and displayed to two decimal places; percentages with an
 integer component of at least 1 are rounded and displayed to one decimal place.
 For example, the L4 registry represents 0.04\% of the integrated AI evidence
 count, the AI-risk view represents 2.1\%, final L3 coverage is 100.0\%, and the
-decision-required share is 3.2\%. Exact floating-point ratios remain available in the
+decision-required share is 4.8\%. Exact floating-point ratios remain available in the
 machine-readable statistics artifact.
 
 \section{Validation and limitations}
@@ -422,8 +438,8 @@ truth.
 
 \section{Review priorities}
 
-The 55 assigned cards marked \code{HOLD} should be reviewed first, beginning with the 23
-Physical-boundary cases and 24 expert rejection/disagreement cases. The 118
+The 83 assigned cards marked \code{HOLD} should be reviewed first, beginning with
+the 42 cards lacking two-reviewer consensus and the original hard-hold cases. The 118
 quota candidates should then be reviewed in ascending $S_2$ order. Finally,
 the 247 gap overrides and 1,214 rule-free placements should be audited through
 L3-stratified samples. Human review should determine whether each failure is
@@ -437,8 +453,9 @@ available in the repository:
 \begin{itemize}[leftmargin=2em]
   \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
   \item \small\nolinkurl{data/experiments/stage3-forced-policy-v2/placements.json}
-  \item \small\nolinkurl{public/data/releases/v2.1.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.2.0/cards.json}
   \item \small\nolinkurl{reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json}
+  \item \small\nolinkurl{reports/expert_review/v2.1/consensus_result.json}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.
