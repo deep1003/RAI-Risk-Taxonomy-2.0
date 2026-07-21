@@ -35,6 +35,18 @@ const DOMAIN_LABELS = {
   "RAI1-P": "Physical AI",
 };
 
+const DOMAIN_ICONS = {
+  "RAI1-G": "🧠",
+  "RAI1-A": "🧭",
+  "RAI1-P": "🤖",
+};
+
+const L2_ICONS = {
+  "RAI2-INT": "↔",
+  "RAI2-SYS": "⚙",
+  "RAI2-SOC": "🏛",
+};
+
 document.addEventListener("DOMContentLoaded", init);
 
 async function init() {
@@ -139,7 +151,9 @@ function indexHierarchy() {
 }
 
 function populateFilters() {
-  const l1Nodes = state.nodes.filter((node) => node.level === 1);
+  const l1Nodes = state.nodes
+    .filter((node) => node.level === 1)
+    .map((node) => ({ ...node, display_icon: DOMAIN_ICONS[node.node_id] }));
   fillSelect(ui.l1, l1Nodes, "모든 L1");
   refreshDependentFilters();
 }
@@ -149,7 +163,7 @@ function refreshDependentFilters() {
   const availableCategoryIds = new Set(l2Nodes.map((node) => node.canonical_l2_id));
   const l2Categories = state.l2Categories
     .filter((category) => availableCategoryIds.has(category.category_id))
-    .map((category) => ({ node_id: category.category_id, label_en: category.label_en, label_ko: category.label_ko }));
+    .map((category) => ({ node_id: category.category_id, label_en: category.label_en, label_ko: category.label_ko, display_icon: L2_ICONS[category.category_id] }));
   fillSelect(ui.l2, l2Categories, "모든 L2", state.l2);
   if (![...ui.l2.options].some((option) => option.value === state.l2)) state.l2 = "all";
   const allowedL2 = new Set(l2Nodes
@@ -162,7 +176,7 @@ function refreshDependentFilters() {
 }
 
 function fillSelect(select, nodes, allLabel, selected = "all") {
-  select.innerHTML = `<option value="all">${allLabel}</option>${nodes.map((node) => `<option value="${node.node_id}">${bilingualLabel(node.label_en, node.label_ko)}</option>`).join("")}`;
+  select.innerHTML = `<option value="all">${allLabel}</option>${nodes.map((node) => `<option value="${node.node_id}">${node.display_icon ? `${node.display_icon} ` : ""}${bilingualLabel(node.label_en, node.label_ko)}</option>`).join("")}`;
   select.value = selected;
 }
 
@@ -187,7 +201,7 @@ function renderTree() {
   const hierarchy = domains.map((domain) => {
     const l2Nodes = childrenByParent.get(domain.node_id) || [];
     return `<details class="tree-domain" open style="--domain-color:${DOMAIN_COLORS[domain.node_id]}">
-      <summary><span class="tree-dot"></span>${bilingualLabel(domain.label_en, domain.label_ko)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
+      <summary><span class="tree-domain-icon" aria-hidden="true">${DOMAIN_ICONS[domain.node_id]}</span>${bilingualLabel(domain.label_en, domain.label_ko)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
       <div class="tree-children">
         ${l2Nodes.map((l2) => `<button class="tree-node" type="button" data-node="${l2.node_id}"><code>${l2.node_id.replace("RAI2-", "")}</code><span>${bilingualLabel(l2.label_en, l2.label_ko)}</span><b>${counts.get(l2.node_id) || 0}</b></button>
           <div class="tree-children">${(childrenByParent.get(l2.node_id) || []).map((l3) => `<button class="tree-node" type="button" data-node="${l3.node_id}"><code>${l3.node_id.replace("RAI3-", "")}</code><span>${bilingualLabel(l3.label_en, l3.label_ko)}</span><b>${counts.get(l3.node_id) || 0}</b></button>`).join("")}</div>`).join("")}
@@ -296,7 +310,7 @@ function cardTemplate(card) {
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
-    <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge">${escapeHtml(domainLabel)}</span></div>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
+    <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
     <div class="risk-card__bottom">
@@ -355,7 +369,7 @@ function openCard(l4Id) {
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
   ui.dialogContent.innerHTML = `<div class="dialog-body" style="--card-accent:${domainColor}">
-    <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge">${escapeHtml(domainLabel)}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
+    <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>

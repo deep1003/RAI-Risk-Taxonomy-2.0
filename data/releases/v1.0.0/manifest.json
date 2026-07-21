@@ -96,14 +96,14 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "ff64cf619f714d3e7003ce0054bf0bf735461d631d649f8ec1c1c0d799eea381",
-      "bytes": 16329,
+      "sha256": "3a27af79fe71af6a7b0681b6f090f706bc3e0e6207dbed3f9fe712164648a3b8",
+      "bytes": 16676,
       "rows": null
     },
     {
       "path": "assets/site.js",
-      "sha256": "354ea82603bad2f57c998cc72eb7af8d99513a5e77925a477606f661ee13a9dc",
-      "bytes": 18387,
+      "sha256": "f1b6fa21fdac3ef2c4abfefc1084445140ba79e5964681131d46e0250639914d",
+      "bytes": 18927,
       "rows": null
     },
     {
@@ -396,8 +396,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "1189a1bab8334d4f84f99072bb97fc90b34ffdc41704d6b011f4e03928e4f1ab",
-      "bytes": 6607,
+      "sha256": "f0cf934b92bf1811840e1ae0e4446f06963f91b1eb35f9236ef5c0118fbf8776",
+      "bytes": 6994,
       "rows": null
     },
     {
@@ -504,8 +504,8 @@
     },
     {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
-      "sha256": "54a2c1c7e21dff84b67689e9d3a53d11ca0f88ca11cdb57e8f1cafa88824bee0",
-      "bytes": 25772,
+      "sha256": "a823bad536568376d995cc949d6fb13e4be066f7cb311887fd1c08c7174a1d53",
+      "bytes": 25932,
       "rows": null
     },
     {
@@ -978,8 +978,8 @@
     },
     {
       "path": "tests/test_site_v2.py",
-      "sha256": "a3f4ab6ce9176c91b42d6023259d1122eb422da69ded9a443c951251e0e85c49",
-      "bytes": 8893,
+      "sha256": "ce523d320723d0a3fd73dd002573bdadd0d195ca53f5d734104e2ccd8ec3fce2",
+      "bytes": 9532,
       "rows": null
     }
   ],

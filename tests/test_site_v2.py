@@ -155,6 +155,19 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn('href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf"', page)
         self.assertIn(".report-pill", css)
 
+    def test_consistent_domain_and_level_icons(self) -> None:
+        page = (ROOT / "index.html").read_text()
+        script = (ROOT / "assets/site.js").read_text()
+        self.assertIn("🧠</span>General-purpose AI", page)
+        self.assertIn("🧭</span>Agentic AI", page)
+        self.assertIn("🤖</span>Physical AI", page)
+        self.assertIn('"RAI1-G": "🧠"', script)
+        self.assertIn('"RAI1-A": "🧭"', script)
+        self.assertIn('"RAI1-P": "🤖"', script)
+        self.assertIn('"RAI2-INT": "↔"', script)
+        self.assertIn('"RAI2-SYS": "⚙"', script)
+        self.assertIn('"RAI2-SOC": "🏛"', script)
+
 
 if __name__ == "__main__":
     unittest.main()

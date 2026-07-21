@@ -221,12 +221,14 @@ L2 category count is three, while no L3 path or L4 assignment changes.
 \subsection{Stable L4 identifiers and L1 display semantics}
 
 The public explorer keeps the stable \code{RAI4-\#\#\#\#} identifier independent
-of taxonomy placement. L1 membership is communicated through both an explicit
-text badge and a visual color: blue for General-purpose AI, green for Agentic
-AI, and red for Physical AI. The color is derived from the card's current L1
+of taxonomy placement. L1 membership is communicated through an explicit text
+badge, a consistent icon, and a visual color: a brain and blue for
+General-purpose AI, a compass and green for Agentic AI, and a robot and red for
+Physical AI. The icon--color pair is repeated in the global navigation,
+filters, hierarchy panel, and L4 cards. The color is derived from the card's current L1
 path at render time rather than encoded into the permanent identifier. This
 allows later human-approved remapping without identifier churn and avoids using
-color as the sole carrier of categorical information.
+color or icon as the sole carrier of categorical information.
 
 \subsection{Stage E: L3 assignment policy}
 
@@ -507,7 +509,7 @@ The 182 Physical mappings and 37 Stage 1 expert-consensus mappings remain
 unchanged in later stages. Repeated Stage 2 and Stage 3 builds produce
 byte-identical placement hashes. The Stage 2 validator reports 13 PASS, 0 FAIL,
 and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and 4 WARN. The
-release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 31 repository
+release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 32 repository
 tests pass at the time of this report revision.
 
 Three limitations directly affect interpretation. First, cross-category

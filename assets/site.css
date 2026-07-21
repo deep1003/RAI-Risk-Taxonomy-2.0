@@ -47,6 +47,7 @@ a { color: inherit; }
 .domain-pill:hover { border-color: #98a2b3; }
 .domain-pill.active { background: var(--ink); border-color: var(--ink); color: white; }
 .domain-pill i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.domain-icon { width: 17px; text-align: center; font-size: 13px; line-height: 1; }
 .domain-pill--general { color: var(--general); }
 .domain-pill--agentic { color: var(--agentic); }
 .domain-pill--physical { color: var(--physical); }
@@ -68,6 +69,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .stat-card { position: relative; overflow: hidden; display: flex; flex-direction: column; min-height: 132px; padding: 18px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .stat-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent, var(--ink)); }
 .stat-card span { color: #475467; font-size: 12px; font-weight: 650; }
+.stat-level-icon { margin-right: 6px; color: var(--accent, var(--ink)); font-style: normal; }
 .stat-card strong { margin-top: auto; font-size: 28px; letter-spacing: -.04em; }
 .stat-card small { margin-top: 4px; color: #98a2b3; font-size: 10px; }
 .stat-card--dark { --accent: var(--ink); }
@@ -104,7 +106,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .tree-domain summary::before { content: "›"; color: #98a2b3; font-size: 15px; transform: rotate(0); transition: transform .15s; }
 .tree-domain[open] summary::before { transform: rotate(90deg); }
 .tree-domain summary:hover { background: #f9fafb; }
-.tree-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--domain-color); }
+.tree-domain-icon { display: inline-grid; place-items: center; width: 20px; height: 20px; flex: 0 0 auto; border-radius: 6px; background: color-mix(in srgb, var(--domain-color) 10%, white); font-size: 12px; }
 .tree-count { margin-left: auto; color: #98a2b3; font-size: 9px; }
 .tree-children { padding-left: 18px; }
 .tree-node { display: flex; align-items: flex-start; gap: 6px; width: 100%; padding: 6px 7px; border: 0; border-radius: 6px; background: transparent; color: #475467; text-align: left; font-size: 10px; line-height: 1.35; }
@@ -123,7 +125,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .risk-card__identity, .dialog-identity { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
 .risk-id { color: #475467; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 750; letter-spacing: .03em; }
 .risk-id--domain { padding: 4px 7px; border-radius: 6px; background: var(--card-accent); color: white; }
-.domain-badge { padding: 3px 6px; border-radius: 999px; background: color-mix(in srgb, var(--card-accent) 10%, white); color: var(--card-accent); font-size: 8px; font-weight: 750; letter-spacing: .02em; }
+.domain-badge { display: inline-flex; align-items: center; gap: 3px; padding: 3px 6px; border-radius: 999px; background: color-mix(in srgb, var(--card-accent) 10%, white); color: var(--card-accent); font-size: 8px; font-weight: 750; letter-spacing: .02em; }
 .status-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px; border-radius: 999px; font-size: 9px; font-weight: 750; white-space: nowrap; }
 .status-badge::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 .status--locked { color: #b42318; background: #fef3f2; }
