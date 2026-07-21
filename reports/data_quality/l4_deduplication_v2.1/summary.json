@@ -1,0 +1,18 @@
+{
+  "release_id": "v2.1.0",
+  "source_release": "v2.0.0",
+  "source_rows": 1726,
+  "canonical_rows": 1725,
+  "retired_duplicate_rows": 1,
+  "duplicate_reduction_percent": 0.057937427578215524,
+  "candidate_pairs": 1,
+  "protected_physical_pairs": 0,
+  "physical_before": 182,
+  "physical_after": 182,
+  "decision_required_after": 55,
+  "method": {
+    "exact_normalized_label_and_core_definition": true,
+    "semantic_similarity_merging": false,
+    "physical_priority": "Physical cards are never automatically retired; a Physical card wins any mixed cluster."
+  }
+}

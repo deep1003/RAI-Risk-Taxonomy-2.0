@@ -1,0 +1,10 @@
+[
+  {
+    "retired_l4_id": "RAI4-1606",
+    "canonical_l4_id": "RAI4-1083",
+    "retired_label_en": "Erosion of trust in public information",
+    "canonical_label_en": "Erosion of trust in public information",
+    "physical_canonical": false,
+    "reason": "exact_normalized_label_and_core_definition_duplicate"
+  }
+]

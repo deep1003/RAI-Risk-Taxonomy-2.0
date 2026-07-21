@@ -59,7 +59,7 @@
 }
 
 \title{\vspace{-1.3cm}\bfseries\Large RAI Risk Taxonomy 2.0:\\[3pt]
-Top-down evidence selection and staged classification of 1,726 global AI risks}
+Top-down evidence selection and staged classification of 1,725 global AI risks}
 \author{RAI Risk Taxonomy Project}
 \date{21 July 2026}
 
@@ -72,8 +72,9 @@ pipeline used to construct RAI Risk Taxonomy 2.0. The integrated evidence space
 contains 3,906,767 AI records: 1,749,159 papers, 125,372 policy reports, and
 2,032,236 patents. A curated AI-risk evidence view contains 82,971 records
 (2.1\% of the AI evidence space). Canonicalization, source crosswalking, and
-risk-card deduplication yield 1,726 L4 risk cards. A staged hierarchy-blind
-classification procedure assigns all 1,726 cards (100.0\%) to 50 L3 nodes and
+risk-card construction yields 1,726 candidate rows. A conservative exact-match
+check merges one duplicate, yielding 1,725 L4 cards. A staged hierarchy-blind
+classification procedure assigns all 1,725 cards (100.0\%) to 50 L3 nodes and
 marks 55 cards (3.2\%) as requiring a taxonomy decision. We specify the
 filter at each transition, the mathematical decision rules, the protected
 Physical AI set, and the limits of interpreting record-level evidence as
@@ -91,7 +92,8 @@ separates four quantities that must not be conflated: the size of the integrated
 AI evidence space, the size of the AI-risk evidence view, the number of
 canonical L4 risk cards, and the number of L4 cards assigned to L3. The central
 result is a top-down evidence-to-taxonomy chain of 3,906,767 records, 82,971
-AI-risk records, 1,726 canonical L4 cards, and 1,726 L3-assigned cards.
+AI-risk records, 1,726 candidate L4 rows, 1,725 exact-deduplicated L4 cards, and
+1,725 L3-assigned cards.
 
 The transitions do not all preserve the same statistical unit. The first two
 stages count documents or patent records. The third and fourth stages count
@@ -142,7 +144,11 @@ The unit changes from evidence record to risk concept. Source risk IDs are
 joined through the source crosswalk, semantically redundant cards are reviewed,
 and one canonical row is retained per L4 failure mode or harm mechanism.
 Permanent identifiers \code{RAI4-0001} through \code{RAI4-1726} are allocated
-independently of the risk label. The result is 1,726 canonical L4 cards. The
+independently of the risk label. The initial result is 1,726 candidate L4 rows. Automatic
+deduplication is restricted to pairs whose normalized label and mechanism-only
+definition are both exactly equal; semantic-similarity thresholds are not used.
+This merges \code{RAI4-1606} into \code{RAI4-1083}, retains both source references,
+and yields 1,725 canonical cards. The retired ID remains in the crosswalk. The
 registry includes the 182-card Physical AI taxonomy as a protected mapping set.
 
 The ratio of L4 cards to AI-risk evidence records is 2.1\%. It is reported only
@@ -152,7 +158,7 @@ rate.
 
 \subsection{Stage D: L3 assignment policy}
 
-The final policy view assigns all 1,726 L4 cards to one of 50 L3 nodes
+The final policy view assigns all 1,725 canonical L4 cards to one of 50 L3 nodes
 (100.0\%). Fifty-five difficult cards (3.2\%) retain a \code{decision\_required}
 marker, displayed as \code{HOLD}. This marker is metadata on an assigned card,
 not an L1, L2, or L3 taxonomy node.
@@ -181,8 +187,8 @@ not an L1, L2, or L3 taxonomy node.
   nodes near coords style={font=\sffamily\footnotesize, anchor=west},
 ]
 \addplot[fill=natureblue, draw=natureblue] coordinates {
-  (1726,L3-assigned L4) [1,726]
-  (1726,Canonical L4) [1,726]
+  (1725,L3-assigned L4) [1,725]
+  (1725,Canonical L4) [1,725]
   (82971,AI-risk evidence) [82,971]
   (3906767,AI evidence) [3,906,767]
 };
@@ -206,8 +212,8 @@ Stage & Count & Unit & Principal filter \\
 \midrule
 AI evidence & 3,906,767 & Document or patent record & AI source collections; valid title; standardized schema; within-type/category deduplication. \\
 AI-risk evidence & 82,971 & Document or patent record & Curated/integrated risk sources; record-type inclusion; valid title; within-type/category deduplication. \\
-Canonical L4 & 1,726 & Risk card & Source crosswalk; semantic-card deduplication; permanent ID; one canonical mechanism per row. \\
-L3 assigned & 1,726 & Risk card & Protected Physical mapping or staged non-Physical placement; all 55 difficult cases remain assigned and marked \code{HOLD}. \\
+Canonical L4 & 1,725 & Risk card & Exact normalized label and core-definition match only; one retired ID mapped to its canonical card; all 182 Physical cards preserved. \\
+L3 assigned & 1,725 & Risk card & Protected Physical mapping or staged non-Physical placement; all 55 difficult cases remain assigned and marked \code{HOLD}. \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -350,9 +356,9 @@ view.}
 
 \subsection{Final hierarchy coverage}
 
-The final policy assigns all 1,726 cards (100.0\%); 55 assigned cards (3.2\%)
-carry the \code{HOLD} marker. Of all cards, 1,192 are General, 352 are Agentic
-AI, and 182 are Physical AI. Their shares are 69.1\%, 20.4\%, and 10.5\%, respectively.
+The final policy assigns all 1,725 canonical cards (100.0\%); 55 assigned cards (3.2\%)
+carry the \code{HOLD} marker. Of all cards, 1,191 are General, 352 are Agentic
+AI, and 182 are Physical AI. Their shares are 69.0\%, 20.4\%, and 10.6\%, respectively.
 All 50 L3 nodes contain at least one card. Anthropomorphism is the largest L3
 with 254 cards (14.7\%); the five largest L3 nodes jointly contain 42.0\%.
 
@@ -376,7 +382,7 @@ with 254 cards (14.7\%); the five largest L3 nodes jointly contain 42.0\%.
 \addplot[fill=natureblue, draw=natureblue] coordinates {
  (59,Weaponization) (56,Non-Contestability) (64,Conflict)
  (74,Destabilising Dynamics) (74,Excessive Authority) (80,Network Effects)
- (90,Privacy) (89,Policy Exposure) (110,Misinformation/Disinformation)
+ (89,Privacy) (89,Policy Exposure) (110,Misinformation/Disinformation)
  (118,Copyrights) (153,Goal Misalignment) (254,Anthropomorphism)
 };
 \end{axis}
@@ -408,7 +414,7 @@ repository tests pass at the time of this report revision.
 Three limitations directly affect interpretation. First, cross-category
 overlap is retained in the integrated evidence space, so category counts are
 analytical views rather than mutually exclusive samples. Second, the transition
-from 82,971 evidence records to 1,726 L4 cards changes the unit of analysis and
+from 82,971 evidence records to 1,725 canonical L4 cards changes the unit of analysis and
 is not a mechanical screening step. Third, 1,214 of the 1,334 new Stage 2
 placements lack Stage 1 rule eligibility, 247 override a taxonomy-gap sentinel,
 and the remaining 118 Stage 3 forced candidates are not human-approved ground
@@ -431,7 +437,8 @@ available in the repository:
 \begin{itemize}[leftmargin=2em]
   \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
   \item \small\nolinkurl{data/experiments/stage3-forced-policy-v2/placements.json}
-  \item \small\nolinkurl{public/data/releases/v2.0.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.1.0/cards.json}
+  \item \small\nolinkurl{reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.

@@ -1,0 +1,26 @@
+{
+  "release_id": "v2.1.0",
+  "release_status": "conservatively_exact_deduplicated",
+  "source_release": "v2.0.0",
+  "counts": {
+    "l4": 1725,
+    "classified": 1725,
+    "retired_duplicates": 1,
+    "physical_locked": 182,
+    "decision_required": 55,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "4006cc1a967b3d04c94aa3a6536be4c8f0dfd5bddc42c18356f12893f9ea6e89"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "9f1a78604f10fc89c47fee0c75ecb2e2ac4f7a7155874f9d4a074125ad5d7ae5"
+    },
+    {
+      "path": "reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json"
+    }
+  ]
+}

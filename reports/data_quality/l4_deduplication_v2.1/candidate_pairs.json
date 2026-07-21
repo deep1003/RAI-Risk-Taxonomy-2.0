@@ -1,0 +1,11 @@
+[
+  {
+    "left_l4_id": "RAI4-1083",
+    "right_l4_id": "RAI4-1606",
+    "same_core_definition": true,
+    "same_normalized_label": true,
+    "semantic_similarity": null,
+    "both_physical_protected": false,
+    "action": "merge"
+  }
+]

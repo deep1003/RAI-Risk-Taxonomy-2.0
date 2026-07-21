@@ -24,19 +24,19 @@
       "stage": 3,
       "unit": "canonical L4 risk card",
       "label": "Canonical global L4 registry",
-      "count": 1726,
-      "share_of_previous_percent": 2.0802449048462717,
-      "filter": "Canonical source crosswalk; semantic-card deduplication; permanent RAI4 ID allocation; one canonical row per risk mechanism; inclusion of the 182-card locked Physical AI set."
+      "count": 1725,
+      "share_of_previous_percent": 2.079037977124893,
+      "filter": "Canonical source crosswalk; permanent RAI4 ID allocation; exact normalized label-and-core-definition duplicate removal only; inclusion of all 182 locked Physical AI cards. One retired ID remains mapped to its canonical card."
     },
     {
       "stage": 4,
       "unit": "L4 risk card with non-null policy L3",
       "label": "Assigned to one of 50 L3 nodes",
-      "count": 1726,
+      "count": 1725,
       "share_of_previous_percent": 100.0,
       "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All cards receive an L3; 55 difficult cases retain a decision_required marker."
     }
   ],
-  "decision_required": {"count": 55, "share_of_l4_percent": 3.186558516801854, "is_taxonomy_node": false},
+  "decision_required": {"count": 55, "share_of_l4_percent": 3.1884057971014492, "is_taxonomy_node": false},
   "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
 }

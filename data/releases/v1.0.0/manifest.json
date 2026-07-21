@@ -102,7 +102,7 @@
     },
     {
       "path": "assets/site.js",
-      "sha256": "8e1668aeff7213e88c77d249566fc440f517183e4fadf8027aed5e68b2c76946",
+      "sha256": "56d303ed380123834bfcded10c9260c3bbf9a7ca2847066c2c8cdbcabedacd96",
       "bytes": 16797,
       "rows": null
     },
@@ -396,8 +396,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "5f05127f1a3bab3fbe9c7b8255fdb5db8ed3c74960e82bef3ab8129d343d5945",
-      "bytes": 6513,
+      "sha256": "7c672fe7388b6a5d6087e92bbadd8bcd8ec02d594b55957ba1fd9b10e7005428",
+      "bytes": 6551,
       "rows": null
     },
     {
@@ -437,14 +437,14 @@
       "rows": 1726
     },
     {
-      "path": "public/data/releases/v2.0.0/cards.json",
-      "sha256": "9b96d29f8c548fa13ca2bac49b88ee21b3670afe9b9ee89e5f9543ca51266c18",
-      "bytes": 4101684,
-      "rows": 1726
+      "path": "public/data/releases/v2.1.0/cards.json",
+      "sha256": "4006cc1a967b3d04c94aa3a6536be4c8f0dfd5bddc42c18356f12893f9ea6e89",
+      "bytes": 4158566,
+      "rows": 1725
     },
     {
-      "path": "public/data/releases/v2.0.0/hierarchy.json",
-      "sha256": "edbc07c9c1211df2f1fc80116d39ecde2aa8dd498322bd866d07fd64cd277427",
+      "path": "public/data/releases/v2.1.0/hierarchy.json",
+      "sha256": "9f1a78604f10fc89c47fee0c75ecb2e2ac4f7a7155874f9d4a074125ad5d7ae5",
       "bytes": 52444,
       "rows": 60
     },
@@ -504,8 +504,8 @@
     },
     {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
-      "sha256": "f6363b523f1d588bf969405503fe3a7a5bd297a15760bfe82d83bfb5d38006be",
-      "bytes": 18560,
+      "sha256": "51c7763a0c50489efd809d3762e2f3b23aeac68592525ba7f87060673635c451",
+      "bytes": 19175,
       "rows": null
     },
     {
@@ -540,8 +540,8 @@
     },
     {
       "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf",
-      "sha256": "4d4757f9092ba5aae9c961a4ce84308a777d68745bd1466c83a32772b4fd6acd",
-      "bytes": 141158,
+      "sha256": "a2db9ab2516d7c607b1e0774985d0939cab7bfb1c995a2c724dce5f575ccb0fc",
+      "bytes": 142137,
       "rows": null
     },
     {
@@ -570,8 +570,8 @@
     },
     {
       "path": "reports/statistics/top_down_evidence_funnel.json",
-      "sha256": "2e46756102610ed214dbb536f364909ecc280ca262ecebdbdc7b5f0498886cce",
-      "bytes": 2316,
+      "sha256": "ae2cd11623c7e64d5c46b9e090d6df03e9e99d6c53659a112aa4d91b9559e79a",
+      "bytes": 2366,
       "rows": null
     },
     {
@@ -756,8 +756,8 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "ce58914a46161367e20c7ce954ea7f86737710a027953a74263f163583e6ed08",
-      "bytes": 113072,
+      "sha256": "c6c565cf8355a64869e51206ad0f7a0360f249feb2059edf3ae305cd16672253",
+      "bytes": 113082,
       "rows": null
     },
     {
@@ -863,6 +863,12 @@
       "rows": null
     },
     {
+      "path": "scripts/deduplicate_l4.py",
+      "sha256": "484ff8ed4f48120461bbebdd3f9b26a2363d6569ae29c8a6ff2f976a27e64fca",
+      "bytes": 7873,
+      "rows": null
+    },
+    {
       "path": "scripts/generate_report_tables.py",
       "sha256": "c43ea9e5d0b4b98becdbbf5f2588bba05155b0eddec08d58dbb30ecaa5d2001f",
       "bytes": 7492,
@@ -882,8 +888,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "5ffd46c2871cc4e66597de4ee8470ee1c9e55c0e3934d6ea3fd89418269d59cb",
-      "bytes": 54363,
+      "sha256": "f94d5af13f351a5feb2a1713c5a9745ac078e89cd10dd3548e244e7b27573e4d",
+      "bytes": 54373,
       "rows": null
     },
     {
@@ -924,7 +930,7 @@
     },
     {
       "path": "tests/test_release.py",
-      "sha256": "856842e6c6bd2b79d055d1f892a5b673a2d12f5c9d98ecf1121d788bfc8607c1",
+      "sha256": "c61aade86207ef84057d5d423d9a21b34ecc9be98fc1634de7d5480ea3d26083",
       "bytes": 8707,
       "rows": null
     },
@@ -942,8 +948,8 @@
     },
     {
       "path": "tests/test_site_v2.py",
-      "sha256": "201d517aba774c146c250ee75d4d07970a79aa9792ed6be30f65f8f19890dba5",
-      "bytes": 1306,
+      "sha256": "e7f93b9925c9cebfb9ec066d706c66adb52bdcb99bce3aeddc6eec52be1cd329",
+      "bytes": 2511,
       "rows": null
     }
   ],
