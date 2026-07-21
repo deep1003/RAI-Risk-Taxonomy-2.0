@@ -1,0 +1,48 @@
+{
+  "release_id": "v2.8.0",
+  "source_release": "v2.7.0",
+  "status": "generated_unpublished",
+  "summary": {
+    "release_id": "v2.8.0",
+    "source_release": "v2.7.0",
+    "cards_total": 1711,
+    "nonphysical_evaluated_each_iteration": 1529,
+    "physical_locked": 182,
+    "l3_total": 54,
+    "l3_with_bilingual_definitions": 54,
+    "l3_with_references": 54,
+    "new_l3_counts": {
+      "RAI3-A-SYS-07": 11,
+      "RAI3-A-SYS-08": 11,
+      "RAI3-A-SYS-09": 3,
+      "RAI3-A-SYS-10": 6
+    },
+    "remapped_total": 31,
+    "iterations": [
+      {
+        "iteration": 1,
+        "changes": 31
+      },
+      {
+        "iteration": 2,
+        "changes": 0
+      }
+    ],
+    "converged": true,
+    "policy": "All non-Physical cards evaluated; move only on Agentic-specific decisive mechanism plus necessity gate; preserve Physical locks and unmatched existing placements."
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "16e683cfdaf86bd7f2e5579e3574edcbaafc19950802ef715ce9648a3542e98e"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "7052f3fc3bf0c180f12208e9ac913a056b5ebed27560ad268808ce86220ca111"
+    },
+    {
+      "path": "reports/data_quality/agentic_l3_expansion_v2.8.0/summary.json",
+      "sha256": "e46d7b2235a9dced370cdaa781e0f41481006fc1bf57b2389fc86399a1259c1e"
+    }
+  ]
+}

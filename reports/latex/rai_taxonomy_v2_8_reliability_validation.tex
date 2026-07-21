@@ -1,0 +1,115 @@
+% !TEX program = xelatex
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{booktabs,tabularx,array,graphicx,xcolor,hyperref,amsmath}
+\usepackage[font=small,labelfont=bf]{caption}
+\definecolor{navy}{HTML}{173458}
+\definecolor{muted}{HTML}{596579}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\pct}[1]{#1\%}
+\title{\textbf{RAI Risk Taxonomy 2.0: v2.8.0 Assignment Reliability Validation}}
+\author{Technical Validation Report}
+\date{21 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This report reproduces the assignment-reliability checks used in the prior Physical AI Risk Taxonomy Technical Report for the RAI Risk Taxonomy 2.0 v2.8.0 release. The analysis covers 1,711 unique L4 cards assigned to 54 L3 families, with a dedicated assessment of the 31 cards moved into four new Agentic AI L3 families. The new assignments show strong local geometric support (top-1 containment \pct{93.5}, top-2 \pct{96.8}), but the complete published taxonomy does not satisfy the earlier global stability thresholds (top-1 \pct{64.1}; perturbation agreement at $\sigma=0.05$, \pct{73.0}). The correct conclusion is therefore split: the v2.8.0 Agentic expansion is locally reliable, while global reliability of the inherited 54-family assignment remains unproven and requires targeted human remapping of heterogeneous legacy families.
+\end{abstract}
+
+\section{Scope and reproducibility}
+The validation uses the published v2.8.0 bundle: 1,711 unique L4 cards, 54 L3 families, and the complete English--Korean label and definition fields. All 182 Physical AI cards remain locked. The 1,529 non-Physical cards were eligible for the v2.8.0 conservative classifier, which moved 31 cards and reached a rule-based fixed point after two passes (31 changes, then zero).
+
+Dense 1,024-dimensional BGE-M3 embeddings were generated with fixed seed 20260704, maximum sequence length 256, batch size 32, and L2 normalization. Card text concatenates bilingual labels and definitions; L3 seed text concatenates bilingual L3 labels and definitions. The script, cached embeddings, machine-readable results, and figures are stored under \texttt{reports/validation/v2.8.0/reliability/}.
+
+\section{Validation procedure}
+The procedure mirrors Section 14 of the supplied Technical Report.
+
+\textbf{EM convergence.} Starting from embedded L3 definitions, the E-step assigns each card to the closest L3 centroid and the M-step recomputes normalized family means:
+\[
+z_i^{(t+1)}=\arg\max_k y_i^\top\mu_k^{(t)},\qquad
+\mu_k^{(t+1)}=\frac{\sum_{i:z_i=k}y_i}{\left\|\sum_{i:z_i=k}y_i\right\|_2}.
+\]
+Convergence requires zero reassigned cards, and the mean within-family cosine objective must be non-decreasing.
+
+\textbf{Published-assignment containment.} Centroids are calculated from the published partition. Top-$k$ containment is the proportion of cards whose published L3 is among their $k$ nearest published-family centroids.
+
+\textbf{Permutation test.} Mean within-family cohesion is compared with 5,000 label permutations that exactly preserve all published family sizes. A plus-one p-value is reported.
+
+\textbf{Perturbation stability.} Isotropic Gaussian noise is applied in embedding space for 200 replicates per $\sigma$. Agreement compares the perturbed nearest-centroid assignment with its unperturbed counterpart. Noise projections are sampled from the exact centroid-score covariance $\sigma^2MM^\top$, avoiding an unnecessary construction of full 1,024-dimensional noise arrays.
+
+\section{Results}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.8.0/reliability/reliability_validation.pdf}
+\caption{\textbf{Convergence and stability of the v2.8.0 L3 assignment.} (a) Seed-initialized spherical assignment reaches a fixed point after 23 iterations with a monotonic objective. (b) Published-family top-$k$ containment is materially below the thresholds reported for the prior 182-card Physical AI taxonomy. (c) Agreement under Gaussian perturbation falls below \pct{97.0} before $\sigma=0.01$.}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\caption{Primary reliability results and v2.7.0 comparator}
+\begin{tabular}{lrrr}
+\toprule
+Metric & v2.7.0 & v2.8.0 & v2.8 new L3 cards \\
+\midrule
+L3 families & 50.0 & 54.0 & 4.0 \\
+Cards assessed & 1,711.0 & 1,711.0 & 31.0 \\
+Mean within-family cosine & 0.768 & 0.770 & 0.837 \\
+Top-1 containment & \pct{64.4} & \pct{64.1} & \pct{93.5} \\
+Top-2 containment & \pct{79.0} & \pct{78.8} & \pct{96.8} \\
+Top-3 containment & \pct{86.4} & \pct{85.9} & \pct{96.8} \\
+Top-5 containment & \pct{93.3} & \pct{93.3} & --- \\
+Permutation p-value & $<0.001$ & $<0.001$ & --- \\
+Agreement at $\sigma=0.01$ & \pct{94.6} & \pct{94.6} & --- \\
+Agreement at $\sigma=0.05$ & \pct{72.7} & \pct{73.0} & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The seed-initialized EM procedure converged after 23 iterations. Its objective increased monotonically from 0.663 to 0.802 and reassignment fell from 1,711 cards to zero. This confirms numerical termination, but the converged unsupervised partition agrees with only \pct{20.2} of the published paths. Convergence therefore validates the optimization procedure, not the semantic correctness of the published taxonomy.
+
+The published v2.8.0 partition has mean within-family cohesion 0.770, significantly above the matched-size random-partition mean 0.739 (zero exceedances in 5,000 permutations; plus-one $p=0.0002$). Thus the hierarchy contains real semantic structure. However, global top-$k$ containment and perturbation stability are well below the strong thresholds used in the previous report. The taxonomy is meaningfully structured but not globally stable under the tested embedding geometry.
+
+\section{New Agentic L3 assessment}
+\begin{table}[ht]
+\centering
+\caption{Geometric support for the four new Agentic L3 families}
+\begin{tabular}{lrrrr}
+\toprule
+L3 family & Cards & Mean cosine & Top-1 & Top-3 \\
+\midrule
+Goal \& Planning & 11.0 & 0.805 & \pct{81.8} & \pct{90.9} \\
+Tool Calling & 11.0 & 0.839 & \pct{100.0} & \pct{100.0} \\
+Memory & 3.0 & 0.946 & \pct{100.0} & \pct{100.0} \\
+Oversight \& Control & 6.0 & 0.839 & \pct{100.0} & \pct{100.0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Across the 31 moved cards, top-1 containment is \pct{93.5}, top-2 is \pct{96.8}, mean assigned-family cosine is 0.837, and the median assignment margin over the strongest competing centroid is 0.093. Tool Calling, Memory, and Oversight \& Control are geometrically unambiguous in this release. Goal \& Planning is weaker: two of eleven cards are not closest to their published centroid, and one falls outside the nearest three. These cards should receive priority human review, but the family remains substantially more coherent than the global taxonomy average.
+
+\section{Where global reliability remains weak}
+The lowest top-1 families include Destabilising Dynamics (\pct{36.2}), Goal Misalignment (\pct{38.9}), Network Effects (\pct{40.3}), Copyrights (\pct{50.4}), Conflict (\pct{53.3}), and Excessive Authority (\pct{56.5}). Anthropomorphism remains large and heterogeneous at 245 cards with top-1 containment \pct{63.3}. These results are consistent with earlier audits showing that forced assignment and taxonomy coverage gaps created semantically mixed L3 families.
+
+The v2.7--v2.8 comparison is intentionally conservative. Cohesion rises by 0.002, while global top-1 changes by -0.3 percentage points and $\sigma=0.05$ agreement rises by 0.3 percentage points. These are negligible global changes because only 31 of 1,711 cards moved. The value of v2.8.0 is therefore local separation of four coherent Agentic mechanisms, not a claim that the entire inherited hierarchy has become reliable.
+
+\section{Reliability decision}
+\textbf{New Agentic expansion: PASS WITH REVIEW.} The 31 moved cards provide strong aggregate support, with three of four new L3 families achieving \pct{100.0} top-1 containment. Goal \& Planning requires focused review of its geometric exceptions.
+
+\textbf{Full 54-family taxonomy: NOT YET DEMONSTRATED.} The permutation test establishes non-random structure, but top-$k$ containment, perturbation stability, and EM-to-published agreement fail the strong global criteria inherited from the earlier Technical Report. A random or fully automatic remap is not recommended. The next iteration should prioritize the six weakest families, apply definition-based human review to low-margin cards, and rerun this identical validation after each approved batch.
+
+\section{Artifacts}
+\begin{itemize}
+\item Validation script: \texttt{scripts/validate\_assignment\_reliability\_v2\_8.py}
+\item Machine-readable summary: \texttt{reports/validation/v2.8.0/reliability/reliability\_summary.json}
+\item Per-L3 metrics: \texttt{reports/validation/v2.8.0/reliability/per\_l3\_metrics.json}
+\item Figure: \texttt{reports/validation/v2.8.0/reliability/reliability\_validation.pdf}
+\end{itemize}
+
+\end{document}
