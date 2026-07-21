@@ -12,6 +12,7 @@
   <a class="skip-link" href="#risk-results">리스크 목록으로 건너뛰기</a>
 
   <header class="hero">
+    <a class="hero__home" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/" aria-label="RAI Risk Taxonomy 2.0 기본 페이지로 이동">
     <div class="hero__inner">
       <div class="hero__eyebrow">
         <span class="release-dot" aria-hidden="true"></span>
@@ -20,22 +21,19 @@
       <div class="hero__row">
         <div>
           <h1>RAI Risk Taxonomy 2.0</h1>
-          <p>L0–L4 global risk taxonomy · 50 L3 nodes · 100% L3 placement</p>
-        </div>
-        <div class="hero__count" aria-label="전체 L4 카드 수">
-          <strong>1,711</strong>
-          <span>L4 Risk Cards</span>
+          <p>L0–L4 responsible AI risk taxonomy</p>
         </div>
       </div>
     </div>
+    </a>
   </header>
 
   <nav class="domain-nav" aria-label="상위 리스크 영역">
     <div class="domain-nav__inner">
-      <button class="domain-pill active" data-domain="all" type="button">전체 보기 <span>1,711</span></button>
-      <button class="domain-pill domain-pill--general" data-domain="RAI1-G" type="button"><i></i>General</button>
-      <button class="domain-pill domain-pill--agentic" data-domain="RAI1-A" type="button"><i></i>Agentic AI</button>
-      <button class="domain-pill domain-pill--physical" data-domain="RAI1-P" type="button"><i></i>Physical AI <span>182</span></button>
+      <a class="domain-pill active" data-domain="all" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/">전체 보기</a>
+      <a class="domain-pill domain-pill--general" data-domain="RAI1-G" href="?domain=RAI1-G"><i></i>General-purpose AI</a>
+      <a class="domain-pill domain-pill--agentic" data-domain="RAI1-A" href="?domain=RAI1-A"><i></i>Agentic AI</a>
+      <a class="domain-pill domain-pill--physical" data-domain="RAI1-P" href="?domain=RAI1-P"><i></i>Physical AI</a>
     </div>
   </nav>
 
@@ -44,29 +42,23 @@
       <div class="section-heading">
         <div>
           <p class="section-kicker">TAXONOMY STATUS</p>
-          <h2 id="overview-title">글로벌 AI 리스크 분류 현황</h2>
+          <h2 id="overview-title">전체 AI 리스크 분류 현황</h2>
         </div>
-        <a class="text-link" href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf">Technical Report 2.0 PDF ↗</a>
       </div>
 
       <div class="stat-grid">
         <article class="stat-card stat-card--dark">
-          <span>전체 L4</span><strong id="stat-total">1,711</strong><small>14 Physical L3-label leaks excluded with an audit crosswalk</small>
+          <span>L1</span><strong id="stat-l1">3</strong><small>General-purpose AI · Agentic AI · Physical AI</small>
         </article>
-        <article class="stat-card stat-card--physical">
-          <span>Physical AI</span><strong id="stat-locked">182</strong><small>Authoritative Physical AI lock preserved</small>
+        <article class="stat-card stat-card--l2">
+          <span>L2</span><strong id="stat-l2">6</strong><small>General-purpose: Interaction, System · Agentic: System · Physical: System Safety, Interaction Safety, Societal Safety</small>
         </article>
-        <article class="stat-card stat-card--proposed">
-          <span>Assigned to 50 L3 nodes</span><strong id="stat-proposed">1,711</strong><small>100% operational placement</small>
+        <article class="stat-card stat-card--l3">
+          <span>L3</span><strong id="stat-l3">50</strong><small>Anthropomorphism · Goal Misalignment · Robot Control · Privacy · Cybersecurity Threats</small>
         </article>
-        <article class="stat-card stat-card--decision">
-          <span>HOLD</span><strong id="stat-needs">76</strong><small>Decision required within assigned L3 paths</small>
+        <article class="stat-card stat-card--l4">
+          <span>L4</span><strong id="stat-l4">1,711</strong><small>Risk name · bilingual definition · severity · probability · impact · evidence · references</small>
         </article>
-      </div>
-
-      <div class="coverage-note">
-        <strong>50-L3 sufficiency: NOT DEMONSTRATED</strong>
-        <span>100% operational placement and use of all 50 L3 nodes do not establish taxonomy validity. Forced cards, including 76 marked HOLD, require human review.</span>
       </div>
     </section>
 

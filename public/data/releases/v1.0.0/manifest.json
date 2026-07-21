@@ -96,14 +96,14 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "070505db29eef52184ad52a29a7ed94b330c67f1052517ff650271268f7ba80b",
-      "bytes": 16039,
+      "sha256": "cd9bad294253869ff9d0cd3716304828f0997e94bdc743f776720944c104fc79",
+      "bytes": 15332,
       "rows": null
     },
     {
       "path": "assets/site.js",
-      "sha256": "2e0c8de5fee8b49735e9a2536adc41b5776fc0ac8152d6f5092742ba8b91bde1",
-      "bytes": 16880,
+      "sha256": "526eed2c8078441c217d421160e0afaf71821b9e7832f5ae2ebb577f83adcd86",
+      "bytes": 16863,
       "rows": null
     },
     {
@@ -396,8 +396,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "7d358b131d4de38764124ab457e976901c4a1dac07194ab34625020c59bdd40b",
-      "bytes": 6547,
+      "sha256": "536e1ef8a3829fb81474b57115f4c45b39d7663a0bd0043e86efcefaebbfcf60",
+      "bytes": 6217,
       "rows": null
     },
     {
@@ -966,8 +966,8 @@
     },
     {
       "path": "tests/test_site_v2.py",
-      "sha256": "c803dcb45f34fcf177c17c7f50b2f4ac8f26a66cd1abfb48eaa47185b72cf6a0",
-      "bytes": 4825,
+      "sha256": "b492e7e90ff9021e6568ac3609f8beaa24a81c02a68cd0b0312501fd168c035a",
+      "bytes": 5891,
       "rows": null
     }
   ],

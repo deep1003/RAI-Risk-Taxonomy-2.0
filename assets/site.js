@@ -42,6 +42,7 @@ async function init() {
     state.nodes = hierarchy.nodes;
     state.cards = cards.cards;
     state.manifest = manifest;
+    initializeDomainFromUrl();
     indexHierarchy();
     populateFilters();
     renderStats();
@@ -97,22 +98,6 @@ function bindEvents() {
   });
   ui.l3.addEventListener("change", () => updateState({ l3: ui.l3.value, page: 1 }));
   ui.clear.addEventListener("click", clearFilters);
-  document.querySelectorAll(".domain-pill").forEach((button) => {
-    button.addEventListener("click", () => {
-      clearNavActive();
-      button.classList.add("active");
-      const domain = button.dataset.domain;
-      const status = button.dataset.status;
-      state.l1 = domain || "all";
-      state.l2 = "all";
-      state.l3 = "all";
-      state.status = status || "all";
-      state.page = 1;
-      syncControls();
-      refreshDependentFilters();
-      render();
-    });
-  });
   document.querySelector(".dialog-close").addEventListener("click", () => ui.dialog.close());
   ui.dialog.addEventListener("click", (event) => {
     if (event.target === ui.dialog) ui.dialog.close();
@@ -167,12 +152,19 @@ function fillSelect(select, nodes, allLabel, selected = "all") {
   select.value = selected;
 }
 
+function initializeDomainFromUrl() {
+  const requested = new URLSearchParams(window.location.search).get("domain");
+  const validDomains = new Set(["RAI1-G", "RAI1-A", "RAI1-P"]);
+  state.l1 = validDomains.has(requested) ? requested : "all";
+  clearNavActive();
+  document.querySelector(`[data-domain="${state.l1}"]`)?.classList.add("active");
+}
+
 function renderStats() {
-  const counts = state.manifest.counts;
-  document.querySelector("#stat-total").textContent = counts.l4.toLocaleString();
-  document.querySelector("#stat-locked").textContent = (counts.physical_total ?? counts.physical_locked).toLocaleString();
-  document.querySelector("#stat-proposed").textContent = counts.classified.toLocaleString();
-  document.querySelector("#stat-needs").textContent = counts.decision_required.toLocaleString();
+  document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1).length.toLocaleString();
+  document.querySelector("#stat-l2").textContent = state.nodes.filter((node) => node.level === 2).length.toLocaleString();
+  document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3).length.toLocaleString();
+  document.querySelector("#stat-l4").textContent = state.manifest.counts.l4.toLocaleString();
 }
 
 function renderTree() {
@@ -238,6 +230,7 @@ function syncControls() {
 
 function clearFilters() {
   Object.assign(state, { query: "", status: "all", l1: "all", l2: "all", l3: "all", page: 1 });
+  window.history.replaceState({}, "", window.location.pathname);
   clearNavActive();
   document.querySelector('[data-domain="all"]').classList.add("active");
   refreshDependentFilters();

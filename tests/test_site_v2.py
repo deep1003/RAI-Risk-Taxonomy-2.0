@@ -85,6 +85,25 @@ class SiteV2Tests(unittest.TestCase):
         script = (ROOT / "assets/site.js").read_text()
         self.assertNotIn("<span>Percentile</span>", script)
 
+    def test_simplified_header_and_l1_to_l4_summary(self) -> None:
+        page = (ROOT / "index.html").read_text()
+        self.assertIn('class="hero__home" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/"', page)
+        self.assertNotIn("hero__count", page)
+        self.assertIn("전체 AI 리스크 분류 현황", page)
+        self.assertNotIn("글로벌 AI 리스크 분류 현황", page)
+        self.assertNotIn("coverage-note", page)
+        for level, count in (("l1", "3"), ("l2", "6"), ("l3", "50"), ("l4", "1,711")):
+            self.assertIn(f'id="stat-{level}">{count}', page)
+
+    def test_domain_navigation_uses_links_without_counts(self) -> None:
+        page = (ROOT / "index.html").read_text()
+        self.assertIn('href="?domain=RAI1-G"', page)
+        self.assertIn('href="?domain=RAI1-A"', page)
+        self.assertIn('href="?domain=RAI1-P"', page)
+        self.assertIn("General-purpose AI", page)
+        nav = page.split('<nav class="domain-nav"', 1)[1].split("</nav>", 1)[0]
+        self.assertNotRegex(nav, r">\s*[\d,]+\s*<")
+
 
 if __name__ == "__main__":
     unittest.main()
