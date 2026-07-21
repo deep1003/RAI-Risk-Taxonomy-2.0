@@ -1,0 +1,51 @@
+﻿l3_id,l2_id,label_en,label_ko,card_count,locked_physical,algorithm_proposed,human_approved
+RAI3-G-INT-01,RAI2-G-INT,Violence,폭력,0,0,0,0
+RAI3-G-INT-02,RAI2-G-INT,Sexual,성적 콘텐츠,5,0,5,0
+RAI3-G-INT-03,RAI2-G-INT,Self-harm,자해,1,0,1,0
+RAI3-G-INT-04,RAI2-G-INT,Hate and Unfairness,혐오·차별,2,0,2,0
+RAI3-G-INT-05,RAI2-G-INT,Political Neutrality,정치적 중립성,0,0,0,0
+RAI3-G-INT-06,RAI2-G-INT,Privacy,개인정보,7,0,7,0
+RAI3-G-INT-07,RAI2-G-INT,Illegal,불법 또는 비윤리적 행위,0,0,0,0
+RAI3-G-INT-08,RAI2-G-INT,Copyrights,저작권,6,0,6,0
+RAI3-G-INT-09,RAI2-G-INT,Weaponization,무기화,8,0,8,0
+RAI3-G-INT-10,RAI2-G-INT,Anthropomorphism,의인화,1,0,1,0
+RAI3-G-INT-11,RAI2-G-INT,Policy Exposure,정책 노출,2,0,2,0
+RAI3-G-SYS-01,RAI2-G-SYS,Over-Refusal,과도한 거절,0,0,0,0
+RAI3-G-SYS-02,RAI2-G-SYS,Over-Extension,역량 초과 수행,0,0,0,0
+RAI3-G-SYS-03,RAI2-G-SYS,Misinformation/Disinformation,허위 정보/오정보,3,0,3,0
+RAI3-G-SYS-04,RAI2-G-SYS,Context Misalignment,맥락 불일치,0,0,0,0
+RAI3-G-SYS-05,RAI2-G-SYS,Inconsistency,비일관성,1,0,1,0
+RAI3-G-SYS-06,RAI2-G-SYS,Overgeneralization,과도한 일반화,0,0,0,0
+RAI3-G-SYS-07,RAI2-G-SYS,Overconfidence,과도한 확신,0,0,0,0
+RAI3-G-SYS-08,RAI2-G-SYS,Goal Misalignment,목표 불일치,0,0,0,0
+RAI3-G-SYS-09,RAI2-G-SYS,Non-Contestability,이의제기 차단,1,0,1,0
+RAI3-A-SYS-01,RAI2-A-SYS,Excessive Authority,과도한 권한,0,0,0,0
+RAI3-A-SYS-02,RAI2-A-SYS,Accountability,책임 소재 불명확,0,0,0,0
+RAI3-A-SYS-03,RAI2-A-SYS,Network Effects,네트워크 효과,0,0,0,0
+RAI3-A-SYS-04,RAI2-A-SYS,Destabilising Dynamics,불안정한 동학,0,0,0,0
+RAI3-A-SYS-05,RAI2-A-SYS,Conflict,갈등,0,0,0,0
+RAI3-A-SYS-06,RAI2-A-SYS,Collusion,결탁,0,0,0,0
+RAI3-P-SYS-01,RAI2-P-SYS,Accidental Harm,우발적 피해,22,22,0,0
+RAI3-P-SYS-02,RAI2-P-SYS,Robot Control,로봇 제어,45,45,0,0
+RAI3-P-SYS-03,RAI2-P-SYS,Hardware & Mechanical Failures,하드웨어·기계적 결함,3,3,0,0
+RAI3-P-SYS-04,RAI2-P-SYS,Software Vulnerabilities & Design Flaws,소프트웨어 취약점·설계 결함,8,8,0,0
+RAI3-P-SYS-05,RAI2-P-SYS,Lack of Robustness in Unseen Environments,미학습 환경에서의 강건성 부재,13,13,0,0
+RAI3-P-INT-01,RAI2-P-INT,Purposeful / Malicious Harm,의도적·악의적 피해,17,17,0,0
+RAI3-P-INT-02,RAI2-P-INT,Physical Attacks,물리적 공격,1,1,0,0
+RAI3-P-INT-03,RAI2-P-INT,Cybersecurity Threats,사이버보안 위협,4,4,0,0
+RAI3-P-INT-04,RAI2-P-INT,Sensor & Input Validation Failures,센서·입력 검증 실패,4,4,0,0
+RAI3-P-INT-05,RAI2-P-INT,Misinformation,허위 정보,5,5,0,0
+RAI3-P-INT-06,RAI2-P-INT,Dynamic Environmental Factors,동적 환경 요인,11,11,0,0
+RAI3-P-INT-07,RAI2-P-INT,Human Interaction & Safety Protocol Failures,인간 상호작용·안전 프로토콜 실패,13,13,0,0
+RAI3-P-INT-08,RAI2-P-INT,Instruction Misinterpretation,지시 오해석,1,1,0,0
+RAI3-P-INT-09,RAI2-P-INT,Multi-Agent Collaboration,멀티 에이전트 협력,4,4,0,0
+RAI3-P-INT-10,RAI2-P-INT,Ethical & Safety Implications of Interactive Agents,상호작용 에이전트의 윤리·안전 함의,2,2,0,0
+RAI3-P-SOC-01,RAI2-P-SOC,Privacy Violations,프라이버시 침해,5,5,0,0
+RAI3-P-SOC-02,RAI2-P-SOC,Labor Displacement,노동 대체,1,1,0,0
+RAI3-P-SOC-03,RAI2-P-SOC,Socioeconomic Inequality,사회경제적 불평등,1,1,0,0
+RAI3-P-SOC-04,RAI2-P-SOC,Power Concentration,권력 집중,1,1,0,0
+RAI3-P-SOC-05,RAI2-P-SOC,Bias & Discrimination,편향·차별,3,3,0,0
+RAI3-P-SOC-06,RAI2-P-SOC,Lack of Accountability & Liability,책임·배상 부재,12,12,0,0
+RAI3-P-SOC-07,RAI2-P-SOC,"Lack of Transparency, Explainability & Trust",투명성·설명 가능성·신뢰 부재,1,1,0,0
+RAI3-P-SOC-08,RAI2-P-SOC,Unhealthy / Dangerous Human-EAI Relationships,인간-EAI의 해로운 관계,4,4,0,0
+RAI3-P-SOC-09,RAI2-P-SOC,Transformative Effects,변혁적 영향,1,1,0,0

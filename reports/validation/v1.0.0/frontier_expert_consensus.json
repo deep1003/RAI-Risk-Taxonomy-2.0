@@ -1,0 +1,612 @@
+[
+  {
+    "l4_id": "RAI4-0070",
+    "proposed_l3_id": "RAI3-G-SYS-05",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0131",
+    "proposed_l3_id": "RAI3-G-INT-10",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-10",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0426",
+    "proposed_l3_id": "RAI3-G-INT-04",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-04",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0433",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0447",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0453",
+    "proposed_l3_id": "RAI3-G-SYS-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-SYS-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0496",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0536",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0559",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0609",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "APPROVE",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-0617",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0618",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0630",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0632",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0662",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0664",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0665",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-02",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0673",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-02",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0679",
+    "proposed_l3_id": "RAI3-G-INT-04",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-04",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0684",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-02",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0685",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-02",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0687",
+    "proposed_l3_id": "RAI3-G-INT-03",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-03",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0692",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-0718",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0724",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-0749",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0759",
+    "proposed_l3_id": "RAI3-G-INT-11",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-11",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0777",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0795",
+    "proposed_l3_id": "RAI3-G-SYS-03",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-SYS-03",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0796",
+    "proposed_l3_id": "RAI3-G-SYS-03",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0812",
+    "proposed_l3_id": "RAI3-G-SYS-03",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-SYS-03",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0813",
+    "proposed_l3_id": "RAI3-G-SYS-03",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-0830",
+    "proposed_l3_id": "RAI3-G-SYS-03",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-SYS-03",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0833",
+    "proposed_l3_id": "RAI3-G-INT-03",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0872",
+    "proposed_l3_id": "RAI3-G-INT-10",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0913",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-0915",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0922",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-0951",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1066",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1088",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1114",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1139",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1160",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "APPROVE",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-1172",
+    "proposed_l3_id": "RAI3-G-INT-11",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-11",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1184",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1187",
+    "proposed_l3_id": "RAI3-G-SYS-05",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-SYS-05",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1194",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1357",
+    "proposed_l3_id": "RAI3-G-INT-02",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-02",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1366",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1367",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-08",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1378",
+    "proposed_l3_id": "RAI3-G-INT-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1392",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1407",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1417",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1431",
+    "proposed_l3_id": "RAI3-G-SYS-08",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1444",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-06",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1447",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_REJECTED"
+  },
+  {
+    "l4_id": "RAI4-1563",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "APPROVE",
+    "both_approve": true,
+    "final_status": "algorithm_proposed",
+    "final_l3_id": "RAI3-G-INT-09",
+    "abstention_reason": null
+  },
+  {
+    "l4_id": "RAI4-1657",
+    "proposed_l3_id": "RAI3-G-INT-09",
+    "expert_a_decision": "REJECT",
+    "expert_b_decision": "APPROVE",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  },
+  {
+    "l4_id": "RAI4-1722",
+    "proposed_l3_id": "RAI3-G-INT-06",
+    "expert_a_decision": "APPROVE",
+    "expert_b_decision": "REJECT",
+    "both_approve": false,
+    "final_status": "needs_taxonomy_decision",
+    "final_l3_id": null,
+    "abstention_reason": "FRONTIER_EXPERT_DISAGREEMENT"
+  }
+]

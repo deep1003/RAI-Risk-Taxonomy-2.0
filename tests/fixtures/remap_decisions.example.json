@@ -1,0 +1,8 @@
+[
+  {
+    "l4_id": "RAI4-0001",
+    "to_l3_id": "RAI3-A-SYS-01",
+    "reason": "Dry-run fixture for validating the successor-release workflow; not an approved taxonomy decision.",
+    "evidence_refs": ["TEST-FIXTURE-ONLY"]
+  }
+]

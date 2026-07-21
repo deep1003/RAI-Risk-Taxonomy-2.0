@@ -1,0 +1,388 @@
+{
+  "algorithm_run_id": "RUN-20260721-BGE-M3-01",
+  "release_id": "v1.0.0",
+  "created_at": "2026-07-21T00:00:00+09:00",
+  "classification_scope": "1,544 non-Physical global cards",
+  "physical_cards": "182 locked before classification",
+  "input_fields": [
+    "l4_label",
+    "mechanism_only_definition",
+    "evidence_title"
+  ],
+  "excluded_predictive_fields": [
+    "global l0",
+    "global l1",
+    "global l2",
+    "global l3",
+    "source family",
+    "source ID prefix"
+  ],
+  "legacy_hierarchy_used_as_feature": false,
+  "model_id": "BAAI/bge-m3",
+  "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "model_revision_pinned": true,
+  "snapshot_path": "/Users/deep1003/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+  "snapshot_file_count": 30,
+  "snapshot_tree_fingerprint": "ede7457a0ed0a00ebf4e49665e3bb1098c778a32de3534a4d1423f65a5ddbbf5",
+  "configuration_file": "data/releases/v1.0.0/algorithm_config.json",
+  "configuration_sha256": "b3d91263a0e2f495fc1aee55bc4c5cd61b2889d06c3a2fd7ca89d403df6e9a77",
+  "embedding_dimension": 1024,
+  "normalize_embeddings": true,
+  "semantic_aggregation": "median cosine across definition, bilingual definition, and prototype anchors",
+  "rule_eligibility": "one decisive cue or two supporting cues; Agentic requires decisive plus supporting; hard exclusions override",
+  "thresholds": {
+    "semantic": 0.55,
+    "semantic_margin": 0.035,
+    "composite": 0.54,
+    "anchor_top1_votes": 2
+  },
+  "ranking_weights": {
+    "semantic": 0.75,
+    "rule": 0.2,
+    "eligibility": 0.05
+  },
+  "confidence_calibrated": false,
+  "seed": 1726,
+  "codebook_version": "2026-07-21.1",
+  "codebook_sha256": "2e322185221ad3013731f3e15eaa7aa931eedd5518761f9ff700cd7afad92b11",
+  "anchor_index": [
+    {
+      "l3_id": "RAI3-G-INT-01",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-01",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-01",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-02",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-02",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-02",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-03",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-03",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-03",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-04",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-04",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-04",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-05",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-05",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-05",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-06",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-06",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-06",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-07",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-07",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-07",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-08",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-08",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-08",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-09",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-09",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-09",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-10",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-10",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-10",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-INT-11",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-INT-11",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-INT-11",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-01",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-01",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-01",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-02",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-02",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-02",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-03",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-03",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-03",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-04",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-04",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-04",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-05",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-05",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-05",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-06",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-06",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-06",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-07",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-07",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-07",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-08",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-08",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-08",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-G-SYS-09",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-G-SYS-09",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-G-SYS-09",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-01",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-01",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-01",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-02",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-02",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-02",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-03",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-03",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-03",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-04",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-04",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-04",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-05",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-05",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-05",
+      "view": 2
+    },
+    {
+      "l3_id": "RAI3-A-SYS-06",
+      "view": 0
+    },
+    {
+      "l3_id": "RAI3-A-SYS-06",
+      "view": 1
+    },
+    {
+      "l3_id": "RAI3-A-SYS-06",
+      "view": 2
+    }
+  ],
+  "acceptance_policy": "algorithm_proposed only; human validation required",
+  "frontier_expert_review": {
+    "reviewers": [
+      "frontier_expert_a",
+      "frontier_expert_b"
+    ],
+    "scope": "all initial strict BGE-M3 plus rule proposals",
+    "reviewed": 61,
+    "approval_rule": "both independent experts must approve exact proposed L3",
+    "hierarchy_blind": true,
+    "human_validation": "pending"
+  },
+  "local_model_sensitivity": {
+    "purpose": "sensitivity audit only; not an approval authority",
+    "models": [
+      "gemma3:4b",
+      "qwen3:4b"
+    ],
+    "reviewed_cards": 499,
+    "same_decision": 361,
+    "both_needs": 359,
+    "same_non_needs_l3": 2,
+    "disagreement": 138,
+    "interpretation": "Low non-NEEDS agreement supports conservative abstention and human validation; small local models are not treated as ground truth."
+  },
+  "final_consensus_policy": "strict BGE-M3/rule eligibility plus two independent frontier expert approvals; all other non-Physical cards abstain"
+}

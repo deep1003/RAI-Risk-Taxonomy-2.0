@@ -1,0 +1,72 @@
+SRC-001 & Frozen source hash: global\_ai\_risk\_l4\_overlay\_nodes.json & PASS \\
+SRC-002 & Frozen source hash: physical\_l4\_cards.json & PASS \\
+SRC-003 & Frozen source hash: physical\_l4\_references.json & PASS \\
+SRC-004 & Frozen source hash: physical\_taxonomy\_migrations.json & PASS \\
+SRC-005 & Frozen source hash: l0\_l3\_definition\_source.txt & PASS \\
+SRC-006 & Global source row count & PASS \\
+SRC-007 & Physical source row count & PASS \\
+SRC-008 & Global source ID uniqueness & PASS \\
+SRC-009 & Physical reference row/card coverage & PASS \\
+SRC-010 & Physical source migration row count & PASS \\
+SRC-011 & Manifest enumerates and hashes every frozen source snapshot & PASS \\
+INT-001 & Checksum ledger exactly covers the project integrity scope & PASS \\
+NODE-001 & Taxonomy level counts & PASS \\
+NODE-002 & Taxonomy node ID uniqueness & PASS \\
+NODE-003 & Parent-child level integrity & PASS \\
+NODE-004 & Sibling sequence uniqueness & PASS \\
+ID-001 & L4 registry row count & PASS \\
+ID-002 & L4 ID uniqueness & PASS \\
+ID-003 & L4 ID continuous allocation & PASS \\
+ID-004 & Registry-placement separation & PASS \\
+XW-001 & Crosswalk total rows & PASS \\
+XW-002 & Global canonical rows & PASS \\
+XW-003 & Physical exact-ID rows & PASS \\
+XW-004 & Physical explicit aliases & PASS \\
+XW-005 & Explicit alias table exact match & PASS \\
+XW-006 & Crosswalk composite key uniqueness & PASS \\
+XW-007 & Crosswalk references valid L4 IDs & PASS \\
+XW-008 & Every global source ID maps to its deterministic RAI4 allocation & PASS \\
+XW-009 & Every Physical source ID follows the approved exact/alias chain to RAI4 & PASS \\
+PLC-001 & Placement row count & PASS \\
+PLC-002 & One placement per L4 & PASS \\
+PLC-003 & Needs-decision cards have null primary L3 & PASS \\
+PLC-004 & Placed cards reference an active L3 & PASS \\
+PLC-005 & Legacy hierarchy excluded from predictive features & PASS \\
+PLC-006 & No non-Physical algorithm proposal enters locked Physical L3 & PASS \\
+PLC-007 & Taxonomy decision queue IDs are unique and populated & PASS \\
+PHY-001 & Physical locked placement count & PASS \\
+PHY-002 & Physical locked L3 equality & PASS \\
+PHY-003 & Physical L2 distribution & PASS \\
+PHY-004 & All 24 Physical L3 card counts preserved & PASS \\
+PHY-005 & Physical legacy-to-new L3 map & PASS \\
+PHY-006 & Physical migration ledger remains empty for baseline & PASS \\
+PHY-007 & Card-level Physical source→alias→RAI4→new L3→placement chain & PASS \\
+PHY-008 & Physical per-card reference counts preserved in the L4 registry & PASS \\
+PHY-009 & Physical 3H/Role tags preserve raw values and structured token counts & PASS \\
+SCH-001 & JSON Schema: taxonomy-node.schema.json & PASS \\
+SCH-002 & JSON Schema: l4-card.schema.json & PASS \\
+SCH-003 & JSON Schema: source-crosswalk.schema.json & PASS \\
+SCH-004 & JSON Schema: placement.schema.json & PASS \\
+SCH-005 & JSON Schema: migration.schema.json & PASS \\
+SITE-001 & Site card row count & PASS \\
+SITE-002 & Site card L4 uniqueness & PASS \\
+SITE-003 & Site hierarchy node count & PASS \\
+SITE-004 & Search index row count & PASS \\
+SITE-005 & Hierarchy L3 counts equal site-card placements & PASS \\
+SITE-006 & Every site card is the exact registry-plus-placement join & PASS \\
+SITE-007 & Every site hierarchy node exactly matches canonical nodes and placement counts & PASS \\
+SITE-008 & Every search-index row matches canonical card identity and placement & PASS \\
+ALG-001 & Algorithm proposals have two frontier-expert approvals & PASS \\
+ALG-002 & Confidence is not presented as calibrated & PASS \\
+ALG-003 & 50-L3 sufficiency is not claimed before human validation & PASS \\
+ALG-004 & BGE-M3 revision is explicitly pinned and consistent & PASS \\
+ALG-005 & Immutable algorithm configuration hash matches run record and manifest & PASS \\
+ALG-006 & Algorithm configuration pins the active codebook hash & PASS \\
+ALG-007 & Pinned local model snapshot inventory matches the recorded fingerprint & PASS \\
+ALG-008 & Explicit-revision rerun is byte-identical to the reviewed initial run & PASS \\
+WARN-001 & Non-Physical human gold-set validation & WARN \\
+WARN-002 & Unresolved cards remain explicit & WARN \\
+REL-001 & Baseline release has no previous-release dependency & PASS \\
+REL-002 & Baseline migration ledger is empty & PASS \\
+REL-003 & Every placement carries the validated release ID & PASS \\
+\bottomrule

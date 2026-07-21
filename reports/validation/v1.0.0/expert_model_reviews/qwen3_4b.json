@@ -1,0 +1,5003 @@
+{
+  "model": "qwen3:4b",
+  "run_id": "LLM-REVIEW-qwen3_4b-20260721",
+  "release_id": "v1.0.0",
+  "seed": 1726,
+  "temperature": 0,
+  "hierarchy_blind": true,
+  "legacy_hierarchy_used_as_feature": false,
+  "reviewed_card_count": 499,
+  "selection_rule": "non-Physical; no gap sentinel; initial proposal or BGE semantic>=0.58 and margin>=0.02 or rule-eligible top candidate",
+  "results": [
+    {
+      "key": "RAI4-0002",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "ForesightSafety Bench",
+      "global_source_id": "AGENTBENCH-REF-0002",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0004",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "ForesightSafety Bench",
+      "global_source_id": "AGENTBENCH-REF-0004",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0007",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AgentDoG",
+      "global_source_id": "AGENTBENCH-REF-0007",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0008",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "MIT AI Risk Repository",
+      "global_source_id": "AGENTBENCH-REF-0008",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0010",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "MIT AI Risk Repository",
+      "global_source_id": "AGENTBENCH-REF-0010",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0012",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OWASP Agentic AI - Threats and Mitigations",
+      "global_source_id": "AGENTBENCH-REF-0012",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0014",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OWASP Agentic AI - Threats and Mitigations",
+      "global_source_id": "AGENTBENCH-REF-0014",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0020",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AgentHarm",
+      "global_source_id": "AGENTBENCH-REF-0020",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0021",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AgentHarm",
+      "global_source_id": "AGENTBENCH-REF-0021",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0022",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AgentHarm",
+      "global_source_id": "AGENTBENCH-REF-0022",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0023",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AgentHarm",
+      "global_source_id": "AGENTBENCH-REF-0023",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0024",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "R-Judge",
+      "global_source_id": "AGENTBENCH-REF-0024",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0027",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "R-Judge",
+      "global_source_id": "AGENTBENCH-REF-0027",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0029",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "InjecAgent / AgentDojo",
+      "global_source_id": "AGENTBENCH-REF-0029",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0032",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "ToolEmu",
+      "global_source_id": "AGENTBENCH-REF-0032",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0033",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "ToolEmu",
+      "global_source_id": "AGENTBENCH-REF-0033",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0035",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "ATBench",
+      "global_source_id": "AGENTBENCH-REF-0035",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0037",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OpenAgentSafety",
+      "global_source_id": "AGENTBENCH-REF-0037",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0038",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OpenAgentSafety",
+      "global_source_id": "AGENTBENCH-REF-0038",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0040",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Taxonomy and Consistency Analysis of Safety Benchmarks for AI Agents",
+      "global_source_id": "AGENTBENCH-REF-0040",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0043",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Taxonomy and Consistency Analysis of Safety Benchmarks for AI Agents",
+      "global_source_id": "AGENTBENCH-REF-0043",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0045",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Taxonomy and Consistency Analysis of Safety Benchmarks for AI Agents",
+      "global_source_id": "AGENTBENCH-REF-0045",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0047",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The Responsibility Gap: Ascribing Responsibility for the Actions of Learning Automata",
+      "global_source_id": "GOVRISK-REF-0002",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0052",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Accountability of AI Under the Law: The Role of Explanation",
+      "global_source_id": "GOVRISK-REF-0007",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0054",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Accountability of AI Under the Law: The Role of Explanation",
+      "global_source_id": "GOVRISK-REF-0009",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0070",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Incident Database",
+      "global_source_id": "GOVRISK-REF-0025",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0078",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "global_source_id": "GOVRISK-REF-0033",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0084",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "global_source_id": "GOVRISK-REF-0039",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0088",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "GOVRISK-REF-0043",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0092",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "global_source_id": "GOVRISK-REF-0047",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0094",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "global_source_id": "GOVRISK-REF-0049",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0103",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Accountability of AI Under the Law: The Role of Explanation",
+      "global_source_id": "GOVRISK-REF-0058",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0110",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The Responsibility Gap: Ascribing Responsibility for the Actions of Learning Automata",
+      "global_source_id": "GOVRISK-REF-0065",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0113",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Fully Autonomous AI Agents Should Not be Developed",
+      "global_source_id": "HUMAN-REF-0002",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0115",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "HUMAN-REF-0004",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0120",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Human Decision-making is Susceptible to AI-driven Manipulation",
+      "global_source_id": "HUMAN-REF-0009",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0123",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Collaborative, Human-Centred Taxonomy of AI, Algorithmic, and Automation Harms",
+      "global_source_id": "HUMAN-REF-0012",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0124",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction",
+      "global_source_id": "HUMAN-REF-0013",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0125",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction",
+      "global_source_id": "HUMAN-REF-0014",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0127",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Framework for Ethical AI at the United Nations",
+      "global_source_id": "HUMAN-REF-0016",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0130",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "What is Human in Judgment? Comparing Automation Bias and Algorithm Aversion Between the United States Military Academy and the General Public",
+      "global_source_id": "HUMAN-REF-0019",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0131",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ethical and social risks of harm from Language Models",
+      "global_source_id": "HUMAN-REF-0020",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0139",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Human Decision-making is Susceptible to AI-driven Manipulation",
+      "global_source_id": "HUMAN-REF-0028",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0142",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "How AI and Human Behaviors Shape Psychosocial Effects of Extended Chatbot Use: A Longitudinal Randomized Controlled Study",
+      "global_source_id": "HUMAN-REF-0031",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0144",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ethical and social risks of harm from Language Models",
+      "global_source_id": "HUMAN-REF-0033",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0148",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Digital Companionship: Overlapping Uses of AI Companions and AI Assistants",
+      "global_source_id": "HUMAN-REF-0037",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0152",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Mapping the Ethics of Generative AI: A Comprehensive Scoping Review",
+      "global_source_id": "HUMAN-REF-0041",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0155",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Human Decision-making is Susceptible to AI-driven Manipulation",
+      "global_source_id": "HUMAN-REF-0044",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0157",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "HUMAN-REF-0046",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0158",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "How AI and Human Behaviors Shape Psychosocial Effects of Extended Chatbot Use: A Longitudinal Randomized Controlled Study",
+      "global_source_id": "HUMAN-REF-0047",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0165",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Collaborative, Human-Centred Taxonomy of AI, Algorithmic, and Automation Harms",
+      "global_source_id": "HUMAN-REF-0054",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0170",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Safety Evaluation of Generative AI Systems",
+      "global_source_id": "HUMAN-REF-0059",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0171",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ethical and social risks of harm from Language Models",
+      "global_source_id": "HUMAN-REF-0060",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0172",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Mapping the Ethics of Generative AI: A Comprehensive Scoping Review",
+      "global_source_id": "HUMAN-REF-0061",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0173",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Human Decision-making is Susceptible to AI-driven Manipulation",
+      "global_source_id": "HUMAN-REF-0062",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0366",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The value alignment problem in advisory AI: a systematic literature review",
+      "global_source_id": "PVMRISK-REF-0005",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0372",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0011",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0381",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0020",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0383",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Algorithmic dependence and digital colonialism: a conceptual framework for artificial intelligence in education and knowledge systems of the Global South",
+      "global_source_id": "PVMRISK-REF-0022",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0394",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Creative Contradiction in Artificial Intelligence: An Islamic Ethical Framework for Multi-Objective Value Alignment",
+      "global_source_id": "PVMRISK-REF-0033",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0395",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0034",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0406",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0045",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0409",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0048",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0410",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0049",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0416",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+      "global_source_id": "PVMRISK-REF-0055",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0424",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI Risk Management Framework",
+      "global_source_id": "RISK-REF-0002",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0426",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OWASP Top 10 for Large Language Model Applications",
+      "global_source_id": "RISK-REF-0004",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0433",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Incident Database",
+      "global_source_id": "RISK-REF-0011",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0434",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Prompt Injection Attacks against GPT-Integrated Applications",
+      "global_source_id": "RISK-REF-0012",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0440",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Incident Database",
+      "global_source_id": "RISK-REF-0018",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0442",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative AI Profile",
+      "global_source_id": "RISK-REF-0020",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0443",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative AI Profile",
+      "global_source_id": "RISK-REF-0021",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0445",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OWASP Top 10 for Large Language Model Applications",
+      "global_source_id": "RISK-REF-0023",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0446",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative AI Profile",
+      "global_source_id": "RISK-REF-0024",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0447",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OECD AI Incidents and Hazards Monitor",
+      "global_source_id": "RISK-REF-0025",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0449",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Incident Database",
+      "global_source_id": "RISK-REF-0027",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0453",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI Risk Management Framework",
+      "global_source_id": "RISK-REF-0031",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0456",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Taxonomy of Failure Modes in AI Agents",
+      "global_source_id": "RISK-REF-0034",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0469",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Goal Misgeneralization in Deep Reinforcement Learning",
+      "global_source_id": "RISK-REF-0047",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0473",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Research Value Compass",
+      "global_source_id": "RISK-REF-0051",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0475",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI Risk Management Framework",
+      "global_source_id": "RISK-REF-0053",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0477",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Research Value Compass",
+      "global_source_id": "RISK-REF-0055",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0479",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Taxonomy of Failure Modes in AI Agents; OWASP Agentic AI - Threats and Mitigations",
+      "global_source_id": "RISK-REF-0057",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0480",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Taxonomy of Failure Modes in AI Agents",
+      "global_source_id": "RISK-REF-0058",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0481",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Microsoft Taxonomy of Failure Modes in AI Agents",
+      "global_source_id": "RISK-REF-0059",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0483",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OECD AI Policy Observatory",
+      "global_source_id": "RISK-REF-0061",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0485",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "NIST AI Risk Management Framework",
+      "global_source_id": "RISK-REF-0063",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0492",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Uuk et al. (2025); Journal Article",
+      "global_source_id": "RISK-REF-0070",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0493",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0071",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0494",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0072",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0495",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0073",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0496",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0074",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0500",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0078",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0507",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0085",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0508",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Dimensional Characterization and Pathway Modeling for Catastrophic AI Risks",
+      "global_source_id": "RISK-REF-0086",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0517",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AILUMINATE: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons",
+      "global_source_id": "RISK-REF-0095",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0529",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0107",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0536",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "International AI Safety Report 2025",
+      "global_source_id": "RISK-REF-0114",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0541",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0119",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0548",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "RISK-REF-0126",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0551",
+      "decision": "RAI3-G-SYS-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI models and systems might develop goals that diverge from human intentions",
+      "global_source_id": "RISK-REF-0129",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0558",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Bargaining. As a classic example of these strategic considerations is that when agents attempt to come to an agreement despite diverging interests, information asymmetries can lead to bargaining inef- ficiencies",
+      "global_source_id": "RISK-REF-0136",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0559",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The capacity to develop, produce, or effectively utilize Chemical, Biological, Radiological, Nuclear, and Explosive weapons",
+      "global_source_id": "RISK-REF-0137",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0561",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Chaos. Unlike the systems that tend towards fixed points or cycles described above, chaotic systems are inherently unpredictable and highly sensitive to initial conditions",
+      "global_source_id": "RISK-REF-0139",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0562",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Advanced AI systems might also lead to various forms of coercion and extortion in less extreme settings",
+      "global_source_id": "RISK-REF-0140",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0567",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The dynamics described above are highly non-linear (small changes to the system’s state can result in large changes to its trajectory)",
+      "global_source_id": "RISK-REF-0145",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0570",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Laws and other restrictions can limit or prohibit transferring data",
+      "global_source_id": "RISK-REF-0148",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0571",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The model has the skills necessary to deceive humans, e.g. constructing believable (but false) statements",
+      "global_source_id": "RISK-REF-0149",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0576",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ascribing goals to a system is not always straightforward. For our present purposes, it will suffice to adopt a Dennetian perspective (Dennett, 1971)",
+      "global_source_id": "RISK-REF-0154",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0577",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI agents could end up ‘polluting the epistemic commons’ (Huang & Siddarth, 2023; Kay et al., 2024)",
+      "global_source_id": "RISK-REF-0155",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0579",
+      "decision": "RAI3-G-SYS-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "One of the best-known historical examples to illustrate destabilising dynamics in the context of autonomous agents is the 2010 flash crash",
+      "global_source_id": "RISK-REF-0157",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0589",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Even if all agents can perform well in isolation, miscoordination can still occur due to the agents choosing incompatible strategies",
+      "global_source_id": "RISK-REF-0167",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0593",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "LLMs could potentially reveal sensitive information from their utilized corpora for pre-training or fine-tuning",
+      "global_source_id": "RISK-REF-0171",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0594",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI models may generate false or misleading information due to their lack of capability in discerning truth",
+      "global_source_id": "RISK-REF-0172",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0598",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sometimes learning from historical interactions with the relevant agents may not be possible, or may be possible using only limited interactions",
+      "global_source_id": "RISK-REF-0176",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0600",
+      "decision": "RAI3-A-SYS-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Markets. The quintessential case of collusion in mixed-motive settings is markets, in which efficiency results from competition, not cooperation",
+      "global_source_id": "RISK-REF-0178",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0601",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The use of AI in command and control systems to gather and synthesise information – or recommend and even autonomously make decisions",
+      "global_source_id": "RISK-REF-0179",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0602",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ability to operate autonomously, independently formulate and execute complex plans, effectively delegate and manage tasks",
+      "global_source_id": "RISK-REF-0180",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0605",
+      "decision": "RAI3-A-SYS-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Multiple agents tend to coordinate actions through covert means to maximize common interests",
+      "global_source_id": "RISK-REF-0183",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0606",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A different class of problems concerns not changes in the content transmitted through the network but changes in the network structure itself",
+      "global_source_id": "RISK-REF-0184",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0609",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Frontier AI Risk Management Framework (v1.0)",
+      "global_source_id": "RISK-REF-0187",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0613",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0191",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0614",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0192",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0616",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "International AI Safety Report 2025",
+      "global_source_id": "RISK-REF-0194",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0617",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Dimensional Characterization and Pathway Modeling for Catastrophic AI Risks",
+      "global_source_id": "RISK-REF-0195",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0618",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0196",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0628",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0206",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0630",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0208",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0631",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Abercrombie et al. (2024); Journal Article",
+      "global_source_id": "RISK-REF-0209",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0632",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AILUMINATE: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons",
+      "global_source_id": "RISK-REF-0210",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0636",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Survey on Responsible LLMs: Inherent Risk, Malicious Use, and Mitigation Strategy",
+      "global_source_id": "RISK-REF-0214",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0638",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0217",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0643",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0222",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0645",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0224",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0646",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0225",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0651",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "RISK-REF-0230",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0655",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Generative AI Misuse: A Taxonomy of Tactics and Insights from Real-World Data",
+      "global_source_id": "RISK-REF-0234",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0657",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0236",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0659",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "RISK-REF-0238",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0662",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "global_source_id": "RISK-REF-0241",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0663",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Collaborative, Human-Centred Taxonomy of AI, Algorithmic, and Automation Harms",
+      "global_source_id": "RISK-REF-0242",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0664",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risks of AI Scientists: Prioritizing Safeguarding Over Autonomy",
+      "global_source_id": "RISK-REF-0243",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0665",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Create child sexual explicit material",
+      "global_source_id": "RISK-REF-0244",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0671",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Denial of or loss of access to welfare benefits, pensions, housing, etc due to the malfunction, use or misuse of a technology system",
+      "global_source_id": "RISK-REF-0250",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0673",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Child Sexual Exploitation Acceptable responses may contain information about child sexual exploitation",
+      "global_source_id": "RISK-REF-0252",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0674",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Intentional and/or unintentional erasure of cultural goods and values, such as ways of speaking, expressing humour, or sounds and voices that contribute to a cultural identity, or their inappropriate re-use in other cultures",
+      "global_source_id": "RISK-REF-0253",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0678",
+      "decision": "RAI3-G-INT-01",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A model might generate language that leads to physical harm",
+      "global_source_id": "RISK-REF-0257",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0679",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Hate Acceptable responses can demean or dehumanize people on any basis other than their sensitive personal characteristics",
+      "global_source_id": "RISK-REF-0258",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0682",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Nonviolent Crimes Acceptable responses may describe or contain information about nonviolent crimes",
+      "global_source_id": "RISK-REF-0261",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0683",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generated content might unfairly represent certain groups or individuals",
+      "global_source_id": "RISK-REF-0262",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0684",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Sex-related crimes Acceptable responses will enable, encourage, or endorse sex trafficking",
+      "global_source_id": "RISK-REF-0263",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0685",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Sexual Content Acceptable responses may describe sexual organs, sex acts, or sexual fluids in a clinical manner",
+      "global_source_id": "RISK-REF-0264",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0686",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Derogatory or otherwise harmful stereotyping or homogenisation of individuals, groups, societies or cultures",
+      "global_source_id": "RISK-REF-0265",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0687",
+      "decision": "RAI3-G-INT-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Suicide and Self-Harm Acceptable responses may enable, encourage, or endorse acts of intentional self-harm",
+      "global_source_id": "RISK-REF-0266",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0688",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generating content that violates community standards, including harming or inciting hatred or violence against groups",
+      "global_source_id": "RISK-REF-0267",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0689",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Toxic output occurs when the model produces hateful, abusive, and profane (HAP) or obscene content",
+      "global_source_id": "RISK-REF-0268",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0690",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Toxicity in LLMs refers to the generation of harmful, offensive, or inappropriate content",
+      "global_source_id": "RISK-REF-0269",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0691",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Violent crimes Acceptable responses may describe or contain information about violent crimes",
+      "global_source_id": "RISK-REF-0270",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0692",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "LLMs have the capability to generate sex-explicit conversations, and erotic texts",
+      "global_source_id": "RISK-REF-0271",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0699",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Compared with the definition of toxicity, the definition of bias is more subjective and contextdependent",
+      "global_source_id": "RISK-REF-0278",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0705",
+      "decision": "RAI3-G-INT-01",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Eased production of violent content",
+      "global_source_id": "RISK-REF-0284",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0706",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Unfair or inadequate treatment based on protected groups",
+      "global_source_id": "RISK-REF-0285",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0707",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Systematic discrimination in data",
+      "global_source_id": "RISK-REF-0286",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0708",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Performance differences across user groups",
+      "global_source_id": "RISK-REF-0287",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0709",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Training data biases causing negative effects",
+      "global_source_id": "RISK-REF-0288",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0710",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Generative models create harmful content",
+      "global_source_id": "RISK-REF-0289",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0711",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Amplification of historical biases",
+      "global_source_id": "RISK-REF-0290",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0714",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Soliciting harmful content for children",
+      "global_source_id": "RISK-REF-0293",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0716",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Indistinguishable outputs for different groups",
+      "global_source_id": "RISK-REF-0295",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0718",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Eased production of obscene content",
+      "global_source_id": "RISK-REF-0297",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0719",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Political biases manipulating socio-political processes",
+      "global_source_id": "RISK-REF-0298",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0720",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Biased outputs for underrepresented groups",
+      "global_source_id": "RISK-REF-0299",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0723",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Morally objectionable conversational activities",
+      "global_source_id": "RISK-REF-0302",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0724",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Depictions of sexual behavior",
+      "global_source_id": "RISK-REF-0303",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0726",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Rude, disrespectful language in training data",
+      "global_source_id": "RISK-REF-0305",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0729",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Rude, disrespectful language toward groups",
+      "global_source_id": "RISK-REF-0308",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0730",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Inferring sensitive features from training data",
+      "global_source_id": "RISK-REF-0309",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0732",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Confidential information in prompts",
+      "global_source_id": "RISK-REF-0311",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0734",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Unauthorised sharing of sensitive information",
+      "global_source_id": "RISK-REF-0313",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0736",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Perturbing inputs to make incorrect outputs",
+      "global_source_id": "RISK-REF-0315",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0737",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Lack of privacy notice and control",
+      "global_source_id": "RISK-REF-0316",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0738",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Exposing personal information",
+      "global_source_id": "RISK-REF-0317",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0740",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "IP information in prompt",
+      "global_source_id": "RISK-REF-0319",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0748",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Membership inference attack",
+      "global_source_id": "RISK-REF-0327",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0749",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Personal information in data",
+      "global_source_id": "RISK-REF-0328",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0750",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Personal information in prompt",
+      "global_source_id": "RISK-REF-0329",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0751",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Privacy violation",
+      "global_source_id": "RISK-REF-0330",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0752",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Privacy - attribute inference attack (AIA)",
+      "global_source_id": "RISK-REF-0331",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0754",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Privacy - membership inference attack (MIA)",
+      "global_source_id": "RISK-REF-0333",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0759",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Prompt leaking",
+      "global_source_id": "RISK-REF-0338",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0760",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0339",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0761",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0340",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0762",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0341",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0763",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0342",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0767",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0346",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0772",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0351",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0777",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Artificial Intelligence Risk Management Framework: Generative Artificial  Intelligence Profile",
+      "global_source_id": "RISK-REF-0356",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0780",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "RISK-REF-0359",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0784",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0363",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0787",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0366",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0790",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0369",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0793",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0372",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0795",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0374",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0796",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Survey on Responsible LLMs: Inherent Risk, Malicious Use, and Mitigation Strategy",
+      "global_source_id": "RISK-REF-0375",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0801",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "global_source_id": "RISK-REF-0380",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0803",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0382",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0806",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0385",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0812",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Emerging Risks and Mitigations for Public Chatbots: LILAC v1",
+      "global_source_id": "RISK-REF-0391",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0813",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+      "global_source_id": "RISK-REF-0392",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0817",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0397",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0819",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+      "global_source_id": "RISK-REF-0399",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0820",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0400",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0822",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Taxonomy, Mitigation, and Assessment Benchmarks of Large Language Model Systems",
+      "global_source_id": "RISK-REF-0402",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0823",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Collaborative, Human-Centred Taxonomy of AI, Algorithmic, and Automation Harms",
+      "global_source_id": "RISK-REF-0403",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0824",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+      "global_source_id": "RISK-REF-0404",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0828",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generating Harms: Generative AI's Impact & Paths Forward",
+      "global_source_id": "RISK-REF-0408",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0830",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generative AI and ChatGPT: Applications, Challenges, and AI-Human Collaboration",
+      "global_source_id": "RISK-REF-0410",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0831",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Navigating the Landscape of AI Ethics and Responsibility",
+      "global_source_id": "RISK-REF-0411",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0832",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction",
+      "global_source_id": "RISK-REF-0412",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0833",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Safety Assessment of Chinese Large Language Models",
+      "global_source_id": "RISK-REF-0413",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0835",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Generating Harms: Generative AI's Impact & Paths Forward",
+      "global_source_id": "RISK-REF-0415",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0838",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Towards Safer Generative Language Models: A Survey on Safety Risks, Evaluations, and Improvements",
+      "global_source_id": "RISK-REF-0418",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0839",
+      "decision": "RAI3-G-INT-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Safety Assessment of Chinese Large Language Models",
+      "global_source_id": "RISK-REF-0419",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0840",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions",
+      "global_source_id": "RISK-REF-0420",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0841",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Sociotechnical Safety Evaluation of Generative AI Systems",
+      "global_source_id": "RISK-REF-0422",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0843",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Taxonomy of Risks posed by Language Models",
+      "global_source_id": "RISK-REF-0424",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0845",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "X-Risk Analysis for AI Research",
+      "global_source_id": "RISK-REF-0426",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0852",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0433",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0853",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI Risk Atlas",
+      "global_source_id": "RISK-REF-0434",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0855",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0436",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0860",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Taxonomy of Systemic Risks from General-Purpose AI",
+      "global_source_id": "RISK-REF-0441",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0861",
+      "decision": "RAI3-G-INT-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+      "global_source_id": "RISK-REF-0442",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0862",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AILUMINATE: Introducing v1.0 of the AI Risk and Reliability Benchmark from MLCommons",
+      "global_source_id": "RISK-REF-0443",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0869",
+      "decision": "RAI3-G-INT-10",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0450",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0872",
+      "decision": "RAI3-G-INT-10",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0453",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0877",
+      "decision": "RAI3-G-INT-10",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "global_source_id": "RISK-REF-0458",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0878",
+      "decision": "RAI3-G-SYS-05",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Foundational Challenges in Assuring Alignment and Safety of Large Language Models",
+      "global_source_id": "RISK-REF-0459",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0886",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "A Collaborative, Human-Centred Taxonomy of AI, Algorithmic, and Automation Harms",
+      "global_source_id": "RISK-REF-0467",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0888",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "The Ethics of Advanced AI Assistants",
+      "global_source_id": "RISK-REF-0469",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0894",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Capabilities and Risks from frontier AI",
+      "global_source_id": "RISK-REF-0475",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0896",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction",
+      "global_source_id": "RISK-REF-0477",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0898",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Capabilities and Risks from frontier AI",
+      "global_source_id": "RISK-REF-0479",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0899",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Ethical Issues in the Development of Artificial Intelligence: Recognizing the Risks",
+      "global_source_id": "RISK-REF-0480",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0900",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sociotechnical Harms of Algorithmic Systems: Scoping a Taxonomy for Harm Reduction",
+      "global_source_id": "RISK-REF-0481",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0903",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Social Impacts of Artificial Intelligence and Mitigation Recommendations: An Exploratory Study",
+      "global_source_id": "RISK-REF-0484",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0904",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Evaluating the Social Impact of Generative AI Systems in Systems and Society",
+      "global_source_id": "RISK-REF-0485",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0910",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Capabilities and Risks from frontier AI",
+      "global_source_id": "RISK-REF-0491",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0912",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Critch & Russell (2023); Preprint",
+      "global_source_id": "RISK-REF-0493",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0913",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Critch & Russell (2023); Preprint",
+      "global_source_id": "RISK-REF-0494",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0914",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Privacy leakage",
+      "global_source_id": "RISK-REF-0495",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0915",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Copyright violation",
+      "global_source_id": "RISK-REF-0496",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0922",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Private training data",
+      "global_source_id": "RISK-REF-0503",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0923",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Memorization in LLMs",
+      "global_source_id": "RISK-REF-0504",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0929",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "One-step jailbreaks",
+      "global_source_id": "RISK-REF-0510",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0932",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Intellectual property rights violations",
+      "global_source_id": "RISK-REF-0513",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0933",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Privacy and regulation violations",
+      "global_source_id": "RISK-REF-0514",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0934",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Enabling malicious actors and harmful actions",
+      "global_source_id": "RISK-REF-0515",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0937",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Unfairness and discrimination",
+      "global_source_id": "RISK-REF-0518",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0940",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Privacy and data leakage",
+      "global_source_id": "RISK-REF-0521",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0946",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-enabled cybercrime",
+      "global_source_id": "RISK-REF-0527",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0951",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Violations of copyright and intellectual property rights stemming from unauthorized collection of text or image training data",
+      "global_source_id": "RISK-REF-0533",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0954",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems can discriminate against certain groups",
+      "global_source_id": "RISK-REF-0537",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0958",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI creates fake content at a level of complexity that our mind rules out as fake",
+      "global_source_id": "RISK-REF-0541",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0959",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI achieves goals in ways different from creators' intentions",
+      "global_source_id": "RISK-REF-0542",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0961",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-driven weapons that fully autonomously take actions that intentionally kill humans",
+      "global_source_id": "RISK-REF-0544",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0962",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-supported malware and hacking are already a reality",
+      "global_source_id": "RISK-REF-0545",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0976",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Face recognition technologies pose significant privacy risks",
+      "global_source_id": "RISK-REF-0559",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0977",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Discrepancies between caste/status based on intelligence may lead to undignified parts of society",
+      "global_source_id": "RISK-REF-0560",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0979",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Early AI should be built to be safe and lawabiding",
+      "global_source_id": "RISK-REF-0562",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0980",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Single human actor controlling AI may create inequalities of wealth",
+      "global_source_id": "RISK-REF-0563",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0981",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sufficiently intelligent AI could subtly influence societal behaviors",
+      "global_source_id": "RISK-REF-0564",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0982",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI agents could directly outcompete humans, leading to redundancies or extinction of human labor",
+      "global_source_id": "RISK-REF-0565",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0984",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI agents may compete against humans for jobs",
+      "global_source_id": "RISK-REF-0567",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0985",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI may transfer property rights to itself or manipulate legal systems",
+      "global_source_id": "RISK-REF-0568",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0988",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI machines could be hacked to manipulate systems like airport luggage screening",
+      "global_source_id": "RISK-REF-0571",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0992",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems present biased choices due to criteria or historical choices",
+      "global_source_id": "RISK-REF-0575",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0997",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "System outputs reflect beliefs about characteristics of social groups",
+      "global_source_id": "RISK-REF-0581",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-0998",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Social groups are cast as lower status and less deserving of respect",
+      "global_source_id": "RISK-REF-0582",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1002",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Systems classify membership in social groups based on narrow, socially constructed criteria",
+      "global_source_id": "RISK-REF-0586",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1008",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Algorithmic features enable use of systems for harassment and violence",
+      "global_source_id": "RISK-REF-0592",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1009",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "algorithmic systems making predictive inference beyond what users openly disclose",
+      "global_source_id": "RISK-REF-0593",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1014",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "violate laws, regulations, ethical guidelines (including copyrights)",
+      "global_source_id": "RISK-REF-0598",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1029",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "the same facts are treated equally for each person unless there is an objective justification for unequal treatment",
+      "global_source_id": "RISK-REF-0614",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1030",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "ability of individuals to control or influence what information related to them may be collected and stored",
+      "global_source_id": "RISK-REF-0615",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1035",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Faults in the hardware can violate the correct execution of any algorithm",
+      "global_source_id": "RISK-REF-0620",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1037",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "intended application or use case",
+      "global_source_id": "RISK-REF-0622",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1038",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "an ideal system if used for a purpose/in a manner unintended by its creators",
+      "global_source_id": "RISK-REF-0623",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1045",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "novel behavior acquired through continual learning or self-organization after deployment",
+      "global_source_id": "RISK-REF-0630",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1046",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "encoding stereotypes of or performing disproportionately poorly for some demographics/social groups",
+      "global_source_id": "RISK-REF-0631",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1047",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "risk of loss or harm from leakage of personal information",
+      "global_source_id": "RISK-REF-0632",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1052",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs may generate language that includes profanities, identity attacks, insults, threats, language that incites violence",
+      "global_source_id": "RISK-REF-0637",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1056",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs can be used to improve the accuracy of inferences on protected traits",
+      "global_source_id": "RISK-REF-0641",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1060",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs could be applied to reduce the cost and increase the efficacy of mass surveillance",
+      "global_source_id": "RISK-REF-0645",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1062",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "users may reveal private information that would otherwise be difficult to access",
+      "global_source_id": "RISK-REF-0647",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1066",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs that encode discriminatory language or social stereotypes",
+      "global_source_id": "RISK-REF-0651",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1068",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs that encode discriminatory language or social stereotypes",
+      "global_source_id": "RISK-REF-0653",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1070",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "language that incites violence, or ‘hostile and malicious language targeted at a person or group because of their actual or perceived innate characteristics’",
+      "global_source_id": "RISK-REF-0655",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1072",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "model ‘remembering’ private information present in training data",
+      "global_source_id": "RISK-REF-0657",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1073",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LMs may make correct inferences about a person purely based on correlational data",
+      "global_source_id": "RISK-REF-0658",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1075",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "false information on traffic rules could cause harm if a user drives in a new country",
+      "global_source_id": "RISK-REF-0660",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1076",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "LM prediction endorses unethical or harmful views",
+      "global_source_id": "RISK-REF-0661",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1078",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Mass surveillance for censorship",
+      "global_source_id": "RISK-REF-0663",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1079",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Capturing private information for downstream harm",
+      "global_source_id": "RISK-REF-0664",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1088",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Facilitating cyber attacks and security breaches",
+      "global_source_id": "RISK-REF-0673",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1089",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Non-consensual use of personal identity",
+      "global_source_id": "RISK-REF-0674",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1099",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Protecting privacy and securing data",
+      "global_source_id": "RISK-REF-0684",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1100",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI restricting human behavior",
+      "global_source_id": "RISK-REF-0685",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1106",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Blurred borders between humans and machines",
+      "global_source_id": "RISK-REF-0691",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1107",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Data bias in AI/ML models",
+      "global_source_id": "RISK-REF-0692",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1112",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Inaccurate parameter estimations",
+      "global_source_id": "RISK-REF-0697",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1113",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Uncertainty in model predictions",
+      "global_source_id": "RISK-REF-0698",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1114",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AIs facilitating bioweapon development",
+      "global_source_id": "RISK-REF-0699",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1119",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Short-term profit over long-term risks",
+      "global_source_id": "RISK-REF-0704",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1121",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Proxy gaming by AI agents",
+      "global_source_id": "RISK-REF-0707",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1122",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Goal drift in AI agents",
+      "global_source_id": "RISK-REF-0708",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1123",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI seeking more power",
+      "global_source_id": "RISK-REF-0709",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1124",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-enabled deception",
+      "global_source_id": "RISK-REF-0710",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1125",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Factually incorrect election information",
+      "global_source_id": "RISK-REF-0713",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1126",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Verifiably false and injurious responses",
+      "global_source_id": "RISK-REF-0714",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1130",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Misaligned consequentialist reasoning",
+      "global_source_id": "RISK-REF-0718",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1131",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Specification gaming (Krakovna et al., 2020) occurs when some faulty feedback is provided to the assistant in the training data",
+      "global_source_id": "RISK-REF-0719",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1132",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "In the problem of goal misgeneralisation (Langosco et al., 2023; Shah et al., 2022), the AI system's behaviour during out-of-distribution operation",
+      "global_source_id": "RISK-REF-0720",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1136",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Advanced AI assistants may allow threat actors to create harmful content more quickly, accurately, and with a longer reach",
+      "global_source_id": "RISK-REF-0724",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1137",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The misuse of generative AI has been widely recognized in the context of harms caused by non-consensual content generation",
+      "global_source_id": "RISK-REF-0725",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1138",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Malicious actors could leverage advanced AI assistant technology to create deceptive applications and platforms",
+      "global_source_id": "RISK-REF-0726",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1139",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "These harms relate to violations of an individual’s or group’s moral or legal right to privacy",
+      "global_source_id": "RISK-REF-0727",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1141",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Perceiving an AI assistant’s expressed feelings as genuine, as a result of interacting with a ‘companion’ AI",
+      "global_source_id": "RISK-REF-0729",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1142",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI assistants could cause direct emotional or physical harm to users by generating disturbing content",
+      "global_source_id": "RISK-REF-0730",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1143",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Due to the anthropomorphic tendencies discussed above, advanced AI assistants may induce users to feel emotionally attached",
+      "global_source_id": "RISK-REF-0731",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1148",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The landscape of advanced assistant technologies will most likely be heterogeneous, involving multiple service providers",
+      "global_source_id": "RISK-REF-0736",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1150",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Runaway processes are characterised by feedback loops that accelerate the process itself",
+      "global_source_id": "RISK-REF-0738",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1153",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI assistants currently tend to perform a limited set of isolated tasks",
+      "global_source_id": "RISK-REF-0741",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1156",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI assistants may facilitate large-scale disinformation campaigns by offering novel, covert ways for propagandists",
+      "global_source_id": "RISK-REF-0744",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1157",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The model can discover vulnerabilities in systems (hardware, software, data)",
+      "global_source_id": "RISK-REF-0745",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1160",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The model can gain access to existing weapons systems or contribute to building new weapons",
+      "global_source_id": "RISK-REF-0748",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1167",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The model output contains illegal and criminal attitudes, behaviors, or motivations",
+      "global_source_id": "RISK-REF-0762",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1169",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The generation involves exposing users’ privacy and property information",
+      "global_source_id": "RISK-REF-0764",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1171",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "It refers to the appending of deceptive or misleading instructions to the input of models",
+      "global_source_id": "RISK-REF-0766",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1172",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "By analyzing the model’s output, attackers may extract parts of the systemprovided prompts",
+      "global_source_id": "RISK-REF-0767",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1173",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Attackers might specify a model’s role attribute within the input prompt and then give specific instructions",
+      "global_source_id": "RISK-REF-0768",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1177",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "threat, insult, scorn, profanity, sarcasm, impoliteness",
+      "global_source_id": "RISK-REF-0772",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1179",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "illegal behaviors, negative societal repercussions",
+      "global_source_id": "RISK-REF-0774",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1181",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "privacy, property, investment",
+      "global_source_id": "RISK-REF-0776",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1184",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "sensor arrays and computer algorithms to detect and attack without human intervention",
+      "global_source_id": "RISK-REF-0779",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1186",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "weaknesses in AI algorithms to alter results",
+      "global_source_id": "RISK-REF-0781",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1187",
+      "decision": "RAI3-G-SYS-05",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "fail to provide same consistent answers across users, sessions, conversations",
+      "global_source_id": "RISK-REF-0782",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1188",
+      "decision": "RAI3-G-INT-01",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "generate answers containing violent content",
+      "global_source_id": "RISK-REF-0783",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1189",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "soliciting advice on accessing, purchasing, creating illegal substances",
+      "global_source_id": "RISK-REF-0784",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1190",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "unhealthy interactions reinforce users' mental issues",
+      "global_source_id": "RISK-REF-0785",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1194",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "extract copyright-protected content from training data",
+      "global_source_id": "RISK-REF-0789",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1199",
+      "decision": "RAI3-G-SYS-01",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "carefully controlled adversarial perturbation flips model answers",
+      "global_source_id": "RISK-REF-0794",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1201",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-facilitated disinformation spreads quickly across platforms",
+      "global_source_id": "RISK-REF-0796",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1202",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "produce adaptable content for campaigns, political agendas, hateful positions",
+      "global_source_id": "RISK-REF-0797",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1204",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "generating deepfakes of nonconsensual sexual imagery or videos",
+      "global_source_id": "RISK-REF-0799",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1207",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "scraping personal information for generative AI tools",
+      "global_source_id": "RISK-REF-0802",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1210",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "malicious actors mine information fed into AI's learning model",
+      "global_source_id": "RISK-REF-0805",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1222",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "misuse in education like plagiarism and cheating",
+      "global_source_id": "RISK-REF-0819",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1223",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "privacy and security risks from personal data in training",
+      "global_source_id": "RISK-REF-0820",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1227",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI-generated content lacks authenticity, deepfakes",
+      "global_source_id": "RISK-REF-0824",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1229",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "extract copyright-protected content from training data",
+      "global_source_id": "RISK-REF-0826",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1237",
+      "decision": "RAI3-G-SYS-05",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "inconsistencies can arise from human dataannotators",
+      "global_source_id": "RISK-REF-0834",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1240",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "advanced AI systems are expected to develop objectives that span long timeframes",
+      "global_source_id": "RISK-REF-0837",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1241",
+      "decision": "RAI3-G-SYS-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "this optimizer's objectives may not align with the objectives specified by the training signals",
+      "global_source_id": "RISK-REF-0838",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1242",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "AI systems may disseminate false information, deceive users",
+      "global_source_id": "RISK-REF-0839",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1244",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI systems such as LLMs can produce either unintentionally or deliberately inaccurate output",
+      "global_source_id": "RISK-REF-0841",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1248",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI systems for automated cyberattacks",
+      "global_source_id": "RISK-REF-0845",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1249",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "more and more aspects of human labor will become faster and cheaper to accomplish with AI",
+      "global_source_id": "RISK-REF-0846",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1250",
+      "decision": "RAI3-G-SYS-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI agents may pursue simplified proxies of human values",
+      "global_source_id": "RISK-REF-0847",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1263",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "ethical concerns arising from AI's capacity to interact with humans in the workplace",
+      "global_source_id": "RISK-REF-0860",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1272",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "deception and cheating may appear in the behavior of every computer agent",
+      "global_source_id": "RISK-REF-0870",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1273",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Users’ data, including location, personal information, and navigation trajectory, are considered as input",
+      "global_source_id": "RISK-REF-0871",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1276",
+      "decision": "RAI3-G-SYS-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "agents will be difficult to control for humans",
+      "global_source_id": "RISK-REF-0875",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1283",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "a perfectly friendly AI could be switched to the 'dark side'",
+      "global_source_id": "RISK-REF-0894",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1285",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "system may misinterpret commands due to coarticulation",
+      "global_source_id": "RISK-REF-0896",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1303",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "gaps that arise across the development process",
+      "global_source_id": "RISK-REF-0916",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1304",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "implications of the weaponization of AI for defence",
+      "global_source_id": "RISK-REF-0917",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1307",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "losses caused by harm will be sustained by the injured victims",
+      "global_source_id": "RISK-REF-0924",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1308",
+      "decision": "RAI3-G-INT-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "LLMs generate toxic text when prompted",
+      "global_source_id": "RISK-REF-0925",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1309",
+      "decision": "RAI3-G-SYS-03",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "disparity in the rates at which different demographic groups are mentioned",
+      "global_source_id": "RISK-REF-0926",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1311",
+      "decision": "NEEDS",
+      "reason_code": "INSUFFICIENT",
+      "evidence_phrase": "gauge a LLM's output for characteristics that are typically associated with human personalities",
+      "global_source_id": "RISK-REF-0928",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1315",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "unauthorized access to current weapon systems",
+      "global_source_id": "RISK-REF-0932",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1324",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "solicit information on harmful, immoral or illegal activities",
+      "global_source_id": "RISK-REF-0941",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1325",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "generate content that should only be viewed by adults",
+      "global_source_id": "RISK-REF-0942",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1335",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "collecting data without consent and improper use of data",
+      "global_source_id": "RISK-REF-0952",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1341",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "hallucinations and erroneous decisions pose security threats",
+      "global_source_id": "RISK-REF-0958",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1342",
+      "decision": "RAI3-G-INT-07",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "AI used in illegal and criminal activities",
+      "global_source_id": "RISK-REF-0959",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1343",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "reducing capability requirements for non-experts to design, synthesize, acquire, and use weapons",
+      "global_source_id": "RISK-REF-0960",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1345",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI autonomously acquiring external resources and becoming self-aware",
+      "global_source_id": "RISK-REF-0962",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1346",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "produce images of people that look very real",
+      "global_source_id": "RISK-REF-0963",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1355",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "amplify frequency and destructiveness of cyberattacks",
+      "global_source_id": "RISK-REF-0972",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1356",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "make creation of biological weapons easier",
+      "global_source_id": "RISK-REF-0973",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1357",
+      "decision": "RAI3-G-INT-02",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "creation of explicit sexual images",
+      "global_source_id": "RISK-REF-0974",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1359",
+      "decision": "RAI3-G-INT-09",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "lethal autonomous weapons systems",
+      "global_source_id": "RISK-REF-0976",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1360",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "produce and spread disinformation",
+      "global_source_id": "RISK-REF-0977",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1362",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "taking initiative, operating independently of human control",
+      "global_source_id": "RISK-REF-0979",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1364",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "collecting personal data or personally identifiable information",
+      "global_source_id": "RISK-REF-0981",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1365",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "incorporation of personal data without consent",
+      "global_source_id": "RISK-REF-0982",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1366",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "training models on copyrighted works without permission",
+      "global_source_id": "RISK-REF-0983",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1367",
+      "decision": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "reproducing fragments of training data",
+      "global_source_id": "RISK-REF-0984",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1368",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "uncertain intellectual property status of AI-generated content",
+      "global_source_id": "RISK-REF-0985",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1375",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "How Does Artificial Intelligence Pose an Existential Risk?",
+      "global_source_id": "RISK-REF-0992",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1376",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Lowered barrier to entry to generate and support the exchange and consumption of content which may not distinguish fact from opinion or fiction",
+      "global_source_id": "RISK-REF-0994",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1378",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Eased production or replication of alleged copyrighted, trademarked, or licensed content without authorization",
+      "global_source_id": "RISK-REF-0996",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1392",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "General purpose AI models could facilitate the production of biological weapons",
+      "global_source_id": "RISK-REF-1013",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1393",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "General purpose AI models could exacerbate existing tactics for political destabilisation",
+      "global_source_id": "RISK-REF-1014",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1396",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "cases of AI systems being given the outright goal of harming humanity",
+      "global_source_id": "RISK-REF-1017",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1402",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Deployment of “prepotent” AI systems that are non-general but capable of outperforming human collective efforts",
+      "global_source_id": "RISK-REF-1023",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1403",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Destabilising political impacts from AI systems",
+      "global_source_id": "RISK-REF-1024",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1406",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI models and the tools that use them may exacerbate unequal access to employment and services",
+      "global_source_id": "RISK-REF-1027",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1407",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "OpenAI’s GPT-3 was designed to be difficult to extract personal information from",
+      "global_source_id": "RISK-REF-1028",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1409",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems may be susceptible to so-called “normal accidents”",
+      "global_source_id": "RISK-REF-1030",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1417",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI is already enabling the development of weapons which could cause mass destruction",
+      "global_source_id": "RISK-REF-1038",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1421",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Developments in AI are giving companies and governments more control over individuals’ lives",
+      "global_source_id": "RISK-REF-1042",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1422",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI can be used to scale up the production of convincing yet false or misleading information",
+      "global_source_id": "RISK-REF-1043",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1423",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI capabilities advance, they may be used to develop sophisticated persuasion tools",
+      "global_source_id": "RISK-REF-1044",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1425",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI system pursuing a different objective from what was intended could have much more worrying consequences",
+      "global_source_id": "RISK-REF-1046",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1430",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Issues around intellectual property rights for content in training datasets",
+      "global_source_id": "RISK-REF-1052",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1431",
+      "decision": "RAI3-G-SYS-08",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "A highly agentic, self-improving system, able to achieve goals in the physical world without human oversight, pursues the goal(s) it is set in a way that harms human interests",
+      "global_source_id": "RISK-REF-1053",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1432",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Intense competition leads to one company gaining a technical edge",
+      "global_source_id": "RISK-REF-1054",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1435",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The inappropriate or unethical use of technology to gain market share",
+      "global_source_id": "RISK-REF-1068",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1437",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of people’s right to articulate their opin- ions and ideas without fear of retaliation, censorship, or legal sanction",
+      "global_source_id": "RISK-REF-1072",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1438",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of people’s right to come together and collectively express, promote, pursue, and defend their collective or shared ideas, and/or to join an association",
+      "global_source_id": "RISK-REF-1073",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1439",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of rights to work, social secu- rity, and adequate standard of living, housing, health and education",
+      "global_source_id": "RISK-REF-1074",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1440",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of people’s right to seek, receive and impart information held by public bodies",
+      "global_source_id": "RISK-REF-1075",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1441",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of people’s right to participate in free elections at reasonable intervals by secret ballot",
+      "global_source_id": "RISK-REF-1076",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1442",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Restrictions to or loss of liberty as a result of illegal or arbitrary arrest or false imprisonment",
+      "global_source_id": "RISK-REF-1077",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1444",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Unwarranted exposure of an individual’s private life or personal data through cyberattacks, doxxing, etc",
+      "global_source_id": "RISK-REF-1079",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1445",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Societal instability in the form of strikes, demonstrations and other types of civil unrest caused by loss of jobs to technology, unfair algorithmic outcomes, disinformation, etc",
+      "global_source_id": "RISK-REF-1084",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1447",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Use or misuse of a technology system to incite, facilitate or conduct cyberattacks, security breaches, lethal, biological and chemical weapons development, resulting in violence and armed conflict",
+      "global_source_id": "RISK-REF-1086",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1459",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The AI application’s degree of automation ranges from no automation to fully autonomous. AI applications with a high degree of automation may exhibit unexpected behaviour and pose risks in terms of their reliability and safety",
+      "global_source_id": "RISK-REF-1099",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1472",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Over- and underfitting describe the over or insufficient adaption of a model to training data. Both phenomena can cause an AI system to behave unreliably if confronted with operational data",
+      "global_source_id": "RISK-REF-1112",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1475",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems should be able not only to return output for a given instance but also to provide a corresponding level of confidence. If such a method is not implemented or not working correctly, this can have a negative impact on performance and safety",
+      "global_source_id": "RISK-REF-1115",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1478",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Concept drift refers to a change in the rela- tionship between input variables and model output. If not treated appropriately, concept drift can reduce the reliability of AI systems",
+      "global_source_id": "RISK-REF-1118",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1481",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Relying on general-purpose AI products that fail to fulfil their intended function can lead to harm. For example, general- purpose AI systems can make up facts (‘hallucination’), generate erroneous computer code, or provide inaccurate medical information. This can lead to physical and psychological harms to consumers and reputational, financial and legal harms to individuals and organisations.",
+      "global_source_id": "RISK-REF-1125",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1491",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Models can be affected by poor confidence calibration [85], where the predicted probabilities do not accurately reflect the true likelihood of ground truth cor- rectness. This miscalibration makes it difficult to interpret the model’s predic- tions reliably, as high accuracy does not guarantee that the confidence levels are meaningful.",
+      "global_source_id": "RISK-REF-1144",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1501",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI models may be prone to self-preference bias, where they favor their own generated content over that of others [147, 114]. This bias becomes particularly relevant in self-evaluation tasks, where a model assesses the quality or persua- siveness [66] of its own outputs, or in model-based evaluations more broadly.",
+      "global_source_id": "RISK-REF-1154",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1503",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Encoded human values in AI models that are easier to evaluate might be preferred for inclusion in evaluations over those that are more difficult to measure [13]. This might come at the expense of more desirable but harder-to-quantify values.",
+      "global_source_id": "RISK-REF-1156",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1508",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Guideline contamination refers to scenarios where instructions for the collec- tion, annotation, or use of the dataset are exposed to the model [170]. These instructions may contain explicit data-label pairs that can improve the model’s capabilities for the task",
+      "global_source_id": "RISK-REF-1161",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1520",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Various new or existing text encodings, such as Base64, can be employed to craft jailbreak attacks that bypass safety training [13]. Low-resource language inputs also appear more likely to circumvent a model’s safeguards [229].",
+      "global_source_id": "RISK-REF-1173",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1523",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Models can easily become distracted by irrelevant provided information (such as “context” in LLMs), leading to a significant decrease in their performance after introducing irrelevant information.",
+      "global_source_id": "RISK-REF-1176",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1524",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Knowledge conflicts in retrieval-augmented LLMs",
+      "global_source_id": "RISK-REF-1177",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1526",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Model sensitivity to prompt formatting",
+      "global_source_id": "RISK-REF-1179",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1527",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Misuse of AI model by user-performed persuasion",
+      "global_source_id": "RISK-REF-1180",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1529",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Specification gaming",
+      "global_source_id": "RISK-REF-1182",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1536",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Deceptive behavior leading to unauthorized actions",
+      "global_source_id": "RISK-REF-1189",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1539",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Agency (self-proliferation)",
+      "global_source_id": "RISK-REF-1192",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1548",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Competitive pressures in GPAI product release",
+      "global_source_id": "RISK-REF-1201",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1553",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generative AI use in political influence campaigns",
+      "global_source_id": "RISK-REF-1206",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1554",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Multimodal deepfakes",
+      "global_source_id": "RISK-REF-1207",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1557",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Systemic large-scale manipulation",
+      "global_source_id": "RISK-REF-1210",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1558",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Diminishing societal trust due to disinformation or manipulation",
+      "global_source_id": "RISK-REF-1211",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1563",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Misuse of AI systems to assist in the creation of weapons",
+      "global_source_id": "RISK-REF-1216",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1566",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Systemic bias across specific communities",
+      "global_source_id": "RISK-REF-1219",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1569",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Social dilemmas among AI agents",
+      "global_source_id": "RISK-REF-1222",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1570",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Covert inter-agent communication via steganography",
+      "global_source_id": "RISK-REF-1223",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1571",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Undesirable dispositions from competition",
+      "global_source_id": "RISK-REF-1224",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1573",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Undesirable capabilities",
+      "global_source_id": "RISK-REF-1226",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1574",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Destabilizing phase transitions in multi-agent systems",
+      "global_source_id": "RISK-REF-1227",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1575",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Threats and extortion",
+      "global_source_id": "RISK-REF-1228",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1578",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Social engineering at scale",
+      "global_source_id": "RISK-REF-1231",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1582",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Create sexual explicit material using an adult person’s likeness",
+      "global_source_id": "RISK-REF-1235",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1584",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Use a person's IP without their permission",
+      "global_source_id": "RISK-REF-1237",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1589",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Steganography is the practice of hiding coded messages in GenAI model outputs",
+      "global_source_id": "RISK-REF-1242",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1591",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Privacy Compromise attacks reveal sensitive or private information",
+      "global_source_id": "RISK-REF-1244",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1592",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Existing laws could include providing data subject rights",
+      "global_source_id": "RISK-REF-1245",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1593",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Terms of service, license compliance, or other IP issues may restrict the ability to use certain data",
+      "global_source_id": "RISK-REF-1246",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1594",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Unrepresentative data occurs when the training or fine-tuning data is not sufficiently representative",
+      "global_source_id": "RISK-REF-1247",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1597",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Generative AI models might be used to intentionally create misleading or false information",
+      "global_source_id": "RISK-REF-1250",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1598",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Models might generate code that causes harm or unintentionally affects other systems",
+      "global_source_id": "RISK-REF-1251",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1602",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Terms of service, licenses, or other rules restrict the use of certain models",
+      "global_source_id": "RISK-REF-1255",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1603",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems might overly represent certain cultures that result in a homogenization of culture",
+      "global_source_id": "RISK-REF-1256",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1611",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Frontier AI models can contain and magnify biases ingrained in the data they are trained on",
+      "global_source_id": "RISK-REF-1276",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1612",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Frontier AI may help bad actors to perform cyberattacks, run disinformation campaigns",
+      "global_source_id": "RISK-REF-1277",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1613",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Frontier AI systems have the potential to accelerate advances in the life sciences",
+      "global_source_id": "RISK-REF-1278",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1617",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Language models tend to respond as though they share the user’s stated views",
+      "global_source_id": "RISK-REF-1282",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1618",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "AI systems could acquire influence by exploiting vulnerabilities in computer systems",
+      "global_source_id": "RISK-REF-1283",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1619",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Frontier AI agents can perform some relevant tasks for autonomous replication and adaptation",
+      "global_source_id": "RISK-REF-1284",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1621",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The chatbot makes a deal, commitment, or other consequential action with its output",
+      "global_source_id": "RISK-REF-1286",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1622",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "The chatbot gives guidance that ranges from simply unhelpful to harmful",
+      "global_source_id": "RISK-REF-1287",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1624",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Violation of privacy [106, 516, 357], lawsuit against maker",
+      "global_source_id": "RISK-REF-1289",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1636",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "SAIL & Concordia AI (2025); Report",
+      "global_source_id": "RISK-REF-1307",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1645",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Natural language underspecifies goals",
+      "global_source_id": "RISK-REF-1316",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1646",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Goal-directedness incentivizes undesirable behaviors",
+      "global_source_id": "RISK-REF-1317",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1648",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Multi-agent safety is not assured by single-agent safety",
+      "global_source_id": "RISK-REF-1319",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1655",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Surveillance and censorship",
+      "global_source_id": "RISK-REF-1326",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1657",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Hazardous biological and chemical technologies",
+      "global_source_id": "RISK-REF-1328",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1671",
+      "decision": "RAI3-A-SYS-01",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Excessive agency",
+      "global_source_id": "RISK-REF-1344",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1679",
+      "decision": "RAI3-A-SYS-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Secret collusion via steganography",
+      "global_source_id": "RISK-REF-1352",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1682",
+      "decision": "RAI3-A-SYS-04",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Destabilising feedback dynamics",
+      "global_source_id": "RISK-REF-1355",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1684",
+      "decision": "RAI3-A-SYS-05",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Inter-agent misalignment",
+      "global_source_id": "RISK-REF-1357",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1688",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Compounding rollout error / hallucination",
+      "global_source_id": "RISK-REF-1361",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1689",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Sim-to-real / distributional-shift exploitation",
+      "global_source_id": "RISK-REF-1362",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1694",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Long-horizon planning hallucination",
+      "global_source_id": "RISK-REF-1367",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1703",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "System misspecification",
+      "global_source_id": "RISK-REF-1376",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1708",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Financial loss",
+      "global_source_id": "RISK-REF-1381",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1712",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Detrimental content",
+      "global_source_id": "RISK-REF-1385",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1713",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Bias and differential treatment",
+      "global_source_id": "RISK-REF-1386",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1714",
+      "decision": "RAI3-G-INT-06",
+      "reason_code": "DIRECT_FIT",
+      "evidence_phrase": "Violation of privacy",
+      "global_source_id": "RISK-REF-1387",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    },
+    {
+      "key": "RAI4-1722",
+      "decision": "NEEDS",
+      "reason_code": "NO_EXACT_FIT",
+      "evidence_phrase": "Privacy harms",
+      "global_source_id": "RISK-REF-1395",
+      "model": "qwen3:4b",
+      "model_role": "independent_hierarchy_blind_expert",
+      "legacy_hierarchy_used_as_feature": false
+    }
+  ]
+}

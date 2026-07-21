@@ -1,0 +1,53 @@
+{
+  "release_id": "v1.0.0",
+  "reviewed_initial_proposals": 61,
+  "reviewers": [
+    "frontier_expert_a",
+    "frontier_expert_b"
+  ],
+  "hierarchy_blind": true,
+  "legacy_hierarchy_used_as_feature": false,
+  "both_approve_required": true,
+  "both_approved": 37,
+  "review_pair_counts": [
+    {
+      "expert_a": "APPROVE",
+      "expert_b": "APPROVE",
+      "count": 37
+    },
+    {
+      "expert_a": "APPROVE",
+      "expert_b": "REJECT",
+      "count": 4
+    },
+    {
+      "expert_a": "REJECT",
+      "expert_b": "APPROVE",
+      "count": 3
+    },
+    {
+      "expert_a": "REJECT",
+      "expert_b": "REJECT",
+      "count": 17
+    }
+  ],
+  "final_status_counts": {
+    "needs_taxonomy_decision": 1507,
+    "algorithm_proposed": 37,
+    "locked_physical": 182
+  },
+  "human_validation": "not yet performed",
+  "local_model_sensitivity": {
+    "purpose": "sensitivity audit only; not an approval authority",
+    "models": [
+      "gemma3:4b",
+      "qwen3:4b"
+    ],
+    "reviewed_cards": 499,
+    "same_decision": 361,
+    "both_needs": 359,
+    "same_non_needs_l3": 2,
+    "disagreement": 138,
+    "interpretation": "Low non-NEEDS agreement supports conservative abstention and human validation; small local models are not treated as ground truth."
+  }
+}

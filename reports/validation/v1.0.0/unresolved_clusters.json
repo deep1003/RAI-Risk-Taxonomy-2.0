@@ -1,0 +1,1746 @@
+[
+  {
+    "cluster_id": "UC-01",
+    "card_count": 100,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0592",
+        "label": "Collectively inefficient equilibria among AI agents"
+      },
+      {
+        "l4_id": "RAI4-0583",
+        "label": "Heterogeneous attacks"
+      },
+      {
+        "l4_id": "RAI4-1573",
+        "label": "Undesirable capabilities"
+      },
+      {
+        "l4_id": "RAI4-0558",
+        "label": "Bargaining failures among AI agents"
+      },
+      {
+        "l4_id": "RAI4-0574",
+        "label": "Distributional shift"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        8
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        4
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        2
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        2
+      ],
+      [
+        "GENERAL_AI_SECURITY",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        82
+      ],
+      [
+        "GAP_SENTINEL",
+        15
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        2
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "AI possessing dangerous capabilities",
+        8
+      ],
+      [
+        "Model propensities",
+        7
+      ],
+      [
+        "Multi-agent security",
+        6
+      ],
+      [
+        "Destabilising dynamics",
+        5
+      ],
+      [
+        "Model capabilities",
+        5
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-02",
+    "card_count": 57,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0565",
+        "label": "Loss of human control"
+      },
+      {
+        "l4_id": "RAI4-0643",
+        "label": "Surveillance capabilities"
+      },
+      {
+        "l4_id": "RAI4-0603",
+        "label": "Model design enabling power-seeking"
+      },
+      {
+        "l4_id": "RAI4-0860",
+        "label": "Personal decision automation capabilities"
+      },
+      {
+        "l4_id": "RAI4-0551",
+        "label": "AI objectives mis-aligned with human intentions"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        3
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        2
+      ],
+      [
+        "LABOR_INEQUALITY_POWER",
+        2
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        2
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        46
+      ],
+      [
+        "GAP_SENTINEL",
+        9
+      ],
+      [
+        "LOW_MARGIN",
+        1
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Sources of systemic risks from general-purpose AI",
+        42
+      ],
+      [
+        "Types of systemic risks from general-purpose AI",
+        11
+      ],
+      [
+        "Systemic risks",
+        2
+      ],
+      [
+        "Agency delegation and control loss",
+        1
+      ],
+      [
+        "Critical-use overreliance",
+        1
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-03",
+    "card_count": 60,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1191",
+        "label": "Privacy violation"
+      },
+      {
+        "l4_id": "RAI4-0764",
+        "label": "Risks to privacy"
+      },
+      {
+        "l4_id": "RAI4-1072",
+        "label": "Compromising privacy by leaking private infiormation"
+      },
+      {
+        "l4_id": "RAI4-0733",
+        "label": "Confidential information in data"
+      },
+      {
+        "l4_id": "RAI4-1365",
+        "label": "Privacy and data collection concerns (data protection concerns)"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GENERAL_AI_SECURITY",
+        4
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        2
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        2
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        1
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        41
+      ],
+      [
+        "GAP_SENTINEL",
+        7
+      ],
+      [
+        "LOW_MARGIN",
+        5
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        4
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Data, privacy, data leakage",
+        3
+      ],
+      [
+        "Data, biometric, biometric privacy",
+        2
+      ],
+      [
+        "Systemic risks",
+        2
+      ],
+      [
+        "Training data risks (data laws)",
+        2
+      ],
+      [
+        "AI's inherent safety risks",
+        2
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-04",
+    "card_count": 59,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0690",
+        "label": "Toxicity in LLM malicious use"
+      },
+      {
+        "l4_id": "RAI4-0729",
+        "label": "Toxic content generation"
+      },
+      {
+        "l4_id": "RAI4-1052",
+        "label": "Hate speech and offensive language"
+      },
+      {
+        "l4_id": "RAI4-0678",
+        "label": "Harmful output"
+      },
+      {
+        "l4_id": "RAI4-1165",
+        "label": "Insulting content generation"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "PLURALISTIC_VALUE_STAKEHOLDER",
+        1
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        39
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        8
+      ],
+      [
+        "LOW_MARGIN",
+        6
+      ],
+      [
+        "GAP_SENTINEL",
+        2
+      ],
+      [
+        "MULTI_MECHANISM",
+        2
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Content, harmful, abusive",
+        7
+      ],
+      [
+        "Typical safety scenarios",
+        6
+      ],
+      [
+        "Output risks (value alignment)",
+        3
+      ],
+      [
+        "Health, advice, advice mental",
+        3
+      ],
+      [
+        "Lack of capability or robustness",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-05",
+    "card_count": 63,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0046",
+        "label": "Algorithmic accountability gap"
+      },
+      {
+        "l4_id": "RAI4-0109",
+        "label": "Compute governance accountability gap"
+      },
+      {
+        "l4_id": "RAI4-0103",
+        "label": "AI supply-chain accountability gap"
+      },
+      {
+        "l4_id": "RAI4-0105",
+        "label": "Contractual accountability gap"
+      },
+      {
+        "l4_id": "RAI4-0523",
+        "label": "Lack of system transparency"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        19
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        17
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        5
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "GAP_SENTINEL",
+        32
+      ],
+      [
+        "NO_VALID_L3",
+        26
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        5
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Transparency, lack, lack transparency",
+        10
+      ],
+      [
+        "Legal and responsibility gaps",
+        7
+      ],
+      [
+        "Auditability and evidence failures",
+        6
+      ],
+      [
+        "Independent audit failures",
+        5
+      ],
+      [
+        "Redress and contestability failures",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-06",
+    "card_count": 65,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1611",
+        "label": "Bias, fairness and representational harms"
+      },
+      {
+        "l4_id": "RAI4-1566",
+        "label": "Systemic bias across specific communities"
+      },
+      {
+        "l4_id": "RAI4-1103",
+        "label": "AI discrimination"
+      },
+      {
+        "l4_id": "RAI4-1221",
+        "label": "Algorithmic bias"
+      },
+      {
+        "l4_id": "RAI4-0992",
+        "label": "Bias and discrimination"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        4
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        3
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ],
+      [
+        "PLURALISTIC_VALUE_STAKEHOLDER",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        50
+      ],
+      [
+        "GAP_SENTINEL",
+        8
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        6
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Bias, data, fairness",
+        11
+      ],
+      [
+        "Impacts of AI (bias)",
+        3
+      ],
+      [
+        "Output risks (fairness)",
+        2
+      ],
+      [
+        "Design of AI",
+        2
+      ],
+      [
+        "Ethical and social risks",
+        2
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-07",
+    "card_count": 81,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1440",
+        "label": "Loss of right to information"
+      },
+      {
+        "l4_id": "RAI4-1608",
+        "label": "Reputational damage"
+      },
+      {
+        "l4_id": "RAI4-1437",
+        "label": "Loss of freedom of speech/expression"
+      },
+      {
+        "l4_id": "RAI4-1446",
+        "label": "Societal inequality"
+      },
+      {
+        "l4_id": "RAI4-0671",
+        "label": "Benefits / entitlements loss"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "ENVIRONMENT_ENERGY_RESOURCES",
+        7
+      ],
+      [
+        "LABOR_INEQUALITY_POWER",
+        3
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        2
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        63
+      ],
+      [
+        "GAP_SENTINEL",
+        13
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        2
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        1
+      ],
+      [
+        "LOW_MARGIN",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Human rights and civil liberties",
+        8
+      ],
+      [
+        "Environmental",
+        6
+      ],
+      [
+        "Societal and cultural",
+        4
+      ],
+      [
+        "Representational harms",
+        4
+      ],
+      [
+        "Political and economic",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-08",
+    "card_count": 77,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1669",
+        "label": "Tool misuse / unsafe tool invocation"
+      },
+      {
+        "l4_id": "RAI4-0479",
+        "label": "Agent tool misuse"
+      },
+      {
+        "l4_id": "RAI4-0758",
+        "label": "Prompt injection attack"
+      },
+      {
+        "l4_id": "RAI4-1672",
+        "label": "Planning / reasoning-chain hijacking"
+      },
+      {
+        "l4_id": "RAI4-0925",
+        "label": "Poisoning attacks"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GENERAL_AI_SECURITY",
+        14
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        7
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        4
+      ],
+      [
+        "ENVIRONMENT_ENERGY_RESOURCES",
+        1
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        50
+      ],
+      [
+        "GAP_SENTINEL",
+        25
+      ],
+      [
+        "LOW_MARGIN",
+        1
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Attacks on GPAIs/GPAI failure modes",
+        7
+      ],
+      [
+        "Model attacks",
+        6
+      ],
+      [
+        "Poisoning, data, data poisoning",
+        3
+      ],
+      [
+        "Misuse tactics to compromise GenAI systems (model integrity)",
+        3
+      ],
+      [
+        "Adversarial prompts",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-09",
+    "card_count": 91,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0146",
+        "label": "Assistant-mediated social influence"
+      },
+      {
+        "l4_id": "RAI4-1552",
+        "label": "Overreliance on AI system undermining user autonomy"
+      },
+      {
+        "l4_id": "RAI4-0884",
+        "label": "Manipulation and coercion"
+      },
+      {
+        "l4_id": "RAI4-0885",
+        "label": "Overreliance on AI"
+      },
+      {
+        "l4_id": "RAI4-0128",
+        "label": "AI advice overreliance"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "DEPENDENCY_MANIPULATION",
+        20
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        3
+      ],
+      [
+        "PLURALISTIC_VALUE_STAKEHOLDER",
+        2
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        2
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        59
+      ],
+      [
+        "GAP_SENTINEL",
+        28
+      ],
+      [
+        "LOW_MARGIN",
+        2
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        1
+      ],
+      [
+        "MULTI_MECHANISM",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Anthropomorphism",
+        8
+      ],
+      [
+        "Manipulative persuasion",
+        5
+      ],
+      [
+        "Emotional dependency and attachment",
+        5
+      ],
+      [
+        "Trust calibration failures",
+        4
+      ],
+      [
+        "Critical-use overreliance",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-10",
+    "card_count": 68,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0097",
+        "label": "Board oversight failure"
+      },
+      {
+        "l4_id": "RAI4-0093",
+        "label": "Public-sector AI governance capacity gap"
+      },
+      {
+        "l4_id": "RAI4-0077",
+        "label": "Algorithmic impact assessment failure"
+      },
+      {
+        "l4_id": "RAI4-0083",
+        "label": "Benchmark governance failure"
+      },
+      {
+        "l4_id": "RAI4-0091",
+        "label": "Regulatory expertise shortage"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        13
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        3
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        2
+      ],
+      [
+        "GENERAL_AI_SECURITY",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        47
+      ],
+      [
+        "GAP_SENTINEL",
+        19
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        1
+      ],
+      [
+        "FRONTIER_EXPERT_DISAGREEMENT",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Organizational accountability failures",
+        6
+      ],
+      [
+        "Cross-cutting risk",
+        6
+      ],
+      [
+        "Evaluation governance failures",
+        5
+      ],
+      [
+        "Institutional capacity failures",
+        5
+      ],
+      [
+        "Incident reporting and response failures",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-11",
+    "card_count": 73,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0790",
+        "label": "False or misleading information"
+      },
+      {
+        "l4_id": "RAI4-1201",
+        "label": "AI-generated scams"
+      },
+      {
+        "l4_id": "RAI4-0622",
+        "label": "AI-enabled cyberattacks"
+      },
+      {
+        "l4_id": "RAI4-0670",
+        "label": "Discrimination and toxicity"
+      },
+      {
+        "l4_id": "RAI4-0825",
+        "label": "Risks from models and algorithms (risks of unreliable output)"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        6
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        3
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        3
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        46
+      ],
+      [
+        "GAP_SENTINEL",
+        11
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        7
+      ],
+      [
+        "LOW_MARGIN",
+        4
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        3
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Privacy and security",
+        7
+      ],
+      [
+        "Impacts of AI (societal impacts)",
+        5
+      ],
+      [
+        "Output risks (misuse)",
+        4
+      ],
+      [
+        "Misinformation harms",
+        3
+      ],
+      [
+        "Information manipulation",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-12",
+    "card_count": 65,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0637",
+        "label": "Manipulation of public opinion"
+      },
+      {
+        "l4_id": "RAI4-1116",
+        "label": "Persuasive AIs"
+      },
+      {
+        "l4_id": "RAI4-1360",
+        "label": "Misinformation and disinformation"
+      },
+      {
+        "l4_id": "RAI4-0844",
+        "label": "Disseminating false or misleading information"
+      },
+      {
+        "l4_id": "RAI4-1156",
+        "label": "Driving opinion manipulation"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "DELIBERATE_DISINFORMATION",
+        7
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        2
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        51
+      ],
+      [
+        "GAP_SENTINEL",
+        9
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        2
+      ],
+      [
+        "LOW_MARGIN",
+        2
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Agency (deception)",
+        4
+      ],
+      [
+        "Impacts of AI (societal impacts)",
+        4
+      ],
+      [
+        "Misuse risks",
+        3
+      ],
+      [
+        "Worsened epistemic processes for society",
+        3
+      ],
+      [
+        "Model capabilities",
+        2
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-13",
+    "card_count": 102,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1323",
+        "label": "Alignment risks"
+      },
+      {
+        "l4_id": "RAI4-0593",
+        "label": "Inherent risk"
+      },
+      {
+        "l4_id": "RAI4-1074",
+        "label": "Risks from leaking or correctly inferring sensitive information"
+      },
+      {
+        "l4_id": "RAI4-1313",
+        "label": "Data governance"
+      },
+      {
+        "l4_id": "RAI4-0719",
+        "label": "Preference bias"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        4
+      ],
+      [
+        "GENERAL_AI_SECURITY",
+        2
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        2
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        2
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        70
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        12
+      ],
+      [
+        "GAP_SENTINEL",
+        11
+      ],
+      [
+        "LOW_MARGIN",
+        4
+      ],
+      [
+        "FRONTIER_EXPERT_DISAGREEMENT",
+        3
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Extreme risks",
+        9
+      ],
+      [
+        "Inherent risk",
+        5
+      ],
+      [
+        "Fairness",
+        4
+      ],
+      [
+        "Malicious use",
+        4
+      ],
+      [
+        "Software security issues",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-14",
+    "card_count": 71,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1214",
+        "label": "Job automation instead of augmentation"
+      },
+      {
+        "l4_id": "RAI4-0948",
+        "label": "Labor displacement - economic impact"
+      },
+      {
+        "l4_id": "RAI4-1372",
+        "label": "Impact on labor markets (rising inequalities)"
+      },
+      {
+        "l4_id": "RAI4-1215",
+        "label": "Devaluation of labor and heightened economic inequality"
+      },
+      {
+        "l4_id": "RAI4-1233",
+        "label": "Income inequality and monopolies"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "LABOR_INEQUALITY_POWER",
+        19
+      ],
+      [
+        "ENVIRONMENT_ENERGY_RESOURCES",
+        14
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        3
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        1
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        36
+      ],
+      [
+        "GAP_SENTINEL",
+        32
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        3
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Environmental, economical, and societal challenges",
+        6
+      ],
+      [
+        "Environmental, environmental impacts, impacts",
+        5
+      ],
+      [
+        "Systemic risks",
+        4
+      ],
+      [
+        "Non-technical risks (societal impact)",
+        3
+      ],
+      [
+        "Economic risks",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-15",
+    "card_count": 43,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0620",
+        "label": "Cyber offence"
+      },
+      {
+        "l4_id": "RAI4-1614",
+        "label": "AI-enabled cyber operations"
+      },
+      {
+        "l4_id": "RAI4-1340",
+        "label": "Cyberspace risks (risks of abuse for cyberattacks)"
+      },
+      {
+        "l4_id": "RAI4-1355",
+        "label": "Malicious use and abuse (cyberattacks)"
+      },
+      {
+        "l4_id": "RAI4-1618",
+        "label": "Capabilities that could be used to reduce human control - cyber offence"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GENERAL_AI_SECURITY",
+        1
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        31
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        4
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        2
+      ],
+      [
+        "FRONTIER_EXPERT_DISAGREEMENT",
+        2
+      ],
+      [
+        "LOW_MARGIN",
+        2
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Malicious uses",
+        6
+      ],
+      [
+        "Impacts of AI (cyberattacks)",
+        3
+      ],
+      [
+        "Cyberattacks, weapon development or use, and mass harm",
+        3
+      ],
+      [
+        "Risks from malicious use",
+        2
+      ],
+      [
+        "Unhelpful uses",
+        2
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-16",
+    "card_count": 111,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1496",
+        "label": "Fine-tuning related (degrading safety training due to benign fine-tuning)"
+      },
+      {
+        "l4_id": "RAI4-1351",
+        "label": "Technical vulnerabilities (the risk of misalignment)"
+      },
+      {
+        "l4_id": "RAI4-1504",
+        "label": "General evaluations (AI outputs for which evaluation is too difficult for humans)"
+      },
+      {
+        "l4_id": "RAI4-1471",
+        "label": "Poor model design choices"
+      },
+      {
+        "l4_id": "RAI4-1472",
+        "label": "Over- and underfitting"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        9
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        6
+      ],
+      [
+        "GENERAL_AI_SECURITY",
+        5
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        84
+      ],
+      [
+        "GAP_SENTINEL",
+        21
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        3
+      ],
+      [
+        "LOW_MARGIN",
+        2
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Lack of capability or robustness",
+        15
+      ],
+      [
+        "Model evaluations",
+        11
+      ],
+      [
+        "Model development",
+        10
+      ],
+      [
+        "First-order risks",
+        5
+      ],
+      [
+        "Output risks (explainability)",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-17",
+    "card_count": 55,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0816",
+        "label": "Institutional trust loss"
+      },
+      {
+        "l4_id": "RAI4-0119",
+        "label": "Algorithmically informed identity change"
+      },
+      {
+        "l4_id": "RAI4-0177",
+        "label": "Autonomy loss in welfare decision systems"
+      },
+      {
+        "l4_id": "RAI4-1726",
+        "label": "Reputational harm"
+      },
+      {
+        "l4_id": "RAI4-0179",
+        "label": "Power-asymmetric AI interaction"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        2
+      ],
+      [
+        "DELIBERATE_DISINFORMATION",
+        2
+      ],
+      [
+        "LABOR_INEQUALITY_POWER",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        44
+      ],
+      [
+        "GAP_SENTINEL",
+        5
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        4
+      ],
+      [
+        "LOW_MARGIN",
+        1
+      ],
+      [
+        "MULTI_MECHANISM",
+        1
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Cross-cutting risk",
+        11
+      ],
+      [
+        "Coercive institutional interaction",
+        4
+      ],
+      [
+        "Societal and cultural",
+        4
+      ],
+      [
+        "Identity and self-determination harms",
+        3
+      ],
+      [
+        "Contestability and recourse failures",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-18",
+    "card_count": 122,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1425",
+        "label": "Risks from delegating decision-making power to misaligned AIs"
+      },
+      {
+        "l4_id": "RAI4-0894",
+        "label": "Loss of human agency and autonomy"
+      },
+      {
+        "l4_id": "RAI4-1424",
+        "label": "Risks from AIs developing goals and values that are different from humans"
+      },
+      {
+        "l4_id": "RAI4-1345",
+        "label": "Ethical risks (risks of AI becoming uncontrollable in the future)"
+      },
+      {
+        "l4_id": "RAI4-1402",
+        "label": "Failures in or misuse of intermediary (non-AGI) AI systems, resulting in catastrophe"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        7
+      ],
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        4
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        4
+      ],
+      [
+        "ENVIRONMENT_ENERGY_RESOURCES",
+        1
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        96
+      ],
+      [
+        "GAP_SENTINEL",
+        11
+      ],
+      [
+        "PHYSICAL_OUTSIDE_LOCK",
+        7
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        4
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        2
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "AI pursuing its own goals in conflict with human goals or values",
+        11
+      ],
+      [
+        "Lack of capability or robustness",
+        8
+      ],
+      [
+        "Loss of control",
+        4
+      ],
+      [
+        "Cyberattacks, weapon development or use, and mass harm",
+        4
+      ],
+      [
+        "Human-AI interaction",
+        4
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-19",
+    "card_count": 78,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-1343",
+        "label": "Real-world risks (risks of misuse of dual-use items and technologies)"
+      },
+      {
+        "l4_id": "RAI4-1332",
+        "label": "Risks from models and algorithms (risks of robustness)"
+      },
+      {
+        "l4_id": "RAI4-1034",
+        "label": "AI system security vulnerability"
+      },
+      {
+        "l4_id": "RAI4-1338",
+        "label": "Risks from AI systems (risks of computing infrastructure security)"
+      },
+      {
+        "l4_id": "RAI4-1337",
+        "label": "Risks from AI systems (risks of exploitation through defects and backdoors)"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        7
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        5
+      ],
+      [
+        "GENERAL_AI_SECURITY",
+        4
+      ],
+      [
+        "TRANSPARENCY_EXPLAINABILITY",
+        2
+      ],
+      [
+        "DEPENDENCY_MANIPULATION",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        44
+      ],
+      [
+        "GAP_SENTINEL",
+        18
+      ],
+      [
+        "RULE_SEMANTIC_DISAGREEMENT",
+        7
+      ],
+      [
+        "LOW_MARGIN",
+        5
+      ],
+      [
+        "FRONTIER_EXPERT_REJECTED",
+        2
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Safety risks in AI applications",
+        8
+      ],
+      [
+        "AI's inherent safety risks",
+        7
+      ],
+      [
+        "Impacts of AI (physical)",
+        4
+      ],
+      [
+        "Scientific domain of agents",
+        4
+      ],
+      [
+        "Model capabilities",
+        3
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  },
+  {
+    "cluster_id": "UC-20",
+    "card_count": 66,
+    "representative_cards": [
+      {
+        "l4_id": "RAI4-0378",
+        "label": "Bilingual cultural alignment failure"
+      },
+      {
+        "l4_id": "RAI4-0403",
+        "label": "Moral framing bias"
+      },
+      {
+        "l4_id": "RAI4-0369",
+        "label": "Ethical homogenization"
+      },
+      {
+        "l4_id": "RAI4-0404",
+        "label": "Dataset cultural sampling bias"
+      },
+      {
+        "l4_id": "RAI4-0416",
+        "label": "Non-Western political value misrepresentation"
+      }
+    ],
+    "dominant_gap_sentinels": [
+      [
+        "GOVERNANCE_AUDIT_REGULATION",
+        21
+      ],
+      [
+        "PLURALISTIC_VALUE_STAKEHOLDER",
+        17
+      ],
+      [
+        "ROBUSTNESS_ALIGNMENT_CONTROL",
+        1
+      ]
+    ],
+    "dominant_abstention_reasons": [
+      [
+        "NO_VALID_L3",
+        38
+      ],
+      [
+        "GAP_SENTINEL",
+        28
+      ]
+    ],
+    "dominant_legacy_l3_reference_only": [
+      [
+        "Value imposition and pluralism failure",
+        8
+      ],
+      [
+        "Normative flattening",
+        7
+      ],
+      [
+        "Cultural misrepresentation",
+        7
+      ],
+      [
+        "Stakeholder exclusion",
+        7
+      ],
+      [
+        "Localized value mismatch",
+        6
+      ]
+    ],
+    "taxonomy_decision_candidate": true
+  }
+]

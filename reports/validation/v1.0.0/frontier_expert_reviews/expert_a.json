@@ -1,0 +1,434 @@
+{
+  "reviewer": "frontier_expert_a",
+  "hierarchy_blind": true,
+  "card_count": 61,
+  "results": [
+    {
+      "l4_id": "RAI4-0070",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-05",
+      "reason_code": "DIRECT_MECHANISM_DIFFERENT",
+      "rationale": "Fragmented incident-category schemes impair aggregation and learning; this is not conflicting model output for substantively equivalent inputs or cases."
+    },
+    {
+      "l4_id": "RAI4-0131",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-10",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Human-like language or behavior is the direct representation mechanism that causes users to attribute human competence, empathy, or intentionality."
+    },
+    {
+      "l4_id": "RAI4-0426",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-04",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is generation of hateful or abusive content targeting identity groups."
+    },
+    {
+      "l4_id": "RAI4-0433",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Intrusive biometric identification and tracking are direct surveillance and misuse of identifiable biometric data."
+    },
+    {
+      "l4_id": "RAI4-0447",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Autonomous targeting and kinetic harm may involve weapons, but the stated mechanism also independently includes surveillance, which is not necessarily weapon design, construction, concealment, or deployment."
+    },
+    {
+      "l4_id": "RAI4-0453",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is absence of a meaningful challenge or redress procedure for an AI-mediated decision."
+    },
+    {
+      "l4_id": "RAI4-0496",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Generating protected content that is identical or materially similar creates the stated unauthorized-reproduction and copyright-infringement mechanism."
+    },
+    {
+      "l4_id": "RAI4-0536",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "The record combines copyright with broader data rights, jurisdictional uncertainty, disclosure opacity, and impediments to third-party safety research, none of which are fully contained in the proposed definition."
+    },
+    {
+      "l4_id": "RAI4-0559",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is development, production, or operational use of chemical, biological, radiological, nuclear, or explosive weapons."
+    },
+    {
+      "l4_id": "RAI4-0609",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "The mechanism includes cyber weapons but also generic vulnerability exploitation, network penetration, social engineering, security evasion, and persistent access that need not constitute weapon design or deployment."
+    },
+    {
+      "l4_id": "RAI4-0617",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct pathway is AI-assisted malicious use of CBRN weapons to carry out consequential attacks more effectively."
+    },
+    {
+      "l4_id": "RAI4-0618",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "PARTIAL_SCOPE_ONLY",
+      "rationale": "Plagiarism is included, but the record separately includes academic cheating that can occur without copyright infringement or plagiarism."
+    },
+    {
+      "l4_id": "RAI4-0630",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is intentional or unintentional plagiarism of existing work using generative AI."
+    },
+    {
+      "l4_id": "RAI4-0632",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The risk directly concerns enabling, encouraging, creating, or using chemical, biological, radiological, nuclear, and high-yield explosive weapons."
+    },
+    {
+      "l4_id": "RAI4-0662",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_ONLY",
+      "rationale": "Weapon design capabilities fit, but the record also covers eased access to nefarious information and dangerous materials without requiring weapon design, construction, concealment, or deployment."
+    },
+    {
+      "l4_id": "RAI4-0664",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Chemical-weapon synthesis fits, but accidental hazardous-substance release and unknown nanomaterial properties are non-weapon chemical hazards outside the exact definition."
+    },
+    {
+      "l4_id": "RAI4-0665",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Creating sexually explicit material involving children is directly child sexual abuse material."
+    },
+    {
+      "l4_id": "RAI4-0673",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The mechanism is content that describes, enables, encourages, or endorses sexual abuse of minors."
+    },
+    {
+      "l4_id": "RAI4-0679",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-04",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Demeaning or dehumanizing people based on sensitive personal characteristics is directly hateful content targeting socially salient groups or characteristics."
+    },
+    {
+      "l4_id": "RAI4-0684",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The listed mechanisms are sexual crimes, exploitation, assault, harassment, nonconsensual intimate content, and other harmful sexual acts."
+    },
+    {
+      "l4_id": "RAI4-0685",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The risk-defining unacceptable outputs are pornography and direct erotic interaction, which are harmful sexual content involving sexual acts."
+    },
+    {
+      "l4_id": "RAI4-0687",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct unacceptable mechanism is enabling, encouraging, or endorsing suicide, self-injury, or disordered eating."
+    },
+    {
+      "l4_id": "RAI4-0692",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Sex-explicit conversations, erotic text, and recommendations of sexual-content sites are directly sexual-content generation or facilitation."
+    },
+    {
+      "l4_id": "RAI4-0718",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "CSAM and nonconsensual intimate imagery fit, but the stated category also independently covers obscene, degrading, or abusive imagery that need not be sexual."
+    },
+    {
+      "l4_id": "RAI4-0724",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Erotica and depictions of sexual behavior, genitalia, and overtly sexualized body parts are directly sexual content."
+    },
+    {
+      "l4_id": "RAI4-0749",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Including identifiable or sensitive personal data in training or fine-tuning data creates direct unwanted-disclosure risk."
+    },
+    {
+      "l4_id": "RAI4-0759",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-11",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The attack directly induces disclosure of confidential system prompts and embedded instructions."
+    },
+    {
+      "l4_id": "RAI4-0777",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Leakage, unauthorized use, disclosure, and de-anonymization of biometric, health, location, and identifiable data are direct privacy mechanisms."
+    },
+    {
+      "l4_id": "RAI4-0795",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The model unintentionally generates factually inaccurate or untruthful information as if grounded in its training data or input."
+    },
+    {
+      "l4_id": "RAI4-0796",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Factual hallucination fits, but the record also defines faithfulness failures against instructions, source context, and internal coherence that need not be nonexistent or incorrect information asserted as fact."
+    },
+    {
+      "l4_id": "RAI4-0812",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The chatbot outputs information that contradicts facts, authoritative sources, or supplied source documents."
+    },
+    {
+      "l4_id": "RAI4-0813",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is confidently presenting nonsensical or source-unfaithful generated information as grounded content."
+    },
+    {
+      "l4_id": "RAI4-0830",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The described hallucination produces fictitious, factually erroneous, or nonexistent information that appears correct."
+    },
+    {
+      "l4_id": "RAI4-0833",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-03",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Encouraging suicide fits, but the record also independently covers responses causing panic or anxiety, which are not among the exact self-harm mechanisms."
+    },
+    {
+      "l4_id": "RAI4-0872",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-10",
+      "reason_code": "DIRECT_MECHANISM_DIFFERENT",
+      "rationale": "The direct mechanism is replacement of reciprocal human relationships and resulting social dissatisfaction; anthropomorphic presentation is contextual rather than the full risk mechanism."
+    },
+    {
+      "l4_id": "RAI4-0913",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_ONLY",
+      "rationale": "AI use in war may involve weapons, but the definition also covers civil-war and law-enforcement deployments that can cause harm without weapon design, construction, concealment, or deployment."
+    },
+    {
+      "l4_id": "RAI4-0915",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is model output reproducing or closely imitating protected works in a way that infringes copyright."
+    },
+    {
+      "l4_id": "RAI4-0922",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Collection and misuse of names, contact details, addresses, education, career, and private conversations in training data are direct identifiable-data privacy risks."
+    },
+    {
+      "l4_id": "RAI4-0951",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Unauthorized training data and plagiarism fit, but the record also covers authorship, output ownership, creative-prompt protection, and broader disruption of copyright norms."
+    },
+    {
+      "l4_id": "RAI4-1066",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "DIRECT_MECHANISM_DIFFERENT",
+      "rationale": "The record explicitly concerns non-infringing substitution of human creative work and economic harm, and distinguishes itself from copyright infringement."
+    },
+    {
+      "l4_id": "RAI4-1088",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Weapon development may fit, but generic cyberattacks and security breaches do not necessarily constitute design, construction, concealment, or deployment of cyber weapons."
+    },
+    {
+      "l4_id": "RAI4-1114",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is lowering barriers to creating and obtaining novel biological weapons."
+    },
+    {
+      "l4_id": "RAI4-1139",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is eliciting, extracting, or surveilling personal and private information; listed downstream harms do not change that privacy mechanism."
+    },
+    {
+      "l4_id": "RAI4-1160",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Building or assembling weapons fits, but the record also covers access to existing weapon systems, actionable informational assistance, and scientific discoveries without requiring the exact enumerated weaponization acts."
+    },
+    {
+      "l4_id": "RAI4-1172",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-11",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Attackers directly extract system-provided prompt content and sensitive internal system information."
+    },
+    {
+      "l4_id": "RAI4-1184",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The record describes operation and deployment of lethal autonomous weapon systems that detect and attack targets."
+    },
+    {
+      "l4_id": "RAI4-1187",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-05",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Equivalent requests can receive inconsistent answers across users, sessions, or chats in the same conversation."
+    },
+    {
+      "l4_id": "RAI4-1194",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Memorization enables extraction and reproduction of copyright-protected training content."
+    },
+    {
+      "l4_id": "RAI4-1357",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Creating explicit sexual deepfake imagery is harmful sexual content and nonconsensual sexual exploitation."
+    },
+    {
+      "l4_id": "RAI4-1366",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The mechanism is use of copyrighted works in model training without permission or compensation."
+    },
+    {
+      "l4_id": "RAI4-1367",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Model memorization can reproduce protected training fragments nearly identically, creating unauthorized reproduction and infringement."
+    },
+    {
+      "l4_id": "RAI4-1378",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Copyright, trademark, licensing, plagiarism, and illegal replication fit, but exposure of trade secrets is an independent mechanism outside the exact definition."
+    },
+    {
+      "l4_id": "RAI4-1392",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is AI-assisted production of biological weapons through knowledge access and automated assistance."
+    },
+    {
+      "l4_id": "RAI4-1407",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Personal-data extraction, automated surveillance, attacks on personal data, and inference of private thoughts are direct privacy mechanisms."
+    },
+    {
+      "l4_id": "RAI4-1417",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is AI-enabled development of mass-destruction weapons, lethal autonomous weapons, and weaponizable engineered pathogens."
+    },
+    {
+      "l4_id": "RAI4-1431",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-08",
+      "reason_code": "DIRECT_MECHANISM_DIFFERENT",
+      "rationale": "The system pursues the goal it was set while harming human interests and resisting correction; the record does not require ambiguity, contradiction of the user's intent, or pursuit of a different result."
+    },
+    {
+      "l4_id": "RAI4-1444",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The mechanism is unwarranted exposure of personal data or private life through cyberattack or doxxing."
+    },
+    {
+      "l4_id": "RAI4-1447",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Lethal, biological, and chemical weapon development fits, but incitement, generic cyberattacks, and security breaches are independent mechanisms not fully contained in the exact weapon definition."
+    },
+    {
+      "l4_id": "RAI4-1563",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct mechanism is assistance in creating CBRN weapons or augmenting existing weapons with autonomous capabilities."
+    },
+    {
+      "l4_id": "RAI4-1657",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "COMPOSITE_OUTSIDE_SCOPE",
+      "rationale": "Biological and chemical weapon production fits, but the record also includes broader hazardous technologies and dangerous biological or chemical capabilities that need not be weapons."
+    },
+    {
+      "l4_id": "RAI4-1722",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The direct privacy failure includes unwanted disclosure or inference of personal data protected by autonomy, identity, and dignity norms."
+    }
+  ]
+}

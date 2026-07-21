@@ -1,0 +1,183 @@
+﻿physical_card_id,global_source_id,l4_id,legacy_l2_id,legacy_l2_name,legacy_l3_id,legacy_l3_name,new_l3_id,locked,lock_basis
+PHYSBENCH-REF-0003,PHYSBENCH-REF-0003,RAI4-0182,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0007,PHYSBENCH-REF-0007,RAI4-0186,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0012,PHYSBENCH-REF-0012,RAI4-0191,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0032,PHYSBENCH-REF-0032,RAI4-0211,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0035,PHYSBENCH-REF-0035,RAI4-0214,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0039,PHYSBENCH-REF-0039,RAI4-0218,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0045,PHYSBENCH-REF-0045,RAI4-0224,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0048,PHYSBENCH-REF-0048,RAI4-0227,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0050,PHYSBENCH-REF-0050,RAI4-0229,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0052,PHYSBENCH-REF-0052,RAI4-0231,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0054,PHYSBENCH-REF-0054,RAI4-0233,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0057,PHYSBENCH-REF-0057,RAI4-0236,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0058,PHYSBENCH-REF-0058,RAI4-0237,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0064,PHYSBENCH-REF-0064,RAI4-0243,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0070,PHYSBENCH-REF-0070,RAI4-0249,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0071,PHYSBENCH-REF-0071,RAI4-0250,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0076,PHYSBENCH-REF-0076,RAI4-0255,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0077,PHYSBENCH-REF-0077,RAI4-0256,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0081,PHYSBENCH-REF-0081,RAI4-0260,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0090,PHYSBENCH-REF-0090,RAI4-0269,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0019,PHYSRISK-REF-0019,RAI4-0338,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0040,PHYSBENCH-REF-0040,RAI4-0219,P2,System Safety,P3.1,우발적 피해(Accidental Harm),RAI3-P-SYS-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0005,PHYSBENCH-REF-0005,RAI4-0184,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0006,PHYSBENCH-REF-0006,RAI4-0185,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0008,PHYSBENCH-REF-0008,RAI4-0187,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0009,PHYSBENCH-REF-0009,RAI4-0188,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0010,PHYSBENCH-REF-0010,RAI4-0189,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0011,PHYSBENCH-REF-0011,RAI4-0190,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0013,PHYSBENCH-REF-0013,RAI4-0192,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0014,PHYSBENCH-REF-0014,RAI4-0193,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0015,PHYSBENCH-REF-0015,RAI4-0194,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0025,PHYSBENCH-REF-0025,RAI4-0204,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0026,PHYSBENCH-REF-0026,RAI4-0205,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0027,PHYSBENCH-REF-0027,RAI4-0206,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0028,PHYSBENCH-REF-0028,RAI4-0207,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0029,PHYSBENCH-REF-0029,RAI4-0208,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0053,PHYSBENCH-REF-0053,RAI4-0232,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0055,PHYSBENCH-REF-0055,RAI4-0234,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0056,PHYSBENCH-REF-0056,RAI4-0235,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0061,PHYSBENCH-REF-0061,RAI4-0240,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0066,PHYSBENCH-REF-0066,RAI4-0245,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0068,PHYSBENCH-REF-0068,RAI4-0247,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0069,PHYSBENCH-REF-0069,RAI4-0248,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0072,PHYSBENCH-REF-0072,RAI4-0251,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0079,PHYSBENCH-REF-0079,RAI4-0258,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0080,PHYSBENCH-REF-0080,RAI4-0259,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0083,PHYSBENCH-REF-0083,RAI4-0262,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0085,PHYSBENCH-REF-0085,RAI4-0264,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0088,PHYSBENCH-REF-0088,RAI4-0267,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0104,PHYSBENCH-REF-0104,RAI4-0283,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0105,PHYSBENCH-REF-0105,RAI4-0284,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0106,PHYSBENCH-REF-0106,RAI4-0285,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0008,PHYSRISK-REF-0008,RAI4-0327,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0009,PHYSRISK-REF-0009,RAI4-0328,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0010,PHYSRISK-REF-0010,RAI4-0329,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0011,PHYSRISK-REF-0011,RAI4-0330,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0012,PHYSRISK-REF-0012,RAI4-0331,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0013,PHYSRISK-REF-0013,RAI4-0332,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0014,PHYSRISK-REF-0014,RAI4-0333,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-001,PHYSCONN-REF-001,RAI4-0293,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-002,PHYSCONN-REF-002,RAI4-0294,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-005,PHYSCONN-REF-005,RAI4-0297,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0075,PHYSBENCH-REF-0075,RAI4-0254,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0020,PHYSRISK-REF-0020,RAI4-0339,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0041,PHYSRISK-REF-0041,RAI4-0360,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0067,PHYSBENCH-REF-0067,RAI4-0246,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0074,PHYSBENCH-REF-0074,RAI4-0253,P2,System Safety,P3.2,로봇 제어(Robot Control),RAI3-P-SYS-02,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-007,PHYSCONN-REF-007,RAI4-0299,P2,System Safety,P3.3,하드웨어·기계적 결함(Hardware & Mechanical Failures),RAI3-P-SYS-03,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0016,PHYSBENCH-REF-0016,RAI4-0195,P2,System Safety,P3.3,하드웨어·기계적 결함(Hardware & Mechanical Failures),RAI3-P-SYS-03,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0037,PHYSRISK-REF-0037,RAI4-0356,P2,System Safety,P3.3,하드웨어·기계적 결함(Hardware & Mechanical Failures),RAI3-P-SYS-03,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0103,PHYSBENCH-REF-0103,RAI4-0282,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0038,PHYSRISK-REF-0038,RAI4-0357,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-004,PHYSCONN-REF-004,RAI4-0296,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-006,PHYSCONN-REF-006,RAI4-0298,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-008,PHYSCONN-REF-008,RAI4-0300,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-009,PHYSCONN-REF-009,RAI4-0301,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0036,PHYSBENCH-REF-0036,RAI4-0215,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0041,PHYSBENCH-REF-0041,RAI4-0220,P2,System Safety,P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),RAI3-P-SYS-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0078,PHYSBENCH-REF-0078,RAI4-0257,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0046,PHYSBENCH-REF-0046,RAI4-0225,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0060,PHYSBENCH-REF-0060,RAI4-0239,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0018,PHYSRISK-REF-0018,RAI4-0337,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0059,PHYSBENCH-REF-0059,RAI4-0238,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0062,PHYSBENCH-REF-0062,RAI4-0241,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0084,PHYSBENCH-REF-0084,RAI4-0263,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0086,PHYSBENCH-REF-0086,RAI4-0265,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0098,PHYSBENCH-REF-0098,RAI4-0277,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0101,PHYSBENCH-REF-0101,RAI4-0280,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0015,PHYSRISK-REF-0015,RAI4-0334,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0016,PHYSRISK-REF-0016,RAI4-0335,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0082,PHYSBENCH-REF-0082,RAI4-0261,P2,System Safety,P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),RAI3-P-SYS-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0017,PHYSBENCH-REF-0017,RAI4-0196,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0018,PHYSBENCH-REF-0018,RAI4-0197,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0019,PHYSBENCH-REF-0019,RAI4-0198,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0020,PHYSBENCH-REF-0020,RAI4-0199,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0022,PHYSBENCH-REF-0022,RAI4-0201,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0023,PHYSBENCH-REF-0023,RAI4-0202,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0024,PHYSBENCH-REF-0024,RAI4-0203,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0031,PHYSBENCH-REF-0031,RAI4-0210,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0044,PHYSBENCH-REF-0044,RAI4-0223,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0049,PHYSBENCH-REF-0049,RAI4-0228,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0095,PHYSBENCH-REF-0095,RAI4-0274,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0097,PHYSBENCH-REF-0097,RAI4-0276,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0028,PHYSRISK-REF-0028,RAI4-0347,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0043,PHYSKR-REF-001,RAI4-0302,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0045,PHYSKR-REF-003,RAI4-0304,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0046,PHYSKR-REF-004,RAI4-0305,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0030,PHYSRISK-REF-0030,RAI4-0349,I2,Interaction Safety,I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),RAI3-P-INT-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0044,PHYSKR-REF-002,RAI4-0303,I2,Interaction Safety,I3.2,물리적 공격(Physical Attacks),RAI3-P-INT-02,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0043,PHYSBENCH-REF-0043,RAI4-0222,I2,Interaction Safety,I3.3,사이버보안 위협(Cybersecurity Threats),RAI3-P-INT-03,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0029,PHYSRISK-REF-0029,RAI4-0348,I2,Interaction Safety,I3.3,사이버보안 위협(Cybersecurity Threats),RAI3-P-INT-03,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0031,PHYSRISK-REF-0031,RAI4-0350,I2,Interaction Safety,I3.3,사이버보안 위협(Cybersecurity Threats),RAI3-P-INT-03,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0027,PHYSRISK-REF-0027,RAI4-0346,I2,Interaction Safety,I3.3,사이버보안 위협(Cybersecurity Threats),RAI3-P-INT-03,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0002,PHYSBENCH-REF-0002,RAI4-0181,I2,Interaction Safety,I3.4,센서·입력 검증 실패(Sensor & Input Validation Failures),RAI3-P-INT-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0099,PHYSBENCH-REF-0099,RAI4-0278,I2,Interaction Safety,I3.4,센서·입력 검증 실패(Sensor & Input Validation Failures),RAI3-P-INT-04,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0007,PHYSRISK-REF-0007,RAI4-0326,I2,Interaction Safety,I3.4,센서·입력 검증 실패(Sensor & Input Validation Failures),RAI3-P-INT-04,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0005,PHYSRISK-REF-0005,RAI4-0324,I2,Interaction Safety,I3.4,센서·입력 검증 실패(Sensor & Input Validation Failures),RAI3-P-INT-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0089,PHYSBENCH-REF-0089,RAI4-0268,I2,Interaction Safety,I3.5,허위 정보(Misinformation),RAI3-P-INT-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0091,PHYSBENCH-REF-0091,RAI4-0270,I2,Interaction Safety,I3.5,허위 정보(Misinformation),RAI3-P-INT-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0092,PHYSBENCH-REF-0092,RAI4-0271,I2,Interaction Safety,I3.5,허위 정보(Misinformation),RAI3-P-INT-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0102,PHYSBENCH-REF-0102,RAI4-0281,I2,Interaction Safety,I3.5,허위 정보(Misinformation),RAI3-P-INT-05,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0017,PHYSRISK-REF-0017,RAI4-0336,I2,Interaction Safety,I3.5,허위 정보(Misinformation),RAI3-P-INT-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0030,PHYSBENCH-REF-0030,RAI4-0209,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0034,PHYSBENCH-REF-0034,RAI4-0213,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0042,PHYSBENCH-REF-0042,RAI4-0221,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0063,PHYSBENCH-REF-0063,RAI4-0242,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0107,PHYSBENCH-REF-0107,RAI4-0286,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0001,PHYSRISK-REF-0001,RAI4-0320,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0003,PHYSRISK-REF-0003,RAI4-0322,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0004,PHYSRISK-REF-0004,RAI4-0323,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0033,PHYSRISK-REF-0033,RAI4-0352,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0002,PHYSRISK-REF-0002,RAI4-0321,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0100,PHYSBENCH-REF-0100,RAI4-0279,I2,Interaction Safety,I3.6,동적 환경 요인(Dynamic Environmental Factors),RAI3-P-INT-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0001,PHYSBENCH-REF-0001,RAI4-0180,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0004,PHYSBENCH-REF-0004,RAI4-0183,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0047,PHYSBENCH-REF-0047,RAI4-0226,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0065,PHYSBENCH-REF-0065,RAI4-0244,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0073,PHYSBENCH-REF-0073,RAI4-0252,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0111,PHYSBENCH-REF-0111,RAI4-0290,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0112,PHYSBENCH-REF-0112,RAI4-0291,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0006,PHYSRISK-REF-0006,RAI4-0325,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0021,PHYSRISK-REF-0021,RAI4-0340,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0025,PHYSRISK-REF-0025,RAI4-0344,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0040,PHYSRISK-REF-0040,RAI4-0359,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0042,PHYSRISK-REF-0042,RAI4-0361,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0023,PHYSRISK-REF-0023,RAI4-0342,I2,Interaction Safety,I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),RAI3-P-INT-07,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0096,PHYSBENCH-REF-0096,RAI4-0275,I2,Interaction Safety,I3.8,지시 오해석(Instruction Misinterpretation),RAI3-P-INT-08,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0033,PHYSBENCH-REF-0033,RAI4-0212,I2,Interaction Safety,I3.9,멀티 에이전트 협력(Multi-Agent Collaboration),RAI3-P-INT-09,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0051,PHYSBENCH-REF-0051,RAI4-0230,I2,Interaction Safety,I3.9,멀티 에이전트 협력(Multi-Agent Collaboration),RAI3-P-INT-09,True,Physical AI taxonomy gold assignment preserved
+PHYSCONN-REF-003,PHYSCONN-REF-003,RAI4-0295,I2,Interaction Safety,I3.9,멀티 에이전트 협력(Multi-Agent Collaboration),RAI3-P-INT-09,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0039,PHYSRISK-REF-0039,RAI4-0358,I2,Interaction Safety,I3.9,멀티 에이전트 협력(Multi-Agent Collaboration),RAI3-P-INT-09,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0024,PHYSRISK-REF-0024,RAI4-0343,I2,Interaction Safety,I3.10,상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents),RAI3-P-INT-10,True,Physical AI taxonomy gold assignment preserved
+PHYSKR-REF-009,PHYSKR-REF-009,RAI4-0310,I2,Interaction Safety,I3.10,상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents),RAI3-P-INT-10,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0026,PHYSRISK-REF-0026,RAI4-0345,S2,Societal Safety,S3.1,프라이버시 침해(Privacy Violations),RAI3-P-SOC-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0035,PHYSRISK-REF-0035,RAI4-0354,S2,Societal Safety,S3.1,프라이버시 침해(Privacy Violations),RAI3-P-SOC-01,True,Physical AI taxonomy gold assignment preserved
+PHYSKR-REF-012,PHYSKR-REF-012,RAI4-0313,S2,Societal Safety,S3.1,프라이버시 침해(Privacy Violations),RAI3-P-SOC-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0053,PHYSKR-REF-013,RAI4-0314,S2,Societal Safety,S3.1,프라이버시 침해(Privacy Violations),RAI3-P-SOC-01,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0021,PHYSBENCH-REF-0021,RAI4-0200,S2,Societal Safety,S3.1,프라이버시 침해(Privacy Violations),RAI3-P-SOC-01,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0036,PHYSRISK-REF-0036,RAI4-0355,S2,Societal Safety,S3.2,노동 대체(Labor Displacement),RAI3-P-SOC-02,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0052,PHYSKR-REF-011,RAI4-0312,S2,Societal Safety,S3.3,사회경제적 불평등(Socioeconomic Inequality),RAI3-P-SOC-03,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0054,PHYSKR-REF-014,RAI4-0315,S2,Societal Safety,S3.4,권력 집중(Power Concentration),RAI3-P-SOC-04,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0087,PHYSBENCH-REF-0087,RAI4-0266,S2,Societal Safety,S3.5,편향·차별(Bias & Discrimination),RAI3-P-SOC-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0093,PHYSBENCH-REF-0093,RAI4-0272,S2,Societal Safety,S3.5,편향·차별(Bias & Discrimination),RAI3-P-SOC-05,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0051,PHYSKR-REF-010,RAI4-0311,S2,Societal Safety,S3.5,편향·차별(Bias & Discrimination),RAI3-P-SOC-05,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0037,PHYSBENCH-REF-0037,RAI4-0216,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0038,PHYSBENCH-REF-0038,RAI4-0217,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0094,PHYSBENCH-REF-0094,RAI4-0273,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0108,PHYSBENCH-REF-0108,RAI4-0287,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0109,PHYSBENCH-REF-0109,RAI4-0288,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0110,PHYSBENCH-REF-0110,RAI4-0289,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSBENCH-REF-0113,PHYSBENCH-REF-0113,RAI4-0292,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0032,PHYSRISK-REF-0032,RAI4-0351,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSKR-REF-015,PHYSKR-REF-015,RAI4-0316,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSKR-REF-016,PHYSKR-REF-016,RAI4-0317,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSKR-REF-017,PHYSKR-REF-017,RAI4-0318,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0034,PHYSRISK-REF-0034,RAI4-0353,S2,Societal Safety,S3.6,책임·배상 부재(Lack of Accountability & Liability),RAI3-P-SOC-06,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0048,PHYSKR-REF-006,RAI4-0307,S2,Societal Safety,S3.7,"투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",RAI3-P-SOC-07,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0047,PHYSKR-REF-005,RAI4-0306,S2,Societal Safety,S3.8,인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships),RAI3-P-SOC-08,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0049,PHYSKR-REF-007,RAI4-0308,S2,Societal Safety,S3.8,인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships),RAI3-P-SOC-08,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0050,PHYSKR-REF-008,RAI4-0309,S2,Societal Safety,S3.8,인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships),RAI3-P-SOC-08,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0022,PHYSRISK-REF-0022,RAI4-0341,S2,Societal Safety,S3.8,인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships),RAI3-P-SOC-08,True,Physical AI taxonomy gold assignment preserved
+PHYSRISK-REF-0055,PHYSKR-REF-018,RAI4-0319,S2,Societal Safety,S3.9,변혁적 영향(Transformative Effects),RAI3-P-SOC-09,True,Physical AI taxonomy gold assignment preserved

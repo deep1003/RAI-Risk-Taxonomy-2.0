@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/placement.schema.json",
+  "title": "Versioned L4 placement",
+  "type": "object",
+  "required": [
+    "release_id",
+    "l4_id",
+    "primary_l3_id",
+    "assignment_status",
+    "assignment_method",
+    "confidence",
+    "top_candidates",
+    "rationale",
+    "review_status",
+    "legacy_hierarchy_used_as_feature"
+  ],
+  "properties": {
+    "release_id": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "l4_id": {"type": "string", "pattern": "^RAI4-[0-9]{4,}$"},
+    "primary_l3_id": {"type": ["string", "null"], "pattern": "^RAI3-[GAP]-(?:SYS|INT|SOC)-[0-9]{2}$"},
+    "assignment_status": {"enum": ["locked_physical", "algorithm_proposed", "human_approved", "needs_taxonomy_decision"]},
+    "assignment_method": {"type": "string", "minLength": 1},
+    "algorithm_run_id": {"type": ["string", "null"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "confidence_calibrated": {"type": ["boolean", "null"]},
+    "top_candidates": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["l3_id", "composite_score", "semantic_score", "rule_score", "eligible", "anchor_top1_votes"],
+        "properties": {
+          "l3_id": {"type": "string", "pattern": "^RAI3-[GA]-(?:SYS|INT)-[0-9]{2}$"},
+          "composite_score": {"type": "number"},
+          "semantic_score": {"type": "number"},
+          "rule_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "eligible": {"type": "boolean"},
+          "anchor_top1_votes": {"type": "integer", "minimum": 0, "maximum": 3}
+        },
+        "additionalProperties": false
+      }
+    },
+    "semantic_margin": {"type": ["number", "null"]},
+    "composite_margin": {"type": ["number", "null"]},
+    "positive_cues_triggered": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["decisive", "supporting"],
+        "properties": {
+          "decisive": {"type": "array", "items": {"type": "string"}},
+          "supporting": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "hard_exclusions_triggered": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "items": {"type": "string"}}
+    },
+    "gap_sentinels_triggered": {"type": "array", "items": {"type": "string"}},
+    "abstention_reason": {"type": ["string", "null"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "review_status": {"type": "string", "minLength": 1},
+    "reviewers": {"type": "array", "items": {"type": "string"}},
+    "decision_id": {"type": ["string", "null"], "pattern": "^TD-[0-9]{4,}$"},
+    "approved_by": {"type": ["string", "null"]},
+    "approved_at": {"type": ["string", "null"]},
+    "input_text_hash": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "input_fields": {"type": "array", "items": {"type": "string"}},
+    "legacy_hierarchy_used_as_feature": {"const": false},
+    "expert_model_reviews": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "frontier_expert_reviews": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["reviewer", "decision", "reason_code", "rationale", "hierarchy_blind"],
+        "properties": {
+          "reviewer": {"type": "string", "minLength": 1},
+          "decision": {"enum": ["APPROVE", "REJECT"]},
+          "reason_code": {"type": "string", "minLength": 1},
+          "rationale": {"type": "string", "minLength": 1},
+          "hierarchy_blind": {"const": true}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"assignment_status": {"const": "needs_taxonomy_decision"}}},
+      "then": {"properties": {"primary_l3_id": {"type": "null"}}}
+    },
+    {
+      "if": {"properties": {"assignment_status": {"enum": ["locked_physical", "algorithm_proposed", "human_approved"]}}},
+      "then": {"properties": {"primary_l3_id": {"type": "string"}}}
+    }
+  ],
+  "additionalProperties": false
+}

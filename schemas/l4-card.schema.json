@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/l4-card.schema.json",
+  "title": "Immutable RAI L4 registry card",
+  "type": "object",
+  "required": [
+    "l4_id",
+    "label_en",
+    "definition_en",
+    "metrics_source",
+    "references",
+    "status",
+    "introduced_in",
+    "allocation_basis"
+  ],
+  "properties": {
+    "l4_id": {"type": "string", "pattern": "^RAI4-[0-9]{4,}$"},
+    "label_en": {"type": "string", "minLength": 1},
+    "label_ko": {"type": ["string", "null"]},
+    "definition_en": {"type": "string", "minLength": 1},
+    "definition_ko": {"type": ["string", "null"]},
+    "severity_1to5": {"type": ["number", "null"], "minimum": 1, "maximum": 5},
+    "probability_0to1": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "impact_score": {"type": ["number", "null"], "minimum": 0},
+    "impact_percentile": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "metrics_source": {"type": "string", "minLength": 1},
+    "three_h_one_r_raw": {"type": ["string", "null"]},
+    "three_h_one_r": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["axis_code", "axis_name", "priority_code", "priority"],
+        "properties": {
+          "axis_code": {"enum": ["H1", "H2", "H3", "RC"]},
+          "axis_name": {"type": "string", "minLength": 1},
+          "priority_code": {"enum": ["P", "S"]},
+          "priority": {"enum": ["Primary", "Secondary"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url", "type", "source_system"],
+        "properties": {
+          "title": {"type": ["string", "null"]},
+          "url": {"type": ["string", "null"]},
+          "type": {"type": ["string", "null"]},
+          "source_system": {"enum": ["global_1726", "physical_182"]},
+          "reference_index": {"type": ["integer", "null"], "minimum": 1},
+          "justification": {"type": ["string", "null"]},
+          "is_linked": {"type": ["boolean", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "status": {"enum": ["active", "retired", "merged"]},
+    "introduced_in": {"type": "string"},
+    "retired_in": {"type": ["string", "null"]},
+    "merged_into": {"type": ["string", "null"], "pattern": "^RAI4-[0-9]{4,}$"},
+    "allocation_basis": {"type": "string", "minLength": 1}
+  },
+  "not": {"required": ["primary_l3_id"]},
+  "additionalProperties": false
+}

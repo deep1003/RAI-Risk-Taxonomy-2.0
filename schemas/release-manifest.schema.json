@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/release-manifest.schema.json",
+  "title": "RAI taxonomy release manifest",
+  "type": "object",
+  "required": [
+    "release_id",
+    "release_status",
+    "provisional",
+    "schema_version",
+    "created_at",
+    "git_commit",
+    "sources",
+    "id_allocation",
+    "counts",
+    "algorithm",
+    "artifacts",
+    "validation",
+    "approvals"
+  ],
+  "properties": {
+    "release_id": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "release_status": {"enum": ["prepublication_draft", "published", "withdrawn"]},
+    "provisional": {"type": "boolean"},
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "git_commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+    "previous_release": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "sources": {
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": ["name", "path", "sha256", "record_count", "source_git_commit"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "record_count": {"type": "integer", "minimum": 0},
+          "source_git_commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "id_allocation": {
+      "type": "object",
+      "required": ["l4_pattern", "ordering", "first_id", "last_id", "never_reuse"],
+      "properties": {
+        "l4_pattern": {"const": "RAI4-####"},
+        "ordering": {"type": "string", "minLength": 1},
+        "first_id": {"const": "RAI4-0001"},
+        "last_id": {"const": "RAI4-1726"},
+        "never_reuse": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "l0", "l1", "l2", "l3", "l4", "physical_locked",
+        "source_exact_matches", "source_explicit_aliases",
+        "algorithm_proposed", "human_approved", "needs_taxonomy_decision"
+      ],
+      "properties": {
+        "l0": {"const": 1},
+        "l1": {"const": 3},
+        "l2": {"const": 6},
+        "l3": {"const": 50},
+        "l4": {"const": 1726},
+        "physical_locked": {"const": 182},
+        "source_exact_matches": {"const": 169},
+        "source_explicit_aliases": {"const": 13},
+        "algorithm_proposed": {"type": "integer", "minimum": 0, "maximum": 1544},
+        "human_approved": {"type": "integer", "minimum": 0, "maximum": 1544},
+        "needs_taxonomy_decision": {"type": "integer", "minimum": 0, "maximum": 1544}
+      },
+      "additionalProperties": false
+    },
+    "algorithm": {
+      "type": "object",
+      "required": [
+        "run_id", "model", "model_revision", "model_revision_pinned", "seed",
+        "configuration_file", "configuration_sha256", "confidence_calibrated"
+      ],
+      "properties": {
+        "run_id": {"type": "string", "minLength": 1},
+        "model": {"const": "BAAI/bge-m3"},
+        "model_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "model_revision_pinned": {"const": true},
+        "seed": {"const": 1726},
+        "configuration_file": {"type": "string", "minLength": 1},
+        "configuration_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "confidence_calibrated": {"const": false},
+        "frontier_expert_reviewers": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "consensus_policy": {"type": "string", "minLength": 1},
+        "local_model_sensitivity_only": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "bytes", "rows"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bytes": {"type": "integer", "minimum": 0},
+          "rows": {"type": ["integer", "null"], "minimum": 0}
+        },
+        "additionalProperties": false
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status", "report"],
+      "properties": {
+        "status": {"enum": ["PENDING_VALIDATOR", "PASS", "PASS_WITH_WARNINGS", "FAIL"]},
+        "failed_checks": {"type": "integer", "minimum": 0},
+        "warning_checks": {"type": "integer", "minimum": 0},
+        "report": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scope", "status"],
+        "properties": {
+          "scope": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "date": "2026-06-28",
+    "decision_owner": "human",
+    "change": "Move S3.10 Lack of Robustness in Unseen Environments from Societal Safety to Physical Safety as P3.9; do not absorb into P3.2.",
+    "previous": {
+      "l2_id": "S2",
+      "l2_name": "Societal Safety",
+      "l3_id": "S3.10"
+    },
+    "current": {
+      "l2_id": "P2",
+      "l2_name": "System Safety",
+      "l3_id": "P3.9"
+    },
+    "affected_card_ids": [
+      "PHYSBENCH-REF-0078",
+      "PHYSBENCH-REF-0046",
+      "PHYSBENCH-REF-0060",
+      "PHYSRISK-REF-0018",
+      "PHYSBENCH-REF-0059",
+      "PHYSBENCH-REF-0062",
+      "PHYSBENCH-REF-0084",
+      "PHYSBENCH-REF-0086",
+      "PHYSBENCH-REF-0098",
+      "PHYSBENCH-REF-0101",
+      "PHYSRISK-REF-0015",
+      "PHYSRISK-REF-0016",
+      "PHYSBENCH-REF-0082"
+    ],
+    "future_decision_required": "Absorption into P3.2 or further redistribution remains pending future human decision."
+  },
+  {
+    "date": "2026-07-04",
+    "decision_owner": "human",
+    "change": "Realign L2/L3 hierarchy to master structure: rename P2 to System Safety; move six L3 groups across L2 categories; L4 cards follow their L3 parent without individual L4 splitting.",
+    "moves": [
+      {
+        "previous": {
+          "l2_id": "P2",
+          "l2_name": "Physical Safety",
+          "l3_id": "P3.1",
+          "l3_name": "Purposeful / Malicious Harm"
+        },
+        "current": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.1",
+          "l3_name": "Purposeful / Malicious Harm"
+        }
+      },
+      {
+        "previous": {
+          "l2_id": "P2",
+          "l2_name": "Physical Safety",
+          "l3_id": "P3.4",
+          "l3_name": "Physical Attacks"
+        },
+        "current": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.2",
+          "l3_name": "Physical Attacks"
+        }
+      },
+      {
+        "previous": {
+          "l2_id": "P2",
+          "l2_name": "Physical Safety",
+          "l3_id": "P3.5",
+          "l3_name": "Cybersecurity Threats"
+        },
+        "current": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.3",
+          "l3_name": "Cybersecurity Threats"
+        }
+      },
+      {
+        "previous": {
+          "l2_id": "P2",
+          "l2_name": "Physical Safety",
+          "l3_id": "P3.8",
+          "l3_name": "Sensor & Input Validation Failures"
+        },
+        "current": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.4",
+          "l3_name": "Sensor & Input Validation Failures"
+        }
+      },
+      {
+        "previous": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.1",
+          "l3_name": "Privacy Violations"
+        },
+        "current": {
+          "l2_id": "S2",
+          "l2_name": "Societal Safety",
+          "l3_id": "S3.1",
+          "l3_name": "Privacy Violations"
+        }
+      },
+      {
+        "previous": {
+          "l2_id": "S2",
+          "l2_name": "Societal Safety",
+          "l3_id": "S3.9",
+          "l3_name": "Ethical & Safety Implications of Interactive Agents"
+        },
+        "current": {
+          "l2_id": "I2",
+          "l2_name": "Interaction Safety",
+          "l3_id": "I3.10",
+          "l3_name": "Ethical & Safety Implications of Interactive Agents"
+        }
+      }
+    ],
+    "post_migration_l3_counts": {
+      "P2 System Safety": 5,
+      "I2 Interaction Safety": 10,
+      "S2 Societal Safety": 9
+    },
+    "post_migration_l4_counts": {
+      "P2 System Safety": 91,
+      "I2 Interaction Safety": 62,
+      "S2 Societal Safety": 29
+    },
+    "affected_card_ids": {
+      "I3.1": [
+        "PHYSBENCH-REF-0017",
+        "PHYSBENCH-REF-0018",
+        "PHYSBENCH-REF-0019",
+        "PHYSBENCH-REF-0020",
+        "PHYSBENCH-REF-0022",
+        "PHYSBENCH-REF-0023",
+        "PHYSBENCH-REF-0024",
+        "PHYSBENCH-REF-0031",
+        "PHYSBENCH-REF-0044",
+        "PHYSBENCH-REF-0049",
+        "PHYSBENCH-REF-0095",
+        "PHYSBENCH-REF-0097",
+        "PHYSRISK-REF-0028",
+        "PHYSRISK-REF-0043",
+        "PHYSRISK-REF-0045",
+        "PHYSRISK-REF-0046",
+        "PHYSRISK-REF-0030"
+      ],
+      "I3.2": [
+        "PHYSRISK-REF-0044"
+      ],
+      "I3.3": [
+        "PHYSBENCH-REF-0043",
+        "PHYSRISK-REF-0029",
+        "PHYSRISK-REF-0031",
+        "PHYSRISK-REF-0027"
+      ],
+      "I3.4": [
+        "PHYSBENCH-REF-0002",
+        "PHYSBENCH-REF-0099",
+        "PHYSRISK-REF-0007",
+        "PHYSRISK-REF-0005"
+      ],
+      "S3.1": [
+        "PHYSRISK-REF-0026",
+        "PHYSRISK-REF-0035",
+        "PHYSKR-REF-012",
+        "PHYSRISK-REF-0053",
+        "PHYSBENCH-REF-0021"
+      ],
+      "I3.10": [
+        "PHYSRISK-REF-0024",
+        "PHYSKR-REF-009"
+      ]
+    },
+    "review_basis": "Two-reviewer audit found no high-confidence individual L4 exceptions inside the moved L3 groups; moved L3 groups were therefore kept intact."
+  }
+]

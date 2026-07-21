@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/remap-decision.schema.json",
+  "title": "Human-approved remap decision batch",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": ["l4_id", "to_l3_id", "reason", "evidence_refs"],
+    "properties": {
+      "l4_id": {"type": "string", "pattern": "^RAI4-[0-9]{4,}$"},
+      "to_l3_id": {"type": ["string", "null"], "pattern": "^RAI3-[GAP]-(?:SYS|INT|SOC)-[0-9]{2}$"},
+      "reason": {"type": "string", "minLength": 1},
+      "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}}
+    },
+    "additionalProperties": false
+  }
+}

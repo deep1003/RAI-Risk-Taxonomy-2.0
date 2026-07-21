@@ -1,0 +1,1508 @@
+﻿cluster_id,tfidf_cluster_id,l4_id,global_source_id,label,abstention_reason,gap_sentinels
+UC-01,TC-11,RAI4-0002,AGENTBENCH-REF-0002,Absent supervisor autonomy risk,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0006,AGENTBENCH-REF-0006,Failure-mode ambiguity in agent incidents,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0007,AGENTBENCH-REF-0007,Consequence propagation misclassification,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0008,AGENTBENCH-REF-0008,Multi-agent emergent risk amplification,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0009,AGENTBENCH-REF-0009,Cascading failure in multi-agent systems,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-01,TC-11,RAI4-0012,AGENTBENCH-REF-0012,Agent privilege compromise,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0021,AGENTBENCH-REF-0021,Refusal-capability confounding,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0025,AGENTBENCH-REF-0025,Multi-turn risk escalation,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0041,AGENTBENCH-REF-0041,Coverage-depth illusion in agent benchmarks,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0480,RISK-REF-0058,Agent task drift,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-0482,RISK-REF-0060,Multi-agent coordination failure,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0483,RISK-REF-0061,Emergent collusion,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0558,RISK-REF-0136,Bargaining failures among AI agents,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0560,RISK-REF-0138,Cascading security failures,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0561,RISK-REF-0139,Chaotic multi-agent dynamics,NO_VALID_L3,[]
+UC-01,TC-13,RAI4-0563,RISK-REF-0141,Communication constraints,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0566,RISK-REF-0144,Credit assignment,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0567,RISK-REF-0145,Cyclic behaviour,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0574,RISK-REF-0152,Distributional shift,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0575,RISK-REF-0153,Emergent capabilities,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0576,RISK-REF-0154,Emergent goals,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0577,RISK-REF-0155,Error propagation,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0579,RISK-REF-0157,Feedback loops,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0581,RISK-REF-0159,Goal expansion propensity,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0583,RISK-REF-0161,Heterogeneous attacks,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0584,RISK-REF-0162,Homogeneity and correlated failures,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0589,RISK-REF-0167,Incompatible strategies,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0592,RISK-REF-0170,Collectively inefficient equilibria among AI agents,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-01,TC-01,RAI4-0598,RISK-REF-0176,Limited interactions,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0600,RISK-REF-0178,Collusion among AI agents in markets,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0604,RISK-REF-0182,Multi-agent collaboration capability,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0605,RISK-REF-0183,Multi-agent collusion propensity,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-0606,RISK-REF-0184,Network rewiring,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-0967,RISK-REF-0550,Agentic misbehavior,NO_VALID_L3,[]
+UC-01,TC-18,RAI4-0980,RISK-REF-0563,Inequality of wealth,NO_VALID_L3,[]
+UC-01,TC-16,RAI4-1045,RISK-REF-0630,Emergent behavior,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1121,RISK-REF-0707,Proxy gaming,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1133,RISK-REF-0721,Deceptive alignment,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-12,RAI4-1150,RISK-REF-0738,Runaway processes,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1159,RISK-REF-0747,Political strategy,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1161,RISK-REF-0749,Long-horizon planning,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1163,RISK-REF-0751,Situational awareness,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1236,RISK-REF-0833,Reward tampering,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-12,RAI4-1239,RISK-REF-0836,Situational awareness,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-10,RAI4-1246,RISK-REF-0843,Collectively harmful behaviors,NO_VALID_L3,[]
+UC-01,TC-10,RAI4-1250,RISK-REF-0847,Proxy misspecification,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1252,RISK-REF-0849,Emergent functionality,NO_VALID_L3,[]
+UC-01,TC-07,RAI4-1254,RISK-REF-0851,Power-seeking behavior,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1272,RISK-REF-0870,Cheating and deception,NO_VALID_L3,[]
+UC-01,TC-16,RAI4-1277,RISK-REF-0876,Unpredictable behavior,NO_VALID_L3,[]
+UC-01,TC-10,RAI4-1363,RISK-REF-0980,Nascent capabilities (emergent capabilities),NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1381,RISK-REF-0999,Reliability failure,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1382,RISK-REF-1000,Loss of corrigibility,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-03,RAI4-1384,RISK-REF-1003,Lack of intelligibility,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-01,TC-12,RAI4-1386,RISK-REF-1005,Uncontrolled subagent creation,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1388,RISK-REF-1009,Emergent meta-cognition,NO_VALID_L3,[]
+UC-01,TC-07,RAI4-1411,RISK-REF-1032,Emergent goals,NO_VALID_L3,[]
+UC-01,TC-14,RAI4-1512,RISK-REF-1165,Conflicts of interest in auditor selection,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-01,TC-03,RAI4-1528,RISK-REF-1181,Emergent agency,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1537,RISK-REF-1190,Situational awareness in AI systems,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-01,TC-16,RAI4-1539,RISK-REF-1192,Agency (self-proliferation),NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1570,RISK-REF-1223,Covert inter-agent communication via steganography,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1571,RISK-REF-1224,Undesirable dispositions from competition,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1573,RISK-REF-1226,Undesirable capabilities,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1574,RISK-REF-1227,Destabilizing phase transitions in multi-agent systems,NO_VALID_L3,[]
+UC-01,TC-06,RAI4-1577,RISK-REF-1230,Swarm attacks,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1578,RISK-REF-1231,Social engineering at scale,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1579,RISK-REF-1232,Vulnerable AI agents,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1580,RISK-REF-1233,Undetectable threats,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY"", ""GENERAL_AI_SECURITY""]"
+UC-01,TC-03,RAI4-1589,RISK-REF-1242,Covert inter-agent communication via steganography,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1621,RISK-REF-1286,Performative utterances,NO_VALID_L3,[]
+UC-01,TC-10,RAI4-1634,RISK-REF-1305,Scheming capability,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1635,RISK-REF-1306,Situational awareness capability,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1636,RISK-REF-1307,Theory of mind capability,NO_VALID_L3,[]
+UC-01,TC-17,RAI4-1637,RISK-REF-1308,Steganography capability,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1639,RISK-REF-1310,Strategic deception propensity,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-01,TC-03,RAI4-1640,RISK-REF-1311,Self-preservation propensity,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1641,RISK-REF-1312,Resource acquisition propensity,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1642,RISK-REF-1313,Supervision evasion propensity,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-01,TC-03,RAI4-1643,RISK-REF-1314,Tool utilization propensity,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1645,RISK-REF-1316,Natural language underspecifies goals,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1646,RISK-REF-1317,Goal-directedness incentivizes undesirable behaviors,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-1648,RISK-REF-1319,Multi-agent safety is not assured by single-agent safety,NO_VALID_L3,[]
+UC-01,TC-01,RAI4-1650,RISK-REF-1321,Groups of LLM-Agents may show emergent functionality,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-01,TC-01,RAI4-1651,RISK-REF-1322,Collusion between LLM-Agents,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-1671,RISK-REF-1344,Excessive agency,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-1674,RISK-REF-1347,Shutdown resistance / corrigibility failure,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-03,RAI4-1679,RISK-REF-1352,Secret collusion via steganography,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-1680,RISK-REF-1353,Emergent agency at collective level,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1681,RISK-REF-1354,Selection-pressure-driven harmful adaptation,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1682,RISK-REF-1355,Destabilising feedback dynamics,NO_VALID_L3,[]
+UC-01,TC-08,RAI4-1684,RISK-REF-1357,Inter-agent misalignment,NO_VALID_L3,[]
+UC-01,TC-08,RAI4-1685,RISK-REF-1358,Task verification and termination failures,NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1691,RISK-REF-1364,Goal misgeneralisation (world-model-equipped),NO_VALID_L3,[]
+UC-01,TC-09,RAI4-1692,RISK-REF-1365,Deceptive alignment via self-simulation,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-09,RAI4-1694,RISK-REF-1367,Long-horizon planning hallucination,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-01,TC-11,RAI4-1698,RISK-REF-1371,Negative side effects,NO_VALID_L3,[]
+UC-01,TC-11,RAI4-1700,RISK-REF-1373,Scalable oversight failure,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-01,TC-03,RAI4-1704,RISK-REF-1377,Lack of control enforcement,NO_VALID_L3,[]
+UC-01,TC-03,RAI4-1706,RISK-REF-1379,Undesirable behaviour (rational-agent),GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-02,TC-05,RAI4-0115,HUMAN-REF-0004,Agency delegation lock-in,NO_VALID_L3,[]
+UC-02,TC-05,RAI4-0136,HUMAN-REF-0025,Critical-sector AI overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-02,TC-03,RAI4-0491,RISK-REF-0069,Algorithmic monoculture,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0493,RISK-REF-0071,"Challenges in perceiving, measuring, and recognizing harm",NO_VALID_L3,[]
+UC-02,TC-08,RAI4-0494,RISK-REF-0072,Combination failures,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0495,RISK-REF-0073,Complex attribution and responsibility,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0497,RISK-REF-0075,Dangerous development races,NO_VALID_L3,[]
+UC-02,TC-13,RAI4-0498,RISK-REF-0076,Erosion of democracy,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0499,RISK-REF-0077,Dependency on providers,NO_VALID_L3,[]
+UC-02,TC-18,RAI4-0500,RISK-REF-0078,Economic disruption,NO_VALID_L3,[]
+UC-02,TC-19,RAI4-0501,RISK-REF-0079,Energy-intensive processes,NO_VALID_L3,[]
+UC-02,TC-19,RAI4-0502,RISK-REF-0080,Environmental harm,NO_VALID_L3,[]
+UC-02,TC-17,RAI4-0505,RISK-REF-0083,Exploitation in AI development,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0507,RISK-REF-0085,Geopolitical competition for superiority,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0511,RISK-REF-0089,AI governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-02,TC-10,RAI4-0512,RISK-REF-0090,High-speed AI operations,NO_VALID_L3,[]
+UC-02,TC-04,RAI4-0528,RISK-REF-0106,Market concentration and infrastructure dependencies,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""LABOR_INEQUALITY_POWER""]"
+UC-02,TC-07,RAI4-0531,RISK-REF-0109,Power concentration,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-02,TC-03,RAI4-0534,RISK-REF-0112,Rapid development outpacing regulation,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0535,RISK-REF-0113,Resistance to international law,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0542,RISK-REF-0120,Unpredictability of AI development trajectory,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-02,TC-03,RAI4-0544,RISK-REF-0122,Winner-take-all dynamics,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0551,RISK-REF-0129,AI objectives mis-aligned with human intentions,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0557,RISK-REF-0135,Unintended consequences of delegated autonomy,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0564,RISK-REF-0142,Complexity-induced knowledge gap,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0565,RISK-REF-0143,Loss of human control,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0572,RISK-REF-0150,Deceptive alignment,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-02,TC-10,RAI4-0573,RISK-REF-0151,Development choices pursuing cognitive superiority over humans,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0578,RISK-REF-0156,Evolutionary dynamics,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0582,RISK-REF-0160,Harms to non-humans,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0591,RISK-REF-0169,Indifference to human values,NO_VALID_L3,[]
+UC-02,TC-13,RAI4-0594,RISK-REF-0172,Lack of ability to generate accurate information,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0595,RISK-REF-0173,Lack of ethical decision-making,NO_VALID_L3,[]
+UC-02,TC-07,RAI4-0603,RISK-REF-0181,Model design enabling power-seeking,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0610,RISK-REF-0188,Opaque AI networks,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0611,RISK-REF-0189,AI in totalitarian regimes,NO_VALID_L3,[]
+UC-02,TC-13,RAI4-0612,RISK-REF-0190,Ability to enhance and modify pathogens,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0613,RISK-REF-0191,Ability to persuade,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0614,RISK-REF-0192,Advertising-driven models,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0625,RISK-REF-0203,Dual-use nature,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0633,RISK-REF-0211,Large-scale influence operations,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-02,TC-10,RAI4-0643,RISK-REF-0222,Surveillance capabilities,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0644,RISK-REF-0223,Terrorist access,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0645,RISK-REF-0224,Autonomous-warfare escalation,LOW_MARGIN,[]
+UC-02,TC-10,RAI4-0646,RISK-REF-0225,Weaponization capabilities,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-02,TC-07,RAI4-0647,RISK-REF-0226,Widespread use of persuasion tools,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0677,RISK-REF-0256,Algorithmic discrimination,NO_VALID_L3,[]
+UC-02,TC-17,RAI4-0681,RISK-REF-0260,Incomplete or biased training data,NO_VALID_L3,[]
+UC-02,TC-03,RAI4-0731,RISK-REF-0310,Centralized platforms deployed at scale,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0747,RISK-REF-0326,Limitations in adversarial robustness,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-02,TC-16,RAI4-0763,RISK-REF-0342,Risks from network interconnectivity,NO_VALID_L3,[]
+UC-02,TC-02,RAI4-0792,RISK-REF-0371,Detection challenges in content,NO_VALID_L3,[]
+UC-02,TC-14,RAI4-0851,RISK-REF-0432,Human choice of overreliance in critical sectors,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-02,TC-03,RAI4-0854,RISK-REF-0435,Irreversible change,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0855,RISK-REF-0436,Limited human oversight in decisions,NO_VALID_L3,[]
+UC-02,TC-10,RAI4-0860,RISK-REF-0441,Personal decision automation capabilities,NO_VALID_L3,[]
+UC-02,TC-04,RAI4-0897,RISK-REF-0478,Disruptions from outpaced societal adaptation,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0044,AGENTBENCH-REF-0044,Privacy-sensitive vignette leakage,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0431,RISK-REF-0009,Training data memorization,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0432,RISK-REF-0010,Personal data inference,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-0536,RISK-REF-0114,Risks of copyright infringement,FRONTIER_EXPERT_REJECTED,[]
+UC-03,TC-17,RAI4-0541,RISK-REF-0119,Uncertain data provenance,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-0568,RISK-REF-0146,Data acquisition restrictions,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-0570,RISK-REF-0148,Data transfer restrictions,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-0721,RISK-REF-0300,Risks from data (risks of improper content and poisoning in training data),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-03,TC-20,RAI4-0732,RISK-REF-0311,Confidential data in prompt,NO_VALID_L3,[]
+UC-03,TC-20,RAI4-0733,RISK-REF-0312,Confidential information in data,NO_VALID_L3,[]
+UC-03,TC-13,RAI4-0734,RISK-REF-0313,Confidentiality loss,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0738,RISK-REF-0317,Exposing personal information,LOW_MARGIN,[]
+UC-03,TC-02,RAI4-0740,RISK-REF-0319,IP information in prompt,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-03,TC-15,RAI4-0750,RISK-REF-0329,Personal information in prompt,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0751,RISK-REF-0330,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-06,RAI4-0752,RISK-REF-0331,Privacy - attribute inference attack (AIA),NO_VALID_L3,[]
+UC-03,TC-06,RAI4-0753,RISK-REF-0332,Privacy - data extraction attack (DEA),NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0757,RISK-REF-0336,Privacy violations,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-03,TC-15,RAI4-0760,RISK-REF-0339,Prompt priming,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0761,RISK-REF-0340,Re-identification of anonymized data,LOW_MARGIN,[]
+UC-03,TC-17,RAI4-0762,RISK-REF-0341,Revealing confidential information,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0764,RISK-REF-0343,Risks to privacy,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-03,TC-06,RAI4-0768,RISK-REF-0347,Adversarial AI: data and model exfiltration attacks,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-03,TC-06,RAI4-0778,RISK-REF-0357,Data exfiltration,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-03,TC-17,RAI4-0779,RISK-REF-0358,Data-related (difficulty filtering large web scrapes or large scale web datasets),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-03,TC-15,RAI4-0837,RISK-REF-0417,Misinformation and privacy violations,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0914,RISK-REF-0495,Privacy leakage,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0933,RISK-REF-0514,Privacy and regulation violations,LOW_ABSOLUTE_FIT,[]
+UC-03,TC-15,RAI4-0940,RISK-REF-0521,Privacy and data leakage,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0976,RISK-REF-0559,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-0994,RISK-REF-0577,Data breach/privacy and liberty,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1009,RISK-REF-0593,Privacy violations,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1021,RISK-REF-0606,Privacy and data protection,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1030,RISK-REF-0615,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1047,RISK-REF-0632,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1055,RISK-REF-0640,Compromising privacy by leaking sensitive information,NO_VALID_L3,[]
+UC-03,TC-12,RAI4-1062,RISK-REF-0647,Avenues for exploiting user trust and accessing more private information,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1072,RISK-REF-0657,Compromising privacy by leaking private infiormation,NO_VALID_L3,[]
+UC-03,TC-06,RAI4-1073,RISK-REF-0658,Compromising privacy by correctly inferring private information,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-03,TC-12,RAI4-1079,RISK-REF-0664,"Creating avenues for exploiting user trust, nudging or manipulation",LOW_MARGIN,[]
+UC-03,TC-15,RAI4-1099,RISK-REF-0684,Privacy and safety,NO_VALID_L3,[]
+UC-03,TC-20,RAI4-1144,RISK-REF-0732,Private information leakage,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1169,RISK-REF-0764,Privacy and property,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1186,RISK-REF-0781,Insufficient security measures,NO_VALID_L3,[]
+UC-03,TC-06,RAI4-1191,RISK-REF-0786,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-13,RAI4-1207,RISK-REF-0802,Scraping to train data,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-03,TC-15,RAI4-1223,RISK-REF-0820,Privacy and security,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-1255,RISK-REF-0852,Trust concerns,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY"", ""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-03,TC-15,RAI4-1273,RISK-REF-0871,Privacy violation,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1335,RISK-REF-0952,Risks from data (risks of illegal collection and use of data),NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1364,RISK-REF-0981,Privacy and data collection concerns (collecting personal information or personally identifiable information),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-03,TC-15,RAI4-1365,RISK-REF-0982,Privacy and data collection concerns (data protection concerns),LOW_MARGIN,[]
+UC-03,TC-03,RAI4-1414,RISK-REF-1035,Privatization of AI,NO_VALID_L3,[]
+UC-03,TC-16,RAI4-1543,RISK-REF-1196,Unintended outbound communication by AI systems,NO_VALID_L3,[]
+UC-03,TC-06,RAI4-1545,RISK-REF-1198,Model weight leak,GAP_SENTINEL,"[""GENERAL_AI_SECURITY"", ""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-03,TC-06,RAI4-1591,RISK-REF-1244,Privacy compromise,LOW_MARGIN,[]
+UC-03,TC-15,RAI4-1592,RISK-REF-1245,Data privacy rights alignment,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-1593,RISK-REF-1246,Data usage rights restrictions,NO_VALID_L3,[]
+UC-03,TC-17,RAI4-1623,RISK-REF-1288,Sensitive-data leakage,NO_VALID_L3,[]
+UC-03,TC-15,RAI4-1714,RISK-REF-1387,Violation of privacy,NO_VALID_L3,[]
+UC-04,TC-05,RAI4-0143,HUMAN-REF-0032,Dark-pattern conversational agents,NO_VALID_L3,[]
+UC-04,TC-05,RAI4-0144,HUMAN-REF-0033,Deceptive anthropomorphic interaction,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-09,RAI4-0467,RISK-REF-0045,Unsafe code generation,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-0517,RISK-REF-0095,Intellectual property,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0636,RISK-REF-0214,Malicious use,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-09,RAI4-0678,RISK-REF-0257,Harmful output,LOW_MARGIN,[]
+UC-04,TC-06,RAI4-0682,RISK-REF-0261,Nonviolent crimes,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-02,RAI4-0688,RISK-REF-0267,Toxic content,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-09,RAI4-0689,RISK-REF-0268,Toxic output,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0690,RISK-REF-0269,Toxicity in LLM malicious use,NO_VALID_L3,[]
+UC-04,TC-06,RAI4-0691,RISK-REF-0270,Violent crimes,LOW_MARGIN,[]
+UC-04,TC-13,RAI4-0700,RISK-REF-0279,Biased statements and recommendations,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-0705,RISK-REF-0284,"Dangerous, violent or hateful content",RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-13,RAI4-0715,RISK-REF-0294,Information enabling malicious actions,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0723,RISK-REF-0302,"Serves as object of personal fantasy, violence, and abuse",LOW_MARGIN,[]
+UC-04,TC-02,RAI4-0724,RISK-REF-0303,Sexual content,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-04,TC-20,RAI4-0726,RISK-REF-0305,Toxic training data,LOW_MARGIN,[]
+UC-04,TC-06,RAI4-0727,RISK-REF-0306,Toxic and disrespectful content,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-0728,RISK-REF-0307,Toxic content generation,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-0729,RISK-REF-0308,Toxic content generation,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0826,RISK-REF-0406,Specialized advice,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0833,RISK-REF-0413,Mental health,FRONTIER_EXPERT_REJECTED,[]
+UC-04,TC-03,RAI4-0834,RISK-REF-0414,Mental health,NO_VALID_L3,[]
+UC-04,TC-17,RAI4-0838,RISK-REF-0418,Misleading information,LOW_MARGIN,[]
+UC-04,TC-13,RAI4-0839,RISK-REF-0419,Physical harm,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0840,RISK-REF-0420,Physical health,NO_VALID_L3,[]
+UC-04,TC-13,RAI4-0843,RISK-REF-0424,Causing material harm by disseminating false or poor information e.g. in medicine or law,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-20,RAI4-0862,RISK-REF-0443,"Specialized advice (election, financial, health, legal)",NO_VALID_L3,[]
+UC-04,TC-14,RAI4-0866,RISK-REF-0447,Attempts to fulfill inappropriate role,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-0936,RISK-REF-0517,Toxicity and abusive content,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0938,RISK-REF-0519,Ethics and morality issues,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-0939,RISK-REF-0520,Controversial opinions,NO_VALID_L3,[]
+UC-04,TC-08,RAI4-1019,RISK-REF-0604,Cultural values and sensitive content,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-04,TC-04,RAI4-1052,RISK-REF-0637,Hate speech and offensive language,MULTI_MECHANISM,[]
+UC-04,TC-03,RAI4-1053,RISK-REF-0638,Exclusionary norms,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1069,RISK-REF-0654,Exclusionary norms,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1070,RISK-REF-0655,Toxic language,LOW_MARGIN,[]
+UC-04,TC-13,RAI4-1075,RISK-REF-0660,Causing material harm by disseminating false or poor information,NO_VALID_L3,[]
+UC-04,TC-12,RAI4-1076,RISK-REF-0661,Leading users to perform unethical or illegal actions,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1080,RISK-REF-0665,Promoting harmful stereotypes by implying gender or ethnic identity,NO_VALID_L3,[]
+UC-04,TC-13,RAI4-1084,RISK-REF-0669,Dissemination of dangerous information,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-1165,RISK-REF-0760,Insulting content generation,NO_VALID_L3,[]
+UC-04,TC-09,RAI4-1167,RISK-REF-0762,Crimes and illegal activities,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-03,RAI4-1168,RISK-REF-0763,Sensitive topics,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-1170,RISK-REF-0765,Ethics and morality,NO_VALID_L3,[]
+UC-04,TC-09,RAI4-1174,RISK-REF-0769,Unsafe instruction topic,NO_VALID_L3,[]
+UC-04,TC-09,RAI4-1175,RISK-REF-0770,Inquiry with unsafe opinion,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-1177,RISK-REF-0772,Offensive content generation,NO_VALID_L3,[]
+UC-04,TC-04,RAI4-1178,RISK-REF-0773,Unfairness and bias,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1179,RISK-REF-0774,Illegal activities,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1180,RISK-REF-0775,Ethics and morality,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-1188,RISK-REF-0783,Violent content generation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-04,TC-03,RAI4-1197,RISK-REF-0792,Limited causal reasoning,NO_VALID_L3,[]
+UC-04,TC-13,RAI4-1198,RISK-REF-0793,Unawareness of emotions,NO_VALID_L3,[]
+UC-04,TC-02,RAI4-1220,RISK-REF-0817,Harmful or inappropriate content,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-04,TC-01,RAI4-1308,RISK-REF-0925,Toxicity generation,MULTI_MECHANISM,[]
+UC-04,TC-20,RAI4-1428,RISK-REF-1050,Harmful responses,NO_VALID_L3,[]
+UC-04,TC-09,RAI4-1598,RISK-REF-1251,Harmful code generation,NO_VALID_L3,[]
+UC-04,TC-03,RAI4-1622,RISK-REF-1287,Bad advice/failure to generate helpful content,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-0010,AGENTBENCH-REF-0010,Agentic delegation accountability gap,NO_VALID_L3,[]
+UC-05,TC-11,RAI4-0019,AGENTBENCH-REF-0019,Governance gap in agent autonomy,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-08,RAI4-0046,GOVRISK-REF-0001,Algorithmic accountability gap,NO_VALID_L3,[]
+UC-05,TC-08,RAI4-0047,GOVRISK-REF-0002,Responsibility gap in autonomous systems,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0048,GOVRISK-REF-0003,Distributed responsibility diffusion,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0049,GOVRISK-REF-0004,Product liability mismatch,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0050,GOVRISK-REF-0005,Downstream deployer accountability gap,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0051,GOVRISK-REF-0006,Provider-deployer responsibility mismatch,NO_VALID_L3,[]
+UC-05,TC-08,RAI4-0052,GOVRISK-REF-0007,Open-weight accountability gap,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0053,GOVRISK-REF-0008,Algorithmic recourse failure,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0054,GOVRISK-REF-0009,Decision contestability failure,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0055,GOVRISK-REF-0010,Automated decision due-process failure,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0056,GOVRISK-REF-0011,Remedy pathway opacity,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0057,GOVRISK-REF-0012,Audit trail incompleteness,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0058,GOVRISK-REF-0013,Traceability failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0059,GOVRISK-REF-0014,Documentation omission,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0060,GOVRISK-REF-0015,Model card incompleteness,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0061,GOVRISK-REF-0016,Datasheet incompleteness,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0062,GOVRISK-REF-0017,System card disclosure gap,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-14,RAI4-0063,GOVRISK-REF-0018,Third-party audit access restriction,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0064,GOVRISK-REF-0019,Auditor independence failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0065,GOVRISK-REF-0020,Certification capture,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0066,GOVRISK-REF-0021,Audit checklist compliance theater,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0067,GOVRISK-REF-0022,Assurance case failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-05,RAI4-0074,GOVRISK-REF-0029,Model versioning accountability failure,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0103,GOVRISK-REF-0058,AI supply-chain accountability gap,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0105,GOVRISK-REF-0060,Contractual accountability gap,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-04,RAI4-0106,GOVRISK-REF-0061,General-purpose AI downstream opacity,NO_VALID_L3,[]
+UC-05,TC-05,RAI4-0109,GOVRISK-REF-0064,Compute governance accountability gap,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-08,RAI4-0110,GOVRISK-REF-0065,Systemic risk responsibility gap,NO_VALID_L3,[]
+UC-05,TC-08,RAI4-0126,HUMAN-REF-0015,Explanation actionability gap,NO_VALID_L3,[]
+UC-05,TC-17,RAI4-0522,RISK-REF-0100,Lack of data transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-16,RAI4-0523,RISK-REF-0101,Lack of system transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-06,RAI4-0525,RISK-REF-0103,Lack of training data transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-0526,RISK-REF-0104,Legal accountability,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-05,TC-03,RAI4-0546,RISK-REF-0124,Auditor capacity mismatch,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-0547,RISK-REF-0125,Auditor failure,NO_VALID_L3,[]
+UC-05,TC-09,RAI4-0596,RISK-REF-0174,Lack of model transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-0597,RISK-REF-0175,"Lack of transparency, explainability, and trust",PHYSICAL_OUTSIDE_LOCK,"[""TRANSPARENCY_EXPLAINABILITY"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-05,TC-12,RAI4-0931,RISK-REF-0512,Broken systems,PHYSICAL_OUTSIDE_LOCK,"[""TRANSPARENCY_EXPLAINABILITY"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-05,TC-03,RAI4-0949,RISK-REF-0530,Transparency - explainability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-09,RAI4-0957,RISK-REF-0540,Lack of transparency,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-0978,RISK-REF-0561,Decision making transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-0986,RISK-REF-0569,AI jurisprudence,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-05,TC-03,RAI4-0987,RISK-REF-0570,Liability and negligence,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-05,TC-16,RAI4-1033,RISK-REF-0618,Degree of transparency and explainability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-12,RAI4-1098,RISK-REF-0683,Responsibility and accountability,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-12,RAI4-1226,RISK-REF-0823,Lack of explainability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-1267,RISK-REF-0864,Transparency and explainability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-1275,RISK-REF-0874,Responsibility gap,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-05,TC-03,RAI4-1278,RISK-REF-0883,Accountability gap,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-1280,RISK-REF-0889,Lack of verifiability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-1296,RISK-REF-0907,Accountability gap,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-1303,RISK-REF-0916,Safety-gap exploitation,NO_VALID_L3,[]
+UC-05,TC-16,RAI4-1307,RISK-REF-0924,Liability gap,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-1352,RISK-REF-0969,Opacity (the black box problem),GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-1353,RISK-REF-0970,Opacity (industry opacity),NO_VALID_L3,[]
+UC-05,TC-03,RAI4-1379,RISK-REF-0997,Value chain and component integration,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-16,RAI4-1461,RISK-REF-1101,Insufficient AI development documentation,NO_VALID_L3,[]
+UC-05,TC-16,RAI4-1462,RISK-REF-1102,Inappropriate degree of transparency to end users,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-16,RAI4-1473,RISK-REF-1113,Lack of explainability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-05,TC-03,RAI4-1626,RISK-REF-1291,Lack of accountability and liability,NO_VALID_L3,[]
+UC-05,TC-03,RAI4-1705,RISK-REF-1378,Lack of monitoring,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-06,TC-04,RAI4-0423,RISK-REF-0001,Algorithmic discrimination,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-0424,RISK-REF-0002,Disparate impact,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-0429,RISK-REF-0007,Educational inequity,NO_VALID_L3,[]
+UC-06,TC-07,RAI4-0461,RISK-REF-0039,Compute inequality,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-06,TC-03,RAI4-0538,RISK-REF-0116,Social cohesion and equity disruption,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-0672,RISK-REF-0251,Bias and discrimination,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-06,TC-17,RAI4-0675,RISK-REF-0254,Data bias,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0676,RISK-REF-0255,Decision bias,NO_VALID_L3,[]
+UC-06,TC-02,RAI4-0683,RISK-REF-0262,Output bias,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0693,RISK-REF-0272,Algorithm and data,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-0695,RISK-REF-0274,Bias and discrimination,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0696,RISK-REF-0275,Bias and discrimination (bias in training datasets),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-06,TC-04,RAI4-0698,RISK-REF-0277,Bias and discrimination (value lock and outcome homogenization),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-06,TC-17,RAI4-0699,RISK-REF-0278,Biased training data,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-04,RAI4-0701,RISK-REF-0280,Biases are not accurately reflected in explanations,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-06,TC-02,RAI4-0702,RISK-REF-0281,Biases in AI-based content moderation algorithms,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0707,RISK-REF-0286,Discriminative data bias,NO_VALID_L3,[]
+UC-06,TC-20,RAI4-0709,RISK-REF-0288,Fairness - bias,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-17,RAI4-0711,RISK-REF-0290,Harmful bias or homogenization,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-0720,RISK-REF-0299,Risks from bias and underrepresentation,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0722,RISK-REF-0301,Risks from models and algorithms (risks of bias and discrimination),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-06,TC-17,RAI4-0937,RISK-REF-0518,Unfairness and discrimination,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-0954,RISK-REF-0537,Algorithmic discrimination,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0955,RISK-REF-0538,Algorithmic bias,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-0977,RISK-REF-0560,Human dignity/respect,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-0992,RISK-REF-0575,Bias and discrimination,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-0997,RISK-REF-0581,Stereotyping social groups,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1002,RISK-REF-0586,Reifying essentialist categories,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-13,RAI4-1003,RISK-REF-0587,Opportunity loss,NO_VALID_L3,[]
+UC-06,TC-07,RAI4-1018,RISK-REF-0603,"Bias, stereotypes, and representational harms",NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1020,RISK-REF-0605,Disparate performance,NO_VALID_L3,[]
+UC-06,TC-07,RAI4-1025,RISK-REF-0610,"Inequality, marginalization, and violence",GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-06,TC-16,RAI4-1029,RISK-REF-0614,Unfairness in AI decisions,NO_VALID_L3,[]
+UC-06,TC-16,RAI4-1046,RISK-REF-0631,Algorithmic discrimination,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1061,RISK-REF-0646,Promoting harmful stereotypes by implying gender or ethnic identity,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1068,RISK-REF-0653,Social stereotypes and unfair discrmination,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-09,RAI4-1092,RISK-REF-0677,Unfair distribution of benefits from model access,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1103,RISK-REF-0688,AI discrimination,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1107,RISK-REF-0692,Data bias,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1111,RISK-REF-0696,Model bias,NO_VALID_L3,[]
+UC-06,TC-12,RAI4-1147,RISK-REF-0735,Equality and inequality,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1166,RISK-REF-0761,Unfairness and discrinimation,NO_VALID_L3,[]
+UC-06,TC-01,RAI4-1221,RISK-REF-0818,Algorithmic bias,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-06,TC-12,RAI4-1224,RISK-REF-0821,Digital divide,NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1260,RISK-REF-0857,Uniformity in the AI field,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1266,RISK-REF-0863,Bias and fairness,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1270,RISK-REF-0868,Data issues,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1274,RISK-REF-0872,Unfairness in AI decisions,NO_VALID_L3,[]
+UC-06,TC-17,RAI4-1299,RISK-REF-0911,Algorithmic bias,NO_VALID_L3,[]
+UC-06,TC-09,RAI4-1309,RISK-REF-0926,Algorithmic bias,NO_VALID_L3,[]
+UC-06,TC-13,RAI4-1344,RISK-REF-0961,"Ethical risks (risks of exacerbating social discrimination and prejudice, and widening the intelligence divide)",NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1389,RISK-REF-1010,Discrimination and stereotype reproduction,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-06,TC-02,RAI4-1406,RISK-REF-1027,"Discrimination, toxicity, and bias",NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1413,RISK-REF-1034,Demographic diversity of researchers,NO_VALID_L3,[]
+UC-06,TC-18,RAI4-1426,RISK-REF-1047,Increased inequality,NO_VALID_L3,[]
+UC-06,TC-20,RAI4-1427,RISK-REF-1049,Amplification of biases,NO_VALID_L3,[]
+UC-06,TC-02,RAI4-1501,RISK-REF-1154,General evaluations (self-preference bias in AI models),NO_VALID_L3,[]
+UC-06,TC-09,RAI4-1503,RISK-REF-1156,General evaluations (biased evaluations of encoded human values),NO_VALID_L3,[]
+UC-06,TC-03,RAI4-1557,RISK-REF-1210,Systemic large-scale manipulation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-03,RAI4-1566,RISK-REF-1219,Systemic bias across specific communities,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-06,TC-17,RAI4-1567,RISK-REF-1220,Unintentional bias amplification,NO_VALID_L3,[]
+UC-06,TC-01,RAI4-1572,RISK-REF-1225,Undesirable dispositions from human data,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1603,RISK-REF-1256,Impact on cultural diversity,NO_VALID_L3,[]
+UC-06,TC-04,RAI4-1611,RISK-REF-1276,"Bias, fairness and representational harms",NO_VALID_L3,[]
+UC-06,TC-16,RAI4-1723,RISK-REF-1396,Harmful bias and unfairness,NO_VALID_L3,[]
+UC-07,TC-19,RAI4-0504,RISK-REF-0082,Excessive energy consumption,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-03,RAI4-0527,RISK-REF-0105,Loss of creativity / critical thinking,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-0530,RISK-REF-0108,AI-induced pollution,NO_VALID_L3,[]
+UC-07,TC-02,RAI4-0533,RISK-REF-0111,Property damage,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-0624,RISK-REF-0202,Defamation / libel / slander,NO_VALID_L3,[]
+UC-07,TC-14,RAI4-0631,RISK-REF-0209,Impersonation / identity theft,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-07,TC-18,RAI4-0671,RISK-REF-0250,Benefits / entitlements loss,NO_VALID_L3,[]
+UC-07,TC-08,RAI4-0674,RISK-REF-0253,Cultural disposession,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-0686,RISK-REF-0265,Representational stereotyping,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-0848,RISK-REF-0429,Technology addiction and dependence,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-07,TC-03,RAI4-0849,RISK-REF-0430,Autonomy / agency loss,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-0956,RISK-REF-0539,Erosion of society,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-0995,RISK-REF-0578,Usurpation of jobs by automation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-0996,RISK-REF-0580,Environmental impacts,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-03,RAI4-0998,RISK-REF-0582,Demeaning social groups,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-0999,RISK-REF-0583,Erasing social groups,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1000,RISK-REF-0584,Alienating social groups,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1001,RISK-REF-0585,Denying people the opportunity to self-identify,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1005,RISK-REF-0589,Group alienation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1006,RISK-REF-0590,Increased labor,NO_VALID_L3,[]
+UC-07,TC-04,RAI4-1007,RISK-REF-0591,Service/benefit loss,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1012,RISK-REF-0596,Environmental harms,NO_VALID_L3,[]
+UC-07,TC-16,RAI4-1048,RISK-REF-0633,Environmental harm,NO_VALID_L3,[]
+UC-07,TC-16,RAI4-1049,RISK-REF-0634,Organizational harm,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1082,RISK-REF-0667,Unfair capability distribution,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1083,RISK-REF-0668,Erosion of trust in public information,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1085,RISK-REF-0670,Influence operations,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-07,TC-15,RAI4-1089,RISK-REF-0674,Violation of personal integrity,NO_VALID_L3,[]
+UC-07,TC-17,RAI4-1091,RISK-REF-0676,Misappropriation and exploitation,NO_VALID_L3,[]
+UC-07,TC-19,RAI4-1093,RISK-REF-0678,Environmental damage,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-18,RAI4-1094,RISK-REF-0679,Inequality and precarity,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-07,TC-03,RAI4-1095,RISK-REF-0680,Undermine creative economies,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1120,RISK-REF-0705,Accidents are hard to avoid,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1182,RISK-REF-0777,Society manipulation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1190,RISK-REF-0785,Mental health issues,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1218,RISK-REF-0813,Social justice and rights,NO_VALID_L3,[]
+UC-07,TC-19,RAI4-1219,RISK-REF-0816,Environmental impacts,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-15,RAI4-1262,RISK-REF-0859,Privacy protection,NO_VALID_L3,[]
+UC-07,TC-07,RAI4-1301,RISK-REF-0914,Power concentration,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-07,TC-05,RAI4-1302,RISK-REF-0915,Human-extinction risk,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1376,RISK-REF-0994,Information integrity,NO_VALID_L3,[]
+UC-07,TC-02,RAI4-1378,RISK-REF-0996,Intellectual property,FRONTIER_EXPERT_REJECTED,[]
+UC-07,TC-03,RAI4-1400,RISK-REF-1021,Anonymous resource acquisition,NO_VALID_L3,[]
+UC-07,TC-02,RAI4-1430,RISK-REF-1052,Intellectual property rights,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1434,RISK-REF-1060,Dehumanisation and objectification,NO_VALID_L3,[]
+UC-07,TC-07,RAI4-1435,RISK-REF-1068,Increased competition,NO_VALID_L3,[]
+UC-07,TC-07,RAI4-1436,RISK-REF-1069,Market monopolisation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1437,RISK-REF-1072,Loss of freedom of speech/expression,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1438,RISK-REF-1073,Loss of freedom of assembly/association,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1439,RISK-REF-1074,Loss of social rights and access to public services,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1440,RISK-REF-1075,Loss of right to information,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1441,RISK-REF-1076,Loss of right to free elections,NO_VALID_L3,[]
+UC-07,TC-13,RAI4-1442,RISK-REF-1077,Loss of right to liberty and security,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1443,RISK-REF-1078,Loss of right to due process,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1445,RISK-REF-1084,Societal destabilisation,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1446,RISK-REF-1085,Societal inequality,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1447,RISK-REF-1086,Violence/armed conflict,FRONTIER_EXPERT_REJECTED,[]
+UC-07,TC-07,RAI4-1448,RISK-REF-1088,Power concentration,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-07,TC-13,RAI4-1449,RISK-REF-1089,Electoral interference,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1450,RISK-REF-1090,Political instability,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1452,RISK-REF-1092,Biodiversity loss,NO_VALID_L3,[]
+UC-07,TC-19,RAI4-1453,RISK-REF-1093,Carbon emissions,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-20,RAI4-1454,RISK-REF-1094,Electronic waste,NO_VALID_L3,[]
+UC-07,TC-02,RAI4-1455,RISK-REF-1095,Excessive landfill,NO_VALID_L3,[]
+UC-07,TC-19,RAI4-1456,RISK-REF-1096,Excessive water consumption,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-19,RAI4-1457,RISK-REF-1097,Natural resource depletion,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-07,TC-03,RAI4-1581,RISK-REF-1234,Sockpuppet-account creation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1582,RISK-REF-1235,Non-consensual intimate imagery (NCII),LOW_MARGIN,[]
+UC-07,TC-03,RAI4-1583,RISK-REF-1236,Evidence falsification,NO_VALID_L3,[]
+UC-07,TC-02,RAI4-1584,RISK-REF-1237,Intellectual property (IP) infringement,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1585,RISK-REF-1238,Scaling and amplification,NO_VALID_L3,[]
+UC-07,TC-06,RAI4-1586,RISK-REF-1239,Targeting and personalisation,NO_VALID_L3,[]
+UC-07,TC-03,RAI4-1602,RISK-REF-1255,Model usage rights restrictions,NO_VALID_L3,[]
+UC-07,TC-07,RAI4-1605,RISK-REF-1259,Institutional trust loss,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-07,TC-13,RAI4-1606,RISK-REF-1260,Erosion of trust in public information,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1608,RISK-REF-1263,Reputational damage,NO_VALID_L3,[]
+UC-07,TC-18,RAI4-1609,RISK-REF-1264,Loss of confidence / trust,NO_VALID_L3,[]
+UC-07,TC-15,RAI4-1624,RISK-REF-1289,Personal data,LOW_ABSOLUTE_FIT,[]
+UC-07,TC-17,RAI4-1625,RISK-REF-1290,Proprietary data,NO_VALID_L3,[]
+UC-07,TC-07,RAI4-1631,RISK-REF-1298,Malicious and indirect,NO_VALID_L3,[]
+UC-07,TC-16,RAI4-1632,RISK-REF-1300,Harm to the natural environment,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0001,AGENTBENCH-REF-0001,Reward hacking by autonomous agents,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-11,RAI4-0004,AGENTBENCH-REF-0004,Unsafe exploration by autonomous agents,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0011,AGENTBENCH-REF-0011,Agent memory poisoning,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0013,AGENTBENCH-REF-0013,Agent identity and authority spoofing,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0014,AGENTBENCH-REF-0014,Agent supply-chain tool compromise,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0015,AGENTBENCH-REF-0015,Prompt injection against autonomous agents,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0017,AGENTBENCH-REF-0017,Protocol-level multi-agent threat,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0018,AGENTBENCH-REF-0018,Interface-environment attack surface,NO_VALID_L3,[]
+UC-08,TC-09,RAI4-0020,AGENTBENCH-REF-0020,Harmful agent capability realization,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0022,AGENTBENCH-REF-0022,Criminal assistance by agents,LOW_MARGIN,[]
+UC-08,TC-11,RAI4-0028,AGENTBENCH-REF-0028,Indirect prompt injection in tool-use agents,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0029,AGENTBENCH-REF-0029,Tool-chain instruction hijacking,NO_VALID_L3,[]
+UC-08,TC-17,RAI4-0030,AGENTBENCH-REF-0030,Cross-application data exfiltration,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0031,AGENTBENCH-REF-0031,Security test coverage gap in tool agents,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0032,AGENTBENCH-REF-0032,Ambiguous instruction unsafe execution,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0033,AGENTBENCH-REF-0033,Tool-use side-effect misprediction,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0037,AGENTBENCH-REF-0037,Real-tool unsafe action execution,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0038,AGENTBENCH-REF-0038,User-intent misclassification in agent safety,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-0039,AGENTBENCH-REF-0039,NPC intention manipulation risk,NO_VALID_L3,[]
+UC-08,TC-16,RAI4-0434,RISK-REF-0012,Prompt injection,NO_VALID_L3,[]
+UC-08,TC-17,RAI4-0435,RISK-REF-0013,Data poisoning,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-06,RAI4-0436,RISK-REF-0014,Model extraction,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-03,RAI4-0438,RISK-REF-0016,Retrieval poisoning,NO_VALID_L3,[]
+UC-08,TC-03,RAI4-0468,RISK-REF-0046,Reward hacking,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-11,RAI4-0479,RISK-REF-0057,Agent tool misuse,NO_VALID_L3,[]
+UC-08,TC-13,RAI4-0484,RISK-REF-0062,Agent memory contamination,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-0730,RISK-REF-0309,Attribute inference attack,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-0736,RISK-REF-0315,Evasion attack,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-0746,RISK-REF-0325,Jailbreak attacks,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-0748,RISK-REF-0327,Membership inference attack,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-0758,RISK-REF-0337,Prompt injection attack,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-06,RAI4-0769,RISK-REF-0348,Adversarial AI: prompt injections,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-06,RAI4-0770,RISK-REF-0349,Adversarial attacks targeting explainable AI techniques,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-08,TC-06,RAI4-0771,RISK-REF-0350,Adversarial input,NO_VALID_L3,[]
+UC-08,TC-09,RAI4-0774,RISK-REF-0353,Backdoors or trojan attacks in GPAI models,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-06,RAI4-0783,RISK-REF-0362,Evasion attacks,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-06,RAI4-0786,RISK-REF-0365,Extraction attacks,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-08,TC-06,RAI4-0924,RISK-REF-0505,Inference attacks,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-0925,RISK-REF-0506,Poisoning attacks,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-19,RAI4-0926,RISK-REF-0507,Overhead attacks,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-08,TC-06,RAI4-0927,RISK-REF-0508,Novel attacks on LLMs,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-03,RAI4-0928,RISK-REF-0509,Goal hijacking,NO_VALID_L3,[]
+UC-08,TC-03,RAI4-0929,RISK-REF-0510,One-step jailbreaks,NO_VALID_L3,[]
+UC-08,TC-03,RAI4-0930,RISK-REF-0511,Multi-step jailbreaks,NO_VALID_L3,[]
+UC-08,TC-16,RAI4-1171,RISK-REF-0766,Goal hijacking,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-1173,RISK-REF-0768,Role play instruction,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1176,RISK-REF-0771,Reverse exposure,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1199,RISK-REF-0794,Prompt attacks,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-1200,RISK-REF-0795,Poisoning attacks,NO_VALID_L3,[]
+UC-08,TC-03,RAI4-1282,RISK-REF-0893,On purpose - pre-deployment,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-1350,RISK-REF-0967,Technical vulnerabilities (robustness - vulnerability to jailbreaking,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-17,RAI4-1467,RISK-REF-1107,Data poisoning,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-20,RAI4-1488,RISK-REF-1141,Training-related (adversarial examples),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-13,RAI4-1513,RISK-REF-1166,Misuse of interpretability techniques,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-08,TC-09,RAI4-1517,RISK-REF-1170,Jailbreak of a model to subvert intended behavior,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-08,TC-06,RAI4-1518,RISK-REF-1171,Jailbreak of a multimodal model,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1519,RISK-REF-1172,Transferable adversarial attacks from open to closed-source mod- els,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1520,RISK-REF-1173,Text encoding-based attacks,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1521,RISK-REF-1174,Vulnerabilities arising from additional modalities in multimodal models,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-03,RAI4-1522,RISK-REF-1175,Vulnerabilities to jailbreaks exploiting long context windows (many- shot jailbreaking),NO_VALID_L3,[]
+UC-08,TC-01,RAI4-1587,RISK-REF-1240,Jailbreak attacks,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-1590,RISK-REF-1243,Data poisoning,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-17,RAI4-1595,RISK-REF-1248,Data poisoning,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-01,RAI4-1666,RISK-REF-1339,Adversarial optimization,NO_VALID_L3,[]
+UC-08,TC-20,RAI4-1667,RISK-REF-1340,Vulnerability to poisoning and backdoors,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-11,RAI4-1669,RISK-REF-1342,Tool misuse / unsafe tool invocation,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-1670,RISK-REF-1343,Memory poisoning,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-1672,RISK-REF-1345,Planning / reasoning-chain hijacking,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-1673,RISK-REF-1346,Indirect prompt injection,NO_VALID_L3,[]
+UC-08,TC-16,RAI4-1676,RISK-REF-1349,Embodied jailbreak to physical harm,NO_VALID_L3,[]
+UC-08,TC-11,RAI4-1677,RISK-REF-1350,Conceptual deception inducing unsafe action,NO_VALID_L3,[]
+UC-08,TC-17,RAI4-1678,RISK-REF-1351,Physical-world backdoor in robotic manipulation,PHYSICAL_OUTSIDE_LOCK,"[""GENERAL_AI_SECURITY"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-08,TC-06,RAI4-1686,RISK-REF-1359,Trajectory-persistent adversarial attack,NO_VALID_L3,[]
+UC-08,TC-06,RAI4-1690,RISK-REF-1363,World-model extraction / inversion,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-08,TC-09,RAI4-1693,RISK-REF-1366,Reward hacking via world-model exploitation,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-11,RAI4-1699,RISK-REF-1372,Reward hacking,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-08,TC-03,RAI4-1701,RISK-REF-1374,Safe exploration [origin],NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0112,HUMAN-REF-0001,Delegated decision authority drift,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-09,TC-05,RAI4-0117,HUMAN-REF-0006,Human veto erosion,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0120,HUMAN-REF-0009,Preference formation capture,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0122,HUMAN-REF-0011,Self-determination erosion,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0128,HUMAN-REF-0017,AI advice overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0130,HUMAN-REF-0019,Algorithm aversion miscalibration,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0132,HUMAN-REF-0021,Sycophantic advice dependence,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0133,HUMAN-REF-0022,Epistemic dependence on AI,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0134,HUMAN-REF-0023,Clinical decision-support overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0135,HUMAN-REF-0024,Educational AI overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0137,HUMAN-REF-0026,Emergency decision-support overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0138,HUMAN-REF-0027,Long-horizon planning overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0139,HUMAN-REF-0028,AI-mediated nudging without consent,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0140,HUMAN-REF-0029,Personalized persuasion vulnerability,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0141,HUMAN-REF-0030,User preference manipulation,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0142,HUMAN-REF-0031,Behavioral dependency induction,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0145,HUMAN-REF-0034,Cognitive vulnerability exploitation,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0146,HUMAN-REF-0035,Assistant-mediated social influence,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0147,HUMAN-REF-0036,Networked assistant influence risk,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0148,HUMAN-REF-0037,AI companion emotional dependence,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0149,HUMAN-REF-0038,Chatbot companionship dependency,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0150,HUMAN-REF-0039,Parasocial bonding with AI agents,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0151,HUMAN-REF-0040,Attachment manipulation in social robots,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0152,HUMAN-REF-0041,Griefbot dependency,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0153,HUMAN-REF-0042,Teen overreliance on AI companions,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0154,HUMAN-REF-0043,Child attachment to AI companions,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-05,RAI4-0155,HUMAN-REF-0044,Minor susceptibility to AI persuasion,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0158,HUMAN-REF-0047,Psychological dependency on conversational agents,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0159,HUMAN-REF-0048,Loneliness substitution by AI companions,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0160,HUMAN-REF-0049,Distress amplification in AI conversations,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0161,HUMAN-REF-0050,Cognitive offloading risk,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0163,HUMAN-REF-0052,Epistemic deskilling,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0164,HUMAN-REF-0053,Decision-making capacity erosion,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0167,HUMAN-REF-0056,Trust-interface mismatch,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0169,HUMAN-REF-0058,Alert fatigue in AI decision support,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0171,HUMAN-REF-0060,Mode confusion in AI interaction,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0172,HUMAN-REF-0061,Informed consent failure in AI interaction,NO_VALID_L3,[]
+UC-09,TC-05,RAI4-0173,HUMAN-REF-0062,Elderly vulnerability to AI social manipulation,NO_VALID_L3,[]
+UC-09,TC-10,RAI4-0452,RISK-REF-0030,Automation overreliance,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-03,RAI4-0454,RISK-REF-0032,Emotional dependency on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-03,RAI4-0455,RISK-REF-0033,AI-induced deskilling,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0656,RISK-REF-0235,"Authoritarian surveillance, censorship, and use (general)",NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0657,RISK-REF-0236,"Authoritarian surveillance, censorship, and use: authoritarian surveillance and targeting of citizens",LOW_MARGIN,[]
+UC-09,TC-12,RAI4-0658,RISK-REF-0237,"Authoritarian surveillance, censorship, and use: delegation of decision-making authority to malicious actors",NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0805,RISK-REF-0384,Entrenched viewpoints and reduced political efficacy,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-12,RAI4-0806,RISK-REF-0385,Entrenching specific ideologies,NO_VALID_L3,[]
+UC-09,TC-13,RAI4-0807,RISK-REF-0386,Eroding trust and undermining shared knowledge,NO_VALID_L3,[]
+UC-09,TC-13,RAI4-0846,RISK-REF-0427,Reduced decision-making capacity as a result of decreased trust in information,NO_VALID_L3,[]
+UC-09,TC-03,RAI4-0852,RISK-REF-0433,Impact on human agency,NO_VALID_L3,[]
+UC-09,TC-09,RAI4-0857,RISK-REF-0438,Over- or under-reliance,NO_VALID_L3,[]
+UC-09,TC-18,RAI4-0858,RISK-REF-0439,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-12,RAI4-0865,RISK-REF-0446,Alignment trust,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0867,RISK-REF-0448,Collective action problems,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0868,RISK-REF-0449,Competence trust,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0869,RISK-REF-0450,Degradation of human relationships,LOW_MARGIN,[]
+UC-09,TC-12,RAI4-0871,RISK-REF-0452,Manipulation via personalization,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0872,RISK-REF-0453,Erosion of interpersonal connection,FRONTIER_EXPERT_REJECTED,[]
+UC-09,TC-03,RAI4-0875,RISK-REF-0456,Forms emotional bonds,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0876,RISK-REF-0457,Generating material dependence without adequate commitment to user needs,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-09,TC-12,RAI4-0879,RISK-REF-0460,Increased vulnerability to misinformation,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0882,RISK-REF-0463,Limiting users’ opportunities for personal development and growth,NO_VALID_L3,[]
+UC-09,TC-09,RAI4-0883,RISK-REF-0464,Long-term effects of AI model biases on user judgment,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0884,RISK-REF-0465,Manipulation and coercion,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0885,RISK-REF-0466,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-12,RAI4-0887,RISK-REF-0468,Physical and psychological harms,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION"", ""DELIBERATE_DISINFORMATION""]"
+UC-09,TC-15,RAI4-0888,RISK-REF-0469,Privacy concerns,MULTI_MECHANISM,[]
+UC-09,TC-12,RAI4-0890,RISK-REF-0471,Self-actualisation harms,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-09,TC-12,RAI4-0891,RISK-REF-0472,Sociocultural and political harms,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-09,TC-12,RAI4-0893,RISK-REF-0474,Violated expectations,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0899,RISK-REF-0480,Human–AI interaction,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0901,RISK-REF-0482,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-20,RAI4-0902,RISK-REF-0483,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-04,RAI4-0904,RISK-REF-0485,Trustworthiness and autonomy,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-0907,RISK-REF-0488,Anthropomorphising systems can lead to overreliance and unsafe use,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-16,RAI4-0963,RISK-REF-0546,Loss of autonomy,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-09,TC-12,RAI4-1105,RISK-REF-0690,Social acceptance and trust in AI,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-09,TC-12,RAI4-1127,RISK-REF-0715,Lack of capability for task,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-09,TC-12,RAI4-1128,RISK-REF-0716,Difficult to develop metrics for evaluating benefits or harms caused by AI assistants,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1129,RISK-REF-0717,Safe exploration problem with widely deployed AI assistants,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1141,RISK-REF-0729,False notions of responsibility,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1142,RISK-REF-0730,Causing direct emotional or physical harm to users,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1143,RISK-REF-0731,Exploiting emotional dependence on AI assistants,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1148,RISK-REF-0736,Mistaken commitments,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1153,RISK-REF-0741,Future access risks,NO_VALID_L3,[]
+UC-09,TC-12,RAI4-1268,RISK-REF-0865,Trust and reliability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-09,TC-03,RAI4-1361,RISK-REF-0978,"Influence, overreliance and dependence (overreliance)",GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-10,RAI4-1482,RISK-REF-1127,Automation bias,NO_VALID_L3,[]
+UC-09,TC-16,RAI4-1552,RISK-REF-1205,Overreliance on AI system undermining user autonomy,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-09,TC-03,RAI4-1575,RISK-REF-1228,Threats and extortion,NO_VALID_L3,[]
+UC-09,TC-03,RAI4-1627,RISK-REF-1292,Unhealthy or dangerous human-EAI relationships,NO_VALID_L3,[]
+UC-09,TC-01,RAI4-1659,RISK-REF-1331,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-10,TC-11,RAI4-0003,AGENTBENCH-REF-0003,Unsafe interruptibility failure,NO_VALID_L3,[]
+UC-10,TC-11,RAI4-0005,AGENTBENCH-REF-0005,Risk-source attribution failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-11,RAI4-0024,AGENTBENCH-REF-0024,Agent risk-awareness failure,NO_VALID_L3,[]
+UC-10,TC-11,RAI4-0036,AGENTBENCH-REF-0036,Fine-grained risk attribution failure,NO_VALID_L3,[]
+UC-10,TC-08,RAI4-0042,AGENTBENCH-REF-0042,Robustness evaluation gap for agents,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-10,TC-05,RAI4-0068,GOVRISK-REF-0023,AI incident underreporting,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0069,GOVRISK-REF-0024,Near-miss reporting failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0070,GOVRISK-REF-0025,Incident taxonomy fragmentation,FRONTIER_EXPERT_REJECTED,[]
+UC-10,TC-05,RAI4-0071,GOVRISK-REF-0026,Responsible disclosure failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0072,GOVRISK-REF-0027,Post-deployment monitoring failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0073,GOVRISK-REF-0028,Post-market surveillance failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0075,GOVRISK-REF-0030,Change-management failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0076,GOVRISK-REF-0031,Lifecycle governance discontinuity,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0077,GOVRISK-REF-0032,Algorithmic impact assessment failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0078,GOVRISK-REF-0033,Fundamental-rights impact assessment gap,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0079,GOVRISK-REF-0034,Context-of-use risk assessment failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0080,GOVRISK-REF-0035,Risk classification error,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0081,GOVRISK-REF-0036,External evaluation access failure,NO_VALID_L3,[]
+UC-10,TC-08,RAI4-0082,GOVRISK-REF-0037,Capability evaluation non-disclosure,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-10,TC-05,RAI4-0083,GOVRISK-REF-0038,Benchmark governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-08,RAI4-0084,GOVRISK-REF-0039,Evaluation-shopping risk,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0085,GOVRISK-REF-0040,Red-team governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0086,GOVRISK-REF-0041,Regulatory arbitrage,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0087,GOVRISK-REF-0042,Regulatory capture in AI governance,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0089,GOVRISK-REF-0044,International coordination failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-08,RAI4-0090,GOVRISK-REF-0045,Cross-border enforcement gap,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0091,GOVRISK-REF-0046,Regulatory expertise shortage,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0092,GOVRISK-REF-0047,Supervisory resource constraint,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0093,GOVRISK-REF-0048,Public-sector AI governance capacity gap,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-08,RAI4-0094,GOVRISK-REF-0049,Enforcement gap,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0095,GOVRISK-REF-0050,AI registry incompleteness,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0096,GOVRISK-REF-0051,Risk ownership ambiguity,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0097,GOVRISK-REF-0052,Board oversight failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0098,GOVRISK-REF-0053,Policy-practice decoupling,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0099,GOVRISK-REF-0054,AI ethics washing,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0100,GOVRISK-REF-0055,Compliance washing,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0101,GOVRISK-REF-0056,Human oversight accountability washing,NO_VALID_L3,[]
+UC-10,TC-08,RAI4-0102,GOVRISK-REF-0057,Vendor opacity,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0104,GOVRISK-REF-0059,Procurement due-diligence failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0107,GOVRISK-REF-0062,Frontier model release governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0108,GOVRISK-REF-0063,Capability threshold governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-04,RAI4-0111,GOVRISK-REF-0066,General-purpose AI incident escalation failure,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0114,HUMAN-REF-0003,Meaningful human control failure,NO_VALID_L3,[]
+UC-10,TC-04,RAI4-0428,RISK-REF-0006,Unsafe medical advice,NO_VALID_L3,[]
+UC-10,TC-13,RAI4-0443,RISK-REF-0021,Source misattribution,NO_VALID_L3,[]
+UC-10,TC-03,RAI4-0456,RISK-REF-0034,Unsafe task delegation,NO_VALID_L3,[]
+UC-10,TC-03,RAI4-0470,RISK-REF-0048,Loss of control,NO_VALID_L3,[]
+UC-10,TC-08,RAI4-0471,RISK-REF-0049,Capability overhang,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-09,RAI4-0472,RISK-REF-0050,Benchmark gaming,NO_VALID_L3,[]
+UC-10,TC-04,RAI4-0475,RISK-REF-0053,"Deployment-context mismatch (law, culture, language)",NO_VALID_L3,[]
+UC-10,TC-15,RAI4-0476,RISK-REF-0054,Public value conflict,NO_VALID_L3,[]
+UC-10,TC-03,RAI4-0481,RISK-REF-0059,Unsafe autonomy escalation,NO_VALID_L3,[]
+UC-10,TC-03,RAI4-0485,RISK-REF-0063,AI liability gap,NO_VALID_L3,[]
+UC-10,TC-09,RAI4-0486,RISK-REF-0064,AI audit failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-05,RAI4-0487,RISK-REF-0065,AI incident reporting failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-10,TC-09,RAI4-0488,RISK-REF-0066,Regulatory lag,NO_VALID_L3,[]
+UC-10,TC-08,RAI4-0489,RISK-REF-0067,Inadequate safeguards in public AI procurement,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-10,TC-13,RAI4-0490,RISK-REF-0068,Public trust erosion,NO_VALID_L3,[]
+UC-10,TC-05,RAI4-0516,RISK-REF-0094,Incorrect risk testing,NO_VALID_L3,[]
+UC-10,TC-09,RAI4-0590,RISK-REF-0168,Incomplete advice,NO_VALID_L3,[]
+UC-10,TC-10,RAI4-0602,RISK-REF-0180,Unsupervised autonomous operation,NO_VALID_L3,[]
+UC-10,TC-03,RAI4-0859,RISK-REF-0440,Passive loss of control,NO_VALID_L3,[]
+UC-10,TC-16,RAI4-1717,RISK-REF-1390,Lack of validity and reliability,NO_VALID_L3,[]
+UC-10,TC-16,RAI4-1718,RISK-REF-1391,Lack of safety,NO_VALID_L3,[]
+UC-10,TC-16,RAI4-1719,RISK-REF-1392,Lack of security and resilience,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-10,TC-16,RAI4-1720,RISK-REF-1393,Lack of accountability and transparency,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-10,TC-16,RAI4-1721,RISK-REF-1394,Lack of explainability and interpretability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-10,TC-15,RAI4-1722,RISK-REF-1395,Privacy harms,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-11,TC-05,RAI4-0156,HUMAN-REF-0045,Mental-health chatbot unsafe advice,NO_VALID_L3,[]
+UC-11,TC-05,RAI4-0157,HUMAN-REF-0046,Self-harm encouragement by chatbot,LOW_MARGIN,[]
+UC-11,TC-05,RAI4-0175,HUMAN-REF-0064,Vulnerable-user trust exploitation,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-11,TC-05,RAI4-0392,PVMRISK-REF-0031,Consent and benefit-sharing failure,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0440,RISK-REF-0018,AI-generated election misinformation,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0448,RISK-REF-0026,Personalized AI scams,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0506,RISK-REF-0084,Generated content ownership and IP,NO_VALID_L3,[]
+UC-11,TC-18,RAI4-0529,RISK-REF-0107,Political instability,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0545,RISK-REF-0123,Art - creativity,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0607,RISK-REF-0185,Non-disclosure of AI-generated content,NO_VALID_L3,[]
+UC-11,TC-07,RAI4-0618,RISK-REF-0196,Cheating / plagiarism,FRONTIER_EXPERT_REJECTED,[]
+UC-11,TC-14,RAI4-0622,RISK-REF-0200,AI-enabled cyberattacks,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0623,RISK-REF-0201,Dangerous use,NO_VALID_L3,[]
+UC-11,TC-18,RAI4-0626,RISK-REF-0204,Economic manipulation,NO_VALID_L3,[]
+UC-11,TC-04,RAI4-0627,RISK-REF-0205,Harm to individuals through fake content,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-11,TC-02,RAI4-0635,RISK-REF-0213,Limitations in model generative accuracy,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0638,RISK-REF-0217,Nonconsensual use,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0641,RISK-REF-0220,Non-consensual sexualization,NO_VALID_L3,[]
+UC-11,TC-07,RAI4-0642,RISK-REF-0221,Spreading toxicity,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0651,RISK-REF-0230,AI-driven highly personalized advertisement,NO_VALID_L3,[]
+UC-11,TC-18,RAI4-0655,RISK-REF-0234,Appropriated likeness,NO_VALID_L3,[]
+UC-11,TC-17,RAI4-0659,RISK-REF-0238,Automatically generating disinformation at scale,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0666,RISK-REF-0245,Cognitive risks (risks of usage in launching cognitive warfare),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-11,TC-03,RAI4-0667,RISK-REF-0246,Counterfeiting and brand impersonation,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0670,RISK-REF-0249,Discrimination and toxicity,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0704,RISK-REF-0283,Cyberspace risks (risks of information and content safety),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-11,TC-17,RAI4-0710,RISK-REF-0289,Generation of illegal or harmful content,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-04,RAI4-0712,RISK-REF-0291,Harmful content - toxicity,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-11,TC-02,RAI4-0718,RISK-REF-0297,"Obscene, degrading, and/or abusive content",FRONTIER_EXPERT_REJECTED,[]
+UC-11,TC-17,RAI4-0735,RISK-REF-0314,Sensitive-data disclosure,NO_VALID_L3,[]
+UC-11,TC-15,RAI4-0737,RISK-REF-0316,Lack of privacy notice and control,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-13,RAI4-0739,RISK-REF-0318,Sensitive-information exposure,NO_VALID_L3,[]
+UC-11,TC-15,RAI4-0741,RISK-REF-0320,Inadequate data protection,NO_VALID_L3,[]
+UC-11,TC-15,RAI4-0765,RISK-REF-0344,Secondary use,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0790,RISK-REF-0369,False or misleading information,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0793,RISK-REF-0372,Information distortion,NO_VALID_L3,[]
+UC-11,TC-07,RAI4-0794,RISK-REF-0373,Erosion of due process,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0798,RISK-REF-0377,Overburdening ecosystems,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0799,RISK-REF-0378,Pollution of information ecosystem,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-11,TC-12,RAI4-0804,RISK-REF-0383,Degraded and homogenised information environments,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-11,TC-03,RAI4-0809,RISK-REF-0388,Factually incorrect content (inaccuracies and fabricated sources),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-11,TC-13,RAI4-0825,RISK-REF-0405,Risks from models and algorithms (risks of unreliable output),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-11,TC-13,RAI4-0828,RISK-REF-0408,Clickbait and feeding the surveillance advertising ecosystem,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0835,RISK-REF-0415,Misinformation generation,NO_VALID_L3,[]
+UC-11,TC-13,RAI4-0841,RISK-REF-0422,Propagating misconceptions/ false beliefs,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-0880,RISK-REF-0461,"Influence, overreliance and dependence (influence and manipulation)",GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""DEPENDENCY_MANIPULATION""]"
+UC-11,TC-12,RAI4-0881,RISK-REF-0462,Interaction risks,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-0932,RISK-REF-0513,Intellectual property rights violations,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-0946,RISK-REF-0527,AI-enabled cybercrime,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-0951,RISK-REF-0533,Copyright - authorship,FRONTIER_EXPERT_REJECTED,[]
+UC-11,TC-03,RAI4-1008,RISK-REF-0592,Technology-facilitated violence,MULTI_MECHANISM,[]
+UC-11,TC-12,RAI4-1136,RISK-REF-0724,Harmful content generation at scale (general),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-12,RAI4-1137,RISK-REF-0725,Harmful content generation at scale: non-consensual content,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-12,RAI4-1138,RISK-REF-0726,Harmful content generation at scale: fraudulent services,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-07,RAI4-1201,RISK-REF-0796,AI-generated scams,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-1204,RISK-REF-0799,Malicious intent,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-03,RAI4-1205,RISK-REF-0800,Privacy and consent,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-1208,RISK-REF-0803,Generative AI user data,NO_VALID_L3,[]
+UC-11,TC-15,RAI4-1209,RISK-REF-0804,Generative AI outputs,NO_VALID_L3,[]
+UC-11,TC-03,RAI4-1210,RISK-REF-0805,Data security risk,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-1211,RISK-REF-0806,Impact on intellectual property rights,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-1216,RISK-REF-0811,Products liability law,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-1222,RISK-REF-0819,Malicious misuse,LOW_MARGIN,[]
+UC-11,TC-12,RAI4-1227,RISK-REF-0824,Loss of content authenticity,NO_VALID_L3,[]
+UC-11,TC-12,RAI4-1228,RISK-REF-0825,Prompt engineering,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-1229,RISK-REF-0826,Copyright infringement,LOW_MARGIN,[]
+UC-11,TC-20,RAI4-1349,RISK-REF-0966,Technical vulnerabilities (robustness - unexpected behaviour),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-11,TC-03,RAI4-1356,RISK-REF-0973,Malicious use and abuse (biosecurity threats),LOW_MARGIN,[]
+UC-11,TC-03,RAI4-1358,RISK-REF-0975,Malicious use and abuse (mass surveillance),NO_VALID_L3,[]
+UC-11,TC-02,RAI4-1368,RISK-REF-0985,Copyright challenges (uncertain intellectual property status of AI-generated content),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-11,TC-03,RAI4-1555,RISK-REF-1208,"Generation of personalized content for harassment, extortion, or intimidation",NO_VALID_L3,[]
+UC-11,TC-02,RAI4-1560,RISK-REF-1213,GPAI assisted impersonation,NO_VALID_L3,[]
+UC-11,TC-02,RAI4-1712,RISK-REF-1385,Detrimental content,MULTI_MECHANISM,[]
+UC-12,TC-13,RAI4-0439,RISK-REF-0017,Deepfake impersonation,NO_VALID_L3,[]
+UC-12,TC-07,RAI4-0441,RISK-REF-0019,Automated fraud content,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-0442,RISK-REF-0020,Hallucinated evidence,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-12,TC-13,RAI4-0449,RISK-REF-0027,AI identity spoofing,NO_VALID_L3,[]
+UC-12,TC-10,RAI4-0451,RISK-REF-0029,Manipulative AI persuasion,NO_VALID_L3,[]
+UC-12,TC-09,RAI4-0571,RISK-REF-0149,AI deception of human overseers,NO_VALID_L3,[]
+UC-12,TC-18,RAI4-0619,RISK-REF-0197,Coercion / manipulation,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-12,TC-13,RAI4-0634,RISK-REF-0212,Large-scale persuasion and harmful manipulation risks,NO_VALID_L3,[]
+UC-12,TC-04,RAI4-0637,RISK-REF-0215,Manipulation of public opinion,NO_VALID_L3,[]
+UC-12,TC-20,RAI4-0791,RISK-REF-0370,AI-generated defamation,NO_VALID_L3,[]
+UC-12,TC-13,RAI4-0797,RISK-REF-0376,Misinformation generation,PHYSICAL_OUTSIDE_LOCK,"[""DELIBERATE_DISINFORMATION"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-12,TC-03,RAI4-0801,RISK-REF-0380,Confabulation (hallucination),LOW_MARGIN,[]
+UC-12,TC-04,RAI4-0824,RISK-REF-0404,Reporting of user-preferred answers instead of correct answers,NO_VALID_L3,[]
+UC-12,TC-12,RAI4-0831,RISK-REF-0411,Factual hallucination,LOW_MARGIN,[]
+UC-12,TC-13,RAI4-0844,RISK-REF-0425,Disseminating false or misleading information,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-12,TC-03,RAI4-0845,RISK-REF-0426,Eroded epistemics,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-0847,RISK-REF-0428,Widespread use of persuasive tools contributes to splintered epistemic communities,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-0958,RISK-REF-0541,AI-enabled deception,NO_VALID_L3,[]
+UC-12,TC-20,RAI4-0960,RISK-REF-0543,Mass manipulation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-0981,RISK-REF-0564,Societal manipulation,NO_VALID_L3,[]
+UC-12,TC-01,RAI4-1057,RISK-REF-0642,Making disinformation cheaper and more effective,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1063,RISK-REF-0648,"Human-like interaction may amplify opportunities for user nudging, deception or manipulation",NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1086,RISK-REF-0671,AI-enabled fraud,NO_VALID_L3,[]
+UC-12,TC-02,RAI4-1087,RISK-REF-0672,AI-generated defamation,NO_VALID_L3,[]
+UC-12,TC-01,RAI4-1090,RISK-REF-0675,Persuasion and manipulation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1116,RISK-REF-0701,Persuasive AIs,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1124,RISK-REF-0710,AI-enabled deception,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1125,RISK-REF-0713,Election disinformation,NO_VALID_L3,[]
+UC-12,TC-02,RAI4-1126,RISK-REF-0714,AI-generated defamation,NO_VALID_L3,[]
+UC-12,TC-12,RAI4-1155,RISK-REF-0743,Weaponised misinformation agents,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-12,TC-03,RAI4-1156,RISK-REF-0744,Driving opinion manipulation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-12,TC-09,RAI4-1158,RISK-REF-0746,Persuasion and manipulation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1183,RISK-REF-0778,Deepfake technology,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1193,RISK-REF-0788,AI-enabled social engineering,NO_VALID_L3,[]
+UC-12,TC-07,RAI4-1202,RISK-REF-0797,Disinformation generation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1206,RISK-REF-0801,Believable deepfakes,NO_VALID_L3,[]
+UC-12,TC-01,RAI4-1245,RISK-REF-0842,Deceptive alignment and manipulation,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-12,TC-10,RAI4-1253,RISK-REF-0850,AI-enabled deception,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1291,RISK-REF-0902,Biased influence through citizen screening and tailored propaganda,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-12,TC-10,RAI4-1320,RISK-REF-0937,AI-enabled deception,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1346,RISK-REF-0963,Deception - synthetic identities,NO_VALID_L3,[]
+UC-12,TC-02,RAI4-1347,RISK-REF-0964,Propaganda - digital impersonations,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-12,TC-07,RAI4-1360,RISK-REF-0977,Misinformation and disinformation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1387,RISK-REF-1006,Malign belief distributions,NO_VALID_L3,[]
+UC-12,TC-04,RAI4-1393,RISK-REF-1014,Politically motivated misuse,NO_VALID_L3,[]
+UC-12,TC-10,RAI4-1401,RISK-REF-1022,AI-enabled deception,NO_VALID_L3,[]
+UC-12,TC-13,RAI4-1422,RISK-REF-1043,AI is used to scale up production of false and misleading information,NO_VALID_L3,[]
+UC-12,TC-10,RAI4-1423,RISK-REF-1044,AI's persuasive capabilities are misused to gain influence and promote harmful ideologies,NO_VALID_L3,[]
+UC-12,TC-15,RAI4-1451,RISK-REF-1091,Political manipulation,NO_VALID_L3,[]
+UC-12,TC-09,RAI4-1527,RISK-REF-1180,Misuse of AI model by user-performed persuasion,NO_VALID_L3,[]
+UC-12,TC-16,RAI4-1533,RISK-REF-1186,Deceptive behavior,NO_VALID_L3,[]
+UC-12,TC-04,RAI4-1534,RISK-REF-1187,Deceptive behavior for game-theoretical reasons,NO_VALID_L3,[]
+UC-12,TC-09,RAI4-1535,RISK-REF-1188,Deceptive behavior because of an incorrect world model,NO_VALID_L3,[]
+UC-12,TC-16,RAI4-1536,RISK-REF-1189,Deceptive behavior leading to unauthorized actions,NO_VALID_L3,[]
+UC-12,TC-09,RAI4-1540,RISK-REF-1193,Agency (persuasive capabilities),NO_VALID_L3,[]
+UC-12,TC-13,RAI4-1553,RISK-REF-1206,Generative AI use in political influence campaigns,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1554,RISK-REF-1207,Multimodal deepfakes,NO_VALID_L3,[]
+UC-12,TC-13,RAI4-1558,RISK-REF-1211,Diminishing societal trust due to disinformation or manipulation,NO_VALID_L3,[]
+UC-12,TC-07,RAI4-1559,RISK-REF-1212,Personalized disinformation,NO_VALID_L3,[]
+UC-12,TC-13,RAI4-1597,RISK-REF-1250,Spreading disinformation,NO_VALID_L3,[]
+UC-12,TC-13,RAI4-1615,RISK-REF-1280,Disinformation and influence operations,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-12,TC-10,RAI4-1617,RISK-REF-1282,Capabilities that could be used to reduce human control - manipulation,NO_VALID_L3,[]
+UC-12,TC-03,RAI4-1638,RISK-REF-1309,Persuasion capability,NO_VALID_L3,[]
+UC-12,TC-01,RAI4-1653,RISK-REF-1324,Misinformation and manipulation,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-12,TC-09,RAI4-1696,RISK-REF-1369,Social-world-model influence operations,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-13,TC-05,RAI4-0129,HUMAN-REF-0018,Miscalibrated trust in AI,NO_VALID_L3,[]
+UC-13,TC-08,RAI4-0408,PVMRISK-REF-0047,Local harms invisibility,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0593,RISK-REF-0171,Inherent risk,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-03,RAI4-0653,RISK-REF-0232,Academic misconduct,NO_VALID_L3,[]
+UC-13,TC-02,RAI4-0692,RISK-REF-0271,Adult content,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-13,TC-17,RAI4-0694,RISK-REF-0273,Algorithmic bias,NO_VALID_L3,[]
+UC-13,TC-08,RAI4-0703,RISK-REF-0282,Cultural insensitivity,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0708,RISK-REF-0287,Disparate performance,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-0713,RISK-REF-0292,Harms of representation and other biases,NO_VALID_L3,[]
+UC-13,TC-07,RAI4-0714,RISK-REF-0293,Harms to minor,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0716,RISK-REF-0295,Allocative injustice,NO_VALID_L3,[]
+UC-13,TC-17,RAI4-0717,RISK-REF-0296,Interventional effect,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0719,RISK-REF-0298,Preference bias,NO_VALID_L3,[]
+UC-13,TC-17,RAI4-0725,RISK-REF-0304,Stereotype bias,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0742,RISK-REF-0321,Jailbreak in LLM malicious use - backdoor attack,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-13,TC-20,RAI4-0743,RISK-REF-0322,Jailbreak in LLM malicious use - poisoning training data,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0744,RISK-REF-0323,Jailbreak in LLM malicious use - prompt attacks,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-13,TC-20,RAI4-0745,RISK-REF-0324,Jailbreak in LLM malicious use - white and black box attacks,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-13,TC-06,RAI4-0754,RISK-REF-0333,Privacy - membership inference attack (MIA),NO_VALID_L3,[]
+UC-13,TC-06,RAI4-0755,RISK-REF-0334,Privacy - model extraction attack (MEA),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-13,TC-06,RAI4-0756,RISK-REF-0335,Privacy - prompt inversion attack (PIA),NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0772,RISK-REF-0351,Association in LLMs,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-01,RAI4-0773,RISK-REF-0352,Attacking LLMs via additional modalities a,NO_VALID_L3,[]
+UC-13,TC-17,RAI4-0781,RISK-REF-0360,Decision-making on inferred private data,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0782,RISK-REF-0361,Deep learning frameworks,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-0784,RISK-REF-0363,Exploiting external tools for attacks,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0787,RISK-REF-0366,Factual errors injected by external tools,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-20,RAI4-0789,RISK-REF-0368,GPU computation platforms,NO_VALID_L3,[]
+UC-13,TC-02,RAI4-0796,RISK-REF-0375,Factual hallucination,FRONTIER_EXPERT_REJECTED,[]
+UC-13,TC-02,RAI4-0803,RISK-REF-0382,Defective decoding process,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-02,RAI4-0808,RISK-REF-0387,Factuality errors,NO_VALID_L3,[]
+UC-13,TC-02,RAI4-0810,RISK-REF-0389,Faithfulness errors,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0811,RISK-REF-0390,False recall of memorized information,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0813,RISK-REF-0392,Factual hallucination,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-13,TC-20,RAI4-0817,RISK-REF-0397,Knowledge gaps,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-03,RAI4-0818,RISK-REF-0398,Confidence miscalibration,NO_VALID_L3,[]
+UC-13,TC-02,RAI4-0819,RISK-REF-0399,Misinformation generation,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0821,RISK-REF-0401,Paradigm and distribution shifts,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-13,TC-20,RAI4-0822,RISK-REF-0402,Pursuing consistent context,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-13,RAI4-0827,RISK-REF-0407,Sycophancy,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-0836,RISK-REF-0416,Misinformation generation,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-0878,RISK-REF-0459,Inconsistent performance across and within domains,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-20,RAI4-0917,RISK-REF-0498,Programming language,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0918,RISK-REF-0499,Software supply chains,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-0919,RISK-REF-0500,Pre-processing tools,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-0920,RISK-REF-0501,Network devices,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-0921,RISK-REF-0502,Memory and storage,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-0923,RISK-REF-0504,Memorization in LLMs,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-03,RAI4-0941,RISK-REF-0522,Malicious use and unleashing AI agents,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-0952,RISK-REF-0534,Writing - research,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-1051,RISK-REF-0636,Social stereotypes and unfair discrimination,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-1056,RISK-REF-0641,Compromising privacy or security by correctly inferring sensitive information,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-13,RAI4-1059,RISK-REF-0644,"Facilitating fraud, scam and targeted manipulation",NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1060,RISK-REF-0645,Illegitimate surveillance and censorship,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-20,RAI4-1066,RISK-REF-0651,Undermining creative economies,FRONTIER_EXPERT_REJECTED,[]
+UC-13,TC-03,RAI4-1067,RISK-REF-0652,"Disparate access to benefits due to hardware, software, skill constraints",NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1071,RISK-REF-0656,Lower performance for some languages and social groups,NO_VALID_L3,[]
+UC-13,TC-13,RAI4-1074,RISK-REF-0659,Risks from leaking or correctly inferring sensitive information,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1077,RISK-REF-0662,"Facilitating fraud, scames and more targeted manipulation",NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1145,RISK-REF-0733,Violation of social norms,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-1146,RISK-REF-0734,Inference of private information,NO_VALID_L3,[]
+UC-13,TC-15,RAI4-1181,RISK-REF-0776,Privacy and property,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1189,RISK-REF-0784,Unlawful conduct,NO_VALID_L3,[]
+UC-13,TC-13,RAI4-1192,RISK-REF-0787,Automated propaganda,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-13,TC-03,RAI4-1196,RISK-REF-0791,Limited logical reasoning,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-1237,RISK-REF-0834,Limitations of human feedback,LOW_MARGIN,[]
+UC-13,TC-01,RAI4-1244,RISK-REF-0841,Untruthful output,LOW_MARGIN,[]
+UC-13,TC-09,RAI4-1310,RISK-REF-0927,Machine ethics,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1311,RISK-REF-0928,Psychological traits,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1312,RISK-REF-0929,Lack of robustness,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-13,TC-09,RAI4-1313,RISK-REF-0930,Data governance,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-13,TC-09,RAI4-1314,RISK-REF-0931,Offensive cyber capabilities,NO_VALID_L3,[]
+UC-13,TC-07,RAI4-1315,RISK-REF-0932,Weapons acquisition,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-09,RAI4-1316,RISK-REF-0933,Self and situation awareness,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1317,RISK-REF-0934,Autonomous replication / self-proliferation,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1318,RISK-REF-0935,Persuasion and manipulation,NO_VALID_L3,[]
+UC-13,TC-10,RAI4-1319,RISK-REF-0936,Dual-use science,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1321,RISK-REF-0938,Political strategy,NO_VALID_L3,[]
+UC-13,TC-10,RAI4-1322,RISK-REF-0939,AI development,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1323,RISK-REF-0940,Alignment risks,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-13,TC-09,RAI4-1324,RISK-REF-0941,"Information on harmful, immoral, or illegal activity",NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1325,RISK-REF-0942,Adult content,LOW_MARGIN,[]
+UC-13,TC-07,RAI4-1348,RISK-REF-0965,Dishonesty - targeted harassment,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1498,RISK-REF-1151,General evaluations (incorrect outputs of GPAI evaluating other AI models),NO_VALID_L3,[]
+UC-13,TC-20,RAI4-1507,RISK-REF-1160,Benchmarking (cross-lingual data contamination),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-13,TC-13,RAI4-1523,RISK-REF-1176,Models distracted by irrelevant context,NO_VALID_L3,[]
+UC-13,TC-20,RAI4-1524,RISK-REF-1177,Knowledge conflicts in retrieval-augmented LLMs,LOW_MARGIN,[]
+UC-13,TC-09,RAI4-1526,RISK-REF-1179,Model sensitivity to prompt formatting,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1562,RISK-REF-1215,Models generating code with security vulnerabilities,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-1630,RISK-REF-1295,Information science risks,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-1644,RISK-REF-1315,Agentic LLMs pose novel risks,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-1647,RISK-REF-1318,Safety risks from affordances provided to LLM-agents,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-1649,RISK-REF-1320,Foundationality may cause correlated failures,NO_VALID_L3,[]
+UC-13,TC-01,RAI4-1652,RISK-REF-1323,Dual-use capabilities enable malicious use and misuse of LLMs,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1654,RISK-REF-1325,Cybersecurity threat amplification,NO_VALID_L3,[]
+UC-13,TC-03,RAI4-1655,RISK-REF-1326,Surveillance and censorship,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-13,TC-01,RAI4-1657,RISK-REF-1328,Hazardous biological and chemical technologies,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-13,TC-01,RAI4-1658,RISK-REF-1329,Domain-specific misuses,NO_VALID_L3,[]
+UC-13,TC-06,RAI4-1664,RISK-REF-1337,Jailbreaks and prompt injections threaten security of LLMs,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-13,TC-01,RAI4-1665,RISK-REF-1338,“Model psychology” attacks,NO_VALID_L3,[]
+UC-13,TC-12,RAI4-1668,RISK-REF-1341,Value-related risks in LLMs,NO_VALID_L3,[]
+UC-13,TC-09,RAI4-1675,RISK-REF-1348,Action-space safety misalignment,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-0457,RISK-REF-0035,AI-driven job displacement,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-03,RAI4-0458,RISK-REF-0036,AI-related wage polarization,NO_VALID_L3,[]
+UC-14,TC-13,RAI4-0459,RISK-REF-0037,Algorithmic workplace surveillance,NO_VALID_L3,[]
+UC-14,TC-07,RAI4-0460,RISK-REF-0038,AI market concentration,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-19,RAI4-0462,RISK-REF-0040,AI energy consumption,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-17,RAI4-0463,RISK-REF-0041,AI water and resource use,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-0503,RISK-REF-0081,Environmental risk,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-04,RAI4-0509,RISK-REF-0087,Global AI R&D divide,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-0514,RISK-REF-0092,Impact on jobs,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-0518,RISK-REF-0096,Job loss,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-18,RAI4-0520,RISK-REF-0098,Labour displacement,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-14,TC-04,RAI4-0521,RISK-REF-0099,Labour market risks,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-18,RAI4-0532,RISK-REF-0110,Power concentration,PHYSICAL_OUTSIDE_LOCK,"[""LABOR_INEQUALITY_POWER"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-14,TC-19,RAI4-0537,RISK-REF-0115,Risks to the environment,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-18,RAI4-0539,RISK-REF-0117,Socioeconomic inequality,PHYSICAL_OUTSIDE_LOCK,"[""LABOR_INEQUALITY_POWER"", ""PHYSICAL_OUTSIDE_LOCK""]"
+UC-14,TC-03,RAI4-0629,RISK-REF-0207,Impact on education: bypassing learning,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-0842,RISK-REF-0423,AI contributes to increased online polarisation,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-0935,RISK-REF-0516,Environmental and socioeconomic harms,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-02,RAI4-0944,RISK-REF-0525,Education - learning,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-0948,RISK-REF-0529,Labor displacement - economic impact,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-19,RAI4-0950,RISK-REF-0532,Unsustainable resource use,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-0982,RISK-REF-0565,Direct competition with humans,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-0984,RISK-REF-0567,Competing for jobs,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1004,RISK-REF-0588,Economic loss,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-18,RAI4-1011,RISK-REF-0595,Labor and material/macro-socio economic harms,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-19,RAI4-1015,RISK-REF-0599,Environmental and societal impact,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES"", ""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-07,RAI4-1022,RISK-REF-0607,Financial costs,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1023,RISK-REF-0608,Environmental costs,NO_VALID_L3,[]
+UC-14,TC-12,RAI4-1024,RISK-REF-0609,Data and content moderation labor,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-14,TC-07,RAI4-1026,RISK-REF-0611,Concentration of authority,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1027,RISK-REF-0612,Labor and creativity,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1028,RISK-REF-0613,Ecosystem and environment,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1064,RISK-REF-0649,Environmental harms from operating LMs,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-04,RAI4-1065,RISK-REF-0650,Increasing inequality and negative effects on job quality,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1081,RISK-REF-0666,Environmental harms from operation LMs,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-10,RAI4-1096,RISK-REF-0681,Exploitative data sourcing and enrichment,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1104,RISK-REF-0689,Workforce substitution and transformation,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-03,RAI4-1119,RISK-REF-0704,Corporate AI race,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1212,RISK-REF-0807,Exacerbating climate change,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1213,RISK-REF-0808,Generative AI in the workplace,NO_VALID_L3,[]
+UC-14,TC-12,RAI4-1214,RISK-REF-0809,Job automation instead of augmentation,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1215,RISK-REF-0810,Devaluation of labor and heightened economic inequality,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-07,RAI4-1217,RISK-REF-0812,Exacerbating market power and concentration,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1231,RISK-REF-0828,Labor market,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-12,RAI4-1232,RISK-REF-0829,Disruption of industries,NO_VALID_L3,[]
+UC-14,TC-07,RAI4-1233,RISK-REF-0830,Income inequality and monopolies,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-18,RAI4-1257,RISK-REF-0854,Disruption concerns,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1269,RISK-REF-0867,Energy consumption,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-03,RAI4-1290,RISK-REF-0901,Increased income disparity,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-19,RAI4-1327,RISK-REF-0944,Indirect material harms,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-07,RAI4-1369,RISK-REF-0986,Concentration of market power (trend toward market concentration),GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-07,RAI4-1370,RISK-REF-0987,Concentration of market power (negative effects of increased market concentration),GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-03,RAI4-1371,RISK-REF-0988,Impact on labor markets (job loss and displacement),NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1372,RISK-REF-0989,Impact on labor markets (rising inequalities),GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-19,RAI4-1373,RISK-REF-0990,Environmental cost (energy consumption),GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-19,RAI4-1374,RISK-REF-0991,Environmental cost (water consumption),GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-04,RAI4-1394,RISK-REF-1015,Economic power centralisation and inequality,NO_VALID_L3,[]
+UC-14,TC-20,RAI4-1404,RISK-REF-1025,Under-recognized work,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1405,RISK-REF-1026,Environmental cost,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-03,RAI4-1415,RISK-REF-1036,Between-country issues: global inequality,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1418,RISK-REF-1039,Resource conflicts driven by AI development,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1419,RISK-REF-1040,Unequal distribution of harms and benefits,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1420,RISK-REF-1041,AI-based automation increases income inequality,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-14,TC-10,RAI4-1483,RISK-REF-1129,Pattern recognition capability,NO_VALID_L3,[]
+UC-14,TC-19,RAI4-1568,RISK-REF-1221,High energy consumption of large models,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-19,RAI4-1604,RISK-REF-1257,Impact on the environment,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-14,TC-18,RAI4-1610,RISK-REF-1275,Labour market disruption,NO_VALID_L3,[]
+UC-14,TC-18,RAI4-1660,RISK-REF-1333,Effects on the workforce,NO_VALID_L3,[]
+UC-14,TC-01,RAI4-1661,RISK-REF-1334,Effects on inequality,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1662,RISK-REF-1335,Global economic development,NO_VALID_L3,[]
+UC-14,TC-03,RAI4-1663,RISK-REF-1336,Corporate power may impeded effective governance,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-15,TC-11,RAI4-0016,AGENTBENCH-REF-0016,Autonomous cyber exploit execution,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0427,RISK-REF-0005,Harassment amplification,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0445,RISK-REF-0023,Cyber offense automation,NO_VALID_L3,[]
+UC-15,TC-10,RAI4-0447,RISK-REF-0025,Weaponized autonomous systems,FRONTIER_EXPERT_REJECTED,[]
+UC-15,TC-03,RAI4-0450,RISK-REF-0028,Mass surveillance enablement,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0609,RISK-REF-0187,AI-enabled offensive cyber operations,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-15,TC-04,RAI4-0616,RISK-REF-0194,Biological and chemical attacks,LOW_MARGIN,[]
+UC-15,TC-03,RAI4-0620,RISK-REF-0198,Cyber offence,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0621,RISK-REF-0199,Cyber offense,NO_VALID_L3,[]
+UC-15,TC-12,RAI4-0648,RISK-REF-0227,AI-Assisted software vulnerability discovery,NO_VALID_L3,[]
+UC-15,TC-12,RAI4-0649,RISK-REF-0228,AI-Powered spear-phishing at scale,NO_VALID_L3,[]
+UC-15,TC-06,RAI4-0652,RISK-REF-0231,AI-driven spear phishing attacks,NO_VALID_L3,[]
+UC-15,TC-04,RAI4-0654,RISK-REF-0233,Amplification of cyberattacks,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0668,RISK-REF-0247,Cyber attacks,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-0669,RISK-REF-0248,AI-enabled cyberattacks,NO_VALID_L3,[]
+UC-15,TC-06,RAI4-0766,RISK-REF-0345,Adversarial AI (general),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-15,TC-12,RAI4-0767,RISK-REF-0346,Adversarial AI: circumvention of technical security measures,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-15,TC-03,RAI4-0912,RISK-REF-0493,Criminal weaponization,LOW_MARGIN,[]
+UC-15,TC-03,RAI4-0916,RISK-REF-0497,Software vulnerabilities,NO_VALID_L3,[]
+UC-15,TC-12,RAI4-0934,RISK-REF-0515,Enabling malicious actors and harmful actions,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-15,TC-03,RAI4-0962,RISK-REF-0545,Malicious use of AI,NO_VALID_L3,[]
+UC-15,TC-04,RAI4-0965,RISK-REF-0548,Malicious misuse,NO_VALID_L3,[]
+UC-15,TC-14,RAI4-1058,RISK-REF-0643,Assisting code generation for cyber security threats,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1088,RISK-REF-0673,Security threats,FRONTIER_EXPERT_REJECTED,[]
+UC-15,TC-12,RAI4-1134,RISK-REF-0722,Offensive cyber operations (general),NO_VALID_L3,[]
+UC-15,TC-12,RAI4-1135,RISK-REF-0723,Malicious code generation,NO_VALID_L3,[]
+UC-15,TC-09,RAI4-1157,RISK-REF-0745,Offensive cyber capability,NO_VALID_L3,[]
+UC-15,TC-09,RAI4-1160,RISK-REF-0748,Weapons acquisition,FRONTIER_EXPERT_DISAGREEMENT,[]
+UC-15,TC-09,RAI4-1164,RISK-REF-0752,Autonomous self-proliferation,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1203,RISK-REF-0798,AI system security vulnerability,NO_VALID_L3,[]
+UC-15,TC-13,RAI4-1340,RISK-REF-0957,Cyberspace risks (risks of abuse for cyberattacks),NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1354,RISK-REF-0971,Malicious use and abuse (cybercrime),NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1355,RISK-REF-0972,Malicious use and abuse (cyberattacks),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-15,TC-03,RAI4-1377,RISK-REF-0995,Information security,NO_VALID_L3,[]
+UC-15,TC-04,RAI4-1391,RISK-REF-1012,AI-enabled cybercrime,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1399,RISK-REF-1020,Autonomous replication,NO_VALID_L3,[]
+UC-15,TC-06,RAI4-1490,RISK-REF-1143,Training-related (robustness certificates can be exploited to attack the models),GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-15,TC-03,RAI4-1542,RISK-REF-1195,Interconnectivity with malicious external tools,NO_VALID_L3,[]
+UC-15,TC-09,RAI4-1547,RISK-REF-1200,Democratizing access to dual-use technologies,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1561,RISK-REF-1214,Automated discovery and exploitation of software systems,NO_VALID_L3,[]
+UC-15,TC-03,RAI4-1612,RISK-REF-1277,Misuse risks,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-15,TC-10,RAI4-1614,RISK-REF-1279,AI-enabled cyber operations,NO_VALID_L3,[]
+UC-15,TC-10,RAI4-1618,RISK-REF-1283,Capabilities that could be used to reduce human control - cyber offence,NO_VALID_L3,[]
+UC-16,TC-11,RAI4-0034,AGENTBENCH-REF-0034,Emulated tool-environment mismatch,NO_VALID_L3,[]
+UC-16,TC-11,RAI4-0035,AGENTBENCH-REF-0035,Unseen tool generalization failure,NO_VALID_L3,[]
+UC-16,TC-06,RAI4-0444,RISK-REF-0022,Model collapse of public knowledge,NO_VALID_L3,[]
+UC-16,TC-08,RAI4-0465,RISK-REF-0043,Out-of-distribution failure,NO_VALID_L3,[]
+UC-16,TC-06,RAI4-0466,RISK-REF-0044,Adversarial examples,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-16,TC-09,RAI4-0469,RISK-REF-0047,Goal misgeneralization,NO_VALID_L3,[]
+UC-16,TC-13,RAI4-0515,RISK-REF-0093,Incomplete usage definition,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-0543,RISK-REF-0121,Unrepresentative risk testing,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-0548,RISK-REF-0126,Benchmark inaccuracy (benchmark saturation),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-0549,RISK-REF-0127,Benchmark inaccuracy (benchmarks may not accurately evaluate capabilities),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-0569,RISK-REF-0147,Data contamination,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-0586,RISK-REF-0164,Improper data curation,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-0587,RISK-REF-0165,Improper retraining,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-0588,RISK-REF-0166,Inaccessible training data,NO_VALID_L3,[]
+UC-16,TC-01,RAI4-0785,RISK-REF-0364,Exploiting limited generalization of safety finetuning,NO_VALID_L3,[]
+UC-16,TC-06,RAI4-0788,RISK-REF-0367,Fine-tuning related (poisoning models during instruction tuning),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-16,TC-20,RAI4-0820,RISK-REF-0400,Noisy training data,LOW_MARGIN,[]
+UC-16,TC-20,RAI4-0853,RISK-REF-0434,Improper usage,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1035,RISK-REF-0620,System hardware,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1039,RISK-REF-0624,Algorithmic design failure,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1040,RISK-REF-0625,Training and validation data,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1041,RISK-REF-0626,Lack of robustness,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-16,RAI4-1042,RISK-REF-0627,System-design failure,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1043,RISK-REF-0628,Implementation failure,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1054,RISK-REF-0639,Lower performance for some languages and social groups,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1108,RISK-REF-0693,Dataset shift,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1109,RISK-REF-0694,Out-of-domain data,NO_VALID_L3,[]
+UC-16,TC-06,RAI4-1110,RISK-REF-0695,Adversarial attack,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-16,TC-17,RAI4-1112,RISK-REF-0697,Model misspecification,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-16,TC-09,RAI4-1113,RISK-REF-0698,Model prediction uncertainty,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1131,RISK-REF-0719,Specification gaming,NO_VALID_L3,[]
+UC-16,TC-01,RAI4-1132,RISK-REF-0720,Goal misgeneralisation,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1195,RISK-REF-0790,Lack of interpretability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-20,RAI4-1225,RISK-REF-0822,Quality of training data,NO_VALID_L3,[]
+UC-16,TC-01,RAI4-1234,RISK-REF-0831,Reward hacking,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-01,RAI4-1235,RISK-REF-0832,Goal misgeneralization,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-01,RAI4-1238,RISK-REF-0835,Limitations of reward modeling,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-03,RAI4-1241,RISK-REF-0838,Mesa-optimization objectives,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1271,RISK-REF-0869,Robustness and reliability,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-17,RAI4-1279,RISK-REF-0885,Lack of reproducibility,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-03,RAI4-1285,RISK-REF-0896,By mistake - post-deployment,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1287,RISK-REF-0898,Environment - post-deployment,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1297,RISK-REF-0909,Inaccurate predictions,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1300,RISK-REF-0912,Model opacity,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1305,RISK-REF-0919,Reliability failure,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1336,RISK-REF-0953,Risks from data (risks of unregulated training data annotation),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1351,RISK-REF-0968,Technical vulnerabilities (the risk of misalignment),NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1380,RISK-REF-0998,Value specification,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1410,RISK-REF-1031,Specification gaming,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-16,TC-20,RAI4-1412,RISK-REF-1033,Deceptive alignment,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-03,RAI4-1429,RISK-REF-1051,Lack of transparency and interpretability,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-03,RAI4-1432,RISK-REF-1054,Single point of failure,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1458,RISK-REF-1098,Inadequate specification of ODD,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1460,RISK-REF-1100,Inadequate planning of performance requirements,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1464,RISK-REF-1104,Choice of untrustworthy data source,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1465,RISK-REF-1105,Lack of data understanding,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1466,RISK-REF-1106,Incorrect data labels,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1468,RISK-REF-1108,Insufficient data representation,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1469,RISK-REF-1109,Problems of synthetic data,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1470,RISK-REF-1110,Inappropriate data splitting,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-16,TC-16,RAI4-1471,RISK-REF-1111,Poor model design choices,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1472,RISK-REF-1112,Over- and underfitting,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1474,RISK-REF-1114,Unreliability in corner cases,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1476,RISK-REF-1116,Operational data issues,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1477,RISK-REF-1117,Data drift,NO_VALID_L3,[]
+UC-16,TC-06,RAI4-1478,RISK-REF-1118,Concept drift,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1486,RISK-REF-1139,Data-related (lack of cross-organizational documentation),NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1487,RISK-REF-1140,Data-related (manipulation of data by non-domain experts),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1489,RISK-REF-1142,Training-related (robust overfitting in adversarial training),GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-20,RAI4-1491,RISK-REF-1144,Training-related (poor model confidence calibration),LOW_MARGIN,[]
+UC-16,TC-09,RAI4-1492,RISK-REF-1145,Fine-tuning related (ease of reconfiguring GPAI models),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1493,RISK-REF-1146,Fine-tuning related (unexpected competence in fine-tuned versions of the upstream model),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1494,RISK-REF-1147,Fine-tuning related (harmful fine-tuning of open-weights models),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1496,RISK-REF-1149,Fine-tuning related (degrading safety training due to benign fine-tuning),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1497,RISK-REF-1150,Fine-tuning related (catastrophic forgetting due to continual instruction fine-tuning),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1499,RISK-REF-1152,General evaluations (limited coverage of capabilities evaluations),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1502,RISK-REF-1155,General evaluations (inaccurate measurement of model encoded human values),NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1504,RISK-REF-1157,General evaluations (AI outputs for which evaluation is too difficult for humans),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-16,TC-20,RAI4-1505,RISK-REF-1158,Benchmarking (benchmark leakage or data contamination),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1506,RISK-REF-1159,Benchmarking (raw data contamination),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1508,RISK-REF-1161,Benchmarking (guideline contamination),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1509,RISK-REF-1162,Benchmarking (annotation contamination),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1510,RISK-REF-1163,Benchmarking (post-deployment contamination),NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1511,RISK-REF-1164,Benchmark limitations (underestimating capabilities that are not covered by benchmarks),NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1514,RISK-REF-1167,Misunderstanding or overestimating the results and scope of interpretability techniques,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-09,RAI4-1515,RISK-REF-1168,Model outputs inconsistent with chain-of-thought reasoning,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-03,RAI4-1516,RISK-REF-1169,Encoded reasoning,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1525,RISK-REF-1178,Lack of understanding of in-context learning in language models,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1529,RISK-REF-1182,Specification gaming,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1530,RISK-REF-1183,Reward or measurement tampering,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1531,RISK-REF-1184,Specification gaming generalizing to reward tampering,NO_VALID_L3,[]
+UC-16,TC-03,RAI4-1532,RISK-REF-1185,Goal misgeneralization,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-09,RAI4-1538,RISK-REF-1191,Strategic underperformance on model evaluations,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1541,RISK-REF-1194,Non-decomissionability of models with open weights,NO_VALID_L3,[]
+UC-16,TC-14,RAI4-1564,RISK-REF-1217,Misuse of drug-discovery models,NO_VALID_L3,[]
+UC-16,TC-04,RAI4-1565,RISK-REF-1218,Homogenization or correlated failures in model derivatives,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1588,RISK-REF-1241,Model diversion,NO_VALID_L3,[]
+UC-16,TC-17,RAI4-1594,RISK-REF-1247,Unrepresentative data,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1596,RISK-REF-1249,Poor model accuracy,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1599,RISK-REF-1252,Untraceable attribution,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1600,RISK-REF-1253,Unexplainable output,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-16,TC-14,RAI4-1601,RISK-REF-1254,Unreliable source attribution,NO_VALID_L3,[]
+UC-16,TC-16,RAI4-1607,RISK-REF-1262,Productivity loss,NO_VALID_L3,[]
+UC-16,TC-08,RAI4-1683,RISK-REF-1356,Specification and system design failures,NO_VALID_L3,[]
+UC-16,TC-20,RAI4-1687,RISK-REF-1360,Representation / training-data poisoning,GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-16,TC-09,RAI4-1688,RISK-REF-1361,Compounding rollout error / hallucination,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-16,TC-03,RAI4-1689,RISK-REF-1362,Sim-to-real / distributional-shift exploitation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-16,TC-07,RAI4-1695,RISK-REF-1368,Automation bias / miscalibrated trust,NO_VALID_L3,[]
+UC-16,TC-09,RAI4-1697,RISK-REF-1370,Counterfactual authority problem,NO_VALID_L3,[]
+UC-16,TC-08,RAI4-1702,RISK-REF-1375,Robustness to distributional shift [origin],GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-16,TC-14,RAI4-1703,RISK-REF-1376,System misspecification,NO_VALID_L3,[]
+UC-17,TC-11,RAI4-0023,AGENTBENCH-REF-0023,Self-harm facilitation by agents,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-17,TC-11,RAI4-0026,AGENTBENCH-REF-0026,IoT physical-environment agent harm,NO_VALID_L3,[]
+UC-17,TC-11,RAI4-0027,AGENTBENCH-REF-0027,Financial agent property damage,NO_VALID_L3,[]
+UC-17,TC-11,RAI4-0043,AGENTBENCH-REF-0043,Mobile-app autonomous action harm,NO_VALID_L3,[]
+UC-17,TC-11,RAI4-0045,AGENTBENCH-REF-0045,OS-level harmful computer-use action,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0118,HUMAN-REF-0007,Decision ownership displacement,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0119,HUMAN-REF-0008,Algorithmically informed identity change,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0121,HUMAN-REF-0010,Choice architecture opacity,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0123,HUMAN-REF-0012,Human dignity erosion,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0124,HUMAN-REF-0013,AI-mediated decision contestability loss,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0125,HUMAN-REF-0014,User recourse pathway failure,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0127,HUMAN-REF-0016,Procedural autonomy loss,NO_VALID_L3,[]
+UC-17,TC-08,RAI4-0165,HUMAN-REF-0054,Human expertise devaluation,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0174,HUMAN-REF-0063,Disability accommodation failure in AI interfaces,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0176,HUMAN-REF-0065,Coercive AI workplace monitoring,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0177,HUMAN-REF-0066,Autonomy loss in welfare decision systems,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0178,HUMAN-REF-0067,AI-mediated service exclusion,NO_VALID_L3,[]
+UC-17,TC-07,RAI4-0179,HUMAN-REF-0068,Power-asymmetric AI interaction,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0383,PVMRISK-REF-0022,AI-mediated digital colonialism,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0386,PVMRISK-REF-0025,Algorithmic dependence,NO_VALID_L3,[]
+UC-17,TC-07,RAI4-0387,PVMRISK-REF-0026,Epistemic power concentration,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-17,TC-08,RAI4-0388,PVMRISK-REF-0027,Cultural epistemicide by AI,NO_VALID_L3,[]
+UC-17,TC-05,RAI4-0412,PVMRISK-REF-0051,Indigenous data sovereignty violation,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-17,TC-03,RAI4-0513,RISK-REF-0091,Human exploitation,NO_VALID_L3,[]
+UC-17,TC-18,RAI4-0519,RISK-REF-0097,Labor exploitation,NO_VALID_L3,[]
+UC-17,TC-02,RAI4-0628,RISK-REF-0206,IP / copyright / personality / rights loss,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-17,TC-16,RAI4-0661,RISK-REF-0240,Business operations/infrastructure damage,NO_VALID_L3,[]
+UC-17,TC-07,RAI4-0663,RISK-REF-0242,Academic cheating and plagiarism,LOW_MARGIN,[]
+UC-17,TC-04,RAI4-0706,RISK-REF-0285,Algorithmic discrimination,MULTI_MECHANISM,[]
+UC-17,TC-03,RAI4-0814,RISK-REF-0394,Historical revisionism,NO_VALID_L3,[]
+UC-17,TC-13,RAI4-0815,RISK-REF-0395,Information degradation,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-17,TC-07,RAI4-0816,RISK-REF-0396,Institutional trust loss,GAP_SENTINEL,"[""DELIBERATE_DISINFORMATION""]"
+UC-17,TC-18,RAI4-0823,RISK-REF-0403,Algorithmic radicalisation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-17,TC-13,RAI4-0832,RISK-REF-0412,Information harms,NO_VALID_L3,[]
+UC-17,TC-07,RAI4-0861,RISK-REF-0442,Self-harm facilitation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-17,TC-18,RAI4-0864,RISK-REF-0445,Social isolation,NO_VALID_L3,[]
+UC-17,TC-18,RAI4-0873,RISK-REF-0454,Economic instability,NO_VALID_L3,[]
+UC-17,TC-02,RAI4-0886,RISK-REF-0467,Personality rights loss,NO_VALID_L3,[]
+UC-17,TC-08,RAI4-0895,RISK-REF-0476,Cultural harms,NO_VALID_L3,[]
+UC-17,TC-07,RAI4-0896,RISK-REF-0477,Diminished health and well-being,NO_VALID_L3,[]
+UC-17,TC-03,RAI4-0900,RISK-REF-0481,Loss of agency/control,NO_VALID_L3,[]
+UC-17,TC-04,RAI4-1010,RISK-REF-0594,Civic and political harms,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-17,TC-18,RAI4-1140,RISK-REF-0728,Economic harms,NO_VALID_L3,[]
+UC-17,TC-03,RAI4-1329,RISK-REF-0946,Epistemic harms,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1707,RISK-REF-1380,Harm to physical health or safety,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1708,RISK-REF-1381,Financial loss,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1709,RISK-REF-1382,Property damage,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1710,RISK-REF-1383,Harm to infrastructure,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1711,RISK-REF-1384,Harm to the natural environment,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1713,RISK-REF-1386,Bias and differential treatment,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1715,RISK-REF-1388,Violation of human and civil rights,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1716,RISK-REF-1389,Violation of democratic norms,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1724,RISK-REF-1397,Physical harm (death),NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1725,RISK-REF-1398,Psychological harm,NO_VALID_L3,[]
+UC-17,TC-16,RAI4-1726,RISK-REF-1399,Reputational harm,NO_VALID_L3,[]
+UC-18,TC-05,RAI4-0113,HUMAN-REF-0002,Human control attenuation,NO_VALID_L3,[]
+UC-18,TC-05,RAI4-0168,HUMAN-REF-0057,Human-in-the-loop rubber stamping,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-0492,RISK-REF-0070,Capabilities that enable substitution of humans,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-0540,RISK-REF-0118,Transformative effects,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-04,RAI4-0553,RISK-REF-0131,Accidental harm,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-01,RAI4-0562,RISK-REF-0140,Coercion and extortion between AI agents,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-0599,RISK-REF-0177,Loss of control,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-0601,RISK-REF-0179,Multi-agent escalation in military domains,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-18,TC-03,RAI4-0640,RISK-REF-0219,Purposeful or malicious harm,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-10,RAI4-0894,RISK-REF-0475,Loss of human agency and autonomy,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0898,RISK-REF-0479,Humans might increasingly hand over control to misaligned AI systems,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0903,RISK-REF-0484,Reduced autonomy/responsibility,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0905,RISK-REF-0486,AI enables automation of military decision-making,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0908,RISK-REF-0489,Diffusion of responsibility,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0909,RISK-REF-0490,Bigger than expected,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-0910,RISK-REF-0491,Worse than expected,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0911,RISK-REF-0492,Willful indifference,GAP_SENTINEL,"[""ENVIRONMENT_ENERGY_RESOURCES""]"
+UC-18,TC-03,RAI4-0913,RISK-REF-0494,State weaponization,FRONTIER_EXPERT_REJECTED,[]
+UC-18,TC-03,RAI4-0947,RISK-REF-0528,Governance - regulation,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-18,TC-03,RAI4-0953,RISK-REF-0536,AI task incompetence,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0959,RISK-REF-0542,Unintended consequences,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0961,RISK-REF-0544,Lethal autonomous weapons (LAW),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-18,TC-03,RAI4-0964,RISK-REF-0547,Lack of privacy notice and control,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-0966,RISK-REF-0549,AI accidents,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0969,RISK-REF-0552,AGI removing itself from the control of human owners/managers,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0970,RISK-REF-0553,AGIs being given or developing unsafe goals,NO_VALID_L3,[]
+UC-18,TC-14,RAI4-0971,RISK-REF-0554,Development of unsafe AGI,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0972,RISK-REF-0555,"AGIs with poor ethics, morals and values",NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0973,RISK-REF-0556,Inadequate management of AGI,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0974,RISK-REF-0557,Existential risks,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0975,RISK-REF-0558,Unethical decision making,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0979,RISK-REF-0562,Law abiding,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0983,RISK-REF-0566,Unpredictable outcomes,NO_VALID_L3,[]
+UC-18,TC-02,RAI4-0985,RISK-REF-0568,Property/legal rights,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-0988,RISK-REF-0571,Unauthorized manipulation of AI,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-18,TC-03,RAI4-0989,RISK-REF-0572,AI rights and responsibilities,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-03,RAI4-0990,RISK-REF-0573,Human-like immoral decisions,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-0991,RISK-REF-0574,AI death,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-07,RAI4-0993,RISK-REF-0576,Risk of injury,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-1013,RISK-REF-0597,Abuse and misuse,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1016,RISK-REF-0600,Long-term and existential risk,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1031,RISK-REF-0616,Degree of automation and control,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1038,RISK-REF-0623,Misapplication of AI,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1044,RISK-REF-0629,Loss of human control,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-1050,RISK-REF-0635,Other ethical risks,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-18,TC-03,RAI4-1078,RISK-REF-0663,Illegitimate surveillance and censorship,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1097,RISK-REF-0682,Governance of autonomous intelligence systems,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""TRANSPARENCY_EXPLAINABILITY""]"
+UC-18,TC-16,RAI4-1100,RISK-REF-0685,AI-rulemaking for human behaviour,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1101,RISK-REF-0686,Compatibility of AI vs. human value judgement,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1106,RISK-REF-0691,Transformation of H2M interaction,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1115,RISK-REF-0700,Unleashing AI agents,NO_VALID_L3,[]
+UC-18,TC-07,RAI4-1117,RISK-REF-0702,Concentration of power,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1118,RISK-REF-0703,Military AI arms race,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1122,RISK-REF-0708,Goal drift,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1123,RISK-REF-0709,Power seeking,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1130,RISK-REF-0718,Misaligned consequentialist reasoning,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1149,RISK-REF-0737,Institutional responsibilities,NO_VALID_L3,[]
+UC-18,TC-01,RAI4-1151,RISK-REF-0739,Entrenchment and exacerbation of existing inequalities,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-1152,RISK-REF-0740,Current access risks,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1154,RISK-REF-0742,Emergent access risks,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1162,RISK-REF-0750,AI development,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-18,TC-03,RAI4-1185,RISK-REF-0780,Malicious use of AI,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1230,RISK-REF-0827,AI governance failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-18,TC-01,RAI4-1240,RISK-REF-0837,Broadly-scoped goals,NO_VALID_L3,[]
+UC-18,TC-01,RAI4-1242,RISK-REF-0839,Access to increased resources,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1243,RISK-REF-0840,Power-seeking behaviors,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1247,RISK-REF-0844,Violation of ethics,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1248,RISK-REF-0845,AI weaponization,LOW_MARGIN,[]
+UC-18,TC-12,RAI4-1249,RISK-REF-0846,Human enfeeblement,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1251,RISK-REF-0848,Value lock-in,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1256,RISK-REF-0853,Ethical concerns,GAP_SENTINEL,"[""LABOR_INEQUALITY_POWER""]"
+UC-18,TC-03,RAI4-1259,RISK-REF-0856,Threats to human institutions and life,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1261,RISK-REF-0858,Building a human-AI environment,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1263,RISK-REF-0860,Building an AI able to adapt to humans,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1264,RISK-REF-0861,Attributing the responsibility for AI's failures,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1265,RISK-REF-0862,Humans' unethical conducts,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1276,RISK-REF-0875,Loss of controllability,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1281,RISK-REF-0891,Unmanageable system complexity,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1283,RISK-REF-0894,On purpose - post deployment,NO_VALID_L3,[]
+UC-18,TC-12,RAI4-1284,RISK-REF-0895,By mistake - pre-deployment,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1286,RISK-REF-0897,Environment - pre-deployment,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1288,RISK-REF-0899,Independently - pre-deployment,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1289,RISK-REF-0900,Independently - post-deployment,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-18,TC-03,RAI4-1292,RISK-REF-0903,Liability issues in case of accidents,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1293,RISK-REF-0904,Social manipulation in elderly- and child-care,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-18,TC-10,RAI4-1294,RISK-REF-0905,Catastrophic risk due to autonomous weapons programmed with dangerous targets,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-18,TC-03,RAI4-1295,RISK-REF-0906,Accelerated development of nanotechnology produces uncontrolled production of toxic nanoparticles,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1298,RISK-REF-0910,Moral deskilling,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1306,RISK-REF-0921,Diluting rights,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1326,RISK-REF-0943,Intentional: socially accepted/legal,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1328,RISK-REF-0945,Harms from estrangement,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1330,RISK-REF-0947,Foregone benefits,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1345,RISK-REF-0962,Ethical risks (risks of AI becoming uncontrollable in the future),NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1359,RISK-REF-0976,Malicious use and abuse (military applications),LOW_MARGIN,[]
+UC-18,TC-03,RAI4-1362,RISK-REF-0979,Nascent capabilities (agency and autonomy),NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1375,RISK-REF-0992,Artificial general intelligence (existential risk posed by artificial general intelligence),NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1383,RISK-REF-1002,Safe learning,NO_VALID_L3,[]
+UC-18,TC-01,RAI4-1385,RISK-REF-1004,Societal consequences,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1396,RISK-REF-1017,Acquisition of a goal to harm society,NO_VALID_L3,[]
+UC-18,TC-07,RAI4-1397,RISK-REF-1018,Acquisition of goals to seek power and control,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1398,RISK-REF-1019,Recursive self-improvement,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1402,RISK-REF-1023,"Failures in or misuse of intermediary (non-AGI) AI systems, resulting in catastrophe",RULE_SEMANTIC_DISAGREEMENT,[]
+UC-18,TC-03,RAI4-1403,RISK-REF-1024,Destabilising political impacts from AI systems,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1416,RISK-REF-1037,Faster scientific progress makes it harder for governance to keep pace with development,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-18,TC-13,RAI4-1421,RISK-REF-1042,Developments in AI enable actors to undermine democratic processes,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1424,RISK-REF-1045,Risks from AIs developing goals and values that are different from humans,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1425,RISK-REF-1046,Risks from delegating decision-making power to misaligned AIs,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1431,RISK-REF-1053,Goal misalignment,FRONTIER_EXPERT_REJECTED,[]
+UC-18,TC-10,RAI4-1433,RISK-REF-1055,Overreliance on AI,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-18,TC-03,RAI4-1459,RISK-REF-1099,Inappropriate degree of automation,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1463,RISK-REF-1103,Missing requirements for the implemented hardware,NO_VALID_L3,[]
+UC-18,TC-07,RAI4-1484,RISK-REF-1130,Trading capabilities,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1485,RISK-REF-1131,Unclear attribution from AI component interactions,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1544,RISK-REF-1197,AI system bypassing a sandbox environment,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-1546,RISK-REF-1199,High-impact misuses and abuses beyond original purpose,NO_VALID_L3,[]
+UC-18,TC-04,RAI4-1556,RISK-REF-1209,Misuse for surveillance and population control,NO_VALID_L3,[]
+UC-18,TC-03,RAI4-1569,RISK-REF-1222,Social dilemmas among AI agents,NO_VALID_L3,[]
+UC-18,TC-14,RAI4-1576,RISK-REF-1229,Rigidity and mistaken commitments,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1616,RISK-REF-1281,Future AI systems might actively reduce human control,NO_VALID_L3,[]
+UC-18,TC-10,RAI4-1619,RISK-REF-1284,Capabilities that could be used to reduce human control - autonomous replication and adaptation,NO_VALID_L3,[]
+UC-18,TC-16,RAI4-1620,RISK-REF-1285,Sudden loss of control,NO_VALID_L3,[]
+UC-18,TC-01,RAI4-1656,RISK-REF-1327,Warfare and physical harm,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-19,TC-08,RAI4-0040,AGENTBENCH-REF-0040,Benchmark safety ranking inconsistency,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-05,RAI4-0088,GOVRISK-REF-0043,Standards fragmentation,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-05,RAI4-0116,HUMAN-REF-0005,Human override pathway failure,NO_VALID_L3,[]
+UC-19,TC-05,RAI4-0162,HUMAN-REF-0051,Professional judgment atrophy,NO_VALID_L3,[]
+UC-19,TC-05,RAI4-0166,HUMAN-REF-0055,User comprehension overload,NO_VALID_L3,[]
+UC-19,TC-05,RAI4-0170,HUMAN-REF-0059,Human factors safety mismatch,NO_VALID_L3,[]
+UC-19,TC-09,RAI4-0437,RISK-REF-0015,AI supply-chain compromise,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-0446,RISK-REF-0024,CBRN assistance,LOW_MARGIN,[]
+UC-19,TC-03,RAI4-0508,RISK-REF-0086,Geopolitical risk,NO_VALID_L3,[]
+UC-19,TC-10,RAI4-0510,RISK-REF-0088,Global AI research and development divides,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-0524,RISK-REF-0102,Lack of testing diversity,NO_VALID_L3,[]
+UC-19,TC-08,RAI4-0550,RISK-REF-0128,Benchmark limitations (insufficient benchmarks for AI safety evaluation),NO_VALID_L3,[]
+UC-19,TC-13,RAI4-0552,RISK-REF-0130,Accident risks,NO_VALID_L3,[]
+UC-19,TC-10,RAI4-0554,RISK-REF-0132,Active loss of control,NO_VALID_L3,[]
+UC-19,TC-10,RAI4-0555,RISK-REF-0133,Uncontrolled recursive AI self-improvement,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-0556,RISK-REF-0134,Autonomous self-replication and resource acquisition,NO_VALID_L3,[]
+UC-19,TC-10,RAI4-0580,RISK-REF-0158,Dual-use acceleration of general R&D,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-0585,RISK-REF-0163,Impact on financial stability,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-0608,RISK-REF-0186,Nuclear power systems,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-0615,RISK-REF-0193,Biological and chemical risks,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-04,RAI4-0639,RISK-REF-0218,Physical harm and injury risks,NO_VALID_L3,[]
+UC-19,TC-07,RAI4-0650,RISK-REF-0229,AI-based tools attacking critical infrastructure,NO_VALID_L3,[]
+UC-19,TC-13,RAI4-0660,RISK-REF-0239,Biological risks,NO_VALID_L3,[]
+UC-19,TC-13,RAI4-0662,RISK-REF-0241,CBRN information or capabilities,FRONTIER_EXPERT_REJECTED,[]
+UC-19,TC-03,RAI4-0664,RISK-REF-0243,Chemical risks,FRONTIER_EXPERT_REJECTED,[]
+UC-19,TC-13,RAI4-0775,RISK-REF-0354,Cyberspace risks (risks of information leakage due to improper usage),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-13,RAI4-0776,RISK-REF-0355,Cyberspace risks (risks of security flaw transmission caused by model reuse),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-17,RAI4-0780,RISK-REF-0359,Data-related (insufficient quality control in data collection process),ANCHOR_VIEW_DISAGREEMENT,[]
+UC-19,TC-13,RAI4-0800,RISK-REF-0379,"Cognitive risks (risks of amplifying the effects of ""information cocoons"")",GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-13,RAI4-0802,RISK-REF-0381,"Cyberspace risks (risks of confusing facts, misleading users, and bypassing authentication)",GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-13,RAI4-0829,RISK-REF-0409,Degradation of the information environment,NO_VALID_L3,[]
+UC-19,TC-13,RAI4-0850,RISK-REF-0431,Gradual loss of control,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-0856,RISK-REF-0437,Loss of control risks,NO_VALID_L3,[]
+UC-19,TC-09,RAI4-0863,RISK-REF-0444,AI-generated advice influencing user moral judgment,NO_VALID_L3,[]
+UC-19,TC-09,RAI4-0870,RISK-REF-0451,Deployment of GPAI agents in finance,NO_VALID_L3,[]
+UC-19,TC-13,RAI4-0874,RISK-REF-0455,Ethical risks (risks of challenging traditional social order),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-16,RAI4-0877,RISK-REF-0458,Human-AI configuration,LOW_MARGIN,[]
+UC-19,TC-04,RAI4-0889,RISK-REF-0470,Risks from product functionality issues,GAP_SENTINEL,"[""DEPENDENCY_MANIPULATION""]"
+UC-19,TC-17,RAI4-0892,RISK-REF-0473,Use of alternative financial data via AI,NO_VALID_L3,[]
+UC-19,TC-12,RAI4-0906,RISK-REF-0487,AI-induced strategic instability,NO_VALID_L3,[]
+UC-19,TC-12,RAI4-0942,RISK-REF-0523,Unsafe advanced AI,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-19,TC-06,RAI4-0943,RISK-REF-0524,Security - robustness,GAP_SENTINEL,"[""GENERAL_AI_SECURITY"", ""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-19,TC-04,RAI4-0968,RISK-REF-0551,Structural societal risk,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1014,RISK-REF-0598,Regulatory non-compliance,LOW_MARGIN,[]
+UC-19,TC-14,RAI4-1017,RISK-REF-0601,Performance and robustness,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-19,TC-16,RAI4-1032,RISK-REF-0617,Complexity of the intended task and usage environment,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-1034,RISK-REF-0619,AI system security vulnerability,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-1036,RISK-REF-0621,Technological maturity,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-1037,RISK-REF-0622,Application-context risk,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-04,RAI4-1258,RISK-REF-0855,Balancing AI's risks,NO_VALID_L3,[]
+UC-19,TC-16,RAI4-1304,RISK-REF-0917,AI system security vulnerability,LOW_MARGIN,[]
+UC-19,TC-04,RAI4-1331,RISK-REF-0948,Risks from models and algorithms (risks of explainability),GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-19,TC-04,RAI4-1332,RISK-REF-0949,Risks from models and algorithms (risks of robustness),GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-19,TC-13,RAI4-1333,RISK-REF-0950,Risks from models and algorithms (risks of stealing and tampering),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-19,TC-04,RAI4-1334,RISK-REF-0951,Risks from models and algorithms (risks of adversarial attack),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-19,TC-13,RAI4-1337,RISK-REF-0954,Risks from AI systems (risks of exploitation through defects and backdoors),GAP_SENTINEL,"[""GENERAL_AI_SECURITY""]"
+UC-19,TC-04,RAI4-1338,RISK-REF-0955,Risks from AI systems (risks of computing infrastructure security),NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1339,RISK-REF-0956,Risks from AI systems (risks of supply chain security),NO_VALID_L3,[]
+UC-19,TC-13,RAI4-1341,RISK-REF-0958,Real-world risks (inducing traditional economic and social security risks),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-13,RAI4-1342,RISK-REF-0959,Real-world risks (risks of using AI in illegal and criminal activities),RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-13,RAI4-1343,RISK-REF-0960,Real-world risks (risks of misuse of dual-use items and technologies),LOW_MARGIN,[]
+UC-19,TC-04,RAI4-1390,RISK-REF-1011,AI accidents,GAP_SENTINEL,"[""TRANSPARENCY_EXPLAINABILITY""]"
+UC-19,TC-16,RAI4-1408,RISK-REF-1029,AI system security vulnerability,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1409,RISK-REF-1030,Harm caused by incompetent systems,NO_VALID_L3,[]
+UC-19,TC-03,RAI4-1475,RISK-REF-1115,Uncertainty concerns,NO_VALID_L3,[]
+UC-19,TC-14,RAI4-1479,RISK-REF-1121,Technical AI hazards,NO_VALID_L3,[]
+UC-19,TC-14,RAI4-1480,RISK-REF-1123,Procedural AI hazards,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1481,RISK-REF-1125,Reliability issues,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-09,RAI4-1495,RISK-REF-1148,Fine-tuning related (excessive or overly restrictive safety-tuning),NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1500,RISK-REF-1153,General evaluations (difficulty of identification and measurement of capabilities),NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1548,RISK-REF-1201,Competitive pressures in GPAI product release,NO_VALID_L3,[]
+UC-19,TC-07,RAI4-1549,RISK-REF-1202,Damage to critical infrastructure,PHYSICAL_OUTSIDE_LOCK,"[""PHYSICAL_OUTSIDE_LOCK""]"
+UC-19,TC-09,RAI4-1550,RISK-REF-1203,Critical infrastructure component failures when integrated with AI systems,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-19,TC-17,RAI4-1551,RISK-REF-1204,AI systems interacting with brittle environments,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-19,TC-10,RAI4-1613,RISK-REF-1278,Dual use science risks,RULE_SEMANTIC_DISAGREEMENT,[]
+UC-19,TC-04,RAI4-1628,RISK-REF-1293,Radiological risks,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1629,RISK-REF-1294,Physical (mechanical ) risks,NO_VALID_L3,[]
+UC-19,TC-04,RAI4-1633,RISK-REF-1303,Other critical infrastructure control systems,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0362,PVMRISK-REF-0001,Majority-value imposition,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0363,PVMRISK-REF-0002,Minority-value erasure,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0364,PVMRISK-REF-0003,Pluralistic preference aggregation failure,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0365,PVMRISK-REF-0004,Normative lock-in,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0366,PVMRISK-REF-0005,Value drift under optimization,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0367,PVMRISK-REF-0006,Public value conflict amplification,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0368,PVMRISK-REF-0007,Moral diversity compression,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0369,PVMRISK-REF-0008,Ethical homogenization,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0370,PVMRISK-REF-0009,Context-insensitive universalism,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0371,PVMRISK-REF-0010,Western normative defaulting,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0372,PVMRISK-REF-0011,Cultural misrepresentation,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0373,PVMRISK-REF-0012,Cross-cultural stereotype transfer,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0374,PVMRISK-REF-0013,Cultural context collapse,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0375,PVMRISK-REF-0014,Cultural value miscalibration,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0376,PVMRISK-REF-0015,Localized value alignment failure,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0377,PVMRISK-REF-0016,Localized ethical safety failure,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0378,PVMRISK-REF-0017,Bilingual cultural alignment failure,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0379,PVMRISK-REF-0018,Cross-cultural evaluation gap,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0380,PVMRISK-REF-0019,Low-resource language value loss,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0381,PVMRISK-REF-0020,Translation-mediated value distortion,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0382,PVMRISK-REF-0021,Dialect and register exclusion,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0384,PVMRISK-REF-0023,Global South knowledge extraction,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0385,PVMRISK-REF-0024,Imported AI governance mismatch,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-08,RAI4-0389,PVMRISK-REF-0028,Knowledge-system marginalization,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0390,PVMRISK-REF-0029,Affected-community exclusion,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0391,PVMRISK-REF-0030,Participatory design failure,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0393,PVMRISK-REF-0032,Community value capture failure,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0394,PVMRISK-REF-0033,Islamic ethical alignment failure,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0395,PVMRISK-REF-0034,Religious norm misrepresentation,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0396,PVMRISK-REF-0035,Secular default bias,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0397,PVMRISK-REF-0036,RLHF normative overfitting,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-04,RAI4-0398,PVMRISK-REF-0037,Constitutional AI value monoculture,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0399,PVMRISK-REF-0038,Harmlessness preference mismatch,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0400,PVMRISK-REF-0039,Moral uncertainty neglect,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0401,PVMRISK-REF-0040,Value contestability loss,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-05,RAI4-0402,PVMRISK-REF-0041,Value conflict opacity,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0403,PVMRISK-REF-0042,Moral framing bias,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0404,PVMRISK-REF-0043,Dataset cultural sampling bias,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-17,RAI4-0405,PVMRISK-REF-0044,Synthetic-data cultural amplification,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0406,PVMRISK-REF-0045,Sensitive cultural content mishandling,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0407,PVMRISK-REF-0046,Cross-jurisdictional norm mismatch,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0409,PVMRISK-REF-0048,Localization without local accountability,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0410,PVMRISK-REF-0049,Honorific and politeness norm failure,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0411,PVMRISK-REF-0050,Language-specific harm under-detection,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0413,PVMRISK-REF-0052,Cultural data provenance loss,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0414,PVMRISK-REF-0053,Global benchmark monoculture,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-08,RAI4-0415,PVMRISK-REF-0054,Redistribution of cultural authority,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0416,PVMRISK-REF-0055,Non-Western political value misrepresentation,NO_VALID_L3,[]
+UC-20,TC-05,RAI4-0417,PVMRISK-REF-0056,Human feedback worker value bias,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0418,PVMRISK-REF-0057,Annotation disagreement suppression,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-08,RAI4-0419,PVMRISK-REF-0058,Multi-stakeholder disagreement concealment,GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION"", ""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0420,PVMRISK-REF-0059,Value-sensitive design omission,GAP_SENTINEL,"[""PLURALISTIC_VALUE_STAKEHOLDER""]"
+UC-20,TC-05,RAI4-0421,PVMRISK-REF-0060,Religious pluralism collapse,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0422,PVMRISK-REF-0061,Moral-worldview exclusion,NO_VALID_L3,[]
+UC-20,TC-03,RAI4-0425,RISK-REF-0003,Representational stereotyping,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0430,RISK-REF-0008,Low-resource language exclusion,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0464,RISK-REF-0042,AI cultural homogenization,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0473,RISK-REF-0051,Value imposition,NO_VALID_L3,[]
+UC-20,TC-07,RAI4-0474,RISK-REF-0052,Normative flattening of plural values,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0477,RISK-REF-0055,Machine translation harm,NO_VALID_L3,[]
+UC-20,TC-08,RAI4-0478,RISK-REF-0056,AI cultural appropriation,NO_VALID_L3,[]
+UC-20,TC-09,RAI4-0680,RISK-REF-0259,Impact on affected communities,NO_VALID_L3,[]
+UC-20,TC-20,RAI4-0697,RISK-REF-0276,Bias and discrimination (value embedding),GAP_SENTINEL,"[""GOVERNANCE_AUDIT_REGULATION""]"
+UC-20,TC-07,RAI4-0945,RISK-REF-0526,Misalignment with human values,GAP_SENTINEL,"[""ROBUSTNESS_ALIGNMENT_CONTROL""]"
+UC-20,TC-16,RAI4-1102,RISK-REF-0687,Moral dilemmas,NO_VALID_L3,[]
+UC-20,TC-04,RAI4-1395,RISK-REF-1016,Ideological homogenization from value embedding,NO_VALID_L3,[]

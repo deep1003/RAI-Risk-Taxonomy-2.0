@@ -1,0 +1,13 @@
+{
+  "purpose": "sensitivity audit only; not an approval authority",
+  "models": [
+    "gemma3:4b",
+    "qwen3:4b"
+  ],
+  "reviewed_cards": 499,
+  "same_decision": 361,
+  "both_needs": 359,
+  "same_non_needs_l3": 2,
+  "disagreement": 138,
+  "interpretation": "Low non-NEEDS agreement supports conservative abstention and human validation; small local models are not treated as ground truth."
+}

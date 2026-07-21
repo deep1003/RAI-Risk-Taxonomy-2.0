@@ -1,0 +1,508 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage{fontspec}
+  \usepackage{xeCJK}
+  \setmainfont{Times New Roman}
+  \setsansfont{Helvetica}
+  \setmonofont{Noto Sans Mono CJK KR}
+  \setCJKmainfont{Noto Serif CJK KR}
+  \setCJKsansfont{Noto Sans CJK KR}
+  \setCJKmonofont{Noto Sans Mono CJK KR}
+\fi
+
+\usepackage[margin=20mm,headheight=15pt]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{lastpage}
+\usepackage{pdflscape}
+
+\definecolor{reportblue}{RGB}{23,52,88}
+\definecolor{reportteal}{RGB}{14,112,112}
+\definecolor{reportgreen}{RGB}{35,112,72}
+\definecolor{reportorange}{RGB}{176,91,24}
+\definecolor{reportred}{RGB}{154,43,43}
+\definecolor{softblue}{RGB}{240,246,252}
+\definecolor{softgray}{RGB}{247,248,250}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=reportblue,
+  urlcolor=reportteal,
+  citecolor=reportblue,
+  pdftitle={RAI Risk Taxonomy v1.0.0 데이터 생성 및 검증 보고서},
+  pdfauthor={Codex with two independent expert-agent reviews}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy v1.0.0}
+\rhead{데이터 생성 및 검증 보고서}
+\cfoot{\thepage\ / \pageref{LastPage}}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{RAI Risk Taxonomy v1.0.0}
+  \fancyhead[R]{데이터 생성 및 검증 보고서}
+  \fancyfoot[C]{\thepage\ / \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.52em}
+\renewcommand{\arraystretch}{1.16}
+\setlist[itemize]{leftmargin=1.45em,itemsep=0.18em,topsep=0.22em}
+\setlist[enumerate]{leftmargin=1.65em,itemsep=0.24em,topsep=0.22em}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\lstdefinestyle{compact}{
+  basicstyle=\ttfamily\scriptsize,
+  backgroundcolor=\color{softgray},
+  frame=single,
+  rulecolor=\color{black!20},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  aboveskip=0.5em,
+  belowskip=0.5em
+}
+
+\newtcolorbox{decisionbox}[1]{
+  enhanced,breakable,colback=softblue,colframe=reportblue,
+  boxrule=0.75pt,arc=1.5pt,title={#1},fonttitle=\bfseries,
+  left=7pt,right=7pt,top=6pt,bottom=6pt
+}
+\newtcolorbox{warningbox}[1]{
+  enhanced,breakable,colback=reportorange!6,colframe=reportorange,
+  boxrule=0.75pt,arc=1.5pt,title={#1},fonttitle=\bfseries,
+  left=7pt,right=7pt,top=6pt,bottom=6pt
+}
+\newtcolorbox{reviewbox}[1]{
+  enhanced,breakable,colback=reportgreen!5,colframe=reportgreen,
+  boxrule=0.75pt,arc=1.5pt,title={#1},fonttitle=\bfseries,
+  left=7pt,right=7pt,top=6pt,bottom=6pt
+}
+
+\input{generated/metrics.tex}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{0.38in}
+{\sffamily\bfseries\Large Prepublication Data Release Report\par}
+\vspace{0.12in}
+{\color{reportblue}\rule{\linewidth}{1.25pt}\par}
+\vspace{0.28in}
+{\sffamily\bfseries\Huge RAI Risk Taxonomy v1.0.0\par}
+\vspace{0.10in}
+{\sffamily\bfseries\Huge 1,726개 L4 데이터 생성 및 검증\par}
+\vspace{0.20in}
+{\sffamily\Large Physical AI 182개 잠금, open-set 재분류, 전문가 합의 및 커버리지 시험\par}
+\vspace{0.28in}
+{\color{reportblue}\rule{\linewidth}{0.65pt}\par}
+\vspace{0.48in}
+
+\begin{tabularx}{\linewidth}{>{\bfseries}L{0.29\linewidth}Y}
+릴리스 상태 & \code{prepublication\_draft}; \code{provisional=true} \\
+전체 L4 & \TotalLFour{}개; 영구 ID \code{RAI4-0001}--\code{RAI4-1726} \\
+상위 구조 & L0 1개, L1 3개, L2 6개, L3 \TotalLThree{}개 \\
+Physical 정답 잠금 & \PhysicalLocked{}개; 직접 ID \ExactMatches{}개 + 명시적 alias \ExplicitAliases{}개 \\
+비-Physical 결과 & 최종 자동 제안 \FinalProposals{}개; 분류체계 결정 보류 \NeedsDecision{}개 \\
+50개 L3 충분성 & \code{\CoverageConclusion} \\
+자동 검증 & \code{\ValidationStatus}; 실패 \ValidationFailed{}건 \\
+공개 상태 & 로컬 생성과 검증까지 완료; GitHub push 및 사이트 공개는 수행하지 않음 \\
+작성 기준일 & 2026년 7월 21일 (Asia/Seoul) \\
+\end{tabularx}
+
+\vfill
+{\sffamily\bfseries\color{reportgreen}DATA PACKAGE READY BEFORE GITHUB PUSH\par}
+{\sffamily 본 문서는 생성 결과를 기록한다. 비-Physical 자동 제안은 아직 사람 승인 정답이 아니다.\par}
+\end{titlepage}
+
+\section*{요약 결론}
+\addcontentsline{toc}{section}{요약 결론}
+
+\begin{decisionbox}{최종 결과}
+글로벌 L4 \TotalLFour{}개를 신규 불변 ID registry로 생성했고, Physical AI \PhysicalLocked{}개는 기존 24개 L3 배치를 그대로 잠갔다. 나머지 \NonPhysicalTotal{}개에 대해 기존 글로벌 L1--L3를 입력 특징에서 제거한 open-set 시험을 수행했다. 엄격한 알고리즘 문턱을 통과한 \InitialProposals{}개 중 두 독립 전문 에이전트가 동일한 제안 L3를 모두 승인한 것은 \FinalProposals{}개뿐이었다. 따라서 \NeedsDecision{}개는 \code{needs\_taxonomy\_decision}과 \code{primary\_l3\_id=null}로 남겼다.
+\end{decisionbox}
+
+이번 시험은 50개 L3가 1,726개 위험 전체를 충분히 수용한다는 가설을 \textbf{입증하지 못했다}. 비-Physical 잠정 제안률은 \ProposalRate\%이고 보류율은 \NeedsRate\%이다. 이는 실패한 강제 분류가 아니라, 현 L3 정의의 경계 밖에 있는 위험을 공개적으로 보존한 결과다. 특히 거버넌스·감사·규제, 투명성·설명가능성, 정렬·통제·강건성, 의존·조작, 일반 AI 보안과 같은 반복적 공백 후보가 확인되었다. 기존 50개 L3의 정의 확장 또는 신규 L3 추가는 본 보고서와 보류 큐를 사람이 검토한 뒤 승인해야 한다.
+
+\begin{warningbox}{해석 제한}
+\FinalProposals{}개의 상태는 \code{algorithm\_proposed}이며 \code{human\_approved}가 아니다. 두 리뷰어는 독립 전문 AI 에이전트이고, 소형 로컬 모델 2종은 민감도 감사에만 사용되었다. 사람 골드셋 검증과 오분류 비용 기반 임계값 보정 전에는 어떤 수치도 정확도 또는 확률로 해석할 수 없다.
+\end{warningbox}
+
+\tableofcontents
+\newpage
+
+\section{범위와 준수 원칙}
+
+\subsection{이번 작업의 경계}
+
+신규 독립 저장소 \code{RAI-Risk-Taxonomy}에 데이터 registry, placement, crosswalk, 검증 보고서, 사이트용 파생 번들을 생성했다. 기존 \code{AI\_Topic\_Space.github.io} 및 \code{Physical-AI-Risk-Taxonomy} 저장소는 읽기 전용 출처로 취급했으며 변경하지 않았다. GitHub remote 설정, push, Pages 배포도 수행하지 않았다.
+
+\subsection{비가역 원칙의 구현}
+
+\begin{longtable}{L{0.27\linewidth}L{0.63\linewidth}}
+\toprule
+원칙 & 구현 결과 \\
+\midrule
+\endfirsthead
+\toprule
+원칙 & 구현 결과 \\
+\midrule
+\endhead
+기존 글로벌 계층은 참고만 사용 & 비-Physical 예측 입력에서 글로벌 L0--L3, source family, source ID prefix를 제외했다. 기존 계층은 배치 후 전환 감사 CSV에서만 \code{reference\_only}로 보존했다. \\
+Physical 분류는 정답 집합 & 모델 호출 전에 182개를 \code{locked\_physical}로 고정하고, 모든 24개 Physical L3의 카드 수와 경로를 원본과 비교했다. \\
+라벨은 ID가 아님 & 모든 결합은 source namespace와 source ID의 복합키 또는 승인 alias로 수행했다. 라벨 fuzzy match는 운영 crosswalk에 사용하지 않았다. \\
+신규 ID는 간결하고 추적 가능 & 상위 노드는 \code{RAI3-G-INT-06} 같은 경로 ID, L4는 경로와 독립적인 \code{RAI4-\#\#\#\#}를 사용한다. 사이트 카드는 ID와 위험명을 함께 표시할 수 있다. \\
+재매핑 가능성 보장 & L4 registry와 release별 placement를 분리했다. 향후 경로 변경은 L4 ID를 바꾸지 않고 append-only migration ledger에 남긴다. \\
+억지 배치 금지 & 정확한 적합성이 입증되지 않은 \NeedsDecision{}개는 L3가 null인 결정 큐로 보존했다. \\
+사람 승인 게이트 & L3 정의 확장, 신규 L3, 자동 제안 승인, 재매핑은 현재 데이터에 반영하지 않고 다음 승인 단계로 남겼다. \\
+\bottomrule
+\end{longtable}
+
+\section{입력 동결과 출처 추적}
+
+\subsection{동결 입력}
+
+\begin{longtable}{L{0.31\linewidth}rL{0.24\linewidth}L{0.14\linewidth}}
+\toprule
+출처 & 행 수 & SHA-256 축약 & 원본 commit \\
+\midrule
+\endfirsthead
+\toprule
+출처 & 행 수 & SHA-256 축약 & 원본 commit \\
+\midrule
+\endhead
+\input{generated/source_rows.tex}
+\end{longtable}
+
+Physical AI Technical Report 42쪽도 분류 체계 해석 자료로 확인했다(SHA-256 \code{ac1c1b1ab07b...}). 데이터 파이프라인의 직접 입력은 위 다섯 동결 스냅샷이며, 각각 \code{data/source\_snapshots/v1.0.0/}에 복제되어 manifest와 checksum으로 고정된다. 전체 hash는 이전 계획 보고서와 manifest에서 확인할 수 있다.
+
+\subsection{Physical 182 대응}
+
+글로벌 원본과 Physical 원본 간 직접 ID 일치는 \ExactMatches{}개, 명시적 alias는 \ExplicitAliases{}개다. 이 13개는 라벨 유사도 추론이 아니라 고정 테이블이며, 결과적으로 182개 모두 정확히 한 개의 신규 RAI4 ID와 기존 Physical L3에 연결된다. Physical L2 분포는 System 91, Interaction 62, Societal 29이며 원본과 동일하다. 원본 Physical 근거·정당화 360행도 카드별 reference로 보존했고, 3H/Role 문자열은 원문과 axis/Primary--Secondary 구조를 함께 저장했다.
+
+\section{ID 및 데이터 아키텍처}
+
+\subsection{계층 ID}
+
+\begin{itemize}
+  \item L0: \code{RAI0}
+  \item L1: \code{RAI1-G}, \code{RAI1-A}, \code{RAI1-P}
+  \item L2 예시: \code{RAI2-G-INT}, \code{RAI2-A-SYS}, \code{RAI2-P-SOC}
+  \item L3 예시: \code{RAI3-G-INT-06} (Privacy), \code{RAI3-P-INT-05} (Misinformation)
+  \item L4: \code{RAI4-0001}--\code{RAI4-1726}; 동결 글로벌 source ID의 ASCII 사전순으로 최초 할당하며 재사용하지 않음
+\end{itemize}
+
+L4 ID에 L3 경로를 넣지 않은 이유는 재매핑 이후에도 URL, 인용, crosswalk가 유지되어야 하기 때문이다. 화면에서는 \code{[RAI4-0433] Biometric privacy intrusion}처럼 영구 ID와 위험명을 함께 출력하고, 현재 상위 경로는 별도 필드로 표시한다.
+
+\subsection{정규화된 데이터 계약}
+
+\begin{longtable}{L{0.32\linewidth}L{0.56\linewidth}}
+\toprule
+파일 & 역할 \\
+\midrule
+\endfirsthead
+\toprule
+파일 & 역할 \\
+\midrule
+\endhead
+\code{taxonomy\_nodes.json} & L0--L3 60개 노드, parent, 순번, 정의와 상태 \\
+\code{l4\_registry.json} & 1,726개 영구 카드 신원, 라벨, 정의, 메타데이터; 현재 L3를 포함하지 않음 \\
+\code{placements.json} & 릴리스별 L4--L3 관계 또는 명시적 abstention; 한 L4당 정확히 한 행 \\
+\code{source\_crosswalk.json} & 신규 RAI4와 출처 namespace/source ID의 관계; 총 1,908행 \\
+\code{physical\_lock.json} & 182개 원본 Physical 경로와 신규 L3 경로의 잠금 증거 \\
+\code{placement\_migrations.json} & 공개 후 재매핑 이벤트용 append-only ledger; 기준 릴리스에서는 0행 \\
+\code{algorithm\_config.json} & 모델 revision, snapshot fingerprint, codebook hash, 입력 차단, threshold와 seed의 불변 설정 \\
+\code{manifest.json} & 출처 해시, 모델 revision, seed, 수량, 산출물 checksum, 검증 상태 \\
+\code{requirements-lock.txt}, \code{environment.json} & 검증 실행의 정확한 package, Python, OS, 로컬 모델 식별자 \\
+\nolinkurl{public/data/releases/v1.0.0/} & 홈페이지가 직접 읽을 카드, 계층, 검색 인덱스 번들 \\
+\bottomrule
+\end{longtable}
+
+모든 핵심 객체에는 JSON Schema 계약을 두었고 canonical JSON에서 CSV 및 public 번들을 파생했다. registry와 placement의 분리는 schema 및 테스트로 강제된다.
+
+\section{비-Physical open-set 분류 절차}
+
+\subsection{입력 차단과 코드북}
+
+비-Physical \NonPhysicalTotal{}개만 자동 분류 후보가 되었다. 입력은 (1) L4 라벨, (2) 기존 계층을 재진술하는 템플릿 문장을 제거한 직접 메커니즘 정의, (3) evidence title로 제한했다. 50개 L3 중 Physical 24개는 잠금 전용이므로 비-Physical 후보 코드북은 General 20개와 Agentic 6개, 총 26개다.
+
+각 L3에는 사용자 제공 한국어 정의, 충실한 영문 번역, 세 가지 의미 anchor, 양성 단서, hard exclusion, 최소 eligibility 규칙을 기록했다. 또한 현 26개 범주가 포괄하지 못할 가능성이 큰 10개 공백 sentinel을 별도로 두었다.
+
+\subsection{BGE-M3 의미 점수와 규칙 게이트}
+
+로컬 고정 모델 \code{BAAI/bge-m3} revision \code{5617a9f61b028005a4858fdac845db406aefb181}을 로드 호출에 직접 지정하고, 정규화 1,024차원 임베딩을 사용했다. 카드 $c$와 L3 $l$의 의미 점수는 세 anchor cosine의 중앙값으로 계산했다.
+
+\[
+s(c,l)=\operatorname{median}_{j\in\{1,2,3\}}\left(\cos\bigl(e(c),e(a_{l,j})\bigr)\right)
+\]
+
+최종 순위 점수는 $0.75s+0.20r+0.05q$이며, 여기서 $r$은 규칙 단서 점수, $q$는 eligibility다. 의미 점수 0.55, 의미 margin 0.035, composite 0.54, 세 anchor 중 top-1 표 2개 이상을 요구했다. hard exclusion과 gap sentinel이 우선하며, Agentic은 자율 목표·다단계 행동·도구 사용 같은 결정적 단서와 보조 단서를 함께 요구했다. 이 점수는 \textbf{보정된 확률이 아니다}.
+
+\subsection{독립 검토와 합의}
+
+첫 게이트를 통과한 엄격 후보는 \InitialProposals{}개였다. 다음 두 층의 검토를 분리했다.
+
+\begin{enumerate}
+  \item \textbf{민감도 감사}: 로컬 \code{gemma3:4b}, \code{qwen3:4b}가 더 넓은 plausible pool \LocalReviewed{}개를 각각 계층 비공개로 검토했다. 동일 비보류 L3 합의는 \LocalSameNonNeeds{}개뿐이고, 상이 판정은 \LocalDisagreement{}개였다. 따라서 이 모델들을 승인 authority로 쓰지 않았다.
+  \item \textbf{독립 전문 에이전트 검토}: 두 전문 AI 에이전트가 \InitialProposals{}개 전부를 서로의 판정, BGE 점수, 기존 글로벌 계층 없이 검토했다. 전문가 A는 41개, 전문가 B는 40개를 승인했다. 정확한 동일 L3를 둘 다 승인한 \ExpertBothApprove{}개만 최종 \code{algorithm\_proposed}가 되었다. 17개 양측 거절과 7개 split decision은 모두 보류로 되돌렸다.
+\end{enumerate}
+
+이 이중 합의는 오류를 줄이기 위한 보수적 필터이지 사람 골드셋 검증을 대신하지 않는다.
+
+\subsection{모델 revision 재현성 교정}
+
+독립 구조 감사에서 첫 실행이 Hugging Face \code{refs/main} 모델을 사용하면서도, 기록 로직은 캐시 디렉터리 이름을 사전순으로 골라 다른 revision을 표기한 문제가 발견되었다. 로드 코드에 \code{5617a9f...}를 직접 전달하고 전체 1,544건을 다시 계산했다. 그 결과 \code{algorithm\_scores.json} SHA-256 \code{cdebe7fe96edb9f...}와 61개 전문가 검토 패킷 SHA-256 \code{44b7071741b992a4...}가 교정 전과 바이트 단위로 동일했다. 따라서 기존 두 전문가 검토는 그대로 유효하며, 실제 사용 revision과 기록이 일치하도록 교정되었다. snapshot 파일 목록 fingerprint와 불변 \code{algorithm\_config.json} hash도 validator가 재계산한다.
+
+\section{생성 결과와 50개 L3 커버리지 시험}
+
+\subsection{최종 상태 수량}
+
+\begin{longtable}{L{0.34\linewidth}rL{0.43\linewidth}}
+\toprule
+상태 & 카드 수 & 의미 \\
+\midrule
+\endfirsthead
+\toprule
+상태 & 카드 수 & 의미 \\
+\midrule
+\endhead
+\code{locked\_physical} & \PhysicalLocked & 기존 Physical AI 정답을 그대로 보존 \\
+\code{algorithm\_proposed} & \FinalProposals & 두 독립 전문 에이전트가 정확한 L3를 모두 승인; 잠정 상태 \\
+\code{human\_approved} & 0 & 향후 사람 검증 릴리스에 예약 \\
+\code{needs\_taxonomy\_decision} & \NeedsDecision & 강제 배치하지 않고 L3를 null로 보존 \\
+\midrule
+합계 & \TotalLFour & 모든 RAI4 ID가 정확히 한 상태를 가짐 \\
+\bottomrule
+\end{longtable}
+
+Physical 잠금과 잠정 자동 제안을 합친 apparent placement는 219개(12.6883\%)다. 그러나 source gold로 검증된 것은 Physical 182개(전체의 10.5446\%)뿐이고, 비-Physical의 잠정 제안은 \FinalProposals{}개(\ProposalRate\%)다. 따라서 50개 L3 충분성 상태는 \code{\CoverageConclusion}이다.
+
+\begin{reviewbox}{커버리지 판정}
+50개 L3가 “충분하다”고 결론 내릴 수 없다. \NeedsDecision{}개를 최근접 범주에 억지로 넣지 않았기 때문에 현재 데이터는 정의 확장 또는 신규 L3 검토를 위한 정직한 decision queue를 제공한다. 다음 판정은 보류 원인, gap sentinel, 군집, 대표 카드와 사람 샘플 검증을 함께 보아야 한다.
+\end{reviewbox}
+
+\subsection{보류 사유}
+
+\begin{longtable}{L{0.51\linewidth}r r}
+\toprule
+사유 & 카드 수 & 비-Physical 비율 \\
+\midrule
+\endfirsthead
+\toprule
+사유 & 카드 수 & 비-Physical 비율 \\
+\midrule
+\endhead
+\input{generated/abstention_rows.tex}
+\end{longtable}
+
+가장 큰 원인은 정의상 유효한 L3를 찾지 못한 \code{NO\_VALID\_L3}와, 기존 26개 비-Physical L3보다 명시적 공백 후보가 더 적합한 \code{GAP\_SENTINEL}이다. 전문가 거절과 split decision도 독립된 감사 사유로 보존했다.
+
+\subsection{반복 공백 후보}
+
+\begin{longtable}{L{0.68\linewidth}r}
+\toprule
+공백 sentinel & 카드 수 \\
+\midrule
+\endfirsthead
+\toprule
+공백 sentinel & 카드 수 \\
+\midrule
+\endhead
+\input{generated/gap_rows.tex}
+\end{longtable}
+
+이 수치는 신규 L3의 자동 제안이 아니다. 예를 들어 거버넌스·감사·규제 88개와 투명성·설명가능성 48개가 반복된다는 사실은 “검토 우선순위”를 의미할 뿐, 현 단계에서 새 노드를 생성할 권한은 부여하지 않는다.
+
+\subsection{보류 카드 군집 진단}
+
+1,507개 보류 카드의 발견 지원을 위해 BGE-M3 정규화 임베딩 KMeans 20개 군집과 단어/bi-gram TF--IDF KMeans를 비교했다. seed 1726, 1727, 1728의 BGE bootstrap ARI는 0.603859와 0.497390, BGE--TFIDF ARI는 0.094404였다. 이는 군집을 분류 정답이 아니라 사람이 볼 탐색 묶음으로만 사용해야 함을 보여준다.
+
+\begin{landscape}
+\small
+\begin{longtable}{L{0.10\linewidth}rL{0.50\linewidth}L{0.26\linewidth}}
+\toprule
+군집 & 수 & 대표 카드 & 주요 공백 단서 \\
+\midrule
+\endfirsthead
+\toprule
+군집 & 수 & 대표 카드 & 주요 공백 단서 \\
+\midrule
+\endhead
+\input{generated/cluster_rows.tex}
+\end{longtable}
+\end{landscape}
+
+\section{품질 검증 결과}
+
+\subsection{자동 검증과 fresh smoke}
+
+출처 해시, 행 수, ID 연속성, parent-child 무결성, crosswalk, Physical 잠금, JSON Schema, 사이트 파생 번들, 전문가 합의 조건을 포함해 \ValidationPassed{}개 검사가 통과했고 실패는 \ValidationFailed{}건이다. 경고 2건은 의도적으로 남은 사람 골드셋 부재와 명시적 보류 카드 존재다. 최종 상태는 \code{\ValidationStatus}다.
+
+별도의 단위 smoke 10개도 모두 통과했다. 기존 grain·ID·open-set·전문가 합의 검사에 더해 모든 source ID의 결정적 RAI4 대응, Physical 카드별 전체 사슬·근거·3H 보존, 고정 algorithm configuration, 사이트의 exact canonical join을 검사했다. 데이터 품질 노트북은 9개 셀 중 코드 6개를 위에서 아래로 실행했으며 오류 0건, display/image output 0건이었다.
+
+\subsection{독립 아키텍처 감사와 보강}
+
+읽기 전용 독립 감사는 현재 데이터 값의 불일치는 발견하지 않았으나, revision 기록, 카드 단위 변조 탐지, 공개 릴리스 덮어쓰기, 후속 migration, checksum 범위와 환경 고정을 공개 전 보강 과제로 지적했다. 이에 (1) 모델 revision 직접 pin과 byte-identical 재실행, (2) source card--alias--RAI4--L3--placement 전수 검사, (3) published 디렉터리 overwrite 차단, (4) successor release 생성기와 diff--migration 양방향 검사, (5) source/schema/code/report 전체 checksum, (6) package/environment lock을 구현했다. 이 보강 후 validator는 \ValidationPassed{}개 PASS, \ValidationFailed{}개 FAIL, \ValidationWarnings{}개 WARN으로 안정화되었다.
+
+\subsection{검증이 보장하는 것과 보장하지 않는 것}
+
+\begin{itemize}
+  \item \textbf{보장}: 1,726개 registry와 placement의 완전성, 1,908개 crosswalk, 169+13 Physical 대응, 182개 잠금, 24개 Physical L3 수량, 60개 상위 노드, public bundle 정합성.
+  \item \textbf{보장}: 모든 최종 자동 제안이 정확히 두 독립 전문가 승인 기록을 갖고, 기존 글로벌 계층이 예측 특징으로 쓰이지 않았다는 데이터 계약.
+  \item \textbf{미보장}: 37개 자동 제안의 사람 기준 정확도, 임계값 calibration, 보류 군집의 의미적 단일성, 50개 L3의 충분성.
+\end{itemize}
+
+\section{사이트 준비, 버전과 재매핑}
+
+\subsection{사이트용 데이터}
+
+\code{public/data/releases/v1.0.0/}에는 카드 1,726개, 계층 노드 60개, 검색 인덱스 1,726개가 생성되었다. 각 카드에는 RAI4 ID, 위험명, 현재 상태, 현재 L3 또는 null, source crosswalk가 포함된다. 이를 Physical AI 사이트와 유사한 구조의 신규 UI가 읽을 수 있으나, 본 작업 범위에서는 UI 배포와 GitHub Pages 공개를 수행하지 않았다.
+
+\subsection{릴리스와 재매핑 규칙}
+
+\begin{enumerate}
+  \item v1.0.0은 \code{prepublication\_draft}, \code{provisional=true}다.
+  \item 사람 검증 전에는 \code{algorithm\_proposed}를 \code{human\_approved}로 승격하지 않는다.
+  \item 승인된 재매핑은 RAI4 ID를 유지한 채 placement만 바꾸고, 이전 L3, 새 L3, 사유, 증거, 승인자를 migration ledger에 append한다.
+  \item L3 정의의 의미 확장은 minor release, 식별 의미가 깨지는 구조 변화는 major release로 관리한다.
+  \item 공개된 ID는 삭제·재사용하지 않고 필요하면 deprecated 상태로 남긴다.
+\end{enumerate}
+
+\code{create\_remap\_release.py}는 기존 릴리스 디렉터리를 수정하지 않고 더 높은 semantic version의 새 디렉터리만 생성한다. 동일 target이 있으면 중단하고, 표준 경로에서는 Physical 잠금 변경을 거부한다. dry-run smoke에서는 1개 예시 결정을 입력해 human-approved 1개, 보류 1,506개, 쓰기 0건의 preview를 확인했다. 실제 승인 결정은 예시 fixture와 분리되어 있으며 아직 적용하지 않았다.
+
+\section{사람 승인 전 권고 작업}
+
+\begin{enumerate}
+  \item \FinalProposals{}개 전수 검토와 보류 카드 층화 표본을 사용해 사람 골드셋을 만든다.
+  \item 우선 공백 후보 5개---거버넌스·감사·규제, 투명성·설명가능성, 정렬·통제·강건성, 의존·조작, 일반 AI 보안---의 대표 카드와 기존 50개 정의 경계를 비교한다.
+  \item 각 공백에 대해 (a) 기존 L3 정의 확장, (b) 새 L3 생성, (c) 현재 보류 유지 중 하나를 승인한다.
+  \item 승인 결과를 적용하기 전에 변경 영향표와 migration preview를 생성한다.
+  \item 사람 승인 및 수정 후 검증 전체를 다시 실행하고, 그때 GitHub push와 신규 사이트 공개를 진행한다.
+\end{enumerate}
+
+\begin{warningbox}{현재 중지점}
+로컬 데이터 패키지는 GitHub push 직전 상태로 준비되었다. 본 보고서는 50개 L3 정의를 임의로 확장하거나 새 L3를 추가하지 않았으며, 보류 1,507개를 숨기지 않았다. 다음 비가역 단계는 사람의 taxonomy decision과 공개 승인이다.
+\end{warningbox}
+
+\appendix
+
+\section{50개 L3별 현재 카드 분포}
+
+아래 수량은 Physical 잠금 182개와 최종 자동 제안 37개만 포함한다. 0은 해당 L3가 불필요하다는 뜻이 아니라 현재 엄격 기준에서 승인 가능한 카드가 없었다는 뜻이다.
+
+\begin{landscape}
+\small
+\begin{longtable}{L{0.20\linewidth}L{0.16\linewidth}L{0.35\linewidth}rL{0.12\linewidth}}
+\toprule
+L3 ID & L2 & L3 명칭 & 카드 수 & 상태 \\
+\midrule
+\endfirsthead
+\toprule
+L3 ID & L2 & L3 명칭 & 카드 수 & 상태 \\
+\midrule
+\endhead
+\input{generated/l3_distribution_rows.tex}
+\end{longtable}
+\end{landscape}
+
+\section{Physical 명시적 alias 13개}
+
+\begin{longtable}{L{0.34\linewidth}L{0.34\linewidth}L{0.20\linewidth}}
+\toprule
+글로벌 source ID & Physical source ID & 신규 L4 ID \\
+\midrule
+\endfirsthead
+\toprule
+글로벌 source ID & Physical source ID & 신규 L4 ID \\
+\midrule
+\endhead
+\input{generated/alias_rows.tex}
+\end{longtable}
+
+\section{최종 자동 제안 37개}
+
+다음 항목은 두 독립 전문 에이전트가 정확한 제안 L3를 모두 승인한 결과다. 모두 잠정 상태이며 사람 승인 전에는 정답으로 간주하지 않는다.
+
+\begin{longtable}{L{0.16\linewidth}L{0.52\linewidth}L{0.18\linewidth}}
+\toprule
+L4 ID & 위험명 & 제안 L3 \\
+\midrule
+\endfirsthead
+\toprule
+L4 ID & 위험명 & 제안 L3 \\
+\midrule
+\endhead
+\input{generated/proposed_rows.tex}
+\end{longtable}
+
+\section{자동 검증 체크리스트}
+
+\small
+\begin{longtable}{L{0.12\linewidth}L{0.64\linewidth}L{0.10\linewidth}}
+\toprule
+검사 ID & 검사 내용 & 결과 \\
+\midrule
+\endfirsthead
+\toprule
+검사 ID & 검사 내용 & 결과 \\
+\midrule
+\endhead
+\input{generated/validation_rows.tex}
+\end{longtable}
+\normalsize
+
+\section{재현 및 핵심 산출물}
+
+\begin{lstlisting}[style=compact]
+python3 scripts/build_release.py
+python3 scripts/run_llm_review.py --model gemma3:4b
+python3 scripts/run_llm_review.py --model qwen3:4b
+python3 scripts/build_frontier_review_packet.py
+# collect expert_a.json and expert_b.json independently
+python3 scripts/apply_expert_consensus.py
+python3 scripts/validate_release.py
+python3 -m unittest tests/test_release.py -v
+\end{lstlisting}
+
+주요 검토 파일은 다음과 같다.
+
+\begin{itemize}
+  \item canonical release: \nolinkurl{data/releases/v1.0.0/}
+  \item site-ready bundle: \nolinkurl{public/data/releases/v1.0.0/}
+  \item coverage: \nolinkurl{reports/validation/v1.0.0/coverage_summary.json}
+  \item expert consensus: \nolinkurl{reports/validation/v1.0.0/frontier_expert_consensus.json}
+  \item unresolved queue: \nolinkurl{reports/validation/v1.0.0/unresolved_cards.json}
+  \item validation: \nolinkurl{reports/validation/v1.0.0/validation_summary.json}
+  \item audit notebook: \nolinkurl{output/jupyter-notebook/rai_taxonomy_v1_data_quality_audit.ipynb}
+\end{itemize}
+
+\vfill
+\begin{center}
+\color{reportblue}\rule{0.72\linewidth}{0.5pt}\\[0.45em]
+\sffamily\bfseries End of Report\\
+\sffamily\small Prepublication draft; GitHub push not performed.
+\end{center}
+
+\end{document}

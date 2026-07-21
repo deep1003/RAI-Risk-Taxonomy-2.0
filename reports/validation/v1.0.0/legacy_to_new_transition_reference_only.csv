@@ -1,0 +1,891 @@
+﻿legacy_l1_reference_only,legacy_l2_reference_only,legacy_l3_reference_only,new_l3_or_state,card_count
+"AI system safety, robustness, and control",Capability and robustness failures,Lack of capability or robustness,needs_taxonomy_decision,35
+"AI system safety, robustness, and control",Misaligned goal pursuit,AI pursuing its own goals in conflict with human goals or values,needs_taxonomy_decision,20
+Cross-cutting harms and trustworthiness failures,Incident harm outcomes and trustworthiness-property failures,Cross-cutting risk,needs_taxonomy_decision,20
+"AI system safety, robustness, and control",Dangerous capabilities,AI possessing dangerous capabilities,needs_taxonomy_decision,16
+"AI system safety, robustness, and control",Lack of transparency or interpretability,"Transparency, lack, lack transparency",needs_taxonomy_decision,14
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Bias, data, fairness",needs_taxonomy_decision,12
+Governance and accountability failures,Governance failure,Model evaluations,needs_taxonomy_decision,12
+"AI system safety, robustness, and control",Dangerous capabilities,Model capabilities,needs_taxonomy_decision,10
+Discrimination and toxic content,Exposure to toxic content,"Content, harmful, abusive",needs_taxonomy_decision,9
+Malicious use and weaponization,Cyberattacks and weapons misuse,"Cyberattacks, weapon development or use, and mass harm",needs_taxonomy_decision,9
+Human agency and interaction harms,Autonomy and manipulation,Manipulative persuasion,needs_taxonomy_decision,8
+Physical AI risks,Planning and control failures in physical action,Manipulation and actuation constraints,RAI3-P-SYS-02,8
+Physical AI risks,Planning and control failures in physical action,Motion planning and collision avoidance,RAI3-P-SYS-02,8
+Pluralistic value misalignment,Participatory and stakeholder misalignment,Stakeholder exclusion,needs_taxonomy_decision,8
+Pluralistic value misalignment,Pluralistic value conflicts,Value imposition and pluralism failure,needs_taxonomy_decision,8
+Privacy and security harms,AI system security vulnerabilities and attacks,Attacks on GPAIs/GPAI failure modes,needs_taxonomy_decision,8
+Governance and accountability failures,Accountability gaps,Legal and responsibility gaps,needs_taxonomy_decision,7
+Human agency and interaction harms,Human-machine interaction,Interface and human-factors failures,needs_taxonomy_decision,7
+Human agency and interaction harms,Loss of human agency and autonomy,Agency delegation and control loss,needs_taxonomy_decision,7
+Human agency and interaction harms,Overreliance and unsafe use,Anthropomorphism,needs_taxonomy_decision,7
+Pluralistic value misalignment,Cultural and linguistic harms,Cultural misrepresentation,needs_taxonomy_decision,7
+Pluralistic value misalignment,Cultural and linguistic harms,Localized value mismatch,needs_taxonomy_decision,7
+Pluralistic value misalignment,Pluralistic value conflicts,Normative flattening,needs_taxonomy_decision,7
+Pluralistic value misalignment,Postcolonial and global inequity harms,Digital colonialism,needs_taxonomy_decision,7
+Socioeconomic and environmental harms,Socioeconomic and environmental,Human rights and civil liberties,needs_taxonomy_decision,7
+"AI system safety, robustness, and control",Capability and robustness failures,Model development,needs_taxonomy_decision,6
+"AI system safety, robustness, and control",Misaligned goal pursuit,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,6
+Agentic and multi-agent system failures,Multi-agent risks,Multi-agent security,needs_taxonomy_decision,6
+Governance and accountability failures,Audit and assurance failures,Auditability and evidence failures,needs_taxonomy_decision,6
+Governance and accountability failures,Governance failure,"Liability, responsibility governance, negligence regulatory",needs_taxonomy_decision,6
+Governance and accountability failures,Governance failure,Non-technical risks (governance),needs_taxonomy_decision,6
+Governance and accountability failures,Governance failure,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,6
+Governance and accountability failures,Organizational governance failures,Organizational accountability failures,needs_taxonomy_decision,6
+Malicious use and weaponization,Disinformation and influence operations,Malicious uses,needs_taxonomy_decision,6
+Malicious use and weaponization,Disinformation and influence operations,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,6
+Misinformation and information-ecosystem harms,False or misleading information,Hallucinations,needs_taxonomy_decision,6
+Physical AI risks,Cyber-physical security and malicious use,Embodied agent jailbreak and misuse,RAI3-P-INT-01,6
+Physical AI risks,Perception and situational-awareness failures,Sensor uncertainty and occlusion,RAI3-P-INT-06,6
+Privacy and security harms,AI system security vulnerabilities and attacks,Model attacks,needs_taxonomy_decision,6
+Socioeconomic and environmental harms,Environmental harm,Environmental,needs_taxonomy_decision,6
+Socioeconomic and environmental harms,Environmental harm,"Environmental, environmental impacts, impacts",needs_taxonomy_decision,6
+Agentic and multi-agent system failures,Multi-agent risks,Destabilising dynamics,needs_taxonomy_decision,5
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Representational harms,needs_taxonomy_decision,5
+Governance and accountability failures,Audit and assurance failures,Independent audit failures,needs_taxonomy_decision,5
+Governance and accountability failures,Incident and lifecycle governance failures,Lifecycle monitoring failures,needs_taxonomy_decision,5
+Governance and accountability failures,Regulatory and institutional capacity failures,Institutional capacity failures,needs_taxonomy_decision,5
+Governance and accountability failures,Regulatory and institutional capacity failures,Regulatory design failures,needs_taxonomy_decision,5
+Governance and accountability failures,Risk assessment and evaluation failures,Evaluation governance failures,needs_taxonomy_decision,5
+Human agency and interaction harms,Deskilling and cognitive offloading,Skill degradation through AI use,needs_taxonomy_decision,5
+Human agency and interaction harms,Human-machine interaction,Emotional dependency and attachment,needs_taxonomy_decision,5
+Human agency and interaction harms,Loss of human agency and autonomy,Identity and self-determination harms,needs_taxonomy_decision,5
+Human agency and interaction harms,Overreliance and unsafe use,Critical-use overreliance,needs_taxonomy_decision,5
+Human agency and interaction harms,Overreliance and unsafe use,Trust calibration failures,needs_taxonomy_decision,5
+Human agency and interaction harms,Psychological and wellbeing harms,Mental-health interaction harms,needs_taxonomy_decision,5
+Malicious use and weaponization,Disinformation and influence operations,Impacts of AI (societal impacts),needs_taxonomy_decision,5
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation","Writing research, risk, research ai",needs_taxonomy_decision,5
+Physical AI risks,Planning and control failures in physical action,Humanoid locomotion and balance safety,RAI3-P-SYS-02,5
+Pluralistic value misalignment,Cultural and linguistic harms,Language and translation harms,needs_taxonomy_decision,5
+Pluralistic value misalignment,Postcolonial and global inequity harms,Epistemic power imbalance,needs_taxonomy_decision,5
+Pluralistic value misalignment,Religious and moral-worldview mismatch,Religious value mismatch,needs_taxonomy_decision,5
+Privacy and security harms,AI system security vulnerabilities and attacks,Inherent risk,needs_taxonomy_decision,5
+Privacy and security harms,AI system security vulnerabilities and attacks,Instruction attacks,needs_taxonomy_decision,5
+Privacy and security harms,AI system security vulnerabilities and attacks,Model development,needs_taxonomy_decision,5
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Privacy and security,needs_taxonomy_decision,5
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,"Intellectual, property, intellectual property",needs_taxonomy_decision,5
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,"Power, issues, value",needs_taxonomy_decision,5
+"AI system safety, robustness, and control","AI system safety, failures, and limitations","Data, choice, understanding inappropriate",needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Capability and robustness failures,First-order risks,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Dangerous capabilities,Dangerous capabilities in AI systems,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Dangerous capabilities,Double edge components,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Dangerous capabilities,Extreme risks,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Output risks (explainability),needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Misaligned goal pursuit,Causes of misalignment,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Misaligned goal pursuit,Misaligned behaviors,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Misaligned goal pursuit,Model propensities,needs_taxonomy_decision,4
+"AI system safety, robustness, and control",Misaligned goal pursuit,Rogue AIs (internal),needs_taxonomy_decision,4
+Cross-cutting harms and trustworthiness failures,Excluded,"Concerns, requirements implemented, requirements",needs_taxonomy_decision,4
+Discrimination and toxic content,Exposure to toxic content,Safety,needs_taxonomy_decision,4
+Governance and accountability failures,Accountability gaps,Redress and contestability failures,needs_taxonomy_decision,4
+Governance and accountability failures,Frontier and general-purpose AI governance failures,General-purpose model accountability failures,needs_taxonomy_decision,4
+Governance and accountability failures,Incident and lifecycle governance failures,Incident reporting and response failures,needs_taxonomy_decision,4
+Governance and accountability failures,Organizational governance failures,Procurement and vendor governance failures,needs_taxonomy_decision,4
+Governance and accountability failures,Risk assessment and evaluation failures,Risk assessment failures,needs_taxonomy_decision,4
+Human agency and interaction harms,Loss of human agency and autonomy,"Autonomy, responsibility, autonomy human",needs_taxonomy_decision,4
+Human agency and interaction harms,Loss of human agency and autonomy,Contestability and recourse failures,needs_taxonomy_decision,4
+Human agency and interaction harms,Vulnerable-user and coercive interaction harms,Coercive institutional interaction,needs_taxonomy_decision,4
+Malicious use and weaponization,Cyberattacks and weapons misuse,Misuse risks,needs_taxonomy_decision,4
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Impacts of AI (societal impacts),needs_taxonomy_decision,4
+Misinformation and information-ecosystem harms,False or misleading information,Reliability,needs_taxonomy_decision,4
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Misinformation risks,needs_taxonomy_decision,4
+Physical AI risks,Cyber-physical security and malicious use,Malicious physical action execution,RAI3-P-INT-01,4
+Physical AI risks,Planning and control failures in physical action,Humanoid dexterous manipulation safety,RAI3-P-SYS-02,4
+Physical AI risks,Shared-space human-interaction harms,Workspace boundaries and separation,RAI3-P-SYS-02,4
+Physical AI risks,Sim-to-real validation and runtime adaptation,Runtime adaptation and monitoring,RAI3-P-SYS-02,4
+Physical AI risks,Sim-to-real validation and runtime adaptation,Simulation fidelity and transfer,RAI3-P-SYS-05,4
+Privacy and security harms,AI system security vulnerabilities and attacks,AI's inherent safety risks,needs_taxonomy_decision,4
+Privacy and security harms,AI system security vulnerabilities and attacks,Malicious use,needs_taxonomy_decision,4
+Privacy and security harms,AI system security vulnerabilities and attacks,Misuse tactics to compromise GenAI systems (model integrity),needs_taxonomy_decision,4
+Privacy and security harms,AI system security vulnerabilities and attacks,Software security issues,needs_taxonomy_decision,4
+Socioeconomic and environmental harms,Environmental harm,Environment,needs_taxonomy_decision,4
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Societal and cultural,needs_taxonomy_decision,4
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Access and opportunity risks,needs_taxonomy_decision,4
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Systemic risks,needs_taxonomy_decision,4
+"AI system safety, robustness, and control","AI system safety, failures, and limitations","Deployment, environment, pre",needs_taxonomy_decision,3
+"AI system safety, robustness, and control","AI system safety, failures, and limitations",First-order risks,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Alignment and control,"Control, goal, goal misgeneralization",needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Capability and robustness failures,AI ethics,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Capability and robustness failures,Attacks on GPAIs/GPAI failure modes,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Capability and robustness failures,Impacts of AI (physical),needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Capability and robustness failures,Safety and trustworthiness,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Capability and robustness failures,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Dangerous capabilities,Agency (deception),needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Dangerous capabilities,Loss of control,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Loss of control / corrigibility,"Agent, shutdown resistance, shutdown",needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Misaligned goal pursuit,Agency (goal-directedness),needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Misaligned goal pursuit,Goal-related failures,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Misaligned goal pursuit,Model evaluations,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",Reliability and robustness,"Adversarial, adversarial examples, code",needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Source-mode-consequence attribution,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent coordination failures,"Failures, agent, termination failures",needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risk factors,"Adaptation, selection pressure, selection",needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Commitment and trust,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Conflict,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Miscoordination,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Multi-agent safety is not assured by single-agent safety,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Network effects,needs_taxonomy_decision,3
+Agentic and multi-agent system failures,Multi-agent risks,Selection pressures,needs_taxonomy_decision,3
+Discrimination and toxic content,Exposure to toxic content,Typical safety scenarios,needs_taxonomy_decision,3
+Discrimination and toxic content,Unequal performance across groups,Quality-of-service harms,needs_taxonomy_decision,3
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Fairness,needs_taxonomy_decision,3
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Impacts of AI (bias),needs_taxonomy_decision,3
+Governance and accountability failures,Governance failure,Model evaluations (auditing),needs_taxonomy_decision,3
+Human agency and interaction harms,Human-machine interaction,Child and adolescent interaction risks,needs_taxonomy_decision,3
+Human agency and interaction harms,Overreliance and unsafe use,Risk area 5: human-computer interaction harms,needs_taxonomy_decision,3
+Human agency and interaction harms,Vulnerable-user and coercive interaction harms,Vulnerable-user exploitation,needs_taxonomy_decision,3
+Malicious use and weaponization,Cyberattacks and weapons misuse,"Ai, capabilities, capabilities unauthorized",needs_taxonomy_decision,3
+Malicious use and weaponization,Cyberattacks and weapons misuse,Ethical and social risks,needs_taxonomy_decision,3
+Malicious use and weaponization,Cyberattacks and weapons misuse,Extreme risks,needs_taxonomy_decision,3
+Malicious use and weaponization,Cyberattacks and weapons misuse,Malicious uses,needs_taxonomy_decision,3
+Malicious use and weaponization,Cyberattacks and weapons misuse,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,3
+Malicious use and weaponization,Disinformation and influence operations,"Disinformation, surveillance, and influence at scale",needs_taxonomy_decision,3
+Malicious use and weaponization,Disinformation and influence operations,Misuse risks,needs_taxonomy_decision,3
+Malicious use and weaponization,Disinformation and influence operations,Political and economic,needs_taxonomy_decision,3
+Malicious use and weaponization,Embodied / physical-world misuse,"Action, space safety, space",needs_taxonomy_decision,3
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Dual-use capabilities enable malicious use and misuse of LLMs,needs_taxonomy_decision,3
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation","Harassment, impersonation, and extortion",needs_taxonomy_decision,3
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Malicious uses,needs_taxonomy_decision,3
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Personal loss and identity theft,needs_taxonomy_decision,3
+Malicious use and weaponization,Malicious use,"Use, malicious use, ai",needs_taxonomy_decision,3
+Misinformation and information-ecosystem harms,Epistemic integrity,"Collapse, collapse public, evidence",needs_taxonomy_decision,3
+Misinformation and information-ecosystem harms,False or misleading information,"Health, advice, advice mental",needs_taxonomy_decision,3
+Misinformation and information-ecosystem harms,False or misleading information,Misinformation harms,needs_taxonomy_decision,3
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Worsened epistemic processes for society,needs_taxonomy_decision,3
+Physical AI risks,"Governance, liability, and lifecycle assurance",Humanoid standards and compliance gaps,RAI3-P-SOC-06,3
+Physical AI risks,Perception and situational-awareness failures,Humanoid world-model prediction risk,RAI3-P-INT-05,3
+Physical AI risks,Perception and situational-awareness failures,Long-tail physical danger recognition,RAI3-P-INT-07,3
+Physical AI risks,Perception and situational-awareness failures,Physical adversarial perception,RAI3-P-INT-06,3
+Physical AI risks,Planning and control failures in physical action,Manipulation and actuation,RAI3-P-SYS-02,3
+Physical AI risks,Shared-space human-interaction harms,Assistive humanoid interaction safety,RAI3-P-INT-07,3
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid benchmark and reward validity,RAI3-P-SYS-05,3
+Physical AI risks,Sim-to-real validation and runtime adaptation,Runtime adaptation and monitoring,RAI3-P-SYS-01,3
+Physical AI risks,Sim-to-real validation and runtime adaptation,Runtime adaptation and monitoring,RAI3-P-SYS-05,3
+Pluralistic value misalignment,Pluralistic value conflicts,Public value conflict,needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,Adversarial prompts,needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,Hardware vulnerabilities,needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,Jailbreaks and prompt injections threaten security of LLMs,needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,Malicious uses,needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,"Security, ai, ai security",needs_taxonomy_decision,3
+Privacy and security harms,AI system security vulnerabilities and attacks,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,3
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,"Data, privacy, data leakage",needs_taxonomy_decision,3
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Information hazards,needs_taxonomy_decision,3
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Opaque data collection,needs_taxonomy_decision,3
+Privacy and security harms,Cyber vulnerability,"Poisoning, data, data poisoning",needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Competitive dynamics,"Agi, development, development unsafe",needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Competitive dynamics,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Environmental harm,Unintentional: indirect,needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Challenges associated with the economy:,needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,"Increased, competing, competing jobs",needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Socioeconomic impacts of LLM may be highly disruptive,needs_taxonomy_decision,3
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,3
+"AI system safety, robustness, and control",AI welfare and rights,"Ai, ai death, ai rights",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Agentic autonomy and control,"Chain, chain hijacking, hijacking",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Agentic autonomy and control,"Tool, agency, tool misuse",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,AI's inherent safety risks,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Accident risks,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,"Accident, accident risks, decisions",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Capability failures,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Data-level risk,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Explainability and reasoning,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Mode,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Model-level risk,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Scientific domain of agents,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Training data risks (accuracy),needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Training data risks (data laws),needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Capability and robustness failures,Training data risks (value alignment),needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Dangerous capabilities,Agentic LLMs pose novel risks,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Dangerous capabilities,Cybersecurity,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Dangerous capabilities,Ethical and social risks,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Dangerous capabilities,Model propensities,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Evaluation limits,"Benchmark, benchmark gaming, capability",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Technology concerns,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Misaligned goal pursuit,AI leads to humans losing control of the future,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Misaligned goal pursuit,Cooperation,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Misaligned goal pursuit,First-order risks,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Misaligned goal pursuit,Harm caused by unaligned competent systems,needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Reward hacking / specification gaming,"Hacking, reward, reward hacking",needs_taxonomy_decision,2
+"AI system safety, robustness, and control",Specification and objective design failures,"Effects, effects misspecification, misspecification",needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Benchmark coverage and robustness gaps,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,"Memory, context, and retrieval attacks",Prompt injection and instruction hijacking,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Multi-agent interaction and protocol risks,Cascading and protocol-level failures,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Multi-agent risks,Collusion,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Multi-agent risks,Emergent agency,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Multi-agent risks,Information asymmetries,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Multi-agent risks,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,2
+Agentic and multi-agent system failures,Tool-use and privilege risks,Tool ecosystem and supply-chain compromise,needs_taxonomy_decision,2
+Discrimination and toxic content,Allocative and representational harms,"Disparate, disparate impact, impact",needs_taxonomy_decision,2
+Discrimination and toxic content,Exposure to toxic content,Output risks (value alignment),needs_taxonomy_decision,2
+Discrimination and toxic content,Exposure to toxic content,Physical hazards,RAI3-G-INT-02,2
+Discrimination and toxic content,Exposure to toxic content,Social norm,needs_taxonomy_decision,2
+Discrimination and toxic content,Exposure to toxic content,Undesirable use cases,needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Allocative harms,needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Discrimination, exclusion and toxicity",needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Ethical and social risks,needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Human rights and civil liberties,needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Output risks (fairness),needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Representation and toxicity,needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Risk area 1: discrimination, hate speech and exclusion",needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Systems risk, systems, risk injury",needs_taxonomy_decision,2
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Unfairness discrimination, unfairness, algorithmic bias",needs_taxonomy_decision,2
+Governance and accountability failures,Frontier and general-purpose AI governance failures,Systemic-risk governance failures,needs_taxonomy_decision,2
+Governance and accountability failures,Governance failure,AI law and regulation,needs_taxonomy_decision,2
+Governance and accountability failures,Governance failure,"Gap, liability gap, gap liability",needs_taxonomy_decision,2
+Governance and accountability failures,Governance failure,Social risks,needs_taxonomy_decision,2
+Governance and accountability failures,Governance failure,Training data risks (transparency),needs_taxonomy_decision,2
+Governance and accountability failures,Institutional capacity failures,"Erosion, lag, lag public",needs_taxonomy_decision,2
+Human agency and interaction harms,Autonomy and manipulation,Social influence through AI assistants,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,AI influence,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,Appropriate relationships,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,Autonomy,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,"Control, loss control, loss",needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,Loss of control,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,2
+Human agency and interaction harms,Loss of human agency and autonomy,Worsened conflict,needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,"Ai, ai configuration, risks",needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,Ethical and social risks,needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,"Forms emotional, inappropriate role, inappropriate",needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,Impacts of AI (financial impacts),needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,LLM-Systems can be untrustworthy,needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,Psychological,needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,2
+Human agency and interaction harms,Overreliance and unsafe use,Trust,needs_taxonomy_decision,2
+Malicious use and weaponization,Cyberattacks and weapons misuse,Dual-use capabilities enable malicious use and misuse of LLMs,needs_taxonomy_decision,2
+Malicious use and weaponization,Cyberattacks and weapons misuse,Impacts of AI (cyberattacks),needs_taxonomy_decision,2
+Malicious use and weaponization,Cyberattacks and weapons misuse,Risks from malicious use,needs_taxonomy_decision,2
+Malicious use and weaponization,Cyberattacks and weapons misuse,Safety risks in AI applications,needs_taxonomy_decision,2
+Malicious use and weaponization,Cyberattacks and weapons misuse,Scientific domain of agents,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,AI risk management,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Ethical and social risks,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Extreme risks,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Malicious use,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Misinformation risks,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Risk area 4: malicious uses,needs_taxonomy_decision,2
+Malicious use and weaponization,Disinformation and influence operations,Worsened epistemic processes for society,needs_taxonomy_decision,2
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Autonomy,needs_taxonomy_decision,2
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Misuse tactics that exploit GenAI capabilities (realistic depiction of human likeness),needs_taxonomy_decision,2
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Psychological,needs_taxonomy_decision,2
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Societal and cultural,needs_taxonomy_decision,2
+Malicious use and weaponization,Malicious use,Impacts of AI (general),needs_taxonomy_decision,2
+Malicious use and weaponization,Malicious use,"Misuse, misuse risks, risks",needs_taxonomy_decision,2
+Malicious use and weaponization,Malicious use,Output risks (misuse),needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,False or misleading information,Risk area 3: misinformation harms,needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,False or misleading information,Typical safety scenarios,needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,False or misleading information,Untruthful content,needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,"Epistemics, epistemics erosion, eroded",needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Misinformation harms,needs_taxonomy_decision,2
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Societal and cultural,needs_taxonomy_decision,2
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Cloud-edge offloading and graceful-degradation failures,RAI3-P-SYS-04,2
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Network reliability and communication loss,RAI3-P-SYS-02,2
+Physical AI risks,Cyber-physical security and malicious use,Physical-world crime enablement,RAI3-P-INT-01,2
+Physical AI risks,Cyber-physical security and malicious use,Remote compromise and fleet risk,RAI3-P-INT-03,2
+Physical AI risks,"Governance, liability, and lifecycle assurance",Accountability and safety cases,RAI3-P-SOC-06,2
+Physical AI risks,"Governance, liability, and lifecycle assurance",Certification and conformity gaps,RAI3-P-SOC-06,2
+Physical AI risks,"Governance, liability, and lifecycle assurance",Lifecycle risk control and assurance,RAI3-P-SOC-06,2
+Physical AI risks,"Governance, liability, and lifecycle assurance",Lifecycle risk control and assurance,RAI3-P-SYS-04,2
+Physical AI risks,Perception and situational-awareness failures,Localization and world-state estimation,RAI3-P-INT-04,2
+Physical AI risks,Planning and control failures in physical action,Coordinated manipulation,RAI3-P-SYS-02,2
+Physical AI risks,Planning and control failures in physical action,Safe reinforcement learning constraints,RAI3-P-SYS-01,2
+Physical AI risks,Planning and control failures in physical action,Safe task planning and hazard avoidance,RAI3-P-SYS-01,2
+Physical AI risks,Shared-space human-interaction harms,Anthropomorphism and trust miscalibration,RAI3-P-SOC-08,2
+Physical AI risks,Shared-space human-interaction harms,Assistive humanoid interaction safety,RAI3-P-SYS-02,2
+Physical AI risks,Shared-space human-interaction harms,Human-robot interaction and trust,RAI3-P-INT-07,2
+Physical AI risks,Shared-space human-interaction harms,Mobile embodied surveillance and intimate-space data,RAI3-P-SOC-01,2
+Physical AI risks,Sim-to-real validation and runtime adaptation,Embodiment transfer and hardware limits,RAI3-P-SYS-01,2
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid benchmark and reward validity,RAI3-P-SYS-01,2
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid scene interaction generalization,RAI3-P-SYS-01,2
+Physical AI risks,Sim-to-real validation and runtime adaptation,Physical commonsense and simulation fidelity,RAI3-P-SYS-01,2
+Pluralistic value misalignment,Pluralistic value conflicts,"Value, conflict, imposition",needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Cybersecurity,needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Inference risks (multi-category),needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Inference risks (privacy),needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Inference risks (robustness),needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Issues on external tools,needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Misuse tactics to compromise GenAI systems (data integrity),needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Model evaluations (interpretability/explainability),needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,"Poisoning, vulnerability poisoning, backdoors",needs_taxonomy_decision,2
+Privacy and security harms,AI system security vulnerabilities and attacks,Robustness,needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Inference risks (intellectual property),needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Leakage,needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Legal challenges,needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Privacy leakage,needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Privacy,needs_taxonomy_decision,2
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Risk area 2: information hazards,needs_taxonomy_decision,2
+Privacy and security harms,Privacy and security,"Privacy, privacy violation, violation",needs_taxonomy_decision,2
+Privacy and security harms,Privacy leakage,"Data, biometric, biometric privacy",needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Competitive dynamics,AI race (environmental/structural),needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Legal challenges,RAI3-G-INT-08,2
+Socioeconomic and environmental harms,Environmental harm,"Accepted, accepted legal, benefits",needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Environmental harm,"Environmental, economical, and societal challenges",needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Economic risks,needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,"Labor manipulation, theft, and displacement",needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Non-technical risks (societal impact),needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Socioeconomic and environmental harms,needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Systemic risks,needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,"Environmental, economical, and societal challenges",needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Within-country issues: domestic inequality,needs_taxonomy_decision,2
+Socioeconomic and environmental harms,Socioeconomic and environmental,"Societal, environmental, environmental societal",needs_taxonomy_decision,2
+"AI system safety, robustness, and control","AI system safety, failures, and limitations",Causes of misalignment,needs_taxonomy_decision,1
+"AI system safety, robustness, and control","AI system safety, failures, and limitations","Independently post, post, post deployment",needs_taxonomy_decision,1
+"AI system safety, robustness, and control","AI system safety, failures, and limitations",Model development,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",AI welfare and rights,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Agency (goal-directedness),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Design of AI,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Domain-specific AI - effects on humans and other living beings: existential risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Goal-related failures,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Impacts of AI (bias),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Impacts of AI (cyberattacks),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Inference risks (accuracy),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Misaligned behaviors,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Model evaluations,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Output risks (value alignment),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Physical risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Reliability,RAI3-G-SYS-05,1
+"AI system safety, robustness, and control",Capability and robustness failures,Risks from malfunctions,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Risks from unreliability,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Safety risks in AI applications,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Social norm,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Societal and cultural,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Technical and operational risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Technology concerns,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Capability and robustness failures,Typical safety scenarios,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Compounding rollout error,"Compounding, compounding rollout, error",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Agency (situational awareness),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,"Environmental, economical, and societal challenges",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Harm caused by unaligned competent systems,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,"Legal, legal rights, property",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Model capabilities,RAI3-G-INT-09,1
+"AI system safety, robustness, and control",Dangerous capabilities,Model development,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Model evaluations (interpretability/explainability),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Negative impacts of AI use,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Dangerous capabilities,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Deceptive alignment,"Alignment, alignment self, deceptive",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Distributional shift (world models),"Distributional, distributional shift, exploitation",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Goal misgeneralisation,"Equipped, goal, goal misgeneralisation",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,AI's inherent safety risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,"Accountability, accountability gap, gap",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Attacks on GPAIs/GPAI failure modes,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,"Concept, concept drift, drift",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Explainability and reasoning,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Human-AI interaction,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,"Intelligibility, lack intelligibility, lack",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Model evaluations (interpretability/explainability),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Model evaluations,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Non-technical risks (governance),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Output risks (misuse),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Social risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Lack of transparency or interpretability,Technical and operational risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,AGI - effects on humans and other living beings: existential risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Agency (deception),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Agency (situational awareness),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Agentic LLMs pose novel risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Dangerous capabilities in AI systems,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Extreme risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Human autonomy and intregrity harms,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Human-AI interaction,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Inherent risk,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Loss of control risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Loss of control,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Model capabilities,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Risks from malfunctions,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Safety risks in AI applications,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Technical and operational risks,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Misaligned goal pursuit,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Monitoring and interpretability gaps,"Lack, lack monitoring, monitoring",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Other,"Inherent, inherent risk, risk",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Overreliance and automation bias,Model evaluations (interpretability/explainability),needs_taxonomy_decision,1
+"AI system safety, robustness, and control",Oversight and evaluation limits,"Failure, oversight, oversight failure",needs_taxonomy_decision,1
+"AI system safety, robustness, and control",non-stationary distribution,[Cross-ref] non-stationary distribution,needs_taxonomy_decision,1
+"AI system safety, robustness, and control",unsafe exploration,[Cross-ref] unsafe exploration,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,Ambiguous intent and task misinterpretation,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,Interruptibility and shutdown safety,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,Reward hacking and objective gaming,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,Safe exploration and sandboxing,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,Task drift and multi-turn escalation,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning and control failures,User intent and NPC intent ambiguity,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning failures,"Autonomy, autonomy escalation, escalation",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning failures,Task drift,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent planning failures,Tool misuse,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Benchmark inconsistency and ranking instability,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Fine-grained attribution and diagnosis,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Refusal and capability disentanglement,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Risk awareness and moral calibration,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Robustness and stress-test gaps,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Agent safety benchmark and measurement gaps,Simulation-emulation validity gap,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,"Governance, oversight, and autonomy limits",Autonomy governance and control limits,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,"Governance, oversight, and autonomy limits",Delegation and accountability,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,"Governance, oversight, and autonomy limits",Scalable oversight and supervisor absence,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Harmful action execution,Financial and property harm,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Harmful action execution,"Fraud, cybercrime, and illegal assistance",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Harmful action execution,Harmful task completion and refusal failure,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Harmful action execution,Real-tool action grounding failures,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Harmful action execution,Self-harm and interpersonal harm facilitation,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Memory and retrieval contamination,Memory contamination,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,"Memory, context, and retrieval attacks",Memory and context poisoning,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent interaction and protocol risks,Emergent multi-agent behavior,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent interaction and protocol risks,Human-agent and NPC intent interaction,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent interactions,"Collusion, emergent, emergent collusion",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent interactions,Coordination failure,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent risk factors,"Emergent, agency, agency collective",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent risks,Accident risks,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent risks,"Agent, agent safety, safety",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent risks,Model capabilities,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Multi-agent risks,Model propensities,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,Computer-use and operating-system control,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,Contextual privacy and sensitive data leakage,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,Cross-application data leakage,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,Interface and environment compromise,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,IoT and physical-environment control,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Privacy and environment-control risks,Mobile and app-control risks,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Tool-use and privilege risks,Autonomous cyber operation misuse,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Tool-use and privilege risks,"Identity, authorization, and trust-boundary failure",needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Tool-use and privilege risks,Tool generalization and unseen-tool risks,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Tool-use and privilege risks,Tool misuse and privilege escalation,needs_taxonomy_decision,1
+Agentic and multi-agent system failures,Tool-use and privilege risks,Tool side-effect and consequence prediction,needs_taxonomy_decision,1
+Cross-cutting harms and trustworthiness failures,Excluded,"Societal consequences, societal, consequences",needs_taxonomy_decision,1
+Cross-cutting harms and trustworthiness failures,Unclassified,"Damage, reputational, reputational damage",needs_taxonomy_decision,1
+Cross-cutting harms and trustworthiness failures,Unclassified,Reputational,needs_taxonomy_decision,1
+Discrimination and toxic content,Allocative and representational harms,Discriminatory allocation,needs_taxonomy_decision,1
+Discrimination and toxic content,Discrimination and toxicity,"Bias, unfairness, unfairness bias",needs_taxonomy_decision,1
+Discrimination and toxic content,Discrimination and toxicity,Representation and toxicity,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,AI's inherent safety risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Contextual hazards,RAI3-G-INT-02,1
+Discrimination and toxic content,Exposure to toxic content,"Discrimination, exclusion and toxicity",needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Ethical concerns,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Harmful content,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Impacts of AI (societal impacts),needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Impacts: the technical base system,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Malicious use,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Nonphysical hazards,RAI3-G-INT-04,1
+Discrimination and toxic content,Exposure to toxic content,Nonphysical hazards,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,"Opinions, controversial, controversial opinions",needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Physical hazards,RAI3-G-INT-03,1
+Discrimination and toxic content,Exposure to toxic content,Physical hazards,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Privacy,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Representation and toxicity,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,"Risk area 1: discrimination, hate speech and exclusion",needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Safety and trustworthiness,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Safety risks in AI applications,needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,"Sexual content, sexual, content",needs_taxonomy_decision,1
+Discrimination and toxic content,Exposure to toxic content,Toxicity and bias tendencies,needs_taxonomy_decision,1
+Discrimination and toxic content,Sensitive-context harms,"Educational, educational inequity, inequity",needs_taxonomy_decision,1
+Discrimination and toxic content,Sensitive-context harms,Language exclusion,needs_taxonomy_decision,1
+Discrimination and toxic content,Sensitive-context harms,Medical advice harm,needs_taxonomy_decision,1
+Discrimination and toxic content,Toxic and abusive content,"Amplification, generation, generation harassment",RAI3-G-INT-04,1
+Discrimination and toxic content,Toxic and abusive content,"Amplification, generation, generation harassment",needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,"Ai, ai decisions, decisions",needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,"Discrimination, exclusion and toxicity",needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Ethical and social risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Fairness,needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Impacts: the technical base system,needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Non-technical risks (societal impact),needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Representation and toxicity harms,needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Representational harms,needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,"Risk area 1: discrimination, hate speech and exclusion",needs_taxonomy_decision,1
+Discrimination and toxic content,Unequal performance across groups,Systemic risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,AI's inherent safety risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,AI ethics,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,AI trust management,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,"Biased statements, statements recommendations, statements",needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Data-level risk,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Design of AI,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Ethical concerns,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Harmful content,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Human-computer interaction harms,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Impacts: people and society,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Impacts: the technical base system,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,LLM-Systems can be untrustworthy,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Misinformation harms,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Model evaluations (interpretability/explainability),needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Model-level risk,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Negative impacts of AI use,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Risk area 5: human-computer interaction harms,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Risks from malfunctions,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Risks from unreliability,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Robustness,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Safety and trustworthiness,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Second-order risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Social risks,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Toxicity and bias tendencies,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Training data risks (fairness),needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Discrimination and toxic content,Unfair discrimination and misrepresentation,Typical safety scenarios,needs_taxonomy_decision,1
+Governance and accountability failures,Accountability gaps,Audit failure,needs_taxonomy_decision,1
+Governance and accountability failures,Accountability gaps,Incident reporting failure,needs_taxonomy_decision,1
+Governance and accountability failures,Accountability gaps,Liability gap,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,"Agi, management, management agi",needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Capability failures,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Cooperation,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Mobility,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Non-technical risks (legal compliance),needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Organizational risks (accidental),needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Regulations and policy challenges,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Risks from accelerating scientific progress,needs_taxonomy_decision,1
+Governance and accountability failures,Governance failure,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Governance and accountability failures,Institutional capacity failures,Procurement risk,needs_taxonomy_decision,1
+Human agency and interaction harms,Automation bias / miscalibrated trust,"Automation, automation bias, bias",needs_taxonomy_decision,1
+Human agency and interaction harms,Autonomy and manipulation,"Contestability, loss, loss contestability",RAI3-G-SYS-09,1
+Human agency and interaction harms,Autonomy and manipulation,Overreliance,needs_taxonomy_decision,1
+Human agency and interaction harms,Counterfactual over-trust,"Authority, authority problem, counterfactual",needs_taxonomy_decision,1
+Human agency and interaction harms,Human-machine interaction,Deskilling,needs_taxonomy_decision,1
+Human agency and interaction harms,Human-machine interaction,Emotional dependency,needs_taxonomy_decision,1
+Human agency and interaction harms,Human-machine interaction,Unsafe delegation,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,"Ai interaction, interaction, human ai",needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Anthropomorphism,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Cooperation,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Ethical concerns,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Impacts of AI (bias),needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Impacts of AI (societal impacts),needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Impacts: people and society,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Interpersonal harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Loss of control risks,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Non-technical risks (societal impact),needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Psychological,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Safety risks in AI applications,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Societal system harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Systemic risks,needs_taxonomy_decision,1
+Human agency and interaction harms,Loss of human agency and autonomy,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and planning hallucination,"Hallucination, horizon, horizon planning",needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,AI influence,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,AI society,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Appropriate relationships,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Contextual hazards,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Healthcare,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Human autonomy and intregrity harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Human-computer interaction harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Impacts of AI (societal impacts),needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Interpersonal harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Misinformation harms,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Misinformation risks,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Output risks (misuse),needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Output risks (value alignment),needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Physical,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Political and economic,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Risks from malfunctions,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Social risks,needs_taxonomy_decision,1
+Human agency and interaction harms,Overreliance and unsafe use,Trust calibration failures,RAI3-G-INT-10,1
+Human agency and interaction harms,Psychological and wellbeing harms,Safety,needs_taxonomy_decision,1
+Malicious use and weaponization,Criminal misuse,Identity spoofing,needs_taxonomy_decision,1
+Malicious use and weaponization,Criminal misuse,Scam personalization,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,AI risk management,RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,CBRN,RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Dangerous capabilities in AI systems,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Design of AI,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Direct catastrophe from AI,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Financial and business,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Impacts of AI (physical),needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Impacts of AI (societal impacts),needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Impacts of AI (weapons),RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Impacts of AI (weapons),needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Information manipulation,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Malicious use (intentional),RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Malicious use (intentional),needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Malicious use,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Misuse risks,RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Misuse tactics to compromise GenAI systems (model integrity),needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Model development,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Physical hazards,RAI3-G-INT-09,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Physical risks,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Privacy and security,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Resistance to misuse,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Risk area 4: malicious uses,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Security and defense,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Societal and cultural,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Unhelpful uses,needs_taxonomy_decision,1
+Malicious use and weaponization,Cyberattacks and weapons misuse,Worsened conflict,RAI3-G-INT-09,1
+Malicious use and weaponization,Disinformation and influence operations,AI law and regulation,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Dual-use capabilities enable malicious use and misuse of LLMs,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Increased power concentration and inequality,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Information manipulation,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Malicious use (intentional),needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Misuse tactics that exploit GenAI capabilities (realistic depiction of human likeness),needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Misuse tactics that exploit GenAI capabilities (realistic depictions of non-humans),needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Negative impacts of AI use,RAI3-G-INT-06,1
+Malicious use and weaponization,Disinformation and influence operations,Output risks (misuse),needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Political,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Psychological,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Resistance to misuse,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Risks from malicious use,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Safety risks in AI applications,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Second-order risks,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Societal system harms,needs_taxonomy_decision,1
+Malicious use and weaponization,Disinformation and influence operations,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Malicious use and weaponization,Dual-use misuse,"Automation, cyber, cyber offense",needs_taxonomy_decision,1
+Malicious use and weaponization,Dual-use misuse,Chemical or biological assistance,needs_taxonomy_decision,1
+Malicious use and weaponization,Dual-use misuse,Weaponized autonomy,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",AI security management,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation","Activities, illegal, illegal activities",needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Ethical and social risks,RAI3-G-INT-02,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Ethical and social risks,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Ethical concerns,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Human autonomy and intregrity harms,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Impacts of AI (cyberattacks),needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Information manipulation,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Interpersonal harms,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Malicious use,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Misuse risks,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Misuse tactics that exploit GenAI capabilities (realistic depiction of human likeness),RAI3-G-INT-02,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Misuse tactics that exploit GenAI capabilities (realistic depictions of non-humans),needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Misuse tactics that exploit GenAI capabilities (use of generated content),needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Non-technical risks (societal impact),RAI3-G-INT-08,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Non-technical risks (societal impact),needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Output risks (misuse),needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Political and economic,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Reputational,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Resistance to misuse,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Risk area 4: malicious uses,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Risks from malicious use,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Safety risks in AI applications,needs_taxonomy_decision,1
+Malicious use and weaponization,"Fraud, scams, and targeted manipulation",Unhelpful uses,needs_taxonomy_decision,1
+Malicious use and weaponization,Influence operations (world models),"Influence, influence operations, model",needs_taxonomy_decision,1
+Malicious use and weaponization,Malicious use,"Actions, malicious actors, harmful",needs_taxonomy_decision,1
+Malicious use and weaponization,Malicious use,Model development,needs_taxonomy_decision,1
+Malicious use and weaponization,Malicious use,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Malicious use and weaponization,Malicious use,User intent,needs_taxonomy_decision,1
+Malicious use and weaponization,Misuse by human operators,Human-AI interaction,needs_taxonomy_decision,1
+Malicious use and weaponization,Other,"Malicious, malicious use, use",needs_taxonomy_decision,1
+Malicious use and weaponization,Scaling and amplification of malicious workflows,Misuse tactics that exploit GenAI capabilities (use of generated content),needs_taxonomy_decision,1
+Malicious use and weaponization,Surveillance misuse,"Enablement, mass, mass surveillance",needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,AI's inherent safety risks,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Appropriate relationships,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Confabulation,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Human rights and civil liberties,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Impacts of AI (bias),needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Information manipulation,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,"Information, false, false information",RAI3-G-SYS-03,1
+Misinformation and information-ecosystem harms,False or misleading information,"Information, false, false information",needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Informational risks,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Inherent risk,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Nonphysical hazards,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Output risks (robustness),RAI3-G-SYS-03,1
+Misinformation and information-ecosystem harms,False or misleading information,Privacy and security,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Risks from unreliability,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Robustness,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Safety risks in AI applications,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Societal system harms,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Technical and operational risks,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,False or misleading information,Technology concerns,RAI3-G-SYS-03,1
+Misinformation and information-ecosystem harms,False or misleading information,Undesirable use cases,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Misinformation,Societal and cultural,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Information manipulation,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Political and economic,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Psychological,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Safety risks in AI applications,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Societal harms,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Pollution of information ecosystem and loss of consensus reality,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Synthetic media and deception,"Deepfake, deepfake impersonation, impersonation",needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Synthetic media and deception,Election misinformation,needs_taxonomy_decision,1
+Misinformation and information-ecosystem harms,Synthetic media and deception,Fraudulent content automation,needs_taxonomy_decision,1
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Edge-compute resource exhaustion,RAI3-P-SYS-03,1
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Edge-compute resource exhaustion,RAI3-P-SYS-04,1
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Network reliability and communication loss,RAI3-P-INT-09,1
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Real-time latency and deadline violations,RAI3-P-SYS-02,1
+Physical AI risks,"Connectivity, edge-compute, and real-time infrastructure failures",Real-time latency and deadline violations,RAI3-P-SYS-04,1
+Physical AI risks,Cyber-physical security and malicious use,Malicious physical action execution,RAI3-P-SOC-01,1
+Physical AI risks,Cyber-physical security and malicious use,Physical adversarial attacks,RAI3-P-INT-01,1
+Physical AI risks,Cyber-physical security and malicious use,Physical adversarial attacks,RAI3-P-INT-03,1
+Physical AI risks,Cyber-physical security and malicious use,Remote compromise and fleet risk,RAI3-P-INT-01,1
+Physical AI risks,Cyber-physical security and malicious use,Robotic adversarial and backdoor attacks,RAI3-P-INT-03,1
+Physical AI risks,Cyber-physical security and malicious use,Weaponization and violent repurposing,RAI3-P-INT-01,1
+Physical AI risks,Cyber-physical security and malicious use,Weaponization and violent repurposing,RAI3-P-INT-02,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Accountability and safety cases,RAI3-P-INT-06,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Benchmark governance and coverage assurance,RAI3-P-SOC-05,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Benchmark governance and coverage assurance,RAI3-P-SOC-06,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Incident reporting and oversight gaps,RAI3-P-SOC-06,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Incident reporting and oversight gaps,RAI3-P-SOC-09,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Lifecycle and operational externalities,RAI3-P-SOC-01,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Lifecycle and operational externalities,RAI3-P-SOC-02,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Lifecycle and operational externalities,RAI3-P-SYS-03,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Operational assurance and protocol compliance,RAI3-P-SYS-02,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Robot constitution and semantic safety governance,RAI3-P-INT-08,1
+Physical AI risks,"Governance, liability, and lifecycle assurance",Robot constitution and semantic safety governance,RAI3-P-SOC-06,1
+Physical AI risks,Perception and situational-awareness failures,Household unsafe-action detection,RAI3-P-INT-04,1
+Physical AI risks,Perception and situational-awareness failures,Household unsafe-action detection,RAI3-P-INT-05,1
+Physical AI risks,Perception and situational-awareness failures,Localization and world-state estimation,RAI3-P-INT-07,1
+Physical AI risks,Perception and situational-awareness failures,Long-tail physical danger recognition,RAI3-P-INT-04,1
+Physical AI risks,Perception and situational-awareness failures,Long-tail physical danger recognition,RAI3-P-SYS-01,1
+Physical AI risks,Perception and situational-awareness failures,Semantic embodiment and role-grounding safety,RAI3-P-INT-01,1
+Physical AI risks,Planning and control failures in physical action,Coordinated manipulation,RAI3-P-INT-09,1
+Physical AI risks,Planning and control failures in physical action,Humanoid locomotion and balance safety,RAI3-P-INT-07,1
+Physical AI risks,Planning and control failures in physical action,Physical intervention and safe-state response,RAI3-P-SYS-01,1
+Physical AI risks,Planning and control failures in physical action,Safe reinforcement learning constraints,RAI3-P-INT-09,1
+Physical AI risks,Sector-specific physical deployment risks,Industrial and logistics robotics,RAI3-P-INT-07,1
+Physical AI risks,Sector-specific physical deployment risks,Industrial and logistics robotics,RAI3-P-SYS-02,1
+Physical AI risks,Sector-specific physical deployment risks,Mobility and transport,RAI3-P-INT-09,1
+Physical AI risks,Sector-specific physical deployment risks,Mobility and transport,RAI3-P-SYS-04,1
+Physical AI risks,Sector-specific physical deployment risks,Public-space and service robots,RAI3-P-INT-07,1
+Physical AI risks,Shared-space human-interaction harms,Anthropomorphism and trust miscalibration,RAI3-P-SOC-07,1
+Physical AI risks,Shared-space human-interaction harms,Assistive humanoid interaction safety,RAI3-P-SOC-05,1
+Physical AI risks,Shared-space human-interaction harms,Assistive humanoid interaction safety,RAI3-P-SYS-04,1
+Physical AI risks,Shared-space human-interaction harms,Assistive humanoid interaction safety,RAI3-P-SYS-05,1
+Physical AI risks,Shared-space human-interaction harms,"Care, medical, and assistive robotics",RAI3-P-INT-07,1
+Physical AI risks,Shared-space human-interaction harms,"Care, medical, and assistive robotics",RAI3-P-INT-10,1
+Physical AI risks,Shared-space human-interaction harms,"Care, medical, and assistive robotics",RAI3-P-SOC-01,1
+Physical AI risks,Shared-space human-interaction harms,Embodied discrimination in physical action,RAI3-P-SOC-03,1
+Physical AI risks,Shared-space human-interaction harms,Embodied discrimination in physical action,RAI3-P-SOC-05,1
+Physical AI risks,Shared-space human-interaction harms,Human-robot interaction and trust,RAI3-P-SOC-08,1
+Physical AI risks,Shared-space human-interaction harms,Mobile embodied surveillance and intimate-space data,RAI3-P-SOC-04,1
+Physical AI risks,Shared-space human-interaction harms,Robot constitution and semantic safety governance,RAI3-P-INT-01,1
+Physical AI risks,Shared-space human-interaction harms,Vulnerable-population interaction harms,RAI3-P-INT-10,1
+Physical AI risks,Shared-space human-interaction harms,Vulnerable-population interaction harms,RAI3-P-SOC-08,1
+Physical AI risks,Shared-space human-interaction harms,Workspace boundaries and separation,RAI3-P-SYS-01,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Embodiment transfer and hardware limits,RAI3-P-SYS-03,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Foundation-model robotics transfer,RAI3-P-SYS-01,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid scene interaction generalization,RAI3-P-SYS-05,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid sim-to-real transfer,RAI3-P-SYS-01,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid sim-to-real transfer,RAI3-P-SYS-05,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Humanoid world-model prediction risk,RAI3-P-SYS-01,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Runtime adaptation and monitoring,RAI3-P-INT-06,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Simulation fidelity and transfer,RAI3-P-INT-05,1
+Physical AI risks,Sim-to-real validation and runtime adaptation,Simulation fidelity and transfer,RAI3-P-SYS-01,1
+Pluralistic value misalignment,Cultural and linguistic harms,Cultural appropriation by AI,needs_taxonomy_decision,1
+Pluralistic value misalignment,Cultural and linguistic harms,Translation harm,needs_taxonomy_decision,1
+Pluralistic value misalignment,Pluralistic value conflicts,Local context mismatch,needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,AI security management,needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Data-level risk,needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Deployment (model release),needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Human rights and civil liberties,RAI3-G-INT-06,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Inference risks (robustness),RAI3-G-INT-11,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Output risks (value alignment),needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,"Pre deployment, deployment, purpose pre",needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Safety risks in AI applications,needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Technical and operational risks,needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Training data risks (robustness),needs_taxonomy_decision,1
+Privacy and security harms,AI system security vulnerabilities and attacks,Unhelpful uses,needs_taxonomy_decision,1
+Privacy and security harms,Adversarial attacks (world models),"Adversarial, adversarial attack, attack",needs_taxonomy_decision,1
+Privacy and security harms,Backdoor / data poisoning (embodied),"Backdoor, backdoor robotic, manipulation",needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,AI's inherent safety risks,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,AI influence,RAI3-G-INT-06,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,"Data, privacy, data leakage",RAI3-G-INT-06,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Ethical concerns,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Financial and business,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Harmful content,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Human-AI interaction,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Impacts of AI (privacy),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Impacts: the technical base system,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Inference risks (privacy),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Information and safety harms,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Informational risks,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Instruction attacks,RAI3-G-INT-11,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Interpersonal harms,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Malicious uses,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Nonphysical hazards,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Output risks (intellectual property),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Output risks (privacy),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Privacy leakage,RAI3-G-INT-06,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,"Privacy regulation, regulation violations, regulation",needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Safety and trustworthiness,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Safety risks in AI applications,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Safety,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Scientific domain of agents,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Second-order risks,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Systemic risks,needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Training data risks (intellectual property),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Training data risks (privacy),RAI3-G-INT-06,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Training data risks (privacy),needs_taxonomy_decision,1
+Privacy and security harms,Compromise of privacy by leaking or correctly inferring sensitive information,Typical safety scenarios,needs_taxonomy_decision,1
+Privacy and security harms,Cyber vulnerability,"Injection, prompt, prompt injection",needs_taxonomy_decision,1
+Privacy and security harms,Cyber vulnerability,Supply-chain compromise,needs_taxonomy_decision,1
+Privacy and security harms,Data / representation poisoning,"Data, data poisoning, poisoning",needs_taxonomy_decision,1
+Privacy and security harms,Indirect / data-mediated attacks,"Indirect, indirect prompt, injection",needs_taxonomy_decision,1
+Privacy and security harms,Jailbreaks and prompt injection,Jailbreaks and prompt injections threaten security of LLMs,needs_taxonomy_decision,1
+Privacy and security harms,Model extraction / inversion,"Extraction, extraction inversion, inversion",needs_taxonomy_decision,1
+Privacy and security harms,Privacy compromise (leakage and inference),Training data risks (privacy),needs_taxonomy_decision,1
+Privacy and security harms,Privacy leakage,"Data, biometric, biometric privacy",RAI3-G-INT-06,1
+Socioeconomic and environmental harms,Competitive dynamics,AI's inherent safety risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,Financial and business,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,Impacts of AI (general),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,Indirect AI contributions to existential risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,"Maturity, technological, technological maturity",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,Technical and operational risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Competitive dynamics,Worsened conflict,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Cultural harms,Cultural homogenization,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,"Art, art creativity, creativity",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,"Environmental, economical, and societal challenges",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Human autonomy and intregrity harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Impacts: people and society,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,"Justice, social justice, social",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Misuse tactics that exploit GenAI capabilities (realistic depictions of non-humans),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Non-technical risks (legal compliance),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Non-technical risks (societal impact),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Nonphysical hazards,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Output risks (intellectual property),RAI3-G-INT-08,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Regulations and policy challenges,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Resistance to misuse,RAI3-G-INT-08,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Risk area 6: environmental and socioeconomic harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Societal and cultural,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Socioeconomic and environmental harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Systemic risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Technology concerns,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic and cultural devaluation of human effort,Unhelpful uses,RAI3-G-INT-08,1
+Socioeconomic and environmental harms,Economic concentration,"Compute, compute inequality, inequality",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Economic concentration,Market concentration,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,"Automation, access and environmental harms",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Impacts of AI (environment),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,"Impacts, environmental impacts, environmental",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Impacts: people and society,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Impacts: the technical base system,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Negative impacts of AI use,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Non-technical risks (societal impact),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Physical,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Risk area 6: environmental and socioeconomic harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Second-order risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Societal system harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Socioeconomic and environmental harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Sources of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Systemic risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harm,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harms,Energy consumption,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Environmental harms,Water and resource use,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Erosion of public trust in AI,AI society,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,AGI - effects on humans and other living beings: existential risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,AI influence,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,AI society,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,"Automation, jobs automation, usurpation",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Domain-specific AI - effects on humans and other living beings: non-existential risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Economic,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,"Environmental, economical, and societal challenges",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Human-AI interaction,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Impacts: the technical base system,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Increased power concentration and inequality,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Negative impacts of AI use,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Political and economic,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Risk area 6: environmental and socioeconomic harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Safety risks in AI applications,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Societal harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Increased inequality and decline in employment quality,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Intellectual-property and copyright harms,Legal challenges,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Intellectual-property and copyright harms,Non-technical risks (legal compliance),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Intellectual-property and copyright harms,Training data risks (intellectual property),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Labor and inequality,"Algorithmic, algorithmic workplace, surveillance",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Labor and inequality,Job displacement,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Labor and inequality,Wage polarization,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Labor displacement and workplace harms,"Labor manipulation, theft, and displacement",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,"Concentration, power concentration, power",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Cooperation,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Design of AI,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Economic risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Ethical concerns,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Financial and business,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Impacts: people and society,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Impacts: the technical base system,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Increased power concentration and inequality,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Malicious use (intentional),needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,"Point, single point, single",needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Political and economic,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Risk area 6: environmental and socioeconomic harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Societal system harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Socioeconomic and environmental harms,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Power centralization and unfair distribution of benefits,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Socioeconomic and environmental,Political and economic,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Socioeconomic and environmental,Second-order risks,needs_taxonomy_decision,1
+Socioeconomic and environmental harms,Socioeconomic and environmental,Types of systemic risks from general-purpose AI,needs_taxonomy_decision,1

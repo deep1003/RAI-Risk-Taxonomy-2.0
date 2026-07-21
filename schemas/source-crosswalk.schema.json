@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/source-crosswalk.schema.json",
+  "title": "Source ID crosswalk row",
+  "type": "object",
+  "required": [
+    "l4_id",
+    "source_system",
+    "source_snapshot_id",
+    "source_id",
+    "relationship",
+    "canonical_source_id",
+    "match_basis",
+    "approved"
+  ],
+  "properties": {
+    "l4_id": {"type": "string", "pattern": "^RAI4-[0-9]{4,}$"},
+    "source_system": {"enum": ["global_1726", "physical_182"]},
+    "source_snapshot_id": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "relationship": {"enum": ["canonical_source", "exact_id", "explicit_alias", "deprecated_source_id"]},
+    "canonical_source_id": {"type": "string", "minLength": 1},
+    "match_basis": {"type": "string", "minLength": 1},
+    "approved": {"type": "boolean"},
+    "approved_by": {"type": ["string", "null"]},
+    "approved_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+

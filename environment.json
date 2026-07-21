@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-07-21T00:00:00+09:00",
+  "platform": {
+    "os": "macOS",
+    "version": "26.6",
+    "build": "25G5028f",
+    "architecture": "arm64"
+  },
+  "python": {
+    "version": "3.13.9",
+    "executable": "/opt/anaconda3/bin/python3"
+  },
+  "embedding_model": {
+    "model_id": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "offline": true
+  },
+  "local_model_sensitivity": {
+    "ollama_server_version": "0.32.0",
+    "ollama_client_version": "0.32.1",
+    "models": [
+      {"name": "gemma3:4b", "id": "a2af6cc3eb7f"},
+      {"name": "qwen3:4b", "id": "359d7dd4bcda"}
+    ],
+    "approval_authority": false
+  },
+  "package_lock": "requirements-lock.txt"
+}

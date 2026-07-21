@@ -1,0 +1,16 @@
+{
+  "cluster_count": 20,
+  "method_primary": "BGE-M3 normalized embeddings with KMeans",
+  "method_secondary": "word/bigram TF-IDF with KMeans",
+  "seeds": [
+    1726,
+    1727,
+    1728
+  ],
+  "bge_bootstrap_adjusted_rand_index": [
+    0.603859,
+    0.49739
+  ],
+  "bge_tfidf_adjusted_rand_index": 0.094404,
+  "interpretation": "Clusters are discovery aids, not approved new L3 categories."
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/migration.schema.json",
+  "title": "Append-only placement migration",
+  "type": "object",
+  "required": [
+    "migration_id",
+    "l4_id",
+    "from_release",
+    "to_release",
+    "from_l3_id",
+    "to_l3_id",
+    "from_status",
+    "to_status",
+    "event_type",
+    "reason",
+    "reviewers",
+    "approved_by",
+    "approved_at",
+    "created_at"
+  ],
+  "properties": {
+    "migration_id": {"type": "string", "pattern": "^MIG-[0-9]{6}$"},
+    "l4_id": {"type": "string", "pattern": "^RAI4-[0-9]{4,}$"},
+    "from_release": {"type": "string"},
+    "to_release": {"type": "string"},
+    "from_l3_id": {"type": ["string", "null"]},
+    "to_l3_id": {"type": ["string", "null"]},
+    "from_status": {"type": "string"},
+    "to_status": {"type": "string"},
+    "event_type": {"enum": ["remap", "unassign", "resolve", "definition_boundary_change", "lock_exception"]},
+    "reason": {"type": "string", "minLength": 1},
+    "algorithm_run_id": {"type": ["string", "null"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "reviewers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "approved_by": {"type": "string", "minLength": 1},
+    "approved_at": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}
+

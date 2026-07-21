@@ -1,0 +1,40 @@
+{
+  "configuration_version": "1.0.0",
+  "release_id": "v1.0.0",
+  "model_id": "BAAI/bge-m3",
+  "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "model_revision_pinned": true,
+  "snapshot_path": "/Users/deep1003/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+  "snapshot_file_count": 30,
+  "snapshot_tree_fingerprint": "ede7457a0ed0a00ebf4e49665e3bb1098c778a32de3534a4d1423f65a5ddbbf5",
+  "seed": 1726,
+  "codebook_version": "2026-07-21.1",
+  "codebook_sha256": "2e322185221ad3013731f3e15eaa7aa931eedd5518761f9ff700cd7afad92b11",
+  "input_fields": [
+    "l4_label",
+    "mechanism_only_definition",
+    "evidence_title"
+  ],
+  "excluded_predictive_fields": [
+    "global l0",
+    "global l1",
+    "global l2",
+    "global l3",
+    "source family",
+    "source ID prefix"
+  ],
+  "thresholds": {
+    "semantic": 0.55,
+    "semantic_margin": 0.035,
+    "composite": 0.54,
+    "anchor_top1_votes": 2
+  },
+  "ranking_weights": {
+    "semantic": 0.75,
+    "rule": 0.2,
+    "eligibility": 0.05
+  },
+  "normalize_embeddings": true,
+  "semantic_aggregation": "median cosine across definition, bilingual definition, and prototype anchors",
+  "rule_eligibility": "one decisive cue or two supporting cues; Agentic requires decisive plus supporting; hard exclusions override"
+}

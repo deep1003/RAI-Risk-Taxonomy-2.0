@@ -1,0 +1,25 @@
+{
+  "audit_id": "MODEL-REVISION-PIN-20260721",
+  "issue": "The first run selected the Hugging Face default ref but recorded the lexicographically last cached snapshot name.",
+  "implicit_huggingface_ref_main": "5617a9f61b028005a4858fdac845db406aefb181",
+  "incorrectly_recorded_initial_revision": "9a0624b896d81da7492a910ffa53731274b6cf3d",
+  "corrected_pinned_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "pin_mechanism": "SentenceTransformer model load receives the explicit revision argument in offline mode.",
+  "before_pin": {
+    "algorithm_scores_sha256": "cdebe7fe96edb9f971e7e450c9f48c83b96b6ca697bae96553930aa2554c151b",
+    "frontier_review_packet_sha256": "44b7071741b992a490f67b57b101d9fc2fcd7355e6403e37c22aab51e4ad7380",
+    "strict_proposals": 61
+  },
+  "after_explicit_pin": {
+    "algorithm_scores_sha256": "cdebe7fe96edb9f971e7e450c9f48c83b96b6ca697bae96553930aa2554c151b",
+    "frontier_review_packet_sha256": "44b7071741b992a490f67b57b101d9fc2fcd7355e6403e37c22aab51e4ad7380",
+    "strict_proposals": 61
+  },
+  "byte_identical": true,
+  "expert_review_reuse_valid": true,
+  "final_consensus_result": {
+    "algorithm_proposed": 37,
+    "needs_taxonomy_decision": 1507,
+    "locked_physical": 182
+  }
+}

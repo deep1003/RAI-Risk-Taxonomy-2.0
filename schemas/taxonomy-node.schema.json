@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rai-taxonomy/taxonomy-node.schema.json",
+  "title": "RAI taxonomy node",
+  "type": "object",
+  "required": [
+    "node_id",
+    "level",
+    "parent_id",
+    "sequence",
+    "label_en",
+    "label_ko",
+    "status",
+    "introduced_in"
+  ],
+  "properties": {
+    "node_id": {"type": "string", "pattern": "^RAI(?:0|1-[GAP]|2-[GAP]-(?:SYS|INT|SOC)|3-[GAP]-(?:SYS|INT|SOC)-[0-9]{2})$"},
+    "level": {"type": "integer", "minimum": 0, "maximum": 3},
+    "parent_id": {"type": ["string", "null"]},
+    "sequence": {"type": "integer", "minimum": 1},
+    "label_en": {"type": "string", "minLength": 1},
+    "label_ko": {"type": "string", "minLength": 1},
+    "definition_ko": {"type": ["string", "null"]},
+    "definition_en": {"type": ["string", "null"]},
+    "three_h_source": {"type": "string"},
+    "three_h_property": {"enum": ["harmlessness", "helpfulness", "honesty", null]},
+    "evaluation_types": {
+      "type": "array",
+      "items": {"enum": ["quality", "impact", "safety", "robustness"]},
+      "uniqueItems": true
+    },
+    "mitigation_policy": {"type": ["string", "null"]},
+    "legacy_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "status": {"enum": ["active", "deprecated", "retired"]},
+    "introduced_in": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "deprecated_in": {"type": ["string", "null"]},
+    "superseded_by": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
+

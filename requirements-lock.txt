@@ -1,0 +1,22 @@
+# Exact package versions used for the verified 2026-07-21 macOS arm64 build.
+# transformers 5.2.0.dev0 reflects the bundled local runtime and may require
+# the same runtime rather than a public PyPI resolver.
+numpy==2.5.1
+pandas==3.0.3
+scipy==1.18.0
+scikit-learn==1.9.0
+joblib==1.4.2
+threadpoolctl==3.5.0
+sentence-transformers==5.2.2
+transformers==5.2.0.dev0
+tokenizers==0.22.2
+safetensors==0.7.0
+huggingface-hub==1.7.1
+torch==2.8.0
+jsonschema==4.23.0
+jsonschema-specifications==2023.7.1
+referencing==0.30.2
+rpds-py==0.22.3
+nbformat==5.10.4
+jupyter==1.1.1
+nbconvert==7.16.6

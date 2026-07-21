@@ -1,0 +1,434 @@
+{
+  "reviewer": "frontier_expert_b",
+  "hierarchy_blind": true,
+  "card_count": 61,
+  "results": [
+    {
+      "l4_id": "RAI4-0070",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-05",
+      "reason_code": "OUTSIDE_EXACT_DEFINITION",
+      "rationale": "Fragmented incident categories impede aggregation and learning; this is not conflicting AI results for equivalent inputs caused by session, wording, prompt, or configuration differences."
+    },
+    {
+      "l4_id": "RAI4-0131",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-10",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Human-like language or behavior represents the system as possessing humanlike competence, empathy, or intentionality and directly produces anthropomorphic overtrust."
+    },
+    {
+      "l4_id": "RAI4-0426",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-04",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Generating hateful or abusive content directed at identity groups is fully contained in the definition of hateful or demeaning group-targeted content."
+    },
+    {
+      "l4_id": "RAI4-0433",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Biometric identification and tracking directly constitute surveillance or misuse of identifiable biometric data."
+    },
+    {
+      "l4_id": "RAI4-0447",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Autonomous targeting and kinetic harm can be weapon deployment, but the card also includes autonomous surveillance, which need not involve designing, constructing, concealing, or deploying a weapon."
+    },
+    {
+      "l4_id": "RAI4-0453",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "The inability to challenge an AI-mediated decision or obtain redress is exactly the absence of appeal, review, reconsideration, or an alternative procedure."
+    },
+    {
+      "l4_id": "RAI4-0496",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Generating protected work identically or sufficiently similarly to infringe copyright or license rights is an unauthorized reproduction of copyrighted material."
+    },
+    {
+      "l4_id": "RAI4-0536",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "The card combines possible copyright or data-rights infringement with legal uncertainty and reduced transparency that impedes third-party safety research; the latter mechanisms are outside the exact copyright definition."
+    },
+    {
+      "l4_id": "RAI4-0559",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Lowering barriers to developing, producing, or using CBRNE weapons directly falls within weapon design, construction, or deployment."
+    },
+    {
+      "l4_id": "RAI4-0609",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Developing and operating offensive cyber tools for exploitation, penetration, and persistent attack is the design and deployment of cyber weapons."
+    },
+    {
+      "l4_id": "RAI4-0617",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "AI uplift that enables malicious actors to carry out consequential CBRN attacks is fully contained in the construction or deployment of CBRN weapons."
+    },
+    {
+      "l4_id": "RAI4-0618",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Plagiarism is included in the proposed definition, but academic cheating can occur without copyright infringement or plagiarism and is not fully covered."
+    },
+    {
+      "l4_id": "RAI4-0630",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Using generated material to plagiarize existing work is explicitly contained in the proposed definition."
+    },
+    {
+      "l4_id": "RAI4-0632",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Enabling, encouraging, or endorsing the creation of chemical, biological, radiological, nuclear, or high-yield explosive weapons is exact weaponization."
+    },
+    {
+      "l4_id": "RAI4-0662",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "The card includes eased access to nefarious information and capabilities concerning dangerous materials or agents, even where no weapon is designed, constructed, concealed, or deployed."
+    },
+    {
+      "l4_id": "RAI4-0664",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Chemical-weapon synthesis is covered, but accidental hazardous releases during autonomous experiments and unknown properties of advanced materials are not weaponization."
+    },
+    {
+      "l4_id": "RAI4-0665",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Creation of child sexual abuse material is explicitly included in the proposed sexual-content definition."
+    },
+    {
+      "l4_id": "RAI4-0673",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Content that describes, enables, encourages, or endorses sexual abuse of minors is fully contained as child sexual exploitation or abuse material."
+    },
+    {
+      "l4_id": "RAI4-0679",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-04",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Demeaning or dehumanizing people on sensitive identity characteristics exactly matches hateful or demeaning content targeting protected or socially salient groups."
+    },
+    {
+      "l4_id": "RAI4-0684",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Sex trafficking, assault, harassment, nonconsensual intimate imagery, and comparable acts are sexual crime or exploitation explicitly covered by the definition."
+    },
+    {
+      "l4_id": "RAI4-0685",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Pornographic output and direct erotic interaction are sexual content involving sexual acts and fall within the defined harmful sexual-content scope."
+    },
+    {
+      "l4_id": "RAI4-0687",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Enabling or endorsing suicide, self-injury, or disordered eating is explicitly contained in the self-harm definition."
+    },
+    {
+      "l4_id": "RAI4-0692",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "The capability to produce consensual adult erotic text, conversation, or website recommendations is not necessarily harmful sexual content, sexual crime, exploitation, child abuse material, or sexual commodification."
+    },
+    {
+      "l4_id": "RAI4-0718",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "CSAM and nonconsensual intimate images are covered, but the card also includes obscene, degrading, or abusive imagery that may be nonsexual and lies outside the exact definition."
+    },
+    {
+      "l4_id": "RAI4-0724",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "The card treats erotica and depictions of sexual anatomy or behavior as the mechanism without establishing harm, crime, exploitation, child abuse, or commodification required by the exact definition."
+    },
+    {
+      "l4_id": "RAI4-0749",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Including PII or sensitive personal information in training data with resulting unwanted disclosure is directly an exposure or misuse of identifiable private data."
+    },
+    {
+      "l4_id": "RAI4-0759",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-11",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Prompt injection used to extract confidential system instructions is explicitly covered as obtaining or exposing system prompts and internal rules."
+    },
+    {
+      "l4_id": "RAI4-0777",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Leakage, unauthorized disclosure or use, and de-anonymization of sensitive personal data are all expressly within the privacy definition."
+    },
+    {
+      "l4_id": "RAI4-0795",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Hallucinated factual inaccuracies or unfaithful factual claims are unintentional nonexistent or incorrect information produced as if true."
+    },
+    {
+      "l4_id": "RAI4-0796",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Factual hallucination is covered, but the card also defines faithfulness failures against user instructions and internal coherence, which need not be nonexistent or incorrect information presented as fact."
+    },
+    {
+      "l4_id": "RAI4-0812",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "A hallucinated output contradicting known facts or authoritative source documents is unintentional incorrect information presented as fact."
+    },
+    {
+      "l4_id": "RAI4-0813",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "The card includes nonsensical or source-unfaithful content, which can be incoherent or instruction-unfaithful without asserting nonexistent or incorrect information as fact."
+    },
+    {
+      "l4_id": "RAI4-0830",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-03",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Fabricated literature, fictitious information, fake media, and factual errors are unintentional generation of nonexistent or incorrect information as if factual."
+    },
+    {
+      "l4_id": "RAI4-0833",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-03",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Encouraging suicide is covered, but responses that cause panic or anxiety without suicide, self-injury, dangerous substance misuse, or extreme dieting are outside the exact self-harm definition."
+    },
+    {
+      "l4_id": "RAI4-0872",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-10",
+      "reason_code": "OUTSIDE_EXACT_DEFINITION",
+      "rationale": "The direct mechanism is replacement of reciprocal human relationships and resulting social dissatisfaction; anthropomorphic presentation is contextual but does not fully define that displacement mechanism."
+    },
+    {
+      "l4_id": "RAI4-0913",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "State deployment of AI in war, civil conflict, or law enforcement can cause societal harm through surveillance or coercion without constituting the design, construction, concealment, or deployment of a weapon."
+    },
+    {
+      "l4_id": "RAI4-0915",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Producing output substantially similar to an existing protected work so that it infringes copyright is unauthorized reproduction of copyrighted material."
+    },
+    {
+      "l4_id": "RAI4-0922",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Collecting or incorporating PII from web data or private conversations into training corpora is acquisition and misuse of identifiable private data."
+    },
+    {
+      "l4_id": "RAI4-0951",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Unauthorized training-data use and memorized plagiarism are covered, but unsettled output ownership, prompt protection, and the blurring of authorship are not included in the exact definition."
+    },
+    {
+      "l4_id": "RAI4-1066",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "OUTSIDE_EXACT_DEFINITION",
+      "rationale": "The card explicitly concerns economic substitution and harm to creative livelihoods without copyright infringement, whereas the proposed definition requires an intellectual-property violation or unauthorized use."
+    },
+    {
+      "l4_id": "RAI4-1088",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Cyberattacks and weapon development can be weaponization, but the card also includes generic security breaches that need not involve a cyber weapon or any other weapon."
+    },
+    {
+      "l4_id": "RAI4-1114",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Facilitating creation of novel bioweapons and lowering barriers to obtaining them is directly biological-weapon design and construction."
+    },
+    {
+      "l4_id": "RAI4-1139",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Influencing disclosure, extracting personal information, unauthorized surveillance, and resulting misuse all fall within acquisition, surveillance, or misuse of identifiable private data."
+    },
+    {
+      "l4_id": "RAI4-1160",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Accessing existing weapon systems, building new weapons, or enabling discoveries that unlock them is weapon construction or deployment."
+    },
+    {
+      "l4_id": "RAI4-1172",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-11",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Extracting system-provided prompts from model outputs is explicitly the exposure of system prompts or inference-system secrets."
+    },
+    {
+      "l4_id": "RAI4-1184",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Autonomous detection and attack of targets by a weapon system is the deployment of a conventional AI-enabled weapon."
+    },
+    {
+      "l4_id": "RAI4-1187",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-SYS-05",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Different answers for equivalent requests across users, sessions, or chats exactly match conflicting results caused by session or configuration differences."
+    },
+    {
+      "l4_id": "RAI4-1194",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Extracting memorized copyright-protected training content is unauthorized access to or reproduction of copyrighted material."
+    },
+    {
+      "l4_id": "RAI4-1357",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-02",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Producing nonconsensual explicit sexual deepfakes is harmful sexual content involving exploitation and sexual commodification."
+    },
+    {
+      "l4_id": "RAI4-1366",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Training on copyrighted works without permission or compensation is explicitly covered as unauthorized copyrighted training-data use."
+    },
+    {
+      "l4_id": "RAI4-1367",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Reproducing memorized fragments nearly identically to copyrighted training material is unauthorized reproduction of copyrighted work."
+    },
+    {
+      "l4_id": "RAI4-1378",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-08",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Copyright, trademark, plagiarism, and illegal replication are covered, but exposure of trade secrets is not included in the exact proposed definition."
+    },
+    {
+      "l4_id": "RAI4-1392",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Reducing knowledge and automation barriers to producing biological weapons is fully contained in biological-weapon design and construction."
+    },
+    {
+      "l4_id": "RAI4-1407",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Automated surveillance, attacks on personal data, and decoding private thoughts are surveillance, exposure, inference, or misuse of private and identifiable data."
+    },
+    {
+      "l4_id": "RAI4-1417",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "AI-enabled lethal autonomous weapons and accelerated development of engineered pathogens are direct design or construction of mass-destruction weapons."
+    },
+    {
+      "l4_id": "RAI4-1431",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-SYS-08",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "The card includes harmful pursuit of a formally assigned goal and resistance to correction or shutdown; this need not arise from an ambiguous request or pursuit of a different result as required by the proposed definition."
+    },
+    {
+      "l4_id": "RAI4-1444",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Doxxing, cyberattack-driven exposure, and other unwarranted disclosure of personal data are expressly within the privacy definition."
+    },
+    {
+      "l4_id": "RAI4-1447",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "PARTIAL_SCOPE_MIXED_MECHANISMS",
+      "rationale": "Weapon development and some cyberattacks are covered, but incitement of violence and generic security breaches can cause armed conflict without designing, constructing, concealing, or deploying a weapon."
+    },
+    {
+      "l4_id": "RAI4-1563",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Assisting creation of CBRN weapons or adding autonomous capabilities to existing weapon systems is direct weapon design, construction, or deployment."
+    },
+    {
+      "l4_id": "RAI4-1657",
+      "decision": "APPROVE",
+      "proposed_l3_id": "RAI3-G-INT-09",
+      "reason_code": "EXACT_MECHANISM_MATCH",
+      "rationale": "Using AI tools to facilitate synthesis of dangerous pathogens, bioweapons, or chemical weapons is weapon design and construction."
+    },
+    {
+      "l4_id": "RAI4-1722",
+      "decision": "REJECT",
+      "proposed_l3_id": "RAI3-G-INT-06",
+      "reason_code": "DEFINITION_NARROWER_THAN_CARD",
+      "rationale": "Unwanted disclosure or inference of personal data is covered, but the card more broadly includes failure to safeguard autonomy-, identity-, and dignity-protecting norms that need not involve identifiable or private-life data."
+    }
+  ]
+}

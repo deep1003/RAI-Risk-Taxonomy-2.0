@@ -1,0 +1,32 @@
+{
+  "release_id": "v1.0.0",
+  "total_l4": 1726,
+  "physical_locked": 182,
+  "nonphysical_total": 1544,
+  "algorithm_proposed": 37,
+  "human_approved": 0,
+  "needs_taxonomy_decision": 1507,
+  "provisional_hard_coverage_rate": 0.126883,
+  "nonphysical_provisional_coverage_rate": 0.023964,
+  "nonphysical_abstention_rate": 0.976036,
+  "strict_human_validated_coverage_rate": 0.105446,
+  "confidence_is_calibrated": false,
+  "fifty_l3_sufficiency_status": "NOT_DEMONSTRATED",
+  "gap_sentinel_counts": {
+    "DELIBERATE_DISINFORMATION": 19,
+    "DEPENDENCY_MANIPULATION": 33,
+    "ENVIRONMENT_ENERGY_RESOURCES": 23,
+    "GENERAL_AI_SECURITY": 32,
+    "GOVERNANCE_AUDIT_REGULATION": 88,
+    "LABOR_INEQUALITY_POWER": 26,
+    "PHYSICAL_OUTSIDE_LOCK": 23,
+    "PLURALISTIC_VALUE_STAKEHOLDER": 21,
+    "ROBUSTNESS_ALIGNMENT_CONTROL": 45,
+    "TRANSPARENCY_EXPLAINABILITY": 48
+  },
+  "notes": [
+    "Algorithm-proposed placements are provisional and are not human-approved.",
+    "Legacy global hierarchy is used only in the transition audit after placement.",
+    "Any unresolved card remains outside the 50 L3 until a taxonomy decision is approved."
+  ]
+}
