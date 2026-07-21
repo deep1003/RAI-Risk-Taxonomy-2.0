@@ -81,7 +81,7 @@ async function init() {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   return response.json();
 }
@@ -198,7 +198,8 @@ function renderStats() {
   document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1).length.toLocaleString();
   document.querySelector("#stat-l2").textContent = state.l2Categories.length.toLocaleString();
   document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3).length.toLocaleString();
-  document.querySelector("#stat-l4").textContent = state.manifest.counts.l4.toLocaleString();
+  const l4Count = state.manifest.counts?.l4 ?? state.cards.length;
+  document.querySelector("#stat-l4").textContent = l4Count.toLocaleString();
 }
 
 function renderTree() {

@@ -331,6 +331,16 @@ def main() -> None:
         "release_id": RELEASE_ID,
         "source_release": SOURCE_ID,
         "status": "generated_unpublished",
+        "counts": {
+            "l4": len(cards),
+            "classified": sum(bool(card.get("primary_l3_id")) for card in cards),
+            "physical_locked": len(original_physical),
+            "decision_required": sum(bool(card.get("decision_required")) for card in cards),
+            "l1_nodes": sum(node["level"] == 1 for node in hierarchy["nodes"]),
+            "l2_categories": len(hierarchy.get("canonical_l2_categories", [])),
+            "l2_path_nodes": sum(node["level"] == 2 for node in hierarchy["nodes"]),
+            "l3_nodes": sum(node["level"] == 3 for node in hierarchy["nodes"]),
+        },
         "summary": summary,
         "files": [
             {"path": "cards.json", "sha256": sha256(OUT / "cards.json")},

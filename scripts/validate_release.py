@@ -803,9 +803,9 @@ def main() -> None:
     site_shell = site_shell_path.read_text(encoding="utf-8") if site_shell_path.is_file() else ""
     site_js = site_js_path.read_text(encoding="utf-8") if site_js_path.is_file() else ""
     site_contract_failures = []
-    if 'href="assets/site.css"' not in site_shell:
+    if 'href="assets/site.css?v=2.8.0"' not in site_shell:
         site_contract_failures.append("css_link")
-    if 'src="assets/site.js"' not in site_shell:
+    if 'src="assets/site.js?v=2.8.0"' not in site_shell:
         site_contract_failures.append("js_link")
     if 'const DATA_ROOT = "public/data/releases/v2.8.0"' not in site_js:
         site_contract_failures.append("release_data_root")

@@ -22,12 +22,15 @@ class SiteV28Tests(unittest.TestCase):
         cls.before = json.loads((V27 / "cards.json").read_text())["cards"]
         cls.after = json.loads((V28 / "cards.json").read_text())["cards"]
         cls.hierarchy = json.loads((V28 / "hierarchy.json").read_text())["nodes"]
+        cls.manifest = json.loads((V28 / "manifest.json").read_text())
         cls.before_by_id = {row["l4_id"]: row for row in cls.before}
         cls.after_by_id = {row["l4_id"]: row for row in cls.after}
 
     def test_population_and_unique_ids(self) -> None:
         self.assertEqual(len(self.after), 1711)
         self.assertEqual(len({row["l4_id"] for row in self.after}), 1711)
+        self.assertEqual(self.manifest["counts"]["l3_nodes"], 54)
+        self.assertEqual(self.manifest["counts"]["l4"], 1711)
 
     def test_four_new_agentic_l3_nodes(self) -> None:
         nodes = {row["node_id"]: row for row in self.hierarchy}

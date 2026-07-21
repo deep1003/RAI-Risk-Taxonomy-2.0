@@ -2,6 +2,16 @@
   "release_id": "v2.8.0",
   "source_release": "v2.7.0",
   "status": "generated_unpublished",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 685,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 54
+  },
   "summary": {
     "release_id": "v2.8.0",
     "source_release": "v2.7.0",
