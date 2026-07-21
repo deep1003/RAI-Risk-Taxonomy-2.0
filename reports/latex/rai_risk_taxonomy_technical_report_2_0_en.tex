@@ -1,359 +1,440 @@
 % !TEX program = xelatex
-% RAI Risk Taxonomy Technical Report 2.0 -- English edition.
+% RAI Risk Taxonomy Technical Report 2.0 -- journal-style English edition.
 \documentclass[11pt,a4paper]{article}
-\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage[a4paper,top=22mm,bottom=24mm,left=22mm,right=22mm]{geometry}
 \usepackage{fontspec}
+\usepackage{microtype}
 \usepackage{booktabs,longtable,tabularx,array}
-\usepackage[table]{xcolor}
 \usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{pgfplots}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \pgfplotsset{compat=1.18}
-\setmainfont{Noto Serif CJK KR}
-\setsansfont{Noto Sans CJK KR}
-\setmonofont{Noto Sans Mono CJK KR}
-\definecolor{navy}{HTML}{173458}
-\definecolor{blue}{HTML}{3867D6}
-\definecolor{gold}{HTML}{C48A18}
-\definecolor{orange}{HTML}{D97706}
-\definecolor{ink}{HTML}{273142}
-\definecolor{grid}{HTML}{D0D5DD}
-\definecolor{light}{HTML}{F5F7FA}
-\newcommand{\code}[1]{\texttt{#1}}
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Menlo}
+\setlength{\parindent}{1.4em}
+\setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\pct}[1]{#1\%}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\definecolor{natureblue}{HTML}{0072B2}
+\definecolor{naturevermillion}{HTML}{D55E00}
+\definecolor{naturegreen}{HTML}{009E73}
+\definecolor{naturegrey}{HTML}{6B6B6B}
+\definecolor{naturelight}{HTML}{D9D9D9}
+
+\pgfplotsset{
+  natureaxis/.style={
+    axis x line*=bottom,
+    axis y line*=left,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick style={black, line width=0.5pt},
+    tick label style={font=\sffamily\footnotesize, color=black},
+    label style={font=\sffamily\small, color=black},
+    title style={font=\sffamily\small, color=black},
+    legend style={draw=none, fill=none, font=\sffamily\footnotesize},
+    grid=none,
+    clip=false
+  }
+}
+
 \pagestyle{fancy}
 \setlength{\headheight}{14pt}
 \fancyhf{}
-\lhead{RAI Risk Taxonomy}
-\rhead{Technical Report 2.0}
-\cfoot{\thepage}
-\hypersetup{pdftitle={RAI Risk Taxonomy Technical Report 2.0},pdfauthor={RAI Risk Taxonomy Project}}
+\lhead{\footnotesize RAI Risk Taxonomy}
+\rhead{\footnotesize Technical Report 2.0}
+\cfoot{\footnotesize\thepage}
+\hypersetup{
+  pdftitle={RAI Risk Taxonomy Technical Report 2.0},
+  pdfauthor={RAI Risk Taxonomy Project}
+}
 
-\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]\Large Technical Report 2.0}
-\author{Staged classification, review-hold policy, and statistical validation\\of 1,726 global L4 risks}
-\date{July 21, 2026}
+\title{\vspace{-1.3cm}\bfseries\Large RAI Risk Taxonomy 2.0:\\[3pt]
+Top-down evidence selection and staged classification of 1,726 global AI risks}
+\author{RAI Risk Taxonomy Project}
+\date{21 July 2026}
 
 \begin{document}
 \maketitle
 
-\begin{center}
-\fcolorbox{navy}{light}{\parbox{0.92\linewidth}{
-\textbf{Final policy result.} Of 1,726 L4 risk cards, 1,671 (96.8134\%) are
-provisionally assigned to the 50 L3 nodes. The 55 most uncertain cards
-(3.1866\%) are separated into the non-taxonomic \code{RAI-HOLD} review bucket.
-No algorithmic proposal in this report constitutes human-approved ground truth.}}
-\end{center}
+\begin{abstract}
+We present a reproducible, top-down account of the evidence and classification
+pipeline used to construct RAI Risk Taxonomy 2.0. The integrated evidence space
+contains 3,906,767 AI records: 1,749,159 papers, 125,372 policy reports, and
+2,032,236 patents. A curated AI-risk evidence view contains 82,971 records
+(2.1\% of the AI evidence space). Canonicalization, source crosswalking, and
+risk-card deduplication yield 1,726 L4 risk cards. A staged hierarchy-blind
+classification procedure assigns 1,671 cards (96.8\%) to 50 L3 nodes and
+withholds 55 cards (3.2\%) in a non-taxonomic review bucket. We specify the
+filter at each transition, the mathematical decision rules, the protected
+Physical AI set, and the limits of interpreting record-level evidence as
+card-level taxonomy coverage.
+\end{abstract}
 
-\section{Technical summary}
+\noindent\textbf{Keywords:} AI risk taxonomy; evidence synthesis; open-set
+classification; semantic mapping; Physical AI; responsible AI.
 
-This report documents the staged placement of 1,726 global L4 risk cards into a
-new hierarchy containing 50 L3 nodes. The 182 classifications inherited from
-the Physical AI taxonomy are treated as a locked gold set. The legacy global
-L1--L3 hierarchy is retained only as reference metadata and is not used as a
-prediction feature. Permanent L4 identifiers and source crosswalks are
-preserved throughout the process.
+\section{Introduction}
 
-Stage 1 applies strict rule--semantic--anchor agreement and requires two expert
-agents to agree on the exact L3. It retains the 182 Physical locks and proposes
-only 37 additional placements. Stage 2 relaxes the open-set threshold and
-places 1,553 cards (89.9768\%), leaving 173 for taxonomy review. Stage 3 tests
-100\% operational coverage by forcing all 173 remaining cards to their recorded
-hierarchy-blind top-1 L3. The final policy view then removes the 55 hard holds
-from the taxonomy and retains 1,671 placements plus 55 review holds.
+A taxonomy can appear complete while concealing uncertainty in its source
+corpus, unit of analysis, or placement rules. RAI Risk Taxonomy 2.0 therefore
+separates four quantities that must not be conflated: the size of the integrated
+AI evidence space, the size of the AI-risk evidence view, the number of
+canonical L4 risk cards, and the number of L4 cards assigned to L3. The central
+result is a top-down evidence-to-taxonomy chain of 3,906,767 records, 82,971
+AI-risk records, 1,726 canonical L4 cards, and 1,671 L3-assigned cards.
+
+The transitions do not all preserve the same statistical unit. The first two
+stages count documents or patent records. The third and fourth stages count
+canonical risk concepts. Consequently, the 82,971 evidence records are not a
+one-to-one parent table from which every L4 card was mechanically generated.
+They form an auditable evidence view supporting corpus coverage and risk
+interpretation, whereas the L4 registry integrates risk taxonomies, benchmarks,
+standards, and linked evidence through a source crosswalk.
+
+\section{Top-down dataset construction}
+
+\subsection{Stage A: integrated AI evidence space}
+
+The top-level dataset contains 3,906,767 records from three source families:
+1,749,159 papers, 125,372 policy reports, and 2,032,236 patents. Paper records
+originate from the local global Web of Science AI collections. Policy records
+combine the reviewed curated AI-policy master with the broader policy-materials
+collection. Patent records originate from the stage-2 AI patent master.
+
+Records are standardized to a common schema and retained only when a non-empty
+title is available. Deduplication is performed within document type and
+analytical category. The ordered key hierarchy is patent application ID for
+patents, followed by DOI, source record ID, URL, and a normalized
+title--year--institution fallback. Cross-category overlap is intentionally
+retained because AI, AI infrastructure, Physical AI, and AI risk are analytical
+views rather than mutually exclusive partitions.
+
+\subsection{Stage B: integrated AI-risk evidence view}
+
+The AI-risk evidence view contains 82,971 records: 50,375 papers, 938 policy
+reports, and 31,658 patents. Its inclusion rule is source-governed rather than a
+single keyword query. Papers combine curated academic risk references, the
+clean and integrated AI-risk paper corpora, Physical AI safety benchmarks, and
+verified paper records from the top-200 evidence set. Policy reports combine
+curated risk-policy references with verified report records. Patents combine
+curated risk-patent references with verified patent records. Record-type filters
+are applied before the same title-validity and within-category deduplication
+rules used at Stage A.
+
+This view represents 2.1\% of the integrated AI evidence space. Because the
+source collections and analytical categories can overlap, this percentage is a
+descriptive ratio, not the estimated prevalence of risk research in all AI
+scholarship.
+
+\subsection{Stage C: canonical L4 registry}
+
+The unit changes from evidence record to risk concept. Source risk IDs are
+joined through the source crosswalk, semantically redundant cards are reviewed,
+and one canonical row is retained per L4 failure mode or harm mechanism.
+Permanent identifiers \code{RAI4-0001} through \code{RAI4-1726} are allocated
+independently of the risk label. The result is 1,726 canonical L4 cards. The
+registry includes the 182-card Physical AI taxonomy as a protected mapping set.
+
+The ratio of L4 cards to AI-risk evidence records is 2.1\%. It is reported only
+as a scale-change diagnostic: one document may support multiple risks, and one
+risk may be supported by multiple documents. It is not a document acceptance
+rate.
+
+\subsection{Stage D: L3 assignment policy}
+
+The final policy view assigns 1,671 of 1,726 L4 cards to one of 50 L3 nodes
+(96.8\%). The remaining 55 cards (3.2\%) are stored in \code{RAI-HOLD}, an
+operational review queue outside the L0--L3 hierarchy. The hold queue is not an
+unapproved 51st L3.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  ybar, ymin=0, ymax=1800, width=0.92\linewidth, height=7cm,
-  bar width=20pt, ylabel={Number of cards},
-  symbolic x coords={Stage 1,Stage 2,Stage 3 test,Final policy}, xtick=data,
-  nodes near coords, nodes near coords align={vertical},
-  axis line style={ink}, tick label style={font=\small},
-  ymajorgrids, grid style={grid},
-  legend style={at={(0.5,-0.18)},anchor=north,legend columns=2},
+  natureaxis,
+  xbar,
+  xmode=log,
+  log origin=infty,
+  log basis x=10,
+  xmin=1000,
+  xmax=20000000,
+  width=0.62\linewidth,
+  height=7.0cm,
+  xlabel={Count (log scale)},
+  symbolic y coords={L3-assigned L4,Canonical L4,AI-risk evidence,AI evidence},
+  ytick={L3-assigned L4,Canonical L4,AI-risk evidence,AI evidence},
+  yticklabels={L3-assigned L4,Canonical L4,AI-risk evidence,AI evidence},
+  yticklabel style={font=\sffamily\scriptsize,text width=2.25cm,align=right},
+  bar width=12pt,
+  point meta=explicit symbolic,
+  nodes near coords={\pgfplotspointmeta},
+  nodes near coords style={font=\sffamily\footnotesize, anchor=west},
 ]
-\addplot[fill=blue,draw=navy] coordinates {(Stage 1,219) (Stage 2,1553) (Stage 3 test,1726) (Final policy,1671)};
-\addplot[fill=gold,draw=orange] coordinates {(Stage 1,1507) (Stage 2,173) (Stage 3 test,0) (Final policy,55)};
-\legend{Assigned to L3,Withheld}
+\addplot[fill=natureblue, draw=natureblue] coordinates {
+  (1671,L3-assigned L4) [1,671]
+  (1726,Canonical L4) [1,726]
+  (82971,AI-risk evidence) [82,971]
+  (3906767,AI evidence) [3,906,767]
+};
 \end{axis}
 \end{tikzpicture}
-\caption{Assigned and withheld cards at each stage. The denominator is 1,726 throughout.}
+\caption{\textbf{Top-down evidence and taxonomy funnel.} Counts move from
+document/patent records to canonical risk concepts at the transition from
+AI-risk evidence to L4. The logarithmic axis preserves visibility across four
+orders of magnitude.}
+\label{fig:funnel}
 \end{figure}
-
-Stage 3's 100\% figure measures operational path completeness, not validity.
-The final 96.8134\% policy coverage reflects the deliberate separation of
-boundary conflicts. Neither figure is an accuracy or approval rate.
-
-\section{Scope, data, and identification rules}
-
-The unit of analysis is one L4 card with a permanent RAI4 identifier. The
-identifier range runs from 0001 through 1726. Labels are not used as identifiers
-because identical names may occur on different paths. The hierarchy contains
-one L0 root, three L1 domains, six L2 groups, and 50 L3 nodes. \code{RAI-HOLD}
-is an operational review bucket and is not an L3 node.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lrr}
+\caption{Top-down stages, counts, and inclusion filters.}
+\label{tab:funnel}
+\small
+\begin{tabularx}{\linewidth}{L{0.18\linewidth}r L{0.20\linewidth}Y}
 \toprule
-Final policy status & Cards & Share of all cards \\
+Stage & Count & Unit & Principal filter \\
 \midrule
-Locked Physical gold set & 182 & 10.5446\% \\
-Stage 1 expert-consensus proposal & 37 & 2.1437\% \\
-Stage 2 algorithmic proposal & 1,334 & 77.2885\% \\
-Stage 3 residual forced candidate & 118 & 6.8366\% \\
-Taxonomy Decision Hold & 55 & 3.1866\% \\
-\midrule
-Total & 1,726 & 100.0000\% \\
+AI evidence & 3,906,767 & Document or patent record & AI source collections; valid title; standardized schema; within-type/category deduplication. \\
+AI-risk evidence & 82,971 & Document or patent record & Curated/integrated risk sources; record-type inclusion; valid title; within-type/category deduplication. \\
+Canonical L4 & 1,726 & Risk card & Source crosswalk; semantic-card deduplication; permanent ID; one canonical mechanism per row. \\
+L3 assigned & 1,671 & Risk card & Protected Physical mapping or staged non-Physical placement; exclusion of 55 hard holds. \\
 \bottomrule
-\end{tabular}
-\caption{Composition of the final policy view.}
+\end{tabularx}
 \end{table}
 
-\section{Staged classification process and decision criteria}
+\section{Mathematical classification procedure}
 
-\subsection{Stage 0: canonicalization and protected sets}
+\subsection{Protected Physical AI mapping}
 
-Before classification, the global and Physical sources are joined through the
-source crosswalk and assigned permanent RAI4 IDs. The Physical AI site's 182
-existing L4-to-L3 classifications form a protected gold set. Their paths cannot
-be changed by later algorithmic stages. The remaining 1,544 cards enter the
-hierarchy-blind classification pipeline.
+The 182 L4-to-L3 mappings inherited from the Physical AI taxonomy are treated
+as the locked gold set. Later stages cannot change these paths. The remaining
+1,544 cards enter the hierarchy-blind classification procedure. Legacy global
+L0--L3 labels, source families, and source-ID prefixes remain reference metadata
+and are excluded from prediction features.
 
-\subsection{Stage 1: strict open-set classification}
+\subsection{Stage 1: strict open-set gate}
 
-For each non-Physical card, the model input contains only the L4 label, a direct
-mechanism definition with hierarchy restatements removed, and the evidence
-title. Legacy global L0--L3 values, source family, and source-ID prefixes are
-excluded from prediction features. A Stage 1 automatic candidate must satisfy
-all of the following criteria:
+The input for each non-Physical card is the L4 label, a mechanism-only
+definition with hierarchy restatements removed, and the evidence title. Let
+$s_{sem}$ be the top-1 semantic score, $s_{comp}$ the top-1 composite score,
+$m_{sem}$ and $m_{comp}$ their respective top-1 margins, and $v_{anchor}$ the
+number of anchor views selecting the same L3. A candidate is retained only when
+all seven conditions hold:
 
 \begin{enumerate}[leftmargin=2em]
-  \item Exactly one L3 is rule-eligible.
-  \item The rule winner, semantic top-1, and composite top-1 are the same L3.
-  \item Top-1 semantic score is at least 0.55 and composite score is at least 0.54.
-  \item Both semantic and composite margins are at least 0.035.
-  \item At least two of three anchor views select the same L3 as top-1.
-  \item No taxonomy-gap sentinel, multi-mechanism flag, or Physical-boundary flag is present.
-  \item Two independent expert agents approve the same exact L3.
+  \item exactly one L3 is rule-eligible;
+  \item the rule winner, semantic top-1, and composite top-1 are identical;
+  \item $s_{sem}\geq0.55$ and $s_{comp}\geq0.54$;
+  \item $m_{sem}\geq0.035$ and $m_{comp}\geq0.035$;
+  \item $v_{anchor}\geq2$ across three anchor views;
+  \item no gap sentinel, multi-mechanism flag, or Physical-boundary flag is present; and
+  \item two independent expert agents approve the same exact L3.
 \end{enumerate}
 
 This gate yields 37 new expert-consensus proposals. Together with the 182
 Physical locks, Stage 1 assigns 219 cards and withholds 1,507.
 
-\subsection{Stage 2: relaxed classification targeting 90\% coverage}
+\subsection{Stage 2: suitability-ranked relaxation}
 
-Stage 2 preserves all 219 protected placements and ranks the Stage 1 holds with
-the deterministic suitability score
-\[
-S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap}.
-\]
-The normalized terms are defined as
-\begin{align*}
-q_{sem}&=\operatorname{clip}((s_{sem}-0.45)/0.25,0,1),\\
-q_{sm}&=\operatorname{clip}(m_{sem}/0.05,0,1),\\
-q_{cm}&=\operatorname{clip}(m_{comp}/0.05,0,1),\\
+Stage 2 preserves all 219 protected assignments and computes
+\begin{equation}
+S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap},
+\end{equation}
+where
+\begin{align}
+q_{sem}&=\operatorname{clip}\left(\frac{s_{sem}-0.45}{0.25},0,1\right),\\
+q_{sm}&=\operatorname{clip}\left(\frac{m_{sem}}{0.05},0,1\right),\\
+q_{cm}&=\operatorname{clip}\left(\frac{m_{comp}}{0.05},0,1\right),\\
 q_{vote}&=v_{anchor}/3,\\
 q_{rule}&=\mathbf{1}[\text{at least one eligible L3}],\\
 p_{gap}&=0.05\,\mathbf{1}[\text{gap sentinel present}].
-\end{align*}
+\end{align}
 
-The score is a review-ordering measure, not a calibrated probability. Stage 2
-first preserves 55 hard holds regardless of score. It then sorts all remaining
-holds by ascending $S_2$, using permanent RAI4 ID as the deterministic tie
-breaker, and reserves the bottom 118. The final Stage 2 hold set is therefore
-$55+118=173$ cards (10.0232\%). All other cards are assigned to their recorded
-hierarchy-blind top-1 L3, producing 1,553 placements (89.9768\%).
+$S_2$ is a deterministic ranking score rather than a calibrated probability.
+Stage 2 first preserves 55 hard holds. It then orders the remaining holds by
+ascending $S_2$, with permanent RAI4 ID as the tie breaker, and reserves the
+lowest 118. Thus $55+118=173$ cards remain unresolved and 1,553 cards are
+assigned (90.0\%).
 
-\subsection{Stage 3: forced matching test}
+\subsection{Stage 3: forced-path test and final policy}
 
-Stage 3 does not retrain or rescore the model. It preserves the 1,553 non-null
-Stage 2 placements and assigns only the 173 Stage 2 holds to the top-1 L3 already
-recorded in the algorithm score artifact. Thresholds, margins, rule eligibility,
-and gap sentinels no longer block assignment. Every new placement is marked
-\code{forced\_match\_stage3}; the original hold reason, hard/quota class, score,
-review priority, and \code{human\_approved=false} flag remain visible. This
-experiment achieves 1,726/1,726 operational paths but does not establish that
-the 50 L3 taxonomy is sufficient.
+Stage 3 preserves the 1,553 Stage 2 paths and assigns only the 173 unresolved
+cards to the hierarchy-blind top-1 L3 already stored in the score artifact.
+This produces 1,726 operational paths but does not validate taxonomy fit. Each
+new path retains its original hold reason, score, review priority, and
+\code{human\_approved=false} marker.
 
-\subsection{Final policy: separate the 55 hard holds}
-
-The final policy view reverses the forced taxonomy placement for five hard-hold
-families. Their policy L3 is set to null and their operational bucket is set to
-\code{RAI-HOLD}. The 118 quota holds remain forced candidates requiring human
-review. The forced top-1 L3 for each of the 55 holds remains available only as
-audit metadata.
+The final policy then removes five hard-hold families from the L3 hierarchy:
+23 Physical-scope reviews, 17 expert rejections, 7 expert disagreements,
+6 multi-mechanism cases, and 2 low-absolute-fit cases. Their policy L3 becomes
+null and their operational bucket becomes \code{RAI-HOLD}. The remaining 118
+quota holds stay as forced candidates requiring human review.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  xbar, xmin=0, xmax=125, width=0.70\linewidth, height=7cm,
-  xlabel={Number of cards},
+  natureaxis,
+  xbar,
+  xmin=0,
+  xmax=125,
+  width=0.74\linewidth,
+  height=6.7cm,
+  xlabel={Cards},
   symbolic y coords={Low absolute fit,Multiple mechanisms,Expert disagreement,Expert rejection,Physical scope review,Suitability reserve},
-  ytick=data, nodes near coords, nodes near coords align={horizontal},
-  bar width=12pt, xmajorgrids, grid style={grid}, axis line style={ink},
-  tick label style={font=\small}, enlarge y limits=0.12,
+  ytick=data,
+  bar width=10pt,
+  nodes near coords,
+  nodes near coords style={font=\sffamily\footnotesize, anchor=west},
+  enlarge y limits=0.12,
 ]
-\addplot[fill=gold,draw=orange] coordinates {(2,Low absolute fit) (6,Multiple mechanisms) (7,Expert disagreement) (17,Expert rejection) (23,Physical scope review)};
-\addplot[fill=blue,draw=navy] coordinates {(118,Suitability reserve)};
+\addplot[fill=naturevermillion, draw=naturevermillion] coordinates {
+  (2,Low absolute fit) (6,Multiple mechanisms) (7,Expert disagreement)
+  (17,Expert rejection) (23,Physical scope review)
+};
+\addplot[fill=natureblue, draw=natureblue] coordinates {(118,Suitability reserve)};
 \end{axis}
 \end{tikzpicture}
-\caption{Reasons for the 173 Stage 2 holds. The gold 55 become \code{RAI-HOLD}; the blue 118 remain Stage 3 forced candidates.}
+\caption{\textbf{Disposition of the 173 Stage 2 holds.} The 55 hard holds
+(vermillion) are excluded from L3 and placed in \code{RAI-HOLD}; 118
+suitability-reserve cards (blue) remain forced candidates.}
+\label{fig:holds}
 \end{figure}
 
-The 23 Physical-scope cases are not confirmed Physical AI cards. Their text
-triggered terms such as robot, drone, autonomous vehicle, embodied AI,
-cyber-physical, or physical actuator, but they were not members of the locked
-Physical gold set. They therefore require a human boundary decision.
+\section{Results}
 
-\section{Final distribution statistics}
+\subsection{Evidence composition}
 
-\subsection{L1 and L2 distribution}
-
-Among the 1,671 cards with a policy L3, General contains 1,140 cards
-(68.2226\%), Agentic AI contains 349 (20.8857\%), and Physical AI contains 182
-(10.8917\%). The remaining 55 cards equal 3.1866\% of all 1,726 cards.
+Papers account for 44.8\% of the integrated AI evidence space, policy reports
+for 3.2\%, and patents for 52.0\%. Within the AI-risk evidence view, the
+corresponding shares are 60.7\%, 1.1\%, and 38.2\%. These shares use one decimal
+because their integer component is at least one.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  xbar, xmin=0, xmax=1250, width=0.75\linewidth, height=5.7cm,
-  xlabel={Classified cards}, symbolic y coords={Physical AI,Agentic AI,General},
-  ytick=data, xtick distance=200, nodes near coords, bar width=18pt,
-  xmajorgrids, grid style={grid},
+  natureaxis,
+  ybar,
+  ymin=0,
+  ymax=70,
+  width=0.80\linewidth,
+  height=6.3cm,
+  ylabel={Share (\%)},
+  symbolic x coords={Papers,Policy reports,Patents},
+  xtick=data,
+  bar width=12pt,
+  legend columns=2,
+  legend pos=north west,
 ]
-\addplot[fill=blue,draw=navy] coordinates {(182,Physical AI) (349,Agentic AI) (1140,General)};
+\addplot[fill=naturegrey, draw=naturegrey] coordinates {(Papers,44.8) (Policy reports,3.2) (Patents,52.0)};
+\addplot[fill=natureblue, draw=natureblue] coordinates {(Papers,60.7) (Policy reports,1.1) (Patents,38.2)};
+\legend{AI evidence,AI-risk evidence}
 \end{axis}
 \end{tikzpicture}
-\caption{L1 distribution in the final policy view. The denominator is 1,671 classified cards.}
+\caption{\textbf{Source-family composition.} Percentages compare document-type
+composition within the integrated AI evidence space and the AI-risk evidence
+view.}
+\label{fig:composition}
 \end{figure}
 
-\begin{longtable}{llrr}
-\toprule
-L2 ID & L2 label & Cards & Share of 1,671 \\
-\midrule
-\endhead
-RAI2-G-INT & General Interaction & 708 & 42.3698\% \\
-RAI2-G-SYS & General System & 432 & 25.8528\% \\
-RAI2-A-SYS & Agentic System & 349 & 20.8857\% \\
-RAI2-P-SYS & Physical System Safety & 91 & 5.4458\% \\
-RAI2-P-INT & Physical Interaction Safety & 62 & 3.7104\% \\
-RAI2-P-SOC & Physical Societal Safety & 29 & 1.7355\% \\
-\bottomrule
-\end{longtable}
+\subsection{Final hierarchy coverage}
 
-\subsection{L3 concentration}
-
+The final policy assigns 1,671 cards (96.8\%) and withholds 55 (3.2\%). Of the
+assigned cards, 1,140 are General, 349 are Agentic AI, and 182 are Physical AI.
+Their shares of assigned cards are 68.2\%, 20.9\%, and 10.9\%, respectively.
 All 50 L3 nodes contain at least one card. Anthropomorphism is the largest L3
-with 242 cards, or 14.4823\% of the 1,671 classified cards. The top five L3
-nodes contain 700 cards (41.8911\%). No individual L3 exceeds the 20\%
-concentration warning threshold. Concentration describes distribution shape;
-it does not validate semantic correctness.
+with 242 cards (14.5\% of assigned cards); the five largest L3 nodes jointly
+contain 41.9\%.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  xbar, xmin=0, xmax=270, width=0.68\linewidth, height=11.2cm,
-  xlabel={Number of cards},
-  symbolic y coords={Robot Control,Overconfidence,Weaponization,Non-Contestability,Conflict,Destabilising Dynamics,Excessive Authority,Network Effects,Privacy,Policy Exposure,Misinformation/Disinformation,Copyrights,Goal Misalignment,Anthropomorphism},
-  ytick=data, nodes near coords, bar width=9pt, xmajorgrids, grid style={grid},
-  tick label style={font=\small},
+  natureaxis,
+  xbar,
+  xmin=0,
+  xmax=260,
+  width=0.70\linewidth,
+  height=9.2cm,
+  xlabel={L4 cards},
+  symbolic y coords={Weaponization,Non-Contestability,Conflict,Destabilising Dynamics,Excessive Authority,Network Effects,Privacy,Policy Exposure,Misinformation/Disinformation,Copyrights,Goal Misalignment,Anthropomorphism},
+  ytick=data,
+  bar width=8pt,
+  nodes near coords,
+  nodes near coords style={font=\sffamily\scriptsize, anchor=west},
 ]
-\addplot[fill=blue,draw=navy] coordinates {
- (45,Robot Control) (46,Overconfidence) (48,Weaponization) (55,Non-Contestability)
- (64,Conflict) (73,Destabilising Dynamics) (74,Excessive Authority) (78,Network Effects)
+\addplot[fill=natureblue, draw=natureblue] coordinates {
+ (48,Weaponization) (55,Non-Contestability) (64,Conflict)
+ (73,Destabilising Dynamics) (74,Excessive Authority) (78,Network Effects)
  (86,Privacy) (88,Policy Exposure) (107,Misinformation/Disinformation)
- (113,Copyrights) (150,Goal Misalignment) (242,Anthropomorphism)};
+ (113,Copyrights) (150,Goal Misalignment) (242,Anthropomorphism)
+};
 \end{axis}
 \end{tikzpicture}
-\caption{Top 14 L3 nodes in the final policy view. The complete 50-node distribution is available in the CSV artifact.}
+\caption{\textbf{Largest L3 nodes in the final policy view.} The figure shows
+the twelve L3 nodes containing at least 48 cards. Counts exclude the 55-card
+\code{RAI-HOLD} queue.}
+\label{fig:l3}
 \end{figure}
 
-\section{The 55 review holds and uncertainty}
+\section{Rounding and reporting policy}
 
-\begin{longtable}{lrrr}
-\toprule
-Hold reason & Cards & Share of holds & Share of all cards \\
-\midrule
-\endhead
-PHYSICAL\_OUTSIDE\_LOCK & 23 & 41.8182\% & 1.3326\% \\
-FRONTIER\_EXPERT\_REJECTED & 17 & 30.9091\% & 0.9849\% \\
-FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 12.7273\% & 0.4056\% \\
-MULTI\_MECHANISM & 6 & 10.9091\% & 0.3476\% \\
-LOW\_ABSOLUTE\_FIT & 2 & 3.6364\% & 0.1159\% \\
-\midrule
-Total & 55 & 100.0000\% & 3.1866\% \\
-\bottomrule
-\end{longtable}
+All counts are reported as integers. Percentages below 1 are rounded at the
+third decimal place and displayed to two decimal places; percentages with an
+integer component of at least 1 are rounded and displayed to one decimal place.
+For example, the L4 registry represents 0.04\% of the integrated AI evidence
+count, the AI-risk view represents 2.1\%, final L3 coverage is 96.8\%, and the
+review-hold share is 3.2\%. Exact floating-point ratios remain available in the
+machine-readable statistics artifact.
 
-The hold bucket must not be presented as an unapproved 51st L3. The website and
-exports should show it as a separate review queue and retain the original hold
-reason, forced-candidate L3, semantic and composite scores, anchor votes, and
-critical review priority. The 24 expert rejection/disagreement cases test L3
-definition fit; the six multi-mechanism cases test whether primary/secondary or
-multi-label structure is needed; and the 23 Physical-boundary cases require
-comparison against the locked Physical taxonomy.
+\section{Validation and limitations}
 
-\section{Validation, limitations, and robustness checks}
+The 182 Physical mappings and 37 Stage 1 expert-consensus mappings remain
+unchanged in later stages. Repeated Stage 2 and Stage 3 builds produce
+byte-identical placement hashes. The Stage 2 validator reports 13 PASS, 0 FAIL,
+and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and 4 WARN. All 18
+repository tests pass at the time of this report revision.
 
-The 182 Physical placements and 37 Stage 1 expert-consensus placements remain
-unchanged in all later stages. The Stage 2 and Stage 3 builders reproduce
-byte-identical placement hashes on repeated runs. The Stage 2 validator reports
-13 PASS, 0 FAIL, and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and
-4 WARN. All 16 repository regression tests, including the final hold-policy
-tests, pass.
+Three limitations directly affect interpretation. First, cross-category
+overlap is retained in the integrated evidence space, so category counts are
+analytical views rather than mutually exclusive samples. Second, the transition
+from 82,971 evidence records to 1,726 L4 cards changes the unit of analysis and
+is not a mechanical screening step. Third, 1,214 of the 1,334 new Stage 2
+placements lack Stage 1 rule eligibility, 247 override a taxonomy-gap sentinel,
+and the remaining 118 Stage 3 forced candidates are not human-approved ground
+truth.
 
-Material limitations are:
+\section{Review priorities}
+
+The 55 \code{RAI-HOLD} cards should be reviewed first, beginning with the 23
+Physical-boundary cases and 24 expert rejection/disagreement cases. The 118
+quota candidates should then be reviewed in ascending $S_2$ order. Finally,
+the 247 gap overrides and 1,214 rule-free placements should be audited through
+L3-stratified samples. Human review should determine whether each failure is
+best addressed by expanding an L3 definition, introducing a new L3, or allowing
+primary and secondary labels.
+
+\section*{Data availability}
+
+The exact top-down counts, filters, placements, and public card bundle are
+available in the repository:
 \begin{itemize}[leftmargin=2em]
-  \item 1,214 of the 1,334 new Stage 2 placements lack Stage 1 rule eligibility and rely primarily on semantic top-1 proximity.
-  \item 247 new Stage 2 placements override a taxonomy-gap sentinel.
-  \item The remaining 118 Stage 3 forced candidates are neither calibrated probabilities nor human approvals.
-  \item The Physical-boundary sentinel uses a limited keyword set and can produce both false positives and false negatives.
-  \item Use of all 50 L3 nodes and 96.8134\% card coverage do not prove taxonomy sufficiency.
+  \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
+  \item \small\nolinkurl{data/experiments/stage3-review-hold-v1/placements.json}
+  \item \small\nolinkurl{public/data/releases/v2.0.0/cards.json}
 \end{itemize}
-
-\section{Recommended review sequence and open questions}
-
-\begin{enumerate}[leftmargin=2em]
-  \item Review all 55 \code{RAI-HOLD} cards, prioritizing the 23 Physical-boundary cases and 24 expert rejection/disagreement cases.
-  \item Review the 118 Stage 3 quota candidates in ascending $S_2$ order.
-  \item Audit stratified L3 samples from the 247 gap overrides and 1,214 rule-free placements.
-  \item Use the evidence to select a remedy: expand an L3, add an L3, or permit primary and secondary labels.
-  \item Publish only human-approved migrations. Preserve decision IDs and history in the successor release.
-\end{enumerate}
-
-Open decisions include how many Physical-boundary cards belong in the Physical
-taxonomy, whether multi-mechanism cards may receive a secondary L3, what human
-review error tolerance is acceptable for the 118 forced candidates, and what
-minimum evidence should be required for proposing a new L3.
-
-\section*{Reproducible artifacts}
-\begin{itemize}[leftmargin=2em]
-  \item \nolinkurl{data/experiments/stage2-v1/stage2_placements.json}
-  \item \nolinkurl{data/experiments/stage2-v1/stage2_hold_queue.json}
-  \item \nolinkurl{data/experiments/stage3-v1/stage3_placements.json}
-  \item \nolinkurl{data/experiments/stage3-review-hold-v1/placements.json}
-  \item \nolinkurl{data/experiments/stage3-review-hold-v1/review_hold.json}
-  \item \nolinkurl{reports/statistics/stage2_unclassified_statistics.json}
-  \item \nolinkurl{reports/statistics/stage3_statistics.json}
-  \item \nolinkurl{scripts/build_stage2_classification.py}
-  \item \nolinkurl{scripts/build_stage3_forced_matching.py}
-  \item \nolinkurl{scripts/build_stage3_review_hold.py}
-\end{itemize}
-
-\vfill
-\noindent\textbf{Report identifier:} RAI Risk Taxonomy Technical Report 2.0\\
-\textbf{Language edition:} English\\
-\textbf{Policy data view:} \code{stage3-review-hold-v1}\\
-\textbf{Report date:} 2026-07-21
+This document is the English journal-style edition of \textit{RAI Risk
+Taxonomy Technical Report 2.0}.
 
 \end{document}

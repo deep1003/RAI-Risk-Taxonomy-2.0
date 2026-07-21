@@ -18,12 +18,9 @@ const nodeById = new Map();
 const childrenByParent = new Map();
 const cardPath = new Map();
 
-const STATUS_META = {
-  locked_physical: { label: "Physical Gold Lock", className: "status--locked", accent: "#c0392b" },
-  stage1_consensus: { label: "Stage 1 Consensus", className: "status--proposed", accent: "#6941c6" },
-  stage2_proposed: { label: "Stage 2 Proposed", className: "status--proposed", accent: "#3867d6" },
-  stage3_forced: { label: "Stage 3 Forced", className: "status--decision", accent: "#148f77" },
-  needs_taxonomy_decision: { label: "RAI-HOLD", className: "status--decision", accent: "#b54708" },
+const ASSIGNMENT_META = {
+  assigned: { label: "L3 assigned" },
+  unassigned: { label: "L3 unassigned" },
 };
 
 const DOMAIN_COLORS = {
@@ -259,7 +256,9 @@ function filteredCards() {
     const matchesQuery = !query || [card.l4_id, card.label_en, card.label_ko, card.definition_en, card.definition_ko]
       .filter(Boolean).join(" ").toLocaleLowerCase().includes(query);
     return matchesQuery
-      && (state.status === "all" || card.assignment_status === state.status)
+      && (state.status === "all"
+        || (state.status === "assigned" && Boolean(card.primary_l3_id))
+        || (state.status === "unassigned" && !card.primary_l3_id))
       && (state.l1 === "all" || path.l1 === state.l1)
       && (state.l2 === "all" || path.l2 === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
@@ -287,11 +286,10 @@ function render() {
 }
 
 function cardTemplate(card) {
-  const meta = STATUS_META[card.assignment_status];
   const path = cardPath.get(card.l4_id);
-  const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "RAI-HOLD · taxonomy decision queue";
-  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${meta.accent}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
-    <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span><span class="status-badge ${meta.className}">${meta.label}</span></div>
+  const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "L3 not assigned";
+  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:#3867d6" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
+    <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span></div>
     <h3>${escapeHtml(card.label_en)}</h3>
     ${card.label_ko ? `<p class="risk-card__ko">${escapeHtml(card.label_ko)}</p>` : ""}
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")}</p>
@@ -325,7 +323,7 @@ function paginationRange(current, total) {
 function renderActiveFilter() {
   const labels = [];
   if (state.query) labels.push(`검색 “${state.query}”`);
-  if (state.status !== "all") labels.push(STATUS_META[state.status].label);
+  if (state.status !== "all") labels.push(ASSIGNMENT_META[state.status].label);
   [state.l1, state.l2, state.l3].filter((value) => value !== "all").forEach((id) => labels.push(`${id} ${nodeById.get(id)?.label_en || ""}`));
   ui.activeFilter.hidden = labels.length === 0;
   ui.activeFilter.textContent = labels.length ? `적용 필터 · ${labels.join(" · ")}` : "";
@@ -338,16 +336,14 @@ function syncTreeActive() {
 function openCard(l4Id) {
   const card = state.cards.find((item) => item.l4_id === l4Id);
   if (!card) return;
-  const meta = STATUS_META[card.assignment_status];
   const path = cardPath.get(card.l4_id);
   const references = card.references || [];
   const tags = card.three_h_one_r || [];
   ui.dialogContent.innerHTML = `<div class="dialog-body">
-    <div><span class="risk-id">${card.l4_id}</span> <span class="status-badge ${meta.className}">${meta.label}</span></div>
+    <div><span class="risk-id">${card.l4_id}</span></div>
     <h2>${escapeHtml(card.label_en)}</h2>
     ${card.label_ko ? `<p class="dialog-ko">${escapeHtml(card.label_ko)}</p>` : ""}
-    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : `RAI-HOLD · ${escapeHtml(card.stage2_hold_reason || "needs_taxonomy_decision")}`}</div>
-    ${card.operational_bucket_id ? `<section class="dialog-section"><h3>Review hold</h3><p>Forced candidate: ${escapeHtml(card.forced_candidate_l3_id || "–")} · Stage 2 reason: ${escapeHtml(card.stage2_hold_reason || "–")}</p></section>` : ""}
+    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : "L3 not assigned"}</div>
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p></section>
     ${card.definition_ko ? `<section class="dialog-section"><h3>한국어 정의</h3><p>${escapeHtml(card.definition_ko)}</p></section>` : ""}
     <div class="dialog-metrics">

@@ -90,8 +90,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "88a5c9d559a49dd4cbd0cc49841a9de180b9092c90ea750563d45b2a211b985b",
-      "bytes": 5705,
+      "sha256": "162f74c65113db5e4b96867adef9d73e88cf58cdf01695f33555ca32fd18d72a",
+      "bytes": 5770,
       "rows": null
     },
     {
@@ -102,8 +102,8 @@
     },
     {
       "path": "assets/site.js",
-      "sha256": "563cff17e7f847d05734f9088b62bcdd3f69df5d6fcf402a02b11a163d0a5736",
-      "bytes": 17591,
+      "sha256": "88ec22298395bbb4837bfac07ae2828c75b0cfe4e7099892d6263a4577349297",
+      "bytes": 16701,
       "rows": null
     },
     {
@@ -372,8 +372,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "e7ce4efb3a8b119ad31bec6840aa52450b6ea086ed68b67831c379f2d646cdf6",
-      "bytes": 6975,
+      "sha256": "0db75895ccc6b9f776698b8b91f15079d369440aee9218d69458c6acafba1967",
+      "bytes": 6687,
       "rows": null
     },
     {
@@ -480,8 +480,8 @@
     },
     {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
-      "sha256": "54e495b4025406917ea43cc0654b067f9b29c13f4faeae2738d40032c0e956af",
-      "bytes": 16280,
+      "sha256": "ce27093ffda0f24860c1bf1063f111d74e990906ad40d7f864fe8903dea03fd0",
+      "bytes": 18501,
       "rows": null
     },
     {
@@ -516,8 +516,8 @@
     },
     {
       "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf",
-      "sha256": "f8288e050f41db2fcd9396ec36b8c88165b788bd10123b123f0a3b8a5b4439f5",
-      "bytes": 56032,
+      "sha256": "8d41d5e3e2c6576b205af25d34f41d8af49600864dda69f5106b52141194ecd4",
+      "bytes": 140659,
       "rows": null
     },
     {
@@ -542,6 +542,12 @@
       "path": "reports/statistics/stage3_statistics.json",
       "sha256": "d0ffdb337ce49737d0c9ffc36f1ab7b47c069375c7e368284c0f6973c8fdf70e",
       "bytes": 2797,
+      "rows": null
+    },
+    {
+      "path": "reports/statistics/top_down_evidence_funnel.json",
+      "sha256": "720a165fa3d8fde6f727c9ebd27367215d2599e929c3d5e07afbe210023e9327",
+      "bytes": 2260,
       "rows": null
     },
     {
@@ -726,7 +732,7 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "d5e6c081a3d0fb1232465881196d984003df98a2fc192ece03c576f8f020c81c",
+      "sha256": "f70a765dd200a42dfb2311a7d0dfb3f47e29b00a228936f9efb8b87665ca2012",
       "bytes": 113072,
       "rows": null
     },

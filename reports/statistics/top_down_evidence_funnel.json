@@ -1,0 +1,42 @@
+{
+  "report_id": "RAI Risk Taxonomy Technical Report 2.0",
+  "snapshot_date": "2026-07-21",
+  "rounding_rule": "Percentages below 1 are shown to two decimals; percentages at or above 1 are shown to one decimal.",
+  "stages": [
+    {
+      "stage": 1,
+      "unit": "AI document or patent record",
+      "label": "Integrated AI evidence space",
+      "count": 3906767,
+      "components": {"papers": 1749159, "policy_reports": 125372, "patents": 2032236},
+      "filter": "AI source collections; non-empty standardized title; deduplication within document type and analytical category using patent application ID, DOI, source ID, URL, then title-year-institution fallback."
+    },
+    {
+      "stage": 2,
+      "unit": "AI-risk document or patent record",
+      "label": "Integrated AI-risk evidence view",
+      "count": 82971,
+      "components": {"papers": 50375, "policy_reports": 938, "patents": 31658},
+      "share_of_previous_percent": 2.1237765139308284,
+      "filter": "Curated and integrated AI-risk academic, policy, patent, benchmark, and verified top-200 sources; record-type filtering; non-empty standardized title; within-type/category deduplication."
+    },
+    {
+      "stage": 3,
+      "unit": "canonical L4 risk card",
+      "label": "Canonical global L4 registry",
+      "count": 1726,
+      "share_of_previous_percent": 2.0802449048462717,
+      "filter": "Canonical source crosswalk; semantic-card deduplication; permanent RAI4 ID allocation; one canonical row per risk mechanism; inclusion of the 182-card locked Physical AI set."
+    },
+    {
+      "stage": 4,
+      "unit": "L4 risk card with non-null policy L3",
+      "label": "Assigned to one of 50 L3 nodes",
+      "count": 1671,
+      "share_of_previous_percent": 96.81344148319815,
+      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or retained Stage 3 quota candidate; exclusion of 55 hard holds into RAI-HOLD."
+    }
+  ],
+  "review_hold": {"count": 55, "share_of_l4_percent": 3.186558516801854},
+  "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
+}

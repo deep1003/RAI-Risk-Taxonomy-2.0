@@ -42,7 +42,7 @@ RAI_PYTHON=/opt/anaconda3/bin/python3
 "$RAI_PYTHON" -m http.server 8765 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8765/`. The explorer reads the exact validated public bundle and provides L1–L3 navigation, search, assignment-status filters, the 1,507-card decision queue, pagination, and L4 detail dialogs.
+Open `http://127.0.0.1:8765/`. The explorer reads the exact validated public bundle and provides L1–L3 navigation, search, L3-assignment filters, pagination, and L4 detail dialogs. Classification-stage and internal hold labels are deliberately omitted from risk-card presentation.
 
 ## Experimental classification stages
 
