@@ -1,0 +1,462 @@
+[
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0001",
+    "label_en": "Reward hacking by autonomous agents",
+    "from_l3_id": "RAI3-A-SYS-06",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 8,
+    "decisive_hits": [
+      "\\breward hack"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0002",
+    "label_en": "Absent supervisor autonomy risk",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 8,
+    "decisive_hits": [
+      "absent supervisor"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0003",
+    "label_en": "Unsafe interruptibility failure",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 10,
+    "decisive_hits": [
+      "unsafe interrupt"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "\\bautonom",
+      "operation"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0004",
+    "label_en": "Unsafe exploration by autonomous agents",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 8,
+    "decisive_hits": [
+      "unsafe exploration"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0011",
+    "label_en": "Agent memory poisoning",
+    "from_l3_id": "RAI3-A-SYS-03",
+    "to_l3_id": "RAI3-A-SYS-09",
+    "score": 16,
+    "decisive_hits": [
+      "agent memory (?:poison|contamin|corrupt)",
+      "memory poisoning",
+      "stored memory.*future"
+    ],
+    "gate_hits": [
+      "future decision",
+      "stored memory"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0014",
+    "label_en": "Agent supply-chain tool compromise",
+    "from_l3_id": "RAI3-A-SYS-06",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 6,
+    "decisive_hits": [
+      "external tool"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0018",
+    "label_en": "Interface-environment attack surface",
+    "from_l3_id": "RAI3-A-SYS-04",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 6,
+    "decisive_hits": [
+      "agent interfaces? to (?:browsers?|operating systems?|mobile apps?|IoT|external APIs?)"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0027",
+    "label_en": "Financial agent property damage",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 8,
+    "decisive_hits": [
+      "tool[- ](?:use|calling|call|chain|invocation|execution|using)"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "tool execution"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0028",
+    "label_en": "Indirect prompt injection in tool-use agents",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 8,
+    "decisive_hits": [
+      "tool[- ](?:use|calling|call|chain|invocation|execution|using)"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "tool execution"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0029",
+    "label_en": "Tool-chain instruction hijacking",
+    "from_l3_id": "RAI3-G-INT-11",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 8,
+    "decisive_hits": [
+      "tool[- ](?:use|calling|call|chain|invocation|execution|using)"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "subsequent calls"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0030",
+    "label_en": "Cross-application data exfiltration",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 6,
+    "decisive_hits": [
+      "cross[- ]application data exfiltration"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0033",
+    "label_en": "Tool-use side-effect misprediction",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 8,
+    "decisive_hits": [
+      "tool[- ](?:use|calling|call|chain|invocation|execution|using)"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "tool execution"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0037",
+    "label_en": "Real-tool unsafe action execution",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 6,
+    "decisive_hits": [
+      "real[- ]tool"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0045",
+    "label_en": "OS-level harmful computer-use action",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 10,
+    "decisive_hits": [
+      "computer[- ]use agent",
+      "OS-level harmful"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0479",
+    "label_en": "Agent tool misuse",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 6,
+    "decisive_hits": [
+      "tool misuse"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0481",
+    "label_en": "Unsafe autonomy escalation",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 6,
+    "decisive_hits": [
+      "autonomy escalation"
+    ],
+    "gate_hits": [
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0484",
+    "label_en": "Agent memory contamination",
+    "from_l3_id": "RAI3-A-SYS-04",
+    "to_l3_id": "RAI3-A-SYS-09",
+    "score": 10,
+    "decisive_hits": [
+      "agent memory (?:poison|contamin|corrupt)",
+      "persistent memory"
+    ],
+    "gate_hits": [
+      "persistent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0581",
+    "label_en": "Goal expansion propensity",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "\\bgoal (?:drift|expansion|hijack)"
+    ],
+    "gate_hits": [
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-0602",
+    "label_en": "Unsupervised autonomous operation",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 8,
+    "decisive_hits": [
+      "unsupervised autonomous"
+    ],
+    "gate_hits": [
+      "\\bautonom",
+      "operation"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1122",
+    "label_en": "Goal drift",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "\\bgoal (?:drift|expansion|hijack)"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1161",
+    "label_en": "Long-horizon planning",
+    "from_l3_id": "RAI3-A-SYS-06",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "long[- ]horizon planning"
+    ],
+    "gate_hits": [
+      "sequential plan"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1234",
+    "label_en": "Reward hacking",
+    "from_l3_id": "RAI3-A-SYS-05",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "\\breward hack"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1236",
+    "label_en": "Reward tampering",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 10,
+    "decisive_hits": [
+      "\\breward hack",
+      "\\breward tamper"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1382",
+    "label_en": "Loss of corrigibility",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 6,
+    "decisive_hits": [
+      "loss of corrigibility"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1669",
+    "label_en": "Tool misuse / unsafe tool invocation",
+    "from_l3_id": "RAI3-A-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-08",
+    "score": 22,
+    "decisive_hits": [
+      "tool[- ](?:use|calling|call|chain|invocation|execution|using)",
+      "unsafe tool",
+      "tool misuse",
+      "external tool"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "agentic system",
+      "external action"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1670",
+    "label_en": "Memory poisoning",
+    "from_l3_id": "RAI3-A-SYS-05",
+    "to_l3_id": "RAI3-A-SYS-09",
+    "score": 14,
+    "decisive_hits": [
+      "persistent memory",
+      "memory poisoning"
+    ],
+    "gate_hits": [
+      "later retrieval",
+      "later.*action",
+      "persistent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1674",
+    "label_en": "Shutdown resistance / corrigibility failure",
+    "from_l3_id": "RAI3-G-SYS-01",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "score": 12,
+    "decisive_hits": [
+      "shutdown resistance",
+      "corrigibility failure"
+    ],
+    "gate_hits": [
+      "\\bagent",
+      "\\bautonom"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1693",
+    "label_en": "Reward hacking via world-model exploitation",
+    "from_l3_id": "RAI3-A-SYS-05",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "\\breward hack"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1694",
+    "label_en": "Long-horizon planning hallucination",
+    "from_l3_id": "RAI3-G-SYS-03",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "long[- ]horizon planning"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1699",
+    "label_en": "Reward hacking",
+    "from_l3_id": "RAI3-A-SYS-04",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "\\breward hack"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  },
+  {
+    "iteration": 1,
+    "l4_id": "RAI4-1701",
+    "label_en": "Safe exploration [origin]",
+    "from_l3_id": "RAI3-A-SYS-04",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "score": 6,
+    "decisive_hits": [
+      "unsafe exploration"
+    ],
+    "gate_hits": [
+      "\\bagent"
+    ]
+  }
+]

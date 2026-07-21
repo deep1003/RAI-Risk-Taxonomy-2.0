@@ -1,0 +1,32 @@
+iteration,l4_id,label_en,from_l3_id,to_l3_id,score,decisive_hits,gate_hits
+1,RAI4-0001,Reward hacking by autonomous agents,RAI3-A-SYS-06,RAI3-A-SYS-07,8,\breward hack,\bagent | \bautonom
+1,RAI4-0002,Absent supervisor autonomy risk,RAI3-A-SYS-01,RAI3-A-SYS-10,8,absent supervisor,\bagent | \bautonom
+1,RAI4-0003,Unsafe interruptibility failure,RAI3-A-SYS-01,RAI3-A-SYS-10,10,unsafe interrupt,\bagent | \bautonom | operation
+1,RAI4-0004,Unsafe exploration by autonomous agents,RAI3-A-SYS-01,RAI3-A-SYS-07,8,unsafe exploration,\bagent | \bautonom
+1,RAI4-0011,Agent memory poisoning,RAI3-A-SYS-03,RAI3-A-SYS-09,16,agent memory (?:poison|contamin|corrupt) | memory poisoning | stored memory.*future,future decision | stored memory
+1,RAI4-0014,Agent supply-chain tool compromise,RAI3-A-SYS-06,RAI3-A-SYS-08,6,external tool,\bagent
+1,RAI4-0018,Interface-environment attack surface,RAI3-A-SYS-04,RAI3-A-SYS-08,6,agent interfaces? to (?:browsers?|operating systems?|mobile apps?|IoT|external APIs?),\bagent
+1,RAI4-0027,Financial agent property damage,RAI3-A-SYS-01,RAI3-A-SYS-08,8,tool[- ](?:use|calling|call|chain|invocation|execution|using),\bagent | tool execution
+1,RAI4-0028,Indirect prompt injection in tool-use agents,RAI3-G-SYS-08,RAI3-A-SYS-08,8,tool[- ](?:use|calling|call|chain|invocation|execution|using),\bagent | tool execution
+1,RAI4-0029,Tool-chain instruction hijacking,RAI3-G-INT-11,RAI3-A-SYS-08,8,tool[- ](?:use|calling|call|chain|invocation|execution|using),\bagent | subsequent calls
+1,RAI4-0030,Cross-application data exfiltration,RAI3-A-SYS-01,RAI3-A-SYS-08,6,cross[- ]application data exfiltration,\bagent
+1,RAI4-0033,Tool-use side-effect misprediction,RAI3-G-SYS-08,RAI3-A-SYS-08,8,tool[- ](?:use|calling|call|chain|invocation|execution|using),\bagent | tool execution
+1,RAI4-0037,Real-tool unsafe action execution,RAI3-A-SYS-01,RAI3-A-SYS-08,6,real[- ]tool,\bagent
+1,RAI4-0045,OS-level harmful computer-use action,RAI3-A-SYS-01,RAI3-A-SYS-08,10,computer[- ]use agent | OS-level harmful,\bagent
+1,RAI4-0479,Agent tool misuse,RAI3-A-SYS-01,RAI3-A-SYS-08,6,tool misuse,\bagent
+1,RAI4-0481,Unsafe autonomy escalation,RAI3-A-SYS-01,RAI3-A-SYS-10,6,autonomy escalation,\bautonom
+1,RAI4-0484,Agent memory contamination,RAI3-A-SYS-04,RAI3-A-SYS-09,10,agent memory (?:poison|contamin|corrupt) | persistent memory,persistent
+1,RAI4-0581,Goal expansion propensity,RAI3-A-SYS-01,RAI3-A-SYS-07,6,\bgoal (?:drift|expansion|hijack),\bautonom
+1,RAI4-0602,Unsupervised autonomous operation,RAI3-A-SYS-01,RAI3-A-SYS-10,8,unsupervised autonomous,\bautonom | operation
+1,RAI4-1122,Goal drift,RAI3-G-SYS-08,RAI3-A-SYS-07,6,\bgoal (?:drift|expansion|hijack),\bagent
+1,RAI4-1161,Long-horizon planning,RAI3-A-SYS-06,RAI3-A-SYS-07,6,long[- ]horizon planning,sequential plan
+1,RAI4-1234,Reward hacking,RAI3-A-SYS-05,RAI3-A-SYS-07,6,\breward hack,\bagent
+1,RAI4-1236,Reward tampering,RAI3-G-SYS-08,RAI3-A-SYS-07,10,\breward hack | \breward tamper,\bagent
+1,RAI4-1382,Loss of corrigibility,RAI3-G-SYS-08,RAI3-A-SYS-10,6,loss of corrigibility,\bagent
+1,RAI4-1669,Tool misuse / unsafe tool invocation,RAI3-A-SYS-01,RAI3-A-SYS-08,22,tool[- ](?:use|calling|call|chain|invocation|execution|using) | unsafe tool | tool misuse | external tool,\bagent | agentic system | external action
+1,RAI4-1670,Memory poisoning,RAI3-A-SYS-05,RAI3-A-SYS-09,14,persistent memory | memory poisoning,later retrieval | later.*action | persistent
+1,RAI4-1674,Shutdown resistance / corrigibility failure,RAI3-G-SYS-01,RAI3-A-SYS-10,12,shutdown resistance | corrigibility failure,\bagent | \bautonom
+1,RAI4-1693,Reward hacking via world-model exploitation,RAI3-A-SYS-05,RAI3-A-SYS-07,6,\breward hack,\bagent
+1,RAI4-1694,Long-horizon planning hallucination,RAI3-G-SYS-03,RAI3-A-SYS-07,6,long[- ]horizon planning,\bagent
+1,RAI4-1699,Reward hacking,RAI3-A-SYS-04,RAI3-A-SYS-07,6,\breward hack,\bagent
+1,RAI4-1701,Safe exploration [origin],RAI3-A-SYS-04,RAI3-A-SYS-07,6,unsafe exploration,\bagent
