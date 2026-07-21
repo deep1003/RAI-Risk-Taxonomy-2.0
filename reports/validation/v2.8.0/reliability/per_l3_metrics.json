@@ -1,0 +1,434 @@
+[
+  {
+    "node_id": "RAI3-A-SYS-01",
+    "label_en": "Excessive Authority",
+    "n": 62,
+    "mean_assigned_similarity": 0.7753762602806091,
+    "top_1": 0.5645161290322581,
+    "top_3": 0.8387096774193549
+  },
+  {
+    "node_id": "RAI3-A-SYS-02",
+    "label_en": "Accountability",
+    "n": 23,
+    "mean_assigned_similarity": 0.7787176370620728,
+    "top_1": 0.9130434782608695,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-A-SYS-03",
+    "label_en": "Network Effects",
+    "n": 77,
+    "mean_assigned_similarity": 0.7451721429824829,
+    "top_1": 0.4025974025974026,
+    "top_3": 0.8051948051948052
+  },
+  {
+    "node_id": "RAI3-A-SYS-04",
+    "label_en": "Destabilising Dynamics",
+    "n": 69,
+    "mean_assigned_similarity": 0.7432103753089905,
+    "top_1": 0.36231884057971014,
+    "top_3": 0.7536231884057971
+  },
+  {
+    "node_id": "RAI3-A-SYS-05",
+    "label_en": "Conflict",
+    "n": 60,
+    "mean_assigned_similarity": 0.7518284320831299,
+    "top_1": 0.5333333333333333,
+    "top_3": 0.8666666666666667
+  },
+  {
+    "node_id": "RAI3-A-SYS-06",
+    "label_en": "Collusion",
+    "n": 34,
+    "mean_assigned_similarity": 0.7525315284729004,
+    "top_1": 0.6470588235294118,
+    "top_3": 0.8235294117647058
+  },
+  {
+    "node_id": "RAI3-A-SYS-07",
+    "label_en": "Goal & Planning",
+    "n": 11,
+    "mean_assigned_similarity": 0.8046125769615173,
+    "top_1": 0.8181818181818182,
+    "top_3": 0.9090909090909091
+  },
+  {
+    "node_id": "RAI3-A-SYS-08",
+    "label_en": "Tool Calling",
+    "n": 11,
+    "mean_assigned_similarity": 0.8390289545059204,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-A-SYS-09",
+    "label_en": "Memory",
+    "n": 3,
+    "mean_assigned_similarity": 0.9458686709403992,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-A-SYS-10",
+    "label_en": "Oversight & Control",
+    "n": 6,
+    "mean_assigned_similarity": 0.8389573097229004,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-G-INT-01",
+    "label_en": "Violence",
+    "n": 17,
+    "mean_assigned_similarity": 0.7870734930038452,
+    "top_1": 0.6470588235294118,
+    "top_3": 0.9411764705882353
+  },
+  {
+    "node_id": "RAI3-G-INT-02",
+    "label_en": "Sexual",
+    "n": 32,
+    "mean_assigned_similarity": 0.7694095969200134,
+    "top_1": 0.6875,
+    "top_3": 0.8125
+  },
+  {
+    "node_id": "RAI3-G-INT-03",
+    "label_en": "Self-harm",
+    "n": 17,
+    "mean_assigned_similarity": 0.7831616997718811,
+    "top_1": 0.8235294117647058,
+    "top_3": 0.8235294117647058
+  },
+  {
+    "node_id": "RAI3-G-INT-04",
+    "label_en": "Hate and Unfairness",
+    "n": 37,
+    "mean_assigned_similarity": 0.7771764397621155,
+    "top_1": 0.6756756756756757,
+    "top_3": 0.918918918918919
+  },
+  {
+    "node_id": "RAI3-G-INT-05",
+    "label_en": "Political Neutrality",
+    "n": 17,
+    "mean_assigned_similarity": 0.7725926637649536,
+    "top_1": 0.8823529411764706,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-G-INT-06",
+    "label_en": "Privacy",
+    "n": 88,
+    "mean_assigned_similarity": 0.7734168767929077,
+    "top_1": 0.6704545454545454,
+    "top_3": 0.7727272727272727
+  },
+  {
+    "node_id": "RAI3-G-INT-07",
+    "label_en": "Illegal",
+    "n": 19,
+    "mean_assigned_similarity": 0.7612006664276123,
+    "top_1": 0.6842105263157895,
+    "top_3": 0.8947368421052632
+  },
+  {
+    "node_id": "RAI3-G-INT-08",
+    "label_en": "Copyrights",
+    "n": 117,
+    "mean_assigned_similarity": 0.7465673685073853,
+    "top_1": 0.5042735042735043,
+    "top_3": 0.8632478632478633
+  },
+  {
+    "node_id": "RAI3-G-INT-09",
+    "label_en": "Weaponization",
+    "n": 59,
+    "mean_assigned_similarity": 0.7882207036018372,
+    "top_1": 0.864406779661017,
+    "top_3": 0.8813559322033898
+  },
+  {
+    "node_id": "RAI3-G-INT-10",
+    "label_en": "Anthropomorphism",
+    "n": 245,
+    "mean_assigned_similarity": 0.7652815580368042,
+    "top_1": 0.6326530612244898,
+    "top_3": 0.8693877551020408
+  },
+  {
+    "node_id": "RAI3-G-INT-11",
+    "label_en": "Policy Exposure",
+    "n": 88,
+    "mean_assigned_similarity": 0.7440329194068909,
+    "top_1": 0.6931818181818182,
+    "top_3": 0.8068181818181818
+  },
+  {
+    "node_id": "RAI3-G-SYS-01",
+    "label_en": "Over-Refusal",
+    "n": 21,
+    "mean_assigned_similarity": 0.768490731716156,
+    "top_1": 0.6666666666666666,
+    "top_3": 0.8095238095238095
+  },
+  {
+    "node_id": "RAI3-G-SYS-02",
+    "label_en": "Over-Extension",
+    "n": 15,
+    "mean_assigned_similarity": 0.7834385633468628,
+    "top_1": 0.7333333333333333,
+    "top_3": 0.9333333333333333
+  },
+  {
+    "node_id": "RAI3-G-SYS-03",
+    "label_en": "Misinformation/Disinformation",
+    "n": 110,
+    "mean_assigned_similarity": 0.7613030672073364,
+    "top_1": 0.6181818181818182,
+    "top_3": 0.7909090909090909
+  },
+  {
+    "node_id": "RAI3-G-SYS-04",
+    "label_en": "Context Misalignment",
+    "n": 2,
+    "mean_assigned_similarity": 0.8886189460754395,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-G-SYS-05",
+    "label_en": "Inconsistency",
+    "n": 35,
+    "mean_assigned_similarity": 0.7495173215866089,
+    "top_1": 0.5714285714285714,
+    "top_3": 0.9142857142857143
+  },
+  {
+    "node_id": "RAI3-G-SYS-06",
+    "label_en": "Overgeneralization",
+    "n": 1,
+    "mean_assigned_similarity": 1.000000238418579,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-G-SYS-07",
+    "label_en": "Overconfidence",
+    "n": 47,
+    "mean_assigned_similarity": 0.7722861766815186,
+    "top_1": 0.7872340425531915,
+    "top_3": 0.8936170212765957
+  },
+  {
+    "node_id": "RAI3-G-SYS-08",
+    "label_en": "Goal Misalignment",
+    "n": 149,
+    "mean_assigned_similarity": 0.7614907622337341,
+    "top_1": 0.38926174496644295,
+    "top_3": 0.785234899328859
+  },
+  {
+    "node_id": "RAI3-G-SYS-09",
+    "label_en": "Non-Contestability",
+    "n": 57,
+    "mean_assigned_similarity": 0.7829525470733643,
+    "top_1": 0.7719298245614035,
+    "top_3": 0.9298245614035088
+  },
+  {
+    "node_id": "RAI3-P-INT-01",
+    "label_en": "Purposeful / Malicious Harm",
+    "n": 17,
+    "mean_assigned_similarity": 0.8094007968902588,
+    "top_1": 0.8823529411764706,
+    "top_3": 0.8823529411764706
+  },
+  {
+    "node_id": "RAI3-P-INT-02",
+    "label_en": "Physical Attacks",
+    "n": 1,
+    "mean_assigned_similarity": 1.0000001192092896,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-03",
+    "label_en": "Cybersecurity Threats",
+    "n": 4,
+    "mean_assigned_similarity": 0.8490750789642334,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-04",
+    "label_en": "Sensor & Input Validation Failures",
+    "n": 4,
+    "mean_assigned_similarity": 0.8255641460418701,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-05",
+    "label_en": "Misinformation",
+    "n": 5,
+    "mean_assigned_similarity": 0.8495311737060547,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-06",
+    "label_en": "Dynamic Environmental Factors",
+    "n": 11,
+    "mean_assigned_similarity": 0.7974894046783447,
+    "top_1": 0.9090909090909091,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-07",
+    "label_en": "Human Interaction & Safety Protocol Failures",
+    "n": 13,
+    "mean_assigned_similarity": 0.7933810949325562,
+    "top_1": 0.8461538461538461,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-08",
+    "label_en": "Instruction Misinterpretation",
+    "n": 1,
+    "mean_assigned_similarity": 1.0000004768371582,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-09",
+    "label_en": "Multi-Agent Collaboration",
+    "n": 4,
+    "mean_assigned_similarity": 0.8384976387023926,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-INT-10",
+    "label_en": "Ethical & Safety Implications of Interactive Agents",
+    "n": 2,
+    "mean_assigned_similarity": 0.9361499547958374,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-01",
+    "label_en": "Privacy Violations",
+    "n": 5,
+    "mean_assigned_similarity": 0.865206241607666,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-02",
+    "label_en": "Labor Displacement",
+    "n": 1,
+    "mean_assigned_similarity": 0.9999999403953552,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-03",
+    "label_en": "Socioeconomic Inequality",
+    "n": 1,
+    "mean_assigned_similarity": 0.9999998807907104,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-04",
+    "label_en": "Power Concentration",
+    "n": 1,
+    "mean_assigned_similarity": 0.9999997019767761,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-05",
+    "label_en": "Bias & Discrimination",
+    "n": 3,
+    "mean_assigned_similarity": 0.885321855545044,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-06",
+    "label_en": "Lack of Accountability & Liability",
+    "n": 12,
+    "mean_assigned_similarity": 0.8251586556434631,
+    "top_1": 0.9166666666666666,
+    "top_3": 0.9166666666666666
+  },
+  {
+    "node_id": "RAI3-P-SOC-07",
+    "label_en": "Lack of Transparency, Explainability & Trust",
+    "n": 1,
+    "mean_assigned_similarity": 0.9999995827674866,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-08",
+    "label_en": "Unhealthy / Dangerous Human-EAI Relationships",
+    "n": 4,
+    "mean_assigned_similarity": 0.8849844932556152,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SOC-09",
+    "label_en": "Transformative Effects",
+    "n": 1,
+    "mean_assigned_similarity": 1.0000005960464478,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SYS-01",
+    "label_en": "Accidental Harm",
+    "n": 22,
+    "mean_assigned_similarity": 0.7888984680175781,
+    "top_1": 0.8636363636363636,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SYS-02",
+    "label_en": "Robot Control",
+    "n": 45,
+    "mean_assigned_similarity": 0.7914266586303711,
+    "top_1": 0.7777777777777778,
+    "top_3": 0.9555555555555556
+  },
+  {
+    "node_id": "RAI3-P-SYS-03",
+    "label_en": "Hardware & Mechanical Failures",
+    "n": 3,
+    "mean_assigned_similarity": 0.8542870879173279,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SYS-04",
+    "label_en": "Software Vulnerabilities & Design Flaws",
+    "n": 8,
+    "mean_assigned_similarity": 0.8072890043258667,
+    "top_1": 1.0,
+    "top_3": 1.0
+  },
+  {
+    "node_id": "RAI3-P-SYS-05",
+    "label_en": "Lack of Robustness in Unseen Environments",
+    "n": 13,
+    "mean_assigned_similarity": 0.7961196303367615,
+    "top_1": 0.9230769230769231,
+    "top_3": 1.0
+  }
+]
