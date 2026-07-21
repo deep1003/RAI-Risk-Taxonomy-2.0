@@ -9,6 +9,7 @@ import hashlib
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -60,6 +61,105 @@ def sha256_file(path: Path) -> str:
 def canonical_sha256(value: Any) -> str:
     payload = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def normalize_text(value: str | None) -> str:
+    text = unicodedata.normalize("NFKC", value or "")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def split_bilingual_label(label: str) -> tuple[str | None, str | None]:
+    match = re.match(r"^(.*?)\s*\(([^()]*)\)\s*$", normalize_text(label))
+    if not match:
+        return normalize_text(label) or None, None
+    return match.group(1).strip() or None, match.group(2).strip() or None
+
+
+def parse_three_h_one_r(value: str | None) -> list[dict]:
+    parsed = []
+    for token in (value or "").split("|"):
+        match = re.match(r"^\s*(H1|H2|H3|RC)\s+([^\[]+?)\s*\[([PS])\]\s*$", token)
+        if not match:
+            continue
+        axis_code, axis_name, priority_code = match.groups()
+        parsed.append(
+            {
+                "axis_code": axis_code,
+                "axis_name": axis_name.strip(),
+                "priority_code": priority_code,
+                "priority": "Primary" if priority_code == "P" else "Secondary",
+            }
+        )
+    return parsed
+
+
+def expected_registry_from_sources(
+    source_global: list[dict],
+    source_physical: list[dict],
+    source_physical_references: list[dict],
+) -> list[dict]:
+    physical_by_global = {
+        PHYSICAL_ALIAS_TO_GLOBAL.get(card["card_id"], card["card_id"]): card
+        for card in source_physical
+    }
+    references_by_card: dict[str, list[dict]] = defaultdict(list)
+    for reference in source_physical_references:
+        references_by_card[reference["card_id"]].append(reference)
+
+    expected = []
+    for index, card in enumerate(sorted(source_global, key=lambda row: row["id"]), start=1):
+        physical = physical_by_global.get(card["id"])
+        label_ko, physical_label_en = (
+            split_bilingual_label(physical["label"]) if physical else (None, None)
+        )
+        references = []
+        if card.get("evidence_title") or card.get("evidence_url"):
+            references.append(
+                {
+                    "title": card.get("evidence_title"),
+                    "url": card.get("evidence_url"),
+                    "type": card.get("evidence_type"),
+                    "source_system": "global_1726",
+                }
+            )
+        if physical:
+            for reference in references_by_card.get(physical["card_id"], []):
+                references.append(
+                    {
+                        "title": reference.get("reference_title"),
+                        "url": reference.get("reference_url"),
+                        "type": reference.get("reference_class"),
+                        "source_system": "physical_182",
+                        "reference_index": reference.get("reference_index"),
+                        "justification": reference.get("justification"),
+                        "is_linked": reference.get("is_linked"),
+                    }
+                )
+        expected.append(
+            {
+                "l4_id": f"RAI4-{index:04d}",
+                "label_en": normalize_text(card.get("l4_label") or physical_label_en),
+                "label_ko": label_ko,
+                "definition_en": normalize_text(card.get("definition")),
+                "definition_ko": physical.get("definition") if physical else None,
+                "severity_1to5": card.get("risk_severity_1to5"),
+                "probability_0to1": card.get("risk_probability_proxy_0to1"),
+                "impact_score": card.get("risk_impact_score"),
+                "impact_percentile": card.get("risk_impact_percentile"),
+                "metrics_source": "global_1726",
+                "three_h_one_r_raw": physical.get("three_h_one_r") if physical else None,
+                "three_h_one_r": parse_three_h_one_r(
+                    physical.get("three_h_one_r") if physical else None
+                ),
+                "references": references,
+                "status": "active",
+                "introduced_in": RELEASE_ID,
+                "retired_in": None,
+                "merged_into": None,
+                "allocation_basis": "ASCII lexicographic order of frozen global source ID",
+            }
+        )
+    return expected
 
 
 def hierarchy_path(node_id: str | None, nodes_by_id: dict[str, dict]) -> list[dict]:
@@ -115,9 +215,9 @@ def project_integrity_paths(
         PROJECT_ROOT / "requirements.txt",
         PROJECT_ROOT / "requirements-lock.txt",
         PROJECT_ROOT / "environment.json",
+        PROJECT_ROOT / "data" / "current.json",
         PROJECT_ROOT / "output" / "jupyter-notebook" / "rai_taxonomy_v1_data_quality_audit.ipynb",
         PROJECT_ROOT / "reports" / "latex" / "rai_taxonomy_v1_data_generation_report_ko.tex",
-        PROJECT_ROOT / "reports" / "pdf" / "rai_taxonomy_v1_data_generation_report_ko.pdf",
     ]
     return integrity_paths(
         release_dir,
@@ -384,6 +484,26 @@ def main() -> None:
     audit.add("ID-003", "L4 ID continuous allocation", expected_l4_ids, actual_l4_ids, actual_l4_ids == expected_l4_ids, details="RAI4-0001 through RAI4-1726")
     leaked_placements = [row["l4_id"] for row in registry if "primary_l3_id" in row]
     audit.add("ID-004", "Registry-placement separation", 0, len(leaked_placements), not leaked_placements)
+    expected_registry = expected_registry_from_sources(
+        source_global,
+        source_physical,
+        source_physical_references,
+    )
+    registry_source_failures = [
+        expected["l4_id"]
+        for expected, actual in zip(expected_registry, registry)
+        if expected != actual
+    ]
+    if len(expected_registry) != len(registry):
+        registry_source_failures.append("ROW_COUNT_OR_ORDER")
+    audit.add(
+        "REG-001",
+        "Every canonical L4 registry row is the exact approved transformation of frozen sources",
+        0,
+        len(registry_source_failures),
+        not registry_source_failures,
+        details=str(registry_source_failures[:20]),
+    )
 
     global_xw = [row for row in crosswalk if row["source_system"] == "global_1726"]
     physical_xw = [row for row in crosswalk if row["source_system"] == "physical_182"]
@@ -782,6 +902,7 @@ def main() -> None:
         )
     else:
         previous_dir = PROJECT_ROOT / "data" / "releases" / str(previous_release)
+        previous_source_dir = PROJECT_ROOT / "data" / "source_snapshots" / str(previous_release)
         previous_placements_path = previous_dir / "placements.json"
         audit.add(
             "REL-001",
@@ -834,6 +955,78 @@ def main() -> None:
             {"migrations": len(migrations_for_release), "failures": len(migration_failures)},
             len(release_diff_rows) == len(migrations_for_release) and not migration_failures,
             details=str(migration_failures[:20]),
+        )
+        immutable_filenames = [
+            "taxonomy_nodes.json",
+            "l4_registry.json",
+            "source_crosswalk.json",
+            "physical_lock.json",
+            "algorithm_config.json",
+            "algorithm_run.json",
+            "algorithm_scores.json",
+        ]
+        immutable_failures = [
+            filename
+            for filename in immutable_filenames
+            if not (previous_dir / filename).is_file()
+            or not (release_dir / filename).is_file()
+            or sha256_file(previous_dir / filename) != sha256_file(release_dir / filename)
+        ]
+        previous_snapshot_files = {
+            str(path.relative_to(previous_source_dir)): sha256_file(path)
+            for path in previous_source_dir.rglob("*")
+            if path.is_file()
+        } if previous_source_dir.is_dir() else {}
+        current_snapshot_files = {
+            str(path.relative_to(source_dir)): sha256_file(path)
+            for path in source_dir.rglob("*")
+            if path.is_file()
+        }
+        if not previous_snapshot_files or previous_snapshot_files != current_snapshot_files:
+            immutable_failures.append("source_snapshots")
+        audit.add(
+            "REL-004",
+            "Remap-only successor preserves immutable taxonomy, registry, crosswalk, locks, algorithm evidence, and frozen snapshots",
+            0,
+            len(immutable_failures),
+            not immutable_failures,
+            details=str(immutable_failures),
+        )
+        previous_migrations_path = previous_dir / "placement_migrations.json"
+        previous_migrations = (
+            read_json(previous_migrations_path) if previous_migrations_path.is_file() else []
+        )
+        migration_ids = [row.get("migration_id") for row in migrations]
+        prior_prefix_preserved = (
+            migrations[: len(previous_migrations)] == previous_migrations
+            and len(migration_ids) == len(set(migration_ids))
+        )
+        audit.add(
+            "REL-005",
+            "Prior migration ledger is an exact prefix and all migration IDs remain unique",
+            {"prior_rows": len(previous_migrations), "duplicate_ids": 0},
+            {
+                "prior_rows_preserved": len(previous_migrations)
+                if migrations[: len(previous_migrations)] == previous_migrations
+                else 0,
+                "duplicate_ids": len(migration_ids) - len(set(migration_ids)),
+            },
+            prior_prefix_preserved,
+        )
+        changed_l4_ids = {row["l4_id"] for row in release_diff_rows}
+        decision_id_failures = [
+            l4_id
+            for l4_id in sorted(set(previous_by_l4) & set(current_by_l4) - changed_l4_ids)
+            if previous_by_l4[l4_id].get("decision_id")
+            != current_by_l4[l4_id].get("decision_id")
+        ]
+        audit.add(
+            "REL-006",
+            "Unchanged cards preserve stable taxonomy-decision queue IDs",
+            0,
+            len(decision_id_failures),
+            not decision_id_failures,
+            details=str(decision_id_failures[:20]),
         )
     release_id_failures = [row["l4_id"] for row in placements if row.get("release_id") != release_id]
     audit.add(

@@ -9,6 +9,7 @@ every changed placement.
 from __future__ import annotations
 
 import argparse
+import atexit
 import copy
 import json
 import re
@@ -24,6 +25,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
 import build_release as build  # noqa: E402
+import validate_release as validation_utils  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
@@ -81,7 +83,13 @@ def main() -> None:
 
     if not source_release_dir.is_dir():
         raise FileNotFoundError(source_release_dir)
-    if target_release_dir.exists() or target_snapshot_dir.exists() or target_public_dir.exists():
+    target_paths = [
+        target_release_dir,
+        target_snapshot_dir,
+        target_public_dir,
+        target_validation_dir,
+    ]
+    if any(path.exists() for path in target_paths):
         raise FileExistsError(f"Target release already exists and will not be overwritten: {args.to_release}")
     source_manifest = read_json(source_release_dir / "manifest.json")
     if source_manifest.get("release_status") != "published" and not args.allow_prepublication_source:
@@ -102,6 +110,7 @@ def main() -> None:
     crosswalk = read_json(source_release_dir / "source_crosswalk.json")
     locks = read_json(source_release_dir / "physical_lock.json")
     placements = copy.deepcopy(read_json(source_release_dir / "placements.json"))
+    original_decision_ids = {row["l4_id"]: row.get("decision_id") for row in placements}
     prior_migrations = copy.deepcopy(read_json(source_release_dir / "placement_migrations.json"))
     node_ids = {row["node_id"] for row in nodes if row["level"] == 3 and row["status"] == "active"}
     registry_ids = {row["l4_id"] for row in registry}
@@ -112,6 +121,12 @@ def main() -> None:
         raise ValueError("Physical locked cards cannot be changed by the standard remap workflow")
 
     migration_number = next_migration_number(prior_migrations)
+    existing_td_numbers = []
+    for placement in placements:
+        match = re.fullmatch(r"TD-(\d{4,})", placement.get("decision_id") or "")
+        if match:
+            existing_td_numbers.append(int(match.group(1)))
+    next_decision_number = max(existing_td_numbers, default=0) + 1
     new_migrations = []
     for placement in placements:
         placement["release_id"] = args.to_release
@@ -176,12 +191,9 @@ def main() -> None:
                 "approved_at": args.approved_at,
             }
         )
-
-    decision_number = 0
-    for placement in placements:
-        if placement["assignment_status"] == "needs_taxonomy_decision":
-            decision_number += 1
-            placement["decision_id"] = f"TD-{decision_number:04d}"
+        if to_status == "needs_taxonomy_decision":
+            placement["decision_id"] = f"TD-{next_decision_number:04d}"
+            next_decision_number += 1
         else:
             placement["decision_id"] = None
 
@@ -196,6 +208,12 @@ def main() -> None:
                     "changed_placements": len(new_migrations),
                     "human_approved": status_counts["human_approved"],
                     "needs_taxonomy_decision": status_counts["needs_taxonomy_decision"],
+                    "preserved_decision_ids": sum(
+                        row.get("decision_id") == original_decision_ids[row["l4_id"]]
+                        for row in placements
+                        if row["l4_id"] not in decision_by_l4
+                        and original_decision_ids[row["l4_id"]] is not None
+                    ),
                     "writes_performed": 0,
                 },
                 ensure_ascii=False,
@@ -203,10 +221,35 @@ def main() -> None:
         )
         return
 
+    creation_complete = False
+
+    def rollback_partial_release() -> None:
+        if creation_complete:
+            return
+        for path in target_paths:
+            if path.exists():
+                shutil.rmtree(path)
+
+    atexit.register(rollback_partial_release)
     target_release_dir.mkdir(parents=True)
     target_public_dir.mkdir(parents=True)
     target_validation_dir.mkdir(parents=True)
     shutil.copytree(source_snapshot_dir, target_snapshot_dir)
+    source_validation_dir = PROJECT_ROOT / "reports" / "validation" / args.from_release
+    for dirname in ["expert_model_reviews", "frontier_expert_reviews"]:
+        source = source_validation_dir / dirname
+        if source.is_dir():
+            shutil.copytree(source, target_validation_dir / dirname)
+    for filename in [
+        "frontier_expert_consensus.csv",
+        "frontier_expert_consensus.json",
+        "frontier_expert_consensus_summary.json",
+        "local_model_sensitivity_summary.json",
+        "model_revision_reproducibility.json",
+    ]:
+        source = source_validation_dir / filename
+        if source.is_file():
+            shutil.copy2(source, target_validation_dir / filename)
     for filename in [
         "taxonomy_nodes.json",
         "taxonomy_nodes.csv",
@@ -294,6 +337,25 @@ def main() -> None:
     ]
     write_json(target_release_dir / "manifest.json", manifest)
     write_json(target_public_dir / "manifest.json", manifest)
+
+    checksum_paths = validation_utils.project_integrity_paths(
+        target_release_dir,
+        target_snapshot_dir,
+        target_public_dir,
+        target_validation_dir,
+        PROJECT_ROOT / "schemas",
+    )
+    checksum_lines = [
+        f"{validation_utils.sha256_file(path)}  {path.relative_to(PROJECT_ROOT)}"
+        for path in checksum_paths
+    ]
+    (target_validation_dir / "checksums.sha256").write_text(
+        "\n".join(checksum_lines) + "\n",
+        encoding="utf-8",
+    )
+
+    creation_complete = True
+    atexit.unregister(rollback_partial_release)
 
     print(
         json.dumps(

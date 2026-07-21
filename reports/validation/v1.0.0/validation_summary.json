@@ -3,7 +3,7 @@
   "status": "PASS_WITH_WARNINGS",
   "failed_checks": 0,
   "warning_checks": 2,
-  "passed_checks": 69,
+  "passed_checks": 70,
   "checks": [
     {
       "check_id": "SRC-001",
@@ -126,11 +126,11 @@
       "check_id": "INT-001",
       "description": "Checksum ledger exactly covers the project integrity scope",
       "expected": {
-        "files": 85,
+        "files": 87,
         "mismatches": 0
       },
       "actual": {
-        "files": 85,
+        "files": 87,
         "mismatches": 0
       },
       "status": "PASS",
@@ -3672,6 +3672,15 @@
       "status": "PASS",
       "severity": "critical",
       "details": null
+    },
+    {
+      "check_id": "REG-001",
+      "description": "Every canonical L4 registry row is the exact approved transformation of frozen sources",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS",
+      "severity": "critical",
+      "details": "[]"
     },
     {
       "check_id": "XW-001",

@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-07-21T15:08:12+09:00",
+  "status": "PASS",
+  "global_1726": {
+    "site_url": "https://deep1003.github.io/AI_Topic_Space.github.io/data/global_ai_risk_l4_overlay_nodes.json",
+    "site_sha256": "57d419a1a3aac23c5eed8639733f70c58fd093f9fa6f463851c999db12cb7528",
+    "local_sha256": "57d419a1a3aac23c5eed8639733f70c58fd093f9fa6f463851c999db12cb7528",
+    "frozen_snapshot_sha256": "57d419a1a3aac23c5eed8639733f70c58fd093f9fa6f463851c999db12cb7528",
+    "record_count": 1726,
+    "site_local_byte_exact": true,
+    "local_head_byte_exact": true,
+    "git_head": "26b23e38adec47fda4ff5a0c9e4bdce5ce4a7c99",
+    "origin_main": "26b23e38adec47fda4ff5a0c9e4bdce5ce4a7c99"
+  },
+  "physical_182": {
+    "site_url": "https://deep1003.github.io/Physical-AI-Risk-Taxonomy/",
+    "site_index_sha256": "b121f54fb0c318f446d3a40db6b542c32e4f1863a18adb6ab2711231e161d930",
+    "local_index_sha256": "b121f54fb0c318f446d3a40db6b542c32e4f1863a18adb6ab2711231e161d930",
+    "site_local_index_byte_exact": true,
+    "l4_card_count": 182,
+    "site_missing_card_ids": 0,
+    "site_card_ids_occurring_exactly_once": 182,
+    "l4_cards_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+    "l4_cards_local_head_frozen_exact": true,
+    "l4_references_sha256": "79a805b0c58a1b9ce917ac8e745437ce9e7bcbdbc4ad5d9027aff817bb9db758",
+    "l4_references_local_head_frozen_exact": true,
+    "git_head": "348d9577212d8d3b7a6d9f8011b08ee3fcb7c44d",
+    "origin_main": "348d9577212d8d3b7a6d9f8011b08ee3fcb7c44d"
+  },
+  "notes": [
+    "Source worktrees were treated as read-only and were not modified.",
+    "Unrelated pre-existing worktree changes are outside this audit; all selected input files match HEAD and the frozen snapshots exactly."
+  ]
+}
