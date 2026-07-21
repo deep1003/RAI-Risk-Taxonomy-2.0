@@ -96,14 +96,14 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "5b67199e0e21ac4eb7e9cc2f39939f95991373d2d72965966d8c93a2f03c824e",
-      "bytes": 15825,
+      "sha256": "070505db29eef52184ad52a29a7ed94b330c67f1052517ff650271268f7ba80b",
+      "bytes": 16039,
       "rows": null
     },
     {
       "path": "assets/site.js",
-      "sha256": "044923ab0705700c5861c0173332f02b0eff628cc8c503ddc9685181d4f82cc8",
-      "bytes": 16862,
+      "sha256": "2e0c8de5fee8b49735e9a2536adc41b5776fc0ac8152d6f5092742ba8b91bde1",
+      "bytes": 16880,
       "rows": null
     },
     {
@@ -396,7 +396,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "859a409cbd24359eba266008cb08c8d4e64f7500a4e7256033e610a1eebc6254",
+      "sha256": "7d358b131d4de38764124ab457e976901c4a1dac07194ab34625020c59bdd40b",
       "bytes": 6547,
       "rows": null
     },
@@ -437,14 +437,14 @@
       "rows": 1726
     },
     {
-      "path": "public/data/releases/v2.3.0/cards.json",
-      "sha256": "14354eff7d7d0968392bf1ab1c4cf86c4a1adfbfa87782fe38bcb63640d96e7c",
-      "bytes": 4132826,
+      "path": "public/data/releases/v2.4.0/cards.json",
+      "sha256": "ce9757ca4bc83c3031d4dc22e99919ef1b570d7ae23f1875e0f48acf344334e7",
+      "bytes": 3989062,
       "rows": 1711
     },
     {
-      "path": "public/data/releases/v2.3.0/hierarchy.json",
-      "sha256": "d62a2ec2121b28fc4474681e730cb48868cde7834bfe05c303a28c17ac895815",
+      "path": "public/data/releases/v2.4.0/hierarchy.json",
+      "sha256": "e2b90cc756e923ea89fb88395cd8e5462764911d0de501ccc8aad22b27598384",
       "bytes": 52472,
       "rows": 60
     },
@@ -504,8 +504,8 @@
     },
     {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
-      "sha256": "24c7d1f88726a4066337bdd75443fc422f826542e2f7cf0fd7e292f4ee19f788",
-      "bytes": 22242,
+      "sha256": "77cfb3c7dc3525604956ed045546036682197cd04ab8feb88babeee9e1874d0d",
+      "bytes": 23301,
       "rows": null
     },
     {
@@ -540,8 +540,8 @@
     },
     {
       "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf",
-      "sha256": "04e5f8de0a1c17da2822edf0d37b78ac7f1c4bbfafabeaebb62e7b1f1ec6af08",
-      "bytes": 147854,
+      "sha256": "f6bd35a072ca270a5b7c02a28543cbe63c0bce9a772002aa54862ef905376c80",
+      "bytes": 149418,
       "rows": null
     },
     {
@@ -570,8 +570,8 @@
     },
     {
       "path": "reports/statistics/top_down_evidence_funnel.json",
-      "sha256": "926357392b3614588ddded517d55a697ccd4eaa88fe17062c1e400fa193a79ec",
-      "bytes": 3188,
+      "sha256": "fcf31b4869d6cc8ac994d67844f267a6e51f578cc9757cdc4e9c7e40d62ae289",
+      "bytes": 3377,
       "rows": null
     },
     {
@@ -756,7 +756,7 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "9b5fabfe4aff41815f435cf8b7dc2b40a67466390873fbcd32d943a68467d1a2",
+      "sha256": "06354947e58843710f6240c916082bae408c3b1c45e4fa27652279dbed12610d",
       "bytes": 113079,
       "rows": null
     },
@@ -899,8 +899,14 @@
       "rows": null
     },
     {
+      "path": "scripts/sync_physical_cards_v2_4.py",
+      "sha256": "0a30b8261e6cdc4f6c410a702af2b2bb32558aefd015ad108c3b610346360d69",
+      "bytes": 9468,
+      "rows": null
+    },
+    {
       "path": "scripts/validate_release.py",
-      "sha256": "031f9058692c6982a73a706a171399b4988f4c526b7a3f1eca280d6a80e63e89",
+      "sha256": "ca38d3100fb2c81e7b18db5101137be24e2cdb3c2e578c3a4795fd687b446fa7",
       "bytes": 54370,
       "rows": null
     },
@@ -942,7 +948,7 @@
     },
     {
       "path": "tests/test_release.py",
-      "sha256": "9b47d92f37f0bb3e77b5f72c84840928a2a1fc350d41036c0f64756d4d825582",
+      "sha256": "5a084ea41b7a7909dcce6cb3a33bdaab2e600eed8b766e45929baf70130b2523",
       "bytes": 8707,
       "rows": null
     },
@@ -960,8 +966,8 @@
     },
     {
       "path": "tests/test_site_v2.py",
-      "sha256": "33fde6ddcb06518eb934d7dc1cb3f03973684f7eb605c7dd3fe79446a11a31d5",
-      "bytes": 3722,
+      "sha256": "c803dcb45f34fcf177c17c7f50b2f4ac8f26a66cd1abfb48eaa47185b72cf6a0",
+      "bytes": 4825,
       "rows": null
     }
   ],

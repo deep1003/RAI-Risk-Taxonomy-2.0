@@ -174,6 +174,22 @@ L3 \code{P3.1}. Their definitions and references remain in the audit crosswalk.
 This yields 1,711 canonical L4 cards without changing any of the protected 182
 Physical L4 mappings.
 
+\subsection{Authoritative Physical L4 content synchronization}
+
+Release v2.4 synchronizes the content of all 182 protected Physical cards from
+the local repository underlying the deployed Physical AI Risk Taxonomy site.
+The immutable RAI4 crosswalk and L3 paths are retained, while the bilingual
+label and definition, severity, probability, 3H1R attributes, evidence
+justifications, and 360 reference rows are replaced by the current Physical
+source values. Of these reference rows, 359 contain a justification and one
+source row retains an empty justification without imputation. Bilingual
+terminal parenthetical text is split into Korean and
+English fields to preserve the global card schema. Impact is recalculated as
+$I=s\,p$ from the synchronized severity $s$ and probability $p$. Percentile is
+not displayed for any card because the cards do not constitute a common
+measurement population suitable for relative ranking. Existing percentile
+fields remain provenance data only.
+
 \subsection{Stage E: L3 assignment policy}
 
 The final policy view assigns all 1,711 canonical L4 cards to one of 50 L3 nodes
@@ -453,7 +469,7 @@ The 182 Physical mappings and 37 Stage 1 expert-consensus mappings remain
 unchanged in later stages. Repeated Stage 2 and Stage 3 builds produce
 byte-identical placement hashes. The Stage 2 validator reports 13 PASS, 0 FAIL,
 and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and 4 WARN. The
-release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 22 repository
+release validator reports 71 PASS, 0 FAIL, and 2 WARN, and all 24 repository
 tests pass at the time of this report revision.
 
 Three limitations directly affect interpretation. First, cross-category
@@ -482,10 +498,11 @@ available in the repository:
 \begin{itemize}[leftmargin=2em]
   \item \small\nolinkurl{reports/statistics/top_down_evidence_funnel.json}
   \item \small\nolinkurl{data/experiments/stage3-forced-policy-v2/placements.json}
-  \item \small\nolinkurl{public/data/releases/v2.3.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.4.0/cards.json}
   \item \small\nolinkurl{reports/data_quality/l4_deduplication_v2.1/retired_to_canonical.json}
   \item \small\nolinkurl{reports/expert_review/v2.1/consensus_result.json}
   \item \small\nolinkurl{reports/data_quality/physical_l3_label_leakage_v2.3.json}
+  \item \small\nolinkurl{reports/data_quality/physical_card_sync_v2.4.json}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.

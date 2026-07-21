@@ -1,0 +1,1992 @@
+{
+  "release_id": "v2.4.0",
+  "authoritative_source": "https://deep1003.github.io/Physical-AI-Risk-Taxonomy/",
+  "local_source_files": {
+    "l4_cards.json": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+    "l4_references.json": "79a805b0c58a1b9ce917ac8e745437ce9e7bcbdbc4ad5d9027aff817bb9db758"
+  },
+  "quality_checks": {
+    "unique_physical_ids": 182,
+    "lock_join_coverage": 182,
+    "reference_rows": 360,
+    "cards_with_references": 182,
+    "unlinked_reference_rows": 7,
+    "missing_justification_rows": 1,
+    "severity_range": [
+      3.0,
+      4.9
+    ],
+    "probability_range": [
+      0.06,
+      0.75
+    ]
+  },
+  "format_policy": {
+    "bilingual_fields": "Terminal parenthesized English text split into *_ko and *_en.",
+    "impact_score": "severity_1to5 multiplied by probability_0to1",
+    "impact_percentile": "null because the authoritative Physical source does not provide a comparable percentile",
+    "references": "Physical reference rows replace mixed legacy references; justification is preserved per reference."
+  },
+  "changed_field_frequency": {
+    "definition_en": 182,
+    "definition_ko": 182,
+    "impact_percentile": 182,
+    "references": 182,
+    "severity_1to5": 42,
+    "probability_0to1": 42,
+    "impact_score": 47
+  },
+  "changes": [
+    {
+      "physical_card_id": "PHYSBENCH-REF-0003",
+      "l4_id": "RAI4-0182",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0007",
+      "l4_id": "RAI4-0186",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0012",
+      "l4_id": "RAI4-0191",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0032",
+      "l4_id": "RAI4-0211",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0035",
+      "l4_id": "RAI4-0214",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0039",
+      "l4_id": "RAI4-0218",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0045",
+      "l4_id": "RAI4-0224",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0048",
+      "l4_id": "RAI4-0227",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0050",
+      "l4_id": "RAI4-0229",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0052",
+      "l4_id": "RAI4-0231",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0054",
+      "l4_id": "RAI4-0233",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0057",
+      "l4_id": "RAI4-0236",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0058",
+      "l4_id": "RAI4-0237",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0064",
+      "l4_id": "RAI4-0243",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0070",
+      "l4_id": "RAI4-0249",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0071",
+      "l4_id": "RAI4-0250",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0076",
+      "l4_id": "RAI4-0255",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0077",
+      "l4_id": "RAI4-0256",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0081",
+      "l4_id": "RAI4-0260",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0090",
+      "l4_id": "RAI4-0269",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0019",
+      "l4_id": "RAI4-0338",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0040",
+      "l4_id": "RAI4-0219",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0005",
+      "l4_id": "RAI4-0184",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0006",
+      "l4_id": "RAI4-0185",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0008",
+      "l4_id": "RAI4-0187",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0009",
+      "l4_id": "RAI4-0188",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0010",
+      "l4_id": "RAI4-0189",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0011",
+      "l4_id": "RAI4-0190",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0013",
+      "l4_id": "RAI4-0192",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0014",
+      "l4_id": "RAI4-0193",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0015",
+      "l4_id": "RAI4-0194",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0025",
+      "l4_id": "RAI4-0204",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0026",
+      "l4_id": "RAI4-0205",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0027",
+      "l4_id": "RAI4-0206",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0028",
+      "l4_id": "RAI4-0207",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0029",
+      "l4_id": "RAI4-0208",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0053",
+      "l4_id": "RAI4-0232",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0055",
+      "l4_id": "RAI4-0234",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0056",
+      "l4_id": "RAI4-0235",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0061",
+      "l4_id": "RAI4-0240",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0066",
+      "l4_id": "RAI4-0245",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0068",
+      "l4_id": "RAI4-0247",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0069",
+      "l4_id": "RAI4-0248",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0072",
+      "l4_id": "RAI4-0251",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0079",
+      "l4_id": "RAI4-0258",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0080",
+      "l4_id": "RAI4-0259",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0083",
+      "l4_id": "RAI4-0262",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0085",
+      "l4_id": "RAI4-0264",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0088",
+      "l4_id": "RAI4-0267",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0104",
+      "l4_id": "RAI4-0283",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0105",
+      "l4_id": "RAI4-0284",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0106",
+      "l4_id": "RAI4-0285",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0008",
+      "l4_id": "RAI4-0327",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0009",
+      "l4_id": "RAI4-0328",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0010",
+      "l4_id": "RAI4-0329",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0011",
+      "l4_id": "RAI4-0330",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0012",
+      "l4_id": "RAI4-0331",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0013",
+      "l4_id": "RAI4-0332",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0014",
+      "l4_id": "RAI4-0333",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-001",
+      "l4_id": "RAI4-0293",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-002",
+      "l4_id": "RAI4-0294",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-005",
+      "l4_id": "RAI4-0297",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0075",
+      "l4_id": "RAI4-0254",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0020",
+      "l4_id": "RAI4-0339",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0041",
+      "l4_id": "RAI4-0360",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0067",
+      "l4_id": "RAI4-0246",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0074",
+      "l4_id": "RAI4-0253",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-007",
+      "l4_id": "RAI4-0299",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0016",
+      "l4_id": "RAI4-0195",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0037",
+      "l4_id": "RAI4-0356",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0103",
+      "l4_id": "RAI4-0282",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0038",
+      "l4_id": "RAI4-0357",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-004",
+      "l4_id": "RAI4-0296",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-006",
+      "l4_id": "RAI4-0298",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-008",
+      "l4_id": "RAI4-0300",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-009",
+      "l4_id": "RAI4-0301",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0036",
+      "l4_id": "RAI4-0215",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0041",
+      "l4_id": "RAI4-0220",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0078",
+      "l4_id": "RAI4-0257",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0046",
+      "l4_id": "RAI4-0225",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0060",
+      "l4_id": "RAI4-0239",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0018",
+      "l4_id": "RAI4-0337",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0059",
+      "l4_id": "RAI4-0238",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0062",
+      "l4_id": "RAI4-0241",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0084",
+      "l4_id": "RAI4-0263",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0086",
+      "l4_id": "RAI4-0265",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0098",
+      "l4_id": "RAI4-0277",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0101",
+      "l4_id": "RAI4-0280",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0015",
+      "l4_id": "RAI4-0334",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0016",
+      "l4_id": "RAI4-0335",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0082",
+      "l4_id": "RAI4-0261",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0017",
+      "l4_id": "RAI4-0196",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0018",
+      "l4_id": "RAI4-0197",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0019",
+      "l4_id": "RAI4-0198",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0020",
+      "l4_id": "RAI4-0199",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0022",
+      "l4_id": "RAI4-0201",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0023",
+      "l4_id": "RAI4-0202",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0024",
+      "l4_id": "RAI4-0203",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0031",
+      "l4_id": "RAI4-0210",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0044",
+      "l4_id": "RAI4-0223",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0049",
+      "l4_id": "RAI4-0228",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0095",
+      "l4_id": "RAI4-0274",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0097",
+      "l4_id": "RAI4-0276",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0028",
+      "l4_id": "RAI4-0347",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0043",
+      "l4_id": "RAI4-0302",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0045",
+      "l4_id": "RAI4-0304",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0046",
+      "l4_id": "RAI4-0305",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0030",
+      "l4_id": "RAI4-0349",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0044",
+      "l4_id": "RAI4-0303",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0043",
+      "l4_id": "RAI4-0222",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0029",
+      "l4_id": "RAI4-0348",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0031",
+      "l4_id": "RAI4-0350",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0027",
+      "l4_id": "RAI4-0346",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0002",
+      "l4_id": "RAI4-0181",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0099",
+      "l4_id": "RAI4-0278",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0007",
+      "l4_id": "RAI4-0326",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0005",
+      "l4_id": "RAI4-0324",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0089",
+      "l4_id": "RAI4-0268",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0091",
+      "l4_id": "RAI4-0270",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0092",
+      "l4_id": "RAI4-0271",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0102",
+      "l4_id": "RAI4-0281",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0017",
+      "l4_id": "RAI4-0336",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0030",
+      "l4_id": "RAI4-0209",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0034",
+      "l4_id": "RAI4-0213",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0042",
+      "l4_id": "RAI4-0221",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0063",
+      "l4_id": "RAI4-0242",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0107",
+      "l4_id": "RAI4-0286",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0001",
+      "l4_id": "RAI4-0320",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0003",
+      "l4_id": "RAI4-0322",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0004",
+      "l4_id": "RAI4-0323",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0033",
+      "l4_id": "RAI4-0352",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0002",
+      "l4_id": "RAI4-0321",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0100",
+      "l4_id": "RAI4-0279",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0001",
+      "l4_id": "RAI4-0180",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0004",
+      "l4_id": "RAI4-0183",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0047",
+      "l4_id": "RAI4-0226",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0065",
+      "l4_id": "RAI4-0244",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0073",
+      "l4_id": "RAI4-0252",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0111",
+      "l4_id": "RAI4-0290",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0112",
+      "l4_id": "RAI4-0291",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0006",
+      "l4_id": "RAI4-0325",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0021",
+      "l4_id": "RAI4-0340",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0025",
+      "l4_id": "RAI4-0344",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0040",
+      "l4_id": "RAI4-0359",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0042",
+      "l4_id": "RAI4-0361",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0023",
+      "l4_id": "RAI4-0342",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0096",
+      "l4_id": "RAI4-0275",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0033",
+      "l4_id": "RAI4-0212",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0051",
+      "l4_id": "RAI4-0230",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSCONN-REF-003",
+      "l4_id": "RAI4-0295",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0039",
+      "l4_id": "RAI4-0358",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0024",
+      "l4_id": "RAI4-0343",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSKR-REF-009",
+      "l4_id": "RAI4-0310",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0026",
+      "l4_id": "RAI4-0345",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0035",
+      "l4_id": "RAI4-0354",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSKR-REF-012",
+      "l4_id": "RAI4-0313",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0053",
+      "l4_id": "RAI4-0314",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0021",
+      "l4_id": "RAI4-0200",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0036",
+      "l4_id": "RAI4-0355",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0052",
+      "l4_id": "RAI4-0312",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0054",
+      "l4_id": "RAI4-0315",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0087",
+      "l4_id": "RAI4-0266",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0093",
+      "l4_id": "RAI4-0272",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0051",
+      "l4_id": "RAI4-0311",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0037",
+      "l4_id": "RAI4-0216",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0038",
+      "l4_id": "RAI4-0217",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0094",
+      "l4_id": "RAI4-0273",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0108",
+      "l4_id": "RAI4-0287",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0109",
+      "l4_id": "RAI4-0288",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0110",
+      "l4_id": "RAI4-0289",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSBENCH-REF-0113",
+      "l4_id": "RAI4-0292",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0032",
+      "l4_id": "RAI4-0351",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSKR-REF-015",
+      "l4_id": "RAI4-0316",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSKR-REF-016",
+      "l4_id": "RAI4-0317",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSKR-REF-017",
+      "l4_id": "RAI4-0318",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0034",
+      "l4_id": "RAI4-0353",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0048",
+      "l4_id": "RAI4-0307",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0047",
+      "l4_id": "RAI4-0306",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0049",
+      "l4_id": "RAI4-0308",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0050",
+      "l4_id": "RAI4-0309",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0022",
+      "l4_id": "RAI4-0341",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "severity_1to5",
+        "probability_0to1",
+        "impact_score",
+        "impact_percentile",
+        "references"
+      ]
+    },
+    {
+      "physical_card_id": "PHYSRISK-REF-0055",
+      "l4_id": "RAI4-0319",
+      "changed_fields": [
+        "definition_en",
+        "definition_ko",
+        "impact_percentile",
+        "references"
+      ]
+    }
+  ]
+}

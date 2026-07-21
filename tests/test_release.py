@@ -168,7 +168,7 @@ class ReleaseSmokeTests(unittest.TestCase):
         script = js_path.read_text(encoding="utf-8")
         self.assertIn('href="assets/site.css"', index)
         self.assertIn('src="assets/site.js"', index)
-        self.assertIn('const DATA_ROOT = "public/data/releases/v2.3.0"', script)
+        self.assertIn('const DATA_ROOT = "public/data/releases/v2.4.0"', script)
         self.assertNotIn("RAI4-1726", script)
 
 

@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.3.0";
+const DATA_ROOT = "public/data/releases/v2.4.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -348,7 +348,6 @@ function openCard(l4Id) {
       <div><span>Severity</span><strong>${formatMetric(card.severity_1to5)}</strong></div>
       <div><span>Probability</span><strong>${formatMetric(card.probability_0to1)}</strong></div>
       <div><span>Impact</span><strong>${formatMetric(card.impact_score)}</strong></div>
-      <div><span>Percentile</span><strong>${card.impact_percentile == null ? "–" : `${formatMetric(card.impact_percentile * 100)}%`}</strong></div>
     </div>
     ${tags.length ? `<section class="dialog-section"><h3>3H / Role</h3><div class="tag-row">${tags.map((tag) => `<span class="axis-tag">${escapeHtml(tag.axis_code)} ${escapeHtml(tag.axis_name)} [${escapeHtml(tag.priority_code)}]</span>`).join("")}</div></section>` : ""}
     <section class="dialog-section"><h3>References · ${references.length}</h3>${references.length ? `<ul class="reference-list">${references.map(referenceTemplate).join("")}</ul>` : `<p>등록된 근거 링크가 없습니다.</p>`}</section>
@@ -360,8 +359,9 @@ function referenceTemplate(reference) {
   const title = escapeHtml(reference.title || "Untitled reference");
   const source = escapeHtml(reference.source_system || "source");
   const type = escapeHtml(reference.type || "reference");
-  if (!reference.url) return `<li><span>${title}</span><small>${source} · ${type}</small></li>`;
-  return `<li><a href="${escapeAttribute(reference.url)}" target="_blank" rel="noopener noreferrer">${title} ↗</a><small>${source} · ${type}</small></li>`;
+  const justification = reference.justification ? `<p class="reference-justification">${escapeHtml(reference.justification)}</p>` : "";
+  if (!reference.url) return `<li>${justification}<span>${title}</span><small>${source} · ${type}</small></li>`;
+  return `<li>${justification}<a href="${escapeAttribute(reference.url)}" target="_blank" rel="noopener noreferrer">${title} ↗</a><small>${source} · ${type}</small></li>`;
 }
 
 function formatMetric(value) {

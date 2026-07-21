@@ -165,6 +165,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .reference-list li { padding: 9px 0; border-bottom: 1px solid var(--line); }
 .reference-list a { color: #175cd3; text-decoration: none; font-size: 12px; font-weight: 650; }
 .reference-list small { display: block; margin-top: 3px; color: #98a2b3; }
+.reference-list .reference-justification { margin: 0 0 7px; padding: 8px 10px; border-left: 2px solid #d0d5dd; border-radius: 0 5px 5px 0; background: #f9fafb; color: #475467; font-size: 12px; line-height: 1.55; }
 
 footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 36px; background: #111827; color: #98a2b3; font-size: 11px; }
 footer div { display: flex; flex-direction: column; gap: 3px; }

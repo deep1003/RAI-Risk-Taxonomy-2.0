@@ -1,0 +1,29 @@
+{
+  "release_id": "v2.4.0",
+  "source_release": "v2.3.0",
+  "release_status": "physical_cards_synced_from_authoritative_local_source",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "physical_total": 182,
+    "physical_cards_synced": 182,
+    "physical_reference_rows": 360,
+    "decision_required": 76,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "ce9757ca4bc83c3031d4dc22e99919ef1b570d7ae23f1875e0f48acf344334e7"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "e2b90cc756e923ea89fb88395cd8e5462764911d0de501ccc8aad22b27598384"
+    },
+    {
+      "path": "reports/data_quality/physical_card_sync_v2.4.json",
+      "sha256": "f961c28dadfed4013a6bbc056f847f8b609105e73a5e819b63a843ba90add7a4"
+    }
+  ]
+}
