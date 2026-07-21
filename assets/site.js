@@ -20,7 +20,7 @@ const cardPath = new Map();
 
 const ASSIGNMENT_META = {
   assigned: { label: "L3 assigned" },
-  unassigned: { label: "L3 unassigned" },
+  unassigned: { label: "Taxonomy Decision Hold" },
 };
 
 const DOMAIN_COLORS = {
@@ -179,7 +179,7 @@ function renderStats() {
 function renderTree() {
   const counts = countCardsByNode();
   const domains = state.nodes.filter((node) => node.level === 1);
-  ui.tree.innerHTML = domains.map((domain) => {
+  const hierarchy = domains.map((domain) => {
     const l2Nodes = childrenByParent.get(domain.node_id) || [];
     return `<details class="tree-domain" open style="--domain-color:${DOMAIN_COLORS[domain.node_id]}">
       <summary><span class="tree-dot"></span>${escapeHtml(domain.label_en)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
@@ -189,7 +189,22 @@ function renderTree() {
       </div>
     </details>`;
   }).join("");
+  const holdCount = state.cards.filter((card) => !card.primary_l3_id).length;
+  ui.tree.innerHTML = `${hierarchy}<button class="tree-hold" type="button" data-assignment="unassigned">
+    <span class="tree-dot"></span><span>Taxonomy Decision Hold</span><b>${holdCount}</b>
+  </button>`;
   ui.tree.querySelectorAll("[data-node]").forEach((button) => button.addEventListener("click", () => selectTreeNode(button.dataset.node)));
+  ui.tree.querySelector("[data-assignment='unassigned']").addEventListener("click", selectDecisionHold);
+}
+
+function selectDecisionHold() {
+  Object.assign(state, { status: "unassigned", l1: "all", l2: "all", l3: "all", page: 1 });
+  clearNavActive();
+  document.querySelector('[data-status="unassigned"]').classList.add("active");
+  refreshDependentFilters();
+  syncControls();
+  render();
+  document.querySelector("#risk-results").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function countCardsByNode() {
@@ -331,6 +346,7 @@ function renderActiveFilter() {
 
 function syncTreeActive() {
   ui.tree.querySelectorAll(".tree-node").forEach((button) => button.classList.toggle("active", [state.l2, state.l3].includes(button.dataset.node)));
+  ui.tree.querySelector("[data-assignment='unassigned']")?.classList.toggle("active", state.status === "unassigned");
 }
 
 function openCard(l4Id) {

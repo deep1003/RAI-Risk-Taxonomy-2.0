@@ -96,14 +96,14 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "5b67199e0e21ac4eb7e9cc2f39939f95991373d2d72965966d8c93a2f03c824e",
-      "bytes": 15825,
+      "sha256": "99a93aff26744e5d70f41d27c9f8df8fa47ccdf22f95d6072498e9317334dfa6",
+      "bytes": 16308,
       "rows": null
     },
     {
       "path": "assets/site.js",
-      "sha256": "88ec22298395bbb4837bfac07ae2828c75b0cfe4e7099892d6263a4577349297",
-      "bytes": 16701,
+      "sha256": "8f466ac7210a110b83621ac81d60ad787f89ff5c22edd5a95c52a78099d99fef",
+      "bytes": 17601,
       "rows": null
     },
     {
@@ -372,8 +372,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "0db75895ccc6b9f776698b8b91f15079d369440aee9218d69458c6acafba1967",
-      "bytes": 6687,
+      "sha256": "8110219d6995add888f28bea76114e4bad39b5f909866a2f5f2ebbd44e3411f8",
+      "bytes": 6725,
       "rows": null
     },
     {
