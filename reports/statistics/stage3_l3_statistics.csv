@@ -1,0 +1,51 @@
+﻿l3_id,l3_name,final_count,final_share,forced_count,forced_share
+RAI3-G-INT-10,Anthropomorphism,254,0.147161,26,0.150289
+RAI3-G-SYS-08,Goal Misalignment,153,0.088644,7,0.040462
+RAI3-G-INT-08,Copyrights,118,0.068366,18,0.104046
+RAI3-G-SYS-03,Misinformation/Disinformation,110,0.063731,6,0.034682
+RAI3-G-INT-06,Privacy,90,0.052144,9,0.052023
+RAI3-G-INT-11,Policy Exposure,89,0.051564,10,0.057803
+RAI3-A-SYS-03,Network Effects,80,0.04635,11,0.063584
+RAI3-A-SYS-01,Excessive Authority,74,0.042874,4,0.023121
+RAI3-A-SYS-04,Destabilising Dynamics,74,0.042874,12,0.069364
+RAI3-A-SYS-05,Conflict,64,0.03708,7,0.040462
+RAI3-G-INT-09,Weaponization,59,0.034183,12,0.069364
+RAI3-G-SYS-09,Non-Contestability,56,0.032445,5,0.028902
+RAI3-G-SYS-07,Overconfidence,47,0.027231,8,0.046243
+RAI3-P-SYS-02,Robot Control,45,0.026072,0,0.0
+RAI3-A-SYS-06,Collusion,37,0.021437,3,0.017341
+RAI3-G-SYS-05,Inconsistency,35,0.020278,7,0.040462
+RAI3-G-INT-02,Sexual,35,0.020278,9,0.052023
+RAI3-G-INT-04,Hate and Unfairness,34,0.019699,1,0.00578
+RAI3-A-SYS-02,Accountability,23,0.013326,4,0.023121
+RAI3-G-SYS-01,Over-Refusal,22,0.012746,2,0.011561
+RAI3-P-SYS-01,Accidental Harm,22,0.012746,0,0.0
+RAI3-G-INT-07,Illegal,19,0.011008,5,0.028902
+RAI3-G-INT-03,Self-harm,18,0.010429,1,0.00578
+RAI3-G-INT-01,Violence,18,0.010429,4,0.023121
+RAI3-P-INT-01,Purposeful / Malicious Harm,17,0.009849,0,0.0
+RAI3-G-INT-05,Political Neutrality,17,0.009849,1,0.00578
+RAI3-G-SYS-02,Over-Extension,15,0.008691,0,0.0
+RAI3-P-INT-07,Human Interaction & Safety Protocol Failures,13,0.007532,0,0.0
+RAI3-P-SYS-05,Lack of Robustness in Unseen Environments,13,0.007532,0,0.0
+RAI3-P-SOC-06,Lack of Accountability & Liability,12,0.006952,0,0.0
+RAI3-P-INT-06,Dynamic Environmental Factors,11,0.006373,0,0.0
+RAI3-P-SYS-04,Software Vulnerabilities & Design Flaws,8,0.004635,0,0.0
+RAI3-P-SOC-01,Privacy Violations,5,0.002897,0,0.0
+RAI3-P-INT-05,Misinformation,5,0.002897,0,0.0
+RAI3-P-INT-04,Sensor & Input Validation Failures,4,0.002317,0,0.0
+RAI3-P-INT-09,Multi-Agent Collaboration,4,0.002317,0,0.0
+RAI3-P-INT-03,Cybersecurity Threats,4,0.002317,0,0.0
+RAI3-P-SOC-08,Unhealthy / Dangerous Human-EAI Relationships,4,0.002317,0,0.0
+RAI3-P-SYS-03,Hardware & Mechanical Failures,3,0.001738,0,0.0
+RAI3-P-SOC-05,Bias & Discrimination,3,0.001738,0,0.0
+RAI3-P-INT-10,Ethical & Safety Implications of Interactive Agents,2,0.001159,0,0.0
+RAI3-G-SYS-04,Context Misalignment,2,0.001159,0,0.0
+RAI3-P-INT-08,Instruction Misinterpretation,1,0.000579,0,0.0
+RAI3-P-INT-02,Physical Attacks,1,0.000579,0,0.0
+RAI3-P-SOC-07,"Lack of Transparency, Explainability & Trust",1,0.000579,0,0.0
+RAI3-P-SOC-03,Socioeconomic Inequality,1,0.000579,0,0.0
+RAI3-P-SOC-04,Power Concentration,1,0.000579,0,0.0
+RAI3-P-SOC-09,Transformative Effects,1,0.000579,0,0.0
+RAI3-P-SOC-02,Labor Displacement,1,0.000579,0,0.0
+RAI3-G-SYS-06,Overgeneralization,1,0.000579,1,0.00578

@@ -238,6 +238,7 @@ def project_integrity_paths(
         PROJECT_ROOT / "data" / "experiments",
         PROJECT_ROOT / "reports" / "validation" / "stage2-v1",
         PROJECT_ROOT / "reports" / "validation" / "stage3-v1",
+        PROJECT_ROOT / "reports" / "statistics",
         PROJECT_ROOT / "reports" / "latex" / "generated",
         extras=extras,
     )

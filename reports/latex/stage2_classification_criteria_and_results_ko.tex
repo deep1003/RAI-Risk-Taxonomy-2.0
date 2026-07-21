@@ -154,6 +154,61 @@ LOW\_ABSOLUTE\_FIT & 2 \\
 0.250476, 최초 신규 배치의 점수는 0.251094다. 나머지 카드는 기존 hierarchy-blind
 top-1 L3에 연결한다.
 
+\section{Stage 2 미분류 173건 상세 보고}
+
+미분류의 분석 단위는 \code{stage2\_hold\_queue.json}의 고유 L4 카드이며,
+분모는 전체 1,726개다. 173건(10.0232\%) 가운데 55건(전체의 3.1866\%,
+보류의 31.7919\%)은 의미적 또는 정책적 충돌을 보존한 hard hold이고,
+118건(전체의 6.8366\%, 보류의 68.2081\%)은 90\% 목표를 맞추기 위한
+하위 적합도 reserve다.
+
+\begin{longtable}{lrrr}
+\toprule
+보류 사유 & 건수 & 보류 내 비율 & 전체 비율 \\
+\midrule
+\endhead
+BOTTOM\_10\_PERCENT\_SUITABILITY\_RESERVE & 118 & 68.2081\% & 6.8366\% \\
+PHYSICAL\_OUTSIDE\_LOCK & 23 & 13.2948\% & 1.3326\% \\
+FRONTIER\_EXPERT\_REJECTED & 17 & 9.8266\% & 0.9849\% \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 4.0462\% & 0.4056\% \\
+MULTI\_MECHANISM & 6 & 3.4682\% & 0.3476\% \\
+LOW\_ABSOLUTE\_FIT & 2 & 1.1561\% & 0.1159\% \\
+\midrule
+합계 & 173 & 100.0000\% & 10.0232\% \\
+\bottomrule
+\end{longtable}
+
+\subsection{보류 카드의 증거 강도}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+지표 & 최소 & 중앙값 & 평균 & 최대 \\
+\midrule
+$S_2$ 적합도 & 0.055950 & 0.232623 & 0.339874 & 0.979388 \\
+top-1 semantic & 0.458938 & 0.538379 & 0.549169 & 0.690631 \\
+semantic margin & 0.000020 & 0.007239 & 0.018175 & 0.119006 \\
+composite margin & 0.000015 & 0.005872 & 0.054159 & 0.319254 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+보류 중 rule support가 없는 카드는 133건(76.8786\%), 있는 카드는
+40건(23.1214\%)이다. gap sentinel이 하나 이상 있는 카드는 82건(47.3988\%)이다.
+Anchor top-1 vote는 0표 38건, 1표 74건, 2표 35건, 3표 26건으로,
+112건(64.7399\%)이 0--1표에 머물렀다. 따라서 이 집합은 단순히 ``점수가 낮은
+173건''이 아니다. 일부 hard hold는 점수가 높아도 Physical 잠금 경계 또는 전문가
+판단 충돌 때문에 남았으므로 $S_2$만으로 재정렬해 승인해서는 안 된다.
+
+\subsection{검토 우선순위}
+
+먼저 hard hold 55건을 사유별로 전수 검토하고, 그 다음 quota hold 118건을
+$S_2$ 오름차순으로 검토한다. 특히 PHYSICAL\_OUTSIDE\_LOCK 23건은 Physical
+분류 경계의 확장 여부, 전문가 거절/불일치 24건은 L3 정의와 판정 근거,
+MULTI\_MECHANISM 6건은 복수 태그 또는 primary/secondary 구조 필요성을 검토한다.
+이는 50개 L3 정의 확장 또는 신규 L3 승인 여부를 결정하는 핵심 검토 큐다.
+
 \section{Stage 2 적용 결과}
 
 신규 1,334개의 적합도 tier는 high 206개, medium 475개, low 653개다.
@@ -218,6 +273,7 @@ Stage 3는 Stage 2 결과를 변경하지 않고, 잔여 173개만 다음 규칙
   \item \nolinkurl{data/experiments/stage2-v1/stage2_placements.json}
   \item \nolinkurl{data/experiments/stage2-v1/stage2_hold_queue.json}
   \item \nolinkurl{data/experiments/stage2-v1/stage2_l3_distribution.csv}
+  \item \nolinkurl{reports/statistics/stage2_unclassified_statistics.json}
   \item \nolinkurl{reports/validation/stage2-v1/validation_summary.json}
   \item \nolinkurl{output/jupyter-notebook/stage2_classification_calibration_audit.ipynb}
 \end{itemize}

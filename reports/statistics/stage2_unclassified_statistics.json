@@ -1,0 +1,71 @@
+{
+  "stage2_id": "stage2-v1",
+  "denominator_all_l4": 1726,
+  "unclassified_count": 173,
+  "unclassified_share": 0.10023174971031286,
+  "hold_reason_counts": {
+    "PHYSICAL_OUTSIDE_LOCK": 23,
+    "BOTTOM_10_PERCENT_SUITABILITY_RESERVE": 118,
+    "FRONTIER_EXPERT_REJECTED": 17,
+    "FRONTIER_EXPERT_DISAGREEMENT": 7,
+    "MULTI_MECHANISM": 6,
+    "LOW_ABSOLUTE_FIT": 2
+  },
+  "hold_class_counts": {
+    "hard_hold": 55,
+    "quota_hold": 118
+  },
+  "rule_support": {
+    "false": 133,
+    "true": 40
+  },
+  "gap_sentinel_present": 82,
+  "anchor_top1_votes": {
+    "0": 38,
+    "1": 74,
+    "2": 35,
+    "3": 26
+  },
+  "score_profile": {
+    "stage2_suitability_score": {
+      "min": 0.05595,
+      "p10": 0.132684,
+      "p25": 0.19763,
+      "median": 0.232623,
+      "mean": 0.33987442774566473,
+      "p75": 0.411312,
+      "p90": 0.781965,
+      "max": 0.979388
+    },
+    "top1_semantic_score": {
+      "min": 0.458938,
+      "p10": 0.493999,
+      "p25": 0.514547,
+      "median": 0.538379,
+      "mean": 0.5491685838150289,
+      "p75": 0.566102,
+      "p90": 0.635768,
+      "max": 0.690631
+    },
+    "semantic_margin": {
+      "min": 2e-05,
+      "p10": 0.000945,
+      "p25": 0.002485,
+      "median": 0.007239,
+      "mean": 0.018174965317919074,
+      "p75": 0.018131,
+      "p90": 0.053371,
+      "max": 0.119006
+    },
+    "composite_margin": {
+      "min": 1.5e-05,
+      "p10": 0.000815,
+      "p25": 0.001999,
+      "median": 0.005872,
+      "mean": 0.05415940462427746,
+      "p75": 0.028531,
+      "p90": 0.23983,
+      "max": 0.319254
+    }
+  }
+}

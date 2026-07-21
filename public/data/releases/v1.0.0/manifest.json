@@ -450,14 +450,32 @@
     },
     {
       "path": "reports/latex/stage2_classification_criteria_and_results_ko.tex",
-      "sha256": "256b958732a5d05b661d2c8bbc203183e671b375802098232ac852ab5bf1a370",
-      "bytes": 9645,
+      "sha256": "03be3cb3190f787ae047e43c5d972afcc3d4ac784a2fb8b3cbd06f1a4f7e055c",
+      "bytes": 12187,
       "rows": null
     },
     {
       "path": "reports/latex/stage3_forced_matching_results_ko.tex",
-      "sha256": "3f95d26325ab3010a170e7b09033fd62fbad7f1c2cb495a935a06e220176faf4",
-      "bytes": 8047,
+      "sha256": "35e3a14ea1ccb63895253433191fef0996b2d2e91a2b8b9ec019afae9bd90497",
+      "bytes": 10500,
+      "rows": null
+    },
+    {
+      "path": "reports/statistics/stage2_unclassified_statistics.json",
+      "sha256": "d674958e798f38ff9485f883f6dbb66b639c4997b5a8f07ea509aaf877778a8f",
+      "bytes": 1570,
+      "rows": null
+    },
+    {
+      "path": "reports/statistics/stage3_l3_statistics.csv",
+      "sha256": "14237e09bf07f3112859c4511576e51d615802e23368d0a5aff168ca25b7dd65",
+      "bytes": 2920,
+      "rows": null
+    },
+    {
+      "path": "reports/statistics/stage3_statistics.json",
+      "sha256": "d0ffdb337ce49737d0c9ffc36f1ab7b47c069375c7e368284c0f6973c8fdf70e",
+      "bytes": 2797,
       "rows": null
     },
     {
@@ -642,7 +660,7 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "3cd297a2fcdf50c1c46bb20ee2063fcbd9a3818abbf9be3621d42d892ed28390",
+      "sha256": "2937539e38905eabe6f7b0715c682f81f5029dce792fe4c9353efbe2e3e83c5c",
       "bytes": 113084,
       "rows": null
     },
@@ -743,6 +761,12 @@
       "rows": null
     },
     {
+      "path": "scripts/report_stage_statistics.py",
+      "sha256": "41eb1d242061bfb699514fb7ed170467f044083cb8cd219524db7a4ad4a36cf8",
+      "bytes": 5595,
+      "rows": null
+    },
+    {
       "path": "scripts/run_llm_review.py",
       "sha256": "72bd4edba6e9dc25dca9ecab454eb4c575f5dd3f5b75b3d29e0d7c6b4475f8a3",
       "bytes": 10531,
@@ -750,8 +774,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "794b5e9ae105b7d2f66db00b90c8440dae6f55192fd0925023e914ab38988043",
-      "bytes": 53807,
+      "sha256": "bfee6cc902f7e67ef5e93b140862f02e9b008ee16c8f9191201e33516ace803f",
+      "bytes": 53856,
       "rows": null
     },
     {

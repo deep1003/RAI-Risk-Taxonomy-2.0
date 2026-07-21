@@ -1,0 +1,126 @@
+{
+  "stage3_id": "stage3-v1",
+  "total_l4": 1726,
+  "classified_count": 1726,
+  "classified_share": 1.0,
+  "unclassified_count": 0,
+  "status_counts": {
+    "algorithm_proposed_stage2": 1334,
+    "forced_match_stage3": 173,
+    "stage1_algorithm_proposed": 37,
+    "locked_physical": 182
+  },
+  "stage2_fit_tier_counts": {
+    "stage2_medium": 475,
+    "stage2_high": 206,
+    "stage2_low": 653,
+    "stage2_hold": 173,
+    "stage1_consensus": 37,
+    "physical_gold": 182
+  },
+  "forced_count": 173,
+  "forced_share": 0.10023174971031286,
+  "forced_review_priority_counts": {
+    "critical": 55,
+    "high": 118
+  },
+  "l1_distribution": [
+    {
+      "node_id": "RAI1-G",
+      "label_en": "General",
+      "count": 1192,
+      "share": 0.6906141367323291
+    },
+    {
+      "node_id": "RAI1-A",
+      "label_en": "Agentic AI",
+      "count": 352,
+      "share": 0.20393974507531865
+    },
+    {
+      "node_id": "RAI1-P",
+      "label_en": "Physical AI",
+      "count": 182,
+      "share": 0.10544611819235226
+    }
+  ],
+  "l2_distribution": [
+    {
+      "node_id": "RAI2-G-INT",
+      "label_en": "Interaction",
+      "count": 751,
+      "share": 0.43511008111239863
+    },
+    {
+      "node_id": "RAI2-G-SYS",
+      "label_en": "System",
+      "count": 441,
+      "share": 0.25550405561993045
+    },
+    {
+      "node_id": "RAI2-A-SYS",
+      "label_en": "System",
+      "count": 352,
+      "share": 0.20393974507531865
+    },
+    {
+      "node_id": "RAI2-P-SYS",
+      "label_en": "System Safety",
+      "count": 91,
+      "share": 0.05272305909617613
+    },
+    {
+      "node_id": "RAI2-P-INT",
+      "label_en": "Interaction Safety",
+      "count": 62,
+      "share": 0.03592120509849363
+    },
+    {
+      "node_id": "RAI2-P-SOC",
+      "label_en": "Societal Safety",
+      "count": 29,
+      "share": 0.016801853997682505
+    }
+  ],
+  "l3_nonempty_count": 50,
+  "l3_median_card_count": 17.0,
+  "l3_top5_share": 0.4200463499420626,
+  "l3_hhi": 0.057523876530843794,
+  "forced_l1_distribution": [
+    {
+      "node_id": "RAI1-G",
+      "label_en": "General",
+      "count": 132,
+      "share": 0.7630057803468208
+    },
+    {
+      "node_id": "RAI1-A",
+      "label_en": "Agentic AI",
+      "count": 41,
+      "share": 0.23699421965317918
+    }
+  ],
+  "forced_l2_distribution": [
+    {
+      "node_id": "RAI2-G-INT",
+      "label_en": "Interaction",
+      "count": 96,
+      "share": 0.5549132947976878
+    },
+    {
+      "node_id": "RAI2-A-SYS",
+      "label_en": "System",
+      "count": 41,
+      "share": 0.23699421965317918
+    },
+    {
+      "node_id": "RAI2-G-SYS",
+      "label_en": "System",
+      "count": 36,
+      "share": 0.20809248554913296
+    }
+  ],
+  "forced_l3_nonempty_count": 24,
+  "forced_l3_top5_share": 0.45664739884393063,
+  "forced_l3_hhi": 0.06792742824685088
+}
