@@ -102,8 +102,8 @@
     },
     {
       "path": "assets/site.js",
-      "sha256": "5c03ed22f4cebef70369a5d71bd6c3e5c47fe4ac397aaaaacc18339be44aa881",
-      "bytes": 17135,
+      "sha256": "563cff17e7f847d05734f9088b62bcdd3f69df5d6fcf402a02b11a163d0a5736",
+      "bytes": 17591,
       "rows": null
     },
     {
@@ -372,8 +372,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "75ba11bea6c22a3b4090bc4ce9729abf3dc973f76df9c6b50ae102acd9bc82e5",
-      "bytes": 6592,
+      "sha256": "e7ce4efb3a8b119ad31bec6840aa52450b6ea086ed68b67831c379f2d646cdf6",
+      "bytes": 6975,
       "rows": null
     },
     {
@@ -411,6 +411,18 @@
       "sha256": "aadcfaf4d8947192e0192794fde5f8ec1cd9a4ed3c83444099e2fefb76286d93",
       "bytes": 930055,
       "rows": 1726
+    },
+    {
+      "path": "public/data/releases/v2.0.0/cards.json",
+      "sha256": "a240c5ff712dbfab21c454ff4b74ec444031b29b5fa1af616104a967af91f408",
+      "bytes": 3989605,
+      "rows": 1726
+    },
+    {
+      "path": "public/data/releases/v2.0.0/hierarchy.json",
+      "sha256": "edbc07c9c1211df2f1fc80116d39ecde2aa8dd498322bd866d07fd64cd277427",
+      "bytes": 52444,
+      "rows": 60
     },
     {
       "path": "reports/latex/generated/abstention_rows.tex",
@@ -714,8 +726,8 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "27e0bd901d793daca1bff906f303c23164d10074c155a96587a586f1aa2d490a",
-      "bytes": 113084,
+      "sha256": "d5e6c081a3d0fb1232465881196d984003df98a2fc192ece03c576f8f020c81c",
+      "bytes": 113072,
       "rows": null
     },
     {
@@ -791,6 +803,12 @@
       "rows": null
     },
     {
+      "path": "scripts/build_site_v2.py",
+      "sha256": "23dec481d4db4b92c013c522eb9e9b8b8880bf3d483c21a9d82c5294b8dbeb0b",
+      "bytes": 3847,
+      "rows": null
+    },
+    {
       "path": "scripts/build_stage2_classification.py",
       "sha256": "f2032977063509f80ea92e411e0dcc927a1e96e0558edb63dc549dec7d6c93c0",
       "bytes": 14440,
@@ -834,8 +852,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "a615e9afca257870861f7fbfbf78e2ff0664a3be1ee2504e65ce390784e558a9",
-      "bytes": 54309,
+      "sha256": "5ffd46c2871cc4e66597de4ee8470ee1c9e55c0e3934d6ea3fd89418269d59cb",
+      "bytes": 54363,
       "rows": null
     },
     {
@@ -876,7 +894,7 @@
     },
     {
       "path": "tests/test_release.py",
-      "sha256": "2d4af5c925758fabe142c9fe47277222a2b739e6bc94e416bf794123e09fbe5e",
+      "sha256": "856842e6c6bd2b79d055d1f892a5b673a2d12f5c9d98ecf1121d788bfc8607c1",
       "bytes": 8707,
       "rows": null
     },
@@ -890,6 +908,12 @@
       "path": "tests/test_review_hold_policy.py",
       "sha256": "519b8c3c8cb567732c81015f54017bb4299bf547ba942438adc510e3915f33a6",
       "bytes": 1627,
+      "rows": null
+    },
+    {
+      "path": "tests/test_site_v2.py",
+      "sha256": "ed1a54e17e6e182561f0de19ee694d804cc5126fc1e02b1dc15bbe482848cd21",
+      "bytes": 1405,
       "rows": null
     }
   ],

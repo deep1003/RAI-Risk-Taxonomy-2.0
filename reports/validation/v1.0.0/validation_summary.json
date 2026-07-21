@@ -126,11 +126,11 @@
       "check_id": "INT-001",
       "description": "Checksum ledger exactly covers the project integrity scope",
       "expected": {
-        "files": 137,
+        "files": 142,
         "mismatches": 0
       },
       "actual": {
-        "files": 137,
+        "files": 142,
         "mismatches": 0
       },
       "status": "PASS",
@@ -4550,7 +4550,7 @@
     },
     {
       "check_id": "SITE-009",
-      "description": "Static HTML explorer targets the exact validated v1.0.0 public data bundle",
+      "description": "Static HTML explorer targets the reviewed v2.0.0 policy bundle",
       "expected": 0,
       "actual": 0,
       "status": "PASS",

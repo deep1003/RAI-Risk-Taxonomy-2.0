@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="1,726개 글로벌 AI 리스크 카드를 50개 L3 체계로 탐색하는 RAI Risk Taxonomy">
-  <title>RAI Risk Taxonomy · 1,726 L4 Risk Cards</title>
+  <meta name="description" content="RAI Risk Taxonomy 2.0: explore 1,726 global L4 risks across 50 L3 nodes and the RAI-HOLD review queue.">
+  <title>RAI Risk Taxonomy 2.0 · 1,726 L4 Risk Cards</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173458'/%3E%3Cpath d='M15 46V18h18c9 0 15 5 15 13 0 6-3 10-9 12l10 3H36l-8-11v11zm13-17h5c3 0 5-1 5-4s-2-4-5-4h-5z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -14,12 +15,12 @@
     <div class="hero__inner">
       <div class="hero__eyebrow">
         <span class="release-dot" aria-hidden="true"></span>
-        PREPUBLICATION DATA RELEASE · v1.0.0
+        TECHNICAL REPORT 2.0 POLICY VIEW · v2.0.0
       </div>
       <div class="hero__row">
         <div>
-          <h1>Responsible AI Risk Taxonomy</h1>
-          <p>L0–L4 글로벌 리스크 분류체계 · Physical AI 정답 잠금 · Open-set mapping</p>
+          <h1>RAI Risk Taxonomy 2.0</h1>
+          <p>L0–L4 global risk taxonomy · 50 L3 nodes · 55-card RAI-HOLD review queue</p>
         </div>
         <div class="hero__count" aria-label="전체 L4 카드 수">
           <strong>1,726</strong>
@@ -35,7 +36,7 @@
       <button class="domain-pill domain-pill--general" data-domain="RAI1-G" type="button"><i></i>General</button>
       <button class="domain-pill domain-pill--agentic" data-domain="RAI1-A" type="button"><i></i>Agentic AI</button>
       <button class="domain-pill domain-pill--physical" data-domain="RAI1-P" type="button"><i></i>Physical AI <span>182</span></button>
-      <button class="domain-pill domain-pill--decision" data-status="needs_taxonomy_decision" type="button"><i></i>분류 결정 필요 <span>1,507</span></button>
+      <button class="domain-pill domain-pill--decision" data-status="needs_taxonomy_decision" type="button"><i></i>RAI-HOLD <span>55</span></button>
     </div>
   </nav>
 
@@ -46,7 +47,7 @@
           <p class="section-kicker">TAXONOMY STATUS</p>
           <h2 id="overview-title">글로벌 AI 리스크 분류 현황</h2>
         </div>
-        <a class="text-link" href="reports/latex/rai_taxonomy_v1_data_generation_report_ko.tex">LaTeX 검증 보고서 ↗</a>
+        <a class="text-link" href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf">Technical Report 2.0 PDF ↗</a>
       </div>
 
       <div class="stat-grid">
@@ -57,16 +58,16 @@
           <span>Physical 정답 잠금</span><strong id="stat-locked">182</strong><small>169 exact + 13 explicit aliases</small>
         </article>
         <article class="stat-card stat-card--proposed">
-          <span>전문가 합의 제안</span><strong id="stat-proposed">37</strong><small>사람 승인 전 provisional</small>
+          <span>Assigned to 50 L3 nodes</span><strong id="stat-proposed">1,671</strong><small>Provisional · human review required</small>
         </article>
         <article class="stat-card stat-card--decision">
-          <span>Taxonomy 결정 보류</span><strong id="stat-needs">1,507</strong><small>억지 배치 없이 L3 = null</small>
+          <span>Taxonomy Decision Hold</span><strong id="stat-needs">55</strong><small>RAI-HOLD · policy L3 = null</small>
         </article>
       </div>
 
       <div class="coverage-note">
-        <strong>50개 L3 충분성: NOT_DEMONSTRATED</strong>
-        <span>현재 분류체계가 모든 글로벌 위험을 충분히 수용한다고 입증되지 않았습니다. 보류 카드는 사람의 taxonomy decision이 필요합니다.</span>
+        <strong>50-L3 sufficiency: NOT DEMONSTRATED</strong>
+        <span>96.8134% policy coverage and use of all 50 L3 nodes do not establish taxonomy validity. Forced and held cards require human review.</span>
       </div>
     </section>
 
@@ -90,9 +91,11 @@
           <span>상태</span>
           <select id="status-filter">
             <option value="all">모든 상태</option>
-            <option value="locked_physical">Physical 잠금</option>
-            <option value="algorithm_proposed">전문가 합의 제안</option>
-            <option value="needs_taxonomy_decision">분류 결정 필요</option>
+            <option value="locked_physical">Physical Gold Lock</option>
+            <option value="stage1_consensus">Stage 1 Consensus</option>
+            <option value="stage2_proposed">Stage 2 Proposed</option>
+            <option value="stage3_forced">Stage 3 Forced</option>
+            <option value="needs_taxonomy_decision">RAI-HOLD</option>
           </select>
         </label>
         <label>
@@ -135,10 +138,10 @@
 
   <footer>
     <div>
-      <strong>RAI Risk Taxonomy v1.0.0</strong>
-      <span>Site-ready data · 검증 71 PASS / 0 FAIL / 2 WARN</span>
+      <strong>RAI Risk Taxonomy 2.0</strong>
+      <span>1,671 classified · 55 held · Technical Report 2.0</span>
     </div>
-    <p>비-Physical 자동 제안은 아직 사람 승인 정답이 아닙니다.</p>
+    <p>Algorithmic and forced placements are provisional and are not human-approved ground truth.</p>
   </footer>
 
   <dialog id="card-dialog" class="card-dialog">

@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v1.0.0";
+const DATA_ROOT = "public/data/releases/v2.0.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -19,9 +19,11 @@ const childrenByParent = new Map();
 const cardPath = new Map();
 
 const STATUS_META = {
-  locked_physical: { label: "Physical 잠금", className: "status--locked", accent: "#c0392b" },
-  algorithm_proposed: { label: "전문가 합의 제안", className: "status--proposed", accent: "#6941c6" },
-  needs_taxonomy_decision: { label: "분류 결정 필요", className: "status--decision", accent: "#b54708" },
+  locked_physical: { label: "Physical Gold Lock", className: "status--locked", accent: "#c0392b" },
+  stage1_consensus: { label: "Stage 1 Consensus", className: "status--proposed", accent: "#6941c6" },
+  stage2_proposed: { label: "Stage 2 Proposed", className: "status--proposed", accent: "#3867d6" },
+  stage3_forced: { label: "Stage 3 Forced", className: "status--decision", accent: "#148f77" },
+  needs_taxonomy_decision: { label: "RAI-HOLD", className: "status--decision", accent: "#b54708" },
 };
 
 const DOMAIN_COLORS = {
@@ -173,7 +175,7 @@ function renderStats() {
   const counts = state.manifest.counts;
   document.querySelector("#stat-total").textContent = counts.l4.toLocaleString();
   document.querySelector("#stat-locked").textContent = counts.physical_locked.toLocaleString();
-  document.querySelector("#stat-proposed").textContent = counts.algorithm_proposed.toLocaleString();
+  document.querySelector("#stat-proposed").textContent = counts.classified.toLocaleString();
   document.querySelector("#stat-needs").textContent = counts.needs_taxonomy_decision.toLocaleString();
 }
 
@@ -287,7 +289,7 @@ function render() {
 function cardTemplate(card) {
   const meta = STATUS_META[card.assignment_status];
   const path = cardPath.get(card.l4_id);
-  const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "L3 미지정 · taxonomy decision queue";
+  const pathLabel = path.nodes.length ? path.nodes.map((node) => node.label_en).join(" › ") : "RAI-HOLD · taxonomy decision queue";
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${meta.accent}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
     <div class="risk-card__top"><span class="risk-id">${card.l4_id}</span><span class="status-badge ${meta.className}">${meta.label}</span></div>
     <h3>${escapeHtml(card.label_en)}</h3>
@@ -344,7 +346,8 @@ function openCard(l4Id) {
     <div><span class="risk-id">${card.l4_id}</span> <span class="status-badge ${meta.className}">${meta.label}</span></div>
     <h2>${escapeHtml(card.label_en)}</h2>
     ${card.label_ko ? `<p class="dialog-ko">${escapeHtml(card.label_ko)}</p>` : ""}
-    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : "L3 미지정 · needs_taxonomy_decision"}</div>
+    <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${escapeHtml(node.label_en)}`).join(" › ") : `RAI-HOLD · ${escapeHtml(card.stage2_hold_reason || "needs_taxonomy_decision")}`}</div>
+    ${card.operational_bucket_id ? `<section class="dialog-section"><h3>Review hold</h3><p>Forced candidate: ${escapeHtml(card.forced_candidate_l3_id || "–")} · Stage 2 reason: ${escapeHtml(card.stage2_hold_reason || "–")}</p></section>` : ""}
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p></section>
     ${card.definition_ko ? `<section class="dialog-section"><h3>한국어 정의</h3><p>${escapeHtml(card.definition_ko)}</p></section>` : ""}
     <div class="dialog-metrics">

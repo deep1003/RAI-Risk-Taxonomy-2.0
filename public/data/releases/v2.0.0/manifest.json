@@ -1,0 +1,34 @@
+{
+  "release_id": "v2.0.0",
+  "release_status": "technical_report_2.0_policy_view",
+  "provisional": true,
+  "created_at": "2026-07-21T00:00:00+09:00",
+  "policy_view_id": "stage3-review-hold-v1",
+  "counts": {
+    "l4": 1726,
+    "classified": 1671,
+    "physical_locked": 182,
+    "stage1_consensus": 37,
+    "stage2_proposed": 1334,
+    "stage3_forced": 118,
+    "needs_taxonomy_decision": 55,
+    "l3_nodes": 50
+  },
+  "human_approval": {
+    "algorithmic_placements_approved": false,
+    "hold_is_taxonomy_node": false
+  },
+  "artifacts": [
+    {
+      "path": "hierarchy.json",
+      "sha256": "edbc07c9c1211df2f1fc80116d39ecde2aa8dd498322bd866d07fd64cd277427"
+    },
+    {
+      "path": "cards.json",
+      "sha256": "a240c5ff712dbfab21c454ff4b74ec444031b29b5fa1af616104a967af91f408"
+    },
+    {
+      "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf"
+    }
+  ]
+}
