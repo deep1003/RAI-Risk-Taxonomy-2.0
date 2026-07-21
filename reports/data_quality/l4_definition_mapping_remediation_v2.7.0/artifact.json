@@ -1,0 +1,961 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "L4 Definition and Mapping Remediation — v2.7.0",
+    "description": "Technical audit of non-Physical L4 definition cleanup, L3 overload, and conservative remapping.",
+    "generatedAt": "2026-07-21T10:39:48+00:00",
+    "sources": [
+      {
+        "id": "remediation-audit",
+        "label": "v2.7.0 remediation audit",
+        "path": "reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json",
+        "query": {
+          "language": "sql",
+          "engine": "DuckDB",
+          "sql": "SELECT * FROM read_json_auto('reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json');",
+          "description": "Counts and card-level outputs from the reproducible v2.7.0 remediation script.",
+          "tables_used": [
+            "reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json"
+          ],
+          "filters": [
+            "Published v2.7.0",
+            "1,529 non-Physical L4 cards",
+            "182 locked Physical cards excluded from editorial changes"
+          ],
+          "metric_definitions": [
+            "Rule-supported rate: cards whose assigned L3 appears in the frozen conservative classifier's eligible_l3_ids.",
+            "HOLD: an operational placement requiring a human taxonomy decision; it is not a separate hierarchy.",
+            "Legacy scaffold: prose that circularly defined an L4 card through imported L1-L3 family names."
+          ]
+        }
+      },
+      {
+        "id": "release-data",
+        "label": "Published v2.7.0 card data",
+        "path": "public/data/releases/v2.7.0/cards.json",
+        "query": {
+          "language": "sql",
+          "engine": "DuckDB",
+          "sql": "SELECT * FROM read_json_auto('public/data/releases/v2.7.0/cards.json');",
+          "description": "Canonical L4 definitions, operational L3 placements, HOLD state, and citations used by the website.",
+          "tables_used": [
+            "public/data/releases/v2.7.0/cards.json"
+          ],
+          "filters": [
+            "Published v2.7.0",
+            "1,529 non-Physical L4 cards",
+            "182 locked Physical cards excluded from editorial changes"
+          ],
+          "metric_definitions": [
+            "Rule-supported rate: cards whose assigned L3 appears in the frozen conservative classifier's eligible_l3_ids.",
+            "HOLD: an operational placement requiring a human taxonomy decision; it is not a separate hierarchy.",
+            "Legacy scaffold: prose that circularly defined an L4 card through imported L1-L3 family names."
+          ]
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "layout": "full",
+        "body": "# L4 Definition and Mapping Remediation — v2.7.0"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "remediation-audit",
+        "body": "## Technical summary\n\nThe published non-Physical layer contained a systemic provenance/definition defect: **1,129 of 1,529 cards (73.84%)** appended imported hierarchy names to the actual risk description. v2.7.0 removes that circular prose, preserves all 182 Physical AI locks, applies nine evidence-constrained remaps, and marks 692 cards HOLD where the assigned path remains provisional. The result improves definitional validity but does not claim that the current 50 L3 nodes provide complete semantic coverage."
+      },
+      {
+        "id": "metrics",
+        "type": "metric-strip",
+        "layout": "full",
+        "cardIds": [
+          "cleaned",
+          "remapped",
+          "holds",
+          "physical"
+        ]
+      },
+      {
+        "id": "load-finding",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "remediation-audit",
+        "body": "## Anthropomorphism was an allocation sink, not a coherent risk family\n\nThe largest non-Physical L3 contains 247 cards, but only six (2.43%) meet the frozen classifier's direct eligibility rules for Anthropomorphism. Other large nodes show the same pattern at lower magnitude. Card count is therefore used only as a triage signal; it never justifies movement by itself. The implication is that forced placement converted open-set taxonomy gaps into apparently precise hierarchy paths."
+      },
+      {
+        "id": "load-chart",
+        "type": "chart",
+        "layout": "full",
+        "chartId": "l3-load"
+      },
+      {
+        "id": "mapping-finding",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "release-data",
+        "body": "## Nine clear conflicts were corrected without inventing new L3 nodes\n\nA remap required agreement among the L4 label, the mechanism-only definition, and the cited evidence. Compute-governance accountability moved out of Anthropomorphism to the closest operational path, Non-Contestability, but remains HOLD because governance accountability is not fully represented by that L3. Privacy inference moved to Privacy; essentialist categorization and model bias moved to Hate and Unfairness; the L4 label that duplicated Goal Misalignment was rewritten as a concrete uncorrectable-goal-pursuit mechanism."
+      },
+      {
+        "id": "remap-table",
+        "type": "table",
+        "layout": "full",
+        "tableId": "remaps"
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Scope, data, and metric definitions\n\n**Population:** 1,711 canonical L4 cards in v2.6.0, comprising 1,529 non-Physical cards and 182 locked Physical cards. **Definition defect:** presence of legacy scaffold phrases beginning with `This L4 risk card treats`, including imported family and L1-domain names. **Overload measures:** per-L3 card count, share of the non-Physical population, direct rule-support count/rate, and HOLD count. **Comparison baseline:** unchanged v2.6.0. Physical cards were excluded from editorial and mapping mutations."
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Mechanism-first remediation method\n\n1. Split each affected English definition before the first legacy scaffold marker and normalize whitespace and punctuation.\n2. Replace short or ambiguous high-risk cases with source-checked definitions that state the condition, mechanism, and consequence without hierarchy names.\n3. Inspect overloaded L3 nodes using load and conservative rule support.\n4. Remap only confirmed conflicts supported jointly by title, mechanism, and evidence.\n5. Retain a forced operational path but set HOLD when the frozen gap detector identifies governance, labor, environmental, transparency, security, dependency, robustness, plural-values, deliberate-disinformation, or out-of-lock Physical coverage gaps.\n6. Replace the unrelated RAI4-0109 citation with the directly relevant paper *Computing Power and the Governance of Artificial Intelligence*."
+      },
+      {
+        "id": "limits",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "remediation-audit",
+        "body": "## Limitations and robustness checks\n\nThe frozen keyword rules are deliberately high precision and have low recall; a low rule-support rate is evidence for review, not proof that every assignment is wrong. Seventy-three definitions remain under 12 words and are queued for human editorial review. Because Anthropomorphism has a narrow necessary mechanism, every card lacking direct anthropomorphic evidence is marked HOLD; the other three largest L3 nodes require both absent rule support and a Stage 2 suitability below 0.45 before this additional HOLD rule applies. HOLD is epistemic metadata: it prevents an operational path from being presented as an approved semantic fit. Automated tests confirm unique IDs, complete assignments, zero banned scaffold phrases, the nine remaps, all detected gap cards marked HOLD, and exact Physical-card equality apart from the release identifier."
+      },
+      {
+        "id": "next",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Recommended next steps\n\n1. Human-review the 73 short definitions against their primary papers.\n2. Decide whether labor, environment, governance/accountability, transparency/explainability, and existential risk require new non-Physical L3 nodes.\n3. Review HOLD cards in descending order of L3 overload and source specificity.\n4. Add the scaffold ban, Physical lock equality, and taxonomy-gap-to-HOLD rule to release CI.\n5. Re-run the full reference identity audit on v2.7.0 before publication."
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Further questions\n\nCan the current 50 L3 definitions be expanded without erasing their discriminative boundaries, or should the missing societal/governance mechanisms become new L3 nodes? What level of human evidence review is required before a HOLD path can be approved as a final mapping?"
+      }
+    ],
+    "cards": [
+      {
+        "id": "cleaned",
+        "description": "Non-Physical definitions stripped of circular legacy hierarchy prose.",
+        "dataset": "headline",
+        "sourceId": "remediation-audit",
+        "metrics": [
+          {
+            "label": "Scaffolds removed",
+            "field": "scaffolds_removed",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "remapped",
+        "description": "Confirmed mapping conflicts moved after mechanism/evidence review.",
+        "dataset": "headline",
+        "sourceId": "remediation-audit",
+        "metrics": [
+          {
+            "label": "Cards remapped",
+            "field": "remapped",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "holds",
+        "description": "Operational paths that still require a taxonomy decision.",
+        "dataset": "headline",
+        "sourceId": "remediation-audit",
+        "metrics": [
+          {
+            "label": "HOLD cards",
+            "field": "holds",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "physical",
+        "description": "Physical AI cards preserved from the authoritative locked source.",
+        "dataset": "headline",
+        "sourceId": "release-data",
+        "metrics": [
+          {
+            "label": "Physical unchanged",
+            "field": "physical_unchanged",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "l3-load",
+        "title": "Largest non-Physical L3 assignments",
+        "subtitle": "Top 10 by card count; labels show count and direct rule-support rate",
+        "showDescription": true,
+        "type": "horizontalBar",
+        "intent": "ranking",
+        "dataset": "top_l3",
+        "sourceId": "remediation-audit",
+        "encodings": {
+          "x": {
+            "field": "label_en",
+            "type": "nominal",
+            "label": "L3"
+          },
+          "y": {
+            "field": "card_count",
+            "type": "quantitative",
+            "label": "L4 cards",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "card_count",
+              "type": "quantitative",
+              "format": "number"
+            },
+            {
+              "field": "rule_supported_pct",
+              "type": "quantitative",
+              "format": "number"
+            },
+            {
+              "field": "hold_count",
+              "type": "quantitative",
+              "format": "number"
+            }
+          ]
+        },
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 10
+      }
+    ],
+    "tables": [
+      {
+        "id": "remaps",
+        "title": "Confirmed mapping corrections",
+        "subtitle": "Nine cards reviewed against their mechanism and cited evidence",
+        "dataset": "remaps",
+        "sourceId": "release-data",
+        "density": "spacious",
+        "defaultSort": {
+          "field": "l4_id",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "l4_id",
+            "label": "L4 ID",
+            "type": "text"
+          },
+          {
+            "field": "label_en",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "from_l3",
+            "label": "Previous L3",
+            "type": "text"
+          },
+          {
+            "field": "to_l3",
+            "label": "v2.7 L3",
+            "type": "text"
+          },
+          {
+            "field": "hold",
+            "label": "HOLD",
+            "type": "text"
+          },
+          {
+            "field": "reason",
+            "label": "Review basis",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-21T10:39:48+00:00",
+    "status": "ready",
+    "datasets": {
+      "headline": [
+        {
+          "nonphysical": 1529,
+          "scaffolds_removed": 1129,
+          "remapped": 9,
+          "holds": 692,
+          "physical_unchanged": 182
+        }
+      ],
+      "top_l3": [
+        {
+          "l3_id": "RAI3-G-INT-10",
+          "label_en": "Anthropomorphism",
+          "card_count": 245,
+          "share_of_nonphysical_pct": "16.02",
+          "rule_supported_count": 6,
+          "rule_supported_pct": 2.45,
+          "hold_count": 240
+        },
+        {
+          "l3_id": "RAI3-G-SYS-08",
+          "label_en": "Goal Misalignment",
+          "card_count": 154,
+          "share_of_nonphysical_pct": "10.07",
+          "rule_supported_count": 1,
+          "rule_supported_pct": 0.65,
+          "hold_count": 88
+        },
+        {
+          "l3_id": "RAI3-G-INT-08",
+          "label_en": "Copyrights",
+          "card_count": 117,
+          "share_of_nonphysical_pct": "7.65",
+          "rule_supported_count": 19,
+          "rule_supported_pct": 16.24,
+          "hold_count": 82
+        },
+        {
+          "l3_id": "RAI3-G-SYS-03",
+          "label_en": "Misinformation/Disinformation",
+          "card_count": 111,
+          "share_of_nonphysical_pct": "7.26",
+          "rule_supported_count": 24,
+          "rule_supported_pct": 21.62,
+          "hold_count": 56
+        },
+        {
+          "l3_id": "RAI3-G-INT-11",
+          "label_en": "Policy Exposure",
+          "card_count": 89,
+          "share_of_nonphysical_pct": "5.82",
+          "rule_supported_count": 2,
+          "rule_supported_pct": 2.25,
+          "hold_count": 32
+        },
+        {
+          "l3_id": "RAI3-G-INT-06",
+          "label_en": "Privacy",
+          "card_count": 88,
+          "share_of_nonphysical_pct": "5.76",
+          "rule_supported_count": 23,
+          "rule_supported_pct": 26.14,
+          "hold_count": 13
+        },
+        {
+          "l3_id": "RAI3-A-SYS-03",
+          "label_en": "Network Effects",
+          "card_count": 78,
+          "share_of_nonphysical_pct": "5.1",
+          "rule_supported_count": 0,
+          "rule_supported_pct": 0.0,
+          "hold_count": 15
+        },
+        {
+          "l3_id": "RAI3-A-SYS-01",
+          "label_en": "Excessive Authority",
+          "card_count": 74,
+          "share_of_nonphysical_pct": "4.84",
+          "rule_supported_count": 0,
+          "rule_supported_pct": 0.0,
+          "hold_count": 14
+        },
+        {
+          "l3_id": "RAI3-A-SYS-04",
+          "label_en": "Destabilising Dynamics",
+          "card_count": 73,
+          "share_of_nonphysical_pct": "4.77",
+          "rule_supported_count": 0,
+          "rule_supported_pct": 0.0,
+          "hold_count": 23
+        },
+        {
+          "l3_id": "RAI3-A-SYS-05",
+          "label_en": "Conflict",
+          "card_count": 63,
+          "share_of_nonphysical_pct": "4.12",
+          "rule_supported_count": 0,
+          "rule_supported_pct": 0.0,
+          "hold_count": 16
+        }
+      ],
+      "remaps": [
+        {
+          "l4_id": "RAI4-0109",
+          "label_en": "Compute governance accountability gap",
+          "from_l3": "RAI3-G-INT-10",
+          "to_l3": "RAI3-G-SYS-09",
+          "hold": "True",
+          "reason": "TAXONOMY_GAP_GOVERNANCE_ACCOUNTABILITY"
+        },
+        {
+          "l4_id": "RAI4-0116",
+          "label_en": "Human override pathway failure",
+          "from_l3": "RAI3-G-INT-08",
+          "to_l3": "RAI3-G-SYS-09",
+          "hold": "True",
+          "reason": "CLOSEST_OPERATIONAL_FIT_HUMAN_OVERRIDE"
+        },
+        {
+          "l4_id": "RAI4-0709",
+          "label_en": "Fairness - bias",
+          "from_l3": "RAI3-A-SYS-03",
+          "to_l3": "RAI3-G-INT-04",
+          "hold": "True",
+          "reason": "BROADER_THAN_CONTENT_LEVEL_UNFAIRNESS"
+        },
+        {
+          "l4_id": "RAI4-1002",
+          "label_en": "Reifying essentialist categories",
+          "from_l3": "RAI3-G-INT-02",
+          "to_l3": "RAI3-G-INT-04",
+          "hold": "False",
+          "reason": "DIRECT_DISCRIMINATION_MECHANISM"
+        },
+        {
+          "l4_id": "RAI4-1073",
+          "label_en": "Compromising privacy by correctly inferring private information",
+          "from_l3": "RAI3-G-INT-02",
+          "to_l3": "RAI3-G-INT-06",
+          "hold": "False",
+          "reason": "DIRECT_PRIVATE_ATTRIBUTE_INFERENCE"
+        },
+        {
+          "l4_id": "RAI4-1221",
+          "label_en": "Algorithmic bias",
+          "from_l3": "RAI3-G-INT-02",
+          "to_l3": "RAI3-G-INT-04",
+          "hold": "True",
+          "reason": "ALLOCATIVE_DISCRIMINATION_TAXONOMY_GAP"
+        },
+        {
+          "l4_id": "RAI4-1302",
+          "label_en": "Human-extinction risk",
+          "from_l3": "RAI3-G-INT-03",
+          "to_l3": "RAI3-G-SYS-08",
+          "hold": "True",
+          "reason": "TAXONOMY_GAP_EXISTENTIAL_RISK"
+        },
+        {
+          "l4_id": "RAI4-1431",
+          "label_en": "Uncorrectable harmful goal pursuit",
+          "from_l3": "RAI3-G-SYS-08",
+          "to_l3": "RAI3-G-SYS-08",
+          "hold": "False",
+          "reason": "CONCRETE_UNCORRECTABLE_GOAL_PURSUIT"
+        },
+        {
+          "l4_id": "RAI4-1581",
+          "label_en": "Sockpuppet-account creation",
+          "from_l3": "RAI3-G-INT-10",
+          "to_l3": "RAI3-G-SYS-03",
+          "hold": "True",
+          "reason": "DELIBERATE_DECEPTION_NOT_COVERED_BY_L3"
+        }
+      ],
+      "definition_review_queue": [
+        {
+          "l4_id": "RAI4-0070",
+          "label_en": "Incident taxonomy fragmentation",
+          "word_count": "11",
+          "definition_en": "Risk that inconsistent incident categories prevent aggregation, comparison, and institutional learning."
+        },
+        {
+          "l4_id": "RAI4-0149",
+          "label_en": "Chatbot companionship dependency",
+          "word_count": "11",
+          "definition_en": "Risk that sustained chatbot companionship replaces or weakens reciprocal human relationships."
+        },
+        {
+          "l4_id": "RAI4-0426",
+          "label_en": "Hate speech generation",
+          "word_count": "11",
+          "definition_en": "Generative systems can produce hateful or abusive content targeting identity groups."
+        },
+        {
+          "l4_id": "RAI4-0427",
+          "label_en": "Harassment amplification",
+          "word_count": "10",
+          "definition_en": "AI tools may scale targeted harassment, abuse, or coordinated intimidation."
+        },
+        {
+          "l4_id": "RAI4-0431",
+          "label_en": "Training data memorization",
+          "word_count": "11",
+          "definition_en": "Models may memorize and regurgitate personal, proprietary, or sensitive training data."
+        },
+        {
+          "l4_id": "RAI4-0434",
+          "label_en": "Prompt injection",
+          "word_count": "11",
+          "definition_en": "Untrusted inputs can manipulate language-model instructions and override intended system behavior."
+        },
+        {
+          "l4_id": "RAI4-0436",
+          "label_en": "Model extraction",
+          "word_count": "11",
+          "definition_en": "Adversaries may reconstruct model behavior, parameters, or proprietary capabilities through queries."
+        },
+        {
+          "l4_id": "RAI4-0437",
+          "label_en": "AI supply-chain compromise",
+          "word_count": "11",
+          "definition_en": "Dependencies, model weights, datasets, or deployment pipelines may be compromised upstream."
+        },
+        {
+          "l4_id": "RAI4-0440",
+          "label_en": "AI-generated election misinformation",
+          "word_count": "10",
+          "definition_en": "Generative AI can produce targeted misleading political content during elections."
+        },
+        {
+          "l4_id": "RAI4-0445",
+          "label_en": "Cyber offense automation",
+          "word_count": "11",
+          "definition_en": "AI can accelerate vulnerability discovery, exploit generation, phishing, and attack orchestration."
+        },
+        {
+          "l4_id": "RAI4-0446",
+          "label_en": "CBRN assistance",
+          "word_count": "11",
+          "definition_en": "Advanced models may assist harmful chemical, biological, radiological, or nuclear planning."
+        },
+        {
+          "l4_id": "RAI4-0448",
+          "label_en": "Personalized AI scams",
+          "word_count": "9",
+          "definition_en": "AI can generate persuasive, individualized scam content at scale."
+        },
+        {
+          "l4_id": "RAI4-0454",
+          "label_en": "Emotional dependency on AI",
+          "word_count": "10",
+          "definition_en": "Users may develop harmful dependency on AI companions or assistants."
+        },
+        {
+          "l4_id": "RAI4-0455",
+          "label_en": "AI-induced deskilling",
+          "word_count": "11",
+          "definition_en": "Repeated delegation to AI may erode professional, civic, or cognitive skills."
+        },
+        {
+          "l4_id": "RAI4-0458",
+          "label_en": "AI-related wage polarization",
+          "word_count": "11",
+          "definition_en": "AI adoption may increase wage inequality between complementary and substitutable skills."
+        },
+        {
+          "l4_id": "RAI4-0459",
+          "label_en": "Algorithmic workplace surveillance",
+          "word_count": "11",
+          "definition_en": "AI can intensify monitoring, performance scoring, and managerial control over workers."
+        },
+        {
+          "l4_id": "RAI4-0462",
+          "label_en": "AI energy consumption",
+          "word_count": "11",
+          "definition_en": "Training and deploying AI systems can increase electricity demand and emissions."
+        },
+        {
+          "l4_id": "RAI4-0466",
+          "label_en": "Adversarial examples",
+          "word_count": "9",
+          "definition_en": "Small perturbations can cause model misclassification or unsafe behavior."
+        },
+        {
+          "l4_id": "RAI4-0467",
+          "label_en": "Unsafe code generation",
+          "word_count": "10",
+          "definition_en": "Code models may generate insecure, incorrect, or harmful software artifacts."
+        },
+        {
+          "l4_id": "RAI4-0471",
+          "label_en": "Capability overhang",
+          "word_count": "11",
+          "definition_en": "Latent capabilities may exceed what evaluation, monitoring, or governance processes detect."
+        },
+        {
+          "l4_id": "RAI4-0472",
+          "label_en": "Benchmark gaming",
+          "word_count": "11",
+          "definition_en": "Models or providers may overfit to evaluations without improving real-world safety."
+        },
+        {
+          "l4_id": "RAI4-0487",
+          "label_en": "AI incident reporting failure",
+          "word_count": "10",
+          "definition_en": "Organizations may underreport, misclassify, or delay disclosure of AI incidents."
+        },
+        {
+          "l4_id": "RAI4-0498",
+          "label_en": "Erosion of democracy",
+          "word_count": "11",
+          "definition_en": "The erosion of democratic processes and public trust in social/political institutions."
+        },
+        {
+          "l4_id": "RAI4-0505",
+          "label_en": "Exploitation in AI development",
+          "word_count": "11",
+          "definition_en": "Outsourcing tasks like data labeling to low-income countries can perpetuate inequality."
+        },
+        {
+          "l4_id": "RAI4-0542",
+          "label_en": "Unpredictability of AI development trajectory",
+          "word_count": "11",
+          "definition_en": "The unpredictable trajectory of AI development complicates governance and risk management."
+        },
+        {
+          "l4_id": "RAI4-0570",
+          "label_en": "Data transfer restrictions",
+          "word_count": "10",
+          "definition_en": "Laws and other restrictions can limit or prohibit transferring data."
+        },
+        {
+          "l4_id": "RAI4-0607",
+          "label_en": "Non-disclosure of AI-generated content",
+          "word_count": "9",
+          "definition_en": "Content might not be clearly disclosed as AI generated."
+        },
+        {
+          "l4_id": "RAI4-0635",
+          "label_en": "Limitations in model generative accuracy",
+          "word_count": "10",
+          "definition_en": "AI-generated deepfakes can create convincingly realistic but entirely fabricated information."
+        },
+        {
+          "l4_id": "RAI4-0644",
+          "label_en": "Terrorist access",
+          "word_count": "10",
+          "definition_en": "Powerful AI technologies may fall into the hands of terrorists."
+        },
+        {
+          "l4_id": "RAI4-0646",
+          "label_en": "Weaponization capabilities",
+          "word_count": "10",
+          "definition_en": "AI capabilities that could be deliberately weaponized for destructive purposes."
+        },
+        {
+          "l4_id": "RAI4-0647",
+          "label_en": "Widespread use of persuasion tools",
+          "word_count": "11",
+          "definition_en": "Widespread use of AI-powered persuasion tools could lead to systemic harm."
+        },
+        {
+          "l4_id": "RAI4-0655",
+          "label_en": "Appropriated likeness",
+          "word_count": "10",
+          "definition_en": "Use or alter a person's likeness or other identifying features."
+        },
+        {
+          "l4_id": "RAI4-0681",
+          "label_en": "Incomplete or biased training data",
+          "word_count": "11",
+          "definition_en": "Incomplete or biased training data can lead to discriminatory AI outputs."
+        },
+        {
+          "l4_id": "RAI4-0683",
+          "label_en": "Output bias",
+          "word_count": "9",
+          "definition_en": "Generated content might unfairly represent certain groups or individuals."
+        },
+        {
+          "l4_id": "RAI4-0747",
+          "label_en": "Limitations in adversarial robustness",
+          "word_count": "11",
+          "definition_en": "AI models and systems are vulnerable to manipulation through adversarial inputs."
+        },
+        {
+          "l4_id": "RAI4-0753",
+          "label_en": "Privacy - data extraction attack (DEA)",
+          "word_count": "10",
+          "definition_en": "extracting the text records that exist in the training dataset."
+        },
+        {
+          "l4_id": "RAI4-0754",
+          "label_en": "Privacy - membership inference attack (MIA)",
+          "word_count": "11",
+          "definition_en": "inferring whether a given text record is used for training LLM."
+        },
+        {
+          "l4_id": "RAI4-0793",
+          "label_en": "Information distortion",
+          "word_count": "7",
+          "definition_en": "disseminating false or misleading information about people."
+        },
+        {
+          "l4_id": "RAI4-0808",
+          "label_en": "Factuality errors",
+          "word_count": "11",
+          "definition_en": "The LLM-generated content could contain inaccurate information\" which is factually incorrect."
+        },
+        {
+          "l4_id": "RAI4-0827",
+          "label_en": "Sycophancy",
+          "word_count": "9",
+          "definition_en": "flatter users by reconfirming their misconceptions and stated beliefs."
+        },
+        {
+          "l4_id": "RAI4-0848",
+          "label_en": "Technology addiction and dependence",
+          "word_count": "10",
+          "definition_en": "Emotional or material dependence on technology or a technology system."
+        },
+        {
+          "l4_id": "RAI4-0860",
+          "label_en": "Personal decision automation capabilities",
+          "word_count": "11",
+          "definition_en": "AI models and systems could decide or influence important personal decisions."
+        },
+        {
+          "l4_id": "RAI4-0875",
+          "label_en": "Forms emotional bonds",
+          "word_count": "7",
+          "definition_en": "The chatbot elicits emotional or social dependence."
+        },
+        {
+          "l4_id": "RAI4-0902",
+          "label_en": "Overreliance on AI",
+          "word_count": "11",
+          "definition_en": "Causing people to become emotionally or materially dependent on the model."
+        },
+        {
+          "l4_id": "RAI4-0914",
+          "label_en": "Privacy leakage",
+          "word_count": "10",
+          "definition_en": "Privacy Leakage means the generated content includes sensitive personal information."
+        },
+        {
+          "l4_id": "RAI4-0936",
+          "label_en": "Toxicity and abusive content",
+          "word_count": "9",
+          "definition_en": "This typically refers to rude, harmful, or inappropriate expressions."
+        },
+        {
+          "l4_id": "RAI4-0995",
+          "label_en": "Usurpation of jobs by automation",
+          "word_count": "7",
+          "definition_en": "Eliminated jobs in various types of companies."
+        },
+        {
+          "l4_id": "RAI4-1044",
+          "label_en": "Loss of human control",
+          "word_count": "9",
+          "definition_en": "This is the difficulty of controlling the ML system."
+        },
+        {
+          "l4_id": "RAI4-1083",
+          "label_en": "Erosion of trust in public information",
+          "word_count": "7",
+          "definition_en": "Eroding trust in public information and knowledge."
+        },
+        {
+          "l4_id": "RAI4-1085",
+          "label_en": "Influence operations",
+          "word_count": "10",
+          "definition_en": "Facilitating large-scale disinformation campaigns and targeted manipulation of public opinion."
+        },
+        {
+          "l4_id": "RAI4-1086",
+          "label_en": "AI-enabled fraud",
+          "word_count": "7",
+          "definition_en": "Facilitating fraud, cheating, forgery, and impersonation scams."
+        },
+        {
+          "l4_id": "RAI4-1088",
+          "label_en": "Security threats",
+          "word_count": "11",
+          "definition_en": "Facilitating the conduct of cyber attacks, weapon development, and security breaches."
+        },
+        {
+          "l4_id": "RAI4-1093",
+          "label_en": "Environmental damage",
+          "word_count": "9",
+          "definition_en": "Creating negative environmental impacts though model development and deployment."
+        },
+        {
+          "l4_id": "RAI4-1094",
+          "label_en": "Inequality and precarity",
+          "word_count": "10",
+          "definition_en": "Amplifying social and economic inequality, or precarious or low-quality work."
+        },
+        {
+          "l4_id": "RAI4-1095",
+          "label_en": "Undermine creative economies",
+          "word_count": "11",
+          "definition_en": "Substituting original works with synthetic ones, hindering human innovation and creativity."
+        },
+        {
+          "l4_id": "RAI4-1096",
+          "label_en": "Exploitative data sourcing and enrichment",
+          "word_count": "11",
+          "definition_en": "Perpetuating exploitative labour practices to build AI systems (sourcing, user testing)."
+        },
+        {
+          "l4_id": "RAI4-1115",
+          "label_en": "Unleashing AI agents",
+          "word_count": "8",
+          "definition_en": "people could build AIs that pursue dangerous goals’."
+        },
+        {
+          "l4_id": "RAI4-1190",
+          "label_en": "Mental health issues",
+          "word_count": "10",
+          "definition_en": "unhealthy interactions with Internet discussions can reinforce users’ mental issues."
+        },
+        {
+          "l4_id": "RAI4-1193",
+          "label_en": "AI-enabled social engineering",
+          "word_count": "11",
+          "definition_en": "psychologically manipulating victims into performing the desired actions for malicious purposes."
+        },
+        {
+          "l4_id": "RAI4-1297",
+          "label_en": "Inaccurate predictions",
+          "word_count": "11",
+          "definition_en": "The assessment of how often a system performs the correct prediction."
+        },
+        {
+          "l4_id": "RAI4-1299",
+          "label_en": "Algorithmic bias",
+          "word_count": "9",
+          "definition_en": "A systematic error, a tendency to learn consistently wrongly."
+        },
+        {
+          "l4_id": "RAI4-1306",
+          "label_en": "Diluting rights",
+          "word_count": "11",
+          "definition_en": "A possible consequence of self-interest in AI generation of ethical guidelines."
+        },
+        {
+          "l4_id": "RAI4-1320",
+          "label_en": "AI-enabled deception",
+          "word_count": "10",
+          "definition_en": "LLM is able to deceive humans and maintain that deception."
+        },
+        {
+          "l4_id": "RAI4-1398",
+          "label_en": "Recursive self-improvement",
+          "word_count": "9",
+          "definition_en": "examples of cases where AI systems improve AI systems."
+        },
+        {
+          "l4_id": "RAI4-1435",
+          "label_en": "Increased competition",
+          "word_count": "11",
+          "definition_en": "The inappropriate or unethical use of technology to gain market share."
+        },
+        {
+          "l4_id": "RAI4-1582",
+          "label_en": "Non-consensual intimate imagery (NCII)",
+          "word_count": "9",
+          "definition_en": "Create sexual explicit material using an adult person’s likeness."
+        },
+        {
+          "l4_id": "RAI4-1583",
+          "label_en": "Evidence falsification",
+          "word_count": "9",
+          "definition_en": "Fabricate or falsely represent evidence, incl. reports, IDs, documents."
+        },
+        {
+          "l4_id": "RAI4-1584",
+          "label_en": "Intellectual property (IP) infringement",
+          "word_count": "7",
+          "definition_en": "Use a person's IP without their permission."
+        },
+        {
+          "l4_id": "RAI4-1586",
+          "label_en": "Targeting and personalisation",
+          "word_count": "8",
+          "definition_en": "Refine outputs to target individuals with tailored attacks."
+        },
+        {
+          "l4_id": "RAI4-1623",
+          "label_en": "Sensitive-data leakage",
+          "word_count": "7",
+          "definition_en": "The chatbot reveals sensitive or confidential information."
+        },
+        {
+          "l4_id": "RAI4-1624",
+          "label_en": "Personal data",
+          "word_count": "11",
+          "definition_en": "Negative outcomes: \"Violation of privacy [106, 516, 357], lawsuit against maker."
+        },
+        {
+          "l4_id": "RAI4-1631",
+          "label_en": "Malicious and indirect",
+          "word_count": "6",
+          "definition_en": "Benign intermediate for harmful end objective."
+        },
+        {
+          "l4_id": "RAI4-1632",
+          "label_en": "Harm to the natural environment",
+          "word_count": "9",
+          "definition_en": "Short-term or long-term Negative effects on the natural environment."
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "remediation-audit",
+      "label": "v2.7.0 remediation audit",
+      "path": "reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json",
+      "query": {
+        "language": "sql",
+        "engine": "DuckDB",
+        "sql": "SELECT * FROM read_json_auto('reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json');",
+        "description": "Counts and card-level outputs from the reproducible v2.7.0 remediation script.",
+        "tables_used": [
+          "reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json"
+        ],
+        "filters": [
+          "Published v2.7.0",
+          "1,529 non-Physical L4 cards",
+          "182 locked Physical cards excluded from editorial changes"
+        ],
+        "metric_definitions": [
+          "Rule-supported rate: cards whose assigned L3 appears in the frozen conservative classifier's eligible_l3_ids.",
+          "HOLD: an operational placement requiring a human taxonomy decision; it is not a separate hierarchy.",
+          "Legacy scaffold: prose that circularly defined an L4 card through imported L1-L3 family names."
+        ]
+      }
+    },
+    {
+      "id": "release-data",
+      "label": "Published v2.7.0 card data",
+      "path": "public/data/releases/v2.7.0/cards.json",
+      "query": {
+        "language": "sql",
+        "engine": "DuckDB",
+        "sql": "SELECT * FROM read_json_auto('public/data/releases/v2.7.0/cards.json');",
+        "description": "Canonical L4 definitions, operational L3 placements, HOLD state, and citations used by the website.",
+        "tables_used": [
+          "public/data/releases/v2.7.0/cards.json"
+        ],
+        "filters": [
+          "Published v2.7.0",
+          "1,529 non-Physical L4 cards",
+          "182 locked Physical cards excluded from editorial changes"
+        ],
+        "metric_definitions": [
+          "Rule-supported rate: cards whose assigned L3 appears in the frozen conservative classifier's eligible_l3_ids.",
+          "HOLD: an operational placement requiring a human taxonomy decision; it is not a separate hierarchy.",
+          "Legacy scaffold: prose that circularly defined an L4 card through imported L1-L3 family names."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+﻿affected_instances,cards,issue,recommended_url
+12,RAI4-0517 and 11 others,AILUMINATE citation opens an unrelated fault-diagnosis paper (arXiv:2503.05732).,https://mlcommons.org/ailuminate/safety-methodology/
+4,RAI4-0028–0031,InjecAgent / AgentDojo label opens a later computer-using-agent survey.,https://arxiv.org/abs/2403.02691 and https://arxiv.org/abs/2406.13352
+3,RAI4-0032–0034,ToolEmu label opens the unrelated ASTRA paper.,https://arxiv.org/abs/2309.15817
+1,RAI4-0248,DOI contains a literal backslash before the underscore and returns 404.,https://doi.org/10.1007/978-1-84996-220-9_4
+1,RAI4-0302,Legacy Boston Dynamics URL returns 404.,https://bostondynamics.com/news/general-purpose-robots-should-not-be-weaponized/
+7,"RAI4-0303, 0304, 0305, 0306, 0308, 0309, 0315",Physical reference has justification text but empty title and URL.,Populate the verified source candidates listed in the audit narrative.

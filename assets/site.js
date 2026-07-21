@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.6.0";
+const DATA_ROOT = "public/data/releases/v2.7.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -39,6 +39,12 @@ const DOMAIN_ICONS = {
   "RAI1-G": "🧠",
   "RAI1-A": "🧭",
   "RAI1-P": "🤖",
+};
+
+const DOMAIN_ORDER = {
+  "RAI1-G": 0,
+  "RAI1-A": 1,
+  "RAI1-P": 2,
 };
 
 const L2_ICONS = {
@@ -281,7 +287,14 @@ function filteredCards() {
       && (state.l1 === "all" || path.l1 === state.l1)
       && (state.l2 === "all" || path.l2Category === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
-  });
+  }).sort(compareCardsByDomain);
+}
+
+function compareCardsByDomain(left, right) {
+  const leftDomain = cardPath.get(left.l4_id)?.l1;
+  const rightDomain = cardPath.get(right.l4_id)?.l1;
+  const domainDifference = (DOMAIN_ORDER[leftDomain] ?? 99) - (DOMAIN_ORDER[rightDomain] ?? 99);
+  return domainDifference || left.l4_id.localeCompare(right.l4_id, "en");
 }
 
 function render() {

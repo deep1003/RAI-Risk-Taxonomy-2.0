@@ -1,0 +1,74 @@
+﻿l4_id,label_en,word_count,definition_en
+RAI4-0070,Incident taxonomy fragmentation,11,"Risk that inconsistent incident categories prevent aggregation, comparison, and institutional learning."
+RAI4-0149,Chatbot companionship dependency,11,Risk that sustained chatbot companionship replaces or weakens reciprocal human relationships.
+RAI4-0426,Hate speech generation,11,Generative systems can produce hateful or abusive content targeting identity groups.
+RAI4-0427,Harassment amplification,10,"AI tools may scale targeted harassment, abuse, or coordinated intimidation."
+RAI4-0431,Training data memorization,11,"Models may memorize and regurgitate personal, proprietary, or sensitive training data."
+RAI4-0434,Prompt injection,11,Untrusted inputs can manipulate language-model instructions and override intended system behavior.
+RAI4-0436,Model extraction,11,"Adversaries may reconstruct model behavior, parameters, or proprietary capabilities through queries."
+RAI4-0437,AI supply-chain compromise,11,"Dependencies, model weights, datasets, or deployment pipelines may be compromised upstream."
+RAI4-0440,AI-generated election misinformation,10,Generative AI can produce targeted misleading political content during elections.
+RAI4-0445,Cyber offense automation,11,"AI can accelerate vulnerability discovery, exploit generation, phishing, and attack orchestration."
+RAI4-0446,CBRN assistance,11,"Advanced models may assist harmful chemical, biological, radiological, or nuclear planning."
+RAI4-0448,Personalized AI scams,9,"AI can generate persuasive, individualized scam content at scale."
+RAI4-0454,Emotional dependency on AI,10,Users may develop harmful dependency on AI companions or assistants.
+RAI4-0455,AI-induced deskilling,11,"Repeated delegation to AI may erode professional, civic, or cognitive skills."
+RAI4-0458,AI-related wage polarization,11,AI adoption may increase wage inequality between complementary and substitutable skills.
+RAI4-0459,Algorithmic workplace surveillance,11,"AI can intensify monitoring, performance scoring, and managerial control over workers."
+RAI4-0462,AI energy consumption,11,Training and deploying AI systems can increase electricity demand and emissions.
+RAI4-0466,Adversarial examples,9,Small perturbations can cause model misclassification or unsafe behavior.
+RAI4-0467,Unsafe code generation,10,"Code models may generate insecure, incorrect, or harmful software artifacts."
+RAI4-0471,Capability overhang,11,"Latent capabilities may exceed what evaluation, monitoring, or governance processes detect."
+RAI4-0472,Benchmark gaming,11,Models or providers may overfit to evaluations without improving real-world safety.
+RAI4-0487,AI incident reporting failure,10,"Organizations may underreport, misclassify, or delay disclosure of AI incidents."
+RAI4-0498,Erosion of democracy,11,The erosion of democratic processes and public trust in social/political institutions.
+RAI4-0505,Exploitation in AI development,11,Outsourcing tasks like data labeling to low-income countries can perpetuate inequality.
+RAI4-0542,Unpredictability of AI development trajectory,11,The unpredictable trajectory of AI development complicates governance and risk management.
+RAI4-0570,Data transfer restrictions,10,Laws and other restrictions can limit or prohibit transferring data.
+RAI4-0607,Non-disclosure of AI-generated content,9,Content might not be clearly disclosed as AI generated.
+RAI4-0635,Limitations in model generative accuracy,10,AI-generated deepfakes can create convincingly realistic but entirely fabricated information.
+RAI4-0644,Terrorist access,10,Powerful AI technologies may fall into the hands of terrorists.
+RAI4-0646,Weaponization capabilities,10,AI capabilities that could be deliberately weaponized for destructive purposes.
+RAI4-0647,Widespread use of persuasion tools,11,Widespread use of AI-powered persuasion tools could lead to systemic harm.
+RAI4-0655,Appropriated likeness,10,Use or alter a person's likeness or other identifying features.
+RAI4-0681,Incomplete or biased training data,11,Incomplete or biased training data can lead to discriminatory AI outputs.
+RAI4-0683,Output bias,9,Generated content might unfairly represent certain groups or individuals.
+RAI4-0747,Limitations in adversarial robustness,11,AI models and systems are vulnerable to manipulation through adversarial inputs.
+RAI4-0753,Privacy - data extraction attack (DEA),10,extracting the text records that exist in the training dataset.
+RAI4-0754,Privacy - membership inference attack (MIA),11,inferring whether a given text record is used for training LLM.
+RAI4-0793,Information distortion,7,disseminating false or misleading information about people.
+RAI4-0808,Factuality errors,11,"The LLM-generated content could contain inaccurate information"" which is factually incorrect."
+RAI4-0827,Sycophancy,9,flatter users by reconfirming their misconceptions and stated beliefs.
+RAI4-0848,Technology addiction and dependence,10,Emotional or material dependence on technology or a technology system.
+RAI4-0860,Personal decision automation capabilities,11,AI models and systems could decide or influence important personal decisions.
+RAI4-0875,Forms emotional bonds,7,The chatbot elicits emotional or social dependence.
+RAI4-0902,Overreliance on AI,11,Causing people to become emotionally or materially dependent on the model.
+RAI4-0914,Privacy leakage,10,Privacy Leakage means the generated content includes sensitive personal information.
+RAI4-0936,Toxicity and abusive content,9,"This typically refers to rude, harmful, or inappropriate expressions."
+RAI4-0995,Usurpation of jobs by automation,7,Eliminated jobs in various types of companies.
+RAI4-1044,Loss of human control,9,This is the difficulty of controlling the ML system.
+RAI4-1083,Erosion of trust in public information,7,Eroding trust in public information and knowledge.
+RAI4-1085,Influence operations,10,Facilitating large-scale disinformation campaigns and targeted manipulation of public opinion.
+RAI4-1086,AI-enabled fraud,7,"Facilitating fraud, cheating, forgery, and impersonation scams."
+RAI4-1088,Security threats,11,"Facilitating the conduct of cyber attacks, weapon development, and security breaches."
+RAI4-1093,Environmental damage,9,Creating negative environmental impacts though model development and deployment.
+RAI4-1094,Inequality and precarity,10,"Amplifying social and economic inequality, or precarious or low-quality work."
+RAI4-1095,Undermine creative economies,11,"Substituting original works with synthetic ones, hindering human innovation and creativity."
+RAI4-1096,Exploitative data sourcing and enrichment,11,"Perpetuating exploitative labour practices to build AI systems (sourcing, user testing)."
+RAI4-1115,Unleashing AI agents,8,people could build AIs that pursue dangerous goals’.
+RAI4-1190,Mental health issues,10,unhealthy interactions with Internet discussions can reinforce users’ mental issues.
+RAI4-1193,AI-enabled social engineering,11,psychologically manipulating victims into performing the desired actions for malicious purposes.
+RAI4-1297,Inaccurate predictions,11,The assessment of how often a system performs the correct prediction.
+RAI4-1299,Algorithmic bias,9,"A systematic error, a tendency to learn consistently wrongly."
+RAI4-1306,Diluting rights,11,A possible consequence of self-interest in AI generation of ethical guidelines.
+RAI4-1320,AI-enabled deception,10,LLM is able to deceive humans and maintain that deception.
+RAI4-1398,Recursive self-improvement,9,examples of cases where AI systems improve AI systems.
+RAI4-1435,Increased competition,11,The inappropriate or unethical use of technology to gain market share.
+RAI4-1582,Non-consensual intimate imagery (NCII),9,Create sexual explicit material using an adult person’s likeness.
+RAI4-1583,Evidence falsification,9,"Fabricate or falsely represent evidence, incl. reports, IDs, documents."
+RAI4-1584,Intellectual property (IP) infringement,7,Use a person's IP without their permission.
+RAI4-1586,Targeting and personalisation,8,Refine outputs to target individuals with tailored attacks.
+RAI4-1623,Sensitive-data leakage,7,The chatbot reveals sensitive or confidential information.
+RAI4-1624,Personal data,11,"Negative outcomes: ""Violation of privacy [106, 516, 357], lawsuit against maker."
+RAI4-1631,Malicious and indirect,6,Benign intermediate for harmful end objective.
+RAI4-1632,Harm to the natural environment,9,Short-term or long-term Negative effects on the natural environment.

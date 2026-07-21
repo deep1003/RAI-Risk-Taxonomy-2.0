@@ -1,0 +1,27 @@
+﻿l3_id,label_en,card_count,share_of_nonphysical_pct,rule_supported_count,rule_supported_pct,hold_count
+RAI3-G-INT-10,Anthropomorphism,245,16.02,6,2.45,240
+RAI3-G-SYS-08,Goal Misalignment,154,10.07,1,0.65,88
+RAI3-G-INT-08,Copyrights,117,7.65,19,16.24,82
+RAI3-G-SYS-03,Misinformation/Disinformation,111,7.26,24,21.62,56
+RAI3-G-INT-11,Policy Exposure,89,5.82,2,2.25,32
+RAI3-G-INT-06,Privacy,88,5.76,23,26.14,13
+RAI3-A-SYS-03,Network Effects,78,5.1,0,0.0,15
+RAI3-A-SYS-01,Excessive Authority,74,4.84,0,0.0,14
+RAI3-A-SYS-04,Destabilising Dynamics,73,4.77,0,0.0,23
+RAI3-A-SYS-05,Conflict,63,4.12,0,0.0,16
+RAI3-G-INT-09,Weaponization,59,3.86,48,81.36,18
+RAI3-G-SYS-09,Non-Contestability,57,3.73,1,1.75,19
+RAI3-G-SYS-07,Overconfidence,47,3.07,1,2.13,13
+RAI3-A-SYS-06,Collusion,37,2.42,0,0.0,10
+RAI3-G-INT-04,Hate and Unfairness,37,2.42,10,27.03,6
+RAI3-G-SYS-05,Inconsistency,35,2.29,10,28.57,11
+RAI3-G-INT-02,Sexual,32,2.09,20,62.5,8
+RAI3-A-SYS-02,Accountability,23,1.5,0,0.0,9
+RAI3-G-SYS-01,Over-Refusal,22,1.44,0,0.0,4
+RAI3-G-INT-07,Illegal,19,1.24,5,26.32,5
+RAI3-G-INT-03,Self-harm,17,1.11,7,41.18,2
+RAI3-G-INT-05,Political Neutrality,17,1.11,0,0.0,0
+RAI3-G-INT-01,Violence,17,1.11,13,76.47,5
+RAI3-G-SYS-02,Over-Extension,15,0.98,0,0.0,2
+RAI3-G-SYS-04,Context Misalignment,2,0.13,0,0.0,1
+RAI3-G-SYS-06,Overgeneralization,1,0.07,1,100.0,0

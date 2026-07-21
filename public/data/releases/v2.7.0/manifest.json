@@ -1,0 +1,30 @@
+{
+  "release_id": "v2.7.0",
+  "source_release": "v2.6.0",
+  "release_status": "mechanism_definition_and_mapping_quality_remediation",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "physical_total": 182,
+    "decision_required": 692,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "f205c1d5f85ef2ac4e4d59ca9fd524d0235ed8326b83fb6a4570306da351d97e"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "e85f7666c9d7b29768d5de835d88a9855d82e0cddcbc2116fdfc690a6c3546d5"
+    },
+    {
+      "path": "reports/data_quality/l4_definition_mapping_remediation_v2.7.0/summary.json",
+      "sha256": "fabfabbcd6e518a2d73b4174cfab170311bce6f531701882dd33e468c45a6e44"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "release_id": "v2.7.0",
+  "source_release": "v2.6.0",
+  "population": {
+    "all_l4": 1711,
+    "physical_locked_unchanged": 182,
+    "nonphysical": 1529
+  },
+  "definition_remediation": {
+    "legacy_taxonomy_scaffolds_removed": 1129,
+    "editorial_academic_definitions": 19,
+    "short_definition_review_queue": 73,
+    "remaining_banned_scaffolds": 0
+  },
+  "mapping_remediation": {
+    "cards_remapped": 9,
+    "quality_holds_added": 611,
+    "decision_required_total": 692,
+    "policy": "All cards retain an operational L3 path; HOLD denotes that the path is not an approved taxonomic fit."
+  },
+  "quality_boundary": "L3 load is a triage signal, not evidence of semantic fit. Remapping requires agreement among label, mechanism-only definition, and cited evidence."
+}

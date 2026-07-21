@@ -1,0 +1,55 @@
+{
+  "audit_scope": {
+    "release": "v2.6.0",
+    "l4_cards": 1711,
+    "taxonomy_nodes": 60,
+    "reference_instances": 1890,
+    "unique_reference_urls": 333
+  },
+  "mapping": {
+    "unique_l4_ids": 1711,
+    "duplicate_l4_ids": 0,
+    "valid_l0_l3_paths": 1711,
+    "source_crosswalk_covered": 1711,
+    "physical_locked": 182,
+    "physical_lock_exact_matches": 182,
+    "algorithmic_assignments": 1529,
+    "algorithm_top1_exact_matches": 1529,
+    "decisive_l3_rule_mismatches": 6,
+    "human_approved": 0,
+    "decision_required": 76,
+    "flag_counts": {
+      "DECISION_REQUIRED": 76,
+      "DECISIVE_L3_RULE_MISMATCH": 6,
+      "L3_LABEL_USED_AS_L4": 1,
+      "LOW_SEMANTIC_MARGIN": 508,
+      "LOW_SEMANTIC_SCORE": 267,
+      "STAGE3_FORCED": 165
+    }
+  },
+  "references": {
+    "cards_with_zero_references": 0,
+    "empty_or_unlinked_reference_instances": 7,
+    "cards_with_any_reference_issue": 446,
+    "instance_verdict_counts": {
+      "ACCESS_CONTROLLED": 18,
+      "CITATION_METADATA_UNVERIFIED": 106,
+      "PASS": 1442,
+      "REACHABLE_TITLE_UNVERIFIED": 282,
+      "TITLE_MISMATCH_REVIEW": 33,
+      "UNLINKED": 7,
+      "URL_FAILED": 2
+    },
+    "unique_url_status_counts": {
+      "access_controlled": 6,
+      "broken": 2,
+      "reachable": 325
+    }
+  },
+  "interpretation": {
+    "structural_mapping": "pass",
+    "physical_lock_integrity": "pass",
+    "semantic_mapping": "algorithmically reproducible but not human-validated",
+    "reference_integrity": "requires remediation"
+  }
+}

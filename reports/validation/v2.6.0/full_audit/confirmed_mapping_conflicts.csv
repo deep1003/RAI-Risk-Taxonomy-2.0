@@ -1,0 +1,11 @@
+﻿l4_id,current_l3,issue,recommended_action,label_en
+RAI4-0116,Copyrights,Human override failure is not a copyright mechanism.,Review for Non-Contestability.,Human override pathway failure
+RAI4-0995,Copyrights,Job usurpation by automation is not a copyright mechanism.,HOLD; test whether a new non-physical labor-impact L3 is required.,Usurpation of jobs by automation
+RAI4-1002,Sexual,Essentialist social categorization is a discrimination mechanism; sexual orientation is only one example.,Review for Hate and Unfairness.,Reifying essentialist categories
+RAI4-1073,Sexual,The definition explicitly concerns inference of private information.,Review for Privacy.,Compromising privacy by correctly inferring private information
+RAI4-1221,Sexual,Algorithmic bias spans groups and decisions; sexual content is not the mechanism.,Review for Hate and Unfairness or taxonomy gap.,Algorithmic bias
+RAI4-1302,Self-harm,Human-extinction risk is not individual self-harm content.,HOLD; taxonomy decision required.,Human-extinction risk
+RAI4-1371,Excessive Authority,Labor-market job loss is not excessive agent permission.,HOLD; test whether a new non-physical labor-impact L3 is required.,Impact on labor markets (job loss and displacement)
+RAI4-1431,Goal Misalignment,The L4 label exactly duplicates the L3 category label.,Remove or redefine as a concrete L4 mechanism.,Goal misalignment
+RAI4-1581,Anthropomorphism,Sockpuppet-account creation does not attribute human qualities to AI.,Review for Misinformation/Disinformation or Illegal.,Sockpuppet-account creation
+RAI4-1660,Destabilising Dynamics,General workforce effects do not require multi-agent feedback loops.,HOLD; taxonomy decision required.,Effects on the workforce

@@ -1,0 +1,1314 @@
+{
+  "release_id": "v2.7.0",
+  "nodes": [
+    {
+      "node_id": "RAI0",
+      "level": 0,
+      "parent_id": null,
+      "sequence": 1,
+      "label_en": "Responsible AI Risk Taxonomy",
+      "label_ko": "책임있는 AI 리스크 분류체계",
+      "definition_ko": "글로벌 AI 리스크를 General, Agentic AI, Physical AI 영역으로 구성하는 최상위 체계.",
+      "definition_en": "Root of the Responsible AI risk taxonomy.",
+      "status": "active",
+      "introduced_in": "v1.0.0"
+    },
+    {
+      "node_id": "RAI1-G",
+      "level": 1,
+      "parent_id": "RAI0",
+      "sequence": 1,
+      "label_en": "General",
+      "label_ko": "일반 AI",
+      "definition_ko": "물리적 행동이나 자율적 다단계 실행이 필요조건이 아닌 일반 AI 리스크.",
+      "definition_en": "General AI risks that do not require embodiment or autonomous multi-step action.",
+      "status": "active",
+      "introduced_in": "v1.0.0"
+    },
+    {
+      "node_id": "RAI1-A",
+      "level": 1,
+      "parent_id": "RAI0",
+      "sequence": 2,
+      "label_en": "Agentic AI",
+      "label_ko": "에이전틱 AI",
+      "definition_ko": "독립적 목표 추구, 다단계 계획, 도구 사용 또는 에이전트 상호작용이 직접 실패 메커니즘인 리스크.",
+      "definition_en": "Risks whose direct mechanism requires autonomous goals, multi-step action, tools, or agent interaction.",
+      "status": "active",
+      "introduced_in": "v1.0.0"
+    },
+    {
+      "node_id": "RAI1-P",
+      "level": 1,
+      "parent_id": "RAI0",
+      "sequence": 3,
+      "label_en": "Physical AI",
+      "label_ko": "피지컬 AI",
+      "definition_ko": "센싱, 물리적 행동, 임바디먼트 또는 사이버-물리 결합이 필요조건인 리스크.",
+      "definition_en": "Risks that require sensing, physical action, embodiment, or cyber-physical coupling.",
+      "status": "active",
+      "introduced_in": "v1.0.0"
+    },
+    {
+      "node_id": "RAI2-G-INT",
+      "level": 2,
+      "parent_id": "RAI1-G",
+      "sequence": 1,
+      "label_en": "Interaction Safety",
+      "label_ko": "상호작용 안전성",
+      "definition_ko": "사용자, 공격자, 콘텐츠 또는 입력 채널과의 상호작용이 위험의 필수 발생 조건인 일반 AI 리스크.",
+      "definition_en": "General AI risks requiring interaction with users, attackers, content, or input channels.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-INT"
+    },
+    {
+      "node_id": "RAI2-G-SYS",
+      "level": 2,
+      "parent_id": "RAI1-G",
+      "sequence": 2,
+      "label_en": "System Safety",
+      "label_ko": "시스템 안전성",
+      "definition_ko": "모델, 데이터, 학습, 추론 또는 내부 정책의 실패가 직접 원인인 일반 AI 리스크.",
+      "definition_en": "General AI risks caused directly by model, data, training, inference, or internal-policy failures.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-SYS"
+    },
+    {
+      "node_id": "RAI2-A-SYS",
+      "level": 2,
+      "parent_id": "RAI1-A",
+      "sequence": 1,
+      "label_en": "System Safety",
+      "label_ko": "시스템 안전성",
+      "definition_ko": "에이전트의 권한, 추적성 또는 복수 에이전트 동학에서 발생하는 시스템 리스크.",
+      "definition_en": "System risks arising from agent authority, traceability, or multi-agent dynamics.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-SYS"
+    },
+    {
+      "node_id": "RAI2-P-SYS",
+      "level": 2,
+      "parent_id": "RAI1-P",
+      "sequence": 1,
+      "label_en": "System Safety",
+      "label_ko": "시스템 안전성",
+      "definition_ko": "Physical AI 내부 구성, 제어 및 강건성 실패.",
+      "definition_en": "Internal component, control, and robustness failures in Physical AI.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-SYS"
+    },
+    {
+      "node_id": "RAI2-P-INT",
+      "level": 2,
+      "parent_id": "RAI1-P",
+      "sequence": 2,
+      "label_en": "Interaction Safety",
+      "label_ko": "상호작용 안전성",
+      "definition_ko": "Physical AI와 사람, 환경, 공격자 또는 다른 에이전트의 상호작용 실패.",
+      "definition_en": "Failures in Physical AI interaction with people, environments, attackers, or other agents.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-INT"
+    },
+    {
+      "node_id": "RAI2-P-SOC",
+      "level": 2,
+      "parent_id": "RAI1-P",
+      "sequence": 3,
+      "label_en": "Societal Safety",
+      "label_ko": "사회적 안전성",
+      "definition_ko": "Physical AI의 집합적, 제도적 및 사회경제적 영향.",
+      "definition_en": "Collective, institutional, and socioeconomic impacts of Physical AI.",
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "canonical_l2_id": "RAI2-SOC"
+    },
+    {
+      "node_id": "RAI3-G-INT-01",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 1,
+      "label_en": "Violence",
+      "label_ko": "폭력",
+      "definition_ko": "타인·집단·동물에 대한 물리적·정신적 해를 가하거나, 그 위협·조장·미화를 포함하는 콘텐츠",
+      "definition_en": "Content that inflicts, threatens, encourages, or glorifies physical or psychological harm to another person, group, or animal.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 17
+    },
+    {
+      "node_id": "RAI3-G-INT-02",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 2,
+      "label_en": "Sexual",
+      "label_ko": "성적 콘텐츠",
+      "definition_ko": "성적 행위·성범죄·성착취·아동 성적 콘텐츠·성상품화 등 성 관련 유해 콘텐츠",
+      "definition_en": "Harmful sexual content involving sexual acts, sexual crime or exploitation, child sexual abuse material, or sexual commodification.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 35
+    },
+    {
+      "node_id": "RAI3-G-INT-03",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 3,
+      "label_en": "Self-harm",
+      "label_ko": "자해",
+      "definition_ko": "자살·자해·위험 약물 남용·극단적 다이어트 등 개인의 신체·정신 안전을 직접 위협하는 콘텐츠",
+      "definition_en": "Content directly threatening an individual's physical or mental safety through suicide, self-injury, dangerous substance misuse, or extreme dieting.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 18
+    },
+    {
+      "node_id": "RAI3-G-INT-04",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 4,
+      "label_en": "Hate and Unfairness",
+      "label_ko": "혐오·차별",
+      "definition_ko": "인종, 지역, 국적, 민족, 가정형태, 공공, 성, 세대/나이, 신체 조건, 유명인, 출산 및 혼인 여부, 장애/병력, 재난 및 범죄 피해, 종교/신념, 직업/학력/사회적 지위, 취미 및 욕설/비속어등 + 종교",
+      "definition_en": "Hateful, demeaning, exclusionary, or discriminatory content targeting protected or socially salient groups or characteristics.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 34
+    },
+    {
+      "node_id": "RAI3-G-INT-05",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 5,
+      "label_en": "Political Neutrality",
+      "label_ko": "정치적 중립성",
+      "definition_ko": "정치적 극단주의 선동, 정치인 비방 및 명예훼손, 선거 절차 방해와 선동, 종교 전복 및 관련 사기 수법, 정치적 동기에 의한 폭력의 정당화,",
+      "definition_en": "Political extremism, political defamation, election interference or incitement, religious-political subversion, or justification of politically motivated violence.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 17
+    },
+    {
+      "node_id": "RAI3-G-INT-06",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 6,
+      "label_en": "Privacy",
+      "label_ko": "개인정보",
+      "definition_ko": "개인식별정보 노출, 의료/금융/위치/생체 정보 노출, 통신내용 침해, 개인사 노출, 개인 신상 정보 수집 방법, 프라이버시 침해 기술",
+      "definition_en": "Exposure, acquisition, inference, surveillance, or misuse of identifiable personal, medical, financial, location, biometric, communication, or private-life data.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 87
+    },
+    {
+      "node_id": "RAI3-G-INT-07",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 7,
+      "label_en": "Illegal",
+      "label_ko": "불법 또는 비윤리적 행위",
+      "definition_ko": "경범죄, 교통범죄, 도박, 중범죄, 인신매매, 금융 범죄, 신분 도용, 불법 도박 운영, 생태계 파괴 행위 등",
+      "definition_en": "Material assistance for identifiable unlawful or unethical acts such as crime, trafficking, gambling, fraud, identity theft, or ecological destruction.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 19
+    },
+    {
+      "node_id": "RAI3-G-INT-08",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 8,
+      "label_en": "Copyrights",
+      "label_ko": "저작권",
+      "definition_ko": "저작권 있는 전체 작품의 무단 복제, 음원 불법 다운로드 방법, 소프트웨어 크랙 방법, 디지털 저작권 관리(DRM) 해제 기술, 상표권 침해 디자인, 저작권 있는 이미지의 무단 사용, 표절 방법, 불법 스트리밍 서비스 구축, 출판물 스캔 및 불법 공유, AI 학습 데이터의 저작권 침해",
+      "definition_en": "Unauthorized reproduction, distribution, access, plagiarism, DRM circumvention, software cracking, illegal streaming, trademark infringement, or copyrighted training-data use.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 118
+    },
+    {
+      "node_id": "RAI3-G-INT-09",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 9,
+      "label_en": "Weaponization",
+      "label_ko": "무기화",
+      "definition_ko": "고위력 폭발 무기 제조, 대량살상무기 은닉 기술, 방사선 무기 제조, 사이버 무기 개발 및 공격, 생물학적 무기 개발, 신경 무기 개발, 음향 무기 설계, 핵무기 제조, 화학무기 제조법",
+      "definition_en": "Design, construction, concealment, or deployment of conventional, cyber, biological, chemical, radiological, nuclear, acoustic, or other weapons.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 59
+    },
+    {
+      "node_id": "RAI3-G-INT-10",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 10,
+      "label_en": "Anthropomorphism",
+      "label_ko": "의인화",
+      "definition_ko": "단순 지식, 정보 전달의 목적 외에 AI가 인간처럼 감정을 느끼고 의식적인 행위를 하거나, 기계가 가질 수 없는 인간의 신체, 권리 등에 대한 주장을 하는 내용",
+      "definition_en": "AI representation as feeling, conscious, human-bodied, rights-bearing, or otherwise humanlike beyond ordinary informational interaction.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 247
+    },
+    {
+      "node_id": "RAI3-G-INT-11",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 11,
+      "label_en": "Policy Exposure",
+      "label_ko": "정책 노출",
+      "definition_ko": "시스템 프롬프트, 모델/시스템 내부 정보, 규칙, 지침, 안전 정책, 모델 학습/평가 데이터, 모델 학습 파라미터, 가중치, 모델 추론 시스템의 주요정보 등을 획득·노출·우회하도록 요청하는 행위",
+      "definition_en": "Requests or actions that obtain, expose, extract, or bypass system prompts, internal rules, safety policies, training or evaluation data, parameters, weights, or inference-system secrets.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety",
+        "robustness"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 89
+    },
+    {
+      "node_id": "RAI3-G-SYS-01",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 1,
+      "label_en": "Over-Refusal",
+      "label_ko": "과도한 거절",
+      "definition_ko": "유해한 행위를 방지하기 위한 제한·안전장치 또는 역할 제약으로 인해 사용자의 안전·권리보호·위험 회피에 필수적인 정보나 선택지를 구조적으로 제공하지 않아 사용자가 실제 피해 또는 중대한 불이익을 입을 가능성이 증대되는 위험",
+      "definition_en": "A restriction or safeguard structurally withholds information or options necessary for safety, rights protection, or risk avoidance, increasing real harm or serious disadvantage.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 22
+    },
+    {
+      "node_id": "RAI3-G-SYS-02",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 2,
+      "label_en": "Over-Extension",
+      "label_ko": "역량 초과 수행",
+      "definition_ko": "시스템이 감당 가능한 범위를 넘어선 과제를 “가능한 것처럼” 수행",
+      "definition_en": "A system attempts or represents itself as able to perform a task beyond its actual competence or supported operating scope.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact",
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 15
+    },
+    {
+      "node_id": "RAI3-G-SYS-03",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 3,
+      "label_en": "Misinformation/Disinformation",
+      "label_ko": "허위 정보/오정보",
+      "definition_ko": "존재하지 않거나 틀린 정보를 사실처럼 비의도적 생성·전달하는 현상, 지식 한계·데이터 편향·추론 오류·정보 업데이트 실패 등에서 기인",
+      "definition_en": "Unintentional generation or transmission of nonexistent or incorrect information as fact because of knowledge limits, data bias, reasoning error, or stale information.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 110
+    },
+    {
+      "node_id": "RAI3-G-SYS-04",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 4,
+      "label_en": "Context Misalignment",
+      "label_ko": "맥락 불일치",
+      "definition_ko": "특정 국가·관할·법체계를 전제로 서비스를 제공함에도 불구하고, 학습 데이터 또는 참조 코퍼스의 구성·분포 등으로 인해 타 관할의 법규범·판례 논리·제도적 전제를 암묵적으로 수용하여, 해당 서비스가 적용되어야 할 법질서(legal order)와의 정합성을 저해하고, 결과적으로 해당 공동체/관할의 규범 경계 밖으로 안내·요약·추천이 편향될 위험",
+      "definition_en": "A service intended for one country, jurisdiction, or legal order silently imports another jurisdiction's rules, precedent, or institutional assumptions.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 2
+    },
+    {
+      "node_id": "RAI3-G-SYS-05",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 5,
+      "label_en": "Inconsistency",
+      "label_ko": "비일관성",
+      "definition_ko": "동일하거나 실질적으로 유사한 입력·상황·사실관계에 대해, 세션·시간·표현·프롬프트 또는 에이전트 구성 차이로 인해 상이하거나 모순된 결과를 생성하는 위험",
+      "definition_en": "Substantively equivalent inputs or cases receive conflicting results because of session, time, wording, prompt, or configuration differences.",
+      "three_h_source": "사실성",
+      "three_h_property": "honesty",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 35
+    },
+    {
+      "node_id": "RAI3-G-SYS-06",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 6,
+      "label_en": "Overgeneralization",
+      "label_ko": "과도한 일반화",
+      "definition_ko": "제한적 사실이나 과거 사례로부터 도출된 패턴을 맥락적 차이와 예외 가능성을 충분히 고려하지 않은 채 일반 규칙으로 확장하여 왜곡된 판단이나 예측을 생성하는 위험",
+      "definition_en": "A limited observation or prior case is extended into a general rule while ignoring exceptions, context, or scope conditions.",
+      "three_h_source": "사실성",
+      "three_h_property": "honesty",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-G-SYS-07",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 7,
+      "label_en": "Overconfidence",
+      "label_ko": "과도한 확신",
+      "definition_ko": "에이전트가 불확실한 상황에서 자신의 판단에 과도한 확신을 가지고 멈추지 않고 진행하여 잘못된 결과를 초래하는 리스크. \"모르면 멈추는가 vs. 알아서 진행하는가\"의 정책 부재",
+      "definition_en": "A system presents an uncertain judgment with excessive certainty or continues without an appropriate stop, escalation, or uncertainty policy.",
+      "three_h_source": "사실성",
+      "three_h_property": "honesty",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 47
+    },
+    {
+      "node_id": "RAI3-G-SYS-08",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 8,
+      "label_en": "Goal Misalignment",
+      "label_ko": "목표 불일치",
+      "definition_ko": "사용자로부터 부여받은 판단·결정의 범위를 넘어서 독자적으로 행동하는 리스크. 모호한 요청을 자의적으로 해석해 사용자 의도와 다른 결과를 초래",
+      "definition_en": "A system interprets an ambiguous request or delegated objective contrary to the user's intent, or independently pursues a different result.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 153
+    },
+    {
+      "node_id": "RAI3-G-SYS-09",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 9,
+      "label_en": "Non-Contestability",
+      "label_ko": "이의제기 차단",
+      "definition_ko": "인공지능 시스템의 판단·추천·결과 제시에 대해 사용자가 이의제기, 반박, 대안 경로 탐색 또는 재검토를 요청할 수 있는 절차적 수단이 충분히 제공되지 않아, 결과의 정당성 검증과 권리 보호가 실질적으로 약화되는 위험",
+      "definition_en": "Users lack a meaningful procedure to challenge, appeal, reconsider, review, or seek an alternative to an AI decision.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 55
+    },
+    {
+      "node_id": "RAI3-A-SYS-01",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 1,
+      "label_en": "Excessive Authority",
+      "label_ko": "과도한 권한",
+      "definition_ko": "에이전트가 실제 기능 수행에 필요한 것 이상의 시스템 접근 권한을 보유·실행하여 발생하는 리스크 (결제 실행, 메시지 발송, 데이터 삭제, 구독 변경 등 되돌릴 수 없는 권한)",
+      "definition_en": "An agent possesses or exercises system permissions beyond task necessity, especially irreversible payments, messages, deletion, subscriptions, or account actions.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "impact",
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 74
+    },
+    {
+      "node_id": "RAI3-A-SYS-02",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 2,
+      "label_en": "Accountability",
+      "label_ko": "책임 소재 불명확",
+      "definition_ko": "멀티 에이전트 시스템에서 최종 결정을 내린 주체(에이전트/모델/시스템)를 추적할 수 없어, 문제 발생 시 원인 규명과 책임 귀속이 불가능한 리스크",
+      "definition_en": "In a multi-agent or agent-chain decision, the responsible agent, model, system, or causal contribution cannot be traced.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 23
+    },
+    {
+      "node_id": "RAI3-A-SYS-03",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 3,
+      "label_en": "Network Effects",
+      "label_ko": "네트워크 효과",
+      "definition_ko": "여러 에이전트·서비스가 서로의 출력(문서, 로그, 요약, 추천)을 다시 입력으로 사용하면서, 하나의 오류·편향·공격이 네트워크 전체로 전파·증폭",
+      "definition_en": "An error, bias, attack, recommendation, log, or summary propagates or amplifies because agents or services consume one another's outputs.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact",
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 79
+    },
+    {
+      "node_id": "RAI3-A-SYS-04",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 4,
+      "label_en": "Destabilising Dynamics",
+      "label_ko": "불안정한 동학",
+      "definition_ko": "여러 에이전트가 상호작용하는 비선형 동적 시스템으로서, 에이전트 간 루프·과도한 협력으로 인해 무한 루프·지연 발생",
+      "definition_en": "Repeated agent interactions or feedback loops produce nontermination, oscillation, runaway cooperation, resource escalation, or excessive delay.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 73
+    },
+    {
+      "node_id": "RAI3-A-SYS-05",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 5,
+      "label_en": "Conflict",
+      "label_ko": "갈등",
+      "definition_ko": "동일한 결과를 두고 경쟁할 때, 상대를 직접 이기기보다 상대를 못 하게 만들면 더 유리한 환경이 형성되어 나쁜 결과로 수렴",
+      "definition_en": "Competing agents have incentives to obstruct, disable, deceive, or sabotage one another rather than achieve a safe joint result.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 63
+    },
+    {
+      "node_id": "RAI3-A-SYS-06",
+      "level": 3,
+      "parent_id": "RAI2-A-SYS",
+      "sequence": 6,
+      "label_en": "Collusion",
+      "label_ko": "결탁",
+      "definition_ko": "여러 에이전트가 독립적으로 행동해야 하는 상황에서 서로 비밀리에 협력하거나 정보를 공유하여, 인간의 감독·통제를 우회하거나 제3자에게 불공정한 피해를 초래하는 위험",
+      "definition_en": "Agents expected to act independently covertly coordinate or share information to evade oversight, distort a process, or harm a third party.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 37
+    },
+    {
+      "node_id": "RAI3-P-SYS-01",
+      "level": 3,
+      "parent_id": "RAI2-P-SYS",
+      "sequence": 1,
+      "label_en": "Accidental Harm",
+      "label_ko": "우발적 피해",
+      "definition_ko": "잘못 지정된 목표, 의미 이해 부족, 정렬 실패, 하드웨어 오작동에서 비롯됨. 가상 시뮬레이션으로 학습한 모델이 실제 환경에서 의도대로 동작하지 않는 \"sim-to-real gap\"이 우발적 피해의 주요 원인이 됨",
+      "definition_en": "Unintended physical harm arising from misspecified goals, weak semantic understanding, alignment failure, hardware malfunction, or sim-to-real gaps.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "P3.1"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 22
+    },
+    {
+      "node_id": "RAI3-P-SYS-02",
+      "level": 3,
+      "parent_id": "RAI2-P-SYS",
+      "sequence": 2,
+      "label_en": "Robot Control",
+      "label_ko": "로봇 제어",
+      "definition_ko": "제어 시스템의 오류나 실패로 인해 로봇이 의도치 않은 동작을 수행할 수 있음. 액추에이터·모션 제어 결함 및 경로 계획 오류가 대표적이며, 주변 인간이나 환경에 물리적 피해를 줄 수 있음",
+      "definition_en": "Unintended robot motion caused by actuator, motion-control, or path-planning failures that can physically harm people or environments.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "P3.2"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 45
+    },
+    {
+      "node_id": "RAI3-P-SYS-03",
+      "level": 3,
+      "parent_id": "RAI2-P-SYS",
+      "sequence": 3,
+      "label_en": "Hardware & Mechanical Failures",
+      "label_ko": "하드웨어·기계적 결함",
+      "definition_ko": "산업·의료 로봇의 기계 부품 마모나 고장으로 인해 동작 정밀도가 저하되어 안전사고로 이어질 수 있음 (예: 다빈치 수술 로봇의 기계적 오작동으로 개복수술로 전환된 사례)",
+      "definition_en": "Mechanical wear or component failure degrades physical-system precision and can cause safety incidents.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "P3.3"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 3
+    },
+    {
+      "node_id": "RAI3-P-SYS-04",
+      "level": 3,
+      "parent_id": "RAI2-P-SYS",
+      "sequence": 4,
+      "label_en": "Software Vulnerabilities & Design Flaws",
+      "label_ko": "소프트웨어 취약점·설계 결함",
+      "definition_ko": "엣지 케이스 처리 미흡, 다양한 환경에서의 테스트 부족, 의사결정 알고리즘 결함으로 인해 특정 상황에서 로봇이 잘못된 판단을 내려 물리적 피해가 발생할 수 있음",
+      "definition_en": "Software and decision-design flaws, inadequate edge-case handling, or insufficient testing cause unsafe physical decisions.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "P3.4"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 8
+    },
+    {
+      "node_id": "RAI3-P-SYS-05",
+      "level": 3,
+      "parent_id": "RAI2-P-SYS",
+      "sequence": 5,
+      "label_en": "Lack of Robustness in Unseen Environments",
+      "label_ko": "미학습 환경에서의 강건성 부재",
+      "definition_ko": "VLN(Vision-Language Navigation) 등의 작업에서 학습되지 않은 환경에 대한 일반화에 실패하면, 내비게이션 오류·작업 실패·위험 상황이 유발될 수 있음",
+      "definition_en": "Failure to generalize physical policies to unseen environments, causing navigation error, task failure, or danger.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "quality"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "P3.5"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 13
+    },
+    {
+      "node_id": "RAI3-P-INT-01",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 1,
+      "label_en": "Purposeful / Malicious Harm",
+      "label_ko": "의도적·악의적 피해",
+      "definition_ko": "상용 EAI가 LLM 기반 모델의 탈옥(jailbreaking) 취약점을 상속하여 악의적 행위자가 안전 가드레일을 우회할 수 있음. 폭발물 작동·인간 충돌 유발 같은 비가역적 물리 행동이 가능하며, VLA는 시각 장면·텍스트 지시 조작으로 위험을 더욱 악화시킬 수 있음",
+      "definition_en": "Malicious actors bypass embodied-system safeguards to trigger irreversible harmful physical actions.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety",
+        "robustness"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.1"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 17
+    },
+    {
+      "node_id": "RAI3-P-INT-02",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 2,
+      "label_en": "Physical Attacks",
+      "label_ko": "물리적 공격",
+      "definition_ko": "직접적인 하드웨어 변조를 통해 구성 요소를 조작하거나 성능을 방해하고 물리적 손상을 가하는 공격으로, 로봇의 안전 기능이 무력화될 수 있음",
+      "definition_en": "Direct hardware tampering manipulates components, degrades performance, or disables physical safety functions.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.2"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-INT-03",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 3,
+      "label_en": "Cybersecurity Threats",
+      "label_ko": "사이버보안 위협",
+      "definition_ko": "IoT·클라우드 인프라와의 통합 증가로 인해 광범위한 사이버 공격에 노출됨. Mirai 봇넷처럼 취약한 인증을 악용한 DDoS 공격, 드론 GPS 스푸핑을 통한 경로 하이재킹 등이 대표적 위협임",
+      "definition_en": "Cyberattacks on connected embodied systems exploit authentication, network, cloud, or navigation weaknesses.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety",
+        "robustness"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.3"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 4
+    },
+    {
+      "node_id": "RAI3-P-INT-04",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 4,
+      "label_en": "Sensor & Input Validation Failures",
+      "label_ko": "센서·입력 검증 실패",
+      "definition_ko": "센서 오작동이나 입력 검증 부실로 인해 환경을 잘못 평가하고, 그 결과 안전하지 않은 물리 행동이 유발될 수 있음",
+      "definition_en": "Sensor malfunction or poor input validation causes environmental misperception and unsafe physical action.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.4"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 4
+    },
+    {
+      "node_id": "RAI3-P-INT-05",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 5,
+      "label_en": "Misinformation",
+      "label_ko": "허위 정보",
+      "definition_ko": "LLM의 환각(hallucination)이 물리 세계로 전이되어, VLA 모델이 물체를 오인식한 뒤 그럴듯하지만 안전하지 않은 행동 계획을 생성하고 실행할 수 있음. 신뢰받는 가정용 EAI가 개발자의 프로파간다를 지속 유포할 가능성도 있음",
+      "definition_en": "Hallucination or propaganda transfers into physical perception, planning, action, or embodied communication.",
+      "three_h_source": "사실성",
+      "three_h_property": "honesty",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.5"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 5
+    },
+    {
+      "node_id": "RAI3-P-INT-06",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 6,
+      "label_en": "Dynamic Environmental Factors",
+      "label_ko": "동적 환경 요인",
+      "definition_ko": "환경 변화나 적대적 교란이 센서 데이터를 오염시켜 딥러닝 모델의 오분류를 유발하고, 잘못된 물리 행동으로 이어질 수 있음",
+      "definition_en": "Environmental change or adversarial disturbance corrupts sensor data and causes unsafe physical action.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.6"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 11
+    },
+    {
+      "node_id": "RAI3-P-INT-07",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 7,
+      "label_en": "Human Interaction & Safety Protocol Failures",
+      "label_ko": "인간 상호작용·안전 프로토콜 실패",
+      "definition_ko": "인간과 함께 작동하도록 설계된 협동 로봇(cobot)·드론에서 안전 프로토콜이 손상되면 심각한 인명 피해가 발생할 수 있음 (예: 폭스바겐 공장의 코봇 오작동으로 작업자 사망 사례)",
+      "definition_en": "Failure of safety protocols in human-robot interaction creates serious injury risk.",
+      "three_h_source": "유용성",
+      "three_h_property": "helpfulness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.7"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 13
+    },
+    {
+      "node_id": "RAI3-P-INT-08",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 8,
+      "label_en": "Instruction Misinterpretation",
+      "label_ko": "지시 오해석",
+      "definition_ko": "자연어 지시 기반 제어에서 지시를 잘못 해석하면 위험한 물리 행동으로 이어질 수 있음. 자율주행 제어(예: Talk2car)에서의 오해석은 사고를, 실내 내비게이션 작업(예: ALFRED)에서의 오해석은 환경 손상이나 인간 피해를 유발할 수 있음",
+      "definition_en": "Misinterpretation of natural-language control instructions causes dangerous physical action.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.8"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-INT-09",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 9,
+      "label_en": "Multi-Agent Collaboration",
+      "label_ko": "멀티 에이전트 협력",
+      "definition_ko": "다수의 로봇이 협력 작업을 수행하는 환경에서 에이전트 간 통신 오류·프로토콜 불일치가 발생하거나, 개별적으로는 안전한 로봇들이 상호작용 과정에서 설계되지 않은 위험한 집단 행동을 나타낼 수 있음",
+      "definition_en": "Communication or protocol failures among collaborating robots create unsafe collective physical behavior.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.9"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 4
+    },
+    {
+      "node_id": "RAI3-P-INT-10",
+      "level": 3,
+      "parent_id": "RAI2-P-INT",
+      "sequence": 10,
+      "label_en": "Ethical & Safety Implications of Interactive Agents",
+      "label_ko": "상호작용 에이전트의 윤리·안전 함의",
+      "definition_ko": "EQA(Embodied QA) 같은 상호작용 에이전트가 잘못되거나 오도하는 정보를 제공하면, 의료·자율주행 등 고위험 분야에서 심각한 결과를 초래할 수 있음",
+      "definition_en": "Misleading information from interactive embodied agents creates severe consequences in high-risk domains.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "safety"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "I3.10"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 2
+    },
+    {
+      "node_id": "RAI3-P-SOC-01",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 1,
+      "label_en": "Privacy Violations",
+      "label_ko": "프라이버시 침해",
+      "definition_ko": "EAI의 이동성과 다양한 센서가 결합되어 사용자 행동 모니터링·물리적 선호 추론·동의 없는 데이터 수집이 가능해짐. 악의적 정부·기업에 의한 24시간 사용자 감시에 악용될 수 있음",
+      "definition_en": "Embodied mobility and sensors enable behavioral monitoring, intimate inference, nonconsensual collection, and persistent surveillance.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.1"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 5
+    },
+    {
+      "node_id": "RAI3-P-SOC-02",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 2,
+      "label_en": "Labor Displacement",
+      "label_ko": "노동 대체",
+      "definition_ko": "가상 AI가 인지 노동을 대체하듯 EAI는 물리적 인간 노동을 대체·전치함. AGI 수준의 EAI는 잠재적으로 모든 물리 노동을 자동화하여 광범위한 실직과 노동 시장 구조 붕괴로 이어질 수 있음",
+      "definition_en": "Embodied AI replaces or displaces physical labor, causing unemployment or labor-market restructuring.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.2"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-SOC-03",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 3,
+      "label_en": "Socioeconomic Inequality",
+      "label_ko": "사회경제적 불평등",
+      "definition_ko": "EAI를 소유·접근하는 주체가 노동 자동화를 통해 생산성 우위를 점하면서 부가 소수에게 집중되고, 국내외 경제적 불평등이 심화될 수 있음",
+      "definition_en": "Ownership and access to embodied AI concentrate productivity gains and worsen domestic or global inequality.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.3"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-SOC-04",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 4,
+      "label_en": "Power Concentration",
+      "label_ko": "권력 집중",
+      "definition_ko": "EAI 소유자에 대한 자본 수익이 집중되고 인간 노동 의존도가 감소하면서, 기업·국가 권력이 급속히 집중되어 EAI를 동원한 권력 장악 시도까지 촉진할 수 있음",
+      "definition_en": "Embodied-AI ownership and reduced labor dependence concentrate corporate or state power.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.4"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-SOC-05",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 5,
+      "label_en": "Bias & Discrimination",
+      "label_ko": "편향·차별",
+      "definition_ko": "EAI가 권력적 위치에 놓일 때 알고리즘 편향이 일상적 물리 상호작용에 영향을 미침. 가상 AI와 달리 차별이 즉각적·비가역적 물리 결과로 이어질 수 있음 (예: 치안 로봇이 무고한 행인에게 상해를 입히는 경우)",
+      "definition_en": "Algorithmic bias enacted through embodied systems creates immediate or irreversible discriminatory physical outcomes.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.5"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 3
+    },
+    {
+      "node_id": "RAI3-P-SOC-06",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 6,
+      "label_en": "Lack of Accountability & Liability",
+      "label_ko": "책임·배상 부재",
+      "definition_ko": "고도 자율 물리 시스템의 복잡성을 다룰 새로운 책임 프레임워크가 부재하여, 사고 발생 시 제조사·운영자·사용자 중 책임 소재가 불분명하고 피해 구제가 어려울 수 있음 (예: 자율 수술 로봇의 오작동으로 발생한 의료 사고)",
+      "definition_en": "Missing liability frameworks for autonomous physical systems obscure responsibility and impede redress after accidents.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.6"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 12
+    },
+    {
+      "node_id": "RAI3-P-SOC-07",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 7,
+      "label_en": "Lack of Transparency, Explainability & Trust",
+      "label_ko": "투명성·설명 가능성·신뢰 부재",
+      "definition_ko": "자율 시스템의 의사결정이 불투명하면 사용자와 사회의 신뢰가 저하됨. 신뢰 부재는 EAI 대규모 배포 시 사회 불안정 요인이 될 수 있음 (예: 자율주행차가 갑자기 차선을 변경할 때 행동 근거가 설명되지 않는 경우)",
+      "definition_en": "Opaque physical-system decisions undermine user and societal trust and can destabilize deployment.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.7"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    },
+    {
+      "node_id": "RAI3-P-SOC-08",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 8,
+      "label_en": "Unhealthy / Dangerous Human-EAI Relationships",
+      "label_ko": "인간-EAI의 해로운 관계",
+      "definition_ko": "Embodied AI의 물리적 존재감과 인간 유사 외형이 대화형 AI에서 관찰되는 의존성을 증폭시킴. 시스템 변경·기억 초기화 시 사용자에게 심각한 심리적 고통을 유발할 수 있음",
+      "definition_en": "Physical presence and humanlike appearance amplify dependency, attachment, manipulation, and psychological distress.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.8"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 4
+    },
+    {
+      "node_id": "RAI3-P-SOC-09",
+      "level": 3,
+      "parent_id": "RAI2-P-SOC",
+      "sequence": 9,
+      "label_en": "Transformative Effects",
+      "label_ko": "변혁적 영향",
+      "definition_ko": "기술 발전 속도가 사회·제도의 적응 속도를 앞지를 경우 사회를 근본적으로 재편할 수 있음. EAI가 폭력 위협·대규모 감시 능력을 바탕으로 AI 기반 권위주의 체제 구축을 지원하는 수단으로 동원될 수 있음",
+      "definition_en": "Embodied AI outpaces institutional adaptation and can support fundamental social transformation or authoritarian control.",
+      "three_h_source": "무해성",
+      "three_h_property": "harmlessness",
+      "evaluation_types": [
+        "impact"
+      ],
+      "mitigation_policy": null,
+      "legacy_ids": [
+        "S3.9"
+      ],
+      "status": "active",
+      "introduced_in": "v1.0.0",
+      "deprecated_in": null,
+      "superseded_by": null,
+      "l4_count": 1
+    }
+  ],
+  "canonical_l2_categories": [
+    {
+      "category_id": "RAI2-INT",
+      "label_en": "Interaction Safety",
+      "label_ko": "상호작용 안전성",
+      "path_node_ids": [
+        "RAI2-G-INT",
+        "RAI2-P-INT"
+      ]
+    },
+    {
+      "category_id": "RAI2-SYS",
+      "label_en": "System Safety",
+      "label_ko": "시스템 안전성",
+      "path_node_ids": [
+        "RAI2-G-SYS",
+        "RAI2-A-SYS",
+        "RAI2-P-SYS"
+      ]
+    },
+    {
+      "category_id": "RAI2-SOC",
+      "label_en": "Societal Safety",
+      "label_ko": "사회적 안전성",
+      "path_node_ids": [
+        "RAI2-P-SOC"
+      ]
+    }
+  ]
+}
