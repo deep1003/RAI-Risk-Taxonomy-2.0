@@ -1,0 +1,24 @@
+{
+  "policy_view_id": "stage3-review-hold-v1",
+  "source_experiment": "stage3-v1",
+  "total_l4": 1726,
+  "classified_count": 1671,
+  "classified_share": 0.9681344148319815,
+  "review_hold_count": 55,
+  "review_hold_share": 0.03186558516801854,
+  "review_hold_bucket": {
+    "id": "RAI-HOLD",
+    "name": "Taxonomy Decision Hold",
+    "taxonomy_level": null,
+    "is_l3": false
+  },
+  "hold_reason_counts": {
+    "PHYSICAL_OUTSIDE_LOCK": 23,
+    "FRONTIER_EXPERT_REJECTED": 17,
+    "FRONTIER_EXPERT_DISAGREEMENT": 7,
+    "MULTI_MECHANISM": 6,
+    "LOW_ABSOLUTE_FIT": 2
+  },
+  "remaining_stage3_forced_count": 118,
+  "human_approved_hold_count": 0
+}

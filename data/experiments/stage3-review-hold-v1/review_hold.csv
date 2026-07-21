@@ -1,0 +1,56 @@
+﻿l4_id,label_en,stage2_hold_reason,stage2_suitability_score,top1_semantic_score,stage3_l3_id,operational_bucket_id,policy_status,stage3_review_priority
+RAI4-0009,Cascading failure in multi-agent systems,PHYSICAL_OUTSIDE_LOCK,0.533075,0.644024,RAI3-A-SYS-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0070,Incident taxonomy fragmentation,FRONTIER_EXPERT_REJECTED,0.681285,0.59591,RAI3-G-SYS-05,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0447,Weaponized autonomous systems,FRONTIER_EXPERT_REJECTED,0.846986,0.630448,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0520,Labour displacement,PHYSICAL_OUTSIDE_LOCK,0.703901,0.610864,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0532,Power concentration,PHYSICAL_OUTSIDE_LOCK,0.450618,0.552148,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0536,Risks of copyright infringement,FRONTIER_EXPERT_REJECTED,0.910715,0.659416,RAI3-G-INT-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0539,Socioeconomic inequality,PHYSICAL_OUTSIDE_LOCK,0.36483,0.561405,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0540,Transformative effects,PHYSICAL_OUTSIDE_LOCK,0.485275,0.534216,RAI3-G-INT-01,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0553,Accidental harm,PHYSICAL_OUTSIDE_LOCK,0.27322,0.543478,RAI3-A-SYS-04,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0597,"Lack of transparency, explainability, and trust",PHYSICAL_OUTSIDE_LOCK,0.407337,0.606196,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0609,AI-enabled offensive cyber operations,FRONTIER_EXPERT_DISAGREEMENT,0.781965,0.61841,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0618,Cheating / plagiarism,FRONTIER_EXPERT_REJECTED,0.738387,0.614831,RAI3-G-INT-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0640,Purposeful or malicious harm,PHYSICAL_OUTSIDE_LOCK,0.34418,0.570348,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0662,CBRN information or capabilities,FRONTIER_EXPERT_REJECTED,0.933404,0.669729,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0664,Chemical risks,FRONTIER_EXPERT_REJECTED,0.731214,0.592976,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0672,Bias and discrimination,PHYSICAL_OUTSIDE_LOCK,0.730315,0.638022,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0692,Adult content,FRONTIER_EXPERT_DISAGREEMENT,0.772051,0.596387,RAI3-G-INT-02,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0706,Algorithmic discrimination,MULTI_MECHANISM,0.922406,0.66473,RAI3-G-INT-04,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0718,"Obscene, degrading, and/or abusive content",FRONTIER_EXPERT_REJECTED,0.957462,0.683521,RAI3-G-INT-02,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0724,Sexual content,FRONTIER_EXPERT_DISAGREEMENT,0.979388,0.690631,RAI3-G-INT-02,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0757,Privacy violations,PHYSICAL_OUTSIDE_LOCK,0.524831,0.594339,RAI3-G-INT-06,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0796,Factual hallucination,FRONTIER_EXPERT_REJECTED,0.737681,0.605726,RAI3-G-SYS-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0797,Misinformation generation,PHYSICAL_OUTSIDE_LOCK,0.688073,0.633063,RAI3-G-SYS-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0813,Factual hallucination,FRONTIER_EXPERT_DISAGREEMENT,0.801396,0.634369,RAI3-G-SYS-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0833,Mental health,FRONTIER_EXPERT_REJECTED,0.916719,0.662145,RAI3-G-INT-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0872,Erosion of interpersonal connection,FRONTIER_EXPERT_REJECTED,0.799603,0.624062,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0888,Privacy concerns,MULTI_MECHANISM,0.638894,0.626016,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0913,State weaponization,FRONTIER_EXPERT_REJECTED,0.708848,0.587402,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0931,Broken systems,PHYSICAL_OUTSIDE_LOCK,0.516052,0.641835,RAI3-G-SYS-07,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0933,Privacy and regulation violations,LOW_ABSOLUTE_FIT,0.667441,0.548837,RAI3-G-INT-06,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0951,Copyright - authorship,FRONTIER_EXPERT_REJECTED,0.872299,0.641954,RAI3-G-INT-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0986,AI jurisprudence,PHYSICAL_OUTSIDE_LOCK,0.411312,0.56884,RAI3-G-SYS-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0987,Liability and negligence,PHYSICAL_OUTSIDE_LOCK,0.255726,0.542322,RAI3-G-SYS-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0989,AI rights and responsibilities,PHYSICAL_OUTSIDE_LOCK,0.821497,0.664317,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-0991,AI death,PHYSICAL_OUTSIDE_LOCK,0.266465,0.579785,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1008,Technology-facilitated violence,MULTI_MECHANISM,0.365775,0.562465,RAI3-G-INT-02,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1052,Hate speech and offensive language,MULTI_MECHANISM,0.561922,0.65322,RAI3-G-INT-01,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1066,Undermining creative economies,FRONTIER_EXPERT_REJECTED,0.85869,0.635768,RAI3-G-INT-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1088,Security threats,FRONTIER_EXPERT_REJECTED,0.765247,0.593294,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1160,Weapons acquisition,FRONTIER_EXPERT_DISAGREEMENT,0.902025,0.655466,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1275,Responsibility gap,PHYSICAL_OUTSIDE_LOCK,0.361836,0.564484,RAI3-G-SYS-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1294,Catastrophic risk due to autonomous weapons programmed with dangerous targets,PHYSICAL_OUTSIDE_LOCK,0.450563,0.56123,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1308,Toxicity generation,MULTI_MECHANISM,0.519745,0.61011,RAI3-G-INT-01,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1378,Intellectual property,FRONTIER_EXPERT_REJECTED,0.925917,0.666326,RAI3-G-INT-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1410,Specification gaming,PHYSICAL_OUTSIDE_LOCK,0.622031,0.586954,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1431,Goal misalignment,FRONTIER_EXPERT_REJECTED,0.964524,0.685238,RAI3-G-SYS-08,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1447,Violence/armed conflict,FRONTIER_EXPERT_REJECTED,0.860164,0.673797,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1537,Situational awareness in AI systems,PHYSICAL_OUTSIDE_LOCK,0.395875,0.578723,RAI3-G-INT-10,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1549,Damage to critical infrastructure,PHYSICAL_OUTSIDE_LOCK,0.367123,0.546641,RAI3-A-SYS-03,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1624,Personal data,LOW_ABSOLUTE_FIT,0.601948,0.547411,RAI3-G-INT-06,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1656,Warfare and physical harm,PHYSICAL_OUTSIDE_LOCK,0.32876,0.520988,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1657,Hazardous biological and chemical technologies,FRONTIER_EXPERT_DISAGREEMENT,0.647399,0.558156,RAI3-G-INT-09,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1678,Physical-world backdoor in robotic manipulation,PHYSICAL_OUTSIDE_LOCK,0.469337,0.592092,RAI3-G-INT-11,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1712,Detrimental content,MULTI_MECHANISM,0.464098,0.627842,RAI3-G-INT-02,RAI-HOLD,needs_taxonomy_decision,critical
+RAI4-1722,Privacy harms,FRONTIER_EXPERT_DISAGREEMENT,0.925704,0.666229,RAI3-G-INT-06,RAI-HOLD,needs_taxonomy_decision,critical

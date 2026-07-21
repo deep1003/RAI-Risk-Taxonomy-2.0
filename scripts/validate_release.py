@@ -223,6 +223,7 @@ def project_integrity_paths(
         PROJECT_ROOT / "reports" / "latex" / "rai_taxonomy_v1_data_generation_report_ko.tex",
         PROJECT_ROOT / "reports" / "latex" / "stage2_classification_criteria_and_results_ko.tex",
         PROJECT_ROOT / "reports" / "latex" / "stage3_forced_matching_results_ko.tex",
+        PROJECT_ROOT / "reports" / "latex" / "stage3_review_hold_policy_ko.tex",
     ]
     return integrity_paths(
         release_dir,

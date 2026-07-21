@@ -161,6 +161,30 @@
       "rows": null
     },
     {
+      "path": "data/experiments/stage3-review-hold-v1/placements.json",
+      "sha256": "c8260ff90373894a3bdd15d4742c635e7fd5ce5babb635d0b572a1ef527078df",
+      "bytes": 2591777,
+      "rows": 1726
+    },
+    {
+      "path": "data/experiments/stage3-review-hold-v1/review_hold.csv",
+      "sha256": "6e38090a81b62e5dfd28026c9957c032b61f3cf3875b8b4c9c0214f6b7bbf9dd",
+      "bytes": 7539,
+      "rows": null
+    },
+    {
+      "path": "data/experiments/stage3-review-hold-v1/review_hold.json",
+      "sha256": "c36b76147b77e3748e2fa59dc25cdc1117dc62b90ca0997fdb0606568aefcb66",
+      "bytes": 84404,
+      "rows": 55
+    },
+    {
+      "path": "data/experiments/stage3-review-hold-v1/summary.json",
+      "sha256": "2d8281f6c21f00a19061a2d87891545a2756f9724de3c2d1d8fb5e38f744e213",
+      "bytes": 648,
+      "rows": null
+    },
+    {
       "path": "data/experiments/stage3-v1/stage3_config.json",
       "sha256": "e12da6c82b255bd53fe997e5a6c8c178828989ca730a84caa0df6b208795ad8a",
       "bytes": 457,
@@ -461,6 +485,12 @@
       "rows": null
     },
     {
+      "path": "reports/latex/stage3_review_hold_policy_ko.tex",
+      "sha256": "c0ae1434e751947e43eecc8d344e01a4c86f58bfd4c730678d7888a009876fb0",
+      "bytes": 2832,
+      "rows": null
+    },
+    {
       "path": "reports/statistics/stage2_unclassified_statistics.json",
       "sha256": "d674958e798f38ff9485f883f6dbb66b639c4997b5a8f07ea509aaf877778a8f",
       "bytes": 1570,
@@ -660,7 +690,7 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "2937539e38905eabe6f7b0715c682f81f5029dce792fe4c9353efbe2e3e83c5c",
+      "sha256": "deb815109f09bbbe5c33b12273981dd5c1ada060355664ce5c80696bef5b672a",
       "bytes": 113084,
       "rows": null
     },
@@ -749,6 +779,12 @@
       "rows": null
     },
     {
+      "path": "scripts/build_stage3_review_hold.py",
+      "sha256": "95764a1b71dfde8fd7ad6dd0b63c462d1958d6326844d04a752ce1bd278e28c1",
+      "bytes": 3327,
+      "rows": null
+    },
+    {
       "path": "scripts/create_remap_release.py",
       "sha256": "8de5ad36c79b357af70683e41e018f1afc5e710c887ee42f3ba6f95333f44ee7",
       "bytes": 15570,
@@ -774,8 +810,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "bfee6cc902f7e67ef5e93b140862f02e9b008ee16c8f9191201e33516ace803f",
-      "bytes": 53856,
+      "sha256": "ffd9fbf9f8877ca1859ee916d67fadf3e172ce80d2ee8560796f770660815094",
+      "bytes": 53937,
       "rows": null
     },
     {
@@ -824,6 +860,12 @@
       "path": "tests/test_remap_workflow.py",
       "sha256": "92f0f5dec9387a5d1df7c16acaf42c278c9e121f6420bd3bda7534352e07bc6e",
       "bytes": 2991,
+      "rows": null
+    },
+    {
+      "path": "tests/test_review_hold_policy.py",
+      "sha256": "519b8c3c8cb567732c81015f54017bb4299bf547ba942438adc510e3915f33a6",
+      "bytes": 1627,
       "rows": null
     }
   ],

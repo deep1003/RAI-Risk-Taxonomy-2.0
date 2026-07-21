@@ -1,0 +1,80 @@
+% !TEX program = xelatex
+% Source only. Per user instruction, do not compile to PDF.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{booktabs,longtable}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\newcommand{\code}[1]{\texttt{#1}}
+\title{\sffamily\bfseries RAI Risk Taxonomy\\Stage 3 보류 버킷 분리 정책}
+\author{Review-hold policy view}
+\date{2026년 7월 21일}
+
+\begin{document}
+\maketitle
+
+\section*{결론}
+
+기존 Stage 3에서 강제 매칭했던 173건 중 hard hold 55건을 분류체계 밖의
+\code{RAI-HOLD} 운영 버킷으로 분리한다. 따라서 전체 1,726건 중
+1,671건(96.8134\%)은 50개 L3에 배치되고, 55건(3.1866\%)은
+\code{needs\_taxonomy\_decision}으로 보류된다. \code{RAI-HOLD}는 신규 L3가
+아니며 L0--L3 분포와 커버리지 계산에서 제외한다.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrr}
+\toprule
+정책 상태 & 건수 & 전체 비율 \\
+\midrule
+50개 L3 배치 & 1,671 & 96.8134\% \\
+Taxonomy Decision Hold & 55 & 3.1866\% \\
+\midrule
+합계 & 1,726 & 100.0000\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{보류 사유}
+
+\begin{longtable}{lrr}
+\toprule
+사유 & 건수 & 전체 비율 \\
+\midrule
+\endhead
+PHYSICAL\_OUTSIDE\_LOCK & 23 & 1.3326\% \\
+FRONTIER\_EXPERT\_REJECTED & 17 & 0.9849\% \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 0.4056\% \\
+MULTI\_MECHANISM & 6 & 0.3476\% \\
+LOW\_ABSOLUTE\_FIT & 2 & 0.1159\% \\
+\midrule
+합계 & 55 & 3.1866\% \\
+\bottomrule
+\end{longtable}
+
+Physical 경계 검토 23건은 실제 Physical AI 확정 카드가 아니라, 물리적 작동
+키워드가 검출됐지만 잠긴 Physical AI 정답 집합에 속하지 않아 사람 검토가 필요한
+카드다. 보류 55건은 모두 \code{human\_approved=false}이며 기존 Stage 3의
+강제 후보 L3는 감사용 필드로만 보존하고 정책상 L3는 null로 둔다.
+
+\section{운영 표시 규칙}
+
+홈페이지에서는 50개 L3와 같은 트리 노드로 표시하지 않고 별도 ``검토 보류''
+필터 또는 큐로 표시한다. 카드에는 원래 보류 사유, 강제 후보 L3, 점수와
+\code{critical} 검토 우선순위를 유지한다. 사람 승인 후에만 기존 L3로 이동하거나
+신규 L3 제안 절차에 포함한다.
+
+\section*{산출물}
+\begin{itemize}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/placements.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/review_hold.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/review_hold.csv}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/summary.json}
+\end{itemize}
+
+\vfill
+\noindent\textbf{문서 상태:} LaTeX source only. PDF 컴파일은 수행하지 않는다.
+\end{document}
