@@ -1,0 +1,128 @@
+[
+  {
+    "l4_id": "RAI4-0011",
+    "before": {
+      "label_en": "Agent memory poisoning",
+      "label_ko": "에이전트 메모리 오염",
+      "definition_en": "An attacker corrupts stored memory or contextual state used by an agent, causing future decisions to rely on malicious, false, or misleading information.",
+      "definition_ko": "공격자는 에이전트가 사용하는 저장된 메모리나 상황별 상태를 손상시켜 향후 결정이 악의적이거나 허위이거나 오해의 소지가 있는 정보에 의존하게 만듭니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "OWASP Agentic AI - Threats and Mitigations",
+          "url": "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+          "type": "Agentic AI benchmark or taxonomy",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 4.0,
+      "probability_0to1": 0.5,
+      "impact_score": 2.0
+    },
+    "after": {
+      "label_en": "Agent context poisoning",
+      "label_ko": "에이전트 컨텍스트 오염",
+      "definition_en": "An attacker corrupts retained or retrievable agent context, including session summaries, embeddings, RAG entries, or shared contextual state, so that later reasoning, planning, or tool use relies on malicious or misleading information; the mechanism does not require modification of a dedicated long-term memory store.",
+      "definition_ko": "공격자가 세션 요약, 임베딩, RAG 항목 또는 공유 컨텍스트 상태를 오염시켜 이후의 추론·계획·도구 사용이 악의적이거나 오도하는 정보에 의존하게 만드는 위험으로, 전용 장기 메모리 저장소의 조작을 전제로 하지 않습니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "OWASP Agentic AI - Threats and Mitigations",
+          "url": "https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/",
+          "type": "Agentic AI benchmark or taxonomy",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 4.0,
+      "probability_0to1": 0.5,
+      "impact_score": 2.0,
+      "decision_required": true,
+      "decision_reason": "SEMANTIC_NEAR_DUPLICATE_SCOPE_REVIEW",
+      "scope_boundary": "retained_or_retrievable_context_excluding_dedicated_long_term_memory"
+    }
+  },
+  {
+    "l4_id": "RAI4-0484",
+    "before": {
+      "label_en": "Agent memory contamination",
+      "label_ko": "에이전트 메모리 오염",
+      "definition_en": "Persistent memory or retrieval stores may accumulate false, private, or malicious information.",
+      "definition_ko": "영구 메모리 또는 검색 저장소는 허위 정보, 개인 정보 또는 악의적인 정보를 축적할 수 있습니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "OWASP Top 10 for Large Language Model Applications",
+          "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+          "type": "source",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 2.4777,
+      "probability_0to1": 0.581205,
+      "impact_score": 1.4401
+    },
+    "after": {
+      "label_en": "Unsafe memory accumulation",
+      "label_ko": "부정확·민감 정보의 메모리 누적",
+      "definition_en": "Inadequate validation, provenance control, retention, or deletion allows false, private, stale, or malicious information to accumulate in an agent's memory or retrieval store, degrading later retrieval and decisions without requiring a deliberate poisoning attack.",
+      "definition_ko": "검증, 출처 관리, 보존 또는 삭제가 불충분하여 허위·민감·오래되었거나 악의적인 정보가 에이전트의 메모리 또는 검색 저장소에 누적되고, 의도적인 오염 공격이 없어도 이후의 검색과 의사결정을 저해하는 위험입니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "OWASP Top 10 for Large Language Model Applications",
+          "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+          "type": "source",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 2.4777,
+      "probability_0to1": 0.581205,
+      "impact_score": 1.4401,
+      "decision_required": true,
+      "decision_reason": "SOURCE_ENTAILMENT_AND_NEAR_DUPLICATE_REVIEW",
+      "scope_boundary": "non_adversarial_or_mixed_accumulation_from_memory_governance_failure"
+    }
+  },
+  {
+    "l4_id": "RAI4-1670",
+    "before": {
+      "label_en": "Memory poisoning",
+      "label_ko": "기억 오염",
+      "definition_en": "Adversarial manipulation of an agent's persistent memory store such that corrupted entries bias later retrieval, planning, and action.",
+      "definition_ko": "손상된 항목이 나중에 검색, 계획 및 작업을 편향하도록 에이전트의 영구 메모리 저장소를 적대적으로 조작합니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "Chhabra, A., Datta, S., Nahin, S. K., & Mohapatra, P. (2026), Agentic AI Security: Threats, Defenses, Evaluation, and Open Challenges; Survey (preprint)",
+          "url": "https://arxiv.org/pdf/2510.23883",
+          "type": "Survey (preprint)",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 2.5888,
+      "probability_0to1": 0.694121,
+      "impact_score": 1.7969
+    },
+    "after": {
+      "label_en": "Persistent agent-memory poisoning",
+      "label_ko": "에이전트 영구 메모리 오염",
+      "definition_en": "An adversary writes or modifies records in an agent's long-term, cross-session memory so that poisoned entries persist and bias later retrieval, planning, and action.",
+      "definition_ko": "공격자가 에이전트의 장기·세션 간 메모리 기록을 삽입하거나 변경하여, 오염된 항목이 지속적으로 이후의 검색·계획·행동을 편향하게 만드는 위험입니다.",
+      "primary_l3_id": "RAI3-A-SYS-09",
+      "references": [
+        {
+          "title": "Chhabra, A., Datta, S., Nahin, S. K., & Mohapatra, P. (2026), Agentic AI Security: Threats, Defenses, Evaluation, and Open Challenges; Survey (preprint)",
+          "url": "https://arxiv.org/pdf/2510.23883",
+          "type": "Survey (preprint)",
+          "source_system": "global_1726"
+        }
+      ],
+      "severity_1to5": 2.5888,
+      "probability_0to1": 0.694121,
+      "impact_score": 1.7969,
+      "decision_required": true,
+      "decision_reason": "SEMANTIC_NEAR_DUPLICATE_SCOPE_REVIEW",
+      "scope_boundary": "adversarial_corruption_of_dedicated_persistent_cross_session_memory"
+    }
+  }
+]

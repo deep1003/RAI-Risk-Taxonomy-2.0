@@ -1,0 +1,139 @@
+[
+  {
+    "iteration": 1,
+    "objective": 0.663216769695282,
+    "reassigned": 1711,
+    "empty_families": []
+  },
+  {
+    "iteration": 2,
+    "objective": 0.7866802215576172,
+    "reassigned": 424,
+    "empty_families": []
+  },
+  {
+    "iteration": 3,
+    "objective": 0.793580174446106,
+    "reassigned": 196,
+    "empty_families": []
+  },
+  {
+    "iteration": 4,
+    "objective": 0.796715259552002,
+    "reassigned": 111,
+    "empty_families": []
+  },
+  {
+    "iteration": 5,
+    "objective": 0.7983605861663818,
+    "reassigned": 69,
+    "empty_families": []
+  },
+  {
+    "iteration": 6,
+    "objective": 0.799319326877594,
+    "reassigned": 46,
+    "empty_families": []
+  },
+  {
+    "iteration": 7,
+    "objective": 0.8000109195709229,
+    "reassigned": 32,
+    "empty_families": []
+  },
+  {
+    "iteration": 8,
+    "objective": 0.8005035519599915,
+    "reassigned": 20,
+    "empty_families": []
+  },
+  {
+    "iteration": 9,
+    "objective": 0.8007915019989014,
+    "reassigned": 20,
+    "empty_families": []
+  },
+  {
+    "iteration": 10,
+    "objective": 0.8011907935142517,
+    "reassigned": 21,
+    "empty_families": []
+  },
+  {
+    "iteration": 11,
+    "objective": 0.8014387488365173,
+    "reassigned": 11,
+    "empty_families": []
+  },
+  {
+    "iteration": 12,
+    "objective": 0.8015467524528503,
+    "reassigned": 8,
+    "empty_families": []
+  },
+  {
+    "iteration": 13,
+    "objective": 0.801612138748169,
+    "reassigned": 5,
+    "empty_families": []
+  },
+  {
+    "iteration": 14,
+    "objective": 0.8016823530197144,
+    "reassigned": 10,
+    "empty_families": []
+  },
+  {
+    "iteration": 15,
+    "objective": 0.8018010258674622,
+    "reassigned": 8,
+    "empty_families": []
+  },
+  {
+    "iteration": 16,
+    "objective": 0.8018853068351746,
+    "reassigned": 5,
+    "empty_families": []
+  },
+  {
+    "iteration": 17,
+    "objective": 0.8019378781318665,
+    "reassigned": 3,
+    "empty_families": []
+  },
+  {
+    "iteration": 18,
+    "objective": 0.8019620180130005,
+    "reassigned": 3,
+    "empty_families": []
+  },
+  {
+    "iteration": 19,
+    "objective": 0.8019801378250122,
+    "reassigned": 2,
+    "empty_families": []
+  },
+  {
+    "iteration": 20,
+    "objective": 0.8019959330558777,
+    "reassigned": 2,
+    "empty_families": []
+  },
+  {
+    "iteration": 21,
+    "objective": 0.8020147085189819,
+    "reassigned": 1,
+    "empty_families": []
+  },
+  {
+    "iteration": 22,
+    "objective": 0.8020232319831848,
+    "reassigned": 1,
+    "empty_families": []
+  },
+  {
+    "iteration": 23,
+    "objective": 0.8020290732383728,
+    "reassigned": 0
+  }
+]

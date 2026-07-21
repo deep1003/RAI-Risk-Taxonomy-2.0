@@ -1,0 +1,147 @@
+[
+  {
+    "node_id": "RAI3-A-SYS-07",
+    "level": 3,
+    "parent_id": "RAI2-A-SYS",
+    "sequence": 7,
+    "label_en": "Goal & Planning",
+    "label_ko": "목표·계획",
+    "definition_en": "Risk that an autonomous agent's persistent objective, subgoals, or multi-step plan drifts, expands, is hijacked, or is optimized against a proxy so that subsequent actions depart from the authorized user intent or safety constraints.",
+    "definition_ko": "자율 에이전트가 여러 단계에 걸쳐 목표·하위목표·계획을 유지·수정·실행하는 과정에서 목표가 표류·확장·탈취되거나 대리목표가 잘못 최적화되어 후속 행동이 승인된 사용자 의도나 안전 제약에서 이탈하는 위험.",
+    "status": "retired",
+    "introduced_in": "v2.8.0",
+    "references": [
+      {
+        "title": "L0 L1 L2 L3 3H 속성 정의 대응 방안",
+        "type": "User-provided Korean taxonomy report",
+        "source_system": "taxonomy_definition_source_ko",
+        "url": "reports/sources/l3_definition_source_ko.txt"
+      },
+      {
+        "title": "OWASP Top 10 for Agentic Applications 2026",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+        "type": "industry taxonomy"
+      },
+      {
+        "title": "CAISI Request for Information About Securing AI Agent Systems",
+        "url": "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems",
+        "type": "government guidance"
+      }
+    ],
+    "l4_count": 16,
+    "retired_in": "v2.14.0",
+    "retirement_reason": "sparse experimental Agentic family; operational granularity withdrawn",
+    "l4_count_at_retirement": 16,
+    "id_reuse_prohibited": true
+  },
+  {
+    "node_id": "RAI3-A-SYS-08",
+    "level": 3,
+    "parent_id": "RAI2-A-SYS",
+    "sequence": 8,
+    "label_en": "Tool Calling",
+    "label_ko": "도구 호출",
+    "definition_en": "Risk that an agent selects, parameterizes, chains, or repeatedly invokes an API, browser, code executor, MCP service, plug-in, operating-system interface, or other external tool in a way that causes an unintended consequential state change or side effect.",
+    "definition_ko": "에이전트가 API·브라우저·코드 실행기·MCP 서비스·플러그인·운영체제 인터페이스 등의 외부 도구를 잘못 선택·매개변수화·연쇄·반복 호출하여 의도하지 않은 실질적 상태 변화나 부작용을 발생시키는 위험.",
+    "status": "retired",
+    "introduced_in": "v2.8.0",
+    "references": [
+      {
+        "title": "L0 L1 L2 L3 3H 속성 정의 대응 방안",
+        "type": "User-provided Korean taxonomy report",
+        "source_system": "taxonomy_definition_source_ko",
+        "url": "reports/sources/l3_definition_source_ko.txt"
+      },
+      {
+        "title": "OWASP Top 10 for Agentic Applications 2026",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+        "type": "industry taxonomy"
+      },
+      {
+        "title": "OWASP Agentic Threats Navigator",
+        "url": "https://genai.owasp.org/resource/owasp-gen-ai-security-project-agentic-threats-navigator/",
+        "type": "industry taxonomy"
+      }
+    ],
+    "l4_count": 11,
+    "retired_in": "v2.14.0",
+    "retirement_reason": "sparse experimental Agentic family; operational granularity withdrawn",
+    "l4_count_at_retirement": 11,
+    "id_reuse_prohibited": true
+  },
+  {
+    "node_id": "RAI3-A-SYS-09",
+    "level": 3,
+    "parent_id": "RAI2-A-SYS",
+    "sequence": 9,
+    "label_en": "Memory",
+    "label_ko": "메모리",
+    "definition_en": "Risk that memory or state written and reused across agent steps, tasks, sessions, or users is poisoned, mixed, stale, or improperly shared, thereby persistently distorting later retrieval, planning, or autonomous action.",
+    "definition_ko": "에이전트가 단계·작업·세션·사용자 경계를 넘어 기록하고 재사용하는 메모리 또는 상태가 오염·혼입·노후화·부적절하게 공유되어 이후 검색·계획·자율 행동을 지속적으로 왜곡하는 위험.",
+    "status": "retired",
+    "introduced_in": "v2.8.0",
+    "references": [
+      {
+        "title": "L0 L1 L2 L3 3H 속성 정의 대응 방안",
+        "type": "User-provided Korean taxonomy report",
+        "source_system": "taxonomy_definition_source_ko",
+        "url": "reports/sources/l3_definition_source_ko.txt"
+      },
+      {
+        "title": "OWASP Top 10 for Agentic Applications 2026",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+        "type": "industry taxonomy"
+      },
+      {
+        "title": "OWASP Agentic Threats Navigator",
+        "url": "https://genai.owasp.org/resource/owasp-gen-ai-security-project-agentic-threats-navigator/",
+        "type": "industry taxonomy"
+      }
+    ],
+    "l4_count": 3,
+    "retired_in": "v2.14.0",
+    "retirement_reason": "sparse experimental Agentic family; operational granularity withdrawn",
+    "l4_count_at_retirement": 3,
+    "id_reuse_prohibited": true
+  },
+  {
+    "node_id": "RAI3-A-SYS-10",
+    "level": 3,
+    "parent_id": "RAI2-A-SYS",
+    "sequence": 10,
+    "label_en": "Oversight & Control",
+    "label_ko": "감독·통제",
+    "definition_en": "Risk that, after an autonomous execution loop begins, a human or policy-enforcement mechanism cannot adequately observe, approve, constrain, interrupt, correct, roll back, or return the agent to a safe state.",
+    "definition_ko": "자율 실행 루프가 시작된 뒤 인간 또는 정책 집행 장치가 에이전트의 행동을 충분히 관찰·승인·제한·중단·수정·롤백하거나 안전 상태로 복귀시키지 못하는 위험.",
+    "status": "retired",
+    "introduced_in": "v2.8.0",
+    "references": [
+      {
+        "title": "L0 L1 L2 L3 3H 속성 정의 대응 방안",
+        "type": "User-provided Korean taxonomy report",
+        "source_system": "taxonomy_definition_source_ko",
+        "url": "reports/sources/l3_definition_source_ko.txt"
+      },
+      {
+        "title": "OWASP Top 10 for Agentic Applications 2026",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+        "type": "industry taxonomy"
+      },
+      {
+        "title": "OWASP Agentic Threats Navigator",
+        "url": "https://genai.owasp.org/resource/owasp-gen-ai-security-project-agentic-threats-navigator/",
+        "type": "industry taxonomy"
+      },
+      {
+        "title": "CAISI Request for Information About Securing AI Agent Systems",
+        "url": "https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems",
+        "type": "government guidance"
+      }
+    ],
+    "l4_count": 9,
+    "retired_in": "v2.14.0",
+    "retirement_reason": "sparse experimental Agentic family; operational granularity withdrawn",
+    "l4_count_at_retirement": 9,
+    "id_reuse_prohibited": true
+  }
+]

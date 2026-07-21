@@ -1,0 +1,77 @@
+{
+  "release_id": "v2.14.0",
+  "source_release": "v2.13.0",
+  "status": "published",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 720,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 50,
+    "retired_l3_archived": 4
+  },
+  "summary": {
+    "release_id": "v2.14.0",
+    "source_release": "v2.13.0",
+    "retired_l3_ids": [
+      "RAI3-A-SYS-07",
+      "RAI3-A-SYS-08",
+      "RAI3-A-SYS-09",
+      "RAI3-A-SYS-10"
+    ],
+    "retired_l3_count": 4,
+    "migrated_l4_count": 39,
+    "newly_held_count": 28,
+    "all_migrations_hold": true,
+    "physical_lock_preserved": true,
+    "candidate_destination_scope": "26 active non-Physical L3 families",
+    "method": "mechanism-first explicit forced migration with BGE-M3 seed-rank diagnostics",
+    "destination_counts": {
+      "RAI3-A-SYS-01": 9,
+      "RAI3-A-SYS-03": 2,
+      "RAI3-G-INT-06": 1,
+      "RAI3-G-SYS-02": 1,
+      "RAI3-G-SYS-03": 4,
+      "RAI3-G-SYS-07": 3,
+      "RAI3-G-SYS-08": 15,
+      "RAI3-G-SYS-09": 4
+    },
+    "domain_counts": {
+      "RAI1-A": 336,
+      "RAI1-G": 1193,
+      "RAI1-P": 182
+    },
+    "counts": {
+      "l4": 1711,
+      "l3_active": 50,
+      "l3_retired_archived": 4,
+      "physical_locked": 182,
+      "decision_required": 720
+    }
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "afb797a46b1eb9e88208b378a6dde26942e2b239f0e9eb4b737183841a94f1c7"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "cca9d5cb439dcc09fb5770bde87a67b79f5473b47c149bd6b5f25f92a63319c0"
+    },
+    {
+      "path": "reports/data_quality/agentic_l3_retirement_v2.14.0/summary.json",
+      "sha256": "3e65fc94656d599d0275c43199005121d588b21f9ecafa3cedde5510ede6bf70"
+    },
+    {
+      "path": "reports/data_quality/agentic_l3_retirement_v2.14.0/retired_l3_nodes.json",
+      "sha256": "bcc0de0adba8a6d3f0904df4ae78dd3d95703d6b3e48f72695910630074a069b"
+    },
+    {
+      "path": "reports/data_quality/agentic_l3_retirement_v2.14.0/l4_migrations.json",
+      "sha256": "247490804aa477302663fabe3619620ad8c9215637bae360bd4eadbdc8da0e4f"
+    }
+  ]
+}

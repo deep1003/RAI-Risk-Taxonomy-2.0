@@ -1,0 +1,75 @@
+{
+  "release_id": "v2.13.0",
+  "source_release": "v2.12.0",
+  "status": "published",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 692,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 54
+  },
+  "summary": {
+    "release_id": "v2.13.0",
+    "source_release": "v2.12.0",
+    "method": "source-scoped editorial differentiation with conservative identity preservation",
+    "changed_l4_ids": [
+      "RAI4-0011",
+      "RAI4-0484",
+      "RAI4-1670"
+    ],
+    "changed_card_count": 3,
+    "identity_reference_metric_and_path_preserved": true,
+    "all_changed_cards_hold": true,
+    "semantic_overlap_audit": {
+      "encoder": "BAAI/bge-m3 dense cached release embeddings",
+      "pairwise_similarity": [
+        {
+          "left_l4_id": "RAI4-0011",
+          "right_l4_id": "RAI4-0484",
+          "bge_m3_cosine": 0.8302746415138245,
+          "all_card_pair_percentile": 0.9998626021511992
+        },
+        {
+          "left_l4_id": "RAI4-0011",
+          "right_l4_id": "RAI4-1670",
+          "bge_m3_cosine": 0.8735189437866211,
+          "all_card_pair_percentile": 0.9999774421442267
+        },
+        {
+          "left_l4_id": "RAI4-0484",
+          "right_l4_id": "RAI4-1670",
+          "bge_m3_cosine": 0.8222107291221619,
+          "all_card_pair_percentile": 0.9998140685827173
+        }
+      ]
+    },
+    "counts": {
+      "l4": 1711,
+      "l3": 54,
+      "physical_locked": 182,
+      "decision_required": 692
+    }
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "acb2ff05f52178390ad7ee3dfc342d39c49b95f09dbdb9f4cc007bad76150e12"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "b0489195f193df3aeab4fecbfaa4f5cc61b1309ba9b1cae4269f735056a87327"
+    },
+    {
+      "path": "reports/data_quality/memory_card_differentiation_v2.13.0/summary.json",
+      "sha256": "83a7c28d3c059db1b8ccddaa8df0d79aef095fd341612cf87f31ab9aa4871a91"
+    },
+    {
+      "path": "reports/data_quality/memory_card_differentiation_v2.13.0/scope_differentiation_audit.json",
+      "sha256": "3550545171394d5060ccde1d0778add7403b4e059e1e093042f33fb4f6d9aa47"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "release_id": "v2.14.0",
+  "source_release": "v2.13.0",
+  "retired_l3_ids": [
+    "RAI3-A-SYS-07",
+    "RAI3-A-SYS-08",
+    "RAI3-A-SYS-09",
+    "RAI3-A-SYS-10"
+  ],
+  "retired_l3_count": 4,
+  "migrated_l4_count": 39,
+  "newly_held_count": 28,
+  "all_migrations_hold": true,
+  "physical_lock_preserved": true,
+  "candidate_destination_scope": "26 active non-Physical L3 families",
+  "method": "mechanism-first explicit forced migration with BGE-M3 seed-rank diagnostics",
+  "destination_counts": {
+    "RAI3-A-SYS-01": 9,
+    "RAI3-A-SYS-03": 2,
+    "RAI3-G-INT-06": 1,
+    "RAI3-G-SYS-02": 1,
+    "RAI3-G-SYS-03": 4,
+    "RAI3-G-SYS-07": 3,
+    "RAI3-G-SYS-08": 15,
+    "RAI3-G-SYS-09": 4
+  },
+  "domain_counts": {
+    "RAI1-A": 336,
+    "RAI1-G": 1193,
+    "RAI1-P": 182
+  },
+  "counts": {
+    "l4": 1711,
+    "l3_active": 50,
+    "l3_retired_archived": 4,
+    "physical_locked": 182,
+    "decision_required": 720
+  }
+}
