@@ -126,11 +126,11 @@
       "check_id": "INT-001",
       "description": "Checksum ledger exactly covers the project integrity scope",
       "expected": {
-        "files": 133,
+        "files": 135,
         "mismatches": 0
       },
       "actual": {
-        "files": 133,
+        "files": 135,
         "mismatches": 0
       },
       "status": "PASS",

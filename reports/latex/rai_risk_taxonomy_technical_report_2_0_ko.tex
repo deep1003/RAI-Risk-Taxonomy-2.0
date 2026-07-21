@@ -1,0 +1,297 @@
+% !TEX program = xelatex
+% Technical Report 2.0 -- generated from the reviewed local artifacts.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{fontspec}
+\usepackage{kotex}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage[hidelinks]{hyperref}
+\pgfplotsset{compat=1.18}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
+\definecolor{navy}{HTML}{173458}
+\definecolor{blue}{HTML}{3867D6}
+\definecolor{gold}{HTML}{C48A18}
+\definecolor{orange}{HTML}{D97706}
+\definecolor{ink}{HTML}{273142}
+\definecolor{muted}{HTML}{667085}
+\definecolor{grid}{HTML}{D0D5DD}
+\definecolor{light}{HTML}{F5F7FA}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy}
+\rhead{Technical Report 2.0}
+\cfoot{\thepage}
+\hypersetup{pdftitle={RAI Risk Taxonomy Technical Report 2.0},pdfauthor={RAI Risk Taxonomy Project}}
+
+\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]\Large Technical Report 2.0}
+\author{1,726개 글로벌 L4의 단계적 분류, 보류 정책 및 통계 검증}
+\date{2026년 7월 21일}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{navy}{light}{\parbox{0.92\linewidth}{
+\textbf{최종 정책 결과.} 전체 1,726개 중 1,671개(96.8134\%)를 승인 대기 상태로
+50개 L3에 배치하고, 가장 불확실한 55개(3.1866\%)는 분류체계 밖의
+\code{RAI-HOLD} 검토 버킷으로 분리했다. 이 자동 배치는 사람 승인 정답이 아니다.}}
+\end{center}
+
+\section{기술 요약}
+
+본 보고서는 Physical AI의 기존 182개 분류를 정답 잠금 집합으로 유지하면서,
+글로벌 L4 1,726개를 신규 50개 L3에 연결한 단계적 절차를 기술한다. 기존 글로벌
+L1--L3는 예측 특징으로 사용하지 않았고 영구 L4 ID와 교차매핑을 보존했다.
+
+Stage 1은 엄격한 rule--semantic--anchor 합의와 두 전문 에이전트의 exact-L3 합의를
+요구해 Physical 182개와 신규 제안 37개만 배치했다. Stage 2는 hierarchy-blind
+top-1 후보를 적극 수용해 1,553개(89.9768\%)를 배치하고 173개를 보류했다.
+Stage 3 실험은 173개를 모두 강제 배치했으나, 정책 검토 결과 이 중 hard hold
+55개를 다시 분리했다. 최종 정책 뷰는 1,671개 분류와 55개 검토 보류로 구성된다.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, ymin=0, ymax=1800, width=0.92\linewidth, height=7cm,
+  bar width=20pt, ylabel={카드 수},
+  symbolic x coords={Stage 1,Stage 2,Stage 3 실험,최종 정책}, xtick=data,
+  nodes near coords, nodes near coords align={vertical},
+  axis line style={ink}, tick label style={font=\small},
+  ymajorgrids, grid style={grid}, legend style={at={(0.5,-0.18)},anchor=north,legend columns=2},
+]
+\addplot[fill=blue,draw=navy] coordinates {(Stage 1,219) (Stage 2,1553) (Stage 3 실험,1726) (최종 정책,1671)};
+\addplot[fill=gold,draw=orange] coordinates {(Stage 1,1507) (Stage 2,173) (Stage 3 실험,0) (최종 정책,55)};
+\legend{L3 배치,보류}
+\end{axis}
+\end{tikzpicture}
+\caption{단계별 L3 배치와 보류. 분모는 각 단계에서 동일한 1,726개다.}
+\end{figure}
+
+Stage 3의 100\%는 운영상 경로 완전성을 시험한 결과이고, 최종 정책의 96.8134\%는
+명백한 경계 충돌을 별도 검토하도록 선택한 결과다. 두 수치를 정확도 또는 승인률로
+해석해서는 안 된다.
+
+\section{범위, 데이터와 식별 원칙}
+
+분석 단위는 영구 ID \code{RAI4-0001}--\code{RAI4-1726}의 L4 카드다. Physical AI
+사이트의 182개 분류는 잠금 정답이고, 동일 이름이 여러 경로에 존재할 수 있으므로
+라벨을 키로 사용하지 않는다. 상위 분류체계는 L0 1개, L1 3개, L2 6개, L3 50개로
+구성된다. \code{RAI-HOLD}는 운영 버킷이며 L3 노드가 아니다.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+최종 정책 상태 & 건수 & 전체 비율 \\
+\midrule
+Physical 정답 잠금 & 182 & 10.5446\% \\
+Stage 1 전문가 합의 제안 & 37 & 2.1437\% \\
+Stage 2 알고리즘 제안 & 1,334 & 77.2885\% \\
+Stage 3 잔여 강제 후보 유지 & 118 & 6.8366\% \\
+Taxonomy Decision Hold & 55 & 3.1866\% \\
+\midrule
+합계 & 1,726 & 100.0000\% \\
+\bottomrule
+\end{tabular}
+\caption{최종 정책 뷰의 상태 구성.}
+\end{table}
+
+\section{단계별 분류 절차와 기준}
+
+\subsection{Stage 1: 정확 적합성 우선}
+
+비-Physical 입력에는 계층 재진술을 제거한 L4 라벨, 직접 메커니즘 정의와 evidence
+title만 사용했다. 자동 후보는 단일 rule eligibility, rule/semantic/composite top-1
+일치, semantic score $\geq0.55$, composite score $\geq0.54$, 두 margin
+$\geq0.035$, anchor 2/3 이상 합의를 모두 만족해야 했다. gap sentinel과 다중
+메커니즘을 배제하고 두 전문 에이전트가 동일한 exact L3를 승인한 37개만 제안했다.
+
+\subsection{Stage 2: 약 90\% 커버리지}
+
+Stage 2는 보호 집합 219개를 변경하지 않고 다음 순위 점수를 사용했다.
+\[
+S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap}.
+\]
+여기서 의미 점수와 두 margin은 사전 고정 구간으로 0--1 정규화했고, anchor vote는
+3으로 나눴으며, rule support는 이진값, gap penalty는 0.05다. hard hold 55개를
+먼저 보존하고 $S_2$ 하위 118개를 추가 보류해 총 173개(10.0232\%)를 남겼다.
+나머지 1,334개는 hierarchy-blind top-1 L3에 배치했다.
+
+\subsection{Stage 3와 최종 보류 정책}
+
+Stage 3 실험은 잔여 173개를 기존 top-1에 강제 연결해 100\% 경로를 시험했다.
+그러나 다음 다섯 hard-hold 사유의 55개는 자동 배치의 의미적 또는 정책적 위험이
+크므로 최종 정책 뷰에서 \code{policy\_l3\_id=null}로 되돌리고
+\code{RAI-HOLD}로 분리했다. 나머지 quota hold 118개는 강제 후보 상태와 사람
+검토 의무를 유지한다.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=125, width=0.70\linewidth, height=7cm,
+  xlabel={카드 수},
+  symbolic y coords={절대 적합도 부족,다중 메커니즘,전문가 불일치,전문가 거절,Physical 범위 검토,적합도 reserve},
+  ytick=data, nodes near coords, nodes near coords align={horizontal},
+  bar width=12pt, xmajorgrids, grid style={grid}, axis line style={ink},
+]
+\addplot[fill=gold,draw=orange] coordinates {(2,절대 적합도 부족) (6,다중 메커니즘) (7,전문가 불일치) (17,전문가 거절) (23,Physical 범위 검토)};
+\addplot[fill=blue,draw=navy] coordinates {(118,적합도 reserve)};
+\end{axis}
+\end{tikzpicture}
+\caption{Stage 2 보류 173개의 사유. 금색 55개는 최종 \code{RAI-HOLD}, 파란색 118개는 Stage 3 강제 후보 유지 대상이다.}
+\end{figure}
+
+Physical 범위 검토 23개는 Physical AI로 확정된 카드가 아니다. robot, drone,
+autonomous vehicle, embodied AI, cyber-physical, physical actuator 등의 표현이
+탐지됐지만 잠긴 Physical 정답 182개와 동일하지 않아 경계 검토가 필요한 카드다.
+
+\section{최종 분포 통계}
+
+\subsection{L1과 L2 분포}
+
+보류 55개를 제외한 1,671개 중 일반 AI는 1,140개, 에이전틱 AI는 349개,
+피지컬 AI는 182개다. 분류된 카드 내 비율은 각각 68.2226\%, 20.8857\%,
+10.8917\%다. 전체 1,726개의 나머지 3.1866\%는 보류다.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=1250, width=0.92\linewidth, height=5.7cm,
+  xlabel={분류된 카드 수}, symbolic y coords={Physical AI,Agentic AI,General},
+  ytick=data, nodes near coords, bar width=18pt, xmajorgrids, grid style={grid},
+]
+\addplot[fill=blue,draw=navy] coordinates {(182,Physical AI) (349,Agentic AI) (1140,General)};
+\end{axis}
+\end{tikzpicture}
+\caption{최종 정책 뷰의 L1 분포. 분모는 L3 배치가 있는 1,671개다.}
+\end{figure}
+
+\begin{longtable}{llrr}
+\toprule
+L2 ID & L2 이름 & 카드 수 & 분류 1,671개 내 비율 \\
+\midrule
+\endhead
+RAI2-G-INT & General Interaction & 708 & 42.3698\% \\
+RAI2-G-SYS & General System & 432 & 25.8528\% \\
+RAI2-A-SYS & Agentic System & 349 & 20.8857\% \\
+RAI2-P-SYS & Physical System Safety & 91 & 5.4458\% \\
+RAI2-P-INT & Physical Interaction Safety & 62 & 3.7104\% \\
+RAI2-P-SOC & Physical Societal Safety & 29 & 1.7355\% \\
+\bottomrule
+\end{longtable}
+
+\subsection{L3 집중도}
+
+50개 L3 모두 최소 한 카드를 포함한다. 가장 큰 L3는 Anthropomorphism 242개로
+분류된 1,671개의 14.4823\%다. 상위 5개는 700개(41.8911\%)이며 단일 L3가
+20\%를 넘지 않는다. 이 집중도는 분포 진단일 뿐 의미 타당성 검증은 아니다.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=270, width=0.68\linewidth, height=11.2cm,
+  xlabel={카드 수},
+  symbolic y coords={Robot Control,Overconfidence,Weaponization,Non-Contestability,Conflict,Destabilising Dynamics,Excessive Authority,Network Effects,Privacy,Policy Exposure,Misinformation/Disinformation,Copyrights,Goal Misalignment,Anthropomorphism},
+  ytick=data, nodes near coords, bar width=9pt, xmajorgrids, grid style={grid},
+  tick label style={font=\small},
+]
+\addplot[fill=blue,draw=navy] coordinates {
+ (45,Robot Control) (46,Overconfidence) (48,Weaponization) (55,Non-Contestability)
+ (64,Conflict) (73,Destabilising Dynamics) (74,Excessive Authority) (78,Network Effects)
+ (86,Privacy) (88,Policy Exposure) (107,Misinformation/Disinformation)
+ (113,Copyrights) (150,Goal Misalignment) (242,Anthropomorphism)};
+\end{axis}
+\end{tikzpicture}
+\caption{최종 정책 뷰의 상위 14개 L3. 정확한 조회를 위한 전체 50개 분포는 CSV 산출물에 제공한다.}
+\end{figure}
+
+\section{보류 55개와 불확실성}
+
+\begin{longtable}{lrrr}
+\toprule
+보류 사유 & 건수 & 보류 내 비율 & 전체 비율 \\
+\midrule
+\endhead
+PHYSICAL\_OUTSIDE\_LOCK & 23 & 41.8182\% & 1.3326\% \\
+FRONTIER\_EXPERT\_REJECTED & 17 & 30.9091\% & 0.9849\% \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 12.7273\% & 0.4056\% \\
+MULTI\_MECHANISM & 6 & 10.9091\% & 0.3476\% \\
+LOW\_ABSOLUTE\_FIT & 2 & 3.6364\% & 0.1159\% \\
+\midrule
+합계 & 55 & 100.0000\% & 3.1866\% \\
+\bottomrule
+\end{longtable}
+
+보류는 승인되지 않은 51번째 L3로 취급하지 않는다. 웹 UI와 export에서는 별도
+검토 큐로 표시하고, 원래 보류 사유, Stage 3 강제 후보 L3, semantic/composite
+점수, anchor vote를 숨기지 않아야 한다. 전문가 거절과 불일치 24개는 L3 정의의
+적합성 검토, 다중 메커니즘 6개는 primary/secondary 또는 복수 태그 구조 검토,
+Physical 경계 23개는 기존 182개 정답 집합과의 의미·근거 기반 비교가 필요하다.
+
+\section{검증, 제한과 강건성 점검}
+
+Physical 182개와 Stage 1 합의 37개는 후속 단계에서 변경되지 않았다. Stage 2와
+Stage 3 생성기는 동일 입력에서 byte-identical placement hash를 재생성했다.
+Stage 2 validator는 13 PASS/0 FAIL/3 WARN, Stage 3 validator는
+14 PASS/0 FAIL/4 WARN이었다. 최종 보류 정책 전용 테스트를 포함한 전체 회귀
+테스트 16개가 통과했다.
+
+주요 제한은 다음과 같다.
+\begin{itemize}[leftmargin=2em]
+  \item Stage 2 신규 1,334개 중 1,214개는 rule eligibility 없이 의미 top-1 중심으로 배치됐다.
+  \item Stage 2 신규 247개는 taxonomy-gap sentinel을 override했다.
+  \item Stage 3에 남긴 118개도 calibrated probability나 사람 승인 결과가 아니다.
+  \item Physical 경계 탐지는 제한된 키워드 sentinel이므로 오탐과 미탐 가능성이 있다.
+  \item 50개 L3의 사용률 100\%와 카드 커버리지 96.8134\%는 분류체계의 충분성을 입증하지 않는다.
+\end{itemize}
+
+\section{권고 검토 순서와 후속 질문}
+
+\begin{enumerate}[leftmargin=2em]
+  \item \code{RAI-HOLD} 55개를 전수 검토한다. Physical 경계 23개와 전문가 거절/불일치 24개를 우선한다.
+  \item Stage 3 quota 강제 후보 118개를 $S_2$ 오름차순으로 검토한다.
+  \item taxonomy-gap override 247개와 rule-free 배치 1,214개를 L3별 층화 표본으로 검증한다.
+  \item 검토 결과를 근거로 L3 정의 확장, 신규 L3, 복수 태그 구조 중 필요한 변경을 승인한다.
+  \item 승인된 변경만 successor release와 홈페이지에 반영하고 기존 decision ID 이력을 보존한다.
+\end{enumerate}
+
+추가로 결정해야 할 질문은 (1) Physical 경계 23개 중 기존 Physical L3로 편입할
+카드 수, (2) 다중 메커니즘 카드에 secondary L3를 허용할지, (3) Stage 3 강제 후보
+118개의 허용 가능한 사람 검토 오류율, (4) 신규 L3 제안의 최소 증거 기준이다.
+
+\section*{재현 가능한 산출물}
+\begin{itemize}[leftmargin=2em]
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_placements.json}
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_hold_queue.json}
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_placements.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/placements.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/review_hold.json}
+  \item \nolinkurl{reports/statistics/stage2_unclassified_statistics.json}
+  \item \nolinkurl{reports/statistics/stage3_statistics.json}
+  \item \nolinkurl{scripts/build_stage2_classification.py}
+  \item \nolinkurl{scripts/build_stage3_forced_matching.py}
+  \item \nolinkurl{scripts/build_stage3_review_hold.py}
+\end{itemize}
+
+\vfill
+\noindent\textbf{보고서 식별자:} RAI Risk Taxonomy Technical Report 2.0\\
+\textbf{정책 데이터 뷰:} \code{stage3-review-hold-v1}\\
+\textbf{작성일:} 2026-07-21
+
+\end{document}
