@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.2.0";
+const DATA_ROOT = "public/data/releases/v2.3.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -170,7 +170,7 @@ function fillSelect(select, nodes, allLabel, selected = "all") {
 function renderStats() {
   const counts = state.manifest.counts;
   document.querySelector("#stat-total").textContent = counts.l4.toLocaleString();
-  document.querySelector("#stat-locked").textContent = counts.physical_locked.toLocaleString();
+  document.querySelector("#stat-locked").textContent = (counts.physical_total ?? counts.physical_locked).toLocaleString();
   document.querySelector("#stat-proposed").textContent = counts.classified.toLocaleString();
   document.querySelector("#stat-needs").textContent = counts.decision_required.toLocaleString();
 }

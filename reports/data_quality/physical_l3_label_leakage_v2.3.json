@@ -1,0 +1,495 @@
+{
+  "release_id": "v2.3.0",
+  "policy": "Exclude only normalized exact label matches between global L4 labels and authoritative Physical AI L3 English labels; do not use semantic similarity.",
+  "authoritative_source": {
+    "site": "https://deep1003.github.io/Physical-AI-Risk-Taxonomy/",
+    "local_summary": "/Users/deep1003/data3/Physical-AI-Risk-Taxonomy/data/taxonomy_summary.json",
+    "local_summary_sha256": "f9ad2baec8afa7b54caa9846179df3c262c46bb5e7c7c2141fd548d83edcfe17",
+    "live_index_equals_local_index": true
+  },
+  "authoritative_l3_count": 24,
+  "authoritative_l3": [
+    {
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.1",
+      "physical_l3_label": "우발적 피해(Accidental Harm)",
+      "physical_l3_label_en": "Accidental Harm",
+      "normalized_label": "accidental harm"
+    },
+    {
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.2",
+      "physical_l3_label": "로봇 제어(Robot Control)",
+      "physical_l3_label_en": "Robot Control",
+      "normalized_label": "robot control"
+    },
+    {
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.3",
+      "physical_l3_label": "하드웨어·기계적 결함(Hardware & Mechanical Failures)",
+      "physical_l3_label_en": "Hardware & Mechanical Failures",
+      "normalized_label": "hardware and mechanical failures"
+    },
+    {
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.4",
+      "physical_l3_label": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
+      "physical_l3_label_en": "Software Vulnerabilities & Design Flaws",
+      "normalized_label": "software vulnerabilities and design flaws"
+    },
+    {
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.5",
+      "physical_l3_label": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
+      "physical_l3_label_en": "Lack of Robustness in Unseen Environments",
+      "normalized_label": "lack of robustness in unseen environments"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.1",
+      "physical_l3_label": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+      "physical_l3_label_en": "Purposeful / Malicious Harm",
+      "normalized_label": "purposeful malicious harm"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.2",
+      "physical_l3_label": "물리적 공격(Physical Attacks)",
+      "physical_l3_label_en": "Physical Attacks",
+      "normalized_label": "physical attacks"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.3",
+      "physical_l3_label": "사이버보안 위협(Cybersecurity Threats)",
+      "physical_l3_label_en": "Cybersecurity Threats",
+      "normalized_label": "cybersecurity threats"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.4",
+      "physical_l3_label": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
+      "physical_l3_label_en": "Sensor & Input Validation Failures",
+      "normalized_label": "sensor and input validation failures"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.5",
+      "physical_l3_label": "허위 정보(Misinformation)",
+      "physical_l3_label_en": "Misinformation",
+      "normalized_label": "misinformation"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.6",
+      "physical_l3_label": "동적 환경 요인(Dynamic Environmental Factors)",
+      "physical_l3_label_en": "Dynamic Environmental Factors",
+      "normalized_label": "dynamic environmental factors"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.7",
+      "physical_l3_label": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
+      "physical_l3_label_en": "Human Interaction & Safety Protocol Failures",
+      "normalized_label": "human interaction and safety protocol failures"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.8",
+      "physical_l3_label": "지시 오해석(Instruction Misinterpretation)",
+      "physical_l3_label_en": "Instruction Misinterpretation",
+      "normalized_label": "instruction misinterpretation"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.9",
+      "physical_l3_label": "멀티 에이전트 협력(Multi-Agent Collaboration)",
+      "physical_l3_label_en": "Multi-Agent Collaboration",
+      "normalized_label": "multi agent collaboration"
+    },
+    {
+      "physical_l2_id": "I2",
+      "physical_l3_id": "I3.10",
+      "physical_l3_label": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
+      "physical_l3_label_en": "Ethical & Safety Implications of Interactive Agents",
+      "normalized_label": "ethical and safety implications of interactive agents"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.1",
+      "physical_l3_label": "프라이버시 침해(Privacy Violations)",
+      "physical_l3_label_en": "Privacy Violations",
+      "normalized_label": "privacy violations"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.2",
+      "physical_l3_label": "노동 대체(Labor Displacement)",
+      "physical_l3_label_en": "Labor Displacement",
+      "normalized_label": "labor displacement"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.3",
+      "physical_l3_label": "사회경제적 불평등(Socioeconomic Inequality)",
+      "physical_l3_label_en": "Socioeconomic Inequality",
+      "normalized_label": "socioeconomic inequality"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.4",
+      "physical_l3_label": "권력 집중(Power Concentration)",
+      "physical_l3_label_en": "Power Concentration",
+      "normalized_label": "power concentration"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.5",
+      "physical_l3_label": "편향·차별(Bias & Discrimination)",
+      "physical_l3_label_en": "Bias & Discrimination",
+      "normalized_label": "bias and discrimination"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.6",
+      "physical_l3_label": "책임·배상 부재(Lack of Accountability & Liability)",
+      "physical_l3_label_en": "Lack of Accountability & Liability",
+      "normalized_label": "lack of accountability and liability"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.7",
+      "physical_l3_label": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
+      "physical_l3_label_en": "Lack of Transparency, Explainability & Trust",
+      "normalized_label": "lack of transparency explainability and trust"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.8",
+      "physical_l3_label": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+      "physical_l3_label_en": "Unhealthy / Dangerous Human-EAI Relationships",
+      "normalized_label": "unhealthy dangerous human eai relationships"
+    },
+    {
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.9",
+      "physical_l3_label": "변혁적 영향(Transformative Effects)",
+      "physical_l3_label_en": "Transformative Effects",
+      "normalized_label": "transformative effects"
+    }
+  ],
+  "source_l4_count": 1725,
+  "excluded_l4_count": 14,
+  "retained_l4_count": 1711,
+  "excluded": [
+    {
+      "l4_id": "RAI4-0531",
+      "label_en": "Power concentration",
+      "definition_en": "The concentration of military, economic, or political power of entities in possession or control of AI or AI-enabled technologies. This L4 risk card treats \"Power concentration\" as a concrete failure mode or harm mechanism within the \"Types of systemic risks from general-purpose AI\" family of \"Power centralization and unfair distribution of benefits\" under the broader L1 domain \"Socioeconomic and environmental harms\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"A Taxonomy of Systemic Risks from General-Purpose AI\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "url": "https://arxiv.org/pdf/2412.07780",
+          "type": "Journal Article",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.4",
+      "physical_l3_label": "권력 집중(Power Concentration)",
+      "physical_l3_label_en": "Power Concentration",
+      "normalized_label": "power concentration",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0532",
+      "label_en": "Power concentration",
+      "definition_en": "EAI deployment could accelerate the consolidation of economic and political power. Unlocking increasing returns to capital for EAI owners, EAI will decrease employers’ reliance on and responsiveness to the needs of human labor [101]. This L4 risk card treats \"Power concentration\" as a concrete failure mode or harm mechanism within the \"Economic risks\" family of \"Power centralization and unfair distribution of benefits\" under the broader L1 domain \"Socioeconomic and environmental harms\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Embodied AI: Emerging Risks and Opportunities for Policy Action\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.4",
+      "physical_l3_label": "권력 집중(Power Concentration)",
+      "physical_l3_label_en": "Power Concentration",
+      "normalized_label": "power concentration",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0539",
+      "label_en": "Socioeconomic inequality",
+      "definition_en": "Along with displacing labor, EAI could significantly exacerbate wealth inequalities. Those who have access to or own EAI systems will be able to automate labor and perform many tasks significantly better or faster than those without access. These significant productivity advantages will potentially concentrate wealth and exacerbate domestic and international inequality [98, 99].",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.3",
+      "physical_l3_label": "사회경제적 불평등(Socioeconomic Inequality)",
+      "physical_l3_label_en": "Socioeconomic Inequality",
+      "normalized_label": "socioeconomic inequality",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0540",
+      "label_en": "Transformative effects",
+      "definition_en": "EAI deployment could fundamentally reshape society, particularly if the speed of technological development outpaces society’s ability to adapt [103, 120]. For example, EAI systems could provide physical threats of violence and mass surveillance capabilities to back up AI-enabled authoritarianism [121]. This L4 risk card treats \"Transformative effects\" as a concrete failure mode or harm mechanism within the \"Social risks\" family of \"Governance failure\" under the broader L1 domain \"Governance and accountability failures\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Embodied AI: Emerging Risks and Opportunities for Policy Action\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-01",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.9",
+      "physical_l3_label": "변혁적 영향(Transformative Effects)",
+      "physical_l3_label_en": "Transformative Effects",
+      "normalized_label": "transformative effects",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0553",
+      "label_en": "Accidental harm",
+      "definition_en": "Automation in sectors ranging from manufacturing to healthcare has and will increasingly put humans into close contact with EAI systems [7]. This interaction increases the risk of accidental physical harm. Though accidental harm has been a longstanding issue in industrial robotics, increased AI capabilities could exacerbate this risk; several recent reports document an increase in industrial injuries following the introduction of AI-controlled robots [66–68].",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-A-SYS-04",
+      "previous_decision_required": true,
+      "physical_l2_id": "P2",
+      "physical_l3_id": "P3.1",
+      "physical_l3_label": "우발적 피해(Accidental Harm)",
+      "physical_l3_label_en": "Accidental Harm",
+      "normalized_label": "accidental harm",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0597",
+      "label_en": "Lack of transparency, explainability, and trust",
+      "definition_en": "Understanding how AI reaches conclusions or why AI systems perform specific actions motivates an entire branch of interpretability research [111], but physical embodiment raises the stakes for understanding these systems. For example, transparency of planned actions and explainability of decision-making is crucial when an AV suddenly changes lanes. A lack of transparency and explainability could lead to a lack of trust, which could become a critical and socially destabilizing issue with the widespread deployment of EAI [112–114].",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.7",
+      "physical_l3_label": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
+      "physical_l3_label_en": "Lack of Transparency, Explainability & Trust",
+      "normalized_label": "lack of transparency explainability and trust",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0672",
+      "label_en": "Bias and discrimination",
+      "definition_en": "Like virtual applications of AI, EAI can display bias towards and dis- criminate against users. When EAI systems are placed in positions of power, their biases could have significant impacts on fairness in everyday interactions and on general social dynamics [105, 106]. This L4 risk card treats \"Bias and discrimination\" as a concrete failure mode or harm mechanism within the \"Social risks\" family of \"Unfair discrimination and misrepresentation\" under the broader L1 domain \"Discrimination and toxic content\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Embodied AI: Emerging Risks and Opportunities for Policy Action\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.5",
+      "physical_l3_label": "편향·차별(Bias & Discrimination)",
+      "physical_l3_label_en": "Bias & Discrimination",
+      "normalized_label": "bias and discrimination",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0695",
+      "label_en": "Bias and discrimination",
+      "definition_en": "as they claim to generate biased and discriminatory results, these AI systems have a negative impact on the rights of individuals, principles of adjudication, and overall judicial integrity This L4 risk card treats \"Bias and discrimination\" as a concrete failure mode or harm mechanism within the \"AI trust management\" family of \"Unfair discrimination and misrepresentation\" under the broader L1 domain \"Discrimination and toxic content\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Artificial Intelligence Trust, Risk and Security Management (AI TRiSM): Frameworks, Applications, Challenges and Future Research Directions\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Artificial Intelligence Trust, Risk and Security Management (AI TRiSM): Frameworks, Applications, Challenges and Future Research Directions",
+          "url": "https://doi.org/10.1016/j.eswa.2023.122442",
+          "type": "Journal Article",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.5",
+      "physical_l3_label": "편향·차별(Bias & Discrimination)",
+      "physical_l3_label_en": "Bias & Discrimination",
+      "normalized_label": "bias and discrimination",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0757",
+      "label_en": "Privacy violations",
+      "definition_en": "EAI systems interact with huge amounts of data, creating significant privacy concerns. These systems are often trained on vast corpora and process a variety of data modalities— spanning visual, auditory, and tactile information—during deployment [12]. Like text-based virtual AI models, which are known to memorize and expose personally identifiable information [75, 76], commercial robots have been shown to disclose proprietary information through simple prompts [61].",
+      "references": [
+        {
+          "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-06",
+      "previous_decision_required": true,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.1",
+      "physical_l3_label": "프라이버시 침해(Privacy Violations)",
+      "physical_l3_label_en": "Privacy Violations",
+      "normalized_label": "privacy violations",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-0992",
+      "label_en": "Bias and discrimination",
+      "definition_en": "The decision process used by AI systems has the potential to present biased choices, either because it acts from criteria that will generate forms of bias or because it is based on the history of choices. This L4 risk card treats \"Bias and discrimination\" as a concrete failure mode or harm mechanism within the \"Bias, data, fairness\" family of \"Unfair discrimination and misrepresentation\" under the broader L1 domain \"Discrimination and toxic content\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Sherman & Eisenberg (2023); Journal Article\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Sherman & Eisenberg (2023); Journal Article",
+          "url": "https://doi.org/10.1609/aaai.v38i21.30348",
+          "type": "Journal Article",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-10",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.5",
+      "physical_l3_label": "편향·차별(Bias & Discrimination)",
+      "physical_l3_label_en": "Bias & Discrimination",
+      "normalized_label": "bias and discrimination",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-1009",
+      "label_en": "Privacy violations",
+      "definition_en": "Privacy violation occurs when algorithmic systems diminish privacy, such as enabling the undesirable flow of private information [180], instilling the feeling of being watched or surveilled [181], and the collection of data without explicit and informed consent... privacy violations may arise from algorithmic systems making predictive inference beyond what users openly disclose [222] or when data collected and algorithmic inferences made about people in one context is applied to another without the person’s knowledge or consent through big data flows This L4 risk card treats \"Privacy violations\" as a concrete failure mode or harm mechanism within the \"Interpersonal harms\" family of \"Compromise of privacy by leaking or correctly inferring sensitive information\" under the broader L1 domain \"Privacy and security harms\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Shelby et al. (2023); Conference Paper\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Shelby et al. (2023); Conference Paper",
+          "url": "https://arxiv.org/pdf/2210.05791",
+          "type": "Conference Paper",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-INT-06",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.1",
+      "physical_l3_label": "프라이버시 침해(Privacy Violations)",
+      "physical_l3_label_en": "Privacy Violations",
+      "normalized_label": "privacy violations",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-1301",
+      "label_en": "Power concentration",
+      "definition_en": "The political influence and competitive advantage obtained by having technology. This L4 risk card treats \"Power concentration\" as a concrete failure mode or harm mechanism within the \"Concentration, power concentration, power\" family of \"Power centralization and unfair distribution of benefits\" under the broader L1 domain \"Socioeconomic and environmental harms\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Teixeira et al. (2022); Conference Paper\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Teixeira et al. (2022); Conference Paper",
+          "url": "https://researchr.org/publication/TeixeiraRV022-0",
+          "type": "Conference Paper",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-A-SYS-05",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.4",
+      "physical_l3_label": "권력 집중(Power Concentration)",
+      "physical_l3_label_en": "Power Concentration",
+      "normalized_label": "power concentration",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-1448",
+      "label_en": "Power concentration",
+      "definition_en": "Amplification of concentration of economic and/or political wealth and power, potentially resulting in increased inequality and instability. This L4 risk card treats \"Power concentration\" as a concrete failure mode or harm mechanism within the \"Political and economic\" family of \"Power centralization and unfair distribution of benefits\" under the broader L1 domain \"Socioeconomic and environmental harms\". It should be interpreted as a specific risk mechanism for semantic mapping and evidence review, rather than as a generic topical keyword. The definition is anchored to the listed evidence source \"Abercrombie et al. (2024); Journal Article\" and should be refined further when a more direct standards page, benchmark paper, or peer-reviewed article is identified.",
+      "references": [
+        {
+          "title": "Abercrombie et al. (2024); Journal Article",
+          "url": "https://arxiv.org/pdf/2407.01294",
+          "type": "Journal Article",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-A-SYS-03",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.4",
+      "physical_l3_label": "권력 집중(Power Concentration)",
+      "physical_l3_label_en": "Power Concentration",
+      "normalized_label": "power concentration",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    },
+    {
+      "l4_id": "RAI4-1626",
+      "label_en": "Lack of accountability and liability",
+      "definition_en": "Determining responsibility when EAI causes harm requires new accountability and liability frameworks that address the complexities of highly autonomous physical systems. Human users may disagree with decisions taken by expert EAI systems, raising significant questions of delegation and responsibility [108]. Lack of EAI accountability could lead to confusion for users and breakdowns in traditional justice systems [109].",
+      "references": [
+        {
+          "title": "Perlo et al. (2025); Preprint",
+          "url": "https://doi.org/10.48550/arXiv.2509.00117",
+          "type": "Preprint",
+          "source_system": "global_1726"
+        }
+      ],
+      "previous_primary_l3_id": "RAI3-G-SYS-09",
+      "previous_decision_required": false,
+      "physical_l2_id": "S2",
+      "physical_l3_id": "S3.6",
+      "physical_l3_label": "책임·배상 부재(Lack of Accountability & Liability)",
+      "physical_l3_label_en": "Lack of Accountability & Liability",
+      "normalized_label": "lack of accountability and liability",
+      "exclusion_reason": "taxonomy_level_leakage_exact_normalized_label",
+      "retired_in": "v2.3.0"
+    }
+  ],
+  "physical_locked_retained": 182
+}

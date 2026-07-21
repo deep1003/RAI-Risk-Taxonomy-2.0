@@ -22,22 +22,31 @@
     },
     {
       "stage": 3,
-      "unit": "canonical L4 risk card",
-      "label": "Canonical global L4 registry",
+      "unit": "exact-deduplicated L4 candidate card",
+      "label": "Exact-deduplicated global L4 candidates",
       "count": 1725,
       "share_of_previous_percent": 2.079037977124893,
-      "filter": "Canonical source crosswalk; permanent RAI4 ID allocation; exact normalized label-and-core-definition duplicate removal only; inclusion of all 182 locked Physical AI cards. One retired ID remains mapped to its canonical card."
+      "filter": "Canonical source crosswalk; permanent RAI4 ID allocation; exact normalized label-and-core-definition duplicate removal only. One retired duplicate ID remains mapped to its canonical card."
     },
     {
       "stage": 4,
+      "unit": "level-validated canonical L4 risk card",
+      "label": "Canonical global L4 registry",
+      "count": 1711,
+      "share_of_previous_percent": 99.18840579710145,
+      "filter": "Exact normalized-label comparison against the 24 authoritative Physical AI L3 labels. Fourteen category labels found at L4 are excluded and retained in an auditable retirement crosswalk; semantic similarity is not used. All 182 authoritative Physical AI L4 cards remain preserved."
+    },
+    {
+      "stage": 5,
       "unit": "L4 risk card with non-null policy L3",
       "label": "Assigned to one of 50 L3 nodes",
-      "count": 1725,
+      "count": 1711,
       "share_of_previous_percent": 100.0,
-      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All cards receive an L3; after two independent expert reviews, 83 cards retain a HOLD marker and one consensus label amendment is applied."
+      "filter": "Locked Physical placement, Stage 1 exact consensus, Stage 2 hierarchy-blind proposal, or Stage 3 forced top-1 placement. All retained cards receive an L3; 76 cards retain a HOLD marker."
     }
   ],
-  "decision_required": {"count": 83, "share_of_l4_percent": 4.811594202898551, "is_taxonomy_node": false},
+  "decision_required": {"count": 76, "share_of_l4_percent": 4.441846873173583, "is_taxonomy_node": false},
   "expert_review": {"reviewers": 2, "reviewed_per_reviewer": 1725, "proposal_counts": [30, 14], "consensus_amendments": 1, "no_consensus_cards": 42},
+  "taxonomy_level_validation": {"authoritative_physical_l3_labels": 24, "exact_label_leaks_excluded": 14, "physical_l4_lock_retained": 182, "matching_policy": "normalized exact label only"},
   "lineage_warning": "The transition from evidence records to L4 cards changes the unit of analysis. The 82,971 records are an evidence view, not a one-to-one parent table from which every L4 card was mechanically generated."
 }

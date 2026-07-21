@@ -1,0 +1,28 @@
+{
+  "release_id": "v2.3.0",
+  "source_release": "v2.2.0",
+  "release_status": "physical_l3_label_leakage_removed",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "physical_total": 182,
+    "decision_required": 76,
+    "physical_l3_label_leakage_excluded": 14,
+    "l3_nodes": 50
+  },
+  "artifacts": [
+    {
+      "path": "cards.json",
+      "sha256": "14354eff7d7d0968392bf1ab1c4cf86c4a1adfbfa87782fe38bcb63640d96e7c"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "d62a2ec2121b28fc4474681e730cb48868cde7834bfe05c303a28c17ac895815"
+    },
+    {
+      "path": "reports/data_quality/physical_l3_label_leakage_v2.3.json",
+      "sha256": "dae51e1a206cd3cd0c4225d339aaa4bfa2e69ce5681e383921682ecd606e3949"
+    }
+  ]
+}
