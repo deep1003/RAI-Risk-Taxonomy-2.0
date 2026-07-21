@@ -1,0 +1,26 @@
+[
+  {
+    "iteration": 1,
+    "changes": 5,
+    "objective": 0.6452078239229702,
+    "counts": {
+      "RAI3-G-SYS-08": 144,
+      "RAI3-A-SYS-07": 3,
+      "RAI3-A-SYS-08": 0,
+      "RAI3-A-SYS-09": 0,
+      "RAI3-A-SYS-10": 2
+    }
+  },
+  {
+    "iteration": 2,
+    "changes": 0,
+    "objective": 0.6463018379755469,
+    "counts": {
+      "RAI3-G-SYS-08": 144,
+      "RAI3-A-SYS-07": 3,
+      "RAI3-A-SYS-08": 0,
+      "RAI3-A-SYS-09": 0,
+      "RAI3-A-SYS-10": 2
+    }
+  }
+]

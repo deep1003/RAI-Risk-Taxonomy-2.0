@@ -1,0 +1,6 @@
+l4_id,label_en,from_l3_id,to_l3_id,margin_over_goal_misalignment,keyword_hits,decision_required
+RAI4-0480,Agent task drift,RAI3-G-SYS-08,RAI3-A-SYS-07,0.157315194606781,"(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit) | agent task drift",True
+RAI4-1130,Misaligned consequentialist reasoning,RAI3-G-SYS-08,RAI3-A-SYS-07,0.07131999731063843,"(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit) | (?:multi[- ]step plan|instrumental subgoals?|consequentialist reasoning).{0,120}(?:agent|assistant|autonomous)",True
+RAI4-1235,Goal misgeneralization,RAI3-G-SYS-08,RAI3-A-SYS-07,0.11865723133087158,"(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit) | goal misgeneralization.{0,120}agent",True
+RAI4-1323,Alignment risks,RAI3-G-SYS-08,RAI3-A-SYS-10,0.07470554113388062,"resist.{0,50}(?:correction|interrupt|shut.?down)",True
+RAI4-1431,Uncorrectable harmful goal pursuit,RAI3-G-SYS-08,RAI3-A-SYS-10,0.09417730569839478,"resist.{0,50}(?:correction|interrupt|shut.?down)",True

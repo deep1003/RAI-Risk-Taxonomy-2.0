@@ -1,0 +1,36 @@
+[
+  {
+    "l4_id": "RAI4-0117",
+    "label_en": "Human veto erosion",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "margin_over_anthropomorphism": 0.1132771372795105,
+    "keyword_hits": [
+      "human veto"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1239",
+    "label_en": "Situational awareness",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "margin_over_anthropomorphism": 0.09340143203735352,
+    "keyword_hits": [
+      "reward hack",
+      "instrumental subgoals?"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1424",
+    "label_en": "Risks from AIs developing goals and values that are different from humans",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "margin_over_anthropomorphism": 0.06806927919387817,
+    "keyword_hits": [
+      "goals? and values? (?:that )?are different"
+    ],
+    "decision_required": true
+  }
+]

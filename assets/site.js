@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.8.0";
+const DATA_ROOT = "public/data/releases/v2.12.0";
 const PAGE_SIZE = 36;
 
 const state = {

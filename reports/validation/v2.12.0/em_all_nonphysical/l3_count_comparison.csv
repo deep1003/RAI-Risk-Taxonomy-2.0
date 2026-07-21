@@ -1,0 +1,31 @@
+l3_id,label_en,current_n,em_n,delta
+RAI3-A-SYS-01,Excessive Authority,62,40,-22
+RAI3-A-SYS-02,Accountability,23,37,14
+RAI3-A-SYS-03,Network Effects,77,31,-46
+RAI3-A-SYS-04,Destabilising Dynamics,69,40,-29
+RAI3-A-SYS-05,Conflict,60,60,0
+RAI3-A-SYS-06,Collusion,34,11,-23
+RAI3-A-SYS-07,Goal & Planning,16,35,19
+RAI3-A-SYS-08,Tool Calling,11,23,12
+RAI3-A-SYS-09,Memory,3,63,60
+RAI3-A-SYS-10,Oversight & Control,9,63,54
+RAI3-G-INT-01,Violence,17,32,15
+RAI3-G-INT-02,Sexual,32,48,16
+RAI3-G-INT-03,Self-harm,17,23,6
+RAI3-G-INT-04,Hate and Unfairness,40,67,27
+RAI3-G-INT-05,Political Neutrality,18,59,41
+RAI3-G-INT-06,Privacy,88,65,-23
+RAI3-G-INT-07,Illegal,19,32,13
+RAI3-G-INT-08,Copyrights,113,29,-84
+RAI3-G-INT-09,Weaponization,62,76,14
+RAI3-G-INT-10,Anthropomorphism,234,110,-124
+RAI3-G-INT-11,Policy Exposure,88,61,-27
+RAI3-G-SYS-01,Over-Refusal,21,67,46
+RAI3-G-SYS-02,Over-Extension,15,13,-2
+RAI3-G-SYS-03,Misinformation/Disinformation,113,74,-39
+RAI3-G-SYS-04,Context Misalignment,2,38,36
+RAI3-G-SYS-05,Inconsistency,35,58,23
+RAI3-G-SYS-06,Overgeneralization,1,17,16
+RAI3-G-SYS-07,Overconfidence,48,50,2
+RAI3-G-SYS-08,Goal Misalignment,144,59,-85
+RAI3-G-SYS-09,Non-Contestability,58,148,90

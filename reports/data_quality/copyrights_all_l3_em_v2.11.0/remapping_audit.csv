@@ -1,0 +1,5 @@
+l4_id,label_en,from_l3_id,to_l3_id,margin_over_copyrights,keyword_similarity,decision_required
+RAI4-0586,Improper data curation,RAI3-G-INT-08,RAI3-G-SYS-03,0.030440739389017035,0.040854677445248795,True
+RAI4-0620,Cyber offence,RAI3-G-INT-08,RAI3-G-INT-09,0.028107221458050113,0.025830866990442593,True
+RAI4-0634,Large-scale persuasion and harmful manipulation risks,RAI3-G-INT-08,RAI3-G-SYS-03,0.03261692737723765,0.017525098242896702,True
+RAI4-1051,Social stereotypes and unfair discrimination,RAI3-G-INT-08,RAI3-G-INT-04,0.05821960396494541,0.03461841643992785,True

@@ -4,4 +4,14 @@ __pycache__/
 .ipynb_checkpoints/
 tmp/
 reports/latex/build/
-
+.playwright-cli/
+anaconda_projects/
+output/jupyter-notebook/.virtual_documents/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+output/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf

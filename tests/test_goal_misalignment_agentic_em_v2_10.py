@@ -1,0 +1,37 @@
+from __future__ import annotations
+
+import json
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+RELEASE = ROOT / "public/data/releases/v2.10.0"
+REPORT = ROOT / "reports/data_quality/goal_misalignment_agentic_em_v2.10.0"
+
+
+class GoalMisalignmentAgenticEmV210Tests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.cards = json.loads((RELEASE / "cards.json").read_text())["cards"]
+        cls.summary = json.loads((REPORT / "summary.json").read_text())
+        cls.audit = json.loads((REPORT / "remapping_audit.json").read_text())
+
+    def test_population_and_unique_ids(self) -> None:
+        self.assertEqual(len(self.cards), 1711)
+        self.assertEqual(len({card["l4_id"] for card in self.cards}), 1711)
+
+    def test_convergence_and_scope(self) -> None:
+        self.assertTrue(self.summary["converged"])
+        self.assertEqual(self.summary["trace"][-1]["changes"], 0)
+        self.assertTrue(all(row["from_l3_id"] == "RAI3-G-SYS-08" for row in self.audit))
+        allowed = {"RAI3-A-SYS-07", "RAI3-A-SYS-08", "RAI3-A-SYS-09", "RAI3-A-SYS-10"}
+        self.assertTrue(all(row["to_l3_id"] in allowed for row in self.audit))
+
+    def test_locks_and_hold_markers(self) -> None:
+        self.assertEqual(sum(card["assignment_status"] == "locked_physical" for card in self.cards), 182)
+        self.assertTrue(all(row["decision_required"] for row in self.audit))
+
+
+if __name__ == "__main__":
+    unittest.main()

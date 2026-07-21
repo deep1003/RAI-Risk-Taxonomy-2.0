@@ -1,0 +1,127 @@
+{
+  "release_id": "v2.12.0",
+  "source_release": "v2.11.0",
+  "status": "published",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 689,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 54
+  },
+  "summary": {
+    "release_id": "v2.12.0",
+    "source_release": "v2.11.0",
+    "population": {
+      "all_l4": 1711,
+      "anthropomorphism_evaluated": 242,
+      "physical_locked": 182
+    },
+    "method": {
+      "name": "definition- and keyword-gated constrained spherical EM",
+      "candidate_l3": [
+        "RAI3-G-INT-10",
+        "RAI3-A-SYS-01",
+        "RAI3-A-SYS-02",
+        "RAI3-A-SYS-03",
+        "RAI3-A-SYS-04",
+        "RAI3-A-SYS-05",
+        "RAI3-A-SYS-06",
+        "RAI3-A-SYS-07",
+        "RAI3-A-SYS-08",
+        "RAI3-A-SYS-09",
+        "RAI3-A-SYS-10",
+        "RAI3-G-INT-01",
+        "RAI3-G-INT-02",
+        "RAI3-G-INT-03",
+        "RAI3-G-INT-04",
+        "RAI3-G-INT-05",
+        "RAI3-G-INT-06",
+        "RAI3-G-INT-07",
+        "RAI3-G-INT-08",
+        "RAI3-G-INT-09",
+        "RAI3-G-INT-11",
+        "RAI3-G-SYS-01",
+        "RAI3-G-SYS-02",
+        "RAI3-G-SYS-03",
+        "RAI3-G-SYS-04",
+        "RAI3-G-SYS-05",
+        "RAI3-G-SYS-06",
+        "RAI3-G-SYS-07",
+        "RAI3-G-SYS-08",
+        "RAI3-G-SYS-09"
+      ],
+      "excluded_destination_scope": "All Physical L3 nodes are locked to the authoritative 182-card taxonomy.",
+      "weights": {
+        "centroid_similarity": 0.6,
+        "definition_similarity": 0.3,
+        "keyword_similarity": 0.1
+      },
+      "minimum_destination_margin": 0.02,
+      "minimum_keyword_similarity": 0.015,
+      "agentic_uniqueness_gate": true,
+      "destination_definition_guard": true
+    },
+    "converged": true,
+    "iterations": 2,
+    "trace": [
+      {
+        "iteration": 1,
+        "changes": 8,
+        "objective": 0.6401408319099704,
+        "counts": {
+          "RAI3-G-INT-10": 234,
+          "RAI3-G-INT-04": 2,
+          "RAI3-G-INT-05": 1,
+          "RAI3-G-INT-09": 2,
+          "RAI3-G-SYS-03": 1,
+          "RAI3-G-SYS-07": 1,
+          "RAI3-G-SYS-09": 1
+        }
+      },
+      {
+        "iteration": 2,
+        "changes": 0,
+        "objective": 0.6404185784711154,
+        "counts": {
+          "RAI3-G-INT-10": 234,
+          "RAI3-G-INT-04": 2,
+          "RAI3-G-INT-05": 1,
+          "RAI3-G-INT-09": 2,
+          "RAI3-G-SYS-03": 1,
+          "RAI3-G-SYS-07": 1,
+          "RAI3-G-SYS-09": 1
+        }
+      }
+    ],
+    "remapped_total": 8,
+    "remapped_by_destination": {
+      "RAI3-G-SYS-09": 1,
+      "RAI3-G-SYS-07": 1,
+      "RAI3-G-INT-04": 2,
+      "RAI3-G-INT-05": 1,
+      "RAI3-G-SYS-03": 1,
+      "RAI3-G-INT-09": 2
+    },
+    "anthropomorphism_before": 242,
+    "anthropomorphism_after": 234,
+    "all_remaps_retain_hold": true
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "087b4285fd32dff54adf358678b68e0b5d18be7ee03a0a44e7e2eed9883ea9a4"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "73f7033ad2faff7f9ab98f17c5b97e309f019cdd6112082475773276e54269d7"
+    },
+    {
+      "path": "reports/data_quality/anthropomorphism_all_l3_em_v2.12.0/summary.json",
+      "sha256": "99dd52ffcffc30ad26e5c29861297c2f2b7a6dc37d8d18ded95138a573d44a36"
+    }
+  ]
+}

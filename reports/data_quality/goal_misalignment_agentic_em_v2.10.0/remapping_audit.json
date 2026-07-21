@@ -1,0 +1,60 @@
+[
+  {
+    "l4_id": "RAI4-0480",
+    "label_en": "Agent task drift",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.157315194606781,
+    "keyword_hits": [
+      "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+      "agent task drift"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1130",
+    "label_en": "Misaligned consequentialist reasoning",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.07131999731063843,
+    "keyword_hits": [
+      "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+      "(?:multi[- ]step plan|instrumental subgoals?|consequentialist reasoning).{0,120}(?:agent|assistant|autonomous)"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1235",
+    "label_en": "Goal misgeneralization",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.11865723133087158,
+    "keyword_hits": [
+      "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+      "goal misgeneralization.{0,120}agent"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1323",
+    "label_en": "Alignment risks",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "margin_over_goal_misalignment": 0.07470554113388062,
+    "keyword_hits": [
+      "resist.{0,50}(?:correction|interrupt|shut.?down)"
+    ],
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1431",
+    "label_en": "Uncorrectable harmful goal pursuit",
+    "from_l3_id": "RAI3-G-SYS-08",
+    "to_l3_id": "RAI3-A-SYS-10",
+    "margin_over_goal_misalignment": 0.09417730569839478,
+    "keyword_hits": [
+      "resist.{0,50}(?:correction|interrupt|shut.?down)"
+    ],
+    "decision_required": true
+  }
+]

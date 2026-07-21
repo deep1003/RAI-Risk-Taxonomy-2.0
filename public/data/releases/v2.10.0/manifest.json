@@ -1,0 +1,90 @@
+{
+  "release_id": "v2.10.0",
+  "source_release": "v2.9.0",
+  "status": "generated_unpublished",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 688,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 54
+  },
+  "summary": {
+    "release_id": "v2.10.0",
+    "source_release": "v2.9.0",
+    "population": {
+      "all_l4": 1711,
+      "goal_misalignment_evaluated": 149,
+      "physical_unchanged": 182
+    },
+    "method": {
+      "name": "keyword-gated constrained spherical EM",
+      "candidate_l3": [
+        "RAI3-G-SYS-08",
+        "RAI3-A-SYS-07",
+        "RAI3-A-SYS-08",
+        "RAI3-A-SYS-09",
+        "RAI3-A-SYS-10"
+      ],
+      "weights": {
+        "centroid_similarity": 0.6,
+        "definition_similarity": 0.3,
+        "keyword_signal": 0.1
+      },
+      "minimum_destination_margin": 0.02
+    },
+    "converged": true,
+    "iterations": 2,
+    "trace": [
+      {
+        "iteration": 1,
+        "changes": 5,
+        "objective": 0.6452078239229702,
+        "counts": {
+          "RAI3-G-SYS-08": 144,
+          "RAI3-A-SYS-07": 3,
+          "RAI3-A-SYS-08": 0,
+          "RAI3-A-SYS-09": 0,
+          "RAI3-A-SYS-10": 2
+        }
+      },
+      {
+        "iteration": 2,
+        "changes": 0,
+        "objective": 0.6463018379755469,
+        "counts": {
+          "RAI3-G-SYS-08": 144,
+          "RAI3-A-SYS-07": 3,
+          "RAI3-A-SYS-08": 0,
+          "RAI3-A-SYS-09": 0,
+          "RAI3-A-SYS-10": 2
+        }
+      }
+    ],
+    "remapped_total": 5,
+    "remapped_by_destination": {
+      "RAI3-A-SYS-07": 3,
+      "RAI3-A-SYS-10": 2
+    },
+    "goal_misalignment_before": 149,
+    "goal_misalignment_after": 144,
+    "all_remaps_retain_hold": true
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "e5bf73728e136ca27950e947e87e2134a9d858e11fa1b39788eef9e26bc43b3b"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "90061d63aaae6eeb56f54a398358f75c14e914c3440178b8d3849b631015336c"
+    },
+    {
+      "path": "reports/data_quality/goal_misalignment_agentic_em_v2.10.0/summary.json",
+      "sha256": "854fcde2e5567f82f94e4d52648d4dd341e2e3ef8f42cbe02f3d3646338a436d"
+    }
+  ]
+}

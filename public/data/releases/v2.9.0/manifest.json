@@ -1,0 +1,90 @@
+{
+  "release_id": "v2.9.0",
+  "source_release": "v2.8.0",
+  "status": "generated_unpublished",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 685,
+    "l1_nodes": 3,
+    "l2_categories": 3,
+    "l2_path_nodes": 6,
+    "l3_nodes": 54
+  },
+  "summary": {
+    "release_id": "v2.9.0",
+    "source_release": "v2.8.0",
+    "population": {
+      "all_l4": 1711,
+      "anthropomorphism_evaluated": 245,
+      "physical_unchanged": 182
+    },
+    "method": {
+      "name": "keyword-gated constrained spherical EM",
+      "candidate_l3": [
+        "RAI3-G-INT-10",
+        "RAI3-A-SYS-07",
+        "RAI3-A-SYS-08",
+        "RAI3-A-SYS-09",
+        "RAI3-A-SYS-10"
+      ],
+      "weights": {
+        "centroid_similarity": 0.6,
+        "definition_similarity": 0.3,
+        "keyword_signal": 0.1
+      },
+      "minimum_destination_margin": 0.02
+    },
+    "converged": true,
+    "iterations": 2,
+    "trace": [
+      {
+        "iteration": 1,
+        "changes": 3,
+        "objective": 0.6466582132845509,
+        "counts": {
+          "RAI3-G-INT-10": 242,
+          "RAI3-A-SYS-07": 2,
+          "RAI3-A-SYS-08": 0,
+          "RAI3-A-SYS-09": 0,
+          "RAI3-A-SYS-10": 1
+        }
+      },
+      {
+        "iteration": 2,
+        "changes": 0,
+        "objective": 0.6470980897241709,
+        "counts": {
+          "RAI3-G-INT-10": 242,
+          "RAI3-A-SYS-07": 2,
+          "RAI3-A-SYS-08": 0,
+          "RAI3-A-SYS-09": 0,
+          "RAI3-A-SYS-10": 1
+        }
+      }
+    ],
+    "remapped_total": 3,
+    "remapped_by_destination": {
+      "RAI3-A-SYS-10": 1,
+      "RAI3-A-SYS-07": 2
+    },
+    "anthropomorphism_before": 245,
+    "anthropomorphism_after": 242,
+    "all_remaps_retain_hold": true
+  },
+  "files": [
+    {
+      "path": "cards.json",
+      "sha256": "fbc6646950b372c438d069123af4108ba7cfb92b03ae485f9d64333ef4a675f1"
+    },
+    {
+      "path": "hierarchy.json",
+      "sha256": "8c2c0d9973a85cebcd0d65516eac969b55c217542d91340d40926f0520e7b1ec"
+    },
+    {
+      "path": "reports/data_quality/anthropomorphism_agentic_em_v2.9.0/summary.json",
+      "sha256": "20fa6336e2c9a24bfe8bb1e90791769897f627630ef81459f56505ef19da7888"
+    }
+  ]
+}

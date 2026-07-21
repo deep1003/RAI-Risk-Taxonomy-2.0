@@ -1,0 +1,35 @@
+{
+  "release_id": "v2.7.0",
+  "review_scope": {
+    "published_anthropomorphism_cards": 245,
+    "reviewed_cards": 245,
+    "coverage_pct": 100.0
+  },
+  "necessary_condition": "The risk mechanism requires attribution or performance of human qualities such as consciousness, emotion, personhood, human embodiment, social reciprocity, or human-like intentionality.",
+  "exclusions": [
+    "Dependency, overreliance, persuasion, or manipulation without a necessary human-likeness mechanism.",
+    "Governance, labor, environmental, privacy, discrimination, political, crime, weaponization, or information-integrity risks whose operative mechanism is independent of anthropomorphism.",
+    "AI capabilities such as theory of mind, situational awareness, or autonomy that do not themselves attribute human status to the AI."
+  ],
+  "verdict_counts": {
+    "REMAP_HIGH_CONFIDENCE": 32,
+    "HOLD_TAXONOMY_GAP": 176,
+    "REMAP_WITH_HOLD": 24,
+    "RETAIN_ANTHROPOMORPHISM": 13
+  },
+  "proposed_target_counts": {
+    "RAI3-G-SYS-09": 2,
+    "RAI3-G-SYS-04": 1,
+    "RAI3-G-INT-04": 23,
+    "RAI3-G-INT-05": 12,
+    "RAI3-G-INT-07": 5,
+    "RAI3-G-INT-06": 7,
+    "RAI3-G-INT-09": 4,
+    "RAI3-G-SYS-03": 1,
+    "RAI3-G-SYS-08": 1
+  },
+  "approved_anthropomorphism_after_review": 13,
+  "operational_anthropomorphism_after_high_confidence_remaps": 189,
+  "human_approval_required_before_mutation": true,
+  "published_data_mutated": false
+}

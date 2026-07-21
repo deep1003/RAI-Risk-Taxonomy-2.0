@@ -1,0 +1,61 @@
+{
+  "release_id": "v2.9.0",
+  "source_release": "v2.8.0",
+  "population": {
+    "all_l4": 1711,
+    "anthropomorphism_evaluated": 245,
+    "physical_unchanged": 182
+  },
+  "method": {
+    "name": "keyword-gated constrained spherical EM",
+    "candidate_l3": [
+      "RAI3-G-INT-10",
+      "RAI3-A-SYS-07",
+      "RAI3-A-SYS-08",
+      "RAI3-A-SYS-09",
+      "RAI3-A-SYS-10"
+    ],
+    "weights": {
+      "centroid_similarity": 0.6,
+      "definition_similarity": 0.3,
+      "keyword_signal": 0.1
+    },
+    "minimum_destination_margin": 0.02
+  },
+  "converged": true,
+  "iterations": 2,
+  "trace": [
+    {
+      "iteration": 1,
+      "changes": 3,
+      "objective": 0.6466582132845509,
+      "counts": {
+        "RAI3-G-INT-10": 242,
+        "RAI3-A-SYS-07": 2,
+        "RAI3-A-SYS-08": 0,
+        "RAI3-A-SYS-09": 0,
+        "RAI3-A-SYS-10": 1
+      }
+    },
+    {
+      "iteration": 2,
+      "changes": 0,
+      "objective": 0.6470980897241709,
+      "counts": {
+        "RAI3-G-INT-10": 242,
+        "RAI3-A-SYS-07": 2,
+        "RAI3-A-SYS-08": 0,
+        "RAI3-A-SYS-09": 0,
+        "RAI3-A-SYS-10": 1
+      }
+    }
+  ],
+  "remapped_total": 3,
+  "remapped_by_destination": {
+    "RAI3-A-SYS-10": 1,
+    "RAI3-A-SYS-07": 2
+  },
+  "anthropomorphism_before": 245,
+  "anthropomorphism_after": 242,
+  "all_remaps_retain_hold": true
+}

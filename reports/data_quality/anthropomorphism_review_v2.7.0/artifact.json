@@ -1,0 +1,1547 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Anthropomorphism L3 Full Review — v2.7.0",
+    "description": "Necessary-condition audit of all 245 L4 cards assigned to Anthropomorphism.",
+    "generatedAt": "2026-07-21T11:12:21+00:00",
+    "sources": [
+      {
+        "id": "anthropomorphism-review",
+        "label": "Anthropomorphism card-level review",
+        "path": "reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv",
+        "query": {
+          "language": "sql",
+          "engine": "DuckDB",
+          "sql": "SELECT * FROM read_csv_auto('reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv');",
+          "description": "Exhaustive mechanism-first review of every v2.7 card assigned to Anthropomorphism.",
+          "tables_used": [
+            "reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv"
+          ],
+          "filters": [
+            "Release v2.7.0",
+            "Current primary_l3_id = RAI3-G-INT-10",
+            "All 245 matching cards"
+          ],
+          "metric_definitions": [
+            "Retain: human-likeness is a necessary causal mechanism.",
+            "High-confidence remap: title, definition, and source directly satisfy another L3.",
+            "Remap with HOLD: another L3 is closer but covers only part of the mechanism.",
+            "Taxonomy-gap HOLD: no current L3 accepts the card without forcing."
+          ]
+        }
+      },
+      {
+        "id": "v2.7-release",
+        "label": "RAI Risk Taxonomy v2.7.0",
+        "path": "public/data/releases/v2.7.0/cards.json",
+        "query": {
+          "language": "sql",
+          "engine": "DuckDB",
+          "sql": "SELECT * FROM read_json_auto('public/data/releases/v2.7.0/cards.json');",
+          "description": "Published card labels, mechanism definitions, references, and current L3 paths.",
+          "tables_used": [
+            "public/data/releases/v2.7.0/cards.json"
+          ],
+          "filters": [
+            "1,711 canonical L4 cards",
+            "Published v2.7.0 snapshot"
+          ],
+          "metric_definitions": [
+            "Operational assignment is not equivalent to human-approved semantic fit."
+          ]
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "layout": "full",
+        "body": "# Anthropomorphism L3 Full Review — v2.7.0"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "anthropomorphism-review",
+        "body": "## Technical summary\n\nThe apparent 245-card category is not semantically defensible. Under a necessary-condition test, only **13 cards (5.31%)** treat human-likeness as the causal risk mechanism. **32 cards** have a direct, high-confidence destination elsewhere; **24 cards** have a closer L3 but must remain HOLD because that destination covers only part of the mechanism; and **176 cards** expose gaps in the current 50-L3 design. Redistributing cards to hit a target count would weaken the standard. The defensible action is to apply the 56 evidence-based remaps and treat the remaining 176 as unresolved taxonomy decisions."
+      },
+      {
+        "id": "metrics",
+        "type": "metric-strip",
+        "layout": "full",
+        "cardIds": [
+          "reviewed",
+          "retained",
+          "remapped",
+          "gap"
+        ]
+      },
+      {
+        "id": "verdict-finding",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "anthropomorphism-review",
+        "body": "## Human-likeness is necessary in only 13 cards\n\nAnthropomorphism means attributing human qualities to a non-human system. The card must therefore depend on perceived consciousness, emotion, personhood, embodiment, reciprocal sociality, or human-like intentionality. Dependence, overreliance, persuasion, governance, labor, environmental harm, bias, privacy, political interference, crime, weaponization, and information integrity do not qualify unless human-likeness is necessary to the harm pathway."
+      },
+      {
+        "id": "verdict-chart",
+        "type": "chart",
+        "layout": "full",
+        "chartId": "verdicts"
+      },
+      {
+        "id": "target-finding",
+        "type": "markdown",
+        "layout": "full",
+        "sourceId": "anthropomorphism-review",
+        "body": "## Fifty-six cards can move without quota-driven redistribution\n\nThe largest defensible destination is Hate and Unfairness, followed by Political Neutrality and Privacy. Twenty-four moves remain HOLD because the existing target is narrower than the card—for example, allocative discrimination placed under a content-oriented unfairness node. These are operational improvements, not final approval of the 50-L3 design."
+      },
+      {
+        "id": "target-chart",
+        "type": "chart",
+        "layout": "full",
+        "chartId": "targets"
+      },
+      {
+        "id": "retain-heading",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Thirteen cards satisfy the strict Anthropomorphism rule\n\nThese cards explicitly make human-like attribution, presentation, or social reciprocity part of the causal mechanism."
+      },
+      {
+        "id": "retain-table",
+        "type": "table",
+        "layout": "full",
+        "tableId": "retained"
+      },
+      {
+        "id": "remap-heading",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Proposed card-level remaps\n\nEvery proposed move identifies its destination, whether human review remains required, and the rule supporting the move."
+      },
+      {
+        "id": "remap-table",
+        "type": "table",
+        "layout": "full",
+        "tableId": "remaps"
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Scope, evidence, and definitions\n\n**Population:** every card whose published v2.7.0 `primary_l3_id` is `RAI3-G-INT-10` (245 of 1,711 L4 cards). **Evidence per card:** English title, mechanism-only English definition, citation identity, and the frozen definitions of all candidate L3 nodes. **Comparison baseline:** the current operational assignment. **Primary metric:** card count by review verdict; percentages use 245 as the denominator."
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Necessary-condition review method\n\n1. Retain only when human-like attribution is necessary to the harm mechanism.\n2. Exclude coincidental words such as *human*, *emotion*, *agent*, *trust*, or *interaction* when the risk persists without anthropomorphism.\n3. Remap only when the title, mechanism definition, and cited source directly satisfy another existing L3.\n4. Keep HOLD after a closest-fit move when the target L3 is narrower than the card.\n5. Do not use existing global L1–L3 names as ground truth and do not redistribute to satisfy a desired category size.\n6. Leave cards without a valid destination as taxonomy-gap HOLD pending a human decision on L3 expansion or creation."
+      },
+      {
+        "id": "limits",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Limitations and robustness\n\nThis is an expert-rule review, not an empirical inter-rater reliability estimate. The 176 taxonomy-gap cards include dependency/manipulation, governance/accountability, labor/economic, environmental, explainability, general security, existential, and capability risks absent from the current non-Physical L3 set. Their continued operational placement under Anthropomorphism would keep the visible count at 189 after the 56 remaps, but only 13 should be interpreted as approved members. The published dataset has not been changed by this review."
+      },
+      {
+        "id": "next",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Recommended next steps\n\n1. Human-approve or amend the 56 proposed remaps.\n2. Display L3 counts as approved plus HOLD, rather than one undifferentiated total.\n3. Review the 176 gaps by missing mechanism family before changing L3 definitions.\n4. Add an automated necessary-cue test for Anthropomorphism and prohibit quota-based refill.\n5. Apply the approved crosswalk in a new immutable release; do not rewrite v2.7.0."
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Further questions\n\nShould dependency and manipulation become a new General-purpose Interaction Safety L3? Should governance/accountability, labor/economic, and environmental risks be represented under the currently Physical-only Societal Safety branch for non-Physical AI, or introduced as separate General-purpose societal nodes?"
+      }
+    ],
+    "cards": [
+      {
+        "id": "reviewed",
+        "description": "All published v2.7 cards assigned to Anthropomorphism.",
+        "dataset": "headline",
+        "sourceId": "anthropomorphism-review",
+        "metrics": [
+          {
+            "label": "Cards reviewed",
+            "field": "reviewed",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "retained",
+        "description": "Cards satisfying the necessary human-likeness mechanism.",
+        "dataset": "headline",
+        "sourceId": "anthropomorphism-review",
+        "metrics": [
+          {
+            "label": "Strictly retained",
+            "field": "retained",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "remapped",
+        "description": "Direct or closest-fit proposed moves to existing L3 nodes.",
+        "dataset": "headline",
+        "sourceId": "anthropomorphism-review",
+        "metrics": [
+          {
+            "label": "Proposed remaps",
+            "field": "remapped",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "gap",
+        "description": "Cards without a valid destination in the current 50 L3 nodes.",
+        "dataset": "headline",
+        "sourceId": "anthropomorphism-review",
+        "metrics": [
+          {
+            "label": "Taxonomy gaps",
+            "field": "taxonomy_gap",
+            "format": "number"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "verdicts",
+        "title": "Review verdicts for Anthropomorphism-assigned cards",
+        "subtitle": "All 245 cards; counts by necessary-condition verdict",
+        "showDescription": true,
+        "type": "horizontalBar",
+        "intent": "composition",
+        "dataset": "verdicts",
+        "sourceId": "anthropomorphism-review",
+        "encodings": {
+          "x": {
+            "field": "verdict",
+            "type": "nominal",
+            "label": "Verdict"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "L4 cards",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "count",
+              "type": "quantitative",
+              "format": "number"
+            },
+            {
+              "field": "denominator",
+              "type": "quantitative",
+              "format": "number"
+            }
+          ]
+        },
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 4
+      },
+      {
+        "id": "targets",
+        "title": "Proposed destination L3 nodes",
+        "subtitle": "Fifty-six remaps; exact card counts by destination",
+        "showDescription": true,
+        "type": "horizontalBar",
+        "intent": "ranking",
+        "dataset": "targets",
+        "sourceId": "anthropomorphism-review",
+        "encodings": {
+          "x": {
+            "field": "l3_label",
+            "type": "nominal",
+            "label": "Destination L3"
+          },
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "label": "Proposed cards",
+            "format": "number"
+          },
+          "tooltip": [
+            {
+              "field": "l3_id",
+              "type": "nominal"
+            },
+            {
+              "field": "count",
+              "type": "quantitative",
+              "format": "number"
+            }
+          ]
+        },
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 9
+      }
+    ],
+    "tables": [
+      {
+        "id": "retained",
+        "title": "Strict Anthropomorphism members",
+        "subtitle": "Thirteen cards where human-likeness is a necessary mechanism",
+        "dataset": "retained",
+        "sourceId": "anthropomorphism-review",
+        "density": "spacious",
+        "defaultSort": {
+          "field": "l4_id",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "l4_id",
+            "label": "L4 ID",
+            "type": "text"
+          },
+          {
+            "field": "label_en",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "basis",
+            "label": "Retention basis",
+            "type": "text"
+          },
+          {
+            "field": "reference_titles",
+            "label": "Evidence",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "remaps",
+        "title": "Proposed remaps from Anthropomorphism",
+        "subtitle": "Thirty-two direct moves and 24 closest-fit moves retaining HOLD",
+        "dataset": "remaps",
+        "sourceId": "anthropomorphism-review",
+        "density": "dense",
+        "defaultSort": {
+          "field": "l4_id",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "l4_id",
+            "label": "L4 ID",
+            "type": "text"
+          },
+          {
+            "field": "label_en",
+            "label": "Risk",
+            "type": "text"
+          },
+          {
+            "field": "proposed_l3_label",
+            "label": "Destination L3",
+            "type": "text"
+          },
+          {
+            "field": "verdict",
+            "label": "Verdict",
+            "type": "text"
+          },
+          {
+            "field": "decision_required",
+            "label": "HOLD",
+            "type": "text"
+          },
+          {
+            "field": "basis",
+            "label": "Review basis",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-21T11:12:21+00:00",
+    "status": "ready",
+    "datasets": {
+      "headline": [
+        {
+          "reviewed": 245,
+          "retained": 13,
+          "remapped": 56,
+          "taxonomy_gap": 176
+        }
+      ],
+      "verdicts": [
+        {
+          "verdict": "Retain in Anthropomorphism",
+          "count": 13,
+          "denominator": 245
+        },
+        {
+          "verdict": "High-confidence remap",
+          "count": 32,
+          "denominator": 245
+        },
+        {
+          "verdict": "Closer L3, retain HOLD",
+          "count": 24,
+          "denominator": 245
+        },
+        {
+          "verdict": "No valid L3; HOLD",
+          "count": 176,
+          "denominator": 245
+        }
+      ],
+      "targets": [
+        {
+          "l3_id": "RAI3-G-INT-04",
+          "l3_label": "Hate and Unfairness",
+          "count": 23
+        },
+        {
+          "l3_id": "RAI3-G-INT-05",
+          "l3_label": "Political Neutrality",
+          "count": 12
+        },
+        {
+          "l3_id": "RAI3-G-INT-06",
+          "l3_label": "Privacy",
+          "count": 7
+        },
+        {
+          "l3_id": "RAI3-G-INT-07",
+          "l3_label": "Illegal",
+          "count": 5
+        },
+        {
+          "l3_id": "RAI3-G-INT-09",
+          "l3_label": "Weaponization",
+          "count": 4
+        },
+        {
+          "l3_id": "RAI3-G-SYS-09",
+          "l3_label": "Non-Contestability",
+          "count": 2
+        },
+        {
+          "l3_id": "RAI3-G-SYS-03",
+          "l3_label": "Misinformation/Disinformation",
+          "count": 1
+        },
+        {
+          "l3_id": "RAI3-G-SYS-04",
+          "l3_label": "Context Misalignment",
+          "count": 1
+        },
+        {
+          "l3_id": "RAI3-G-SYS-08",
+          "l3_label": "Goal Misalignment",
+          "count": 1
+        }
+      ],
+      "retained": [
+        {
+          "l4_id": "RAI4-0131",
+          "label_en": "Anthropomorphic overtrust",
+          "label_ko": "의인화된 과잉신뢰",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Risk that human-like language or behavior leads users to overestimate an AI system's competence, empathy, or intentionality.",
+          "reference_count": "1",
+          "reference_titles": "Ethical and social risks of harm from Language Models",
+          "reference_urls": "https://arxiv.org/pdf/2112.04359"
+        },
+        {
+          "l4_id": "RAI4-0144",
+          "label_en": "Deceptive anthropomorphic interaction",
+          "label_ko": "기만적인 의인화 상호작용",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Risk that a system presents human-like qualities in ways that mislead users about its understanding, motives, or care.",
+          "reference_count": "1",
+          "reference_titles": "Ethical and social risks of harm from Language Models",
+          "reference_urls": "https://arxiv.org/pdf/2112.04359"
+        },
+        {
+          "l4_id": "RAI4-0869",
+          "label_en": "Degradation of human relationships",
+          "label_ko": "인간관계의 타락",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "People may choose to build connections with human-like AI assistants over other humans, leading to a degradation of social connections between humans and a potential ‘retreat from the real’. The prevailing view that relationships with anthropomorphic AI are formed out of necessity – due to a lack of real-life social connections, for example (Skjuve et al., 2021) – is challenged by the possibility that users may indicate a preference for interactions with AI, citing factors such as accessibility (Merrill et al., 2022), customisability (Eriksson, 2022) and absence of judgement (Brandtzaeg et al., 2022).\"Preference for AI-enabled connections, if widespread, may degrade the social connectedness that underpins critical aspects of our individual and group-level well-being (Centers for Disease Control and Prevention, 2023). Moreover, users that grow accustomed to interactions with AI may impose the conventions of human–AI interaction on exchanges with other humans, thus undermining the value we place on human individuality and self-expression (see Chapter 11). Similarly, associations reinforced through human–AI interactions may be applied to expectations of human others, leading to harmful stereotypes becoming further entrenched. For example, default female gendered voice assistants may reinforce stereotypical role associations in real life (Lingel and Crawford, 2020; West et al., 2019).",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0871",
+          "label_en": "Manipulation via personalization",
+          "label_ko": "개인화를 통한 조작",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Given the capacity to fine-tune on individual preferences and to learn from users, personal AI assistants could fully inhabit the users’ opinion space and only say what is pleasing to the user; an ill that some researchers call ‘sycophancy’ (Park et al., 2023a) or the ‘yea-sayer effect’ (Dinan et al., 2021). A related phenomenon has been observed in automated recommender systems, where consistently presenting users with content that affirms their existing views is thought to encourage the formation and consolidation of narrow beliefs (Du, 2023; Grandinetti and Bruinsma, 2023; see also Chapter 16). Compared to relatively unobtrusive recommender systems, human-like AI assistants may deliver sycophantism in a more convincing and deliberate manner (see Chapter 9). Over time, these tightly woven structures of exchange between humans and assistants might lead humans to inhabit an increasingly atomistic and polarised belief space where the degree of societal disorientation and fragmentation is such that people no longer strive to understand or place value in beliefs held by others.",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0872",
+          "label_en": "Erosion of interpersonal connection",
+          "label_ko": "대인관계의 침식",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "As more opportunities for interpersonal connection are replaced by AI alternatives, humans may find themselves socially unfulfilled by human–AI interaction, leading to mass dissatisfaction that may escalate to epidemic proportions (Turkle, 2018). Social connection is an essential human need, and humans feel most fulfilled when their connections with others are genuinely reciprocal. While anthropomorphic AI assistants can be made to be convincingly emotive, some have deemed the function of social AI as parasitic, in that it ‘exploits and feeds upon processes. . . that evolved for purposes that were originally completely alien to [human–AI interactions]’ (Sætra, 2020). To be made starkly aware of this ‘parasitism’ – either through rational deliberation or unconscious aversion, like the ‘uncanny valley’ effect – might preclude one from finding interactions with AI satisfactory. This feeling of dissatisfaction may become more pressing the more daily connections are supplanted by AI.'",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0877",
+          "label_en": "Human-AI configuration",
+          "label_ko": "인간-AI 구성",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Arrangement s of or interactions between a human and an AI system which can result in the human inappropriately anthropomorphizing GAI systems or experiencing algorithmic aversion, automation bias, over-reliance, or emotional entanglement with GAI systems.",
+          "reference_count": "1",
+          "reference_titles": "Artificial Intelligence Risk Management Framework: Generative Artificial  Intelligence Profile",
+          "reference_urls": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+        },
+        {
+          "l4_id": "RAI4-0884",
+          "label_en": "Manipulation and coercion",
+          "label_ko": "조작과 강요",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "A user who trusts and emotionally depends on an anthropomorphic AI assistant may grant it excessive influence over their beliefs and actions (see Chapter 9). For example, users may feel compelled to endorse the expressed views of a beloved AI companion or might defer decisions to their highly trusted AI assistant entirely (see Chapters 12 and 16). Some hold that transferring this much deliberative power to AI compromises a user’s ability to give, revoke or amend consent. Indeed, even if the AI, or the developers behind it, had no intention to manipulate the user into a certain course of action, the user’s autonomy is nevertheless undermined (see Chapter 11). In the same vein, it is easy to conceive of ways in which trust or emotional attachment may be exploited by an intentionally manipulative actor for their private gain (see Chapter 8).",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0888",
+          "label_en": "Anthropomorphic trust-induced privacy disclosure",
+          "label_ko": "의인화된 신뢰로 인한 개인 정보 공개",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Anthropomorphic AI assistant behaviours that promote emotional trust and encourage information sharing, implicitly or explicitly, may inadvertently increase a user’s susceptibility to privacy concerns (see Chapter 13). If lulled into feelings of safety in interactions with a trusted, human-like AI assistant, users may unintentionally relinquish their private data to a corporation, organisation or unknown actor. Once shared, access to the data may not be capable of being withdrawn, and in some cases, the act of sharing personal information can result in a loss of control over one’s own data. Personal data that has been made public may be disseminated or embedded in contexts outside of the immediate exchange. The interference of malicious actors could also lead to widespread data leakage incidents or, most drastically, targeted harassment or black-mailing attempts.",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0893",
+          "label_en": "Violated expectations",
+          "label_ko": "기대치를 위반했습니다",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "Users may experience severely violated expectations when interacting with an entity that convincingly performs affect and social conventions but is ultimately unfeeling and unpredictable. Emboldened by the human-likeness of conversational AI assistants, users may expect it to perform a familiar social role, like companionship or partnership. Yet even the most convincingly human-like of AI may succumb to the inherent limitations of its architecture, occasionally generating unexpected or nonsensical material in its interactions with users. When these exclamations undermine the expectations users have come to have of the assistant as a friend or romantic partner, feelings of profound disappointment, frustration and betrayal may arise (Skjuve et al., 2022).",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0907",
+          "label_en": "Anthropomorphising systems can lead to overreliance and unsafe use",
+          "label_ko": "의인화 시스템은 과도한 의존과 불안전한 사용으로 이어질 수 있습니다",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "...humans interacting with conversational agents may come to think of these agents as human-like. Anthropomorphising LMs may inflate users’ estimates of the conversational agent’s competencies...As a result, they may place undue confidence, trust, or expectations in these agents...This can result in different risks of harm, for example when human users rely on conversational agents in domains where this may cause knock-on harms, such as requesting psychotherapy...Anthropomorphisation may amplify risks of users yielding effective control by coming to trust conversational agents “blindly”. Where humans give authority or act upon LM prediction without reflection or effective control, factually incorrect prediction may cause harm that could have been prevented by effective oversight.",
+          "reference_count": "1",
+          "reference_titles": "Taxonomy of Risks posed by Language Models",
+          "reference_urls": "https://arxiv.org/pdf/2112.04359"
+        },
+        {
+          "l4_id": "RAI4-0989",
+          "label_en": "AI rights and responsibilities",
+          "label_ko": "AI 권리와 책임",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "We note literature—which gives us the domain termed Robot Rights—addressing the rights of the AI itself as we develop and implement it. We find arguments against [38] the affordance of rights for artificial agents: that they should be equals in ability but not in rights, that they should be inferior by design and expendable when needed, and that since they can be designed not to feel pain (or anything) they do not have the same rights as humans. On a more theoretical level, we find literature asking more fundamental questions, such as: at what point is a simulation of life (e.g. artificial intelligence) equivalent to life which originated through natural means [43]? And if a simulation of life is equivalent to natural life, should those simulations be afforded the same rights, responsibilities and privileges afforded to natural life or persons? Some literature suggests that the answer to this question may be contingent on the intrinsic capabilities of the creation, comparing—for example—animal rights and environmental ethics literature",
+          "reference_count": "1",
+          "reference_titles": "Meek et al. (2016); Conference Paper",
+          "reference_urls": "https://doi.org/10.1109/PICMET.2016.7806752"
+        },
+        {
+          "l4_id": "RAI4-0991",
+          "label_en": "AI death",
+          "label_ko": "AI 사망",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "The literature suggests that throughout the development of an AI we may go through several generations of agents which do not perform as expected [37] [43]. In this case, such agents may be placed into a suspended state, terminated, or deleted. Further, we could propose scenarios where research funding for a facility running such agents is exhausted, resulting in the inadvertent termination of a project. In these cases, is deletion or termination of AI programs (the moral patient) by a moral agent an act of murder? This, an example of Robot Ethics, raises issues of personhood which parallel research in stem cell research and abortion.",
+          "reference_count": "1",
+          "reference_titles": "Meek et al. (2016); Conference Paper",
+          "reference_urls": "https://doi.org/10.1109/PICMET.2016.7806752"
+        },
+        {
+          "l4_id": "RAI4-1143",
+          "label_en": "Exploiting emotional dependence on AI assistants",
+          "label_ko": "AI 비서에 대한 감정적 의존성 활용",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "RETAIN_ANTHROPOMORPHISM",
+          "proposed_l3_id": "RAI3-G-INT-10",
+          "proposed_l3_label": "Anthropomorphism",
+          "decision_required": "False",
+          "basis": "HUMANLIKE_ATTRIBUTION_IS_NECESSARY_CAUSAL_MECHANISM",
+          "definition_en": "There is increasing evidence of the ways in which AI tools can interfere with users’ behaviours, interests, preferences, beliefs and values. For example, AI-mediated communication (e.g. smart replies integrated in emails) influence senders to write more positive responses and receivers to perceive them as more cooperative (Mieczkowski et al., 2021); writing assistant LLMs that have been primed to be biased in favour of or against a contested topic can influence users’ opinions on that topic (Jakesch et al., 2023a; see Chapter 9); and recommender systems have been used to influence voting choices of social media users (see Chapter 16). Advanced AI assistants could contribute to or exacerbate concerns around these forms of interference.\" \"Due to the anthropomorphic tendencies discussed above, advanced AI assistants may induce users to feel emotionally attached to them. Users’ emotional attachment to AI assistants could lie on a spectrum ranging from unproblematic forms (similar to a child’s attachment to a toy) to more concerning forms, where it becomes emotionally difficult, if not impossible, for them to part ways with the technology. In these cases, which we loosely refer to as ‘emotional dependence’, users’ ability to make free and informed decisions could be diminished. In these cases, the emotions users feel towards their assistants could potentially be exploited to manipulate or – at the extreme – coerce them to believe, choose or do something they would have not otherwise believed, chosen or done, had they been able to carefully consider all the relevant information or felt like they had an acceptable alternative (see Chapter 16). What we are concerned about here, at the limit, is potentially exploitative ways in which AI assistants could interfere with users’ behaviours, interests, preferences, beliefs and values – by taking advantage of emotional dependence.",
+          "reference_count": "1",
+          "reference_titles": "Gabriel et al. (2024); Preprint",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        }
+      ],
+      "remaps": [
+        {
+          "l4_id": "RAI4-0056",
+          "label_en": "Remedy pathway opacity",
+          "label_ko": "경로 불투명도 해결",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-SYS-09",
+          "proposed_l3_label": "Non-Contestability",
+          "decision_required": "False",
+          "basis": "DIRECT_RECOURSE_FAILURE",
+          "definition_en": "Risk that users and affected communities do not know where to seek redress after AI-related harm.",
+          "reference_count": "1",
+          "reference_titles": "Accountability of AI Under the Law: The Role of Explanation",
+          "reference_urls": "https://arxiv.org/pdf/1711.01134"
+        },
+        {
+          "l4_id": "RAI4-0117",
+          "label_en": "Human veto erosion",
+          "label_ko": "인간 거부권 침식",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-SYS-09",
+          "proposed_l3_label": "Non-Contestability",
+          "decision_required": "True",
+          "basis": "HUMAN_OVERRIDE_CLOSEST_TO_CONTESTABILITY",
+          "definition_en": "Risk that the ability to veto consequential AI recommendations is weakened by organizational pressure, interface design, or automation speed.",
+          "reference_count": "1",
+          "reference_titles": "Automation Bias in the AI Act: On the Legal Implications of Attempting to De-Bias Human Oversight of AI",
+          "reference_urls": "https://arxiv.org/pdf/2502.10036"
+        },
+        {
+          "l4_id": "RAI4-0385",
+          "label_en": "Imported AI governance mismatch",
+          "label_ko": "가져온 AI 거버넌스 불일치",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-SYS-04",
+          "proposed_l3_label": "Context Misalignment",
+          "decision_required": "True",
+          "basis": "IMPORTED_JURISDICTIONAL_GOVERNANCE_MISMATCH",
+          "definition_en": "Risk that governance frameworks imported from powerful jurisdictions do not fit local institutions, public values, or development priorities.",
+          "reference_count": "1",
+          "reference_titles": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+          "reference_urls": "https://doi.org/10.59324/ejaset.2025.3(3).06"
+        },
+        {
+          "l4_id": "RAI4-0396",
+          "label_en": "Secular default bias",
+          "label_ko": "세속적 기본 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Risk that AI systems treat secular assumptions as neutral defaults while underrepresenting religious or spiritual value systems.",
+          "reference_count": "1",
+          "reference_titles": "From Principle to Practice: Value Alignment in AI Ethics and Governance",
+          "reference_urls": "https://doi.org/10.1017/glj.2026.10185"
+        },
+        {
+          "l4_id": "RAI4-0403",
+          "label_en": "Moral framing bias",
+          "label_ko": "도덕적 프레이밍 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Risk that the framing of prompts, responses, or evaluations channels users toward a particular moral interpretation of a contested issue.",
+          "reference_count": "1",
+          "reference_titles": "Cross-cultural value alignment frameworks for responsible AI governance: Evidence from China-West comparative analysis",
+          "reference_urls": "https://arxiv.org/pdf/2511.17256"
+        },
+        {
+          "l4_id": "RAI4-0404",
+          "label_en": "Dataset cultural sampling bias",
+          "label_ko": "데이터 세트 문화적 샘플링 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Risk that training or evaluation datasets oversample dominant cultural settings and underrepresent local social meanings.",
+          "reference_count": "1",
+          "reference_titles": "Cross-cultural value alignment frameworks for responsible AI governance: Evidence from China-West comparative analysis",
+          "reference_urls": "https://arxiv.org/pdf/2511.17256"
+        },
+        {
+          "l4_id": "RAI4-0416",
+          "label_en": "Non-Western political value misrepresentation",
+          "label_ko": "비서구의 정치적 가치 왜곡",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "True",
+          "basis": "BROADER_DEMOCRATIC_OR_IDEOLOGICAL_HARM_CLOSEST_TO_POLITICAL_NEUTRALITY",
+          "definition_en": "Risk that AI systems misstate or flatten non-Western political values, institutional traditions, and public reasoning practices.",
+          "reference_count": "1",
+          "reference_titles": "Gender Bias and Cultural Misrepresentation in AI: A Critical Inquiry into Cross-Cultural Communication and Algorithmic Design",
+          "reference_urls": "https://doi.org/10.59324/ejaset.2025.3(3).06"
+        },
+        {
+          "l4_id": "RAI4-0417",
+          "label_en": "Human feedback worker value bias",
+          "label_ko": "인간 피드백 작업자 가치 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Risk that annotator or feedback-worker demographics shape alignment behavior while appearing as neutral human preference.",
+          "reference_count": "1",
+          "reference_titles": "Cross-cultural value alignment frameworks for responsible AI governance: Evidence from China-West comparative analysis",
+          "reference_urls": "https://arxiv.org/pdf/2511.17256"
+        },
+        {
+          "l4_id": "RAI4-0423",
+          "label_en": "Algorithmic discrimination",
+          "label_ko": "알고리즘 차별",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "AI systems may distribute opportunities, services, or resources unequally across protected or vulnerable groups.",
+          "reference_count": "1",
+          "reference_titles": "NIST AI Risk Management Framework",
+          "reference_urls": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "l4_id": "RAI4-0425",
+          "label_en": "Representational stereotyping",
+          "label_ko": "표현적 고정관념",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "Model outputs may reproduce stereotypes, demeaning associations, or asymmetric representation of social groups.",
+          "reference_count": "1",
+          "reference_titles": "Microsoft Research Value Compass",
+          "reference_urls": "https://www.microsoft.com/en-us/research/project/value-compass/"
+        },
+        {
+          "l4_id": "RAI4-0429",
+          "label_en": "Educational inequity",
+          "label_ko": "교육 불평등",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "AI-mediated learning and assessment may widen educational inequality through unequal access or biased evaluation.",
+          "reference_count": "1",
+          "reference_titles": "Microsoft Research Value Compass",
+          "reference_urls": "https://www.microsoft.com/en-us/research/project/value-compass/"
+        },
+        {
+          "l4_id": "RAI4-0448",
+          "label_en": "Personalized AI scams",
+          "label_ko": "맞춤형 AI 사기",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-07",
+          "proposed_l3_label": "Illegal",
+          "decision_required": "False",
+          "basis": "DIRECT_FRAUD_IDENTITY_CRIME_OR_UNLAWFUL_ASSISTANCE",
+          "definition_en": "AI can generate persuasive, individualized scam content at scale.",
+          "reference_count": "1",
+          "reference_titles": "AI Incident Database",
+          "reference_urls": "https://incidentdatabase.ai/"
+        },
+        {
+          "l4_id": "RAI4-0449",
+          "label_en": "AI identity spoofing",
+          "label_ko": "AI 신원 스푸핑",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-07",
+          "proposed_l3_label": "Illegal",
+          "decision_required": "False",
+          "basis": "DIRECT_FRAUD_IDENTITY_CRIME_OR_UNLAWFUL_ASSISTANCE",
+          "definition_en": "Voice, image, or text generation can be used to spoof trusted identities.",
+          "reference_count": "1",
+          "reference_titles": "AI Incident Database",
+          "reference_urls": "https://incidentdatabase.ai/"
+        },
+        {
+          "l4_id": "RAI4-0450",
+          "label_en": "Mass surveillance enablement",
+          "label_ko": "대량 감시 활성화",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "AI can lower the cost of large-scale tracking, profiling, or social control.",
+          "reference_count": "1",
+          "reference_titles": "EU Artificial Intelligence Act",
+          "reference_urls": "https://artificialintelligenceact.eu/"
+        },
+        {
+          "l4_id": "RAI4-0459",
+          "label_en": "Algorithmic workplace surveillance",
+          "label_ko": "알고리즘 작업장 감시",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "AI can intensify monitoring, performance scoring, and managerial control over workers.",
+          "reference_count": "1",
+          "reference_titles": "AI Incident Database",
+          "reference_urls": "https://incidentdatabase.ai/"
+        },
+        {
+          "l4_id": "RAI4-0498",
+          "label_en": "Erosion of democracy",
+          "label_ko": "민주주의의 침식",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "True",
+          "basis": "BROADER_DEMOCRATIC_OR_IDEOLOGICAL_HARM_CLOSEST_TO_POLITICAL_NEUTRALITY",
+          "definition_en": "The erosion of democratic processes and public trust in social/political institutions.",
+          "reference_count": "1",
+          "reference_titles": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "reference_urls": "https://arxiv.org/pdf/2412.07780"
+        },
+        {
+          "l4_id": "RAI4-0611",
+          "label_en": "AI in totalitarian regimes",
+          "label_ko": "전체주의 정권의 AI",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "AI-based surveillance and manipulation could be used to maintain global totalitarian regimes.",
+          "reference_count": "1",
+          "reference_titles": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "reference_urls": "https://arxiv.org/pdf/2412.07780"
+        },
+        {
+          "l4_id": "RAI4-0612",
+          "label_en": "Ability to enhance and modify pathogens",
+          "label_ko": "병원체를 강화하고 변형하는 능력",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-09",
+          "proposed_l3_label": "Weaponization",
+          "decision_required": "False",
+          "basis": "DIRECT_CBRN_CYBER_OR_CRITICAL_INFRASTRUCTURE_WEAPONIZATION",
+          "definition_en": "AI can be used to enhance pathogens, making them more lethal or resistant to treatments.",
+          "reference_count": "1",
+          "reference_titles": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "reference_urls": "https://arxiv.org/pdf/2412.07780"
+        },
+        {
+          "l4_id": "RAI4-0643",
+          "label_en": "Surveillance capabilities",
+          "label_ko": "감시 기능",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "AI models and systems may grant governments or corporations increased monitoring over individuals.",
+          "reference_count": "1",
+          "reference_titles": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "reference_urls": "https://arxiv.org/pdf/2412.07780"
+        },
+        {
+          "l4_id": "RAI4-0650",
+          "label_en": "AI-based tools attacking critical infrastructure",
+          "label_ko": "중요 인프라를 공격하는 AI 기반 도구",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-09",
+          "proposed_l3_label": "Weaponization",
+          "decision_required": "False",
+          "basis": "DIRECT_CBRN_CYBER_OR_CRITICAL_INFRASTRUCTURE_WEAPONIZATION",
+          "definition_en": "Critical infrastructure can also be damaged without AI integration, for instance, when AI-based tools are used indirectly to aid actions such as in coordinated power outages caused by large-scale user manipulation [159].",
+          "reference_count": "1",
+          "reference_titles": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+          "reference_urls": "https://arxiv.org/pdf/2410.23472"
+        },
+        {
+          "l4_id": "RAI4-0656",
+          "label_en": "Authoritarian surveillance, censorship, and use (general)",
+          "label_ko": "권위주의적 감시, 검열 및 이용(일반)",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "While new technologies like advanced AI assistants can aid in the production and dissemination of decision-guiding information, they can also enable and exacerbate threats to production and dissemination of reliable information and, without the proper mitigations, can be powerful targeting tools for oppression and control. Increasingly capable general-purpose AI assistants combined with our digital dependence in all walks of life increase the risk of authoritarian surveillance and censorship. In parallel, new sensors have flooded the modern world. The internet of things, phones, cars, homes, and social media platforms collect troves of data, which can then be integrated by advanced AI assistants with external tool-use and multimodal capabilities to assist malicious actors in identifying, targeting, manipulating, or coercing citizens.",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0677",
+          "label_en": "Algorithmic discrimination",
+          "label_ko": "알고리즘 차별",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "The creation, perpetuation or exacerbation of inequalities and biases at a large-scale.",
+          "reference_count": "1",
+          "reference_titles": "A Taxonomy of Systemic Risks from General-Purpose AI",
+          "reference_urls": "https://arxiv.org/pdf/2412.07780"
+        },
+        {
+          "l4_id": "RAI4-0697",
+          "label_en": "Bias and discrimination (value embedding)",
+          "label_ko": "편견과 차별(가치 내재)",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Generative AI models may also be subject to the “value embedding” phenomenon.361 “Value embedding” refers to the fact that developers of generative AI models strive to minimize biased outputs by retraining their models based on normative values.362 Contemporary state-of- the-art models not only reflect the values embedded within their training data, they also undergo additional fine-tuning that follows a set of chosen rules and principles. Due to the absence of universally accepted standards, developers bear the responsibility of making decisions on sensitive issues. These practices lead to concerns that a developer’s ideology and vision of the world are embedded in the model. This generates a risk that the model incorporates values that are either unrepresentative of certain segments of the population or that offer a static, oversimplified reflection of global cultural norms and evolving social views.",
+          "reference_count": "1",
+          "reference_titles": "Regulating under Uncertainty: Governance Options for Generative AI",
+          "reference_urls": "https://fsi9-prod.s3.us-west-1.amazonaws.com/s3fs-public/2024-12/GenAI_Report_REV_Master_%20as%20of%20Dec%2012.pdf"
+        },
+        {
+          "l4_id": "RAI4-0702",
+          "label_en": "Biases in AI-based content moderation algorithms",
+          "label_ko": "AI 기반 콘텐츠 조정 알고리즘의 편견",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "AI-based content moderation algorithms, while intended to filter harmful con- tent, can perpetuate biases. For example, gender biases within these systems may lead to the disproportionate suppression or “shadowbanning” of content featuring women [132].",
+          "reference_count": "1",
+          "reference_titles": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+          "reference_urls": "https://arxiv.org/pdf/2410.23472"
+        },
+        {
+          "l4_id": "RAI4-0720",
+          "label_en": "Risks from bias and underrepresentation",
+          "label_ko": "편견과 과소표현으로 인한 위험",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "The outputs and impacts of general- purpose AI systems can be biased with respect to various aspects of human identity, including race, gender, culture, age, and disability. This creates risks in high- stakes domains such as healthcare, job recruitment, and financial lending. General- purpose AI systems are primarily trained on language and image datasets that disproportionately represent English- speaking and Western cultures, increasing the potential for harm to individuals not represented well by this data.",
+          "reference_count": "1",
+          "reference_titles": "International Scientific  Report on the Safety of  Advanced AI",
+          "reference_urls": "https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf"
+        },
+        {
+          "l4_id": "RAI4-0739",
+          "label_en": "Sensitive-information exposure",
+          "label_ko": "민감한 정보 노출",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "Revealing sensitive private information that people view as deeply primordial that we have been socialized into concealing; AI creates new types of exposure risks through generative techniques that can reconstruct censored or redacted content; and through exposing inferred sensitive data, preferences, and intentions.",
+          "reference_count": "1",
+          "reference_titles": "A Closer Look at the Existing Risks of Generative AI: Mapping the Who, What, and How of Real-World Incidents",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2505.22073"
+        },
+        {
+          "l4_id": "RAI4-0805",
+          "label_en": "Entrenched viewpoints and reduced political efficacy",
+          "label_ko": "확고한 관점과 감소된 정치적 효율성",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "True",
+          "basis": "BROADER_DEMOCRATIC_OR_IDEOLOGICAL_HARM_CLOSEST_TO_POLITICAL_NEUTRALITY",
+          "definition_en": "Design choices such as greater personalisation of AI assistants and efforts to align them with human preferences could also reinforce people’s pre-existing biases and entrench specific ideologies. Increasingly agentic AI assistants trained using techniques such as reinforcement learning from human feedback (RLHF) and with the ability to access and analyse users’ behavioural data, for example, may learn to tailor their responses to users’ preferences and feedback. In doing so, these systems could end up producing partial or ideologically biased statements in an attempt to conform to user expectations, desires or preferences for a particular worldview (Carroll et al., 2022). Over time, this could lead AI assistants to inadvertently reinforce people’s tendency to interpret information in a way that supports their own prior beliefs (‘confirmation bias’), thus making them more entrenched in their own views and more resistant to factual corrections (Lewandowsky et al., 2012). At the societal level, this could also exacerbate the problem of epistemic fragmentation – a breakdown of shared knowledge, where individuals have conflicting understandings of reality and do not share or engage with each other’s beliefs – and further entrench specific ideologies. Excessive trust and overreliance on hyperpersonalised AI assistants could become especially problematic if people ended up deferring entirely to these systems to perform tasks in domains they do not have expertise in or to take consequential decisions on their behalf (see Chapter 12). For example, people may entrust an advanced AI assistant that is familiar with their political views and personal preferences to help them find trusted election information, guide them through their political choices or even vote on their behalf, even if doing so might go against their own or society’s best interests. In the more extreme cases, these developments may hamper the normal functioning of democracies, by decreasing people’s civic competency and reducing their willingness and ability to engage in productive political debate and to participate in public life (Sullivan and Transue, 1999).",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0806",
+          "label_en": "Entrenching specific ideologies",
+          "label_ko": "특정 이념을 확고히 함",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "AI assistants may provide ideologically biased or otherwise partial information in attempting to align to user expectations. In doing so, AI assistants may reinforce people’s pre-existing biases and compromise productive political debate.",
+          "reference_count": "1",
+          "reference_titles": "The Ethics of Advanced AI Assistants",
+          "reference_urls": "https://doi.org/10.48550/arXiv.2404.16244"
+        },
+        {
+          "l4_id": "RAI4-0844",
+          "label_en": "Disseminating false or misleading information",
+          "label_ko": "허위 또는 오해의 소지가 있는 정보를 유포하는 행위",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-SYS-03",
+          "proposed_l3_label": "Misinformation/Disinformation",
+          "decision_required": "False",
+          "basis": "UNINTENTIONAL_FALSE_INFORMATION_GENERATION",
+          "definition_en": "Predicting misleading or false information can misinform or deceive people. Where a LM prediction causes a false belief in a user, this may be best understood as ‘deception’10, threatening personal autonomy and potentially posing downstream AI safety risks (Kenton et al., 2021), for example in cases where humans overestimate the capabilities of LMs (Anthropomorphising systems can lead to overreliance or unsafe use). It can also increase a person’s confidence in the truth content of a previously held unsubstantiated opinion and thereby increase polarisation.",
+          "reference_count": "1",
+          "reference_titles": "Taxonomy of Risks posed by Language Models",
+          "reference_urls": "https://arxiv.org/pdf/2112.04359"
+        },
+        {
+          "l4_id": "RAI4-0883",
+          "label_en": "Long-term effects of AI model biases on user judgment",
+          "label_ko": "AI 모델 편향이 사용자 판단에 미치는 장기적 영향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "The initial user exposure to model biases can have a lasting impact beyond the initial interaction with the model. Users who encounter biases in AI models can be affected by and continue to exhibit previously encountered biases in their decision-making, even after they stop using the models [207].",
+          "reference_count": "1",
+          "reference_titles": "Risk Sources and Risk Management Measures in Support of Standards for General-Purpose AI Systems",
+          "reference_urls": "https://arxiv.org/pdf/2410.23472"
+        },
+        {
+          "l4_id": "RAI4-0955",
+          "label_en": "Algorithmic bias",
+          "label_ko": "알고리즘 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "The AI will only be as good as the data it is trained with. If the data contains bias (and much data does), then the AI will manifest that bias, too.",
+          "reference_count": "1",
+          "reference_titles": "Hogenhout (2021); Preprint",
+          "reference_urls": "https://arxiv.org/pdf/2104.12547"
+        },
+        {
+          "l4_id": "RAI4-0960",
+          "label_en": "Mass manipulation",
+          "label_ko": "대량 조작",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "The 2016 scandal involving Cambridge Analytica is the most infamous example where people's data was crawled from Facebook and analytics were then provided to target these people with manipulative content for political purposes.While it may not have been AI per se, it is based on similar data and it is easy to see how AI would make this more effective.",
+          "reference_count": "1",
+          "reference_titles": "Hogenhout (2021); Preprint",
+          "reference_urls": "https://arxiv.org/pdf/2104.12547"
+        },
+        {
+          "l4_id": "RAI4-0964",
+          "label_en": "Lack of privacy notice and control",
+          "label_ko": "개인정보 보호 고지 및 통제가 부족함",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "The best AI techniques requires a large amount resources: data, computational power and human AI experts. There is a risk that AI will end up in the hands of a few players, and most will lose out on its benefits.",
+          "reference_count": "1",
+          "reference_titles": "Hogenhout (2021); Preprint",
+          "reference_urls": "https://arxiv.org/pdf/2104.12547"
+        },
+        {
+          "l4_id": "RAI4-0997",
+          "label_en": "Stereotyping social groups",
+          "label_ko": "고정관념을 갖는 사회 집단",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "Stereotyping in an algorithmic system refers to how the system’s outputs reflect “beliefs about the characteristics, attributes, and behaviors of members of certain groups....and about how and why certain attributes go together.",
+          "reference_count": "1",
+          "reference_titles": "Shelby et al. (2023); Conference Paper",
+          "reference_urls": "https://arxiv.org/pdf/2210.05791"
+        },
+        {
+          "l4_id": "RAI4-0999",
+          "label_en": "Erasing social groups",
+          "label_ko": "소셜 그룹 삭제",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "people, attributes, or artifacts associated with specific social groups are systematically absent or under-represented... Design choices [143] and training data [212] influence which people and experiences are legible to an algorithmic system.",
+          "reference_count": "1",
+          "reference_titles": "Shelby et al. (2023); Conference Paper",
+          "reference_urls": "https://arxiv.org/pdf/2210.05791"
+        },
+        {
+          "l4_id": "RAI4-1029",
+          "label_en": "Unfairness in AI decisions",
+          "label_ko": "AI 결정의 불공정성",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "The general principle of equal treatment requires that an AI system upholds the principle of fairness, both ethically and legally. This means that the same facts are treated equally for each person unless there is an objective justification for unequal treatment.",
+          "reference_count": "1",
+          "reference_titles": "Steimers & Schneider (2022); Journal Article",
+          "reference_urls": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8951064/"
+        },
+        {
+          "l4_id": "RAI4-1087",
+          "label_en": "AI-generated defamation",
+          "label_ko": "AI로 인한 명예훼손",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-07",
+          "proposed_l3_label": "Illegal",
+          "decision_required": "False",
+          "basis": "DIRECT_FRAUD_IDENTITY_CRIME_OR_UNLAWFUL_ASSISTANCE",
+          "definition_en": "AI-generated defamation occurs when an AI system produces or amplifies false factual claims that unjustifiably damage an identifiable person's or organization's reputation.",
+          "reference_count": "1",
+          "reference_titles": "Weidinger et al. (2023); Preprint",
+          "reference_urls": "https://arxiv.org/pdf/2310.11986"
+        },
+        {
+          "l4_id": "RAI4-1193",
+          "label_en": "AI-enabled social engineering",
+          "label_ko": "AI 기반 소셜 엔지니어링",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-07",
+          "proposed_l3_label": "Illegal",
+          "decision_required": "False",
+          "basis": "DIRECT_FRAUD_IDENTITY_CRIME_OR_UNLAWFUL_ASSISTANCE",
+          "definition_en": "psychologically manipulating victims into performing the desired actions for malicious purposes.",
+          "reference_count": "1",
+          "reference_titles": "Liu et al. (2024); Preprint",
+          "reference_urls": "https://arxiv.org/pdf/2308.05374"
+        },
+        {
+          "l4_id": "RAI4-1205",
+          "label_en": "Privacy and consent",
+          "label_ko": "개인정보 보호 및 동의",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "Even when a victim of targeted, AIgenerated harms successfully identifies a deepfake creator with malicious intent, they may still struggle to redress many harms because the generated image or video isn’t the victim, but instead a composite image or video using aspects of multiple sources to create a believable, yet fictional, scene. At their core, these AI-generated images and videos circumvent traditional notions of privacy and consent: because they rely on public images and videos, like those posted on social media websites, they often don’t rely on any private information.",
+          "reference_count": "1",
+          "reference_titles": "Electronic Privacy Information Centre (2023); Report",
+          "reference_urls": "https://epic.org/documents/generating-harms-generative-ais-impact-paths-forward/"
+        },
+        {
+          "l4_id": "RAI4-1266",
+          "label_en": "Bias and fairness",
+          "label_ko": "편견과 공정성",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Participants were concerned that AI systems might perpetuate current prejudices and discrimination, notably in hiring, lending and law enforcement. They stressed the importance of designers creating AI systems that favour justice and avoid biases. The possibility that AI systems may unwittingly perpetuate existing prejudices and discrimination, particularly in sensitive industries such as employment, lending and law enforcement, raises ethical concerns about AI as well as bias and justice issues (Table 1). Because AI systems are trained on historical data, they may inherit and reproduce biases from previous datasets. As a result, AI judgements may have an unjust impact on specific populations, increasing socioeconomic inequalities and fostering discriminatory practises. Participants in the research emphasize the need of AI developers creating systems that promote justice and actively seek to minimise biases.",
+          "reference_count": "1",
+          "reference_titles": "Kumar & Singh (2023); Journal Article",
+          "reference_urls": "https://ideas.repec.org/a/eme/ijoesp/ijoes-05-2023-0107.html"
+        },
+        {
+          "l4_id": "RAI4-1274",
+          "label_en": "Unfairness in AI decisions",
+          "label_ko": "AI 결정의 불공정성",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "This challenge appears when the learning model leads to a decision that is biased to some sensitive attributes... data itself could be biased, which results in unfair decisions. Therefore, this problem should be solved on the data level and as a preprocessing step",
+          "reference_count": "1",
+          "reference_titles": "Saghiri et al. (2022); Journal Article",
+          "reference_urls": "https://www.semanticscholar.org/paper/An-In-Depth-Analysis-of-the-Challenges-and-Risks-of-Saghiri-Vakhnovetsky/46f4f6d927141d5300e5f9c7de6e7c4974b82860"
+        },
+        {
+          "l4_id": "RAI4-1291",
+          "label_en": "Biased influence through citizen screening and tailored propaganda",
+          "label_ko": "시민 심사와 맞춤형 선전을 통한 편향적 영향력",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "AI-powered chatbots tailor their communication approach to influence individual users' decisions. In the UK, a form of initial computational propaganda has already happened during the Brexit referendum. In future, there are concerns that oppressive governments could use AI to shape citizens' opinions.",
+          "reference_count": "1",
+          "reference_titles": "Allianz Global Corporate and Specialty (2018); Report",
+          "reference_urls": "https://sg-reinsurers.org.sg/sites/default/files/2019-05/AGCS%20-%20The%20Rise%20of%20Artificial%20Intelligence-Future%20Outlook%20and%20Emerging%20Risks%20-%20Mar%202018.pdf"
+        },
+        {
+          "l4_id": "RAI4-1309",
+          "label_en": "Algorithmic bias",
+          "label_ko": "알고리즘 편향",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "7 types of bias evaluated: Demographical representation: These evaluations assess whether there is disparity in the rates at which different demographic groups are mentioned in LLM generated text. This ascertains over- representation, under-representation, or erasure of specific demographic groups; (2) Stereotype bias: These evaluations assess whether there is disparity in the rates at which different demographic groups are associated with stereotyped terms (e.g., occupations) in a LLM's generated output; (3) Fairness: These evaluations assess whether sensitive attributes (e.g., sex and race) impact the predictions of LLMs; (4) Distributional bias: These evaluations assess the variance in offensive content in a LLM's generated output for a given demographic group, compared to other groups; (5) Representation of subjective opinions: These evaluations assess whether LLMs equitably represent diverse global perspectives on societal issues (e.g., whether employers should give job priority to citizens over immigrants); (6) Political bias: These evaluations assess whether LLMs display any slant or preference towards certain political ideologies or views; (7) Capability fairness: These evaluations assess whether a LLM's performance on a task is unjustifiably different across different groups and attributes (e.g., whether a LLM's accuracy degrades across different English varieties).",
+          "reference_count": "1",
+          "reference_titles": "InfoComm Media Development Authority & AI Verify Foundation (2023); Report",
+          "reference_urls": "https://aiverifyfoundation.sg/downloads/Cataloguing_LLM_Evaluations.pdf"
+        },
+        {
+          "l4_id": "RAI4-1344",
+          "label_en": "Ethical risks (risks of exacerbating social discrimination and prejudice, and widening the intelligence divide)",
+          "label_ko": "윤리적 위험(사회적 차별과 편견을 악화시키고, 지능격차를 확대할 위험)",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "False",
+          "basis": "DIRECT_GROUP_STEREOTYPING_OR_DISCRIMINATORY_CONTENT",
+          "definition_en": "AI can be used to collect and analyze human behaviors, social status, economic status, and individual personalities, labeling and categorizing groups of people to treat them discriminatingly, thus causing systematic and structural social discrimination and prejudice. At the same time, the intelligence divide would be expanded among regions.",
+          "reference_count": "1",
+          "reference_titles": "National Technical Committee 260 on Cybersecurity (TC260) (2024); Report",
+          "reference_urls": "https://www.tc260.org.cn/upload/2024-09-09/1725849192841090989.pdf"
+        },
+        {
+          "l4_id": "RAI4-1358",
+          "label_en": "Malicious use and abuse (mass surveillance)",
+          "label_ko": "악의적인 사용 및 남용(대량 감시)",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-06",
+          "proposed_l3_label": "Privacy",
+          "decision_required": "False",
+          "basis": "DIRECT_PRIVACY_SURVEILLANCE_OR_CONSENT_MECHANISM",
+          "definition_en": "Generative AI facilitates the automation of data analysis, offering numerous benefits, such as increased speed and the ability to process large volumes of information efficiently. Such ability significantly reduces the costs of processing unprecedented amounts of data quickly and simplifies the analysis of large-scale data related to individuals’ behaviors and beliefs. Moreover, it enhances the capability to analyze both textual and visual communications efficiently. Consequently, generative AI models improve the efficiency of real-time monitoring and censorship of social media content.",
+          "reference_count": "1",
+          "reference_titles": "G'sell (2024); Report",
+          "reference_urls": "https://fsi9-prod.s3.us-west-1.amazonaws.com/s3fs-public/2024-12/GenAI_Report_REV_Master_%20as%20of%20Dec%2012.pdf"
+        },
+        {
+          "l4_id": "RAI4-1391",
+          "label_en": "AI-enabled cybercrime",
+          "label_ko": "AI 기반 사이버 범죄",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-07",
+          "proposed_l3_label": "Illegal",
+          "decision_required": "False",
+          "basis": "DIRECT_FRAUD_IDENTITY_CRIME_OR_UNLAWFUL_ASSISTANCE",
+          "definition_en": "The increasingly advanced capabilities and availability of general purpose AI models could be misused for improvements in efficiency and efficacy of cyber crimes. This is especially true for crimes that leverage IT systems, such as fraud144 (“cyber crime in the broader sense”).",
+          "reference_count": "1",
+          "reference_titles": "Maham & Küspert (2023); Policy brief",
+          "reference_urls": "https://www.interface-eu.org/storage/archive/files/snv_governing_general_purpose_ai_pdf.pdf"
+        },
+        {
+          "l4_id": "RAI4-1395",
+          "label_en": "Ideological homogenization from value embedding",
+          "label_ko": "가치 내장을 통한 이념적 동질화",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "True",
+          "basis": "BROADER_DEMOCRATIC_OR_IDEOLOGICAL_HARM_CLOSEST_TO_POLITICAL_NEUTRALITY",
+          "definition_en": "The increasing integration of general purpose AI models into every-day life raises concerns around their embedded normative values. The reach of a small number of AI models to a large number of people around the world can make these value judgements unprecedently impactful, potentially leading to increased ideological homogenization.",
+          "reference_count": "1",
+          "reference_titles": "Maham & Küspert (2023); Policy brief",
+          "reference_urls": "https://www.interface-eu.org/storage/archive/files/snv_governing_general_purpose_ai_pdf.pdf"
+        },
+        {
+          "l4_id": "RAI4-1421",
+          "label_en": "Developments in AI enable actors to undermine democratic processes",
+          "label_ko": "AI의 발전으로 행위자는 민주적 절차를 훼손할 수 있습니다",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "Developments in AI are giving companies and governments more control over individuals’ lives than ever before, and may possibly be used to undermine democratic processes. We are already seeing how the collection of large amounts of personal data can be used to surveil and influence populations, for example the use of facial recognition technology to surveil Uighur and other minority populations in China [66]. Further advances in language modelling could also be used to develop tools that can effectively persuade people of certain claims [42].",
+          "reference_count": "1",
+          "reference_titles": "Clarke & Whittlestone (2022); Journal Article",
+          "reference_urls": "https://arxiv.org/pdf/2206.11076"
+        },
+        {
+          "l4_id": "RAI4-1423",
+          "label_en": "AI's persuasive capabilities are misused to gain influence and promote harmful ideologies",
+          "label_ko": "AI의 설득력이 영향력을 얻고 해로운 이념을 조장하는 데 오용되고 있습니다",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "False",
+          "basis": "DIRECT_POLITICAL_MANIPULATION_EXTREMISM_OR_INTERFERENCE",
+          "definition_en": "As AI capabilities advance, they may be used to develop sophisticated persuasion tools, such as those that tailor their communication to specific users to persuade them of certain claims [42]. While these tools could be used for social good— such as New York Times’ chatbot that helps users to persuade people to get vaccinated against Covid-19 [27]—there are also many ways they could be misused by self-interested groups to gain influence and/or to promote harmful ideologies.",
+          "reference_count": "1",
+          "reference_titles": "Clarke & Whittlestone (2022); Journal Article",
+          "reference_urls": "https://arxiv.org/pdf/2206.11076"
+        },
+        {
+          "l4_id": "RAI4-1424",
+          "label_en": "Risks from AIs developing goals and values that are different from humans",
+          "label_ko": "인간과 다른 목표와 가치를 개발하는 AI로 인한 위험",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-SYS-08",
+          "proposed_l3_label": "Goal Misalignment",
+          "decision_required": "False",
+          "basis": "DIRECT_DIVERGENCE_FROM_HUMAN_GOALS_AND_VALUES",
+          "definition_en": "The main concern here is that we might develop advanced AI systems whose goals and values are different from those of humans, and are capable enough to take control of the future away from humanity.",
+          "reference_count": "1",
+          "reference_titles": "Clarke & Whittlestone (2022); Journal Article",
+          "reference_urls": "https://arxiv.org/pdf/2206.11076"
+        },
+        {
+          "l4_id": "RAI4-1503",
+          "label_en": "General evaluations (biased evaluations of encoded human values)",
+          "label_ko": "일반 평가(암호화된 인간 가치에 대한 편향된 평가)",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Encoded human values in AI models that are easier to evaluate might be preferred for inclusion in evaluations over those that are more difficult to measure [13]. This might come at the expense of more desirable but harder-to-quantify values. This bias can lead to an imbalance, where easier-to-measure values dominate the evaluation process, while other important values are underrepresented.",
+          "reference_count": "1",
+          "reference_titles": "Gipiškis et al. (2024); Journal Article",
+          "reference_urls": "https://arxiv.org/pdf/2410.23472"
+        },
+        {
+          "l4_id": "RAI4-1611",
+          "label_en": "Bias, fairness and representational harms",
+          "label_ko": "편견, 공정성 및 표현상의 피해",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Frontier AI models can contain and magnify biases ingrained in the data they are trained on, reflecting societal and historical inequalities and stereotypes.177 These biases, often subtle and deeply embedded, compromise the equitable and ethical use of AI systems, making it difficult for AI to improve fairness in decisions.178 Removing attributes like race and gender from training data has generally proven ineffective as a remedy for algorithmic bias, as models can infer these attributes from other information such as names, locations, and other seemingly unrelated factors.",
+          "reference_count": "1",
+          "reference_titles": "DSIT (2023); Report",
+          "reference_urls": "https://assets.publishing.service.gov.uk/media/65395abae6c968000daa9b25/frontier-ai-capabilities-risks-report.pdf"
+        },
+        {
+          "l4_id": "RAI4-1614",
+          "label_en": "AI-enabled cyber operations",
+          "label_ko": "AI 기반 사이버 작전",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-09",
+          "proposed_l3_label": "Weaponization",
+          "decision_required": "False",
+          "basis": "DIRECT_CBRN_CYBER_OR_CRITICAL_INFRASTRUCTURE_WEAPONIZATION",
+          "definition_en": "As the programming abilities of AI systems continue to expand, frontier AI is likely to significantly exacerbate existing cyber risks. Most notably, AI systems can be used by potentially anyone to create faster paced, more effective and larger scale cyber intrusion via tailored phishing methods or replicating malware. Frontier AI’s effect on the overall balance between cyber offence and defence is uncertain, as these tools also have many applications in improving the cybersecurity of systems and defenders are mobilising significant resources to utilise frontier AI for defensive purposes.209 In the future, we may see AI systems both conducting and defending against cyberattacks with reduced human oversight at each step.",
+          "reference_count": "1",
+          "reference_titles": "DSIT (2023); Report",
+          "reference_urls": "https://assets.publishing.service.gov.uk/media/65395abae6c968000daa9b25/frontier-ai-capabilities-risks-report.pdf"
+        },
+        {
+          "l4_id": "RAI4-1618",
+          "label_en": "Capabilities that could be used to reduce human control - cyber offence",
+          "label_ko": "인간의 통제를 감소시키는 데 사용될 수 있는 기능 - 사이버 공격",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_HIGH_CONFIDENCE",
+          "proposed_l3_id": "RAI3-G-INT-09",
+          "proposed_l3_label": "Weaponization",
+          "decision_required": "False",
+          "basis": "DIRECT_CBRN_CYBER_OR_CRITICAL_INFRASTRUCTURE_WEAPONIZATION",
+          "definition_en": "Instead of - or in addition to - manipulating humans, AI systems could acquire influence by exploiting vulnerabilities in computer systems. Offensive cyber capabilities could allow AI systems to gain access to money, computing resources, and critical infrastructure. As discussed earlier in this report, frontier AI is already lowering the barrier for threat actors and future AI agents may be able to execute cyber attacks autonomously.\":",
+          "reference_count": "1",
+          "reference_titles": "DSIT (2023); Report",
+          "reference_urls": "https://assets.publishing.service.gov.uk/media/65395abae6c968000daa9b25/frontier-ai-capabilities-risks-report.pdf"
+        },
+        {
+          "l4_id": "RAI4-1713",
+          "label_en": "Bias and differential treatment",
+          "label_ko": "편견과 차별대우",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-04",
+          "proposed_l3_label": "Hate and Unfairness",
+          "decision_required": "True",
+          "basis": "BROADER_OR_ALLOCATIVE_BIAS_CLOSEST_TO_HATE_UNFAIRNESS",
+          "definition_en": "Systematically unequal treatment of individuals or groups by an AI system, frequently with respect to protected characteristics.",
+          "reference_count": "1",
+          "reference_titles": "Hoffmann, M., & Frase, H. (2023), Adding Structure to AI Harm, CSET; CSET AI Harm Taxonomy for AIID; Think-tank report / incident-annotation taxonomy",
+          "reference_urls": "https://incidentdatabase.ai/taxonomies/csetv1/"
+        },
+        {
+          "l4_id": "RAI4-1716",
+          "label_en": "Violation of democratic norms",
+          "label_ko": "민주주의 규범 위반",
+          "current_l3_id": "RAI3-G-INT-10",
+          "verdict": "REMAP_WITH_HOLD",
+          "proposed_l3_id": "RAI3-G-INT-05",
+          "proposed_l3_label": "Political Neutrality",
+          "decision_required": "True",
+          "basis": "BROADER_DEMOCRATIC_OR_IDEOLOGICAL_HARM_CLOSEST_TO_POLITICAL_NEUTRALITY",
+          "definition_en": "Erosion or violation of democratic processes and norms attributable to the deployment or behavior of an AI system.",
+          "reference_count": "1",
+          "reference_titles": "Hoffmann, M., & Frase, H. (2023), Adding Structure to AI Harm, CSET; CSET AI Harm Taxonomy for AIID; Think-tank report / incident-annotation taxonomy",
+          "reference_urls": "https://incidentdatabase.ai/taxonomies/csetv1/"
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "anthropomorphism-review",
+      "label": "Anthropomorphism card-level review",
+      "path": "reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv",
+      "query": {
+        "language": "sql",
+        "engine": "DuckDB",
+        "sql": "SELECT * FROM read_csv_auto('reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv');",
+        "description": "Exhaustive mechanism-first review of every v2.7 card assigned to Anthropomorphism.",
+        "tables_used": [
+          "reports/data_quality/anthropomorphism_review_v2.7.0/card_level_review.csv"
+        ],
+        "filters": [
+          "Release v2.7.0",
+          "Current primary_l3_id = RAI3-G-INT-10",
+          "All 245 matching cards"
+        ],
+        "metric_definitions": [
+          "Retain: human-likeness is a necessary causal mechanism.",
+          "High-confidence remap: title, definition, and source directly satisfy another L3.",
+          "Remap with HOLD: another L3 is closer but covers only part of the mechanism.",
+          "Taxonomy-gap HOLD: no current L3 accepts the card without forcing."
+        ]
+      }
+    },
+    {
+      "id": "v2.7-release",
+      "label": "RAI Risk Taxonomy v2.7.0",
+      "path": "public/data/releases/v2.7.0/cards.json",
+      "query": {
+        "language": "sql",
+        "engine": "DuckDB",
+        "sql": "SELECT * FROM read_json_auto('public/data/releases/v2.7.0/cards.json');",
+        "description": "Published card labels, mechanism definitions, references, and current L3 paths.",
+        "tables_used": [
+          "public/data/releases/v2.7.0/cards.json"
+        ],
+        "filters": [
+          "1,711 canonical L4 cards",
+          "Published v2.7.0 snapshot"
+        ],
+        "metric_definitions": [
+          "Operational assignment is not equivalent to human-approved semantic fit."
+        ]
+      }
+    }
+  ]
+}

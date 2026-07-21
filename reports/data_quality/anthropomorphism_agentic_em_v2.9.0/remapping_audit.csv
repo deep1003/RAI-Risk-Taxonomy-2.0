@@ -1,0 +1,4 @@
+l4_id,label_en,from_l3_id,to_l3_id,margin_over_anthropomorphism,keyword_hits,decision_required
+RAI4-0117,Human veto erosion,RAI3-G-INT-10,RAI3-A-SYS-10,0.1132771372795105,human veto,True
+RAI4-1239,Situational awareness,RAI3-G-INT-10,RAI3-A-SYS-07,0.09340143203735352,reward hack | instrumental subgoals?,True
+RAI4-1424,Risks from AIs developing goals and values that are different from humans,RAI3-G-INT-10,RAI3-A-SYS-07,0.06806927919387817,goals? and values? (?:that )?are different,True

@@ -1,0 +1,2697 @@
+{
+  "RAI4-0032": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6353116035461426,
+      "RAI3-A-SYS-07": 0.6206209659576416,
+      "RAI3-A-SYS-08": 0.6727017164230347,
+      "RAI3-A-SYS-09": 0.5809824466705322,
+      "RAI3-A-SYS-10": 0.6486750245094299
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0034": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6323860883712769,
+      "RAI3-A-SYS-07": 0.570819616317749,
+      "RAI3-A-SYS-08": 0.5997762084007263,
+      "RAI3-A-SYS-09": 0.4972926080226898,
+      "RAI3-A-SYS-10": 0.5393564105033875
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0035": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6196826100349426,
+      "RAI3-A-SYS-07": 0.6048180460929871,
+      "RAI3-A-SYS-08": 0.6538906097412109,
+      "RAI3-A-SYS-09": 0.5205338001251221,
+      "RAI3-A-SYS-10": 0.6055471301078796
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0038": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6754139065742493,
+      "RAI3-A-SYS-07": 0.6572138667106628,
+      "RAI3-A-SYS-08": 0.667465329170227,
+      "RAI3-A-SYS-09": 0.5830532908439636,
+      "RAI3-A-SYS-10": 0.6227339506149292
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0047": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6553149223327637,
+      "RAI3-A-SYS-07": 0.6060662269592285,
+      "RAI3-A-SYS-08": 0.5601508617401123,
+      "RAI3-A-SYS-09": 0.5353294014930725,
+      "RAI3-A-SYS-10": 0.6716227531433105
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0051": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6307646036148071,
+      "RAI3-A-SYS-07": 0.5694179534912109,
+      "RAI3-A-SYS-08": 0.5560711622238159,
+      "RAI3-A-SYS-09": 0.4543587863445282,
+      "RAI3-A-SYS-10": 0.5445706844329834
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0053": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6553174257278442,
+      "RAI3-A-SYS-07": 0.5875504016876221,
+      "RAI3-A-SYS-08": 0.5755535960197449,
+      "RAI3-A-SYS-09": 0.5375123023986816,
+      "RAI3-A-SYS-10": 0.6402754783630371
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0065": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.605417013168335,
+      "RAI3-A-SYS-07": 0.5694848299026489,
+      "RAI3-A-SYS-08": 0.5378367304801941,
+      "RAI3-A-SYS-09": 0.49669426679611206,
+      "RAI3-A-SYS-10": 0.5768073201179504
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0079": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6119524240493774,
+      "RAI3-A-SYS-07": 0.535106897354126,
+      "RAI3-A-SYS-08": 0.5390986800193787,
+      "RAI3-A-SYS-09": 0.49025577306747437,
+      "RAI3-A-SYS-10": 0.5753381848335266
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0080": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6339377164840698,
+      "RAI3-A-SYS-07": 0.5453643798828125,
+      "RAI3-A-SYS-08": 0.5454779267311096,
+      "RAI3-A-SYS-09": 0.49489033222198486,
+      "RAI3-A-SYS-10": 0.5937677621841431
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0085": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.582729160785675,
+      "RAI3-A-SYS-07": 0.534351110458374,
+      "RAI3-A-SYS-08": 0.5133981108665466,
+      "RAI3-A-SYS-09": 0.4421800673007965,
+      "RAI3-A-SYS-10": 0.5841909050941467
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0086": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6184531450271606,
+      "RAI3-A-SYS-07": 0.6188970804214478,
+      "RAI3-A-SYS-08": 0.5836213827133179,
+      "RAI3-A-SYS-09": 0.5087766647338867,
+      "RAI3-A-SYS-10": 0.6138702630996704
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0104": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6385449171066284,
+      "RAI3-A-SYS-07": 0.584360659122467,
+      "RAI3-A-SYS-08": 0.5720745921134949,
+      "RAI3-A-SYS-09": 0.4919933080673218,
+      "RAI3-A-SYS-10": 0.6006264090538025
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0106": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6381192207336426,
+      "RAI3-A-SYS-07": 0.6039769649505615,
+      "RAI3-A-SYS-08": 0.5833135843276978,
+      "RAI3-A-SYS-09": 0.5259349346160889,
+      "RAI3-A-SYS-10": 0.5738740563392639
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0114": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6327270865440369,
+      "RAI3-A-SYS-07": 0.5840296745300293,
+      "RAI3-A-SYS-08": 0.5581607818603516,
+      "RAI3-A-SYS-09": 0.5319186449050903,
+      "RAI3-A-SYS-10": 0.6783530712127686
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0122": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6670034527778625,
+      "RAI3-A-SYS-07": 0.6306881904602051,
+      "RAI3-A-SYS-08": 0.5565800666809082,
+      "RAI3-A-SYS-09": 0.582457423210144,
+      "RAI3-A-SYS-10": 0.6541814804077148
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0129": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7052570581436157,
+      "RAI3-A-SYS-07": 0.6072567701339722,
+      "RAI3-A-SYS-08": 0.592467188835144,
+      "RAI3-A-SYS-09": 0.5376532673835754,
+      "RAI3-A-SYS-10": 0.611305296421051
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0130": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6772671341896057,
+      "RAI3-A-SYS-07": 0.5956504344940186,
+      "RAI3-A-SYS-08": 0.5993608236312866,
+      "RAI3-A-SYS-09": 0.5526133179664612,
+      "RAI3-A-SYS-10": 0.6133171319961548
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0167": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6804872751235962,
+      "RAI3-A-SYS-07": 0.5801732540130615,
+      "RAI3-A-SYS-08": 0.6083766222000122,
+      "RAI3-A-SYS-09": 0.5170296430587769,
+      "RAI3-A-SYS-10": 0.5895705223083496
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0171": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6938696503639221,
+      "RAI3-A-SYS-07": 0.6267098188400269,
+      "RAI3-A-SYS-08": 0.6156108379364014,
+      "RAI3-A-SYS-09": 0.5900654196739197,
+      "RAI3-A-SYS-10": 0.6231513023376465
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0177": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6673495769500732,
+      "RAI3-A-SYS-07": 0.6150772571563721,
+      "RAI3-A-SYS-08": 0.6000444889068604,
+      "RAI3-A-SYS-09": 0.555774986743927,
+      "RAI3-A-SYS-10": 0.6432483792304993
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0364": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6550735235214233,
+      "RAI3-A-SYS-07": 0.5899611711502075,
+      "RAI3-A-SYS-08": 0.5228332281112671,
+      "RAI3-A-SYS-09": 0.5117397308349609,
+      "RAI3-A-SYS-10": 0.5687465667724609
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0366": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6222459077835083,
+      "RAI3-A-SYS-07": 0.6387196183204651,
+      "RAI3-A-SYS-08": 0.5448144674301147,
+      "RAI3-A-SYS-09": 0.5208998322486877,
+      "RAI3-A-SYS-10": 0.5826231837272644
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0370": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.5883591771125793,
+      "RAI3-A-SYS-07": 0.5142983794212341,
+      "RAI3-A-SYS-08": 0.5013128519058228,
+      "RAI3-A-SYS-09": 0.4501279890537262,
+      "RAI3-A-SYS-10": 0.5271716117858887
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0386": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6499663591384888,
+      "RAI3-A-SYS-07": 0.6121723651885986,
+      "RAI3-A-SYS-08": 0.617333173751831,
+      "RAI3-A-SYS-09": 0.5659011006355286,
+      "RAI3-A-SYS-10": 0.6428423523902893
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0394": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6318832635879517,
+      "RAI3-A-SYS-07": 0.533062756061554,
+      "RAI3-A-SYS-08": 0.4983441233634949,
+      "RAI3-A-SYS-09": 0.45153748989105225,
+      "RAI3-A-SYS-10": 0.55060213804245
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0407": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6686107516288757,
+      "RAI3-A-SYS-07": 0.5847734212875366,
+      "RAI3-A-SYS-08": 0.5665697455406189,
+      "RAI3-A-SYS-09": 0.47674375772476196,
+      "RAI3-A-SYS-10": 0.5854159593582153
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0421": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6169583797454834,
+      "RAI3-A-SYS-07": 0.5489041805267334,
+      "RAI3-A-SYS-08": 0.5299546718597412,
+      "RAI3-A-SYS-09": 0.48100242018699646,
+      "RAI3-A-SYS-10": 0.5506777167320251
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0424": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6278795599937439,
+      "RAI3-A-SYS-07": 0.5620193481445312,
+      "RAI3-A-SYS-08": 0.5368411540985107,
+      "RAI3-A-SYS-09": 0.5239810943603516,
+      "RAI3-A-SYS-10": 0.5428562760353088
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0430": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.5857787132263184,
+      "RAI3-A-SYS-07": 0.5259085297584534,
+      "RAI3-A-SYS-08": 0.5209581851959229,
+      "RAI3-A-SYS-09": 0.4620073139667511,
+      "RAI3-A-SYS-10": 0.5207256078720093
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0451": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6631324887275696,
+      "RAI3-A-SYS-07": 0.5972205400466919,
+      "RAI3-A-SYS-08": 0.6089610457420349,
+      "RAI3-A-SYS-09": 0.5663087368011475,
+      "RAI3-A-SYS-10": 0.6135662198066711
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0469": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6656414866447449,
+      "RAI3-A-SYS-07": 0.6153719425201416,
+      "RAI3-A-SYS-08": 0.5054666996002197,
+      "RAI3-A-SYS-09": 0.4872695803642273,
+      "RAI3-A-SYS-10": 0.5339266657829285
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0475": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.652531087398529,
+      "RAI3-A-SYS-07": 0.5641196966171265,
+      "RAI3-A-SYS-08": 0.5440973043441772,
+      "RAI3-A-SYS-09": 0.4651258885860443,
+      "RAI3-A-SYS-10": 0.5311445593833923
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0477": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6457542777061462,
+      "RAI3-A-SYS-07": 0.5767490863800049,
+      "RAI3-A-SYS-08": 0.5996239185333252,
+      "RAI3-A-SYS-09": 0.5820420384407043,
+      "RAI3-A-SYS-10": 0.5607010126113892
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0480": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6306378841400146,
+      "RAI3-A-SYS-07": 0.7879530787467957,
+      "RAI3-A-SYS-08": 0.6270493865013123,
+      "RAI3-A-SYS-09": 0.5841118693351746,
+      "RAI3-A-SYS-10": 0.5993806719779968
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [
+        "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+        "agent task drift"
+      ],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.157315194606781
+  },
+  "RAI4-0490": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6526436805725098,
+      "RAI3-A-SYS-07": 0.5763751268386841,
+      "RAI3-A-SYS-08": 0.5862258076667786,
+      "RAI3-A-SYS-09": 0.5609002709388733,
+      "RAI3-A-SYS-10": 0.5895519256591797
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0514": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.608513355255127,
+      "RAI3-A-SYS-07": 0.5544431805610657,
+      "RAI3-A-SYS-08": 0.5133554935455322,
+      "RAI3-A-SYS-09": 0.48637622594833374,
+      "RAI3-A-SYS-10": 0.5301638841629028
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0515": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6348559856414795,
+      "RAI3-A-SYS-07": 0.5672743320465088,
+      "RAI3-A-SYS-08": 0.5405678749084473,
+      "RAI3-A-SYS-09": 0.4838428199291229,
+      "RAI3-A-SYS-10": 0.5539208650588989
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0516": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6314369440078735,
+      "RAI3-A-SYS-07": 0.5579118132591248,
+      "RAI3-A-SYS-08": 0.5447036027908325,
+      "RAI3-A-SYS-09": 0.4959615468978882,
+      "RAI3-A-SYS-10": 0.5842124223709106
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0523": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6305218935012817,
+      "RAI3-A-SYS-07": 0.535325825214386,
+      "RAI3-A-SYS-08": 0.5331412553787231,
+      "RAI3-A-SYS-09": 0.4630895256996155,
+      "RAI3-A-SYS-10": 0.5269834399223328
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0535": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6298806071281433,
+      "RAI3-A-SYS-07": 0.5700327754020691,
+      "RAI3-A-SYS-08": 0.5251833200454712,
+      "RAI3-A-SYS-09": 0.4638464152812958,
+      "RAI3-A-SYS-10": 0.5989567041397095
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0551": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7401430606842041,
+      "RAI3-A-SYS-07": 0.6669808626174927,
+      "RAI3-A-SYS-08": 0.5675250291824341,
+      "RAI3-A-SYS-09": 0.5410391092300415,
+      "RAI3-A-SYS-10": 0.5904914140701294
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0557": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6675412654876709,
+      "RAI3-A-SYS-07": 0.6233178377151489,
+      "RAI3-A-SYS-08": 0.5666524171829224,
+      "RAI3-A-SYS-09": 0.508450448513031,
+      "RAI3-A-SYS-10": 0.612500011920929
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0565": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7282112836837769,
+      "RAI3-A-SYS-07": 0.6717461347579956,
+      "RAI3-A-SYS-08": 0.6158517599105835,
+      "RAI3-A-SYS-09": 0.572943389415741,
+      "RAI3-A-SYS-10": 0.6878171563148499
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0572": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7046131491661072,
+      "RAI3-A-SYS-07": 0.6637749075889587,
+      "RAI3-A-SYS-08": 0.5850703120231628,
+      "RAI3-A-SYS-09": 0.5502385497093201,
+      "RAI3-A-SYS-10": 0.602590024471283
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0576": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6353515982627869,
+      "RAI3-A-SYS-07": 0.6185522079467773,
+      "RAI3-A-SYS-08": 0.5252020359039307,
+      "RAI3-A-SYS-09": 0.4768170416355133,
+      "RAI3-A-SYS-10": 0.5384418964385986
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0591": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.669561505317688,
+      "RAI3-A-SYS-07": 0.5943062901496887,
+      "RAI3-A-SYS-08": 0.5174789428710938,
+      "RAI3-A-SYS-09": 0.49595195055007935,
+      "RAI3-A-SYS-10": 0.5772504806518555
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0625": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6333023905754089,
+      "RAI3-A-SYS-07": 0.5927686095237732,
+      "RAI3-A-SYS-08": 0.5390428304672241,
+      "RAI3-A-SYS-09": 0.51488196849823,
+      "RAI3-A-SYS-10": 0.5367407202720642
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0639": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.633958637714386,
+      "RAI3-A-SYS-07": 0.5925505757331848,
+      "RAI3-A-SYS-08": 0.5903645753860474,
+      "RAI3-A-SYS-09": 0.5639222860336304,
+      "RAI3-A-SYS-10": 0.5875441431999207
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0700": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6174887418746948,
+      "RAI3-A-SYS-07": 0.5705459713935852,
+      "RAI3-A-SYS-08": 0.5774588584899902,
+      "RAI3-A-SYS-09": 0.5259199142456055,
+      "RAI3-A-SYS-10": 0.5388078689575195
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0765": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6542839407920837,
+      "RAI3-A-SYS-07": 0.608914852142334,
+      "RAI3-A-SYS-08": 0.6034353375434875,
+      "RAI3-A-SYS-09": 0.5911890268325806,
+      "RAI3-A-SYS-10": 0.5814744830131531
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0824": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6409109830856323,
+      "RAI3-A-SYS-07": 0.57340407371521,
+      "RAI3-A-SYS-08": 0.5346301794052124,
+      "RAI3-A-SYS-09": 0.493960976600647,
+      "RAI3-A-SYS-10": 0.5261482000350952
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0853": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6572133302688599,
+      "RAI3-A-SYS-07": 0.572813868522644,
+      "RAI3-A-SYS-08": 0.5903739929199219,
+      "RAI3-A-SYS-09": 0.514950692653656,
+      "RAI3-A-SYS-10": 0.5486406683921814
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0857": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6436376571655273,
+      "RAI3-A-SYS-07": 0.5884389877319336,
+      "RAI3-A-SYS-08": 0.5335102081298828,
+      "RAI3-A-SYS-09": 0.4836626648902893,
+      "RAI3-A-SYS-10": 0.5818839073181152
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0890": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6514270305633545,
+      "RAI3-A-SYS-07": 0.6253386735916138,
+      "RAI3-A-SYS-08": 0.5867622494697571,
+      "RAI3-A-SYS-09": 0.558657169342041,
+      "RAI3-A-SYS-10": 0.6191616058349609
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0897": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6382600665092468,
+      "RAI3-A-SYS-07": 0.5889672040939331,
+      "RAI3-A-SYS-08": 0.5202005505561829,
+      "RAI3-A-SYS-09": 0.46220535039901733,
+      "RAI3-A-SYS-10": 0.5551396608352661
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0898": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6735522747039795,
+      "RAI3-A-SYS-07": 0.6129757761955261,
+      "RAI3-A-SYS-08": 0.5772193670272827,
+      "RAI3-A-SYS-09": 0.5305344462394714,
+      "RAI3-A-SYS-10": 0.5768615007400513
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0910": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.684517502784729,
+      "RAI3-A-SYS-07": 0.6094375252723694,
+      "RAI3-A-SYS-08": 0.6126700043678284,
+      "RAI3-A-SYS-09": 0.5528314709663391,
+      "RAI3-A-SYS-10": 0.582553505897522
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0911": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6570520997047424,
+      "RAI3-A-SYS-07": 0.6017655730247498,
+      "RAI3-A-SYS-08": 0.5765576362609863,
+      "RAI3-A-SYS-09": 0.5616512298583984,
+      "RAI3-A-SYS-10": 0.597514808177948
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0945": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6833177804946899,
+      "RAI3-A-SYS-07": 0.6134653687477112,
+      "RAI3-A-SYS-08": 0.5163294076919556,
+      "RAI3-A-SYS-09": 0.47860825061798096,
+      "RAI3-A-SYS-10": 0.5512814521789551
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0953": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6499921679496765,
+      "RAI3-A-SYS-07": 0.5575328469276428,
+      "RAI3-A-SYS-08": 0.5512410998344421,
+      "RAI3-A-SYS-09": 0.5005028247833252,
+      "RAI3-A-SYS-10": 0.6084221601486206
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0959": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6748372912406921,
+      "RAI3-A-SYS-07": 0.6491570472717285,
+      "RAI3-A-SYS-08": 0.5993297696113586,
+      "RAI3-A-SYS-09": 0.5341107845306396,
+      "RAI3-A-SYS-10": 0.5983441472053528
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0966": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6375012397766113,
+      "RAI3-A-SYS-07": 0.5916516184806824,
+      "RAI3-A-SYS-08": 0.6019377112388611,
+      "RAI3-A-SYS-09": 0.5183948278427124,
+      "RAI3-A-SYS-10": 0.5944060683250427
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0987": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6005961894989014,
+      "RAI3-A-SYS-07": 0.5475490093231201,
+      "RAI3-A-SYS-08": 0.49676114320755005,
+      "RAI3-A-SYS-09": 0.4646188020706177,
+      "RAI3-A-SYS-10": 0.5625175833702087
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-0990": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.612650990486145,
+      "RAI3-A-SYS-07": 0.5653995871543884,
+      "RAI3-A-SYS-08": 0.5137248635292053,
+      "RAI3-A-SYS-09": 0.49452435970306396,
+      "RAI3-A-SYS-10": 0.5677024126052856
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1005": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6034008264541626,
+      "RAI3-A-SYS-07": 0.5568163394927979,
+      "RAI3-A-SYS-08": 0.5652303099632263,
+      "RAI3-A-SYS-09": 0.49981042742729187,
+      "RAI3-A-SYS-10": 0.5427305102348328
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1007": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6332910060882568,
+      "RAI3-A-SYS-07": 0.5773473978042603,
+      "RAI3-A-SYS-08": 0.577165961265564,
+      "RAI3-A-SYS-09": 0.5405734181404114,
+      "RAI3-A-SYS-10": 0.5765418410301208
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1016": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6553573608398438,
+      "RAI3-A-SYS-07": 0.6169382929801941,
+      "RAI3-A-SYS-08": 0.5793800950050354,
+      "RAI3-A-SYS-09": 0.5775138139724731,
+      "RAI3-A-SYS-10": 0.6072935461997986
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1032": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6517828106880188,
+      "RAI3-A-SYS-07": 0.6122829914093018,
+      "RAI3-A-SYS-08": 0.5695115327835083,
+      "RAI3-A-SYS-09": 0.5376701354980469,
+      "RAI3-A-SYS-10": 0.5958166122436523
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1035": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6295665502548218,
+      "RAI3-A-SYS-07": 0.5660445094108582,
+      "RAI3-A-SYS-08": 0.5849944353103638,
+      "RAI3-A-SYS-09": 0.5309114456176758,
+      "RAI3-A-SYS-10": 0.5674264430999756
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1038": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7295669913291931,
+      "RAI3-A-SYS-07": 0.6489221453666687,
+      "RAI3-A-SYS-08": 0.6516373157501221,
+      "RAI3-A-SYS-09": 0.5825046896934509,
+      "RAI3-A-SYS-10": 0.6440280675888062
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1039": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6383285522460938,
+      "RAI3-A-SYS-07": 0.5784915685653687,
+      "RAI3-A-SYS-08": 0.5526625514030457,
+      "RAI3-A-SYS-09": 0.49693191051483154,
+      "RAI3-A-SYS-10": 0.5991178154945374
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1043": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6225520372390747,
+      "RAI3-A-SYS-07": 0.5386300086975098,
+      "RAI3-A-SYS-08": 0.558878481388092,
+      "RAI3-A-SYS-09": 0.4676968455314636,
+      "RAI3-A-SYS-10": 0.5998073220252991
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1044": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6235294342041016,
+      "RAI3-A-SYS-07": 0.5541818141937256,
+      "RAI3-A-SYS-08": 0.535344660282135,
+      "RAI3-A-SYS-09": 0.527457594871521,
+      "RAI3-A-SYS-10": 0.6268507838249207
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1067": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6030562520027161,
+      "RAI3-A-SYS-07": 0.5629593133926392,
+      "RAI3-A-SYS-08": 0.5341200232505798,
+      "RAI3-A-SYS-09": 0.4517304301261902,
+      "RAI3-A-SYS-10": 0.524584174156189
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1076": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6409870386123657,
+      "RAI3-A-SYS-07": 0.6081357598304749,
+      "RAI3-A-SYS-08": 0.6042264699935913,
+      "RAI3-A-SYS-09": 0.5477632880210876,
+      "RAI3-A-SYS-10": 0.5968302488327026
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1092": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6517747640609741,
+      "RAI3-A-SYS-07": 0.6203977465629578,
+      "RAI3-A-SYS-08": 0.5873565673828125,
+      "RAI3-A-SYS-09": 0.4904221296310425,
+      "RAI3-A-SYS-10": 0.5594828724861145
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1097": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.5933506488800049,
+      "RAI3-A-SYS-07": 0.5561174154281616,
+      "RAI3-A-SYS-08": 0.49888622760772705,
+      "RAI3-A-SYS-09": 0.4693998694419861,
+      "RAI3-A-SYS-10": 0.6075088977813721
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1102": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6225362420082092,
+      "RAI3-A-SYS-07": 0.5635113716125488,
+      "RAI3-A-SYS-08": 0.4892694652080536,
+      "RAI3-A-SYS-09": 0.464469850063324,
+      "RAI3-A-SYS-10": 0.5472238659858704
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1103": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6631516218185425,
+      "RAI3-A-SYS-07": 0.6069841980934143,
+      "RAI3-A-SYS-08": 0.5344700813293457,
+      "RAI3-A-SYS-09": 0.5163555145263672,
+      "RAI3-A-SYS-10": 0.5441856384277344
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1121": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.639855682849884,
+      "RAI3-A-SYS-07": 0.670470654964447,
+      "RAI3-A-SYS-08": 0.5790918469429016,
+      "RAI3-A-SYS-09": 0.539516031742096,
+      "RAI3-A-SYS-10": 0.6075746417045593
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1128": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6219427585601807,
+      "RAI3-A-SYS-07": 0.5832733511924744,
+      "RAI3-A-SYS-08": 0.5375889539718628,
+      "RAI3-A-SYS-09": 0.47261521220207214,
+      "RAI3-A-SYS-10": 0.5541502833366394
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1130": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6650816798210144,
+      "RAI3-A-SYS-07": 0.7364016771316528,
+      "RAI3-A-SYS-08": 0.5419368147850037,
+      "RAI3-A-SYS-09": 0.5109546780586243,
+      "RAI3-A-SYS-10": 0.5847043991088867
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [
+        "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+        "(?:multi[- ]step plan|instrumental subgoals?|consequentialist reasoning).{0,120}(?:agent|assistant|autonomous)"
+      ],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.07131999731063843
+  },
+  "RAI4-1131": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6360058784484863,
+      "RAI3-A-SYS-07": 0.6038684844970703,
+      "RAI3-A-SYS-08": 0.5506104230880737,
+      "RAI3-A-SYS-09": 0.48456835746765137,
+      "RAI3-A-SYS-10": 0.560465931892395
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1132": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6737980246543884,
+      "RAI3-A-SYS-07": 0.6286441087722778,
+      "RAI3-A-SYS-08": 0.5549843311309814,
+      "RAI3-A-SYS-09": 0.4860876202583313,
+      "RAI3-A-SYS-10": 0.5437562465667725
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1149": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6371452808380127,
+      "RAI3-A-SYS-07": 0.582932710647583,
+      "RAI3-A-SYS-08": 0.5757012963294983,
+      "RAI3-A-SYS-09": 0.5034558176994324,
+      "RAI3-A-SYS-10": 0.5732386112213135
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1171": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6633678078651428,
+      "RAI3-A-SYS-07": 0.6550406217575073,
+      "RAI3-A-SYS-08": 0.6242579221725464,
+      "RAI3-A-SYS-09": 0.5358049869537354,
+      "RAI3-A-SYS-10": 0.5795261859893799
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1235": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6357710957527161,
+      "RAI3-A-SYS-07": 0.7544283270835876,
+      "RAI3-A-SYS-08": 0.5374228954315186,
+      "RAI3-A-SYS-09": 0.49135711789131165,
+      "RAI3-A-SYS-10": 0.5335540175437927
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [
+        "(?:agent|assistant|autonomous (?:agent|system)).{0,120}(?:multi[- ]step plan|plans?|planning|subgoals?|actively pursues|goal pursuit)",
+        "goal misgeneralization.{0,120}agent"
+      ],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-A-SYS-07",
+    "margin_over_goal_misalignment": 0.11865723133087158
+  },
+  "RAI4-1240": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6561232209205627,
+      "RAI3-A-SYS-07": 0.6561927199363708,
+      "RAI3-A-SYS-08": 0.553126335144043,
+      "RAI3-A-SYS-09": 0.50972980260849,
+      "RAI3-A-SYS-10": 0.6004323363304138
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1241": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6155775189399719,
+      "RAI3-A-SYS-07": 0.6117664575576782,
+      "RAI3-A-SYS-08": 0.5104243159294128,
+      "RAI3-A-SYS-09": 0.5151084661483765,
+      "RAI3-A-SYS-10": 0.5555793642997742
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1247": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6607595086097717,
+      "RAI3-A-SYS-07": 0.5779654383659363,
+      "RAI3-A-SYS-08": 0.5467129945755005,
+      "RAI3-A-SYS-09": 0.49192333221435547,
+      "RAI3-A-SYS-10": 0.5680407881736755
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1250": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6766265630722046,
+      "RAI3-A-SYS-07": 0.6758696436882019,
+      "RAI3-A-SYS-08": 0.5998061895370483,
+      "RAI3-A-SYS-09": 0.5405089855194092,
+      "RAI3-A-SYS-10": 0.609252393245697
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1275": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.5837299823760986,
+      "RAI3-A-SYS-07": 0.5555641651153564,
+      "RAI3-A-SYS-08": 0.4670262336730957,
+      "RAI3-A-SYS-09": 0.40940606594085693,
+      "RAI3-A-SYS-10": 0.574420690536499
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1281": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6404696702957153,
+      "RAI3-A-SYS-07": 0.5739298462867737,
+      "RAI3-A-SYS-08": 0.5249080657958984,
+      "RAI3-A-SYS-09": 0.5083621740341187,
+      "RAI3-A-SYS-10": 0.577507495880127
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1283": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6278965473175049,
+      "RAI3-A-SYS-07": 0.6226654052734375,
+      "RAI3-A-SYS-08": 0.5899162292480469,
+      "RAI3-A-SYS-09": 0.5279592871665955,
+      "RAI3-A-SYS-10": 0.5849859714508057
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1284": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6666133403778076,
+      "RAI3-A-SYS-07": 0.6091361045837402,
+      "RAI3-A-SYS-08": 0.5530399084091187,
+      "RAI3-A-SYS-09": 0.5259601473808289,
+      "RAI3-A-SYS-10": 0.5808581113815308
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1285": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.654922604560852,
+      "RAI3-A-SYS-07": 0.5938131809234619,
+      "RAI3-A-SYS-08": 0.587271511554718,
+      "RAI3-A-SYS-09": 0.5318602919578552,
+      "RAI3-A-SYS-10": 0.5731291174888611
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1296": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6091333627700806,
+      "RAI3-A-SYS-07": 0.5550048351287842,
+      "RAI3-A-SYS-08": 0.49265390634536743,
+      "RAI3-A-SYS-09": 0.4573986530303955,
+      "RAI3-A-SYS-10": 0.5832483768463135
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1300": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6331663727760315,
+      "RAI3-A-SYS-07": 0.5659732818603516,
+      "RAI3-A-SYS-08": 0.49786442518234253,
+      "RAI3-A-SYS-09": 0.4815956950187683,
+      "RAI3-A-SYS-10": 0.5288454294204712
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1302": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.596116304397583,
+      "RAI3-A-SYS-07": 0.5663807392120361,
+      "RAI3-A-SYS-08": 0.533306360244751,
+      "RAI3-A-SYS-09": 0.5159828662872314,
+      "RAI3-A-SYS-10": 0.6146119832992554
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1307": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6036373376846313,
+      "RAI3-A-SYS-07": 0.5444526076316833,
+      "RAI3-A-SYS-08": 0.5339534878730774,
+      "RAI3-A-SYS-09": 0.4873138666152954,
+      "RAI3-A-SYS-10": 0.5508010387420654
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1323": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6841754913330078,
+      "RAI3-A-SYS-07": 0.653868556022644,
+      "RAI3-A-SYS-08": 0.5995116233825684,
+      "RAI3-A-SYS-09": 0.5700218081474304,
+      "RAI3-A-SYS-10": 0.7588810324668884
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": [
+        "resist.{0,50}(?:correction|interrupt|shut.?down)"
+      ]
+    },
+    "selected": "RAI3-A-SYS-10",
+    "margin_over_goal_misalignment": 0.07470554113388062
+  },
+  "RAI4-1351": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6650840044021606,
+      "RAI3-A-SYS-07": 0.5977017879486084,
+      "RAI3-A-SYS-08": 0.5361760258674622,
+      "RAI3-A-SYS-09": 0.4682844877243042,
+      "RAI3-A-SYS-10": 0.5784204602241516
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1361": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.648887574672699,
+      "RAI3-A-SYS-07": 0.597732424736023,
+      "RAI3-A-SYS-08": 0.5808801054954529,
+      "RAI3-A-SYS-09": 0.5581499338150024,
+      "RAI3-A-SYS-10": 0.6063798666000366
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1380": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6102958917617798,
+      "RAI3-A-SYS-07": 0.5813314914703369,
+      "RAI3-A-SYS-08": 0.4857792854309082,
+      "RAI3-A-SYS-09": 0.46959906816482544,
+      "RAI3-A-SYS-10": 0.5291323065757751
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1396": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6608598232269287,
+      "RAI3-A-SYS-07": 0.6063100099563599,
+      "RAI3-A-SYS-08": 0.561917245388031,
+      "RAI3-A-SYS-09": 0.5258294939994812,
+      "RAI3-A-SYS-10": 0.5505897998809814
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1397": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.656358003616333,
+      "RAI3-A-SYS-07": 0.6320139169692993,
+      "RAI3-A-SYS-08": 0.5274728536605835,
+      "RAI3-A-SYS-09": 0.4949530065059662,
+      "RAI3-A-SYS-10": 0.5803791284561157
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1412": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6358739733695984,
+      "RAI3-A-SYS-07": 0.5872231721878052,
+      "RAI3-A-SYS-08": 0.5165663957595825,
+      "RAI3-A-SYS-09": 0.5015474557876587,
+      "RAI3-A-SYS-10": 0.5364245772361755
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1425": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.69588303565979,
+      "RAI3-A-SYS-07": 0.6339683532714844,
+      "RAI3-A-SYS-08": 0.5608662962913513,
+      "RAI3-A-SYS-09": 0.5227646231651306,
+      "RAI3-A-SYS-10": 0.6014811992645264
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1431": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6708052158355713,
+      "RAI3-A-SYS-07": 0.6542402505874634,
+      "RAI3-A-SYS-08": 0.5880221128463745,
+      "RAI3-A-SYS-09": 0.5603839159011841,
+      "RAI3-A-SYS-10": 0.7649825215339661
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": [
+        "resist.{0,50}(?:correction|interrupt|shut.?down)"
+      ]
+    },
+    "selected": "RAI3-A-SYS-10",
+    "margin_over_goal_misalignment": 0.09417730569839478
+  },
+  "RAI4-1458": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.578646719455719,
+      "RAI3-A-SYS-07": 0.526577353477478,
+      "RAI3-A-SYS-08": 0.5163605809211731,
+      "RAI3-A-SYS-09": 0.41060513257980347,
+      "RAI3-A-SYS-10": 0.545308530330658
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1460": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6737833023071289,
+      "RAI3-A-SYS-07": 0.6186196208000183,
+      "RAI3-A-SYS-08": 0.5428482890129089,
+      "RAI3-A-SYS-09": 0.4947575032711029,
+      "RAI3-A-SYS-10": 0.5882892608642578
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1462": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6692768335342407,
+      "RAI3-A-SYS-07": 0.5888768434524536,
+      "RAI3-A-SYS-08": 0.5718932151794434,
+      "RAI3-A-SYS-09": 0.49884915351867676,
+      "RAI3-A-SYS-10": 0.5748907923698425
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1466": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6062203645706177,
+      "RAI3-A-SYS-07": 0.5514748096466064,
+      "RAI3-A-SYS-08": 0.521490216255188,
+      "RAI3-A-SYS-09": 0.48342615365982056,
+      "RAI3-A-SYS-10": 0.520016610622406
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1471": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6957647204399109,
+      "RAI3-A-SYS-07": 0.5921511650085449,
+      "RAI3-A-SYS-08": 0.5763424038887024,
+      "RAI3-A-SYS-09": 0.517630398273468,
+      "RAI3-A-SYS-10": 0.5929936170578003
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1472": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6523737907409668,
+      "RAI3-A-SYS-07": 0.5891932845115662,
+      "RAI3-A-SYS-08": 0.532707691192627,
+      "RAI3-A-SYS-09": 0.48281246423721313,
+      "RAI3-A-SYS-10": 0.5678272247314453
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1476": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6204412579536438,
+      "RAI3-A-SYS-07": 0.5628112554550171,
+      "RAI3-A-SYS-08": 0.5411930084228516,
+      "RAI3-A-SYS-09": 0.48606204986572266,
+      "RAI3-A-SYS-10": 0.5359727144241333
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1478": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6177809238433838,
+      "RAI3-A-SYS-07": 0.5849878787994385,
+      "RAI3-A-SYS-08": 0.5163726806640625,
+      "RAI3-A-SYS-09": 0.5024399757385254,
+      "RAI3-A-SYS-10": 0.5447713732719421
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1498": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.623784065246582,
+      "RAI3-A-SYS-07": 0.5474808216094971,
+      "RAI3-A-SYS-08": 0.5086093544960022,
+      "RAI3-A-SYS-09": 0.4587857127189636,
+      "RAI3-A-SYS-10": 0.5243536233901978
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1504": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6349915266036987,
+      "RAI3-A-SYS-07": 0.5689144134521484,
+      "RAI3-A-SYS-08": 0.5372920632362366,
+      "RAI3-A-SYS-09": 0.5023462176322937,
+      "RAI3-A-SYS-10": 0.5678694248199463
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1513": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6239165663719177,
+      "RAI3-A-SYS-07": 0.5891799926757812,
+      "RAI3-A-SYS-08": 0.5832113027572632,
+      "RAI3-A-SYS-09": 0.5384550094604492,
+      "RAI3-A-SYS-10": 0.5624422430992126
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1514": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.660233199596405,
+      "RAI3-A-SYS-07": 0.6098009943962097,
+      "RAI3-A-SYS-08": 0.5767514705657959,
+      "RAI3-A-SYS-09": 0.5059410333633423,
+      "RAI3-A-SYS-10": 0.5973451137542725
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1529": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6923691034317017,
+      "RAI3-A-SYS-07": 0.6374555826187134,
+      "RAI3-A-SYS-08": 0.5656867027282715,
+      "RAI3-A-SYS-09": 0.5122869610786438,
+      "RAI3-A-SYS-10": 0.5825950503349304
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1530": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6396830081939697,
+      "RAI3-A-SYS-07": 0.6223431825637817,
+      "RAI3-A-SYS-08": 0.5496536493301392,
+      "RAI3-A-SYS-09": 0.5181004405021667,
+      "RAI3-A-SYS-10": 0.5679267048835754
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1532": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6912031769752502,
+      "RAI3-A-SYS-07": 0.6331163644790649,
+      "RAI3-A-SYS-08": 0.5428429841995239,
+      "RAI3-A-SYS-09": 0.4903949797153473,
+      "RAI3-A-SYS-10": 0.5588517785072327
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1533": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6568301916122437,
+      "RAI3-A-SYS-07": 0.6055141687393188,
+      "RAI3-A-SYS-08": 0.5680919289588928,
+      "RAI3-A-SYS-09": 0.5554234385490417,
+      "RAI3-A-SYS-10": 0.5495817065238953
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1534": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6337982416152954,
+      "RAI3-A-SYS-07": 0.6117559671401978,
+      "RAI3-A-SYS-08": 0.5379514694213867,
+      "RAI3-A-SYS-09": 0.5213609933853149,
+      "RAI3-A-SYS-10": 0.5248649716377258
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1535": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6361895203590393,
+      "RAI3-A-SYS-07": 0.5927261114120483,
+      "RAI3-A-SYS-08": 0.5396692752838135,
+      "RAI3-A-SYS-09": 0.5036342740058899,
+      "RAI3-A-SYS-10": 0.5089091062545776
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1536": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6553711891174316,
+      "RAI3-A-SYS-07": 0.6222590208053589,
+      "RAI3-A-SYS-08": 0.5999027490615845,
+      "RAI3-A-SYS-09": 0.5414547920227051,
+      "RAI3-A-SYS-10": 0.5859261751174927
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1543": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6457764506340027,
+      "RAI3-A-SYS-07": 0.6049609184265137,
+      "RAI3-A-SYS-08": 0.5966742634773254,
+      "RAI3-A-SYS-09": 0.518046498298645,
+      "RAI3-A-SYS-10": 0.5517343282699585
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1552": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6672363877296448,
+      "RAI3-A-SYS-07": 0.5992350578308105,
+      "RAI3-A-SYS-08": 0.5728491544723511,
+      "RAI3-A-SYS-09": 0.5421969890594482,
+      "RAI3-A-SYS-10": 0.6281282305717468
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1588": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6030662059783936,
+      "RAI3-A-SYS-07": 0.5700153708457947,
+      "RAI3-A-SYS-08": 0.5262077450752258,
+      "RAI3-A-SYS-09": 0.4682621359825134,
+      "RAI3-A-SYS-10": 0.513691246509552
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1596": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6329475045204163,
+      "RAI3-A-SYS-07": 0.5574972629547119,
+      "RAI3-A-SYS-08": 0.5185801982879639,
+      "RAI3-A-SYS-09": 0.47252124547958374,
+      "RAI3-A-SYS-10": 0.5460494756698608
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1600": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6238229274749756,
+      "RAI3-A-SYS-07": 0.5453870892524719,
+      "RAI3-A-SYS-08": 0.5454345941543579,
+      "RAI3-A-SYS-09": 0.4782699644565582,
+      "RAI3-A-SYS-10": 0.559786319732666
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1601": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6305055618286133,
+      "RAI3-A-SYS-07": 0.5515657663345337,
+      "RAI3-A-SYS-08": 0.5405024290084839,
+      "RAI3-A-SYS-09": 0.48578354716300964,
+      "RAI3-A-SYS-10": 0.5576489567756653
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1609": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6466097831726074,
+      "RAI3-A-SYS-07": 0.5674938559532166,
+      "RAI3-A-SYS-08": 0.6295897960662842,
+      "RAI3-A-SYS-09": 0.5390114784240723,
+      "RAI3-A-SYS-10": 0.6034446954727173
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1616": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6367765665054321,
+      "RAI3-A-SYS-07": 0.6086586713790894,
+      "RAI3-A-SYS-08": 0.5200455188751221,
+      "RAI3-A-SYS-09": 0.5011446475982666,
+      "RAI3-A-SYS-10": 0.6235431432723999
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1621": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.592601478099823,
+      "RAI3-A-SYS-07": 0.5731155872344971,
+      "RAI3-A-SYS-08": 0.5677693486213684,
+      "RAI3-A-SYS-09": 0.48004043102264404,
+      "RAI3-A-SYS-10": 0.5475559234619141
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1622": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6247320175170898,
+      "RAI3-A-SYS-07": 0.5708927512168884,
+      "RAI3-A-SYS-08": 0.581926703453064,
+      "RAI3-A-SYS-09": 0.5046903491020203,
+      "RAI3-A-SYS-10": 0.5759316682815552
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1645": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6068408489227295,
+      "RAI3-A-SYS-07": 0.6076436638832092,
+      "RAI3-A-SYS-08": 0.5379080772399902,
+      "RAI3-A-SYS-09": 0.5140362977981567,
+      "RAI3-A-SYS-10": 0.5272030830383301
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1659": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6710624694824219,
+      "RAI3-A-SYS-07": 0.6162587404251099,
+      "RAI3-A-SYS-08": 0.5691473484039307,
+      "RAI3-A-SYS-09": 0.5495821833610535,
+      "RAI3-A-SYS-10": 0.6255548596382141
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1675": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6272529363632202,
+      "RAI3-A-SYS-07": 0.577923059463501,
+      "RAI3-A-SYS-08": 0.5582700371742249,
+      "RAI3-A-SYS-09": 0.5011841654777527,
+      "RAI3-A-SYS-10": 0.5880169868469238
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1676": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.5358030200004578,
+      "RAI3-A-SYS-07": 0.5282918214797974,
+      "RAI3-A-SYS-08": 0.5017024278640747,
+      "RAI3-A-SYS-09": 0.49748510122299194,
+      "RAI3-A-SYS-10": 0.5202325582504272
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1677": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.586570143699646,
+      "RAI3-A-SYS-07": 0.5872697830200195,
+      "RAI3-A-SYS-08": 0.6063792109489441,
+      "RAI3-A-SYS-09": 0.5752688050270081,
+      "RAI3-A-SYS-10": 0.5781271457672119
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1683": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6082050800323486,
+      "RAI3-A-SYS-07": 0.5197783708572388,
+      "RAI3-A-SYS-08": 0.49464932084083557,
+      "RAI3-A-SYS-09": 0.4439115524291992,
+      "RAI3-A-SYS-10": 0.5259642601013184
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1691": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6324135065078735,
+      "RAI3-A-SYS-07": 0.6459842920303345,
+      "RAI3-A-SYS-08": 0.5353047251701355,
+      "RAI3-A-SYS-09": 0.5002954006195068,
+      "RAI3-A-SYS-10": 0.5208566784858704
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1703": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.7063224911689758,
+      "RAI3-A-SYS-07": 0.6021454334259033,
+      "RAI3-A-SYS-08": 0.5888566374778748,
+      "RAI3-A-SYS-09": 0.5105239152908325,
+      "RAI3-A-SYS-10": 0.586794376373291
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1710": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6340797543525696,
+      "RAI3-A-SYS-07": 0.5778781175613403,
+      "RAI3-A-SYS-08": 0.6007012724876404,
+      "RAI3-A-SYS-09": 0.5703653693199158,
+      "RAI3-A-SYS-10": 0.6022696495056152
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  },
+  "RAI4-1723": {
+    "scores": {
+      "RAI3-G-SYS-08": 0.6797865629196167,
+      "RAI3-A-SYS-07": 0.6111292243003845,
+      "RAI3-A-SYS-08": 0.5966155529022217,
+      "RAI3-A-SYS-09": 0.5661859512329102,
+      "RAI3-A-SYS-10": 0.5980611443519592
+    },
+    "keyword_hits": {
+      "RAI3-G-SYS-08": [],
+      "RAI3-A-SYS-07": [],
+      "RAI3-A-SYS-08": [],
+      "RAI3-A-SYS-09": [],
+      "RAI3-A-SYS-10": []
+    },
+    "selected": "RAI3-G-SYS-08",
+    "margin_over_goal_misalignment": 0.0
+  }
+}

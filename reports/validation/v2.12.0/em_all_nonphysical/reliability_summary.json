@@ -1,0 +1,101 @@
+{
+  "release_id": "v2.12.0",
+  "algorithm": "Algorithm 2 - seed-initialized spherical EM",
+  "encoder": "BAAI/bge-m3 dense embeddings (validated cache)",
+  "seed": 20260721,
+  "scope": {
+    "all_l4": 1711,
+    "physical_excluded": 182,
+    "nonphysical_l4_evaluated": 1529,
+    "nonphysical_l3_candidates": 30
+  },
+  "convergence": {
+    "fixed_point_reached": true,
+    "iterations": 18,
+    "objective_monotonic_non_decreasing": true,
+    "final_empty_l3_count": 0
+  },
+  "released_mapping_geometry": {
+    "exact_assignment_agreement": 0.3080444735120994,
+    "adjusted_rand_index": 0.14908701186538093,
+    "normalized_mutual_information": 0.35139250000398603,
+    "current_mean_within_family_cohesion": 0.7647107243537903,
+    "current_median_assignment_margin": 0.010144293308258057,
+    "current_negative_margin_share": 0.37410071942446044,
+    "top_k_containment": {
+      "top_1": 0.6258992805755396,
+      "top_2": 0.7750163505559189,
+      "top_3": 0.854807063440157,
+      "top_5": 0.9326357096141269,
+      "top_10": 0.9829954218443427
+    }
+  },
+  "em_vs_released": {
+    "exact_agreement": 0.3080444735120994,
+    "adjusted_rand_index": 0.14908701186538093,
+    "normalized_mutual_information": 0.35139250000398603,
+    "candidate_remaps": 1058,
+    "candidate_remap_share": 0.6919555264879006
+  },
+  "permutation_current": {
+    "permutations": 5000,
+    "observed_cohesion": 0.7647106051445007,
+    "null_mean": 0.737755298614502,
+    "null_sd": 0.00015997630544006824,
+    "null_p95": 0.7380215525627136,
+    "exceedances": 0,
+    "p_value_plus_one": 0.0001999600079984003
+  },
+  "permutation_em": {
+    "permutations": 5000,
+    "observed_cohesion": 0.7918146848678589,
+    "null_mean": 0.7378206253051758,
+    "null_sd": 0.00016250269254669547,
+    "null_p95": 0.7380951642990112,
+    "exceedances": 0,
+    "p_value_plus_one": 0.0001999600079984003
+  },
+  "perturbation_em": [
+    {
+      "sigma": 0.0,
+      "mean_agreement": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0
+    },
+    {
+      "sigma": 0.01,
+      "mean_agreement": 0.9898822903633118,
+      "ci95_low": 0.9856114983558655,
+      "ci95_high": 0.9934597611427307
+    },
+    {
+      "sigma": 0.025,
+      "mean_agreement": 0.9504349231719971,
+      "ci95_low": 0.9417756795883179,
+      "ci95_high": 0.958812952041626
+    },
+    {
+      "sigma": 0.05,
+      "mean_agreement": 0.8519718647003174,
+      "ci95_low": 0.8351536989212036,
+      "ci95_high": 0.8659417629241943
+    },
+    {
+      "sigma": 0.075,
+      "mean_agreement": 0.7343427538871765,
+      "ci95_low": 0.7155003547668457,
+      "ci95_high": 0.752795934677124
+    },
+    {
+      "sigma": 0.1,
+      "mean_agreement": 0.6106835007667542,
+      "ci95_low": 0.5885872840881348,
+      "ci95_high": 0.6337802410125732
+    }
+  ],
+  "interpretation": {
+    "strong_geometry": "top-1 >= 0.90, top-2 >= 0.95, permutation p < 0.001, and >= 0.97 perturbation agreement through sigma=0.05",
+    "caution": "Geometric disagreement proposes review; it does not prove semantic misclassification.",
+    "publication_policy": "No candidate is applied without ontology gates and human review."
+  }
+}

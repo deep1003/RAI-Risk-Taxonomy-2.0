@@ -1,0 +1,74 @@
+[
+  {
+    "l4_id": "RAI4-0056",
+    "label_en": "Remedy pathway opacity",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-SYS-09",
+    "margin_over_anthropomorphism": 0.050249721803739544,
+    "keyword_similarity": 0.040039310932658716,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-0134",
+    "label_en": "Clinical decision-support overreliance",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-SYS-07",
+    "margin_over_anthropomorphism": 0.0400975291236394,
+    "keyword_similarity": 0.026714162399238486,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-0425",
+    "label_en": "Representational stereotyping",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-INT-04",
+    "margin_over_anthropomorphism": 0.04945643657986576,
+    "keyword_similarity": 0.05773584490782843,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-0498",
+    "label_en": "Erosion of democracy",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-INT-05",
+    "margin_over_anthropomorphism": 0.07297290631688136,
+    "keyword_similarity": 0.048009879246999836,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-0879",
+    "label_en": "Increased vulnerability to misinformation",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-SYS-03",
+    "margin_over_anthropomorphism": 0.037701965594652,
+    "keyword_similarity": 0.038407153944997253,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-0906",
+    "label_en": "AI-induced strategic instability",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-INT-09",
+    "margin_over_anthropomorphism": 0.02968692029901354,
+    "keyword_similarity": 0.02554058225356329,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1309",
+    "label_en": "Algorithmic bias",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-INT-04",
+    "margin_over_anthropomorphism": 0.044035229302091694,
+    "keyword_similarity": 0.01566688250871382,
+    "decision_required": true
+  },
+  {
+    "l4_id": "RAI4-1614",
+    "label_en": "AI-enabled cyber operations",
+    "from_l3_id": "RAI3-G-INT-10",
+    "to_l3_id": "RAI3-G-INT-09",
+    "margin_over_anthropomorphism": 0.02860604616421214,
+    "keyword_similarity": 0.023720390960585997,
+    "decision_required": true
+  }
+]
