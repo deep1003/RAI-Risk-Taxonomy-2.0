@@ -293,7 +293,7 @@ function cardTemplate(card) {
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")}</p>
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
-      ${card.severity_1to5 != null ? `<span class="metric"><small>SEVERITY</small><strong>${formatNumber(card.severity_1to5, 1)}</strong></span>` : ""}
+      ${card.severity_1to5 != null ? `<span class="metric"><small>SEVERITY</small><strong>${formatMetric(card.severity_1to5)}</strong></span>` : ""}
     </div>
   </article>`;
 }
@@ -345,10 +345,10 @@ function openCard(l4Id) {
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p></section>
     ${card.definition_ko ? `<section class="dialog-section"><h3>한국어 정의</h3><p>${escapeHtml(card.definition_ko)}</p></section>` : ""}
     <div class="dialog-metrics">
-      <div><span>Severity</span><strong>${formatNumber(card.severity_1to5, 1)}</strong></div>
-      <div><span>Probability</span><strong>${formatNumber(card.probability_0to1, 2)}</strong></div>
-      <div><span>Impact</span><strong>${formatNumber(card.impact_score, 2)}</strong></div>
-      <div><span>Percentile</span><strong>${card.impact_percentile == null ? "–" : `${formatNumber(card.impact_percentile * 100, 1)}%`}</strong></div>
+      <div><span>Severity</span><strong>${formatMetric(card.severity_1to5)}</strong></div>
+      <div><span>Probability</span><strong>${formatMetric(card.probability_0to1)}</strong></div>
+      <div><span>Impact</span><strong>${formatMetric(card.impact_score)}</strong></div>
+      <div><span>Percentile</span><strong>${card.impact_percentile == null ? "–" : `${formatMetric(card.impact_percentile * 100)}%`}</strong></div>
     </div>
     ${tags.length ? `<section class="dialog-section"><h3>3H / Role</h3><div class="tag-row">${tags.map((tag) => `<span class="axis-tag">${escapeHtml(tag.axis_code)} ${escapeHtml(tag.axis_name)} [${escapeHtml(tag.priority_code)}]</span>`).join("")}</div></section>` : ""}
     <section class="dialog-section"><h3>References · ${references.length}</h3>${references.length ? `<ul class="reference-list">${references.map(referenceTemplate).join("")}</ul>` : `<p>등록된 근거 링크가 없습니다.</p>`}</section>
@@ -364,8 +364,10 @@ function referenceTemplate(reference) {
   return `<li><a href="${escapeAttribute(reference.url)}" target="_blank" rel="noopener noreferrer">${title} ↗</a><small>${source} · ${type}</small></li>`;
 }
 
-function formatNumber(value, digits) {
-  return value == null || Number.isNaN(Number(value)) ? "–" : Number(value).toFixed(digits);
+function formatMetric(value) {
+  if (value == null || Number.isNaN(Number(value))) return "–";
+  const numeric = Number(value);
+  return numeric.toFixed(Math.abs(numeric) < 1 ? 3 : 1);
 }
 
 function escapeHtml(value) {
