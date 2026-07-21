@@ -216,6 +216,7 @@ def project_integrity_paths(
         PROJECT_ROOT / "requirements-lock.txt",
         PROJECT_ROOT / "environment.json",
         PROJECT_ROOT / "data" / "current.json",
+        PROJECT_ROOT / "index.html",
         PROJECT_ROOT / "output" / "jupyter-notebook" / "rai_taxonomy_v1_data_quality_audit.ipynb",
         PROJECT_ROOT / "reports" / "latex" / "rai_taxonomy_v1_data_generation_report_ko.tex",
     ]
@@ -229,6 +230,7 @@ def project_integrity_paths(
         PROJECT_ROOT / "scripts",
         PROJECT_ROOT / "tests",
         PROJECT_ROOT / "docs",
+        PROJECT_ROOT / "assets",
         PROJECT_ROOT / "reports" / "latex" / "generated",
         extras=extras,
     )
@@ -780,6 +782,28 @@ def main() -> None:
         len(search_failures),
         not search_failures and set(search_by_l4) == set(registry_by_l4),
         details=str(search_failures[:20]),
+    )
+    site_shell_path = PROJECT_ROOT / "index.html"
+    site_css_path = PROJECT_ROOT / "assets" / "site.css"
+    site_js_path = PROJECT_ROOT / "assets" / "site.js"
+    site_shell = site_shell_path.read_text(encoding="utf-8") if site_shell_path.is_file() else ""
+    site_js = site_js_path.read_text(encoding="utf-8") if site_js_path.is_file() else ""
+    site_contract_failures = []
+    if 'href="assets/site.css"' not in site_shell:
+        site_contract_failures.append("css_link")
+    if 'src="assets/site.js"' not in site_shell:
+        site_contract_failures.append("js_link")
+    if 'const DATA_ROOT = "public/data/releases/v1.0.0"' not in site_js:
+        site_contract_failures.append("release_data_root")
+    if not site_css_path.is_file() or not site_js_path.is_file():
+        site_contract_failures.append("site_assets")
+    audit.add(
+        "SITE-009",
+        "Static HTML explorer targets the exact validated v1.0.0 public data bundle",
+        0,
+        len(site_contract_failures),
+        not site_contract_failures,
+        details=str(site_contract_failures),
     )
 
     proposed = [row for row in placements if row["assignment_status"] == "algorithm_proposed"]

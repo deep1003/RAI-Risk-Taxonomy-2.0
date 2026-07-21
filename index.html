@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="1,726개 글로벌 AI 리스크 카드를 50개 L3 체계로 탐색하는 RAI Risk Taxonomy">
+  <title>RAI Risk Taxonomy · 1,726 L4 Risk Cards</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#risk-results">리스크 목록으로 건너뛰기</a>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="hero__eyebrow">
+        <span class="release-dot" aria-hidden="true"></span>
+        PREPUBLICATION DATA RELEASE · v1.0.0
+      </div>
+      <div class="hero__row">
+        <div>
+          <h1>Responsible AI Risk Taxonomy</h1>
+          <p>L0–L4 글로벌 리스크 분류체계 · Physical AI 정답 잠금 · Open-set mapping</p>
+        </div>
+        <div class="hero__count" aria-label="전체 L4 카드 수">
+          <strong>1,726</strong>
+          <span>L4 Risk Cards</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="domain-nav" aria-label="상위 리스크 영역">
+    <div class="domain-nav__inner">
+      <button class="domain-pill active" data-domain="all" type="button">전체 보기 <span>1,726</span></button>
+      <button class="domain-pill domain-pill--general" data-domain="RAI1-G" type="button"><i></i>General</button>
+      <button class="domain-pill domain-pill--agentic" data-domain="RAI1-A" type="button"><i></i>Agentic AI</button>
+      <button class="domain-pill domain-pill--physical" data-domain="RAI1-P" type="button"><i></i>Physical AI <span>182</span></button>
+      <button class="domain-pill domain-pill--decision" data-status="needs_taxonomy_decision" type="button"><i></i>분류 결정 필요 <span>1,507</span></button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">TAXONOMY STATUS</p>
+          <h2 id="overview-title">글로벌 AI 리스크 분류 현황</h2>
+        </div>
+        <a class="text-link" href="reports/latex/rai_taxonomy_v1_data_generation_report_ko.tex">LaTeX 검증 보고서 ↗</a>
+      </div>
+
+      <div class="stat-grid">
+        <article class="stat-card stat-card--dark">
+          <span>전체 L4</span><strong id="stat-total">1,726</strong><small>영구 ID RAI4-0001–1726</small>
+        </article>
+        <article class="stat-card stat-card--physical">
+          <span>Physical 정답 잠금</span><strong id="stat-locked">182</strong><small>169 exact + 13 explicit aliases</small>
+        </article>
+        <article class="stat-card stat-card--proposed">
+          <span>전문가 합의 제안</span><strong id="stat-proposed">37</strong><small>사람 승인 전 provisional</small>
+        </article>
+        <article class="stat-card stat-card--decision">
+          <span>Taxonomy 결정 보류</span><strong id="stat-needs">1,507</strong><small>억지 배치 없이 L3 = null</small>
+        </article>
+      </div>
+
+      <div class="coverage-note">
+        <strong>50개 L3 충분성: NOT_DEMONSTRATED</strong>
+        <span>현재 분류체계가 모든 글로벌 위험을 충분히 수용한다고 입증되지 않았습니다. 보류 카드는 사람의 taxonomy decision이 필요합니다.</span>
+      </div>
+    </section>
+
+    <section class="explorer" aria-labelledby="explorer-title">
+      <div class="section-heading explorer__heading">
+        <div>
+          <p class="section-kicker">RISK EXPLORER</p>
+          <h2 id="explorer-title">L4 리스크 카드 탐색</h2>
+        </div>
+        <p class="result-summary" aria-live="polite"><strong id="result-count">0</strong>개 결과</p>
+      </div>
+
+      <div class="filter-shell">
+        <label class="search-box">
+          <span class="sr-only">리스크 검색</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="ID, 위험명, 정의 검색" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <label>
+          <span>상태</span>
+          <select id="status-filter">
+            <option value="all">모든 상태</option>
+            <option value="locked_physical">Physical 잠금</option>
+            <option value="algorithm_proposed">전문가 합의 제안</option>
+            <option value="needs_taxonomy_decision">분류 결정 필요</option>
+          </select>
+        </label>
+        <label>
+          <span>L1</span>
+          <select id="l1-filter"><option value="all">모든 L1</option></select>
+        </label>
+        <label>
+          <span>L2</span>
+          <select id="l2-filter"><option value="all">모든 L2</option></select>
+        </label>
+        <label>
+          <span>L3</span>
+          <select id="l3-filter"><option value="all">모든 L3</option></select>
+        </label>
+        <button id="clear-filters" class="clear-button" type="button">초기화</button>
+      </div>
+
+      <div class="explorer-layout">
+        <aside class="taxonomy-panel" aria-label="L0에서 L3까지 계층 탐색">
+          <div class="taxonomy-panel__head">
+            <div>
+              <span>HIERARCHY</span>
+              <strong>L0–L3 구조</strong>
+            </div>
+            <span class="node-count">60 nodes</span>
+          </div>
+          <div id="taxonomy-tree" class="taxonomy-tree"></div>
+        </aside>
+
+        <div id="risk-results" class="results" tabindex="-1">
+          <div id="active-filter" class="active-filter" hidden></div>
+          <div id="cards-grid" class="cards-grid" aria-busy="true">
+            <div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div>
+          </div>
+          <div class="pagination" id="pagination" aria-label="결과 페이지 이동"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>RAI Risk Taxonomy v1.0.0</strong>
+      <span>Site-ready data · 검증 71 PASS / 0 FAIL / 2 WARN</span>
+    </div>
+    <p>비-Physical 자동 제안은 아직 사람 승인 정답이 아닙니다.</p>
+  </footer>
+
+  <dialog id="card-dialog" class="card-dialog">
+    <button class="dialog-close" type="button" aria-label="상세 창 닫기">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <noscript>이 페이지에서 1,726개 리스크 카드를 탐색하려면 JavaScript를 활성화해 주세요.</noscript>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

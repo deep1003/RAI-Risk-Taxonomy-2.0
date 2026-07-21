@@ -3,7 +3,7 @@
   "status": "PASS_WITH_WARNINGS",
   "failed_checks": 0,
   "warning_checks": 2,
-  "passed_checks": 70,
+  "passed_checks": 71,
   "checks": [
     {
       "check_id": "SRC-001",
@@ -126,11 +126,11 @@
       "check_id": "INT-001",
       "description": "Checksum ledger exactly covers the project integrity scope",
       "expected": {
-        "files": 87,
+        "files": 90,
         "mismatches": 0
       },
       "actual": {
-        "files": 87,
+        "files": 90,
         "mismatches": 0
       },
       "status": "PASS",
@@ -4542,6 +4542,15 @@
     {
       "check_id": "SITE-008",
       "description": "Every search-index row matches canonical card identity and placement",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS",
+      "severity": "critical",
+      "details": "[]"
+    },
+    {
+      "check_id": "SITE-009",
+      "description": "Static HTML explorer targets the exact validated v1.0.0 public data bundle",
       "expected": 0,
       "actual": 0,
       "status": "PASS",

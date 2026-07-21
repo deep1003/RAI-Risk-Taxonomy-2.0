@@ -157,6 +157,20 @@ class ReleaseSmokeTests(unittest.TestCase):
             self.assertEqual(site_card["primary_l3_id"], placement_by_l4[l4_id]["primary_l3_id"])
             self.assertEqual(site_card["assignment_status"], placement_by_l4[l4_id]["assignment_status"])
 
+    def test_static_html_explorer_targets_the_release_bundle(self) -> None:
+        index_path = ROOT / "index.html"
+        css_path = ROOT / "assets" / "site.css"
+        js_path = ROOT / "assets" / "site.js"
+        self.assertTrue(index_path.is_file())
+        self.assertTrue(css_path.is_file())
+        self.assertTrue(js_path.is_file())
+        index = index_path.read_text(encoding="utf-8")
+        script = js_path.read_text(encoding="utf-8")
+        self.assertIn('href="assets/site.css"', index)
+        self.assertIn('src="assets/site.js"', index)
+        self.assertIn('const DATA_ROOT = "public/data/releases/v1.0.0"', script)
+        self.assertNotIn("RAI4-1726", script)
+
 
 if __name__ == "__main__":
     unittest.main()
