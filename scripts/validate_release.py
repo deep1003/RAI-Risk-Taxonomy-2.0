@@ -225,7 +225,9 @@ def project_integrity_paths(
         PROJECT_ROOT / "reports" / "latex" / "stage3_forced_matching_results_ko.tex",
         PROJECT_ROOT / "reports" / "latex" / "stage3_review_hold_policy_ko.tex",
         PROJECT_ROOT / "reports" / "latex" / "rai_risk_taxonomy_technical_report_2_0_ko.tex",
+        PROJECT_ROOT / "reports" / "latex" / "rai_risk_taxonomy_technical_report_2_0_en.tex",
         PROJECT_ROOT / "reports" / "pdf" / "rai_risk_taxonomy_technical_report_2_0_ko.pdf",
+        PROJECT_ROOT / "reports" / "pdf" / "rai_risk_taxonomy_technical_report_2_0_en.pdf",
     ]
     return integrity_paths(
         release_dir,

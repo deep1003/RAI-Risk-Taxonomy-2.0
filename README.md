@@ -50,7 +50,7 @@ Open `http://127.0.0.1:8765/`. The explorer reads the exact validated public bun
 - **Stage 2 (`stage2-v1`)** preserves Stage 1 and assigns 1,334 additional cards, leaving 173 unresolved (10.0232%). These are algorithmic proposals, not human-approved truth.
 - **Stage 3 (`stage3-v1`)** preserves all 1,553 Stage 2 placements and force-matches the remaining 173 to their recorded hierarchy-blind top-1 L3, producing 100% operational coverage. Forced status and original hold reasons remain explicit.
 
-The Stage 2 and Stage 3 working reports remain source-only. The reviewed policy view separates 55 hard holds into the non-taxonomic `RAI-HOLD` review bucket, leaving 1,671 of 1,726 cards assigned to the 50 L3 nodes. Its methodology, statistics, limitations, and vector bar charts are consolidated in `reports/latex/rai_risk_taxonomy_technical_report_2_0_ko.tex` and the compiled `reports/pdf/rai_risk_taxonomy_technical_report_2_0_ko.pdf`.
+The Stage 2 and Stage 3 working reports remain source-only. The reviewed policy view separates 55 hard holds into the non-taxonomic `RAI-HOLD` review bucket, leaving 1,671 of 1,726 cards assigned to the 50 L3 nodes. Its methodology, stage-specific criteria, statistics, limitations, and vector bar charts are consolidated in the canonical English `reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex` and `reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf`. The Korean edition is retained as a companion translation.
 
 ## Reproduce locally
 

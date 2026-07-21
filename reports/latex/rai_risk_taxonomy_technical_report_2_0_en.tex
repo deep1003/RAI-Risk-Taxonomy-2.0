@@ -1,0 +1,359 @@
+% !TEX program = xelatex
+% RAI Risk Taxonomy Technical Report 2.0 -- English edition.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{fontspec}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage[hidelinks]{hyperref}
+\pgfplotsset{compat=1.18}
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}
+\definecolor{navy}{HTML}{173458}
+\definecolor{blue}{HTML}{3867D6}
+\definecolor{gold}{HTML}{C48A18}
+\definecolor{orange}{HTML}{D97706}
+\definecolor{ink}{HTML}{273142}
+\definecolor{grid}{HTML}{D0D5DD}
+\definecolor{light}{HTML}{F5F7FA}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy}
+\rhead{Technical Report 2.0}
+\cfoot{\thepage}
+\hypersetup{pdftitle={RAI Risk Taxonomy Technical Report 2.0},pdfauthor={RAI Risk Taxonomy Project}}
+
+\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]\Large Technical Report 2.0}
+\author{Staged classification, review-hold policy, and statistical validation\\of 1,726 global L4 risks}
+\date{July 21, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{navy}{light}{\parbox{0.92\linewidth}{
+\textbf{Final policy result.} Of 1,726 L4 risk cards, 1,671 (96.8134\%) are
+provisionally assigned to the 50 L3 nodes. The 55 most uncertain cards
+(3.1866\%) are separated into the non-taxonomic \code{RAI-HOLD} review bucket.
+No algorithmic proposal in this report constitutes human-approved ground truth.}}
+\end{center}
+
+\section{Technical summary}
+
+This report documents the staged placement of 1,726 global L4 risk cards into a
+new hierarchy containing 50 L3 nodes. The 182 classifications inherited from
+the Physical AI taxonomy are treated as a locked gold set. The legacy global
+L1--L3 hierarchy is retained only as reference metadata and is not used as a
+prediction feature. Permanent L4 identifiers and source crosswalks are
+preserved throughout the process.
+
+Stage 1 applies strict rule--semantic--anchor agreement and requires two expert
+agents to agree on the exact L3. It retains the 182 Physical locks and proposes
+only 37 additional placements. Stage 2 relaxes the open-set threshold and
+places 1,553 cards (89.9768\%), leaving 173 for taxonomy review. Stage 3 tests
+100\% operational coverage by forcing all 173 remaining cards to their recorded
+hierarchy-blind top-1 L3. The final policy view then removes the 55 hard holds
+from the taxonomy and retains 1,671 placements plus 55 review holds.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, ymin=0, ymax=1800, width=0.92\linewidth, height=7cm,
+  bar width=20pt, ylabel={Number of cards},
+  symbolic x coords={Stage 1,Stage 2,Stage 3 test,Final policy}, xtick=data,
+  nodes near coords, nodes near coords align={vertical},
+  axis line style={ink}, tick label style={font=\small},
+  ymajorgrids, grid style={grid},
+  legend style={at={(0.5,-0.18)},anchor=north,legend columns=2},
+]
+\addplot[fill=blue,draw=navy] coordinates {(Stage 1,219) (Stage 2,1553) (Stage 3 test,1726) (Final policy,1671)};
+\addplot[fill=gold,draw=orange] coordinates {(Stage 1,1507) (Stage 2,173) (Stage 3 test,0) (Final policy,55)};
+\legend{Assigned to L3,Withheld}
+\end{axis}
+\end{tikzpicture}
+\caption{Assigned and withheld cards at each stage. The denominator is 1,726 throughout.}
+\end{figure}
+
+Stage 3's 100\% figure measures operational path completeness, not validity.
+The final 96.8134\% policy coverage reflects the deliberate separation of
+boundary conflicts. Neither figure is an accuracy or approval rate.
+
+\section{Scope, data, and identification rules}
+
+The unit of analysis is one L4 card with a permanent RAI4 identifier. The
+identifier range runs from 0001 through 1726. Labels are not used as identifiers
+because identical names may occur on different paths. The hierarchy contains
+one L0 root, three L1 domains, six L2 groups, and 50 L3 nodes. \code{RAI-HOLD}
+is an operational review bucket and is not an L3 node.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Final policy status & Cards & Share of all cards \\
+\midrule
+Locked Physical gold set & 182 & 10.5446\% \\
+Stage 1 expert-consensus proposal & 37 & 2.1437\% \\
+Stage 2 algorithmic proposal & 1,334 & 77.2885\% \\
+Stage 3 residual forced candidate & 118 & 6.8366\% \\
+Taxonomy Decision Hold & 55 & 3.1866\% \\
+\midrule
+Total & 1,726 & 100.0000\% \\
+\bottomrule
+\end{tabular}
+\caption{Composition of the final policy view.}
+\end{table}
+
+\section{Staged classification process and decision criteria}
+
+\subsection{Stage 0: canonicalization and protected sets}
+
+Before classification, the global and Physical sources are joined through the
+source crosswalk and assigned permanent RAI4 IDs. The Physical AI site's 182
+existing L4-to-L3 classifications form a protected gold set. Their paths cannot
+be changed by later algorithmic stages. The remaining 1,544 cards enter the
+hierarchy-blind classification pipeline.
+
+\subsection{Stage 1: strict open-set classification}
+
+For each non-Physical card, the model input contains only the L4 label, a direct
+mechanism definition with hierarchy restatements removed, and the evidence
+title. Legacy global L0--L3 values, source family, and source-ID prefixes are
+excluded from prediction features. A Stage 1 automatic candidate must satisfy
+all of the following criteria:
+
+\begin{enumerate}[leftmargin=2em]
+  \item Exactly one L3 is rule-eligible.
+  \item The rule winner, semantic top-1, and composite top-1 are the same L3.
+  \item Top-1 semantic score is at least 0.55 and composite score is at least 0.54.
+  \item Both semantic and composite margins are at least 0.035.
+  \item At least two of three anchor views select the same L3 as top-1.
+  \item No taxonomy-gap sentinel, multi-mechanism flag, or Physical-boundary flag is present.
+  \item Two independent expert agents approve the same exact L3.
+\end{enumerate}
+
+This gate yields 37 new expert-consensus proposals. Together with the 182
+Physical locks, Stage 1 assigns 219 cards and withholds 1,507.
+
+\subsection{Stage 2: relaxed classification targeting 90\% coverage}
+
+Stage 2 preserves all 219 protected placements and ranks the Stage 1 holds with
+the deterministic suitability score
+\[
+S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap}.
+\]
+The normalized terms are defined as
+\begin{align*}
+q_{sem}&=\operatorname{clip}((s_{sem}-0.45)/0.25,0,1),\\
+q_{sm}&=\operatorname{clip}(m_{sem}/0.05,0,1),\\
+q_{cm}&=\operatorname{clip}(m_{comp}/0.05,0,1),\\
+q_{vote}&=v_{anchor}/3,\\
+q_{rule}&=\mathbf{1}[\text{at least one eligible L3}],\\
+p_{gap}&=0.05\,\mathbf{1}[\text{gap sentinel present}].
+\end{align*}
+
+The score is a review-ordering measure, not a calibrated probability. Stage 2
+first preserves 55 hard holds regardless of score. It then sorts all remaining
+holds by ascending $S_2$, using permanent RAI4 ID as the deterministic tie
+breaker, and reserves the bottom 118. The final Stage 2 hold set is therefore
+$55+118=173$ cards (10.0232\%). All other cards are assigned to their recorded
+hierarchy-blind top-1 L3, producing 1,553 placements (89.9768\%).
+
+\subsection{Stage 3: forced matching test}
+
+Stage 3 does not retrain or rescore the model. It preserves the 1,553 non-null
+Stage 2 placements and assigns only the 173 Stage 2 holds to the top-1 L3 already
+recorded in the algorithm score artifact. Thresholds, margins, rule eligibility,
+and gap sentinels no longer block assignment. Every new placement is marked
+\code{forced\_match\_stage3}; the original hold reason, hard/quota class, score,
+review priority, and \code{human\_approved=false} flag remain visible. This
+experiment achieves 1,726/1,726 operational paths but does not establish that
+the 50 L3 taxonomy is sufficient.
+
+\subsection{Final policy: separate the 55 hard holds}
+
+The final policy view reverses the forced taxonomy placement for five hard-hold
+families. Their policy L3 is set to null and their operational bucket is set to
+\code{RAI-HOLD}. The 118 quota holds remain forced candidates requiring human
+review. The forced top-1 L3 for each of the 55 holds remains available only as
+audit metadata.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=125, width=0.70\linewidth, height=7cm,
+  xlabel={Number of cards},
+  symbolic y coords={Low absolute fit,Multiple mechanisms,Expert disagreement,Expert rejection,Physical scope review,Suitability reserve},
+  ytick=data, nodes near coords, nodes near coords align={horizontal},
+  bar width=12pt, xmajorgrids, grid style={grid}, axis line style={ink},
+  tick label style={font=\small}, enlarge y limits=0.12,
+]
+\addplot[fill=gold,draw=orange] coordinates {(2,Low absolute fit) (6,Multiple mechanisms) (7,Expert disagreement) (17,Expert rejection) (23,Physical scope review)};
+\addplot[fill=blue,draw=navy] coordinates {(118,Suitability reserve)};
+\end{axis}
+\end{tikzpicture}
+\caption{Reasons for the 173 Stage 2 holds. The gold 55 become \code{RAI-HOLD}; the blue 118 remain Stage 3 forced candidates.}
+\end{figure}
+
+The 23 Physical-scope cases are not confirmed Physical AI cards. Their text
+triggered terms such as robot, drone, autonomous vehicle, embodied AI,
+cyber-physical, or physical actuator, but they were not members of the locked
+Physical gold set. They therefore require a human boundary decision.
+
+\section{Final distribution statistics}
+
+\subsection{L1 and L2 distribution}
+
+Among the 1,671 cards with a policy L3, General contains 1,140 cards
+(68.2226\%), Agentic AI contains 349 (20.8857\%), and Physical AI contains 182
+(10.8917\%). The remaining 55 cards equal 3.1866\% of all 1,726 cards.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=1250, width=0.75\linewidth, height=5.7cm,
+  xlabel={Classified cards}, symbolic y coords={Physical AI,Agentic AI,General},
+  ytick=data, xtick distance=200, nodes near coords, bar width=18pt,
+  xmajorgrids, grid style={grid},
+]
+\addplot[fill=blue,draw=navy] coordinates {(182,Physical AI) (349,Agentic AI) (1140,General)};
+\end{axis}
+\end{tikzpicture}
+\caption{L1 distribution in the final policy view. The denominator is 1,671 classified cards.}
+\end{figure}
+
+\begin{longtable}{llrr}
+\toprule
+L2 ID & L2 label & Cards & Share of 1,671 \\
+\midrule
+\endhead
+RAI2-G-INT & General Interaction & 708 & 42.3698\% \\
+RAI2-G-SYS & General System & 432 & 25.8528\% \\
+RAI2-A-SYS & Agentic System & 349 & 20.8857\% \\
+RAI2-P-SYS & Physical System Safety & 91 & 5.4458\% \\
+RAI2-P-INT & Physical Interaction Safety & 62 & 3.7104\% \\
+RAI2-P-SOC & Physical Societal Safety & 29 & 1.7355\% \\
+\bottomrule
+\end{longtable}
+
+\subsection{L3 concentration}
+
+All 50 L3 nodes contain at least one card. Anthropomorphism is the largest L3
+with 242 cards, or 14.4823\% of the 1,671 classified cards. The top five L3
+nodes contain 700 cards (41.8911\%). No individual L3 exceeds the 20\%
+concentration warning threshold. Concentration describes distribution shape;
+it does not validate semantic correctness.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, xmin=0, xmax=270, width=0.68\linewidth, height=11.2cm,
+  xlabel={Number of cards},
+  symbolic y coords={Robot Control,Overconfidence,Weaponization,Non-Contestability,Conflict,Destabilising Dynamics,Excessive Authority,Network Effects,Privacy,Policy Exposure,Misinformation/Disinformation,Copyrights,Goal Misalignment,Anthropomorphism},
+  ytick=data, nodes near coords, bar width=9pt, xmajorgrids, grid style={grid},
+  tick label style={font=\small},
+]
+\addplot[fill=blue,draw=navy] coordinates {
+ (45,Robot Control) (46,Overconfidence) (48,Weaponization) (55,Non-Contestability)
+ (64,Conflict) (73,Destabilising Dynamics) (74,Excessive Authority) (78,Network Effects)
+ (86,Privacy) (88,Policy Exposure) (107,Misinformation/Disinformation)
+ (113,Copyrights) (150,Goal Misalignment) (242,Anthropomorphism)};
+\end{axis}
+\end{tikzpicture}
+\caption{Top 14 L3 nodes in the final policy view. The complete 50-node distribution is available in the CSV artifact.}
+\end{figure}
+
+\section{The 55 review holds and uncertainty}
+
+\begin{longtable}{lrrr}
+\toprule
+Hold reason & Cards & Share of holds & Share of all cards \\
+\midrule
+\endhead
+PHYSICAL\_OUTSIDE\_LOCK & 23 & 41.8182\% & 1.3326\% \\
+FRONTIER\_EXPERT\_REJECTED & 17 & 30.9091\% & 0.9849\% \\
+FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 12.7273\% & 0.4056\% \\
+MULTI\_MECHANISM & 6 & 10.9091\% & 0.3476\% \\
+LOW\_ABSOLUTE\_FIT & 2 & 3.6364\% & 0.1159\% \\
+\midrule
+Total & 55 & 100.0000\% & 3.1866\% \\
+\bottomrule
+\end{longtable}
+
+The hold bucket must not be presented as an unapproved 51st L3. The website and
+exports should show it as a separate review queue and retain the original hold
+reason, forced-candidate L3, semantic and composite scores, anchor votes, and
+critical review priority. The 24 expert rejection/disagreement cases test L3
+definition fit; the six multi-mechanism cases test whether primary/secondary or
+multi-label structure is needed; and the 23 Physical-boundary cases require
+comparison against the locked Physical taxonomy.
+
+\section{Validation, limitations, and robustness checks}
+
+The 182 Physical placements and 37 Stage 1 expert-consensus placements remain
+unchanged in all later stages. The Stage 2 and Stage 3 builders reproduce
+byte-identical placement hashes on repeated runs. The Stage 2 validator reports
+13 PASS, 0 FAIL, and 3 WARN; the Stage 3 validator reports 14 PASS, 0 FAIL, and
+4 WARN. All 16 repository regression tests, including the final hold-policy
+tests, pass.
+
+Material limitations are:
+\begin{itemize}[leftmargin=2em]
+  \item 1,214 of the 1,334 new Stage 2 placements lack Stage 1 rule eligibility and rely primarily on semantic top-1 proximity.
+  \item 247 new Stage 2 placements override a taxonomy-gap sentinel.
+  \item The remaining 118 Stage 3 forced candidates are neither calibrated probabilities nor human approvals.
+  \item The Physical-boundary sentinel uses a limited keyword set and can produce both false positives and false negatives.
+  \item Use of all 50 L3 nodes and 96.8134\% card coverage do not prove taxonomy sufficiency.
+\end{itemize}
+
+\section{Recommended review sequence and open questions}
+
+\begin{enumerate}[leftmargin=2em]
+  \item Review all 55 \code{RAI-HOLD} cards, prioritizing the 23 Physical-boundary cases and 24 expert rejection/disagreement cases.
+  \item Review the 118 Stage 3 quota candidates in ascending $S_2$ order.
+  \item Audit stratified L3 samples from the 247 gap overrides and 1,214 rule-free placements.
+  \item Use the evidence to select a remedy: expand an L3, add an L3, or permit primary and secondary labels.
+  \item Publish only human-approved migrations. Preserve decision IDs and history in the successor release.
+\end{enumerate}
+
+Open decisions include how many Physical-boundary cards belong in the Physical
+taxonomy, whether multi-mechanism cards may receive a secondary L3, what human
+review error tolerance is acceptable for the 118 forced candidates, and what
+minimum evidence should be required for proposing a new L3.
+
+\section*{Reproducible artifacts}
+\begin{itemize}[leftmargin=2em]
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_placements.json}
+  \item \nolinkurl{data/experiments/stage2-v1/stage2_hold_queue.json}
+  \item \nolinkurl{data/experiments/stage3-v1/stage3_placements.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/placements.json}
+  \item \nolinkurl{data/experiments/stage3-review-hold-v1/review_hold.json}
+  \item \nolinkurl{reports/statistics/stage2_unclassified_statistics.json}
+  \item \nolinkurl{reports/statistics/stage3_statistics.json}
+  \item \nolinkurl{scripts/build_stage2_classification.py}
+  \item \nolinkurl{scripts/build_stage3_forced_matching.py}
+  \item \nolinkurl{scripts/build_stage3_review_hold.py}
+\end{itemize}
+
+\vfill
+\noindent\textbf{Report identifier:} RAI Risk Taxonomy Technical Report 2.0\\
+\textbf{Language edition:} English\\
+\textbf{Policy data view:} \code{stage3-review-hold-v1}\\
+\textbf{Report date:} 2026-07-21
+
+\end{document}

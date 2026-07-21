@@ -90,8 +90,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "8aa400a00aef2225bf5f833adf5c62e941c55ce348fc561cc8b16aa12b9a04fd",
-      "bytes": 5612,
+      "sha256": "88a5c9d559a49dd4cbd0cc49841a9de180b9092c90ea750563d45b2a211b985b",
+      "bytes": 5705,
       "rows": null
     },
     {
@@ -467,6 +467,12 @@
       "rows": null
     },
     {
+      "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex",
+      "sha256": "54e495b4025406917ea43cc0654b067f9b29c13f4faeae2738d40032c0e956af",
+      "bytes": 16280,
+      "rows": null
+    },
+    {
       "path": "reports/latex/rai_risk_taxonomy_technical_report_2_0_ko.tex",
       "sha256": "85dcf913c5c60b6b98589b24d3f3386233bd4b1d302a2f5da65d50a3aad6f3f7",
       "bytes": 13946,
@@ -494,6 +500,12 @@
       "path": "reports/latex/stage3_review_hold_policy_ko.tex",
       "sha256": "c0ae1434e751947e43eecc8d344e01a4c86f58bfd4c730678d7888a009876fb0",
       "bytes": 2832,
+      "rows": null
+    },
+    {
+      "path": "reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf",
+      "sha256": "f8288e050f41db2fcd9396ec36b8c88165b788bd10123b123f0a3b8a5b4439f5",
+      "bytes": 56032,
       "rows": null
     },
     {
@@ -702,7 +714,7 @@
     },
     {
       "path": "reports/validation/v1.0.0/validation_summary.json",
-      "sha256": "23c9615478b333c9c0bd37ab900299864b33be5e7917e9b824f148ca337e4eaf",
+      "sha256": "27e0bd901d793daca1bff906f303c23164d10074c155a96587a586f1aa2d490a",
       "bytes": 113084,
       "rows": null
     },
@@ -822,8 +834,8 @@
     },
     {
       "path": "scripts/validate_release.py",
-      "sha256": "533225611e405aa353d4bac9e98ffae866a29ac99ae46c4581624dfe2a5874b4",
-      "bytes": 54123,
+      "sha256": "a615e9afca257870861f7fbfbf78e2ff0664a3be1ee2504e65ce390784e558a9",
+      "bytes": 54309,
       "rows": null
     },
     {
