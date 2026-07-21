@@ -1,0 +1,55 @@
+{
+  "release_id": "v2.15.0",
+  "source_release": "v2.14.0",
+  "status": "published",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 720,
+    "l1_nodes": 3,
+    "l2_categories": 4,
+    "l2_path_nodes": 8,
+    "l3_nodes": 52,
+    "semantic_l3_nodes": 50,
+    "hold_review_l3_nodes": 2
+  },
+  "summary": {
+    "release_id": "v2.15.0",
+    "source_release": "v2.14.0",
+    "method": "orthogonal HOLD review path with preserved semantic L3 lineage",
+    "moved_to_hold_review_path": 720,
+    "general_hold": 626,
+    "agentic_hold": 94,
+    "physical_changed": 0,
+    "semantic_paths_preserved": true,
+    "non_hold_validation_population": 991,
+    "counts": {
+      "l4": 1711,
+      "l1_nodes": 3,
+      "canonical_l2_categories": 4,
+      "l2_path_nodes": 8,
+      "active_l3_nodes_including_review_paths": 52,
+      "semantic_l3_nodes": 50,
+      "hold_review_l3_nodes": 2
+    }
+  },
+  "files": [
+    {
+      "path": "public/data/releases/v2.15.0/cards.json",
+      "sha256": "72fb0049aac6b555997464174416440a3083c858ed1739fd8c22212185ae2b86"
+    },
+    {
+      "path": "public/data/releases/v2.15.0/hierarchy.json",
+      "sha256": "ed38286b4d3a6b764cfa57931cadb4da23252045b2c706b73555cade258289da"
+    },
+    {
+      "path": "reports/data_quality/hold_l2_overlay_v2.15.0/summary.json",
+      "sha256": "ba39ea4f76b04f6dc7e556a29c10a1011e76b3ff713e4ab01c86065c606dea91"
+    },
+    {
+      "path": "reports/data_quality/hold_l2_overlay_v2.15.0/hold_path_moves.json",
+      "sha256": "0694174cb0ea5b6910a1b8bf89772e7a799ee3ad1ad4ae2b5edb5ef3100dc8d8"
+    }
+  ]
+}

@@ -803,17 +803,17 @@ def main() -> None:
     site_shell = site_shell_path.read_text(encoding="utf-8") if site_shell_path.is_file() else ""
     site_js = site_js_path.read_text(encoding="utf-8") if site_js_path.is_file() else ""
     site_contract_failures = []
-    if 'href="assets/site.css?v=2.14.0"' not in site_shell:
+    if 'href="assets/site.css?v=2.15.0"' not in site_shell:
         site_contract_failures.append("css_link")
-    if 'src="assets/site.js?v=2.14.0"' not in site_shell:
+    if 'src="assets/site.js?v=2.15.0"' not in site_shell:
         site_contract_failures.append("js_link")
-    if 'const DATA_ROOT = "public/data/releases/v2.14.0"' not in site_js:
+    if 'const DATA_ROOT = "public/data/releases/v2.15.0"' not in site_js:
         site_contract_failures.append("release_data_root")
     if not site_css_path.is_file() or not site_js_path.is_file():
         site_contract_failures.append("site_assets")
     audit.add(
         "SITE-009",
-        "Static HTML explorer targets the current v2.14.0 policy bundle",
+        "Static HTML explorer targets the current v2.15.0 policy bundle",
         0,
         len(site_contract_failures),
         not site_contract_failures,

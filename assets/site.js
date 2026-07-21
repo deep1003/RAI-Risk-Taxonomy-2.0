@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.14.0";
+const DATA_ROOT = "public/data/releases/v2.15.0";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -51,6 +51,7 @@ const L2_ICONS = {
   "RAI2-INT": "↔",
   "RAI2-SYS": "⚙",
   "RAI2-SOC": "🏛",
+  "RAI2-HLD": "⏸",
 };
 
 document.addEventListener("DOMContentLoaded", init);

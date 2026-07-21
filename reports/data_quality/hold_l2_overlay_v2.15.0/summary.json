@@ -1,0 +1,20 @@
+{
+  "release_id": "v2.15.0",
+  "source_release": "v2.14.0",
+  "method": "orthogonal HOLD review path with preserved semantic L3 lineage",
+  "moved_to_hold_review_path": 720,
+  "general_hold": 626,
+  "agentic_hold": 94,
+  "physical_changed": 0,
+  "semantic_paths_preserved": true,
+  "non_hold_validation_population": 991,
+  "counts": {
+    "l4": 1711,
+    "l1_nodes": 3,
+    "canonical_l2_categories": 4,
+    "l2_path_nodes": 8,
+    "active_l3_nodes_including_review_paths": 52,
+    "semantic_l3_nodes": 50,
+    "hold_review_l3_nodes": 2
+  }
+}

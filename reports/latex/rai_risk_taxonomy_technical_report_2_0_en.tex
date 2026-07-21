@@ -82,7 +82,10 @@ produced 54 L3 nodes and preserved an operational path for every card. Release
 v2.14.0 retires the four sparse experimental Agentic families, archives their
 identities and definitions, and force-migrates their 39 cards to the best
 available active families. It contains 1,193 General, 336 Agentic, and 182
-locked Physical cards across 50 active L3 nodes. Incremental
+locked Physical cards across 50 semantic L3 nodes. Release v2.15.0 then adds
+domain-specific HOLD review paths under General and Agentic AI, moves 626 and
+94 review cards respectively, and preserves each original semantic L3 as
+lineage metadata. Incremental
 constrained-EM audits preserve the authoritative Physical set and move only
 definition- and mechanism-supported boundary cases. A subsequent Memory-card
 scope audit preserves all identities and paths while differentiating three
@@ -91,8 +94,11 @@ overlapping L4 intensions. All forced migrations remain under review; 720 cards
 \code{HOLD} for human taxonomic review. A full-release BGE-M3 rerun finds
 statistically non-random semantic structure and strong local support for the
 taxonomy, but does not establish global reliability of the consolidated
-50-family assignment (64.7\% top-1 containment; 72.8\% perturbation agreement
-at $\sigma=0.05$). We specify every evidence filter, classification
+50-family assignment when HOLD remains embedded (64.7\% top-1 containment;
+72.8\% perturbation agreement at $\sigma=0.05$). Re-evaluation of the 991
+non-HOLD cards after separation yields 75.8\% top-1 containment and 78.4\%
+agreement, a conditional subset result rather than a like-for-like accuracy
+gain. We specify every evidence filter, classification
 rule, and validation limit.
 \end{abstract}
 
@@ -229,7 +235,10 @@ and the former Agentic label \textit{System}, are renamed accordingly. Six
 L1-specific path nodes remain as implementation edges so that the strict
 L0--L1--L2--L3 tree and all L3 parent paths are preserved; each
 edge references one of the three canonical L2 identifiers. Thus the reported
-L2 category count is three, while no L3 path or L4 assignment changes.
+L2 category count is three, while no L3 path or L4 assignment changes. Release
+v2.15.0 adds a fourth canonical display category, HOLD, with General and
+Agentic path nodes. This fourth category is a review-state overlay rather than
+a semantic safety dimension.
 
 \subsection{Stable L4 identifiers and L1 display semantics}
 
@@ -541,14 +550,32 @@ only through a later, human-approved taxonomy decision. Release v2.14.0 has 50
 active L3 nodes, while the four retired nodes remain available solely as
 archived lineage metadata.
 
+\subsection{Domain-specific HOLD review paths, v2.15.0}
+
+Release v2.15.0 makes review status navigable in the hierarchy by introducing
+one HOLD L2 path under General and one under Agentic AI. Because L4 cards must
+terminate at L3, each path contains one child node, \textit{Taxonomy Decision
+Hold}. The operation moves 626 General and 94 Agentic cards, for 720 cards in
+total. Physical AI contains no HOLD cards and its 182 locked mappings remain
+byte-equivalent apart from the release identifier.
+
+This review path is orthogonal to semantic classification. For every moved
+card, the former L2 and L3 identifiers, bilingual labels, definitions,
+references, metrics, and migration metadata are preserved in
+\code{hold\_semantic\_path}. Accordingly, the public hierarchy has four
+canonical L2 display categories and 52 navigable L3 nodes: 50 semantic risk
+families plus two review-path nodes. The HOLD nodes must not be counted as new
+risk concepts or used as semantic prototypes in reliability analysis.
+
 \section{HOLD decision policy}
 
 \subsection{Meaning and state transition}
 
-\code{HOLD} is the public rendering of \code{decision\_required=true}. It is
-not an unclassified bucket and does not create another L1, L2, or L3. A held
-card always retains exactly one operational L3 path, but that path must not be
-treated as human-approved ground truth. The state is set by a hard qualitative
+\code{HOLD} is the public rendering of \code{decision\_required=true}. In
+v2.15.0 it is a review-path L2 under General and Agentic AI, not a semantic risk
+family. A held card has one navigable HOLD path and retains its prior semantic
+L3 candidate as explicit lineage metadata; neither path is human-approved
+ground truth. The state is set by a hard qualitative
 trigger or by a pending algorithmic-review trigger. It is cleared only by a
 recorded human decision that reconciles the label, mechanism-only definition,
 evidence, and destination definition; absence of a competing score alone is
@@ -713,7 +740,9 @@ view.}
 The final policy assigns all 1,711 canonical cards (100.0\%); 720 assigned
 cards (42.1\%) carry the \code{HOLD} marker. Of all cards, 1,193 are General,
 336 are Agentic AI, and 182 are Physical AI. Their shares are 69.7\%, 19.6\%,
-and 10.6\%, respectively. All 50 active L3 nodes contain at least one card.
+and 10.6\%, respectively. All 50 semantic L3 nodes contain at least one
+non-HOLD card. The two HOLD review-path L3 nodes contain 626 General and 94
+Agentic cards, respectively.
 Anthropomorphism is the largest L3 with 234 cards (13.7\%); the five largest
 L3 nodes jointly contain 41.6\%.
 
@@ -789,7 +818,9 @@ nearest-centroid assignments.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../validation/v2.14.0/reliability/reliability_validation.pdf}
-\caption{\textbf{Convergence and stability of the v2.14.0 assignment.}
+\caption{\textbf{Convergence and stability before HOLD separation (v2.14.0).}
+All 1,711 cards are assessed while the 720 HOLD cards remain embedded in their
+semantic L3 candidates.
 (a) Seed-initialized spherical EM reaches a fixed point after 15 iterations.
 (b) v2.14.0 top-$k$ containment is compared with the v2.12.0 54-family baseline.
 (c) Perturbation stability remains materially similar after consolidation.}
@@ -872,6 +903,66 @@ exclusive samples. Second, the transition from 82,971 records to 1,711 L4
 cards changes the unit of analysis. Third, embedding geometry is a diagnostic,
 not a substitute for expert judgment or causal evidence. Fourth, small
 families can obtain perfect containment with limited statistical power.
+
+\subsection{Reliability after excluding the HOLD review paths, v2.15.0}
+
+The second analysis uses the identical encoder, seed, centroid procedure,
+5,000 matched-size permutations, and 200 perturbation repeats, but excludes
+all 720 HOLD cards before constructing family centroids. It assesses 991
+non-HOLD cards across the same 50 semantic L3 families; none of those families
+is empty. The two HOLD review nodes are navigation constructs and are not
+embedded or treated as risk-family prototypes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.15.0/non_hold_reliability/non_hold_reliability.pdf}
+\caption{\textbf{Reliability after HOLD separation (v2.15.0).}
+(a) Top-$k$ containment for the 991 non-HOLD cards is shown against the full
+v2.14.0 population. (b) Perturbation stability is calculated only on non-HOLD
+centroids and cards. (c) The ten weakest non-HOLD families identify the next
+review priorities.}
+\label{fig:nonhold-reliability}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Reliability with HOLD embedded and after HOLD exclusion.}
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & All v2.14.0 & Non-HOLD v2.15.0 \\
+\midrule
+Cards assessed & 1,711 & 991 \\
+Semantic L3 families & 50 & 50 \\
+Mean within-family cosine & 0.768 & 0.779 \\
+Median assignment margin & 0.012 & 0.024 \\
+Negative-margin share & 35.3\% & 24.2\% \\
+Top-1 containment & 64.7\% & 75.8\% \\
+Top-2 containment & 78.6\% & 87.3\% \\
+Top-3 containment & 86.1\% & 91.5\% \\
+Top-5 containment & 93.1\% & 95.4\% \\
+EM agreement with released paths & 21.8\% & 31.7\% \\
+Agreement at $\sigma=0.01$ & 94.5\% & 95.6\% \\
+Agreement at $\sigma=0.05$ & 72.8\% & 78.4\% \\
+Permutation p-value & 0.0002 & 0.0002 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The conditional non-HOLD subset is more coherent: top-1 containment rises by
+11.1 percentage points, the median margin approximately doubles, and the
+negative-margin share falls by 11.1 points. EM reaches a fixed point after 13
+iterations and agrees with 31.7\% of released paths (adjusted Rand index 0.187;
+normalized mutual information 0.501). Observed cohesion is 0.779 versus a
+matched-size null mean of 0.742, with zero exceedances and plus-one
+$p=0.0002$.
+
+These are not before--after accuracy estimates on the same population. The
+later analysis deliberately removes the review-priority cases that were known
+to have weaker fit, changes every centroid, and reduces the sample from 1,711
+to 991. The improvement therefore validates HOLD as an effective triage
+separation signal; it does not prove that every non-HOLD assignment is correct
+or that moving a card into HOLD improves its semantic classification.
 
 \subsection{Independent specialist diagnosis of limited reliability}
 
@@ -1057,6 +1148,11 @@ available in the repository:
   \item \small\nolinkurl{public/data/releases/v2.14.0/cards.json}
   \item \small\nolinkurl{public/data/releases/v2.14.0/hierarchy.json}
   \item \small\nolinkurl{public/data/releases/v2.14.0/manifest.json}
+  \item \small\nolinkurl{public/data/releases/v2.15.0/cards.json}
+  \item \small\nolinkurl{public/data/releases/v2.15.0/hierarchy.json}
+  \item \small\nolinkurl{public/data/releases/v2.15.0/manifest.json}
+  \item \small\nolinkurl{reports/data_quality/hold_l2_overlay_v2.15.0/summary.json}
+  \item \small\nolinkurl{reports/data_quality/hold_l2_overlay_v2.15.0/hold_path_moves.json}
   \item \small\nolinkurl{reports/data_quality/agentic_l3_retirement_v2.14.0/summary.json}
   \item \small\nolinkurl{reports/data_quality/agentic_l3_retirement_v2.14.0/l4_migrations.csv}
   \item \small\nolinkurl{reports/data_quality/agentic_l3_retirement_v2.14.0/retired_l3_nodes.json}
@@ -1080,12 +1176,17 @@ available in the repository:
   \item \small\nolinkurl{reports/validation/v2.14.0/reliability/reliability_summary.json}
   \item \small\nolinkurl{reports/validation/v2.14.0/reliability/per_l3_metrics.json}
   \item \small\nolinkurl{reports/validation/v2.14.0/reliability/reliability_validation.pdf}
+  \item \small\nolinkurl{reports/validation/v2.15.0/non_hold_reliability/reliability_summary.json}
+  \item \small\nolinkurl{reports/validation/v2.15.0/non_hold_reliability/per_l3_metrics.json}
+  \item \small\nolinkurl{reports/validation/v2.15.0/non_hold_reliability/non_hold_reliability.pdf}
   \item \small\nolinkurl{reports/validation/v2.12.0/em_all_nonphysical/reliability_summary.json}
   \item \small\nolinkurl{reports/validation/v2.12.0/em_all_nonphysical/candidate_remaps.csv}
   \item \small\nolinkurl{output/jupyter-notebook/algorithm2_em_l3_nonphysical_validation_v2_12.ipynb}
   \item \small\nolinkurl{scripts/validate_assignment_reliability_v2_12.py}
   \item \small\nolinkurl{scripts/retire_agentic_l3_families_v2_14.py}
   \item \small\nolinkurl{scripts/validate_assignment_reliability_v2_14.py}
+  \item \small\nolinkurl{scripts/create_hold_l2_overlay_v2_15.py}
+  \item \small\nolinkurl{scripts/validate_non_hold_reliability_v2_15.py}
 \end{itemize}
 This document is the English journal-style edition of \textit{RAI Risk
 Taxonomy Technical Report 2.0}.
