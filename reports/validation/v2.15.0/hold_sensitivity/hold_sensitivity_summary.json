@@ -1,0 +1,75 @@
+{
+  "release_id": "v2.15.0",
+  "analysis": "HOLD sensitivity analysis",
+  "conditions": {
+    "hold_included": {
+      "source_release": "v2.14.0",
+      "cards": 1711,
+      "hold_cards": 720,
+      "semantic_l3_families": 50
+    },
+    "hold_excluded": {
+      "source_release": "v2.15.0",
+      "cards": 991,
+      "excluded_hold_cards": 720,
+      "semantic_l3_families": 50
+    }
+  },
+  "method_controls": {
+    "encoder": "BAAI/bge-m3 dense",
+    "seed": 20260721,
+    "permutations": 5000,
+    "perturbation_repeats": 200,
+    "l3_review_nodes_excluded_from_centroids": true
+  },
+  "metrics": {
+    "em_iterations_to_fixed_point": {
+      "hold_included": 15,
+      "hold_excluded": 13
+    },
+    "em_objective_end": {
+      "hold_included": 0.7995754480361938,
+      "hold_excluded": 0.8029696941375732
+    },
+    "em_release_agreement": {
+      "hold_included": 0.21800116890707188,
+      "hold_excluded": 0.3168516649848638,
+      "delta_percentage_points": 9.88504960777919
+    },
+    "top_k_containment": {
+      "top_1": {
+        "hold_included": 0.6469900642898889,
+        "hold_excluded": 0.7578203834510595,
+        "delta_percentage_points": 11.083031916117058
+      },
+      "top_2": {
+        "hold_included": 0.7855055523085914,
+        "hold_excluded": 0.8728557013118062,
+        "delta_percentage_points": 8.735014900321481
+      },
+      "top_3": {
+        "hold_included": 0.8609000584453536,
+        "hold_excluded": 0.9152371342078708,
+        "delta_percentage_points": 5.433707576251723
+      },
+      "top_5": {
+        "hold_included": 0.9310344827586207,
+        "hold_excluded": 0.9535822401614531,
+        "delta_percentage_points": 2.2547757402832436
+      }
+    },
+    "perturbation_agreement": {
+      "sigma_0.01": {
+        "hold_included": 0.9448129534721375,
+        "hold_excluded": 0.9564833045005798,
+        "delta_percentage_points": 1.1670351028442383
+      },
+      "sigma_0.05": {
+        "hold_included": 0.7282203435897827,
+        "hold_excluded": 0.784147322177887,
+        "delta_percentage_points": 5.592697858810425
+      }
+    }
+  },
+  "interpretation": "HOLD exclusion improves the conditional non-HOLD geometry across all three diagnostics. This is a selection sensitivity result, not a same-population accuracy estimate."
+}
