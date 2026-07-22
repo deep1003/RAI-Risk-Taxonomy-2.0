@@ -1,0 +1,178 @@
+{
+  "release_id": "v2.15.0",
+  "analysis": "HOLD remediation candidate audit",
+  "hold_cards": 720,
+  "remediation_class_counts": {
+    "taxonomy_structure_review": 268,
+    "mapping_revalidation": 200,
+    "title_definition_rewrite_candidate": 147,
+    "human_taxonomy_decision": 72,
+    "evidence_enrichment_candidate": 21,
+    "evidence_and_taxonomy_review": 12
+  },
+  "decision_reason_counts": {
+    "ANTHROPOMORPHISM_DIRECT_MECHANISM_NOT_ESTABLISHED": 173,
+    "OVERLOADED_L3_LOW_EVIDENCE_FIT": 138,
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION": 70,
+    "TAXONOMY_GAP:TRANSPARENCY_EXPLAINABILITY": 40,
+    "RETIRED_SPARSE_AGENTIC_L3_FORCED_MIGRATION": 39,
+    "TAXONOMY_GAP:ROBUSTNESS_ALIGNMENT_CONTROL": 31,
+    "TAXONOMY_GAP:DEPENDENCY_MANIPULATION": 28,
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY": 28,
+    "EXPERT_REVIEW_NO_CONSENSUS": 28,
+    "TAXONOMY_GAP:ENVIRONMENT_ENERGY_RESOURCES": 19,
+    "PHYSICAL_OUTSIDE_LOCK": 16,
+    "FRONTIER_EXPERT_REJECTED": 16,
+    "TAXONOMY_GAP:LABOR_INEQUALITY_POWER": 15,
+    "TAXONOMY_GAP:DELIBERATE_DISINFORMATION": 15,
+    "CONSTRAINED_EM_REMAP_REQUIRES_HUMAN_REVIEW": 12,
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,PLURALISTIC_VALUE_STAKEHOLDER": 11,
+    "TAXONOMY_GAP:PLURALISTIC_VALUE_STAKEHOLDER": 10,
+    "FRONTIER_EXPERT_DISAGREEMENT": 7,
+    "MULTI_MECHANISM": 5,
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,TRANSPARENCY_EXPLAINABILITY": 3,
+    "LOW_ABSOLUTE_FIT": 2,
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY,ROBUSTNESS_ALIGNMENT_CONTROL": 2,
+    "TAXONOMY_GAP_GOVERNANCE_ACCOUNTABILITY": 1,
+    "CLOSEST_OPERATIONAL_FIT_HUMAN_OVERRIDE": 1,
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,LABOR_INEQUALITY_POWER": 1,
+    "BROADER_THAN_CONTENT_LEVEL_UNFAIRNESS": 1,
+    "TAXONOMY_GAP:DEPENDENCY_MANIPULATION,GOVERNANCE_AUDIT_REGULATION": 1,
+    "TAXONOMY_GAP:DELIBERATE_DISINFORMATION,DEPENDENCY_MANIPULATION": 1,
+    "TAXONOMY_GAP:ENVIRONMENT_ENERGY_RESOURCES,LABOR_INEQUALITY_POWER": 1,
+    "ALLOCATIVE_DISCRIMINATION_TAXONOMY_GAP": 1,
+    "TAXONOMY_GAP_EXISTENTIAL_RISK": 1,
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,ROBUSTNESS_ALIGNMENT_CONTROL": 1,
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY,TRANSPARENCY_EXPLAINABILITY": 1,
+    "DELIBERATE_DECEPTION_NOT_COVERED_BY_L3": 1
+  },
+  "source_specificity_counts": {
+    "url_backed_reference": 685,
+    "broad_reference": 35
+  },
+  "directly_actionable_classes": {
+    "evidence_enrichment_candidate": 21,
+    "title_definition_rewrite_candidate": 147,
+    "evidence_and_taxonomy_review": 12
+  },
+  "non_automatic_classes": {
+    "taxonomy_structure_review": 268,
+    "human_taxonomy_decision": 72,
+    "mapping_revalidation": 200
+  },
+  "class_by_reason": {
+    "ALLOCATIVE_DISCRIMINATION_TAXONOMY_GAP": {
+      "mapping_revalidation": 1
+    },
+    "ANTHROPOMORPHISM_DIRECT_MECHANISM_NOT_ESTABLISHED": {
+      "title_definition_rewrite_candidate": 82,
+      "mapping_revalidation": 79,
+      "evidence_enrichment_candidate": 12
+    },
+    "BROADER_THAN_CONTENT_LEVEL_UNFAIRNESS": {
+      "evidence_enrichment_candidate": 1
+    },
+    "CLOSEST_OPERATIONAL_FIT_HUMAN_OVERRIDE": {
+      "mapping_revalidation": 1
+    },
+    "CONSTRAINED_EM_REMAP_REQUIRES_HUMAN_REVIEW": {
+      "title_definition_rewrite_candidate": 8,
+      "mapping_revalidation": 4
+    },
+    "DELIBERATE_DECEPTION_NOT_COVERED_BY_L3": {
+      "mapping_revalidation": 1
+    },
+    "EXPERT_REVIEW_NO_CONSENSUS": {
+      "human_taxonomy_decision": 28
+    },
+    "FRONTIER_EXPERT_DISAGREEMENT": {
+      "human_taxonomy_decision": 7
+    },
+    "FRONTIER_EXPERT_REJECTED": {
+      "human_taxonomy_decision": 16
+    },
+    "LOW_ABSOLUTE_FIT": {
+      "mapping_revalidation": 1,
+      "title_definition_rewrite_candidate": 1
+    },
+    "MULTI_MECHANISM": {
+      "human_taxonomy_decision": 5
+    },
+    "OVERLOADED_L3_LOW_EVIDENCE_FIT": {
+      "mapping_revalidation": 74,
+      "title_definition_rewrite_candidate": 56,
+      "evidence_enrichment_candidate": 8
+    },
+    "PHYSICAL_OUTSIDE_LOCK": {
+      "human_taxonomy_decision": 16
+    },
+    "RETIRED_SPARSE_AGENTIC_L3_FORCED_MIGRATION": {
+      "mapping_revalidation": 39
+    },
+    "TAXONOMY_GAP:DELIBERATE_DISINFORMATION": {
+      "taxonomy_structure_review": 12,
+      "evidence_and_taxonomy_review": 3
+    },
+    "TAXONOMY_GAP:DELIBERATE_DISINFORMATION,DEPENDENCY_MANIPULATION": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:DEPENDENCY_MANIPULATION": {
+      "taxonomy_structure_review": 26,
+      "evidence_and_taxonomy_review": 2
+    },
+    "TAXONOMY_GAP:DEPENDENCY_MANIPULATION,GOVERNANCE_AUDIT_REGULATION": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:ENVIRONMENT_ENERGY_RESOURCES": {
+      "taxonomy_structure_review": 19
+    },
+    "TAXONOMY_GAP:ENVIRONMENT_ENERGY_RESOURCES,LABOR_INEQUALITY_POWER": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY": {
+      "taxonomy_structure_review": 28
+    },
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY,ROBUSTNESS_ALIGNMENT_CONTROL": {
+      "taxonomy_structure_review": 2
+    },
+    "TAXONOMY_GAP:GENERAL_AI_SECURITY,TRANSPARENCY_EXPLAINABILITY": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION": {
+      "taxonomy_structure_review": 64,
+      "evidence_and_taxonomy_review": 6
+    },
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,LABOR_INEQUALITY_POWER": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,PLURALISTIC_VALUE_STAKEHOLDER": {
+      "taxonomy_structure_review": 11
+    },
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,ROBUSTNESS_ALIGNMENT_CONTROL": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP:GOVERNANCE_AUDIT_REGULATION,TRANSPARENCY_EXPLAINABILITY": {
+      "taxonomy_structure_review": 3
+    },
+    "TAXONOMY_GAP:LABOR_INEQUALITY_POWER": {
+      "taxonomy_structure_review": 15
+    },
+    "TAXONOMY_GAP:PLURALISTIC_VALUE_STAKEHOLDER": {
+      "taxonomy_structure_review": 10
+    },
+    "TAXONOMY_GAP:ROBUSTNESS_ALIGNMENT_CONTROL": {
+      "taxonomy_structure_review": 30,
+      "evidence_and_taxonomy_review": 1
+    },
+    "TAXONOMY_GAP:TRANSPARENCY_EXPLAINABILITY": {
+      "taxonomy_structure_review": 40
+    },
+    "TAXONOMY_GAP_EXISTENTIAL_RISK": {
+      "taxonomy_structure_review": 1
+    },
+    "TAXONOMY_GAP_GOVERNANCE_ACCOUNTABILITY": {
+      "taxonomy_structure_review": 1
+    }
+  },
+  "interpretation": "The audit separates HOLD cards that can be improved through title-definition rewriting or stronger evidence from cards that still require taxonomy-structure or human boundary decisions."
+}

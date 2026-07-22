@@ -1,0 +1,70 @@
+{
+  "release_id": "v2.16.0",
+  "source_release": "v2.15.0",
+  "status": "published",
+  "counts": {
+    "l4": 1711,
+    "classified": 1711,
+    "physical_locked": 182,
+    "decision_required": 720,
+    "l1_nodes": 3,
+    "l2_categories": 4,
+    "l2_path_nodes": 8,
+    "l3_nodes": 52,
+    "semantic_l3_nodes": 50,
+    "hold_review_l3_nodes": 2
+  },
+  "summary": {
+    "release_id": "v2.16.0",
+    "source_release": "v2.15.0",
+    "method": "orthogonal HOLD review path with preserved semantic L3 lineage",
+    "moved_to_hold_review_path": 720,
+    "general_hold": 626,
+    "agentic_hold": 94,
+    "physical_changed": 0,
+    "semantic_paths_preserved": true,
+    "non_hold_validation_population": 991,
+    "counts": {
+      "l4": 1711,
+      "l1_nodes": 3,
+      "canonical_l2_categories": 4,
+      "l2_path_nodes": 8,
+      "active_l3_nodes_including_review_paths": 52,
+      "semantic_l3_nodes": 50,
+      "hold_review_l3_nodes": 2
+    },
+    "evidence_enrichment": {
+      "release_id": "v2.16.0",
+      "source_release": "v2.15.0",
+      "cards_enriched": 10,
+      "references_added": 11,
+      "hold_cards_before": 720,
+      "hold_cards_after": 720,
+      "hold_removed": 0,
+      "url_verifications_recorded": 8,
+      "policy": "Evidence enrichment and definition repair do not automatically clear HOLD; remediated cards require a follow-up mapping reliability rerun or human approval."
+    }
+  },
+  "files": [
+    {
+      "path": "public/data/releases/v2.16.0/cards.json",
+      "sha256": "3fa41c2147c4f0c261ec391a1cb6b75cdf6033762fa9f0854650ad4fc9dc9745"
+    },
+    {
+      "path": "public/data/releases/v2.16.0/hierarchy.json",
+      "sha256": "82af1999fd4bf46153012160c6e8c83f95b7dd00930377fa48a8890e4f2cfa53"
+    },
+    {
+      "path": "reports/data_quality/hold_evidence_enrichment_v2.16.0/summary.json",
+      "sha256": "c29c31e3b05e2efbcca6126bcd8c2b8513fadb2a3931379267c2198249c3813e"
+    },
+    {
+      "path": "reports/data_quality/hold_evidence_enrichment_v2.16.0/evidence_added.json",
+      "sha256": "641b4cbe4d1d58e1edb51124bc8d9018d6121c814d3ff500ac8dceb3dddbade9"
+    },
+    {
+      "path": "reports/data_quality/hold_evidence_enrichment_v2.16.0/url_verification.json",
+      "sha256": "fe1e7920c4b34fc4a9b11d7105169723e5e680d25ac03acb01d4de8101b090ab"
+    }
+  ]
+}
