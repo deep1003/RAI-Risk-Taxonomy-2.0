@@ -1,0 +1,20 @@
+{
+ "condition": "nonhold_pre",
+ "cards": 991,
+ "top1_containment": 72.0,
+ "top2_containment": 84.8,
+ "top3_containment": 89.5,
+ "top5_containment": 93.7,
+ "median_margin": 0.006,
+ "negative_margin_share": 28.0,
+ "mean_within_family_cosine": 0.9244,
+ "null_mean": 0.9147,
+ "permutation_p": 0.0002,
+ "em_iterations": 8,
+ "em_final_objective": 0.934,
+ "em_agreement": 25.6,
+ "ari": 0.144,
+ "nmi": 0.444,
+ "perturb_agreement_sigma_0.01": 91.6,
+ "perturb_agreement_sigma_0.05": 59.0
+}

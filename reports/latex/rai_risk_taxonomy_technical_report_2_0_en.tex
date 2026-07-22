@@ -89,19 +89,18 @@ lineage metadata. Incremental
 constrained-EM audits preserve the authoritative Physical set and move only
 definition- and mechanism-supported boundary cases. A subsequent Memory-card
 scope audit preserves all identities and paths while differentiating three
-overlapping L4 intensions. All forced migrations remain under review; 720 cards
-(42.1\%) are marked
-\code{HOLD} for human taxonomic review. A full-release BGE-M3 rerun finds
-statistically non-random semantic structure and strong local support for the
-taxonomy, but does not establish global reliability of the consolidated
-50-family assignment when HOLD remains embedded (64.7\% top-1 containment;
-72.8\% perturbation agreement at $\sigma=0.05$). Re-evaluation of the 991
-non-HOLD cards after separation yields 75.8\% top-1 containment and 78.4\%
-agreement. A dedicated sensitivity analysis shows that HOLD exclusion improves
-EM convergence, released-L3 top-$k$ containment, and perturbation stability,
-but this is a conditional subset result rather than a like-for-like accuracy
-gain. We specify every evidence filter, classification
-rule, and validation limit.
+overlapping L4 intensions. Release v2.17.0 adds a mechanism-definition
+revision pass and BGE-M3 constrained-EM audit; all algorithmic movers remain
+under review and 734 cards (42.9\%) are marked \code{HOLD} for human taxonomic
+review. The final full-release BGE-M3 sensitivity test finds statistically
+non-random semantic structure, but does not establish global reliability of the
+consolidated 50-family assignment when HOLD remains embedded (69.5\% top-1
+containment; 74.0\% perturbation agreement at $\sigma=0.05$ after the audit).
+Re-evaluation of the 977 non-HOLD cards yields 79.3\% top-1 containment and
+80.0\% perturbation agreement. HOLD exclusion improves EM convergence,
+released-L3 top-$k$ containment, and perturbation stability, but this is a
+conditional subset result rather than a like-for-like accuracy gain. We specify
+every evidence filter, classification rule, and validation limit.
 \end{abstract}
 
 \noindent\textbf{Keywords:} AI risk taxonomy; evidence synthesis; open-set
@@ -1214,11 +1213,100 @@ differences are negligible at global scale. The correct conclusion is therefore
 structure and a useful HOLD separation, but strong global assignment
 reliability is not demonstrated.
 
+
+
+\subsection{v2.17.0: definition revision pass and BGE-M3 constrained-EM audit}
+
+Release v2.17.0 applies an expert editorial pass to the non-Physical registry
+while keeping all 182 Physical cards byte-identical. The pass rewrites 147
+title and definition mismatch candidates identified by the v2.16.0 remediation
+audit into mechanism-only bilingual definitions, renames 15 non-descriptive
+labels with the original label preserved in provenance, applies 187 mechanical
+hygiene fixes (hyphenation artifacts, missing final punctuation, duplicated
+tokens) to the remaining non-Physical definitions, and attaches five
+externally verified governance references (NIST AI 100-1; OWASP Top 10 for LLM
+Applications 2025) to directly matching cards. Every textual change carries
+\code{human\_review\_status=pending} and retains the original text in a
+\code{definition\_revision} record; no HOLD marker is cleared by this pass.
+
+The revised card text is then re-audited with the constrained-EM procedure of
+Section~3.7 using the pinned local BGE-M3 snapshot
+\code{5617a9f61b028005a4858fdac845db406aefb181}. The unguarded BGE-M3 control
+run produced 151 candidate moves and converged after six non-zero update
+passes, followed by a seventh zero-move pass. This result is intentionally
+used as sensitivity evidence rather than as automatic ground truth: it shows
+that the edited definitions expose many plausible local alternatives, but the
+volume of candidates is too high for direct publication without human review.
+The published v2.17.0 placement layer therefore preserves the guarded RC
+policy: 22 defensible proposals are recorded, of which 14 produce actual
+\code{primary\_l3\_id} changes and 8 update the semantic path of cards that
+were already in a HOLD review path. All 22 movers carry
+\code{decision\_required=true}; the review queue grows from 720 to 734. No
+Physical path changed.
+
+The apparent difference between 22 proposals and 14 primary moves is therefore
+structural, not an accounting error. A non-HOLD card stores its operational L3
+in \code{primary\_l3\_id}, so a guarded proposal changes that field. A card
+that is already in a HOLD path keeps \code{primary\_l3\_id} at the HOLD node
+and stores the proposed semantic family in \code{hold\_semantic\_path}. Those
+eight cards are valid reassignment proposals but do not appear as primary L3
+moves in a direct card-to-card diff.
+
+\subsection{BGE-M3 sensitivity analysis of the v2.17.0 audit}
+
+The final sensitivity analysis uses the canonical BGE-M3 encoder, seed
+20260721, the same 50 semantic L3 families, 5,000 matched-size permutations,
+and the same perturbation grid used in Section~7.6. Table~\ref{tab:v217-bge}
+reports the geometry before and after the BGE-M3 constrained audit. HOLD is
+reported both included and excluded because the HOLD marker is a review state,
+not a semantic L3 family.
+
+\begin{table}[ht]
+\centering
+\caption{BGE-M3 reliability before and after the v2.17.0 constrained-EM audit.}
+\label{tab:v217-bge}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & All, pre & All, post & Non-HOLD, pre & Non-HOLD, post \\
+\midrule
+Cards assessed & 1,711 & 1,711 & 977 & 977 \\
+Top-1 containment & 64.9\% & 69.5\% & 76.8\% & 79.3\% \\
+Top-2 containment & 78.9\% & 83.5\% & 88.3\% & 91.6\% \\
+Top-3 containment & 85.9\% & 90.4\% & 92.2\% & 94.6\% \\
+Top-5 containment & 93.0\% & 95.0\% & 95.6\% & 97.4\% \\
+Median assignment margin & 0.0125 & 0.0146 & 0.0240 & 0.0279 \\
+Negative-margin share & 35.1\% & 30.5\% & 23.2\% & 20.7\% \\
+Permutation $p$ & 0.0002 & 0.0002 & 0.0002 & 0.0002 \\
+EM convergence iterations & 25 & 25 & 12 & 12 \\
+EM objective at convergence & 0.801 & 0.801 & 0.802 & 0.802 \\
+EM agreement with released paths & 20.6\% & 22.3\% & 30.0\% & 31.7\% \\
+Agreement at $\sigma=0.01$ & 94.1\% & 94.7\% & 95.6\% & 96.0\% \\
+Agreement at $\sigma=0.05$ & 72.3\% & 74.0\% & 78.4\% & 80.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three findings follow. First, the released taxonomy is statistically
+non-random under BGE-M3: within-family cohesion exceeds every matched-size
+permutation in all four conditions ($p=0.0002$). Second, excluding HOLD
+improves every reliability indicator. After the v2.17.0 audit, top-1
+containment rises from 69.5\% to 79.3\%, top-5 containment from 95.0\% to
+97.4\%, the negative-margin share falls from 30.5\% to 20.7\%, and
+$\sigma=0.05$ perturbation stability rises from 74.0\% to 80.0\%. Third, the
+constrained audit improves local geometry but does not convert the taxonomy
+into a fully validated ground truth. EM-to-release agreement remains modest
+(22.3\% with HOLD included; 31.7\% with HOLD excluded), which is expected
+because unconstrained spherical EM has no hierarchy, protected Physical lock,
+HOLD review state, or policy constraint. The release conclusion therefore
+remains \textbf{SHARE WITH CAVEATS}: v2.17.0 is suitable for public review and
+navigation, while the 734 HOLD cards and the 22 guarded reassignment proposals
+remain priority items for human adjudication.
+
 \section{Review priorities}
 
 Review should begin with the 39 forced migrations, then the weakest global
 families and low-margin cards within Anthropomorphism.
-The 720 assigned cards marked \code{HOLD} should be adjudicated using agreement
+The 734 assigned cards marked \code{HOLD} should be adjudicated using agreement
 among the risk label, mechanism-only definition, cited evidence, and candidate
 L3 definition. Each approved batch should be followed by the identical
 reliability analysis. A low score alone must not trigger automatic movement;

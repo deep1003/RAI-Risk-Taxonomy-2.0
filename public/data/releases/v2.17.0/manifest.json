@@ -1,0 +1,23 @@
+{
+  "release_id": "v2.17.0",
+  "source_release": "v2.16.0",
+  "status": "published_guarded_bge_m3_validated",
+  "method": "expert definition rewrite (147) + mechanical hygiene (187) + verified references (5) + guarded constrained-EM audit with BGE-M3 sensitivity validation",
+  "counts": {
+    "l4": 1711,
+    "physical_locked": 182,
+    "guarded_proposals_total": 22,
+    "actual_primary_l3_moves": 14,
+    "existing_hold_semantic_path_updates": 8,
+    "new_hold_from_audit": 14,
+    "decision_required": 734,
+    "bge_m3_unguarded_audit_candidates": 151,
+    "by_path": {
+      "HOLD-path": 734,
+      "Agentic": 237,
+      "General": 558,
+      "Physical": 182
+    }
+  },
+  "policy": "No algorithmic move is human-approved ground truth; all movers carry decision_required. Physical 182 byte-identical. BGE-M3 rerun is recorded as sensitivity evidence, while guarded RC placements are preserved for publication."
+}

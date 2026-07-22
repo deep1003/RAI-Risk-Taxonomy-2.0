@@ -1,0 +1,20 @@
+{
+ "condition": "all_post",
+ "cards": 1711,
+ "top1_containment": 69.5,
+ "top2_containment": 83.5,
+ "top3_containment": 90.4,
+ "top5_containment": 95.0,
+ "median_margin": 0.0146,
+ "negative_margin_share": 30.5,
+ "mean_within_family_cosine": 0.7721,
+ "null_mean": 0.7381,
+ "permutation_p": 0.0002,
+ "em_iterations": 25,
+ "em_final_objective": 0.801,
+ "em_agreement": 22.3,
+ "ari": 0.141,
+ "nmi": 0.433,
+ "perturb_agreement_sigma_0.01": 94.7,
+ "perturb_agreement_sigma_0.05": 74.0
+}

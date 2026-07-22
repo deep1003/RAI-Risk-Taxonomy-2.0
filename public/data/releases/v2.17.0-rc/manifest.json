@@ -1,0 +1,19 @@
+{
+ "release_id": "v2.17.0-rc",
+ "source_release": "v2.16.0",
+ "status": "release_candidate_pending_human_review",
+ "method": "expert definition rewrite (147) + mechanical hygiene (187) + verified references (5) + constrained-EM audit (BGE-M3)",
+ "counts": {
+  "l4": 1711,
+  "physical_locked": 182,
+  "semantic_moves": 22,
+  "new_hold_from_audit": 14,
+  "by_path": {
+   "HOLD-path": 720,
+   "Agentic": 238,
+   "General": 571,
+   "Physical": 182
+  }
+ },
+ "policy": "No algorithmic move is human-approved ground truth; all movers carry decision_required. Physical 182 byte-identical. Commit/push left to the user."
+}

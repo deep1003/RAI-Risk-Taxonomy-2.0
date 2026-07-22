@@ -1,0 +1,1315 @@
+% !TEX program = xelatex
+% RAI Risk Taxonomy Technical Report 2.0, journal-style English edition.
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,top=22mm,bottom=24mm,left=22mm,right=22mm]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\pgfplotsset{compat=1.18}
+
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\setlength{\parindent}{1.4em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\pct}[1]{#1\%}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\definecolor{natureblue}{HTML}{0072B2}
+\definecolor{naturevermillion}{HTML}{D55E00}
+\definecolor{naturegreen}{HTML}{009E73}
+\definecolor{naturegrey}{HTML}{6B6B6B}
+\definecolor{naturelight}{HTML}{D9D9D9}
+
+\pgfplotsset{
+  natureaxis/.style={
+    axis x line*=bottom,
+    axis y line*=left,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick style={black, line width=0.5pt},
+    tick label style={font=\sffamily\footnotesize, color=black},
+    label style={font=\sffamily\small, color=black},
+    title style={font=\sffamily\small, color=black},
+    legend style={draw=none, fill=none, font=\sffamily\footnotesize},
+    grid=none,
+    clip=false
+  }
+}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{\footnotesize RAI Risk Taxonomy}
+\rhead{\footnotesize Technical Report 2.0}
+\cfoot{\footnotesize\thepage}
+\hypersetup{
+  pdftitle={RAI Risk Taxonomy Technical Report 2.0},
+  pdfauthor={RAI Risk Taxonomy Project}
+}
+
+\title{\vspace{-1.3cm}\bfseries\Large RAI Risk Taxonomy 2.0:\\[3pt]
+Top-down evidence selection and staged classification of 1,711 global AI risks}
+\author{RAI Risk Taxonomy Project}
+\date{21 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a reproducible, top-down account of the evidence and classification
+pipeline used to construct RAI Risk Taxonomy 2.0. The integrated evidence space
+contains 3,906,767 AI records: 1,749,159 papers, 125,372 policy reports, and
+2,032,236 patents. A curated AI-risk evidence view contains 82,971 records
+(2.1\% of the AI evidence space). Canonicalization, source crosswalking, and
+risk-card construction yields 1,726 candidate rows. A conservative exact-match
+check merges one duplicate, yielding 1,725 candidate L4 cards. A taxonomy-level
+check against the 24 authoritative Physical AI L3 labels excludes 14 exact
+label leaks, yielding 1,711 L4 cards. A staged hierarchy-blind classification
+procedure initially assigns all cards to 50 L3 nodes. Subsequent definition and
+mapping audits, followed by a conservative v2.8.0 Agentic expansion, temporarily
+produced 54 L3 nodes and preserved an operational path for every card. Release
+v2.14.0 retires the four sparse experimental Agentic families, archives their
+identities and definitions, and force-migrates their 39 cards to the best
+available active families. It contains 1,193 General, 336 Agentic, and 182
+locked Physical cards across 50 semantic L3 nodes. Release v2.15.0 then adds
+domain-specific HOLD review paths under General and Agentic AI, moves 626 and
+94 review cards respectively, and preserves each original semantic L3 as
+lineage metadata. Incremental
+constrained-EM audits preserve the authoritative Physical set and move only
+definition- and mechanism-supported boundary cases. A subsequent Memory-card
+scope audit preserves all identities and paths while differentiating three
+overlapping L4 intensions. All forced migrations remain under review; 720 cards
+(42.1\%) are marked
+\code{HOLD} for human taxonomic review. A full-release BGE-M3 rerun finds
+statistically non-random semantic structure and strong local support for the
+taxonomy, but does not establish global reliability of the consolidated
+50-family assignment when HOLD remains embedded (64.7\% top-1 containment;
+72.8\% perturbation agreement at $\sigma=0.05$). Re-evaluation of the 991
+non-HOLD cards after separation yields 75.8\% top-1 containment and 78.4\%
+agreement. A dedicated sensitivity analysis shows that HOLD exclusion improves
+EM convergence, released-L3 top-$k$ containment, and perturbation stability,
+but this is a conditional subset result rather than a like-for-like accuracy
+gain. We specify every evidence filter, classification
+rule, and validation limit.
+\end{abstract}
+
+\noindent\textbf{Keywords:} AI risk taxonomy; evidence synthesis; open-set
+classification; semantic mapping; Physical AI; responsible AI.
+
+\section{Introduction}
+
+A taxonomy can appear complete while concealing uncertainty in its source
+corpus, unit of analysis, or placement rules. RAI Risk Taxonomy 2.0 therefore
+separates four quantities that must not be conflated: the size of the integrated
+AI evidence space, the size of the AI-risk evidence view, the number of
+canonical L4 risk cards, and the number of L4 cards assigned to L3. The central
+result is a top-down evidence-to-taxonomy chain of 3,906,767 records, 82,971
+AI-risk records, 1,726 candidate L4 rows, 1,725 exact-deduplicated candidates,
+1,711 level-validated L4 cards, and 1,711 L3-assigned cards.
+
+The transitions do not all preserve the same statistical unit. The first two
+stages count documents or patent records. The third and fourth stages count
+canonical risk concepts. Consequently, the 82,971 evidence records are not a
+one-to-one parent table from which every L4 card was mechanically generated.
+They form an auditable evidence view supporting corpus coverage and risk
+interpretation, whereas the L4 registry integrates risk taxonomies, benchmarks,
+standards, and linked evidence through a source crosswalk.
+
+\section{Top-down dataset construction}
+
+\subsection{Stage A: integrated AI evidence space}
+
+The top-level dataset contains 3,906,767 records from three source families:
+1,749,159 papers, 125,372 policy reports, and 2,032,236 patents. Paper records
+originate from the local global Web of Science AI collections. Policy records
+combine the reviewed curated AI-policy master with the broader policy-materials
+collection. Patent records originate from the stage-2 AI patent master.
+
+Records are standardized to a common schema and retained only when a non-empty
+title is available. Deduplication is performed within document type and
+analytical category. The ordered key hierarchy is patent application ID for
+patents, followed by DOI, source record ID, URL, and a normalized
+title-year-institution fallback. Cross-category overlap is intentionally
+retained because AI, AI infrastructure, Physical AI, and AI risk are analytical
+views rather than mutually exclusive partitions.
+
+\subsection{Stage B: integrated AI-risk evidence view}
+
+The AI-risk evidence view contains 82,971 records: 50,375 papers, 938 policy
+reports, and 31,658 patents. Its inclusion rule is source-governed rather than a
+single keyword query. Papers combine curated academic risk references, the
+clean and integrated AI-risk paper corpora, Physical AI safety benchmarks, and
+verified paper records from the top-200 evidence set. Policy reports combine
+curated risk-policy references with verified report records. Patents combine
+curated risk-patent references with verified patent records. Record-type filters
+are applied before the same title-validity and within-category deduplication
+rules used at Stage A.
+
+This view represents 2.1\% of the integrated AI evidence space. Because the
+source collections and analytical categories can overlap, this percentage is a
+descriptive ratio, not the estimated prevalence of risk research in all AI
+scholarship.
+
+\subsection{Stage C: canonical L4 registry}
+
+The unit changes from evidence record to risk concept. Source risk IDs are
+joined through the source crosswalk, semantically redundant cards are reviewed,
+and one canonical row is retained per L4 failure mode or harm mechanism.
+Permanent identifiers \code{RAI4-0001} through \code{RAI4-1726} are allocated
+independently of the risk label. The initial result is 1,726 candidate L4 rows. Automatic
+deduplication is restricted to pairs whose normalized label and mechanism-only
+definition are both exactly equal; semantic-similarity thresholds are not used.
+This merges \code{RAI4-1606} into \code{RAI4-1083}, retains both source references,
+and yields 1,725 exact-deduplicated candidates. The retired ID remains in the
+crosswalk. The registry includes the 182-card Physical AI taxonomy as a
+protected mapping set.
+
+The ratio of L4 cards to AI-risk evidence records is 2.1\%. It is reported only
+as a scale-change diagnostic: one document may support multiple risks, and one
+risk may be supported by multiple documents. It is not a document acceptance
+rate.
+
+\subsection{Stage D: taxonomy-level validation}
+
+The deployed Physical AI site is the authoritative source for its 24 L3 names
+and 182 L4 cards. Its live HTML was byte-identical to the local repository
+snapshot used for this check. We compare the English component of each
+authoritative Physical L3 name with every candidate L4 label after NFKC
+normalization, case folding, ampersand normalization, and removal of
+non-alphanumeric separators. A card is excluded only when these normalized
+labels are exactly equal; semantic similarity and definition similarity are not
+used. Fourteen L4 rows match category names and are retired as taxonomy-level
+leakage, including \code{RAI4-0553} ``Accidental harm'', which maps to Physical
+L3 \code{P3.1}. Their definitions and references remain in the audit crosswalk.
+This yields 1,711 canonical L4 cards without changing any of the protected 182
+Physical L4 mappings.
+
+\subsection{Authoritative Physical L4 content synchronization}
+
+Release v2.4 synchronizes the content of all 182 protected Physical cards from
+the local repository underlying the deployed Physical AI Risk Taxonomy site.
+The immutable RAI4 crosswalk and L3 paths are retained, while the bilingual
+label and definition, severity, probability, 3H1R attributes, evidence
+justifications, and 360 reference rows are replaced by the current Physical
+source values. Of these reference rows, 359 contain a justification and one
+source row retains an empty justification without imputation. Bilingual
+terminal parenthetical text is split into Korean and
+English fields to preserve the global card schema. Impact is recalculated as
+$I=s\,p$ from the synchronized severity $s$ and probability $p$. Percentile is
+not displayed for any card because the cards do not constitute a common
+measurement population suitable for relative ranking. Existing percentile
+fields remain provenance data only.
+
+\subsection{Complete English-Korean localization}
+
+Release v2.5 requires bilingual display at every taxonomy level. The supplied
+L0-L3 terminology and Korean definitions are used as the controlled glossary.
+The 182 Physical L4 cards retain their authoritative bilingual source text. For
+the remaining 1,529 cards, the localization pipeline removes the repeated
+provenance boilerplate from each English definition, selects the first sentence
+that states the core failure mechanism, generates a concise Korean definition,
+and normalizes risk-domain terminology. Context-sensitive corrections include
+\textit{poisoning} as ``data or model contamination'' rather than substance
+addiction, \textit{washing} as false compliance presentation, and
+\textit{rubber stamping} as nominal approval. Every generated row retains the
+English source-sentence hash, method, and \code{human\_review\_status=pending}.
+Thus all 1,711 cards contain non-empty English and Korean labels and definitions,
+while automated Korean drafts remain explicitly reviewable rather than being
+represented as human-approved ground truth.
+
+\subsection{Canonical L2 consolidation}
+
+Release v2.6 normalizes L2 to three canonical categories:
+\textit{Interaction Safety}, \textit{System Safety}, and \textit{Societal
+Safety}. The former General labels \textit{Interaction} and \textit{System},
+and the former Agentic label \textit{System}, are renamed accordingly. Six
+L1-specific path nodes remain as implementation edges so that the strict
+L0-L1-L2-L3 tree and all L3 parent paths are preserved; each
+edge references one of the three canonical L2 identifiers. Thus the reported
+L2 category count is three, while no L3 path or L4 assignment changes. Release
+v2.15.0 adds a fourth canonical display category, HOLD, with General and
+Agentic path nodes. This fourth category is a review-state overlay rather than
+a semantic safety dimension.
+
+\subsection{Stable L4 identifiers and L1 display semantics}
+
+The public explorer keeps the stable \code{RAI4-\#\#\#\#} identifier independent
+of taxonomy placement. L1 membership is communicated through an explicit text
+badge, a consistent icon, and a visual color: a brain and blue for
+General-purpose AI, a compass and green for Agentic AI, and a robot and red for
+Physical AI. The icon-color pair is repeated in the global navigation,
+filters, hierarchy panel, and L4 cards. The color is derived from the card's current L1
+path at render time rather than encoded into the permanent identifier. This
+allows later human-approved remapping without identifier churn and avoids using
+color or icon as the sole carrier of categorical information.
+
+\subsection{Stage E: L3 assignment policy and later audits}
+
+The operational policy assigns all 1,711 canonical L4 cards to an L3 node
+(100.0\%). The original three-stage classifier used 50 L3 nodes and retained
+76 decision-review markers after level validation. Release v2.7.0 then removed
+1,129 instances of circular taxonomy prose from non-Physical definitions,
+performed evidence-constrained mapping review, and marked 692 cards where the
+available definition and evidence did not justify an approved taxonomic fit.
+The v2.8.0 Agentic expansion evaluates every non-Physical card while locking
+all 182 Physical mappings. It moves 31 cards into four new L3 nodes and clears
+seven review markers, leaving 685 cards (40.0\%) marked \code{HOLD}. Releases
+v2.9.0 to v2.12.0 then audit Anthropomorphism, Goal Misalignment, and Copyrights,
+leaving 689 cards (40.3\%) marked \code{HOLD}. Release v2.13.0 differentiates
+three overlapping Memory cards and places all three under source-entailment or
+near-duplicate scope review, yielding 692 held cards (40.4\%). Release v2.14.0
+then retires the four sparse Agentic families and force-migrates all 39 affected
+cards; 28 newly enter review, yielding 720 held cards (42.1\%). The marker
+is internal review metadata on an already assigned card, not a separate L1,
+L2, or L3 category.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  natureaxis,
+  xbar,
+  xmode=log,
+  log origin=infty,
+  log basis x=10,
+  xmin=1000,
+  xmax=20000000,
+  width=0.62\linewidth,
+  height=7.0cm,
+  xlabel={Count (log scale)},
+  symbolic y coords={L3-assigned L4,Level-validated L4,Exact-deduplicated candidates,AI-risk evidence,AI evidence},
+  ytick={L3-assigned L4,Level-validated L4,Exact-deduplicated candidates,AI-risk evidence,AI evidence},
+  yticklabels={L3-assigned L4,Level-validated L4,Exact-deduplicated candidates,AI-risk evidence,AI evidence},
+  yticklabel style={font=\sffamily\scriptsize,text width=2.25cm,align=right},
+  bar width=12pt,
+  point meta=explicit symbolic,
+  nodes near coords={\pgfplotspointmeta},
+  nodes near coords style={font=\sffamily\footnotesize, anchor=west},
+]
+\addplot[fill=natureblue, draw=natureblue] coordinates {
+  (1711,L3-assigned L4) [1,711]
+  (1711,Level-validated L4) [1,711]
+  (1725,Exact-deduplicated candidates) [1,725]
+  (82971,AI-risk evidence) [82,971]
+  (3906767,AI evidence) [3,906,767]
+};
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{Top-down evidence and taxonomy funnel.} Counts move from
+document/patent records to canonical risk concepts at the transition from
+AI-risk evidence to L4. The logarithmic axis preserves visibility across four
+orders of magnitude.}
+\label{fig:funnel}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Top-down stages, counts, and inclusion filters.}
+\label{tab:funnel}
+\small
+\begin{tabularx}{\linewidth}{L{0.18\linewidth}r L{0.20\linewidth}Y}
+\toprule
+Stage & Count & Unit & Principal filter \\
+\midrule
+AI evidence & 3,906,767 & Document or patent record & AI source collections; valid title; standardized schema; within-type/category deduplication. \\
+AI-risk evidence & 82,971 & Document or patent record & Curated/integrated risk sources; record-type inclusion; valid title; within-type/category deduplication. \\
+Exact-deduplicated candidates & 1,725 & Risk card & Exact normalized label and core-definition match only; one retired ID mapped to its canonical card. \\
+Canonical L4 & 1,711 & Risk card & Exact normalized-label exclusion against 24 authoritative Physical L3 names; 14 level leaks retired; all 182 Physical L4 cards preserved. \\
+L3 assigned & 1,711 & Risk card & Protected Physical mapping or staged non-Physical placement; 689 decision-required cards remain assigned and marked \code{HOLD}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Mathematical classification procedure}
+
+\subsection{Protected Physical AI mapping}
+
+The 182 L4-to-L3 mappings inherited from the Physical AI taxonomy are treated
+as the locked gold set. Later stages cannot change these paths. Before the
+taxonomy-level exclusion, the remaining 1,543 candidates enter the
+hierarchy-blind classification procedure. Legacy global
+L0-L3 labels, source families, and source-ID prefixes remain reference metadata
+and are excluded from prediction features.
+
+\subsection{Stage 1: strict open-set gate}
+
+The input for each non-Physical card is the L4 label, a mechanism-only
+definition with hierarchy restatements removed, and the evidence title. Let
+$s_{sem}$ be the top-1 semantic score, $s_{comp}$ the top-1 composite score,
+$m_{sem}$ and $m_{comp}$ their respective top-1 margins, and $v_{anchor}$ the
+number of anchor views selecting the same L3. A candidate is retained only when
+all seven conditions hold:
+
+\begin{enumerate}[leftmargin=2em]
+  \item exactly one L3 is rule-eligible;
+  \item the rule winner, semantic top-1, and composite top-1 are identical;
+  \item $s_{sem}\geq0.55$ and $s_{comp}\geq0.54$;
+  \item $m_{sem}\geq0.035$ and $m_{comp}\geq0.035$;
+  \item $v_{anchor}\geq2$ across three anchor views;
+  \item no gap sentinel, multi-mechanism flag, or Physical-boundary flag is present; and
+  \item two independent expert agents approve the same exact L3.
+\end{enumerate}
+
+This gate yields 37 new expert-consensus proposals. Together with the 182
+Physical locks, Stage 1 assigns 219 cards and withholds 1,507.
+
+\subsection{Stage 2: suitability-ranked relaxation}
+
+Stage 2 preserves all 219 protected assignments and computes
+\begin{equation}
+S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap},
+\end{equation}
+where
+\begin{align}
+q_{sem}&=\operatorname{clip}\left(\frac{s_{sem}-0.45}{0.25},0,1\right),\\
+q_{sm}&=\operatorname{clip}\left(\frac{m_{sem}}{0.05},0,1\right),\\
+q_{cm}&=\operatorname{clip}\left(\frac{m_{comp}}{0.05},0,1\right),\\
+q_{vote}&=v_{anchor}/3,\\
+q_{rule}&=\mathbf{1}[\text{at least one eligible L3}],\\
+p_{gap}&=0.05\,\mathbf{1}[\text{gap sentinel present}].
+\end{align}
+
+$S_2$ is a deterministic ranking score rather than a calibrated probability.
+Stage 2 first preserves 55 hard holds. It then orders the remaining holds by
+ascending $S_2$, with permanent RAI4 ID as the tie breaker, and reserves the
+lowest 118. Thus $55+118=173$ cards remain unresolved and 1,553 cards are
+assigned (90.0\%).
+
+\subsection{Stage 3: forced-path test and final policy}
+
+Stage 3 preserves the 1,553 Stage 2 paths and assigns only the 173 unresolved
+cards to the hierarchy-blind top-1 L3 already stored in the score artifact.
+This produces 1,726 operational paths but does not validate taxonomy fit. Each
+new path retains its original hold reason, score, review priority, and
+\code{human\_approved=false} marker.
+
+The final policy marks five difficult-case families for decision review:
+23 Physical-scope reviews, 17 expert rejections, 7 expert disagreements,
+6 multi-mechanism cases, and 2 low-absolute-fit cases. Their forced L3 path
+remains populated and \code{decision\_required=true}. The
+remaining 118 quota holds also retain their forced paths and review metadata.
+
+\subsection{Independent expert card review}
+
+Two reviewers independently inspected all 1,725 cards for agreement among the
+L4 label, mechanism definition, evidence, and assigned L3. Reviewer A proposed
+30 amendments and Reviewer B proposed 14. Automatic amendment required both
+reviewers to propose the same label and L3 at high confidence. One card met this
+rule: \code{RAI4-0888} changed from ``Privacy concerns'' to
+``Anthropomorphic trust-induced privacy disclosure'', while retaining
+\code{RAI3-G-INT-10}. Its original label remains in provenance metadata.
+Forty-two cards had a proposal from only one reviewer or incompatible proposals;
+their labels and paths were not changed. Thirteen were already marked \code{HOLD}
+and 29 newly received the marker. The consensus amendment cleared the prior hold
+on \code{RAI4-0888}, giving $55-1+29=83$ final \code{HOLD} cards. No protected
+Physical AI card was changed.
+
+The later taxonomy-level validation supersedes the proposed adjudication of
+\code{RAI4-0553}: ``Accidental harm'' is itself the authoritative Physical L3
+category \code{P3.1}, not an L4 failure mode. It is therefore excluded rather
+than renamed or remapped. Thirteen additional exact Physical-L3 label leaks are
+handled identically. Six of the excluded rows previously carried \code{HOLD},
+reducing the displayed count from 82 to 76. The protected Physical set remains
+exactly 182 cards.
+
+\subsection{v2.7 definition audit and v2.8 Agentic expansion}
+
+The v2.7 audit treats L3 load as a triage signal rather than evidence of
+semantic fit. It removes 1,129 imported hierarchy-name scaffolds from L4
+definitions, applies nine evidence-constrained remaps, and marks 692 cards for
+decision review. Release v2.8.0 then adds four Agentic-specific L3 families:
+\textit{Goal \& Planning}, \textit{Tool Calling}, \textit{Memory}, and
+\textit{Oversight \& Control}. Each node has an English-Korean definition and
+explicit references. A non-Physical card moves only when its mechanism is
+intrinsically Agentic, the new family is more specific than every existing
+General or Agentic alternative, and the necessity gate rejects adequate
+coverage by the prior taxonomy. Formally, for card $i$ and new family $k$,
+\begin{equation}
+ k_i^*=\arg\max_{k\in K_{new}} s(i,k),\qquad
+ \Delta_i=s(i,k_i^*)-\max_{j\in K_{old}}s(i,j),
+\end{equation}
+and movement additionally requires mechanism-specific rules, sufficient
+absolute fit, positive separation, and no Physical lock. The deterministic
+iteration changes 31 paths on pass 1 and zero on pass 2. Counts in the new
+families are 11, 11, 3, and 6, respectively. All other placements are
+preserved, and the v2.8.0 review queue contains 685 cards.
+
+\subsection{Incremental constrained-EM audits, v2.9.0 to v2.12.0}
+
+Later audits do not apply unconstrained nearest-centroid output. Each audit
+allows only the selected source L3 cards to move, treats all other cards as
+fixed anchors, excludes every Physical destination, and recomputes candidate
+centroids until no assignment changes. The composite score is
+\begin{equation}
+S(i,k)=0.60\,c(i,k)+0.30\,d(i,k)+0.10\,w(i,k),
+\end{equation}
+where $c$ is current-centroid cosine similarity, $d$ is L3-definition cosine
+similarity, and $w$ is TF-IDF keyword cosine similarity. A destination must
+improve on the source by at least 0.020 and have keyword cosine of at least
+0.015. Agentic destinations additionally require an explicit autonomous
+execution mechanism, and destination-specific definition guards reject
+matches caused by generic shared terms.
+
+The cumulative audits move three Anthropomorphism cards in v2.9.0, five Goal
+Misalignment cards in v2.10.0, four Copyrights cards in v2.11.0, and eight
+additional Anthropomorphism cards in v2.12.0. Every such move remains
+\code{HOLD} until human adjudication. The final domain counts are 1,165 General,
+364 Agentic, and 182 Physical cards; the review queue contains 689 cards.
+
+\subsection{Memory-card scope differentiation, v2.13.0}
+
+A near-duplicate audit found that the three cards assigned to Agentic Memory
+had pairwise BGE-M3 cosines of 0.822 to 0.874, placing every pair above the
+99.98th percentile of all released card pairs. In particular,
+\code{RAI4-0011} and \code{RAI4-1670} expressed a broad-narrow subsumption
+relationship rather than clearly distinct atomic risks. Release v2.13.0
+therefore preserves all three immutable IDs, references, impact metrics, and
+L3 paths, while revising their intensions as follows.
+
+\begin{table}[H]
+\centering
+\caption{Source-scoped differentiation of the three Agentic Memory cards.}
+\small
+\begin{tabularx}{\textwidth}{p{1.9cm} p{3.7cm} X}
+\toprule
+L4 ID & Revised label & Distinguishing mechanism \\
+\midrule
+RAI4-0011 & Agent context poisoning & Adversarial corruption of retained or
+retrievable summaries, embeddings, RAG entries, or shared contextual state,
+without requiring alteration of a dedicated long-term store \\
+RAI4-0484 & Unsafe memory accumulation & False, private, stale, or malicious
+records accumulate because validation, provenance, retention, or deletion is
+inadequate; a deliberate poisoning attack is not required \\
+RAI4-1670 & Persistent agent-memory poisoning & Adversarial insertion or
+modification of records in dedicated long-term, cross-session memory, with
+persistent effects on later retrieval, planning, and action \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The revisions are editorial hypotheses subject to source-entailment review,
+not a declaration that the original source rows were independent risks. All
+three cards are therefore marked \code{HOLD}. If reviewers cannot support the
+stated boundaries directly from the evidence, the conservative alternative is
+canonical consolidation with aliases and preserved source provenance rather
+than further lexical renaming.
+
+\subsection{Sparse Agentic-family retirement and forced migration, v2.14.0}
+
+The four experimental Agentic families introduced in v2.8.0 contained only 39
+cards in v2.13.0: Goal \& Planning (16), Tool Calling (11), Memory (3), and
+Oversight \& Control (9). Release v2.14.0 removes these nodes from the active
+hierarchy without erasing their history. Their identifiers, bilingual labels,
+definitions, references, source counts, and introduction metadata are archived
+in a machine-readable retirement record; the identifiers are explicitly
+prohibited from reuse. All L4 identifiers, definitions, references, risk
+metrics, and provenance are preserved.
+
+Every affected card is force-migrated to the most defensible active
+non-Physical family under a mechanism-first review. Candidate destinations are
+restricted to the 26 active non-Physical L3 families. BGE-M3 seed similarity is
+used as a diagnostic ranking, while explicit mechanism rules distinguish goal
+failure, unsafe execution authority, network propagation, privacy, excessive
+capability use, misinformation, overconfidence, and contestability. No
+Physical path is eligible. Because this operation is a forced operational
+consolidation rather than human adjudication, all 39 migrations carry
+\code{HOLD}; 28 were newly marked and 11 retained an existing marker.
+
+\begin{table}[H]
+\centering
+\caption{Destinations of the 39 v2.14.0 forced migrations.}
+\small
+\begin{tabular}{lr}
+\toprule
+Active destination L3 & Cards \\
+\midrule
+Goal Misalignment & 15 \\
+Excessive Authority & 9 \\
+Misinformation/Disinformation & 4 \\
+Non-Contestability & 4 \\
+Overconfidence & 3 \\
+Network Effects & 2 \\
+Privacy & 1 \\
+Over-Extension & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The retired families are not declared conceptually invalid. Their sparse
+granularity is retained as an auditable design experiment that can be restored
+only through a later, human-approved taxonomy decision. Release v2.14.0 has 50
+active L3 nodes, while the four retired nodes remain available solely as
+archived lineage metadata.
+
+\subsection{Domain-specific HOLD review paths, v2.15.0}
+
+Release v2.15.0 makes review status navigable in the hierarchy by introducing
+one HOLD L2 path under General and one under Agentic AI. Because L4 cards must
+terminate at L3, each path contains one child node, \textit{Taxonomy Decision
+Hold}. The operation moves 626 General and 94 Agentic cards, for 720 cards in
+total. Physical AI contains no HOLD cards and its 182 locked mappings remain
+byte-equivalent apart from the release identifier.
+
+This review path is orthogonal to semantic classification. For every moved
+card, the former L2 and L3 identifiers, bilingual labels, definitions,
+references, metrics, and migration metadata are preserved in
+\code{hold\_semantic\_path}. Accordingly, the public hierarchy has four
+canonical L2 display categories and 52 navigable L3 nodes: 50 semantic risk
+families plus two review-path nodes. The HOLD nodes must not be counted as new
+risk concepts or used as semantic prototypes in reliability analysis.
+
+\section{HOLD decision policy}
+
+\subsection{Meaning and state transition}
+
+\code{HOLD} is the public rendering of \code{decision\_required=true}. In
+v2.15.0 it is a review-path L2 under General and Agentic AI, not a semantic risk
+family. A held card has one navigable HOLD path and retains its prior semantic
+L3 candidate as explicit lineage metadata; neither path is human-approved
+ground truth. The state is set by a hard qualitative
+trigger or by a pending algorithmic-review trigger. It is cleared only by a
+recorded human decision that reconciles the label, mechanism-only definition,
+evidence, and destination definition; absence of a competing score alone is
+not sufficient.
+
+\subsection{Quantitative criteria}
+
+Quantitative measurements control automatic eligibility and review priority,
+not semantic truth. The following rules are applied or reported:
+\begin{enumerate}[leftmargin=2em]
+  \item Stage 1 automatic acceptance requires $s_{sem}\geq0.55$,
+  $s_{comp}\geq0.54$, both margins at least 0.035, at least two of three anchor
+  votes, exact agreement of the rule, semantic, and composite winners, and two
+  matching expert-agent approvals. Failure prevents automatic clearance.
+  \item Stage 2 uses the deterministic suitability score $S_2$ defined above;
+  the lowest-ranked reserve and every hard hold retain decision metadata after
+  forced operational assignment.
+  \item A constrained-EM move requires composite improvement of at least 0.020
+  over the source and keyword cosine of at least 0.015. Passing these thresholds
+  permits a proposal but never clears \code{HOLD} automatically.
+  \item For v2.12.0 audit prioritization, a top-two cosine margin below 0.020 is
+  high priority, a margin from 0.020 to below 0.050 is medium priority, and a
+  margin of at least 0.050 is lower priority. Released-L3 rank outside the top
+  three or per-card agreement below 80.0\% under $\sigma=0.05$ perturbation is
+  an additional instability signal.
+  \item Strong geometric support is reported only when top-1 containment is at
+  least 90.0\%, top-2 containment at least 95.0\%, the matched-size permutation
+  test has $p<0.001$, and perturbation agreement remains at least 97.0\% through
+  $\sigma=0.05$. These are validation thresholds, not substitutes for the
+  qualitative tests below.
+\end{enumerate}
+
+\subsection{Qualitative criteria}
+
+A card remains or becomes \code{HOLD} when any of the following substantive
+conditions applies:
+\begin{itemize}[leftmargin=2em]
+  \item the label and mechanism definition describe different risks, or the
+  cited source does not directly support the stated failure mode;
+  \item the card is multi-mechanism, the destination L3 is overloaded, or two
+  plausible L3 paths cannot be separated without a policy judgment;
+  \item the risk exposes a taxonomy gap, so the present L3 is merely the closest
+  operational path rather than a definitionally adequate family;
+  \item an Agentic destination lacks an intrinsically Agentic execution loop,
+  tool action, persistent memory, autonomous planning, or oversight mechanism;
+  \item a non-authoritative card appears Physical but is outside the locked
+  182-card Physical set, or a proposed change would disturb a locked Physical
+  path;
+  \item independent reviewers reject the proposal, disagree on the destination,
+  or do not reach exact high-confidence consensus; or
+  \item the card was moved by constrained EM and has not yet received explicit
+  human approval.
+\end{itemize}
+
+\subsection{Evidence-enrichment remediation, v2.16.0}
+
+Some HOLD reasons are remediable without changing the taxonomy. Label-definition
+mismatch, inherited taxonomy-family prose, and weak or overly broad source
+support are treated as data-quality defects before they are treated as final
+taxonomy decisions. Release v2.16.0 therefore introduces a remediation audit
+over all 720 HOLD cards. The audit separates cards into six operational
+classes: taxonomy-structure review, mapping revalidation, title-definition
+rewrite candidate, human taxonomy decision, evidence-enrichment candidate, and
+evidence plus taxonomy review.
+
+The first-pass audit finds 268 cards that mainly expose missing or insufficient
+L3 structure, 200 cards requiring mapping revalidation, 147 cards suitable for
+title-definition rewriting, 72 cards requiring human boundary decisions, 21
+cards suitable for evidence enrichment, and 12 cards requiring both evidence
+enrichment and taxonomy review. This confirms that weak evidence is repairable
+for a subset of HOLD, but it is not the dominant HOLD reason.
+
+The first v2.16.0 enrichment pass updates 10 governance and interaction-risk
+cards with 11 directly relevant, online-verified references and rewrites their
+definitions as specific L4 mechanisms. The affected cards include risk
+classification error, capability evaluation non-disclosure, benchmark
+governance failure, red-team governance failure, regulatory arbitrage,
+regulatory capture, international coordination failure, cross-border
+enforcement gap, AI registry incompleteness, and AI ethics washing. No card is
+automatically removed from HOLD in this pass. Evidence enrichment is a
+necessary repair step; HOLD clearance still requires a follow-up mapping
+reliability rerun or explicit human approval.
+
+\subsection{v2.12.0 HOLD baseline and v2.13.0 delta}
+
+The 689 v2.12.0 held cards are grouped by the stored primary reason in
+Table~\ref{tab:holdreasons}. Composite taxonomy-gap labels are counted once in
+the taxonomy-gap row.
+
+\begin{table}[H]
+\centering
+\caption{Primary reasons for the v2.12.0 HOLD queue.}
+\label{tab:holdreasons}
+\small
+\begin{tabular}{lr}
+\toprule
+Primary reason group & Cards \\
+\midrule
+Taxonomy gap & 280 \\
+Anthropomorphism mechanism not established & 173 \\
+Overloaded L3 or low evidence fit & 138 \\
+Expert review without consensus & 28 \\
+Constrained-EM remap pending review & 20 \\
+Physical-boundary conflict & 16 \\
+Expert rejection & 16 \\
+Expert disagreement & 7 \\
+Multiple mechanisms & 5 \\
+Other named exceptions & 4 \\
+Low absolute fit & 2 \\
+\midrule
+Total & 689 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Release v2.13.0 adds three review markers without changing any L3 path. Two
+cards require adjudication of a semantic near-duplicate scope boundary, and
+one additionally requires direct source-entailment review. The current queue
+therefore contains 692 cards (40.4\%).
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  natureaxis,
+  xbar,
+  xmin=0,
+  xmax=125,
+  width=0.74\linewidth,
+  height=6.7cm,
+  xlabel={Cards},
+  symbolic y coords={Low absolute fit,Multiple mechanisms,Expert disagreement,Expert rejection,Physical scope review,Suitability reserve},
+  ytick=data,
+  bar width=10pt,
+  nodes near coords,
+  nodes near coords style={font=\sffamily\footnotesize, anchor=west},
+  enlarge y limits=0.12,
+]
+\addplot[fill=naturevermillion, draw=naturevermillion] coordinates {
+  (2,Low absolute fit) (6,Multiple mechanisms) (7,Expert disagreement)
+  (17,Expert rejection) (23,Physical scope review)
+};
+\addplot[fill=natureblue, draw=natureblue] coordinates {(118,Suitability reserve)};
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{Disposition of the 173 Stage 2 holds.} The 55 difficult cases
+(vermillion) are force-assigned and marked \code{HOLD}; 118 suitability-reserve
+cards (blue) are also force-assigned.}
+\label{fig:holds}
+\end{figure}
+
+\section{Results}
+
+\subsection{Evidence composition}
+
+Papers account for 44.8\% of the integrated AI evidence space, policy reports
+for 3.2\%, and patents for 52.0\%. Within the AI-risk evidence view, the
+corresponding shares are 60.7\%, 1.1\%, and 38.2\%. These shares use one decimal
+because their integer component is at least one.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  natureaxis,
+  ybar,
+  ymin=0,
+  ymax=70,
+  width=0.80\linewidth,
+  height=6.3cm,
+  ylabel={Share (\%)},
+  symbolic x coords={Papers,Policy reports,Patents},
+  xtick=data,
+  bar width=12pt,
+  legend columns=2,
+  legend pos=north west,
+]
+\addplot[fill=naturegrey, draw=naturegrey] coordinates {(Papers,44.8) (Policy reports,3.2) (Patents,52.0)};
+\addplot[fill=natureblue, draw=natureblue] coordinates {(Papers,60.7) (Policy reports,1.1) (Patents,38.2)};
+\legend{AI evidence,AI-risk evidence}
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{Source-family composition.} Percentages compare document-type
+composition within the integrated AI evidence space and the AI-risk evidence
+view.}
+\label{fig:composition}
+\end{figure}
+
+\subsection{Final hierarchy coverage}
+
+The final policy assigns all 1,711 canonical cards (100.0\%); 720 assigned
+cards (42.1\%) carry the \code{HOLD} marker. Of all cards, 1,193 are General,
+336 are Agentic AI, and 182 are Physical AI. Their shares are 69.7\%, 19.6\%,
+and 10.6\%, respectively. All 50 semantic L3 nodes contain at least one
+non-HOLD card. The two HOLD review-path L3 nodes contain 626 General and 94
+Agentic cards, respectively.
+Anthropomorphism is the largest L3 with 234 cards (13.7\%); the five largest
+L3 nodes jointly contain 41.6\%.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  natureaxis,
+  xbar,
+  xmin=0,
+  xmax=260,
+  width=0.70\linewidth,
+  height=9.2cm,
+  xlabel={L4 cards},
+  symbolic y coords={Conflict,Weaponization,Non-Contestability,Destabilising Dynamics,Excessive Authority,Network Effects,Policy Exposure,Privacy,Copyrights,Misinformation/Disinformation,Goal Misalignment,Anthropomorphism},
+  ytick=data,
+  bar width=8pt,
+  nodes near coords,
+  nodes near coords style={font=\sffamily\scriptsize, anchor=west},
+]
+\addplot[fill=natureblue, draw=natureblue] coordinates {
+ (60,Conflict) (62,Weaponization) (62,Non-Contestability)
+ (69,Destabilising Dynamics) (71,Excessive Authority) (79,Network Effects)
+ (88,Policy Exposure) (89,Privacy) (113,Copyrights)
+ (117,Misinformation/Disinformation) (159,Goal Misalignment) (234,Anthropomorphism)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{Largest L3 nodes in the final policy view.} The figure shows
+the eleven largest L3 nodes. Counts include assigned cards marked
+\code{HOLD}.}
+\label{fig:l3}
+\end{figure}
+
+\section{Rounding and reporting policy}
+
+All counts are reported as integers. Percentages below 1 are rounded at the
+third decimal place and displayed to two decimal places; percentages with an
+integer component of at least 1 are rounded and displayed to one decimal place.
+For example, the L4 registry represents 0.04\% of the integrated AI evidence
+count, the AI-risk view represents 2.1\%, final L3 coverage is 100.0\%, and the
+decision-required share is 42.1\%. Exact floating-point ratios remain available in the
+machine-readable statistics artifact.
+
+\section{Assignment reliability validation}
+
+\subsection{Reproducible procedure}
+
+Reliability is re-evaluated on all 1,711 v2.14.0 paths using dense,
+1,024-dimensional BGE-M3 embeddings, seed 20260721, maximum sequence length
+256, batch size 32, and L2 normalization. Card text concatenates bilingual L4
+labels and definitions; L3 seed text concatenates bilingual L3 labels and
+definitions. The procedure reproduces four checks from the prior Technical
+Report. This rerun encodes the current v2.14.0 card text and all 50 active L3
+seed definitions. It therefore incorporates both the v2.13.0 Memory wording
+revisions and the v2.14.0 forced migrations.
+
+First, seed-initialized spherical EM alternates nearest-centroid assignment and
+normalized centroid recomputation:
+\begin{equation}
+z_i^{(t+1)}=\arg\max_k y_i^\top\mu_k^{(t)},\qquad
+\mu_k^{(t+1)}=\frac{\sum_{i:z_i=k}y_i}
+{\left\|\sum_{i:z_i=k}y_i\right\|_2}.
+\end{equation}
+Second, top-$k$ containment is the proportion of cards whose published L3 is
+among the $k$ nearest centroids calculated from the published partition. Third,
+the observed mean within-family cosine is compared with 5,000 label
+permutations that exactly preserve family sizes; the p-value uses the plus-one
+correction. Fourth, isotropic Gaussian embedding perturbation is repeated 200
+times per $\sigma$, and agreement compares perturbed with unperturbed
+nearest-centroid assignments.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.14.0/reliability/reliability_validation.pdf}
+\caption{\textbf{Convergence and stability before HOLD separation (v2.14.0).}
+All 1,711 cards are assessed while the 720 HOLD cards remain embedded in their
+semantic L3 candidates.
+(a) Seed-initialized spherical EM reaches a fixed point after 15 iterations.
+(b) v2.14.0 top-$k$ containment is compared with the v2.12.0 54-family baseline.
+(c) Perturbation stability remains materially similar after consolidation.}
+\label{fig:reliability}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Full-release reliability results before and after L3 consolidation.}
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & v2.12.0 & v2.14.0 \\
+\midrule
+L3 families & 54 & 50 \\
+Cards assessed & 1,711 & 1,711 \\
+Mean within-family cosine & 0.770 & 0.768 \\
+Median assignment margin & 0.012 & 0.012 \\
+Top-1 containment & 64.6\% & 64.7\% \\
+Top-2 containment & 78.7\% & 78.6\% \\
+Top-3 containment & 86.1\% & 86.1\% \\
+Top-5 containment & 93.3\% & 93.1\% \\
+Permutation p-value & 0.0002 & 0.0002 \\
+Agreement at $\sigma=0.01$ & 94.4\% & 94.5\% \\
+Agreement at $\sigma=0.05$ & 72.8\% & 72.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The EM objective increases monotonically from 0.661 to 0.800 and reaches zero
+reassignments after 15 iterations. The converged unsupervised partition,
+however, agrees with only 21.8\% of published paths (adjusted Rand index 0.120;
+normalized mutual information 0.402) and proposes 1,338 changes. Numerical
+convergence is therefore not evidence that the published semantics are correct.
+Published cohesion is 0.7684, above the matched-size null mean of 0.7382 with zero
+exceedances in 5,000 permutations (plus-one $p=0.0002$). The taxonomy contains
+non-random semantic structure, but its global partition is not robust under the
+tested geometry.
+
+\subsection{Retired-family migration diagnostic}
+
+\begin{table}[H]
+\centering
+\caption{Released-centroid support for the v2.14.0 forced migrations.}
+\begin{tabular}{lrrrrr}
+\toprule
+Subset & Cards & Mean cosine & Median margin & Top-1 & Top-3 \\
+\midrule
+Migrated v2.14.0 & 39 & 0.746 & -0.005 & 46.2\% & 71.8\% \\
+All other cards & 1,672 & 0.769 & 0.013 & 65.1\% & 86.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The migrated subset is weaker than the unchanged population: 53.8\% of its
+cards have negative assignment margins, and its top-1 containment is only
+46.2\%. This result supports the conservative policy decision to retain
+\code{HOLD} on every forced migration. It does not invalidate the operational
+destinations; it identifies them as priority items for human adjudication.
+
+\subsection{Decision and limitations}
+
+\textbf{Sparse-family consolidation: OPERATIONAL PASS WITH REVIEW.} Exactly 39
+cards were migrated, no Physical path or L4 identity changed, all four retired
+families were archived, and every migrated card remains \code{HOLD}. The weak
+migrated-subset geometry prohibits interpreting the destinations as approved
+ground truth.
+
+\textbf{Full 50-family taxonomy: NOT YET DEMONSTRATED.} The permutation test
+establishes non-random structure, but global containment, perturbation
+stability, and EM-to-published agreement do not satisfy strong reliability
+criteria. The weakest top-1 families are Destabilising Dynamics (36.2\%), Goal
+Misalignment (38.2\%), Network Effects (41.6\%), Conflict (50.0\%), Copyrights
+(53.1\%), and Inconsistency (57.1\%). Anthropomorphism remains large and
+heterogeneous at 234 cards and 65.0\% top-1 containment.
+
+Four limitations constrain interpretation. First, cross-category overlap in
+the evidence space means that source counts are analytical views, not mutually
+exclusive samples. Second, the transition from 82,971 records to 1,711 L4
+cards changes the unit of analysis. Third, embedding geometry is a diagnostic,
+not a substitute for expert judgment or causal evidence. Fourth, small
+families can obtain perfect containment with limited statistical power.
+
+\subsection{Reliability after excluding the HOLD review paths, v2.15.0}
+
+The second analysis uses the identical encoder, seed, centroid procedure,
+5,000 matched-size permutations, and 200 perturbation repeats, but excludes
+all 720 HOLD cards before constructing family centroids. It assesses 991
+non-HOLD cards across the same 50 semantic L3 families; none of those families
+is empty. The two HOLD review nodes are navigation constructs and are not
+embedded or treated as risk-family prototypes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.15.0/non_hold_reliability/non_hold_reliability.pdf}
+\caption{\textbf{Reliability after HOLD separation (v2.15.0).}
+(a) Top-$k$ containment for the 991 non-HOLD cards is shown against the full
+v2.14.0 population. (b) Perturbation stability is calculated only on non-HOLD
+centroids and cards. (c) The ten weakest non-HOLD families identify the next
+review priorities.}
+\label{fig:nonhold-reliability}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Reliability with HOLD embedded and after HOLD exclusion.}
+\small
+\begin{tabular}{lrr}
+\toprule
+Metric & All v2.14.0 & Non-HOLD v2.15.0 \\
+\midrule
+Cards assessed & 1,711 & 991 \\
+Semantic L3 families & 50 & 50 \\
+Mean within-family cosine & 0.768 & 0.779 \\
+Median assignment margin & 0.012 & 0.024 \\
+Negative-margin share & 35.3\% & 24.2\% \\
+Top-1 containment & 64.7\% & 75.8\% \\
+Top-2 containment & 78.6\% & 87.3\% \\
+Top-3 containment & 86.1\% & 91.5\% \\
+Top-5 containment & 93.1\% & 95.4\% \\
+EM agreement with released paths & 21.8\% & 31.7\% \\
+Agreement at $\sigma=0.01$ & 94.5\% & 95.6\% \\
+Agreement at $\sigma=0.05$ & 72.8\% & 78.4\% \\
+Permutation p-value & 0.0002 & 0.0002 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The conditional non-HOLD subset is more coherent: top-1 containment rises by
+11.1 percentage points, the median margin approximately doubles, and the
+negative-margin share falls by 11.1 points. EM reaches a fixed point after 13
+iterations and agrees with 31.7\% of released paths (adjusted Rand index 0.187;
+normalized mutual information 0.501). Observed cohesion is 0.779 versus a
+matched-size null mean of 0.742, with zero exceedances and plus-one
+$p=0.0002$.
+
+These are not before and after accuracy estimates on the same population. The
+later analysis deliberately removes the review-priority cases that were known
+to have weaker fit, changes every centroid, and reduces the sample from 1,711
+to 991. The improvement therefore validates HOLD as an effective triage
+separation signal; it does not prove that every non-HOLD assignment is correct
+or that moving a card into HOLD improves its semantic classification.
+
+\subsection{HOLD sensitivity analysis}
+
+We next compare the same three diagnostics under two explicit conditions:
+\emph{HOLD included}, where all 1,711 v2.14.0 cards remain embedded in their
+semantic L3 assignments, and \emph{HOLD excluded}, where the 720 review-path
+cards are removed and only the 991 non-HOLD cards are assessed. Both conditions
+use BGE-M3 embeddings, seed 20260721, the same 50 semantic L3 families, 5,000
+matched-size label permutations, and 200 perturbation repeats. The two HOLD
+navigation nodes introduced in v2.15.0 are excluded from centroid construction.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.15.0/hold_sensitivity/hold_sensitivity_analysis.pdf}
+\caption{\textbf{HOLD sensitivity analysis.}
+(a) Seed-initialized spherical EM reaches a fixed point after 15 iterations
+with HOLD included and after 13 iterations with HOLD excluded. (b) Released-L3
+top-$k$ containment improves across $k=1,2,3,5$ after removing HOLD cards.
+(c) Assignment stability under Gaussian embedding perturbation is higher on
+the non-HOLD subset across the tested noise schedule. Shaded bands indicate
+95\% intervals across 200 perturbation repeats.}
+\label{fig:hold-sensitivity}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Sensitivity results with HOLD included and excluded.}
+\small
+\begin{tabular}{lrr}
+\toprule
+Diagnostic & HOLD included & HOLD excluded \\
+\midrule
+Cards assessed & 1,711 & 991 \\
+HOLD cards excluded & 0 & 720 \\
+EM iterations to fixed point & 15 & 13 \\
+Final EM objective & 0.800 & 0.803 \\
+EM agreement with released paths & 21.8\% & 31.7\% \\
+Top-1 containment of released L3 & 64.7\% & 75.8\% \\
+Top-2 containment of released L3 & 78.6\% & 87.3\% \\
+Top-3 containment of released L3 & 86.1\% & 91.5\% \\
+Top-5 containment of released L3 & 93.1\% & 95.4\% \\
+Perturbation agreement, $\sigma=0.01$ & 94.5\% & 95.6\% \\
+Perturbation agreement, $\sigma=0.05$ & 72.8\% & 78.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The sensitivity result is directionally consistent across the three requested
+tests. HOLD exclusion shortens EM convergence by two iterations, raises final
+objective from 0.800 to 0.803, increases released-path agreement by 9.9
+percentage points, raises top-1 containment by 11.1 points, and raises
+$\sigma=0.05$ perturbation agreement by 5.6 points. The correct interpretation
+is not that the same cards became more reliable. Rather, the HOLD policy
+successfully concentrates low-fit and taxonomically ambiguous cases, leaving a
+cleaner subset whose released L3 assignments are more stable under the tested
+embedding geometry.
+
+\subsection{Independent specialist diagnosis of limited reliability}
+
+Two specialist agents independently reviewed the validation artefacts. One
+review concentrated on representation learning, spherical EM, and statistical
+estimands; the other examined ontology design, data provenance, and review
+policy. They were instructed to separate observations from causal inference
+and falsifiable hypotheses. Their agreement is an analytical review, not a
+substitute for the independent human gold-standard study recommended below.
+
+The reviewers first cautioned that the three headline values estimate
+different properties and are not interchangeable accuracy measures. The
+64.6\% top-1 value is an \emph{in-sample centroid-containment rate}: every card
+contributes to the released-family centroid against which it is evaluated.
+This construction is optimistic for small families and tautological for
+singletons, while its micro-average is heavily influenced by large families.
+The 72.9\% agreement at $\sigma=0.05$ measures sensitivity to a specified,
+uncalibrated correlated Gaussian perturbation of cosine scores; it is not an
+estimate of encoder reproducibility or assignment correctness. Finally, the
+20.4\% EM-to-release agreement compares an unconstrained spherical clustering
+objective with a normative expert taxonomy. It does not imply that 79.6\% of
+released paths are erroneous.
+
+\begin{table}[H]
+\centering
+\caption{Two-reviewer diagnosis of the reliability estimands.}
+\small
+\begin{tabularx}{\textwidth}{p{2.5cm} X X}
+\toprule
+Diagnostic & Why the value can be limited & What the value does not establish \\
+\midrule
+Top-1 containment, 64.6\% & Overlapping L3 intensions, heterogeneous broad
+families, single-centroid misspecification, and in-sample family-size effects
+& Independent accuracy or a 35.4\% error rate \\
+$\sigma=0.05$ agreement, 72.9\% & The perturbation scale is about four times
+the median margin of 0.0123 and is not calibrated to observed encoder or text
+variation & Real-world reproducibility, semantic validity, or correctness
+probability \\
+EM-to-release agreement, 20.4\% & EM has no hierarchy, protected-path,
+family-size, causal-mechanism, or multi-label constraints and may drift from
+its seed meaning & That 79.6\% of published paths should be moved \\
+Permutation $p=0.0002$ & Large $N$ yields a narrow null around a high cosine
+baseline; observed cohesion exceeds the null by 0.0314 & Correctness,
+completeness, or uniqueness of the 54 families \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The principal explanation is ontological rather than purely computational.
+The L3 layer mixes harm content, failure mechanisms, affected rights,
+governance processes, and interaction dynamics in one exclusive partition.
+Many L4 risks are therefore multi-axial: anthropomorphic trust can co-occur
+with privacy disclosure, manipulation, and non-contestability. Forced
+primary-only placement converts legitimate semantic multiplicity into narrow
+or negative margins. Boundary overlap is especially plausible between Goal
+Misalignment and Goal \& Planning; Excessive Authority, Tool Calling, and
+Oversight \& Control; and Network Effects, Destabilising Dynamics, Conflict,
+and Collusion. A single prototype per family cannot represent such multimodal
+intensions reliably.
+
+The observed family distribution supports this diagnosis. Family sizes range
+from 1 to 234, with a median of 15.5; 19 families contain at most five cards,
+whereas 12 contain at least 50. Family size and top-1 containment are negatively
+correlated ($r=-0.70$), as are family size and median margin ($r=-0.52$).
+Anthropomorphism contains 234 cards, of which 229 remain \code{HOLD}; 173 lack
+an established anthropomorphic mechanism. Goal Misalignment contains 144
+cards and has 38.2\% top-1 containment with a negative median margin. Taxonomy
+gaps, an unestablished Anthropomorphism mechanism, and overloaded or low-fit
+destinations account for 591 of 689 HOLD cards (85.8\%). These concentrations
+are consistent with large residual families absorbing risks for which a
+stable destination is absent or insufficiently defined.
+
+Definition provenance is a second structural limitation. Among 1,529
+non-Physical cards, 1,510 use the
+\nolinkurl{source_mechanism_only_v2.7} definition
+form and 1,528 cite exactly one reference. Earlier remediation removed 1,129
+instances of explicit upper-taxonomy scaffold prose, but truncating that prose
+does not by itself demonstrate that the retained atomic definition is entailed
+by the cited source. The embedding audit may consequently measure consistency
+of editorial abstractions as well as evidence-grounded risk identity. The
+stronger Physical result must also be interpreted separately: its 182 paths
+are authoritative locks with synchronized definitions, and 16 of its 24
+families contain at most five cards. Its 89.0\% top-1 result supports internal
+alignment but is not an unbiased comparison with non-Physical assignments.
+
+The two reviews converge on four testable hypotheses. First, independently
+coded primary-plus-secondary mechanisms should be more common among low-margin
+cards if single-label pressure is causal. Second, leave-one-out or held-out
+centroids should reduce the apparent advantage of singleton and small
+families. Third, source-entailment rewriting should improve expert agreement
+and held-out margins if definition provenance is causal. Fourth, paraphrase,
+translation, truncation, and encoder-version experiments should yield an
+empirical score-drift distribution against which perturbation scales can be
+calibrated. Until those tests are completed, the current metrics support
+targeted review rather than wholesale algorithmic remapping.
+
+\begin{table}[H]
+\centering
+\caption{Reviewers' agreed validation priorities.}
+\small
+\begin{tabularx}{\textwidth}{p{1.0cm} X X}
+\toprule
+Priority & Intervention & Acceptance evidence \\
+\midrule
+P0 & Construct a stratified human gold set by L1, L3 size, HOLD, and boundary
+status; allow one primary and optional secondary L3 & At least two domain
+experts per card, adjudication, agreement coefficient with uncertainty, and
+micro/macro accuracy with confidence intervals \\
+P0 & Rewrite L3 intensions as inclusion rules, exclusions, and contrastive
+examples; audit every sampled label-definition-reference triple for direct
+source entailment & At least 80\% blinded agreement on boundary contrast sets;
+unsupported cards rewritten, split, or retired \\
+P1 & Review the 591 HOLD cards in the three dominant reason groups and resolve
+Anthropomorphism residuals without automatic cluster splitting & Documented
+migration matrix and repeated before/after reliability analysis \\
+P1 & Enforce Agentic-necessity predicates and evaluate primary plus secondary
+mechanisms & Generic model risks remain General; boundary-review agreement at
+least 0.70 \\
+P2 & Replace resubstitution scoring with leave-one-out or held-out prototypes;
+report macro and micro estimates, confidence intervals, and empirical text
+perturbations & No self-inclusion; families with $n<5$ marked insufficient;
+noise scale calibrated from observed variation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{HOLD separation and protected Physical subset}
+
+The current HOLD queue is measurably weaker than the non-HOLD subset under the
+same released-centroid geometry. This supports the review marker as a triage
+instrument, although it does not prove that every individual marker is correct.
+
+\begin{table}[H]
+\centering
+\caption{v2.14.0 reliability by policy subset.}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Subset & Cards & Mean cosine & Median margin & Top-1 & Top-3 \\
+\midrule
+Physical locked & 182 & 0.817 & 0.038 & 89.0\% & 97.3\% \\
+Non-Physical & 1,529 & 0.763 & 0.009 & 61.8\% & 84.8\% \\
+HOLD & 720 & 0.759 & 0.004 & 56.1\% & 82.6\% \\
+Non-HOLD & 991 & 0.775 & 0.018 & 70.9\% & 88.6\% \\
+Forced migrations & 39 & 0.746 & -0.005 & 46.2\% & 71.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The HOLD top-1 rate is 14.8 percentage points below the non-HOLD rate, and its
+median margin is less than one quarter of the non-HOLD margin. Negative margins
+occur for 43.9\% of HOLD cards versus 29.1\% of non-HOLD cards. The protected
+Physical subset is substantially stronger, with 89.0\% top-1 and 96.7\% top-2
+containment, but remains locked because authority comes from the Physical AI
+taxonomy rather than from this geometric diagnostic.
+
+Relative to v2.12.0, v2.14.0 raises global top-1 containment by 0.1 percentage
+points, while cohesion decreases by 0.0018, top-2 decreases by 0.1 points, and
+$\sigma=0.05$ agreement is unchanged at the displayed precision. These
+differences are negligible at global scale. The correct conclusion is therefore
+\textbf{SHARE WITH CAVEATS}: the taxonomy has statistically non-random semantic
+structure and a useful HOLD separation, but strong global assignment
+reliability is not demonstrated.
+
+
+\subsection{v2.17.0-rc: definition revision pass and guarded constrained-EM audit}
+
+Release candidate v2.17.0-rc applies an expert editorial pass to the
+non-Physical registry while keeping all 182 Physical cards byte-identical.
+The pass rewrites 147 title--definition rewrite candidates identified by the
+v2.16.0 remediation audit into mechanism-only bilingual definitions, renames
+16 non-descriptive labels with the original label preserved in provenance,
+applies 187 mechanical hygiene fixes (hyphenation artifacts, missing final
+punctuation, duplicated tokens) to the remaining non-Physical definitions,
+and attaches five externally verified governance references (NIST AI 100-1;
+OWASP Top 10 for LLM Applications 2025) to directly matching cards. Every
+textual change carries \code{human\_review\_status=pending} and retains the
+original text in a \code{definition\_revision} record; no HOLD marker is
+cleared by this pass.
+
+The revised card text is then re-audited with the constrained-EM procedure of
+Section~3.7, including the destination-specific definition guards: a
+candidate destination is rejected unless the card text contains a
+destination-anchoring term, which prevents matches driven by generic shared
+tokens such as \emph{harm}. An unguarded control run produced 47 proposals,
+of which several were exactly the generic-term artifacts the guards exist to
+reject (for example, environmental-harm cards attracted to Self-harm); the
+guarded run reduces this to 22 defensible proposals that converge in four
+iterations. Examples include \emph{Misinformation generation} (Network
+Effects to Misinformation/Disinformation, improvement 0.036) and
+\emph{Personal information in prompt} (Policy Exposure to Privacy,
+improvement 0.024). All 22 movers carry \code{decision\_required=true}; 14
+newly enter the review queue and 8 were already held, so the queue grows from
+720 to 734. No Physical path changed.
+
+\subsection{Encoder-transfer reliability of the v2.17.0-rc audit}
+
+The sandbox environment used for this release could not obtain the canonical
+BGE-M3 weights, so the audit and its reliability analysis were computed with
+the independent multilingual encoder \code{intfloat/multilingual-e5-small}
+(384 dimensions, seed 20260721, identical procedure and thresholds). This
+substitution doubles as the encoder-version experiment requested in
+Section~7.6: results below characterize the taxonomy geometry under a second
+encoder and are \emph{not} directly comparable to the BGE-M3 values reported
+elsewhere in this document. A rerun script
+(\code{scripts/run\_v2\_17\_audit\_pipeline.py}) reproduces the full pipeline
+with BGE-M3 outside the sandbox.
+
+\begin{table}[ht]
+\centering
+\caption{Encoder-transfer reliability (multilingual-e5-small) before and
+after the guarded v2.17.0-rc audit.}
+\label{tab:v217-encoder-transfer}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & All, pre & All, post & Non-HOLD, pre & Non-HOLD, post \\
+\midrule
+Cards assessed & 1,711 & 1,711 & 991 & 991 \\
+Top-1 containment & 60.2\% & 60.3\% & 72.0\% & 72.9\% \\
+Top-3 containment & 83.1\% & 83.6\% & 89.5\% & 89.8\% \\
+Top-5 containment & 91.4\% & 91.5\% & 93.7\% & 93.7\% \\
+Median assignment margin & 0.0022 & 0.0024 & 0.0060 & 0.0061 \\
+Negative-margin share & 39.8\% & 38.6\% & 28.0\% & 27.0\% \\
+Permutation $p$ & 0.0002 & 0.0002 & 0.0002 & 0.0002 \\
+Agreement at $\sigma=0.01$ & 89.7\% & 89.9\% & 91.6\% & 92.0\% \\
+Agreement at $\sigma=0.05$ & 52.2\% & 52.5\% & 59.0\% & 59.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three observations carry over from the BGE-M3 analyses. First, the
+non-random-structure result replicates: within-family cohesion exceeds all
+5,000 matched-size permutations under the second encoder in every condition.
+Second, the HOLD separation replicates: the non-HOLD subset is uniformly
+stronger (top-1 72.0--72.9\% versus 60.2--60.3\%), confirming that the review
+marker concentrates weak-fit cards independently of the encoder. Third,
+global reliability remains undemonstrated: absolute containment and
+$\sigma=0.05$ stability are lower under e5-small than under BGE-M3, which is
+consistent with the reviewer diagnosis that the published partition is
+encoder-sensitive and that single-prototype families cannot represent
+multi-axial L3 intensions. The guarded audit changes reliability only
+marginally (at most $+0.9$ points top-1 on the non-HOLD subset), as expected
+for 22 moves in a 1,711-card population; its value is corrective placement of
+individually misfiled cards, not a global geometry improvement. The
+v2.17.0-rc conclusion therefore remains \textbf{SHARE WITH CAVEATS}, and the
+review priorities of Section~8 are unchanged, with the 22 guarded-audit
+movers added to the front of the queue after the 39 forced migrations.
+
+\section{Review priorities}
+
+Review should begin with the 39 forced migrations, then the weakest global
+families and low-margin cards within Anthropomorphism.
+The 720 assigned cards marked \code{HOLD} should be adjudicated using agreement
+among the risk label, mechanism-only definition, cited evidence, and candidate
+L3 definition. Each approved batch should be followed by the identical
+reliability analysis. A low score alone must not trigger automatic movement;
+human review determines whether to retain the path, expand an L3 definition,
+or propose a genuinely necessary new L3.
+
+This document is the English journal-style edition of \textit{RAI Risk
+Taxonomy Technical Report 2.0}.
+
+\end{document}
