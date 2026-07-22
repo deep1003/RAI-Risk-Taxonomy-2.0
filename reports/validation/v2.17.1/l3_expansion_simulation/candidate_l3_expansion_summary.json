@@ -1,0 +1,199 @@
+{
+  "release_id": "v2.17.1",
+  "model": "/Users/deep1003/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+  "seed": 20260722,
+  "rule": "Counterfactual movement requires candidate keyword support and at least 0.012 BGE-M3 similarity improvement over the current L3 seed. Physical source cards are locked.",
+  "conditions": [
+    {
+      "label": "Current v2.17.1",
+      "candidate_count": 0,
+      "moved_cards": 0,
+      "moved_hold_cards": 0,
+      "moved_nonhold_cards": 0,
+      "all": {
+        "condition": "Current v2.17.1 all",
+        "cards": 1711,
+        "families": 50,
+        "top1_containment": 64.6,
+        "top2_containment": 79.0,
+        "top3_containment": 85.9,
+        "top5_containment": 92.9,
+        "median_margin": 0.0123,
+        "negative_margin_share": 35.4,
+        "perturb_agreement_sigma_0.01": 94.1,
+        "perturb_agreement_sigma_0.05": 72.3,
+        "em_iterations": 25,
+        "em_final_objective": 0.801,
+        "em_agreement": 20.6,
+        "ari": 0.122,
+        "nmi": 0.41
+      },
+      "non_hold": {
+        "condition": "Current v2.17.1 non-HOLD",
+        "cards": 984,
+        "families": 50,
+        "top1_containment": 76.4,
+        "top2_containment": 88.2,
+        "top3_containment": 92.1,
+        "top5_containment": 95.5,
+        "median_margin": 0.024,
+        "negative_margin_share": 23.6,
+        "perturb_agreement_sigma_0.01": 95.6,
+        "perturb_agreement_sigma_0.05": 78.2,
+        "em_iterations": 11,
+        "em_final_objective": 0.803,
+        "em_agreement": 29.6,
+        "ari": 0.18,
+        "nmi": 0.505
+      }
+    },
+    {
+      "label": "General +4",
+      "candidate_count": 4,
+      "moved_cards": 203,
+      "moved_hold_cards": 161,
+      "moved_nonhold_cards": 42,
+      "all": {
+        "condition": "General +4 all",
+        "cards": 1711,
+        "families": 54,
+        "top1_containment": 63.1,
+        "top2_containment": 77.5,
+        "top3_containment": 85.2,
+        "top5_containment": 91.9,
+        "median_margin": 0.0106,
+        "negative_margin_share": 36.9,
+        "perturb_agreement_sigma_0.01": 94.1,
+        "perturb_agreement_sigma_0.05": 71.9,
+        "em_iterations": 16,
+        "em_final_objective": 0.802,
+        "em_agreement": 23.4,
+        "ari": 0.11,
+        "nmi": 0.407
+      },
+      "non_hold": {
+        "condition": "General +4 non-HOLD",
+        "cards": 984,
+        "families": 54,
+        "top1_containment": 75.9,
+        "top2_containment": 87.6,
+        "top3_containment": 92.1,
+        "top5_containment": 95.9,
+        "median_margin": 0.0238,
+        "negative_margin_share": 24.1,
+        "perturb_agreement_sigma_0.01": 95.6,
+        "perturb_agreement_sigma_0.05": 77.6,
+        "em_iterations": 10,
+        "em_final_objective": 0.803,
+        "em_agreement": 29.2,
+        "ari": 0.173,
+        "nmi": 0.502
+      }
+    },
+    {
+      "label": "General +4, Agentic +2",
+      "candidate_count": 6,
+      "moved_cards": 243,
+      "moved_hold_cards": 175,
+      "moved_nonhold_cards": 68,
+      "all": {
+        "condition": "General +4, Agentic +2 all",
+        "cards": 1711,
+        "families": 56,
+        "top1_containment": 63.2,
+        "top2_containment": 77.3,
+        "top3_containment": 84.5,
+        "top5_containment": 91.6,
+        "median_margin": 0.0106,
+        "negative_margin_share": 36.8,
+        "perturb_agreement_sigma_0.01": 94.3,
+        "perturb_agreement_sigma_0.05": 72.1,
+        "em_iterations": 22,
+        "em_final_objective": 0.804,
+        "em_agreement": 23.3,
+        "ari": 0.116,
+        "nmi": 0.422
+      },
+      "non_hold": {
+        "condition": "General +4, Agentic +2 non-HOLD",
+        "cards": 984,
+        "families": 56,
+        "top1_containment": 75.8,
+        "top2_containment": 87.5,
+        "top3_containment": 92.0,
+        "top5_containment": 95.7,
+        "median_margin": 0.0236,
+        "negative_margin_share": 24.2,
+        "perturb_agreement_sigma_0.01": 95.4,
+        "perturb_agreement_sigma_0.05": 77.7,
+        "em_iterations": 13,
+        "em_final_objective": 0.805,
+        "em_agreement": 29.5,
+        "ari": 0.169,
+        "nmi": 0.512
+      }
+    }
+  ],
+  "candidate_definitions": [
+    {
+      "node_id": "SIM3-G-SOC-01",
+      "label_en": "Governance and Accountability",
+      "label_ko": "거버넌스·책임성",
+      "definition_en": "Risks arising when AI development, deployment, auditing, certification, reporting, regulation, liability, or accountability mechanisms fail to assign responsibility or support enforceable oversight.",
+      "definition_ko": "AI 개발·배포·감사·인증·보고·규제·책임 배분 체계가 작동하지 않아 책임성과 감독 가능성이 약화되는 위험.",
+      "domain": "General",
+      "pattern": "\\b(govern|regulat|audit|accountab|liabil|law|policy|oversight|compliance|certification|reporting|standard|responsib)\\b"
+    },
+    {
+      "node_id": "SIM3-G-SYS-01",
+      "label_en": "Transparency and Explainability",
+      "label_ko": "투명성·설명가능성",
+      "definition_en": "Risks arising when AI system behavior, training data, evaluation, documentation, explanation, traceability, or contestability is opaque or unavailable to affected stakeholders.",
+      "definition_ko": "AI 시스템의 동작, 학습 데이터, 평가, 문서화, 설명, 추적성 또는 이의제기 가능성이 이해관계자에게 충분히 제공되지 않는 위험.",
+      "domain": "General",
+      "pattern": "\\b(transparen|explain|interpret|opacity|opaque|disclos|documentation|model card|system card|traceab|contest|datasheet)\\b"
+    },
+    {
+      "node_id": "SIM3-G-SYS-02",
+      "label_en": "AI Security",
+      "label_ko": "AI 보안",
+      "definition_en": "Risks arising from attacks, vulnerabilities, jailbreaks, prompt injection, poisoning, backdoors, exfiltration, or compromise of non-embodied AI systems and their digital interfaces.",
+      "definition_ko": "비임베디드 AI 시스템과 디지털 인터페이스에서 공격, 취약점, 탈옥, 프롬프트 인젝션, 오염, 백도어, 유출 또는 침해가 발생하는 위험.",
+      "domain": "General",
+      "pattern": "\\b(cyber|security|attack|poison|backdoor|jailbreak|prompt injection|exploit|credential|vulnerab|exfiltrat|compromise|malware)\\b"
+    },
+    {
+      "node_id": "SIM3-G-INT-01",
+      "label_en": "Dependency and Manipulation",
+      "label_ko": "의존·조작",
+      "definition_en": "Risks arising when AI systems create excessive dependence, manipulate preferences or behavior, exploit trust, or shape user choices without adequate autonomy or consent.",
+      "definition_ko": "AI 시스템이 과도한 의존을 만들거나 신뢰와 취약성을 이용해 선호·행동·선택을 조작하여 자율성과 동의를 약화시키는 위험.",
+      "domain": "General",
+      "pattern": "\\b(dependen|manipulat|persuasi|addict|attachment|trust|overreliance|decept|parasocial|nudg|influence|vulnerab)\\b"
+    },
+    {
+      "node_id": "SIM3-A-SYS-01",
+      "label_en": "Tool and Environment Security",
+      "label_ko": "도구·환경 보안",
+      "definition_en": "Risks arising when autonomous agents misuse, compromise, or are compromised through tools, external environments, computer-use interfaces, APIs, or execution substrates.",
+      "definition_ko": "자율 에이전트가 도구, 외부 환경, 컴퓨터 사용 인터페이스, API 또는 실행 기반을 오용하거나 그 경로로 침해되는 위험.",
+      "domain": "Agentic",
+      "pattern": "\\b(agent|agentic|autonomous|tool|api|environment|computer-use|computer use|execution|interface|orchestrat|actuator|browser)\\b"
+    },
+    {
+      "node_id": "SIM3-A-SYS-02",
+      "label_en": "Traceability and Audit",
+      "label_ko": "추적성·감사",
+      "definition_en": "Risks arising when autonomous agent actions, delegated decisions, tool calls, responsibility chains, audit trails, or human review points cannot be reconstructed or attributed.",
+      "definition_ko": "자율 에이전트의 행위, 위임된 의사결정, 도구 호출, 책임 경로, 감사 기록 또는 인간 검토 지점을 재구성하거나 귀속하기 어려운 위험.",
+      "domain": "Agentic",
+      "pattern": "\\b(agent|agentic|autonomous|delegat|audit|traceab|attribut|provenance|responsib|tool call|action log|supervisor|oversight)\\b"
+    }
+  ],
+  "outputs": {
+    "summary": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/l3_expansion_simulation/candidate_l3_expansion_summary.json",
+    "moves": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/l3_expansion_simulation/candidate_l3_expansion_moves.json",
+    "figure_pdf": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/l3_expansion_simulation/candidate_l3_expansion_simulation.pdf",
+    "figure_png": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/l3_expansion_simulation/candidate_l3_expansion_simulation.png"
+  }
+}

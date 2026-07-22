@@ -1,0 +1,4634 @@
+{
+  "release_id": "v2.17.2",
+  "source_release": "v2.17.2-rc",
+  "bge_m3_guarded_moves_reflected_as_hold": [
+    {
+      "l4_id": "RAI4-0003",
+      "label_en": "Unsafe interruptibility failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "move": {
+        "l4_id": "RAI4-0003",
+        "label_en": "Unsafe interruptibility failure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-09",
+        "to": "RAI3-A-SYS-01",
+        "score_from": 0.624981,
+        "score_to": 0.658759,
+        "improvement": 0.033778,
+        "keyword_cos": 0.023096,
+        "definition_cos_to": 0.651891,
+        "definition_cos_from": 0.629274
+      }
+    },
+    {
+      "l4_id": "RAI4-0014",
+      "label_en": "Agent supply-chain tool compromise",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Network Effects",
+        "l3_label_ko": "네트워크 효과"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-06",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Collusion",
+        "l3_label_ko": "결탁"
+      },
+      "move": {
+        "l4_id": "RAI4-0014",
+        "label_en": "Agent supply-chain tool compromise",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-A-SYS-06",
+        "score_from": 0.619144,
+        "score_to": 0.641664,
+        "improvement": 0.02252,
+        "keyword_cos": 0.01652,
+        "definition_cos_to": 0.66433,
+        "definition_cos_from": 0.623712
+      }
+    },
+    {
+      "l4_id": "RAI4-0031",
+      "label_en": "Security test coverage gap in tool agents",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "move": {
+        "l4_id": "RAI4-0031",
+        "label_en": "Security test coverage gap in tool agents",
+        "iter": 0,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-A-SYS-02",
+        "score_from": 0.579552,
+        "score_to": 0.606152,
+        "improvement": 0.0266,
+        "keyword_cos": 0.071056,
+        "definition_cos_to": 0.566813,
+        "definition_cos_from": 0.52451
+      }
+    },
+    {
+      "l4_id": "RAI4-0042",
+      "label_en": "Robustness evaluation gap for agents",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-04",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Destabilising Dynamics",
+        "l3_label_ko": "불안정한 동학"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "move": {
+        "l4_id": "RAI4-0042",
+        "label_en": "Robustness evaluation gap for agents",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-A-SYS-02",
+        "score_from": 0.604053,
+        "score_to": 0.639486,
+        "improvement": 0.035433,
+        "keyword_cos": 0.122566,
+        "definition_cos_to": 0.64514,
+        "definition_cos_from": 0.603747
+      }
+    },
+    {
+      "l4_id": "RAI4-0047",
+      "label_en": "Responsibility gap in autonomous systems",
+      "old_primary_l3_id": "RAI3-G-SYS-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "move": {
+        "l4_id": "RAI4-0047",
+        "label_en": "Responsibility gap in autonomous systems",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-A-SYS-02",
+        "score_from": 0.654152,
+        "score_to": 0.690623,
+        "improvement": 0.036471,
+        "keyword_cos": 0.096078,
+        "definition_cos_to": 0.685021,
+        "definition_cos_from": 0.652792
+      }
+    },
+    {
+      "l4_id": "RAI4-0061",
+      "label_en": "Datasheet incompleteness",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0061",
+        "label_en": "Datasheet incompleteness",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.601887,
+        "score_to": 0.635054,
+        "improvement": 0.033167,
+        "keyword_cos": 0.01546,
+        "definition_cos_to": 0.63002,
+        "definition_cos_from": 0.583179
+      }
+    },
+    {
+      "l4_id": "RAI4-0068",
+      "label_en": "AI incident underreporting",
+      "old_primary_l3_id": "RAI3-G-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0068",
+        "label_en": "AI incident underreporting",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.637636,
+        "score_to": 0.690089,
+        "improvement": 0.052453,
+        "keyword_cos": 0.015496,
+        "definition_cos_to": 0.673176,
+        "definition_cos_from": 0.581774
+      }
+    },
+    {
+      "l4_id": "RAI4-0081",
+      "label_en": "External evaluation access failure",
+      "old_primary_l3_id": "RAI3-G-INT-11",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0081",
+        "label_en": "External evaluation access failure",
+        "iter": 0,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.603241,
+        "score_to": 0.632435,
+        "improvement": 0.029194,
+        "keyword_cos": 0.015535,
+        "definition_cos_to": 0.632337,
+        "definition_cos_from": 0.592067
+      }
+    },
+    {
+      "l4_id": "RAI4-0090",
+      "label_en": "Cross-border enforcement gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0090",
+        "label_en": "Cross-border enforcement gap",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.599769,
+        "score_to": 0.630722,
+        "improvement": 0.030952,
+        "keyword_cos": 0.022352,
+        "definition_cos_to": 0.582874,
+        "definition_cos_from": 0.54921
+      }
+    },
+    {
+      "l4_id": "RAI4-0104",
+      "label_en": "Procurement due-diligence failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0104",
+        "label_en": "Procurement due-diligence failure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.645188,
+        "score_to": 0.66688,
+        "improvement": 0.021691,
+        "keyword_cos": 0.085018,
+        "definition_cos_to": 0.6332,
+        "definition_cos_from": 0.605814
+      }
+    },
+    {
+      "l4_id": "RAI4-0112",
+      "label_en": "Delegated decision authority drift",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0112",
+        "label_en": "Delegated decision authority drift",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.652618,
+        "score_to": 0.678714,
+        "improvement": 0.026095,
+        "keyword_cos": 0.073168,
+        "definition_cos_to": 0.64639,
+        "definition_cos_from": 0.59155
+      }
+    },
+    {
+      "l4_id": "RAI4-0114",
+      "label_en": "Meaningful human control failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0114",
+        "label_en": "Meaningful human control failure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.626276,
+        "score_to": 0.656198,
+        "improvement": 0.029922,
+        "keyword_cos": 0.031909,
+        "definition_cos_to": 0.64839,
+        "definition_cos_from": 0.631913
+      }
+    },
+    {
+      "l4_id": "RAI4-0121",
+      "label_en": "Choice architecture opacity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0121",
+        "label_en": "Choice architecture opacity",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.657752,
+        "score_to": 0.698494,
+        "improvement": 0.040742,
+        "keyword_cos": 0.034791,
+        "definition_cos_to": 0.702343,
+        "definition_cos_from": 0.601767
+      }
+    },
+    {
+      "l4_id": "RAI4-0132",
+      "label_en": "Sycophantic advice dependence",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0132",
+        "label_en": "Sycophantic advice dependence",
+        "iter": 0,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.651133,
+        "score_to": 0.674961,
+        "improvement": 0.023828,
+        "keyword_cos": 0.030767,
+        "definition_cos_to": 0.668087,
+        "definition_cos_from": 0.598647
+      }
+    },
+    {
+      "l4_id": "RAI4-0133",
+      "label_en": "Epistemic dependence on AI",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0133",
+        "label_en": "Epistemic dependence on AI",
+        "iter": 0,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.656479,
+        "score_to": 0.697698,
+        "improvement": 0.041218,
+        "keyword_cos": 0.043001,
+        "definition_cos_to": 0.698343,
+        "definition_cos_from": 0.591296
+      }
+    },
+    {
+      "l4_id": "RAI4-0136",
+      "label_en": "Critical-sector AI overreliance",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Network Effects",
+        "l3_label_ko": "네트워크 효과"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0136",
+        "label_en": "Critical-sector AI overreliance",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.638797,
+        "score_to": 0.678538,
+        "improvement": 0.039741,
+        "keyword_cos": 0.015286,
+        "definition_cos_to": 0.641414,
+        "definition_cos_from": 0.546479
+      }
+    },
+    {
+      "l4_id": "RAI4-0172",
+      "label_en": "Informed consent failure in AI interaction",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0172",
+        "label_en": "Informed consent failure in AI interaction",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.659189,
+        "score_to": 0.700893,
+        "improvement": 0.041703,
+        "keyword_cos": 0.047266,
+        "definition_cos_to": 0.667924,
+        "definition_cos_from": 0.567427
+      }
+    },
+    {
+      "l4_id": "RAI4-0174",
+      "label_en": "Disability accommodation failure in AI interfaces",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0174",
+        "label_en": "Disability accommodation failure in AI interfaces",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.643337,
+        "score_to": 0.679525,
+        "improvement": 0.036188,
+        "keyword_cos": 0.035471,
+        "definition_cos_to": 0.642522,
+        "definition_cos_from": 0.576827
+      }
+    },
+    {
+      "l4_id": "RAI4-0177",
+      "label_en": "Autonomy loss in welfare decision systems",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0177",
+        "label_en": "Autonomy loss in welfare decision systems",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.664174,
+        "score_to": 0.691134,
+        "improvement": 0.02696,
+        "keyword_cos": 0.041528,
+        "definition_cos_to": 0.651617,
+        "definition_cos_from": 0.604822
+      }
+    },
+    {
+      "l4_id": "RAI4-0178",
+      "label_en": "AI-mediated service exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0178",
+        "label_en": "AI-mediated service exclusion",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.625612,
+        "score_to": 0.65646,
+        "improvement": 0.030848,
+        "keyword_cos": 0.035634,
+        "definition_cos_to": 0.649225,
+        "definition_cos_from": 0.552665
+      }
+    },
+    {
+      "l4_id": "RAI4-0374",
+      "label_en": "Cultural context collapse",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-04",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Context Misalignment",
+        "l3_label_ko": "맥락 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-0374",
+        "label_en": "Cultural context collapse",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-04",
+        "score_from": 0.539013,
+        "score_to": 0.614762,
+        "improvement": 0.075749,
+        "keyword_cos": 0.03097,
+        "definition_cos_to": 0.663322,
+        "definition_cos_from": 0.49857
+      }
+    },
+    {
+      "l4_id": "RAI4-0378",
+      "label_en": "Bilingual cultural alignment failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-05",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Inconsistency",
+        "l3_label_ko": "비일관성"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-0378",
+        "label_en": "Bilingual cultural alignment failure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-05",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.645636,
+        "score_to": 0.669055,
+        "improvement": 0.023419,
+        "keyword_cos": 0.043362,
+        "definition_cos_to": 0.651145,
+        "definition_cos_from": 0.611453
+      }
+    },
+    {
+      "l4_id": "RAI4-0380",
+      "label_en": "Low-resource language value loss",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0380",
+        "label_en": "Low-resource language value loss",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.55369,
+        "score_to": 0.590588,
+        "improvement": 0.036898,
+        "keyword_cos": 0.02692,
+        "definition_cos_to": 0.559976,
+        "definition_cos_from": 0.463396
+      }
+    },
+    {
+      "l4_id": "RAI4-0382",
+      "label_en": "Dialect and register exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0382",
+        "label_en": "Dialect and register exclusion",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.588482,
+        "score_to": 0.622806,
+        "improvement": 0.034324,
+        "keyword_cos": 0.032126,
+        "definition_cos_to": 0.603156,
+        "definition_cos_from": 0.567502
+      }
+    },
+    {
+      "l4_id": "RAI4-0392",
+      "label_en": "Consent and benefit-sharing failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0392",
+        "label_en": "Consent and benefit-sharing failure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.627169,
+        "score_to": 0.6987,
+        "improvement": 0.071531,
+        "keyword_cos": 0.06418,
+        "definition_cos_to": 0.683537,
+        "definition_cos_from": 0.568758
+      }
+    },
+    {
+      "l4_id": "RAI4-0408",
+      "label_en": "Local harms invisibility",
+      "old_primary_l3_id": "RAI3-G-INT-06",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-04",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Hate and Unfairness",
+        "l3_label_ko": "혐오·차별"
+      },
+      "move": {
+        "l4_id": "RAI4-0408",
+        "label_en": "Local harms invisibility",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-INT-04",
+        "score_from": 0.486494,
+        "score_to": 0.524073,
+        "improvement": 0.037579,
+        "keyword_cos": 0.084156,
+        "definition_cos_to": 0.508711,
+        "definition_cos_from": 0.457015
+      }
+    },
+    {
+      "l4_id": "RAI4-0413",
+      "label_en": "Cultural data provenance loss",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "move": {
+        "l4_id": "RAI4-0413",
+        "label_en": "Cultural data provenance loss",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-INT-08",
+        "score_from": 0.601208,
+        "score_to": 0.629114,
+        "improvement": 0.027906,
+        "keyword_cos": 0.027289,
+        "definition_cos_to": 0.582554,
+        "definition_cos_from": 0.51431
+      }
+    },
+    {
+      "l4_id": "RAI4-0414",
+      "label_en": "Global benchmark monoculture",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-04",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Context Misalignment",
+        "l3_label_ko": "맥락 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-0414",
+        "label_en": "Global benchmark monoculture",
+        "iter": 0,
+        "from": "RAI3-A-SYS-02",
+        "to": "RAI3-G-SYS-04",
+        "score_from": 0.53718,
+        "score_to": 0.581359,
+        "improvement": 0.044179,
+        "keyword_cos": 0.045998,
+        "definition_cos_to": 0.559469,
+        "definition_cos_from": 0.494349
+      }
+    },
+    {
+      "l4_id": "RAI4-0430",
+      "label_en": "Low-resource language exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0430",
+        "label_en": "Low-resource language exclusion",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.582511,
+        "score_to": 0.620521,
+        "improvement": 0.03801,
+        "keyword_cos": 0.030745,
+        "definition_cos_to": 0.606722,
+        "definition_cos_from": 0.514978
+      }
+    },
+    {
+      "l4_id": "RAI4-0451",
+      "label_en": "Manipulative AI persuasion",
+      "old_primary_l3_id": "RAI3-G-SYS-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0451",
+        "label_en": "Manipulative AI persuasion",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.657166,
+        "score_to": 0.69278,
+        "improvement": 0.035615,
+        "keyword_cos": 0.109794,
+        "definition_cos_to": 0.687824,
+        "definition_cos_from": 0.595555
+      }
+    },
+    {
+      "l4_id": "RAI4-0491",
+      "label_en": "Algorithmic monoculture",
+      "old_primary_l3_id": "RAI3-A-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0491",
+        "label_en": "Algorithmic monoculture",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.607591,
+        "score_to": 0.627662,
+        "improvement": 0.020071,
+        "keyword_cos": 0.05038,
+        "definition_cos_to": 0.581175,
+        "definition_cos_from": 0.510095
+      }
+    },
+    {
+      "l4_id": "RAI4-0581",
+      "label_en": "Goal expansion propensity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Extension",
+        "l3_label_ko": "역량 초과 수행"
+      },
+      "move": {
+        "l4_id": "RAI4-0581",
+        "label_en": "Goal expansion propensity",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-02",
+        "score_from": 0.627526,
+        "score_to": 0.651716,
+        "improvement": 0.02419,
+        "keyword_cos": 0.034523,
+        "definition_cos_to": 0.671467,
+        "definition_cos_from": 0.670758
+      }
+    },
+    {
+      "l4_id": "RAI4-0587",
+      "label_en": "Improper retraining",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-0587",
+        "label_en": "Improper retraining",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.62748,
+        "score_to": 0.654877,
+        "improvement": 0.027396,
+        "keyword_cos": 0.065634,
+        "definition_cos_to": 0.646913,
+        "definition_cos_from": 0.585611
+      }
+    },
+    {
+      "l4_id": "RAI4-0588",
+      "label_en": "Inaccessible training data",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-0588",
+        "label_en": "Inaccessible training data",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.601576,
+        "score_to": 0.626066,
+        "improvement": 0.02449,
+        "keyword_cos": 0.089104,
+        "definition_cos_to": 0.548879,
+        "definition_cos_from": 0.524551
+      }
+    },
+    {
+      "l4_id": "RAI4-0593",
+      "label_en": "Training-corpus sensitive information retention",
+      "old_primary_l3_id": "RAI3-G-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "move": {
+        "l4_id": "RAI4-0593",
+        "label_en": "Training-corpus sensitive information retention",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-INT-06",
+        "score_from": 0.600831,
+        "score_to": 0.63407,
+        "improvement": 0.033239,
+        "keyword_cos": 0.027278,
+        "definition_cos_to": 0.562693,
+        "definition_cos_from": 0.511604
+      }
+    },
+    {
+      "l4_id": "RAI4-0625",
+      "label_en": "Dual-use capability uplift in the life sciences",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-09",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Weaponization",
+        "l3_label_ko": "무기화"
+      },
+      "move": {
+        "l4_id": "RAI4-0625",
+        "label_en": "Dual-use capability uplift in the life sciences",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-09",
+        "score_from": 0.592298,
+        "score_to": 0.646122,
+        "improvement": 0.053824,
+        "keyword_cos": 0.040796,
+        "definition_cos_to": 0.56384,
+        "definition_cos_from": 0.538808
+      }
+    },
+    {
+      "l4_id": "RAI4-0636",
+      "label_en": "Malicious use",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-0636",
+        "label_en": "Malicious use",
+        "iter": 0,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.643441,
+        "score_to": 0.681249,
+        "improvement": 0.037808,
+        "keyword_cos": 0.039613,
+        "definition_cos_to": 0.617726,
+        "definition_cos_from": 0.578402
+      }
+    },
+    {
+      "l4_id": "RAI4-0648",
+      "label_en": "AI-Assisted software vulnerability discovery",
+      "old_primary_l3_id": "RAI3-G-INT-11",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-09",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Weaponization",
+        "l3_label_ko": "무기화"
+      },
+      "move": {
+        "l4_id": "RAI4-0648",
+        "label_en": "AI-Assisted software vulnerability discovery",
+        "iter": 0,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-INT-09",
+        "score_from": 0.593868,
+        "score_to": 0.646046,
+        "improvement": 0.052178,
+        "keyword_cos": 0.051062,
+        "definition_cos_to": 0.530145,
+        "definition_cos_from": 0.529909
+      }
+    },
+    {
+      "l4_id": "RAI4-0661",
+      "label_en": "Business operations/infrastructure damage",
+      "old_primary_l3_id": "RAI3-A-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-07",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Illegal",
+        "l3_label_ko": "불법 또는 비윤리적 행위"
+      },
+      "move": {
+        "l4_id": "RAI4-0661",
+        "label_en": "Business operations/infrastructure damage",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-INT-07",
+        "score_from": 0.569589,
+        "score_to": 0.610864,
+        "improvement": 0.041275,
+        "keyword_cos": 0.073135,
+        "definition_cos_to": 0.623677,
+        "definition_cos_from": 0.587466
+      }
+    },
+    {
+      "l4_id": "RAI4-0681",
+      "label_en": "Incomplete or biased training data",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "move": {
+        "l4_id": "RAI4-0681",
+        "label_en": "Incomplete or biased training data",
+        "iter": 0,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-SYS-03",
+        "score_from": 0.612366,
+        "score_to": 0.637723,
+        "improvement": 0.025358,
+        "keyword_cos": 0.036345,
+        "definition_cos_to": 0.587082,
+        "definition_cos_from": 0.540519
+      }
+    },
+    {
+      "l4_id": "RAI4-0710",
+      "label_en": "Generation of illegal or harmful content",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-0710",
+        "label_en": "Generation of illegal or harmful content",
+        "iter": 0,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.695624,
+        "score_to": 0.732946,
+        "improvement": 0.037322,
+        "keyword_cos": 0.046407,
+        "definition_cos_to": 0.704452,
+        "definition_cos_from": 0.63248
+      }
+    },
+    {
+      "l4_id": "RAI4-0712",
+      "label_en": "Harmful content - toxicity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-03",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Self-harm",
+        "l3_label_ko": "자해"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-0712",
+        "label_en": "Harmful content - toxicity",
+        "iter": 0,
+        "from": "RAI3-G-INT-03",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.668229,
+        "score_to": 0.69284,
+        "improvement": 0.024611,
+        "keyword_cos": 0.028855,
+        "definition_cos_to": 0.657764,
+        "definition_cos_from": 0.6401
+      }
+    },
+    {
+      "l4_id": "RAI4-0739",
+      "label_en": "Sensitive-information exposure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "move": {
+        "l4_id": "RAI4-0739",
+        "label_en": "Sensitive-information exposure",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-INT-06",
+        "score_from": 0.667411,
+        "score_to": 0.688935,
+        "improvement": 0.021524,
+        "keyword_cos": 0.13409,
+        "definition_cos_to": 0.640026,
+        "definition_cos_from": 0.626406
+      }
+    },
+    {
+      "l4_id": "RAI4-0753",
+      "label_en": "Training data extraction attack",
+      "old_primary_l3_id": "RAI3-G-INT-06",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-0753",
+        "label_en": "Training data extraction attack",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.565293,
+        "score_to": 0.609353,
+        "improvement": 0.04406,
+        "keyword_cos": 0.074224,
+        "definition_cos_to": 0.571045,
+        "definition_cos_from": 0.538516
+      }
+    },
+    {
+      "l4_id": "RAI4-0772",
+      "label_en": "Association in LLMs",
+      "old_primary_l3_id": "RAI3-G-INT-06",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-05",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Inconsistency",
+        "l3_label_ko": "비일관성"
+      },
+      "move": {
+        "l4_id": "RAI4-0772",
+        "label_en": "Association in LLMs",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-SYS-05",
+        "score_from": 0.56145,
+        "score_to": 0.604574,
+        "improvement": 0.043124,
+        "keyword_cos": 0.046627,
+        "definition_cos_to": 0.590908,
+        "definition_cos_from": 0.52343
+      }
+    },
+    {
+      "l4_id": "RAI4-0868",
+      "label_en": "Competence trust",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0868",
+        "label_en": "Competence trust",
+        "iter": 0,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.660059,
+        "score_to": 0.68921,
+        "improvement": 0.029151,
+        "keyword_cos": 0.077166,
+        "definition_cos_to": 0.688141,
+        "definition_cos_from": 0.60885
+      }
+    },
+    {
+      "l4_id": "RAI4-0880",
+      "label_en": "Trust-mediated behavioral influence",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-0880",
+        "label_en": "Trust-mediated behavioral influence",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.622657,
+        "score_to": 0.663881,
+        "improvement": 0.041224,
+        "keyword_cos": 0.098458,
+        "definition_cos_to": 0.591027,
+        "definition_cos_from": 0.509018
+      }
+    },
+    {
+      "l4_id": "RAI4-0883",
+      "label_en": "Long-term effects of AI model biases on user judgment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0883",
+        "label_en": "Long-term effects of AI model biases on user judgment",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.621161,
+        "score_to": 0.641648,
+        "improvement": 0.020487,
+        "keyword_cos": 0.022503,
+        "definition_cos_to": 0.626164,
+        "definition_cos_from": 0.519794
+      }
+    },
+    {
+      "l4_id": "RAI4-0884",
+      "label_en": "Manipulation and coercion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "move": {
+        "l4_id": "RAI4-0884",
+        "label_en": "Manipulation and coercion",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-A-SYS-01",
+        "score_from": 0.666978,
+        "score_to": 0.697754,
+        "improvement": 0.030776,
+        "keyword_cos": 0.066699,
+        "definition_cos_to": 0.679191,
+        "definition_cos_from": 0.675677
+      }
+    },
+    {
+      "l4_id": "RAI4-0890",
+      "label_en": "Self-actualisation harms",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0890",
+        "label_en": "Self-actualisation harms",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.659644,
+        "score_to": 0.682562,
+        "improvement": 0.022918,
+        "keyword_cos": 0.064515,
+        "definition_cos_to": 0.664619,
+        "definition_cos_from": 0.603591
+      }
+    },
+    {
+      "l4_id": "RAI4-0894",
+      "label_en": "Loss of human agency and autonomy",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0894",
+        "label_en": "Loss of human agency and autonomy",
+        "iter": 0,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.678286,
+        "score_to": 0.698358,
+        "improvement": 0.020072,
+        "keyword_cos": 0.064998,
+        "definition_cos_to": 0.674974,
+        "definition_cos_from": 0.613247
+      }
+    },
+    {
+      "l4_id": "RAI4-0905",
+      "label_en": "AI enables automation of military decision-making",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-09",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Weaponization",
+        "l3_label_ko": "무기화"
+      },
+      "move": {
+        "l4_id": "RAI4-0905",
+        "label_en": "AI enables automation of military decision-making",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-INT-09",
+        "score_from": 0.623774,
+        "score_to": 0.671141,
+        "improvement": 0.047367,
+        "keyword_cos": 0.024544,
+        "definition_cos_to": 0.581942,
+        "definition_cos_from": 0.533126
+      }
+    },
+    {
+      "l4_id": "RAI4-0923",
+      "label_en": "Memorization in LLMs",
+      "old_primary_l3_id": "RAI3-G-INT-06",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-0923",
+        "label_en": "Memorization in LLMs",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.540447,
+        "score_to": 0.593142,
+        "improvement": 0.052695,
+        "keyword_cos": 0.048946,
+        "definition_cos_to": 0.522163,
+        "definition_cos_from": 0.469416
+      }
+    },
+    {
+      "l4_id": "RAI4-0947",
+      "label_en": "Regulatory gap for generative AI",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-04",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Destabilising Dynamics",
+        "l3_label_ko": "불안정한 동학"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0947",
+        "label_en": "Regulatory gap for generative AI",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.595231,
+        "score_to": 0.632493,
+        "improvement": 0.037262,
+        "keyword_cos": 0.033534,
+        "definition_cos_to": 0.593683,
+        "definition_cos_from": 0.525335
+      }
+    },
+    {
+      "l4_id": "RAI4-0970",
+      "label_en": "AGIs being given or developing unsafe goals",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-0970",
+        "label_en": "AGIs being given or developing unsafe goals",
+        "iter": 0,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.635455,
+        "score_to": 0.663583,
+        "improvement": 0.028128,
+        "keyword_cos": 0.03854,
+        "definition_cos_to": 0.668721,
+        "definition_cos_from": 0.57099
+      }
+    },
+    {
+      "l4_id": "RAI4-0978",
+      "label_en": "Decision making transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0978",
+        "label_en": "Decision making transparency",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.627241,
+        "score_to": 0.657567,
+        "improvement": 0.030325,
+        "keyword_cos": 0.066897,
+        "definition_cos_to": 0.667787,
+        "definition_cos_from": 0.594007
+      }
+    },
+    {
+      "l4_id": "RAI4-0979",
+      "label_en": "Legal non-compliance by advanced AI",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0979",
+        "label_en": "Legal non-compliance by advanced AI",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.658291,
+        "score_to": 0.678749,
+        "improvement": 0.020458,
+        "keyword_cos": 0.050551,
+        "definition_cos_to": 0.665366,
+        "definition_cos_from": 0.600672
+      }
+    },
+    {
+      "l4_id": "RAI4-1008",
+      "label_en": "Technology-facilitated violence",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-1008",
+        "label_en": "Technology-facilitated violence",
+        "iter": 0,
+        "from": "RAI3-G-INT-02",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.660885,
+        "score_to": 0.699837,
+        "improvement": 0.038952,
+        "keyword_cos": 0.103869,
+        "definition_cos_to": 0.672733,
+        "definition_cos_from": 0.569317
+      }
+    },
+    {
+      "l4_id": "RAI4-1013",
+      "label_en": "Abuse and misuse",
+      "old_primary_l3_id": "RAI3-G-SYS-02",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-09",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Weaponization",
+        "l3_label_ko": "무기화"
+      },
+      "move": {
+        "l4_id": "RAI4-1013",
+        "label_en": "Abuse and misuse",
+        "iter": 0,
+        "from": "RAI3-G-SYS-02",
+        "to": "RAI3-G-INT-09",
+        "score_from": 0.661366,
+        "score_to": 0.686386,
+        "improvement": 0.025021,
+        "keyword_cos": 0.050125,
+        "definition_cos_to": 0.613653,
+        "definition_cos_from": 0.590512
+      }
+    },
+    {
+      "l4_id": "RAI4-1014",
+      "label_en": "Regulatory non-compliance",
+      "old_primary_l3_id": "RAI3-G-INT-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1014",
+        "label_en": "Regulatory non-compliance",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.680902,
+        "score_to": 0.702157,
+        "improvement": 0.021255,
+        "keyword_cos": 0.08349,
+        "definition_cos_to": 0.69303,
+        "definition_cos_from": 0.64831
+      }
+    },
+    {
+      "l4_id": "RAI4-1037",
+      "label_en": "Inherent use-case risk exposure",
+      "old_primary_l3_id": "RAI3-G-INT-09",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "move": {
+        "l4_id": "RAI4-1037",
+        "label_en": "Inherent use-case risk exposure",
+        "iter": 0,
+        "from": "RAI3-G-INT-09",
+        "to": "RAI3-G-INT-06",
+        "score_from": 0.595563,
+        "score_to": 0.654779,
+        "improvement": 0.059215,
+        "keyword_cos": 0.053943,
+        "definition_cos_to": 0.641707,
+        "definition_cos_from": 0.544048
+      }
+    },
+    {
+      "l4_id": "RAI4-1068",
+      "label_en": "Social stereotypes and unfair discrmination",
+      "old_primary_l3_id": "RAI3-G-INT-02",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-04",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Hate and Unfairness",
+        "l3_label_ko": "혐오·차별"
+      },
+      "move": {
+        "l4_id": "RAI4-1068",
+        "label_en": "Social stereotypes and unfair discrmination",
+        "iter": 0,
+        "from": "RAI3-G-INT-02",
+        "to": "RAI3-G-INT-04",
+        "score_from": 0.596257,
+        "score_to": 0.678925,
+        "improvement": 0.082669,
+        "keyword_cos": 0.050709,
+        "definition_cos_to": 0.637612,
+        "definition_cos_from": 0.497814
+      }
+    },
+    {
+      "l4_id": "RAI4-1090",
+      "label_en": "Manipulative steering against user will",
+      "old_primary_l3_id": "RAI3-G-INT-11",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-1090",
+        "label_en": "Manipulative steering against user will",
+        "iter": 0,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.598047,
+        "score_to": 0.640359,
+        "improvement": 0.042312,
+        "keyword_cos": 0.051389,
+        "definition_cos_to": 0.67018,
+        "definition_cos_from": 0.592851
+      }
+    },
+    {
+      "l4_id": "RAI4-1098",
+      "label_en": "Responsibility and accountability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1098",
+        "label_en": "Responsibility and accountability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.654429,
+        "score_to": 0.678221,
+        "improvement": 0.023792,
+        "keyword_cos": 0.04477,
+        "definition_cos_to": 0.666521,
+        "definition_cos_from": 0.613282
+      }
+    },
+    {
+      "l4_id": "RAI4-1103",
+      "label_en": "AI discrimination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1103",
+        "label_en": "AI discrimination",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.664061,
+        "score_to": 0.687125,
+        "improvement": 0.023064,
+        "keyword_cos": 0.021786,
+        "definition_cos_to": 0.634685,
+        "definition_cos_from": 0.597464
+      }
+    },
+    {
+      "l4_id": "RAI4-1116",
+      "label_en": "Persuasive AIs",
+      "old_primary_l3_id": "RAI3-A-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "move": {
+        "l4_id": "RAI4-1116",
+        "label_en": "Persuasive AIs",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-SYS-03",
+        "score_from": 0.681248,
+        "score_to": 0.703811,
+        "improvement": 0.022564,
+        "keyword_cos": 0.068067,
+        "definition_cos_to": 0.654064,
+        "definition_cos_from": 0.604246
+      }
+    },
+    {
+      "l4_id": "RAI4-1133",
+      "label_en": "Situationally aware goal misgeneralization",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-05",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Conflict",
+        "l3_label_ko": "갈등"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-1133",
+        "label_en": "Situationally aware goal misgeneralization",
+        "iter": 0,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.619314,
+        "score_to": 0.647626,
+        "improvement": 0.028312,
+        "keyword_cos": 0.113201,
+        "definition_cos_to": 0.659739,
+        "definition_cos_from": 0.557456
+      }
+    },
+    {
+      "l4_id": "RAI4-1156",
+      "label_en": "Driving opinion manipulation",
+      "old_primary_l3_id": "RAI3-G-INT-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-05",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Political Neutrality",
+        "l3_label_ko": "정치적 중립성"
+      },
+      "move": {
+        "l4_id": "RAI4-1156",
+        "label_en": "Driving opinion manipulation",
+        "iter": 0,
+        "from": "RAI3-G-INT-01",
+        "to": "RAI3-G-INT-05",
+        "score_from": 0.604939,
+        "score_to": 0.660986,
+        "improvement": 0.056047,
+        "keyword_cos": 0.120865,
+        "definition_cos_to": 0.57347,
+        "definition_cos_from": 0.480696
+      }
+    },
+    {
+      "l4_id": "RAI4-1158",
+      "label_en": "Large-scale persuasion capability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-07",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Overconfidence",
+        "l3_label_ko": "과도한 확신"
+      },
+      "move": {
+        "l4_id": "RAI4-1158",
+        "label_en": "Large-scale persuasion capability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-07",
+        "score_from": 0.57504,
+        "score_to": 0.60824,
+        "improvement": 0.0332,
+        "keyword_cos": 0.063432,
+        "definition_cos_to": 0.621044,
+        "definition_cos_from": 0.515023
+      }
+    },
+    {
+      "l4_id": "RAI4-1176",
+      "label_en": "Reverse exposure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1176",
+        "label_en": "Reverse exposure",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.601356,
+        "score_to": 0.676259,
+        "improvement": 0.074903,
+        "keyword_cos": 0.145381,
+        "definition_cos_to": 0.63918,
+        "definition_cos_from": 0.544357
+      }
+    },
+    {
+      "l4_id": "RAI4-1198",
+      "label_en": "Unawareness of emotions",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1198",
+        "label_en": "Unawareness of emotions",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.610858,
+        "score_to": 0.641975,
+        "improvement": 0.031117,
+        "keyword_cos": 0.022315,
+        "definition_cos_to": 0.647534,
+        "definition_cos_from": 0.596631
+      }
+    },
+    {
+      "l4_id": "RAI4-1258",
+      "label_en": "Unresolved risk-benefit balancing",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1258",
+        "label_en": "Unresolved risk-benefit balancing",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.609582,
+        "score_to": 0.63586,
+        "improvement": 0.026278,
+        "keyword_cos": 0.01708,
+        "definition_cos_to": 0.612978,
+        "definition_cos_from": 0.519212
+      }
+    },
+    {
+      "l4_id": "RAI4-1264",
+      "label_en": "Responsibility gap for autonomous AI failures",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1264",
+        "label_en": "Responsibility gap for autonomous AI failures",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.633521,
+        "score_to": 0.682281,
+        "improvement": 0.048761,
+        "keyword_cos": 0.015947,
+        "definition_cos_to": 0.643175,
+        "definition_cos_from": 0.560908
+      }
+    },
+    {
+      "l4_id": "RAI4-1267",
+      "label_en": "Transparency and explainability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1267",
+        "label_en": "Transparency and explainability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.671134,
+        "score_to": 0.709817,
+        "improvement": 0.038683,
+        "keyword_cos": 0.066028,
+        "definition_cos_to": 0.719077,
+        "definition_cos_from": 0.633441
+      }
+    },
+    {
+      "l4_id": "RAI4-1268",
+      "label_en": "Trust and reliability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1268",
+        "label_en": "Trust and reliability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.651125,
+        "score_to": 0.678168,
+        "improvement": 0.027043,
+        "keyword_cos": 0.028745,
+        "definition_cos_to": 0.687318,
+        "definition_cos_from": 0.571951
+      }
+    },
+    {
+      "l4_id": "RAI4-1296",
+      "label_en": "Unverifiable decision accountability gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1296",
+        "label_en": "Unverifiable decision accountability gap",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.62667,
+        "score_to": 0.663468,
+        "improvement": 0.036799,
+        "keyword_cos": 0.056705,
+        "definition_cos_to": 0.684304,
+        "definition_cos_from": 0.62789
+      }
+    },
+    {
+      "l4_id": "RAI4-1302",
+      "label_en": "Human-extinction risk",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1302",
+        "label_en": "Human-extinction risk",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.596075,
+        "score_to": 0.637686,
+        "improvement": 0.041611,
+        "keyword_cos": 0.057454,
+        "definition_cos_to": 0.577505,
+        "definition_cos_from": 0.525731
+      }
+    },
+    {
+      "l4_id": "RAI4-1313",
+      "label_en": "Data governance",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1313",
+        "label_en": "Data governance",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.638199,
+        "score_to": 0.659787,
+        "improvement": 0.021588,
+        "keyword_cos": 0.104445,
+        "definition_cos_to": 0.60749,
+        "definition_cos_from": 0.576833
+      }
+    },
+    {
+      "l4_id": "RAI4-1332",
+      "label_en": "Model robustness deficits",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1332",
+        "label_en": "Model robustness deficits",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.61027,
+        "score_to": 0.661147,
+        "improvement": 0.050876,
+        "keyword_cos": 0.064036,
+        "definition_cos_to": 0.625741,
+        "definition_cos_from": 0.51199
+      }
+    },
+    {
+      "l4_id": "RAI4-1361",
+      "label_en": "Assistant dependence formation",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1361",
+        "label_en": "Assistant dependence formation",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.642231,
+        "score_to": 0.669996,
+        "improvement": 0.027765,
+        "keyword_cos": 0.01779,
+        "definition_cos_to": 0.626208,
+        "definition_cos_from": 0.583591
+      }
+    },
+    {
+      "l4_id": "RAI4-1371",
+      "label_en": "Job loss and displacement",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1371",
+        "label_en": "Job loss and displacement",
+        "iter": 0,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.621174,
+        "score_to": 0.652341,
+        "improvement": 0.031167,
+        "keyword_cos": 0.017984,
+        "definition_cos_to": 0.607494,
+        "definition_cos_from": 0.537266
+      }
+    },
+    {
+      "l4_id": "RAI4-1382",
+      "label_en": "Loss of corrigibility",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "move": {
+        "l4_id": "RAI4-1382",
+        "label_en": "Loss of corrigibility",
+        "iter": 0,
+        "from": "RAI3-G-SYS-09",
+        "to": "RAI3-A-SYS-02",
+        "score_from": 0.593122,
+        "score_to": 0.624381,
+        "improvement": 0.031259,
+        "keyword_cos": 0.105913,
+        "definition_cos_to": 0.604971,
+        "definition_cos_from": 0.559371
+      }
+    },
+    {
+      "l4_id": "RAI4-1399",
+      "label_en": "Autonomous replication",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "move": {
+        "l4_id": "RAI4-1399",
+        "label_en": "Autonomous replication",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-INT-08",
+        "score_from": 0.564938,
+        "score_to": 0.621516,
+        "improvement": 0.056578,
+        "keyword_cos": 0.042016,
+        "definition_cos_to": 0.613257,
+        "definition_cos_from": 0.499181
+      }
+    },
+    {
+      "l4_id": "RAI4-1428",
+      "label_en": "Harmful responses",
+      "old_primary_l3_id": "RAI3-A-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-1428",
+        "label_en": "Harmful responses",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.614148,
+        "score_to": 0.647965,
+        "improvement": 0.033817,
+        "keyword_cos": 0.029505,
+        "definition_cos_to": 0.552346,
+        "definition_cos_from": 0.525791
+      }
+    },
+    {
+      "l4_id": "RAI4-1434",
+      "label_en": "Dehumanisation and objectification",
+      "old_primary_l3_id": "RAI3-G-INT-06",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1434",
+        "label_en": "Dehumanisation and objectification",
+        "iter": 0,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.612107,
+        "score_to": 0.642658,
+        "improvement": 0.030551,
+        "keyword_cos": 0.042374,
+        "definition_cos_to": 0.705595,
+        "definition_cos_from": 0.627897
+      }
+    },
+    {
+      "l4_id": "RAI4-1462",
+      "label_en": "Inappropriate degree of transparency to end users",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1462",
+        "label_en": "Inappropriate degree of transparency to end users",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.65669,
+        "score_to": 0.685635,
+        "improvement": 0.028945,
+        "keyword_cos": 0.05477,
+        "definition_cos_to": 0.689636,
+        "definition_cos_from": 0.592531
+      }
+    },
+    {
+      "l4_id": "RAI4-1465",
+      "label_en": "Lack of data understanding",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1465",
+        "label_en": "Lack of data understanding",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.613443,
+        "score_to": 0.644051,
+        "improvement": 0.030608,
+        "keyword_cos": 0.04569,
+        "definition_cos_to": 0.610293,
+        "definition_cos_from": 0.572441
+      }
+    },
+    {
+      "l4_id": "RAI4-1468",
+      "label_en": "Insufficient data representation",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-05",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Inconsistency",
+        "l3_label_ko": "비일관성"
+      },
+      "move": {
+        "l4_id": "RAI4-1468",
+        "label_en": "Insufficient data representation",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-05",
+        "score_from": 0.576503,
+        "score_to": 0.656617,
+        "improvement": 0.080114,
+        "keyword_cos": 0.078427,
+        "definition_cos_to": 0.648274,
+        "definition_cos_from": 0.521208
+      }
+    },
+    {
+      "l4_id": "RAI4-1469",
+      "label_en": "Problems of synthetic data",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "move": {
+        "l4_id": "RAI4-1469",
+        "label_en": "Problems of synthetic data",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-03",
+        "score_from": 0.567724,
+        "score_to": 0.629268,
+        "improvement": 0.061543,
+        "keyword_cos": 0.059217,
+        "definition_cos_to": 0.568425,
+        "definition_cos_from": 0.489223
+      }
+    },
+    {
+      "l4_id": "RAI4-1480",
+      "label_en": "Procedural AI hazards",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1480",
+        "label_en": "Procedural AI hazards",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.631311,
+        "score_to": 0.670519,
+        "improvement": 0.039209,
+        "keyword_cos": 0.07205,
+        "definition_cos_to": 0.633481,
+        "definition_cos_from": 0.541299
+      }
+    },
+    {
+      "l4_id": "RAI4-1494",
+      "label_en": "Harmful fine-tuning of open-weight models",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1494",
+        "label_en": "Harmful fine-tuning of open-weight models",
+        "iter": 0,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.552917,
+        "score_to": 0.577506,
+        "improvement": 0.024589,
+        "keyword_cos": 0.057006,
+        "definition_cos_to": 0.498977,
+        "definition_cos_from": 0.473948
+      }
+    },
+    {
+      "l4_id": "RAI4-1500",
+      "label_en": "Capability identification and measurement difficulty",
+      "old_primary_l3_id": "RAI3-G-SYS-07",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1500",
+        "label_en": "Capability identification and measurement difficulty",
+        "iter": 0,
+        "from": "RAI3-G-SYS-07",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.635378,
+        "score_to": 0.668961,
+        "improvement": 0.033583,
+        "keyword_cos": 0.041997,
+        "definition_cos_to": 0.625904,
+        "definition_cos_from": 0.544024
+      }
+    },
+    {
+      "l4_id": "RAI4-1507",
+      "label_en": "Cross-lingual benchmark contamination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1507",
+        "label_en": "Cross-lingual benchmark contamination",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.592068,
+        "score_to": 0.620779,
+        "improvement": 0.028712,
+        "keyword_cos": 0.046795,
+        "definition_cos_to": 0.54499,
+        "definition_cos_from": 0.530544
+      }
+    },
+    {
+      "l4_id": "RAI4-1509",
+      "label_en": "Annotation contamination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1509",
+        "label_en": "Annotation contamination",
+        "iter": 0,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.584597,
+        "score_to": 0.609287,
+        "improvement": 0.02469,
+        "keyword_cos": 0.03671,
+        "definition_cos_to": 0.567921,
+        "definition_cos_from": 0.537775
+      }
+    },
+    {
+      "l4_id": "RAI4-1540",
+      "label_en": "Frontier-agent persuasive capability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Network Effects",
+        "l3_label_ko": "네트워크 효과"
+      },
+      "move": {
+        "l4_id": "RAI4-1540",
+        "label_en": "Frontier-agent persuasive capability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-A-SYS-03",
+        "score_from": 0.60891,
+        "score_to": 0.633767,
+        "improvement": 0.024857,
+        "keyword_cos": 0.017648,
+        "definition_cos_to": 0.592537,
+        "definition_cos_from": 0.539348
+      }
+    },
+    {
+      "l4_id": "RAI4-1544",
+      "label_en": "AI system bypassing a sandbox environment",
+      "old_primary_l3_id": "RAI3-G-INT-11",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1544",
+        "label_en": "AI system bypassing a sandbox environment",
+        "iter": 0,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.592011,
+        "score_to": 0.61776,
+        "improvement": 0.025748,
+        "keyword_cos": 0.015457,
+        "definition_cos_to": 0.591563,
+        "definition_cos_from": 0.560597
+      }
+    },
+    {
+      "l4_id": "RAI4-1552",
+      "label_en": "Overreliance on AI system undermining user autonomy",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1552",
+        "label_en": "Overreliance on AI system undermining user autonomy",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.674991,
+        "score_to": 0.707589,
+        "improvement": 0.032599,
+        "keyword_cos": 0.04195,
+        "definition_cos_to": 0.708304,
+        "definition_cos_from": 0.609603
+      }
+    },
+    {
+      "l4_id": "RAI4-1627",
+      "label_en": "Unhealthy or dangerous human-EAI relationships",
+      "old_primary_l3_id": "RAI3-A-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1627",
+        "label_en": "Unhealthy or dangerous human-EAI relationships",
+        "iter": 0,
+        "from": "RAI3-A-SYS-03",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.600567,
+        "score_to": 0.656214,
+        "improvement": 0.055647,
+        "keyword_cos": 0.041941,
+        "definition_cos_to": 0.604723,
+        "definition_cos_from": 0.508273
+      }
+    },
+    {
+      "l4_id": "RAI4-1631",
+      "label_en": "Malicious and indirect",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-1631",
+        "label_en": "Malicious and indirect",
+        "iter": 0,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.565185,
+        "score_to": 0.611018,
+        "improvement": 0.045833,
+        "keyword_cos": 0.026735,
+        "definition_cos_to": 0.652189,
+        "definition_cos_from": 0.613332
+      }
+    },
+    {
+      "l4_id": "RAI4-1670",
+      "label_en": "Persistent agent-memory poisoning",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Network Effects",
+        "l3_label_ko": "네트워크 효과"
+      },
+      "move": {
+        "l4_id": "RAI4-1670",
+        "label_en": "Persistent agent-memory poisoning",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-A-SYS-03",
+        "score_from": 0.560674,
+        "score_to": 0.608928,
+        "improvement": 0.048253,
+        "keyword_cos": 0.028046,
+        "definition_cos_to": 0.625822,
+        "definition_cos_from": 0.516008
+      }
+    },
+    {
+      "l4_id": "RAI4-1677",
+      "label_en": "Conceptual deception inducing unsafe action",
+      "old_primary_l3_id": "RAI3-G-SYS-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-1677",
+        "label_en": "Conceptual deception inducing unsafe action",
+        "iter": 0,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.586412,
+        "score_to": 0.615802,
+        "improvement": 0.029389,
+        "keyword_cos": 0.028229,
+        "definition_cos_to": 0.606294,
+        "definition_cos_from": 0.58489
+      }
+    },
+    {
+      "l4_id": "RAI4-1689",
+      "label_en": "Sim-to-real / distributional-shift exploitation",
+      "old_primary_l3_id": "RAI3-G-INT-09",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1689",
+        "label_en": "Sim-to-real / distributional-shift exploitation",
+        "iter": 0,
+        "from": "RAI3-G-INT-09",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.547709,
+        "score_to": 0.603815,
+        "improvement": 0.056106,
+        "keyword_cos": 0.017425,
+        "definition_cos_to": 0.551431,
+        "definition_cos_from": 0.506943
+      }
+    },
+    {
+      "l4_id": "RAI4-1694",
+      "label_en": "Long-horizon planning hallucination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Network Effects",
+        "l3_label_ko": "네트워크 효과"
+      },
+      "move": {
+        "l4_id": "RAI4-1694",
+        "label_en": "Long-horizon planning hallucination",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-A-SYS-03",
+        "score_from": 0.591464,
+        "score_to": 0.621709,
+        "improvement": 0.030245,
+        "keyword_cos": 0.060708,
+        "definition_cos_to": 0.627419,
+        "definition_cos_from": 0.530605
+      }
+    },
+    {
+      "l4_id": "RAI4-1704",
+      "label_en": "Lack of control enforcement",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-1704",
+        "label_en": "Lack of control enforcement",
+        "iter": 0,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.661137,
+        "score_to": 0.683323,
+        "improvement": 0.022185,
+        "keyword_cos": 0.066939,
+        "definition_cos_to": 0.69537,
+        "definition_cos_from": 0.632378
+      }
+    },
+    {
+      "l4_id": "RAI4-1717",
+      "label_en": "Lack of validity and reliability",
+      "old_primary_l3_id": "RAI3-G-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1717",
+        "label_en": "Lack of validity and reliability",
+        "iter": 0,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.655043,
+        "score_to": 0.701284,
+        "improvement": 0.046242,
+        "keyword_cos": 0.044137,
+        "definition_cos_to": 0.692715,
+        "definition_cos_from": 0.607888
+      }
+    },
+    {
+      "l4_id": "RAI4-1721",
+      "label_en": "Lack of explainability and interpretability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1721",
+        "label_en": "Lack of explainability and interpretability",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.657346,
+        "score_to": 0.700658,
+        "improvement": 0.043311,
+        "keyword_cos": 0.050177,
+        "definition_cos_to": 0.701002,
+        "definition_cos_from": 0.652126
+      }
+    },
+    {
+      "l4_id": "RAI4-1724",
+      "label_en": "Fatal physical harm",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-03",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Self-harm",
+        "l3_label_ko": "자해"
+      },
+      "move": {
+        "l4_id": "RAI4-1724",
+        "label_en": "Fatal physical harm",
+        "iter": 0,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-INT-03",
+        "score_from": 0.601376,
+        "score_to": 0.638003,
+        "improvement": 0.036628,
+        "keyword_cos": 0.092897,
+        "definition_cos_to": 0.649319,
+        "definition_cos_from": 0.613447
+      }
+    },
+    {
+      "l4_id": "RAI4-0030",
+      "label_en": "Cross-application data exfiltration",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-06",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Privacy",
+        "l3_label_ko": "개인정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "move": {
+        "l4_id": "RAI4-0030",
+        "label_en": "Cross-application data exfiltration",
+        "iter": 1,
+        "from": "RAI3-G-INT-06",
+        "to": "RAI3-A-SYS-01",
+        "score_from": 0.638432,
+        "score_to": 0.65983,
+        "improvement": 0.021398,
+        "keyword_cos": 0.024865,
+        "definition_cos_to": 0.683481,
+        "definition_cos_from": 0.624778
+      }
+    },
+    {
+      "l4_id": "RAI4-0041",
+      "label_en": "Coverage-depth illusion in agent benchmarks",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-02",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Accountability",
+        "l3_label_ko": "책임 소재 불명확"
+      },
+      "move": {
+        "l4_id": "RAI4-0041",
+        "label_en": "Coverage-depth illusion in agent benchmarks",
+        "iter": 1,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-A-SYS-02",
+        "score_from": 0.578674,
+        "score_to": 0.610913,
+        "improvement": 0.032239,
+        "keyword_cos": 0.067212,
+        "definition_cos_to": 0.575716,
+        "definition_cos_from": 0.534601
+      }
+    },
+    {
+      "l4_id": "RAI4-0062",
+      "label_en": "System card disclosure gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0062",
+        "label_en": "System card disclosure gap",
+        "iter": 1,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.602195,
+        "score_to": 0.63134,
+        "improvement": 0.029144,
+        "keyword_cos": 0.016354,
+        "definition_cos_to": 0.620629,
+        "definition_cos_from": 0.600173
+      }
+    },
+    {
+      "l4_id": "RAI4-0065",
+      "label_en": "Certification capture",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0065",
+        "label_en": "Certification capture",
+        "iter": 1,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.598856,
+        "score_to": 0.628997,
+        "improvement": 0.03014,
+        "keyword_cos": 0.026985,
+        "definition_cos_to": 0.615475,
+        "definition_cos_from": 0.597348
+      }
+    },
+    {
+      "l4_id": "RAI4-0084",
+      "label_en": "Evaluation-shopping risk",
+      "old_primary_l3_id": "RAI3-G-INT-11",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0084",
+        "label_en": "Evaluation-shopping risk",
+        "iter": 1,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.594609,
+        "score_to": 0.622234,
+        "improvement": 0.027625,
+        "keyword_cos": 0.026418,
+        "definition_cos_to": 0.62931,
+        "definition_cos_from": 0.5768
+      }
+    },
+    {
+      "l4_id": "RAI4-0161",
+      "label_en": "Cognitive offloading risk",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0161",
+        "label_en": "Cognitive offloading risk",
+        "iter": 1,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.647318,
+        "score_to": 0.671661,
+        "improvement": 0.024343,
+        "keyword_cos": 0.032006,
+        "definition_cos_to": 0.659057,
+        "definition_cos_from": 0.589441
+      }
+    },
+    {
+      "l4_id": "RAI4-0363",
+      "label_en": "Minority-value erasure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-0363",
+        "label_en": "Minority-value erasure",
+        "iter": 1,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.562311,
+        "score_to": 0.584225,
+        "improvement": 0.021914,
+        "keyword_cos": 0.054478,
+        "definition_cos_to": 0.54906,
+        "definition_cos_from": 0.507073
+      }
+    },
+    {
+      "l4_id": "RAI4-0499",
+      "label_en": "Dependency on providers",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0499",
+        "label_en": "Dependency on providers",
+        "iter": 1,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.663074,
+        "score_to": 0.688356,
+        "improvement": 0.025282,
+        "keyword_cos": 0.050365,
+        "definition_cos_to": 0.657281,
+        "definition_cos_from": 0.606567
+      }
+    },
+    {
+      "l4_id": "RAI4-0510",
+      "label_en": "Global AI research and development divides",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0510",
+        "label_en": "Global AI research and development divides",
+        "iter": 1,
+        "from": "RAI3-A-SYS-04",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.636156,
+        "score_to": 0.658465,
+        "improvement": 0.022309,
+        "keyword_cos": 0.019313,
+        "definition_cos_to": 0.622839,
+        "definition_cos_from": 0.546428
+      }
+    },
+    {
+      "l4_id": "RAI4-0690",
+      "label_en": "Toxicity in LLM malicious use",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-0690",
+        "label_en": "Toxicity in LLM malicious use",
+        "iter": 1,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.68465,
+        "score_to": 0.708613,
+        "improvement": 0.023963,
+        "keyword_cos": 0.02226,
+        "definition_cos_to": 0.665418,
+        "definition_cos_from": 0.635101
+      }
+    },
+    {
+      "l4_id": "RAI4-0705",
+      "label_en": "Violence-inciting dangerous content",
+      "old_primary_l3_id": "RAI3-G-INT-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-0705",
+        "label_en": "Violence-inciting dangerous content",
+        "iter": 1,
+        "from": "RAI3-G-INT-03",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.705734,
+        "score_to": 0.731636,
+        "improvement": 0.025902,
+        "keyword_cos": 0.118585,
+        "definition_cos_to": 0.795948,
+        "definition_cos_from": 0.702679
+      }
+    },
+    {
+      "l4_id": "RAI4-0817",
+      "label_en": "Knowledge gaps",
+      "old_primary_l3_id": "RAI3-G-SYS-03",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-05",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Inconsistency",
+        "l3_label_ko": "비일관성"
+      },
+      "move": {
+        "l4_id": "RAI4-0817",
+        "label_en": "Knowledge gaps",
+        "iter": 1,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-05",
+        "score_from": 0.600464,
+        "score_to": 0.622128,
+        "improvement": 0.021664,
+        "keyword_cos": 0.020086,
+        "definition_cos_to": 0.5572,
+        "definition_cos_from": 0.548991
+      }
+    },
+    {
+      "l4_id": "RAI4-0887",
+      "label_en": "Physical and psychological harms",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-03",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Self-harm",
+        "l3_label_ko": "자해"
+      },
+      "move": {
+        "l4_id": "RAI4-0887",
+        "label_en": "Physical and psychological harms",
+        "iter": 1,
+        "from": "RAI3-G-INT-01",
+        "to": "RAI3-G-INT-03",
+        "score_from": 0.669831,
+        "score_to": 0.696129,
+        "improvement": 0.026298,
+        "keyword_cos": 0.056698,
+        "definition_cos_to": 0.641312,
+        "definition_cos_from": 0.60926
+      }
+    },
+    {
+      "l4_id": "RAI4-0936",
+      "label_en": "Toxicity and abusive content",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-0936",
+        "label_en": "Toxicity and abusive content",
+        "iter": 1,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.692897,
+        "score_to": 0.716374,
+        "improvement": 0.023478,
+        "keyword_cos": 0.04247,
+        "definition_cos_to": 0.751168,
+        "definition_cos_from": 0.722062
+      }
+    },
+    {
+      "l4_id": "RAI4-0963",
+      "label_en": "Loss of autonomy",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0963",
+        "label_en": "Loss of autonomy",
+        "iter": 1,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.719097,
+        "score_to": 0.740879,
+        "improvement": 0.021782,
+        "keyword_cos": 0.048621,
+        "definition_cos_to": 0.739338,
+        "definition_cos_from": 0.690544
+      }
+    },
+    {
+      "l4_id": "RAI4-1033",
+      "label_en": "Degree of transparency and explainability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1033",
+        "label_en": "Degree of transparency and explainability",
+        "iter": 1,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.646289,
+        "score_to": 0.66714,
+        "improvement": 0.020851,
+        "keyword_cos": 0.024353,
+        "definition_cos_to": 0.65415,
+        "definition_cos_from": 0.636934
+      }
+    },
+    {
+      "l4_id": "RAI4-1043",
+      "label_en": "Implementation failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-1043",
+        "label_en": "Implementation failure",
+        "iter": 1,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.62195,
+        "score_to": 0.642226,
+        "improvement": 0.020275,
+        "keyword_cos": 0.0181,
+        "definition_cos_to": 0.632346,
+        "definition_cos_from": 0.610164
+      }
+    },
+    {
+      "l4_id": "RAI4-1221",
+      "label_en": "Algorithmic bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-04",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Hate and Unfairness",
+        "l3_label_ko": "혐오·차별"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "move": {
+        "l4_id": "RAI4-1221",
+        "label_en": "Algorithmic bias",
+        "iter": 1,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-10",
+        "score_from": 0.643973,
+        "score_to": 0.679699,
+        "improvement": 0.035726,
+        "keyword_cos": 0.067158,
+        "definition_cos_to": 0.616774,
+        "definition_cos_from": 0.595809
+      }
+    },
+    {
+      "l4_id": "RAI4-1345",
+      "label_en": "Future AI uncontrollability",
+      "old_primary_l3_id": "RAI3-A-SYS-01",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1345",
+        "label_en": "Future AI uncontrollability",
+        "iter": 1,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.668207,
+        "score_to": 0.689037,
+        "improvement": 0.020831,
+        "keyword_cos": 0.015655,
+        "definition_cos_to": 0.661359,
+        "definition_cos_from": 0.59012
+      }
+    },
+    {
+      "l4_id": "RAI4-1433",
+      "label_en": "Irreversible societal dependency on AI",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1433",
+        "label_en": "Irreversible societal dependency on AI",
+        "iter": 1,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.675755,
+        "score_to": 0.699864,
+        "improvement": 0.024109,
+        "keyword_cos": 0.017637,
+        "definition_cos_to": 0.684618,
+        "definition_cos_from": 0.63232
+      }
+    },
+    {
+      "l4_id": "RAI4-1473",
+      "label_en": "Opacity-impeded model debugging",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-07",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Overconfidence",
+        "l3_label_ko": "과도한 확신"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-1473",
+        "label_en": "Opacity-impeded model debugging",
+        "iter": 1,
+        "from": "RAI3-G-SYS-07",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.646394,
+        "score_to": 0.670777,
+        "improvement": 0.024383,
+        "keyword_cos": 0.016555,
+        "definition_cos_to": 0.650296,
+        "definition_cos_from": 0.578527
+      }
+    },
+    {
+      "l4_id": "RAI4-1505",
+      "label_en": "Benchmark leakage and data contamination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1505",
+        "label_en": "Benchmark leakage and data contamination",
+        "iter": 1,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.62444,
+        "score_to": 0.648256,
+        "improvement": 0.023816,
+        "keyword_cos": 0.079928,
+        "definition_cos_to": 0.583274,
+        "definition_cos_from": 0.538845
+      }
+    },
+    {
+      "l4_id": "RAI4-1527",
+      "label_en": "Misuse of AI model by user-performed persuasion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "move": {
+        "l4_id": "RAI4-1527",
+        "label_en": "Misuse of AI model by user-performed persuasion",
+        "iter": 1,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-08",
+        "score_from": 0.631244,
+        "score_to": 0.651348,
+        "improvement": 0.020103,
+        "keyword_cos": 0.021248,
+        "definition_cos_to": 0.609774,
+        "definition_cos_from": 0.548102
+      }
+    },
+    {
+      "l4_id": "RAI4-1598",
+      "label_en": "Harmful code generation",
+      "old_primary_l3_id": "RAI3-G-INT-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-02",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Sexual",
+        "l3_label_ko": "성적 콘텐츠"
+      },
+      "move": {
+        "l4_id": "RAI4-1598",
+        "label_en": "Harmful code generation",
+        "iter": 1,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-02",
+        "score_from": 0.629932,
+        "score_to": 0.652457,
+        "improvement": 0.022526,
+        "keyword_cos": 0.022119,
+        "definition_cos_to": 0.609586,
+        "definition_cos_from": 0.571379
+      }
+    },
+    {
+      "l4_id": "RAI4-0059",
+      "label_en": "Documentation omission",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0059",
+        "label_en": "Documentation omission",
+        "iter": 2,
+        "from": "RAI3-G-INT-11",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.585208,
+        "score_to": 0.615071,
+        "improvement": 0.029863,
+        "keyword_cos": 0.027249,
+        "definition_cos_to": 0.59382,
+        "definition_cos_from": 0.593219
+      }
+    },
+    {
+      "l4_id": "RAI4-0060",
+      "label_en": "Model card incompleteness",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "new_primary_l3_id": "RAI3-A-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0060",
+        "label_en": "Model card incompleteness",
+        "iter": 2,
+        "from": "RAI3-A-SYS-01",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.5818,
+        "score_to": 0.624985,
+        "improvement": 0.043185,
+        "keyword_cos": 0.02603,
+        "definition_cos_to": 0.60507,
+        "definition_cos_from": 0.56369
+      }
+    },
+    {
+      "l4_id": "RAI4-0079",
+      "label_en": "Context-of-use risk assessment failure",
+      "old_primary_l3_id": "RAI3-G-SYS-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0079",
+        "label_en": "Context-of-use risk assessment failure",
+        "iter": 2,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.621345,
+        "score_to": 0.646428,
+        "improvement": 0.025083,
+        "keyword_cos": 0.044507,
+        "definition_cos_to": 0.628066,
+        "definition_cos_from": 0.620549
+      }
+    },
+    {
+      "l4_id": "RAI4-0083",
+      "label_en": "Benchmark governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-03",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Misinformation/Disinformation",
+        "l3_label_ko": "허위 정보/오정보"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0083",
+        "label_en": "Benchmark governance failure",
+        "iter": 2,
+        "from": "RAI3-G-SYS-03",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.550133,
+        "score_to": 0.604795,
+        "improvement": 0.054662,
+        "keyword_cos": 0.017353,
+        "definition_cos_to": 0.566635,
+        "definition_cos_from": 0.493875
+      }
+    },
+    {
+      "l4_id": "RAI4-0607",
+      "label_en": "Non-disclosure of AI-generated content",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-10",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Anthropomorphism",
+        "l3_label_ko": "의인화"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-09",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Non-Contestability",
+        "l3_label_ko": "이의제기 차단"
+      },
+      "move": {
+        "l4_id": "RAI4-0607",
+        "label_en": "Non-disclosure of AI-generated content",
+        "iter": 2,
+        "from": "RAI3-G-INT-10",
+        "to": "RAI3-G-SYS-09",
+        "score_from": 0.59396,
+        "score_to": 0.614033,
+        "improvement": 0.020073,
+        "keyword_cos": 0.078911,
+        "definition_cos_to": 0.615446,
+        "definition_cos_from": 0.576878
+      }
+    },
+    {
+      "l4_id": "RAI4-1042",
+      "label_en": "System-design failure",
+      "old_primary_l3_id": "RAI3-G-SYS-07",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-1042",
+        "label_en": "System-design failure",
+        "iter": 2,
+        "from": "RAI3-G-SYS-07",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.630975,
+        "score_to": 0.657534,
+        "improvement": 0.026559,
+        "keyword_cos": 0.022495,
+        "definition_cos_to": 0.637206,
+        "definition_cos_from": 0.597257
+      }
+    },
+    {
+      "l4_id": "RAI4-1140",
+      "label_en": "Economic standing harms",
+      "old_primary_l3_id": "RAI3-A-SYS-05",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-03",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Self-harm",
+        "l3_label_ko": "자해"
+      },
+      "move": {
+        "l4_id": "RAI4-1140",
+        "label_en": "Economic standing harms",
+        "iter": 2,
+        "from": "RAI3-A-SYS-05",
+        "to": "RAI3-G-INT-03",
+        "score_from": 0.637308,
+        "score_to": 0.65772,
+        "improvement": 0.020413,
+        "keyword_cos": 0.094307,
+        "definition_cos_to": 0.610395,
+        "definition_cos_from": 0.60565
+      }
+    },
+    {
+      "l4_id": "RAI4-1177",
+      "label_en": "Offensive content generation",
+      "old_primary_l3_id": "RAI3-G-INT-04",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-01",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Violence",
+        "l3_label_ko": "폭력"
+      },
+      "move": {
+        "l4_id": "RAI4-1177",
+        "label_en": "Offensive content generation",
+        "iter": 2,
+        "from": "RAI3-G-INT-04",
+        "to": "RAI3-G-INT-01",
+        "score_from": 0.675243,
+        "score_to": 0.703338,
+        "improvement": 0.028096,
+        "keyword_cos": 0.021911,
+        "definition_cos_to": 0.687472,
+        "definition_cos_from": 0.674385
+      }
+    },
+    {
+      "l4_id": "RAI4-1599",
+      "label_en": "Untraceable attribution",
+      "old_primary_l3_id": "RAI3-G-INT-08",
+      "old_hold_semantic_path": null,
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-11",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Policy Exposure",
+        "l3_label_ko": "정책 노출"
+      },
+      "move": {
+        "l4_id": "RAI4-1599",
+        "label_en": "Untraceable attribution",
+        "iter": 2,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-INT-11",
+        "score_from": 0.571556,
+        "score_to": 0.592323,
+        "improvement": 0.020767,
+        "keyword_cos": 0.052197,
+        "definition_cos_to": 0.542196,
+        "definition_cos_from": 0.529016
+      }
+    },
+    {
+      "l4_id": "RAI4-0001",
+      "label_en": "Reward hacking by autonomous agents",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-A-SYS",
+        "l3_id": "RAI3-A-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Excessive Authority",
+        "l3_label_ko": "과도한 권한"
+      },
+      "move": {
+        "l4_id": "RAI4-0001",
+        "label_en": "Reward hacking by autonomous agents",
+        "iter": 3,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-A-SYS-01",
+        "score_from": 0.635254,
+        "score_to": 0.655376,
+        "improvement": 0.020122,
+        "keyword_cos": 0.050036,
+        "definition_cos_to": 0.63757,
+        "definition_cos_from": 0.60529
+      }
+    },
+    {
+      "l4_id": "RAI4-0067",
+      "label_en": "Assurance case failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-07",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Overconfidence",
+        "l3_label_ko": "과도한 확신"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0067",
+        "label_en": "Assurance case failure",
+        "iter": 3,
+        "from": "RAI3-G-SYS-07",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.634867,
+        "score_to": 0.660962,
+        "improvement": 0.026095,
+        "keyword_cos": 0.037913,
+        "definition_cos_to": 0.628119,
+        "definition_cos_from": 0.616922
+      }
+    },
+    {
+      "l4_id": "RAI4-0107",
+      "label_en": "Frontier model release governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-08",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Copyrights",
+        "l3_label_ko": "저작권"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-01",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Over-Refusal",
+        "l3_label_ko": "과도한 거절"
+      },
+      "move": {
+        "l4_id": "RAI4-0107",
+        "label_en": "Frontier model release governance failure",
+        "iter": 3,
+        "from": "RAI3-G-INT-08",
+        "to": "RAI3-G-SYS-01",
+        "score_from": 0.54884,
+        "score_to": 0.616465,
+        "improvement": 0.067625,
+        "keyword_cos": 0.026379,
+        "definition_cos_to": 0.559997,
+        "definition_cos_from": 0.474117
+      }
+    },
+    {
+      "l4_id": "RAI4-0639",
+      "label_en": "Physical harm and injury risks",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_hold_semantic_path": {
+        "l2_id": "RAI2-G-SYS",
+        "l3_id": "RAI3-G-SYS-08",
+        "l2_label_en": "System Safety",
+        "l2_label_ko": "시스템 안전성",
+        "l3_label_en": "Goal Misalignment",
+        "l3_label_ko": "목표 불일치"
+      },
+      "new_primary_l3_id": "RAI3-G-HLD-01",
+      "new_hold_semantic_path": {
+        "l2_id": "RAI2-G-INT",
+        "l3_id": "RAI3-G-INT-03",
+        "l2_label_en": "Interaction Safety",
+        "l2_label_ko": "상호작용 안전성",
+        "l3_label_en": "Self-harm",
+        "l3_label_ko": "자해"
+      },
+      "move": {
+        "l4_id": "RAI4-0639",
+        "label_en": "Physical harm and injury risks",
+        "iter": 3,
+        "from": "RAI3-G-SYS-08",
+        "to": "RAI3-G-INT-03",
+        "score_from": 0.632861,
+        "score_to": 0.653248,
+        "improvement": 0.020388,
+        "keyword_cos": 0.091861,
+        "definition_cos_to": 0.593592,
+        "definition_cos_from": 0.554965
+      }
+    }
+  ],
+  "upstream_changelog": []
+}

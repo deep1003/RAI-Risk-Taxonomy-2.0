@@ -1,0 +1,58 @@
+{
+ "release_id": "v2.17.2-rc",
+ "source_release": "v2.17.1",
+ "status": "release_candidate_pending_human_review",
+ "method": "expert L4 label dedup: exact-duplicate label clusters adjudicated card-by-card",
+ "counts": {
+  "l4_total_ids": 1711,
+  "active": 1660,
+  "retired_in_this_release": 51,
+  "renamed": 82,
+  "physical_active": 189
+ },
+ "policy": "Retired IDs preserved with merged_into and full provenance; canonical cards union merged references and record merged_labels aliases; all changes human_review_status=pending; Physical source cards untouched. Commit/push left to the user. Embedding artifacts must be regenerated for active cards before the next reliability rerun.",
+ "post_dedup_audit": {
+  "encoder": "intfloat/multilingual-e5-small (encoder transfer)",
+  "guarded_moves": 2,
+  "new_hold": 1,
+  "reliability_pre_post": {
+   "all_top1": [
+    60.6,
+    61.1
+   ],
+   "nonhold_top1": [
+    72.9,
+    72.9
+   ],
+   "permutation_p": 0.0002
+  },
+  "interpretation": "Dedup did not degrade geometry; only 2 residual guarded moves. BGE-M3 rerun recommended before publication."
+ },
+ "revival_pass": {
+  "revived": 12,
+  "policy": "cards with an articulable subtle difference are preserved with unique labels; only verbatim or same-lineage duplicates remain merged",
+  "date": "2026-07-22"
+ },
+ "post_revival_audit": {
+  "guarded_moves": 0,
+  "reliability": {
+   "all_top1": 60.8,
+   "nonhold_top1": 73.2,
+   "permutation_p": 0.0002
+  },
+  "interpretation": "After reviving 12 subtle-difference cards, the guarded audit proposes no further moves; revived cards remain at their prior placements."
+ },
+ "label_noise_remediation": {
+  "date": "2026-07-22",
+  "renamed": 182,
+  "secondary_mechanism_tags": 8,
+  "lineage_merges": 3,
+  "types": [
+   "overly generic names",
+   "near-duplicate names",
+   "parenthetical or compound labels",
+   "domain-topic-like names",
+   "multi-mechanism labels"
+  ]
+ }
+}

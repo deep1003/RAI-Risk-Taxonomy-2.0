@@ -119,6 +119,7 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .active-filter { margin-bottom: 10px; padding: 9px 12px; border-radius: 8px; background: #eef4ff; color: #3538cd; font-size: 11px; }
 .cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .risk-card { display: flex; flex-direction: column; min-height: 220px; padding: 14px; border: 1px solid var(--line); border-top: 3px solid var(--card-accent, var(--ink)); border-radius: 10px; background: white; box-shadow: 0 1px 2px rgba(16,24,40,.04); cursor: pointer; transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease; }
+.risk-card--retired { background: #fafafa; border-style: dashed; }
 .risk-card:hover { transform: translateY(-2px); border-color: #c4c9d2; box-shadow: 0 8px 20px rgba(16,24,40,.08); }
 .risk-card:focus-visible { outline: 3px solid rgba(56,103,214,.25); outline-offset: 2px; }
 .risk-card__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
@@ -131,7 +132,9 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .status--locked { color: #b42318; background: #fef3f2; }
 .status--proposed { color: #5925dc; background: #f4f3ff; }
 .status--decision { color: #b54708; background: #fffaeb; }
+.status--merged { color: #475467; background: #f2f4f7; }
 .risk-card h3 { margin: 12px 0 7px; font-size: 14px; line-height: 1.35; letter-spacing: -.012em; }
+.merged-note { margin: -2px 0 8px; color: #667085; font-size: 10px; font-weight: 700; }
 .risk-card__definition { display: -webkit-box; overflow: hidden; margin: 0; color: #667085; font-size: 11px; line-height: 1.55; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
 .risk-card__definition span { color: #475467; }
 .risk-card__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; }

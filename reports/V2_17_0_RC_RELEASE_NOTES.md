@@ -35,3 +35,40 @@
 ## 커밋 안내 (사용자 직접 수행)
 - 검토 후: `git add public/data/releases/v2.17.0-rc reports/validation/v2_17_0_rc_audit_e5_guarded reports/validation/v2_17_0_rc_audit_e5 scripts/run_v2_17_audit_* reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex reports/V2_17_0_RC_RELEASE_NOTES.md && git commit -m "Add v2.17.0-rc definition revision and guarded constrained-EM audit" && git push`
 - 주의: index.html, assets/site.js의 기존 수정분(v2.16.0 작업)은 이 세션에서 건드리지 않았으므로 별도 판단
+
+## 추가 작업 (2026-07-22 야간, 논문판 재구성)
+- **논문판 신규 파일**: `reports/latex/rai_risk_taxonomy_technical_report_2_0_en_paper.tex` → `reports/pdf/..._en_paper.pdf` (24p). 기존 `..._en.tex`(v2.17.1 상태)는 무수정 보존
+- 구조: Introduction / Evidence corpus / Classification methodology / Results / Discussion / Conclusion + Appendix A(버전 이력) B(HOLD 정책) C(탐색적 분석: L3 후보·반사실 시뮬레이션·벡터공간) D(과거 신뢰성 결과) E(반올림 정책)
+- 중복 제거: 신뢰성 표는 v2.17 BGE-M3 표를 본문 대표로, v2.12/2.14/2.15 표·그림은 Appendix D로 이동. HOLD 사유 표는 v2.17(본문)과 v2.12(부록) 각 1회만
+- 한글 깨짐 해결: 플랫폼 감지 폰트 폴백(Mac은 Times/Apple SD Gothic Neo, 그 외 TeX Gyre/Noto CJK) + 한글 구간 \ko{} 래핑. 표 넘침은 tabularx 전환·\small로 해결 (잔여 overfull 2.5pt 1건)
+- Discussion 5.3에 cross-cutting risk / category overlap / boundary case / multi-label classification / polyhierarchy 문단(영문) 추가
+- 한글판 `..._ko.tex` '보류 55개와 불확실성' 절에 동일 취지 한글 문단 추가. kotex 부재로 샌드박스 컴파일 불가, Mac에서 재컴파일 필요
+
+## 추가 작업 (2026-07-22, L4 라벨 중복 정리 → v2.17.2-rc)
+- 동일 정규화 라벨 클러스터 62개(약 150카드) 전수 실사
+- 통폐합 58건 (status=retired, merged_into, 레퍼런스 합집합, merged_labels 별칭 보존) → 활성 1,653개
+- 고유 명칭 부여 82건 (EN·KO, 원 라벨 label_revision에 보존), 정본 정의 개선 4건
+- 활성 카드 라벨 정확 중복 0건 확인, Physical 무수정 (활성 189)
+- 판정 기록: reports/data_quality/l4_label_dedup_v2.17.2/DEDUP_DECISIONS.md
+- 후속: 임베딩 재생성 및 신뢰성 재실행 필요, HOLD 수치·사이트 데이터는 v2.17.2 확정 시 갱신
+
+## 추가 작업 (2026-07-22, v2.17.2-rc 재배치·신뢰성 재실행)
+- 통폐합 반영 활성 1,653카드 재임베딩 (e5-small encoder transfer, BGE-M3는 로컬 재실행 권장)
+- 가드 constrained-EM 재실행. 이동 제안 2건만 발생 (Algorithmic radicalisation → Political Neutrality, Accountability implementation gap → Accountability), 전건 HOLD 적용
+- 신뢰성 재검증. 전체 top-1 60.6→61.1%, non-HOLD 72.9% 유지, perm p=0.0002 — 통폐합이 의미 구조를 훼손하지 않음을 확인
+- 산출물: reports/validation/v2_17_2_rc_audit_e5_guarded/, 임베딩 public/data/releases/v2.17.2-rc/card_embeddings_*
+
+## 추가 작업 (2026-07-22, 통폐합 재심사·부활 패스)
+- 카드 보존 우선 원칙 적용. 통폐합 58건 재심사 → 미묘한 차이가 있는 12건 부활(고유 명칭·구분 근거 기록), 축어적 중복 46건만 통합 유지
+- 최종 활성 1,665개. 재임베딩·가드 감사 재실행 결과 추가 이동 0건, 지표 안정
+
+## 추가 작업 (2026-07-22, L4 라벨 노이즈 5개 유형 정비)
+- 개명 182건(일반명·괄호형·분야명형·다중 메커니즘), 축어적 중복 추가 통합 5건 → 최종 활성 1,660개
+- secondary_mechanisms 메타데이터 도입(8건), 비Physical 괄호·쉼표형 라벨 0건, 라벨 중복 0건
+- 재임베딩·가드 감사 재실행 (이동 1건 HOLD), 지표 안정. 상세: reports/data_quality/l4_label_dedup_v2.17.2/DEDUP_DECISIONS.md
+
+## 최종 작업 (2026-07-22, v2.17.2 published sync)
+- ID 레지스트리는 1,711개로 불변. 사이트와 보고서 집계는 `1,711 registered IDs, 1,660 active cards`로 병기
+- 51개 통합 카드는 삭제하지 않고 `status=retired`, `merged_into` provenance를 유지. taxonomy 브라우저에서는 `MERGED` 배지와 별도 필터로 계속 탐색 가능
+- BGE-M3 constrained-EM 신뢰성 검증은 active 1,660개 기준으로 재실행. 전체 Top-1 70.2%, 비HOLD Top-1 79.7%, 비HOLD 노이즈 안정성 79.8%
+- 144개 guarded move 후보는 자동 정답으로 확정하지 않고 HOLD 검토 상태로 반영. 최종 active HOLD는 765개

@@ -1,0 +1,20 @@
+{
+  "release_id": "v2.17.1",
+  "embedding_source": "v2.17.0 BGE-M3 card_embeddings.npy",
+  "method": "PCA on L2-normalized BGE-M3 embeddings, n_components=2, seed=20260722",
+  "explained_variance_ratio": [
+    0.050448,
+    0.038191
+  ],
+  "counts": {
+    "HOLD": 727,
+    "Agentic": 237,
+    "General": 558,
+    "Physical": 189
+  },
+  "files": {
+    "pdf": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/vector_space/domain_hold_vector_space.pdf",
+    "png": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/vector_space/domain_hold_vector_space.png",
+    "coordinates": "/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/validation/v2.17.1/vector_space/domain_hold_vector_space_coordinates.csv"
+  }
+}

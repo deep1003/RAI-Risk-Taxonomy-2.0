@@ -92,7 +92,10 @@ scope audit preserves all identities and paths while differentiating three
 overlapping L4 intensions. Release v2.17.0 adds a mechanism-definition
 revision pass and BGE-M3 constrained-EM audit; all algorithmic movers remain
 under review and 734 cards (42.9\%) are marked \code{HOLD} for human taxonomic
-review. The final full-release BGE-M3 sensitivity test finds statistically
+review. Release v2.17.1 then applies a minimal Physical AI transfer rule:
+seven directly embodied HOLD cards are moved to existing Physical AI L3 paths,
+reducing HOLD to 727 while preserving the protected 182-card Physical source
+set unchanged. The final full-release BGE-M3 sensitivity test finds statistically
 non-random semantic structure, but does not establish global reliability of the
 consolidated 50-family assignment when HOLD remains embedded (69.5\% top-1
 containment; 74.0\% perturbation agreement at $\sigma=0.05$ after the audit).
@@ -1252,6 +1255,304 @@ and stores the proposed semantic family in \code{hold\_semantic\_path}. Those
 eight cards are valid reassignment proposals but do not appear as primary L3
 moves in a direct card-to-card diff.
 
+
+\subsection{HOLD reason grouping and review statistics}
+
+The v2.17.0 HOLD queue contains 734 cards, or 42.9\% of the 1,711-card
+release. HOLD is not a semantic failure label; it is an operational review
+state assigned when the evidence, L4 mechanism, and candidate L3 definition do
+not jointly justify automatic release as a human-approved mapping. To make the
+review queue actionable, the release groups HOLD reasons into mutually
+exclusive operational causes using \code{decision\_reason},
+\code{stage2\_hold\_reason}, and the v2.17.0 guarded remap metadata. The
+machine-readable output is stored in
+\code{reports/validation/v2.17.0/hold\_reason\_groups/}.
+
+\begin{table}[ht]
+\centering
+\caption{Primary operational causes of HOLD status in v2.17.0.}
+\label{tab:hold-reason-groups-v217}
+\begin{tabular}{lrrr}
+\toprule
+HOLD cause & Cards & Share of HOLD & Share of all L4 \\
+\midrule
+Taxonomy gap or missing L3 scope & 280 & 38.1\% & 16.4\% \\
+Anthropomorphism mechanism ambiguity & 173 & 23.6\% & 10.1\% \\
+Overloaded L3 or weak evidence fit & 138 & 18.8\% & 8.1\% \\
+Expert disagreement or rejection & 51 & 6.9\% & 3.0\% \\
+Retired sparse Agentic L3 migration & 39 & 5.3\% & 2.3\% \\
+Guarded BGE-M3 remap review & 26 & 3.5\% & 1.5\% \\
+Physical AI lock-scope conflict & 16 & 2.2\% & 0.9\% \\
+Low-fit or multi-mechanism residual & 8 & 1.1\% & 0.5\% \\
+Other residual review & 3 & 0.4\% & 0.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The distribution shows that HOLD is dominated by three causes. First, 280
+cards expose a taxonomy gap or missing L3 scope. These cards are not simply
+bad assignments; many point to governance, transparency, security,
+dependency, environmental, labor, and deliberate-disinformation themes that
+are only partially covered by the current 50 semantic L3 families. Second, 173
+cards remain held because an Anthropomorphism assignment is not established as
+a direct harm mechanism. These cards frequently mention trust, identity,
+affective influence, or social interaction, but the definition does not prove
+that anthropomorphic design is the operative risk mechanism. Third, 138 cards
+sit in overloaded L3 families or have weak evidence fit. Their current L3 may
+be operationally usable, but the source evidence is too broad or the L4
+mechanism too diffuse for direct release.
+
+\begin{table}[ht]
+\centering
+\caption{Taxonomy-gap mentions inside the HOLD queue. Multi-tag cards are
+counted once per tag.}
+\label{tab:hold-taxonomy-gap-v217}
+\begin{tabular}{lrr}
+\toprule
+Taxonomy-gap theme & Mentions & Share of gap mentions \\
+\midrule
+Governance, audit, and regulation & 87 & 28.8\% \\
+Transparency and explainability & 44 & 14.6\% \\
+Robustness, alignment, and control & 34 & 11.3\% \\
+General AI security & 31 & 10.3\% \\
+Dependency and manipulation & 30 & 9.9\% \\
+Pluralistic values and stakeholders & 21 & 7.0\% \\
+Environment, energy, and resources & 20 & 6.6\% \\
+Labor, inequality, and power & 17 & 5.6\% \\
+Deliberate disinformation & 16 & 5.3\% \\
+Other taxonomy-gap tags & 2 & 0.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A HOLD-only BGE-M3 remap probe was also run for the 734 held cards. It found
+496 cards whose top-1 semantic L3 differs from the stored HOLD semantic path,
+but all 496 are weak-tier candidates under the conservative threshold: no card
+met the joint score, margin, and keyword-support requirements for automatic
+movement. This confirms that HOLD should be used to prioritize human review,
+not to trigger bulk remapping. The highest-priority review queue should start
+with taxonomy-gap cards, then Anthropomorphism ambiguity, then overloaded-L3
+or weak-evidence cases.
+
+\subsection{Minimal Physical AI transfer, v2.17.1}
+
+Release v2.17.1 applies a deliberately conservative transfer rule to the
+v2.17.0 HOLD queue. A card is moved under Physical AI only when its own label
+and definition directly describe an embodied, robotic, autonomous-vehicle,
+drone, cyber-physical, physical-labor, or physical-infrastructure mechanism.
+Cards that merely use a Physical AI example inside a broader legal,
+governance, warfare, or general-system discussion remain in HOLD. The protected
+182-card Physical AI source set is not edited; the release only adds seven
+newly routed global cards to Physical paths for public review.
+
+\begin{table}[ht]
+\centering
+\caption{Minimal HOLD-to-Physical transfers in v2.17.1.}
+\label{tab:v2171-minimal-physical-transfer}
+\begin{tabular}{lll}
+\toprule
+L4 ID & Risk label & Physical AI target L3 \\
+\midrule
+RAI4-0520 & Labour displacement & Labor Displacement \\
+RAI4-0640 & Purposeful or malicious harm & Purposeful / Malicious Harm \\
+RAI4-0797 & Misinformation generation & Misinformation \\
+RAI4-1294 & Catastrophic autonomous-weapon target risk & Purposeful / Malicious Harm \\
+RAI4-1410 & Specification gaming & Robot Control \\
+RAI4-1549 & Damage to critical infrastructure & Software Vulnerabilities and Design Flaws \\
+RAI4-1678 & Physical-world backdoor in robotic manipulation & Cybersecurity Threats \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nine physically adjacent cards are intentionally retained in HOLD because the
+card mechanism is broader than Physical AI or primarily legal, governance, or
+general-purpose in scope. This keeps the transfer minimal: HOLD decreases from
+734 to 727, and Physical-path cards increase from 182 to 189 without changing
+the locked Physical source-card records.
+
+\subsection{Candidate L3 expansion analysis for General and Agentic AI}
+
+The v2.17.1 taxonomy does not add new General or Agentic L3 families. However,
+the HOLD reason analysis indicates where future L3 additions are most likely
+to improve semantic reliability. The diagnostic rule is conservative: a new L3
+is considered only when it explains a recurring HOLD cluster, has a mechanism
+that is not already captured by an existing L3 definition, and is likely to
+reduce overloaded or ambiguous assignments without fragmenting the taxonomy.
+The analysis is therefore a design hypothesis for the next review round, not a
+published mapping change.
+
+General AI has the larger improvement opportunity. Of the v2.17.0 HOLD queue,
+280 cards are tagged as taxonomy-gap or missing-scope cases, 173 as
+Anthropomorphism mechanism ambiguity, and 138 as overloaded-L3 or weak
+evidence-fit cases. Keyword and definition review further shows recurring
+General-side clusters around governance, transparency, security, dependency,
+resources, labor, and power. These clusters are semantically broader than
+single L4 labels but narrower than the current L1 or L2 structure, making them
+plausible L3 candidates.
+
+\begin{table}[ht]
+\centering
+\caption{Conservative candidate L3 families for future General AI review.}
+\label{tab:general-candidate-l3}
+\begin{tabular}{llll}
+\toprule
+Priority & Candidate L3 & Korean label & Expected reliability effect \\
+\midrule
+1 & Governance and Accountability & 거버넌스·책임성 & Reduces governance and audit taxonomy gaps \\
+2 & Transparency and Explainability & 투명성·설명가능성 & Separates documentation, opacity, and explanation risks \\
+3 & AI Security & AI 보안 & Separates non-Physical security, attack, and vulnerability risks \\
+4 & Dependency and Manipulation & 의존·조작 & Relieves Anthropomorphism over-assignment \\
+5 & Resource and Environmental Harm & 자원·환경 영향 & Captures compute, energy, water, and carbon harms \\
+6 & Labor and Power & 노동·권력 불균형 & Captures labor, concentration, and inequality mechanisms \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The first four General candidates are the strongest. \emph{Governance and
+Accountability} directly addresses the largest taxonomy-gap theme, including
+audit, regulation, certification, reporting, accountability, and liability
+cards that are currently forced into less specific safety families.
+\emph{Transparency and Explainability} separates model-card, system-card,
+documentation, opacity, and contestability risks from general interaction or
+system-safety families. \emph{AI Security} provides a non-Physical home for
+prompt injection, poisoning, jailbreak, exfiltration, backdoor, and software
+vulnerability risks when the risk mechanism is not specifically embodied.
+\emph{Dependency and Manipulation} is expected to improve the overloaded
+Anthropomorphism region by moving trust, persuasion, overreliance,
+parasocial-bonding, and behavioral-manipulation cards whose operative
+mechanism is dependence or influence rather than human-like presentation.
+
+Agentic AI should be treated more conservatively. The prior v2.8.0 expansion
+tested four intuitive Agentic families: Goal and Planning, Tool Calling,
+Memory, and Oversight and Control. Those families were retired in v2.14.0
+because the released L4 counts were sparse and the resulting separation was
+not stable enough to justify permanent L3 expansion. The current evidence
+therefore does not support recreating those four categories as published L3
+families. Two narrower Agentic candidates may still be worth an experimental
+ablation because they reflect agent-specific failure modes rather than generic
+General AI risks.
+
+\begin{table}[ht]
+\centering
+\caption{Candidate Agentic AI L3 families for experimental ablation only.}
+\label{tab:agentic-candidate-l3}
+\begin{tabular}{llll}
+\toprule
+Priority & Candidate L3 & Korean label & Reason for caution \\
+\midrule
+1 & Tool and Environment Security & 도구·환경 보안 & Agent-specific, but overlaps with General AI Security \\
+2 & Traceability and Audit & 추적성·감사 & Agent-specific action provenance, but overlaps with governance \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The recommended next experiment is therefore minimal: test the four strongest
+General candidates first, then run an ablation with zero, one, or two Agentic
+candidates. A candidate should be accepted only if it improves non-HOLD top-1
+containment, top-5 containment, median assignment margin, negative-margin
+share, and perturbation stability without creating a new sparse or unstable
+family. Until that criterion is met, the current v2.17.1 release should remain
+unchanged.
+
+\subsection{Counterfactual reliability simulation for candidate L3 expansion}
+
+The candidate L3 proposal was tested as a counterfactual simulation rather
+than as a release change. The simulation uses the same pinned BGE-M3 card
+embeddings as the v2.17.0 audit and evaluates v2.17.1 under three conditions:
+the current 50 semantic L3 families, the current taxonomy plus four General AI
+candidates, and the current taxonomy plus four General AI candidates and two
+Agentic AI candidates. Physical source cards are locked. A card can move to a
+candidate family only when its English title or definition matches the
+candidate keyword gate and its BGE-M3 similarity to the candidate definition
+exceeds its similarity to the current L3 seed by at least 0.012. This is a
+conservative automatic gate; it is not a human gold-standard adjudication.
+
+\begin{table}[ht]
+\centering
+\caption{Counterfactual all-card reliability under candidate L3 expansion.}
+\label{tab:l3-expansion-sim-all}
+\begin{tabular}{lrrrrrr}
+\toprule
+Condition & Families & Moved & Top-1 & Top-5 & Neg. margin & Noise 0.05 \\
+\midrule
+Current v2.17.1 & 50 & 0 & 64.6\% & 92.9\% & 35.4\% & 72.3\% \\
+General +4 & 54 & 203 & 63.1\% & 91.9\% & 36.9\% & 71.9\% \\
+General +4, Agentic +2 & 56 & 243 & 63.2\% & 91.6\% & 36.8\% & 72.1\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Counterfactual non-HOLD reliability under candidate L3 expansion.}
+\label{tab:l3-expansion-sim-nonhold}
+\begin{tabular}{lrrrrrr}
+\toprule
+Condition & Families & Moved & Top-1 & Top-5 & Neg. margin & Noise 0.05 \\
+\midrule
+Current v2.17.1 & 50 & 0 & 76.4\% & 95.5\% & 23.6\% & 78.2\% \\
+General +4 & 54 & 42 & 75.9\% & 95.9\% & 24.1\% & 77.6\% \\
+General +4, Agentic +2 & 56 & 68 & 75.8\% & 95.7\% & 24.2\% & 77.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.17.1/l3_expansion_simulation/candidate_l3_expansion_simulation.pdf}
+\caption{\textbf{Counterfactual reliability under candidate L3 expansion.}
+Bars compare the current v2.17.1 release with two candidate-expansion
+conditions. Higher is better for top-1, top-5, and perturbation agreement;
+lower is better for negative-margin share. Candidate expansion creates
+plausible movement candidates but does not improve the main reliability
+criteria.}
+\label{fig:l3-expansion-simulation}
+\end{figure}
+
+The simulation does not support immediate L3 expansion. The four General
+candidates move 203 cards, including 161 held cards, but all-card top-1
+containment falls from 64.6\% to 63.1\%, top-5 containment falls from 92.9\%
+to 91.9\%, negative-margin share rises from 35.4\% to 36.9\%, and
+$\sigma=0.05$ perturbation agreement falls from 72.3\% to 71.9\%. Adding the
+two Agentic candidates moves 243 cards in total but still fails to improve the
+main reliability criteria. Non-HOLD results show the same pattern: the
+candidate expansions create only marginal top-5 changes while reducing top-1
+containment, margin quality, and perturbation stability.
+
+The only metric that improves under the all-card counterfactual is
+EM-to-release agreement, rising from 20.6\% to 23.4\% for General +4 and
+23.3\% for General +4 plus Agentic +2. This improvement is not sufficient for
+release adoption because it is accompanied by weaker top-$k$ containment and
+lower stability. The practical conclusion is that the proposed General and
+Agentic L3 candidates remain useful review hypotheses, but they should not be
+added to the public taxonomy until a human-adjudicated gold set and a stricter
+ablation show simultaneous improvement in top-1 containment, top-5 containment,
+median margin, negative-margin share, and perturbation stability.
+
+\subsection{Two-dimensional release-state vector-space diagnostic}
+
+Figure~\ref{fig:v2171-domain-vector-space} projects all 1,711 v2.17.1 L4 cards
+into a two-dimensional vector space. The input vectors are the pinned BGE-M3
+card embeddings used in the v2.17.0 audit; v2.17.1 changes only seven routing
+decisions and does not rewrite card text, so the same embedding matrix is
+valid for this diagnostic. The projection uses PCA on L2-normalized embeddings.
+The first two components explain 5.0\% and 3.8\% of variance, respectively.
+The figure should therefore be read as a low-dimensional diagnostic view of
+release state, not as proof of discrete taxonomy clusters.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.17.1/vector_space/domain_hold_vector_space.pdf}
+\caption{\textbf{Two-dimensional L4 risk-card vector space by release group.}
+Each point is one L4 card. Colors show the public release group after v2.17.1:
+General AI, Agentic AI, Physical AI, or HOLD. HOLD is a review state rather
+than a semantic family. Physical includes the 182 locked Physical source cards
+plus seven conservative v2.17.1 transfers. The overlap between HOLD and the
+three semantic domains supports the current interpretation of HOLD as a
+cross-cutting adjudication queue rather than a separate risk domain.}
+\label{fig:v2171-domain-vector-space}
+\end{figure}
+
 \subsection{BGE-M3 sensitivity analysis of the v2.17.0 audit}
 
 The final sensitivity analysis uses the canonical BGE-M3 encoder, seed
@@ -1302,11 +1603,66 @@ remains \textbf{SHARE WITH CAVEATS}: v2.17.0 is suitable for public review and
 navigation, while the 734 HOLD cards and the 22 guarded reassignment proposals
 remain priority items for human adjudication.
 
+\subsection{v2.17.2: final L4 deduplication, redefinition, and BGE-M3 rerun}
+
+Release v2.17.2 incorporates the final L4 label-deduplication and
+redefinition pass. The ID registry is invariant at 1,711 registered L4 IDs.
+Of these, 1,660 records are displayed and validated as active cards, while 51
+records are retained as merged provenance records with \code{merged\_into}
+links. The site and report therefore state both numbers together:
+\textbf{1,711 registered IDs, 1,660 active cards}. This preserves citation,
+audit, and crosswalk stability while preventing exact or same-lineage duplicate
+records from being treated as independent active risks.
+
+The BGE-M3 constrained-EM mapping algorithm was rerun on the 1,660 active
+cards using the unchanged 50 semantic L3 families from v2.17.1. The 189
+Physical-path cards are locked. The rerun produced 144 guarded move
+candidates. Following the release policy, these candidates are not treated as
+human-approved ground truth: every reflected move remains a HOLD review item.
+For cards already in HOLD, only the stored semantic review path is updated; for
+previously non-HOLD non-Physical cards, the primary path is moved into the
+appropriate General or Agentic HOLD review path and the proposed semantic L3 is
+stored in \code{hold\_semantic\_path}. This yields 765 active HOLD records.
+
+\begin{table}[ht]
+\centering
+\caption{BGE-M3 reliability after the v2.17.2 L4 revision pass.}
+\label{tab:v2172-bge-active}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & All, pre & All, post & Non-HOLD, pre & Non-HOLD, post \\
+\midrule
+Cards assessed & 1,660 & 1,660 & 954 & 954 \\
+Top-1 containment & 65.5\% & 70.2\% & 77.3\% & 79.7\% \\
+Top-2 containment & 78.8\% & 84.0\% & 89.0\% & 91.3\% \\
+Top-3 containment & 86.3\% & 89.9\% & 92.1\% & 94.5\% \\
+Top-5 containment & 92.9\% & 94.6\% & 96.0\% & 97.2\% \\
+Median assignment margin & 0.0116 & 0.0150 & 0.0258 & 0.0276 \\
+Negative-margin share & 34.5\% & 29.8\% & 22.7\% & 20.3\% \\
+Permutation $p$ & 0.0002 & 0.0002 & 0.0002 & 0.0002 \\
+EM convergence iterations & 15 & 15 & 19 & 19 \\
+EM objective at convergence & 0.797 & 0.797 & 0.800 & 0.800 \\
+EM agreement with released paths & 23.1\% & 25.7\% & 29.7\% & 31.4\% \\
+Agreement at $\sigma=0.01$ & 94.1\% & 94.5\% & 95.5\% & 96.2\% \\
+Agreement at $\sigma=0.05$ & 72.0\% & 73.4\% & 78.8\% & 79.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The final rerun shows improvement after the Claude L4 revision pass and
+guarded BGE-M3 remap reflection. For all active cards, top-1 containment rises
+from 65.5\% to 70.2\%, the negative-margin share falls from 34.5\% to 29.8\%,
+and perturbation agreement at $\sigma=0.05$ rises from 72.0\% to 73.4\%.
+For active non-HOLD cards, top-1 containment rises from 77.3\% to 79.7\% and
+perturbation agreement at $\sigma=0.05$ rises from 78.8\% to 79.8\%. The
+result supports publication as a synchronized review release, but the 144
+guarded moves and 765 active HOLD records remain subject to human adjudication.
+
 \section{Review priorities}
 
-Review should begin with the 39 forced migrations, then the weakest global
-families and low-margin cards within Anthropomorphism.
-The 734 assigned cards marked \code{HOLD} should be adjudicated using agreement
+Review should begin with the v2.17.2 HOLD queue, especially the 144 guarded
+BGE-M3 move candidates, then the weakest global families and low-margin cards.
+The 765 active cards marked \code{HOLD} should be adjudicated using agreement
 among the risk label, mechanism-only definition, cited evidence, and candidate
 L3 definition. Each approved batch should be followed by the identical
 reliability analysis. A low score alone must not trigger automatic movement;

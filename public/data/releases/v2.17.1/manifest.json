@@ -1,0 +1,24 @@
+{
+  "release_id": "v2.17.1",
+  "source_release": "v2.17.0",
+  "status": "published_minimal_physical_transfer",
+  "method": "minimal conservative transfer of directly embodied HOLD cards to existing Physical AI L3 nodes",
+  "counts": {
+    "l4": 1711,
+    "physical_locked": 182,
+    "guarded_proposals_total": 22,
+    "actual_primary_l3_moves": 14,
+    "existing_hold_semantic_path_updates": 8,
+    "new_hold_from_audit": 14,
+    "decision_required": 727,
+    "bge_m3_unguarded_audit_candidates": 151,
+    "by_path": {
+      "HOLD-path": 727,
+      "Agentic": 237,
+      "General": 558,
+      "Physical": 189
+    },
+    "minimal_physical_transfer_from_hold": 7
+  },
+  "policy": "Only HOLD cards with direct embodied, robotic, autonomous-vehicle, drone, cyber-physical, or physical-labor mechanisms were transferred. The protected 182 Physical AI source cards remain unchanged."
+}

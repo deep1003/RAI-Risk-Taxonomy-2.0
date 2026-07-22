@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.17.0";
+const DATA_ROOT = "public/data/releases/v2.17.2";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -9,6 +9,7 @@ const state = {
   l3: "all",
   page: 1,
   cards: [],
+  allCards: [],
   nodes: [],
   l2Categories: [],
   manifest: null,
@@ -21,6 +22,7 @@ const cardPath = new Map();
 
 const ASSIGNMENT_META = {
   decision_required: { label: "HOLD" },
+  retired: { label: "MERGED" },
 };
 
 const DOMAIN_COLORS = {
@@ -67,6 +69,7 @@ async function init() {
     ]);
     state.nodes = hierarchy.nodes;
     state.l2Categories = hierarchy.canonical_l2_categories || [];
+    state.allCards = cards.cards;
     state.cards = cards.cards;
     state.manifest = manifest;
     initializeDomainFromUrl();
@@ -199,7 +202,7 @@ function renderStats() {
   document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1).length.toLocaleString();
   document.querySelector("#stat-l2").textContent = state.l2Categories.length.toLocaleString();
   document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3).length.toLocaleString();
-  const l4Count = state.manifest.counts?.l4 ?? state.cards.length;
+  const l4Count = state.manifest.counts?.l4_total_ids_preserved ?? state.manifest.counts?.l4 ?? state.allCards.length ?? state.cards.length;
   document.querySelector("#stat-l4").textContent = l4Count.toLocaleString();
 }
 
@@ -222,7 +225,7 @@ function renderTree() {
 
 function countCardsByNode() {
   const counts = new Map();
-  state.cards.forEach((card) => {
+  activeCards().forEach((card) => {
     const path = cardPath.get(card.l4_id);
     [path.l1, path.l2, path.l3].filter(Boolean).forEach((id) => counts.set(id, (counts.get(id) || 0) + 1));
   });
@@ -285,11 +288,15 @@ function filteredCards() {
     const matchesQuery = !query || [card.l4_id, card.label_en, card.label_ko, card.definition_en, card.definition_ko]
       .filter(Boolean).join(" ").toLocaleLowerCase().includes(query);
     return matchesQuery
-      && (state.status === "all" || (state.status === "decision_required" && card.decision_required))
+      && (state.status === "all" || (state.status === "decision_required" && card.decision_required && card.status !== "retired") || (state.status === "retired" && card.status === "retired"))
       && (state.l1 === "all" || path.l1 === state.l1)
       && (state.l2 === "all" || path.l2Category === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
   }).sort(compareCardsByDomain);
+}
+
+function activeCards() {
+  return state.cards.filter((card) => card.status !== "retired");
 }
 
 function compareCardsByDomain(left, right) {
@@ -324,9 +331,15 @@ function cardTemplate(card) {
   const pathLabel = path.nodes.length ? path.nodes.map((node) => `${node.label_en} (${node.label_ko})`).join(" › ") : "L3 not assigned";
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
-  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
-    <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${card.decision_required ? '<span class="status-badge status--decision">HOLD</span>' : ""}</div>
+  const statusBadges = [
+    card.status === "retired" ? `<span class="status-badge status--merged">MERGED</span>` : "",
+    card.decision_required && card.status !== "retired" ? `<span class="status-badge status--decision">HOLD</span>` : "",
+  ].filter(Boolean).join("");
+  const mergedNote = card.status === "retired" && card.merged_into ? `<p class="merged-note">Merged into ${escapeHtml(card.merged_into)}</p>` : "";
+  return `<article class="risk-card ${card.status === "retired" ? "risk-card--retired" : ""}" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
+    <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${statusBadges}</div>
     <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
+    ${mergedNote}
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
@@ -383,10 +396,16 @@ function openCard(l4Id) {
   const tags = card.three_h_one_r || [];
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
+  const statusBadges = [
+    card.status === "retired" ? ` <span class="status-badge status--merged">MERGED</span>` : "",
+    card.decision_required && card.status !== "retired" ? ` <span class="status-badge status--decision">HOLD</span>` : "",
+  ].join("");
+  const mergedSection = card.status === "retired" ? `<section class="dialog-section"><h3>Registry status</h3><p>This registered L4 ID is retained for provenance and merged into ${escapeHtml(card.merged_into || "a canonical successor")}.</p></section>` : "";
   ui.dialogContent.innerHTML = `<div class="dialog-body" style="--card-accent:${domainColor}">
-    <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span>${card.decision_required ? ' <span class="status-badge status--decision">HOLD</span>' : ""}</div>
+    <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span>${statusBadges}</div>
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
+    ${mergedSection}
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>
     <div class="dialog-metrics">
       <div><span>Severity</span><strong>${formatMetric(card.severity_1to5)}</strong></div>

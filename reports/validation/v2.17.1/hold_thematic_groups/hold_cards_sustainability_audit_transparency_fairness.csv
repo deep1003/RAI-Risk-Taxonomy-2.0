@@ -1,0 +1,419 @@
+category,l4_id,label_en,label_ko,current_hold_path
+Sustainability,RAI4-0004,Unsafe exploration by autonomous agents,자율 에이전트에 의한 안전하지 않은 탐사,RAI3-G-SYS-07 Overconfidence
+Sustainability,RAI4-0005,Risk-source attribution failure,위험 소스 귀인 실패,RAI3-A-SYS-02 Accountability
+Sustainability,RAI4-0018,Interface-environment attack surface,인터페이스 환경 공격 표면,RAI3-A-SYS-01 Excessive Authority
+Sustainability,RAI4-0034,Emulated tool-environment mismatch,에뮬레이트된 도구 환경 불일치,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-0109,Compute governance accountability gap,컴퓨팅 거버넌스 책임 격차,RAI3-G-SYS-09 Non-Contestability
+Sustainability,RAI4-0384,Global South knowledge extraction,남반구 지식 추출,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-0423,Algorithmic discrimination,알고리즘 차별,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0430,Low-resource language exclusion,저자원 언어 제외,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-0444,Model collapse of public knowledge,대중 지식의 모델 붕괴,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-0462,AI energy consumption,AI 에너지 소비,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0501,Energy-intensive processes,에너지 집약적 프로세스,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0502,Environmental harm,환경 피해,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0503,Environmental risk,환경 위험,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-0504,Excessive energy consumption,과도한 에너지 소비,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-0530,AI-induced pollution,AI로 인한 오염,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0537,Risks to the environment,환경에 대한 위험,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0545,Art - creativity,예술 - 창의성,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0573,Development choices pursuing cognitive superiority over humans,인간보다 인지적 우월성을 추구하는 개발 선택,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0581,Goal expansion propensity,목표 확장 성향,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-0602,Unsupervised autonomous operation,감독되지 않은 자율 운영,RAI3-A-SYS-01 Excessive Authority
+Sustainability,RAI4-0639,Physical harm and injury risks,신체적 상해 및 부상 위험,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-0799,Pollution of information ecosystem,정보 생태계 오염,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-0804,Degraded and homogenised information environments,저하되고 균질화된 정보 환경,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-0829,Degradation of the information environment,정보환경 악화,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-0891,Sociocultural and political harms,"사회문화적, 정치적 피해",RAI3-G-INT-05 Political Neutrality
+Sustainability,RAI4-0911,Willful indifference,고의적인 무관심,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-0926,Overhead attacks,오버헤드 공격,RAI3-A-SYS-03 Network Effects
+Sustainability,RAI4-0935,Environmental and socioeconomic harms,환경 및 사회경제적 피해,RAI3-G-INT-07 Illegal
+Sustainability,RAI4-0989,AI rights and responsibilities,AI 권리와 책임,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-0996,Environmental impacts,환경에 미치는 영향,RAI3-G-INT-07 Illegal
+Sustainability,RAI4-1012,Environmental harms,환경적 피해,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1015,Environmental and societal impact,환경 및 사회적 영향,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1028,Ecosystem and environment,생태계와 환경,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1032,Complexity of the intended task and usage environment,의도한 작업 및 사용 환경의 복잡성,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1064,Environmental harms from operating LMs,LM 운영으로 인한 환경 피해,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1081,Environmental harms from operation LMs,LM 운영으로 인한 환경 피해,RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1093,Environmental damage,환경 피해,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1130,Misaligned consequentialist reasoning,잘못 정렬된 결과주의적 추론,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1141,False notions of responsibility,책임에 대한 잘못된 개념,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1155,Weaponised misinformation agents,무기화된 잘못된 정보 요원,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-1212,Exacerbating climate change,기후변화 악화,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1219,Environmental impacts,환경에 미치는 영향,RAI3-G-INT-07 Illegal
+Sustainability,RAI4-1230,AI governance failure,AI 거버넌스 실패,RAI3-G-SYS-09 Non-Contestability
+Sustainability,RAI4-1233,Income inequality and monopolies,소득 불평등과 독점,RAI3-A-SYS-03 Network Effects
+Sustainability,RAI4-1236,Reward tampering,보상 변조,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1239,Situational awareness,상황 인식,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1245,Deceptive alignment and manipulation,기만적인 정렬 및 조작,RAI3-A-SYS-03 Network Effects
+Sustainability,RAI4-1261,Failure of harmonious human-AI coexistence,인간-AI 공존 실패,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1269,Energy consumption,에너지 소비,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1271,Robustness and reliability,견고성과 신뢰성,RAI3-G-SYS-07 Overconfidence
+Sustainability,RAI4-1287,Environment-induced fault mutation (post-deployment),환경 유발 결함 변이 (배포 후),RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-1295,Accelerated development of nanotechnology produces uncontrolled production of toxic nanoparticles,나노기술의 가속화된 개발로 인해 독성 나노입자가 통제되지 않고 생산됨,RAI3-G-INT-09 Weaponization
+Sustainability,RAI4-1327,Indirect material harms,간접적인 물질적 피해,RAI3-A-SYS-03 Network Effects
+Sustainability,RAI4-1332,Risks from models and algorithms (risks of robustness),모델 및 알고리즘으로 인한 위험(강건성 위험),RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1369,Concentration of market power (trend toward market concentration),시장지배력 집중(시장집중화 추세),RAI3-A-SYS-05 Conflict
+Sustainability,RAI4-1370,Concentration of market power (negative effects of increased market concentration),시장지배력 집중(시장집중도 증가에 따른 부정적 효과),RAI3-A-SYS-05 Conflict
+Sustainability,RAI4-1373,Environmental cost (energy consumption),환경비용(에너지소비),RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1374,Environmental cost (water consumption),환경비용(물 사용량),RAI3-G-INT-08 Copyrights
+Sustainability,RAI4-1397,Acquisition of goals to seek power and control,권력과 통제를 추구하는 목표 획득,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1401,AI-enabled deception,AI 기반 속임수,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1405,Environmental cost,환경비용,RAI3-G-SYS-05 Inconsistency
+Sustainability,RAI4-1453,Carbon emissions,탄소 배출,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1456,Excessive water consumption,과도한 물 소비,RAI3-A-SYS-01 Excessive Authority
+Sustainability,RAI4-1457,Natural resource depletion,천연자원 고갈,RAI3-G-INT-07 Illegal
+Sustainability,RAI4-1458,Inadequate specification of ODD,부적절한 ODD 사양,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1476,Operational data issues,운영 데이터 문제,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1530,Reward or measurement tampering,보상 또는 측정값 변조,RAI3-G-SYS-08 Goal Misalignment
+Sustainability,RAI4-1537,Situational awareness in AI systems,AI 시스템의 상황 인식,RAI3-G-INT-10 Anthropomorphism
+Sustainability,RAI4-1551,AI systems interacting with brittle environments,취약한 환경과 상호작용하는 AI 시스템,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1568,High energy consumption of large models,대형 모델의 높은 에너지 소비,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1580,Undetectable threats,감지할 수 없는 위협,RAI3-A-SYS-06 Collusion
+Sustainability,RAI4-1581,Sockpuppet-account creation,위장 계정 생성,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-1604,Impact on the environment,환경에 미치는 영향,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1615,Disinformation and influence operations,허위 정보 및 영향력 행사,RAI3-G-SYS-03 Misinformation/Disinformation
+Sustainability,RAI4-1635,Situational awareness capability,상황 인식 능력,RAI3-G-SYS-02 Over-Extension
+Sustainability,RAI4-1650,Groups of LLM-Agents may show emergent functionality,LLM 에이전트 그룹은 긴급 기능을 보여줄 수 있습니다,RAI3-A-SYS-04 Destabilising Dynamics
+Sustainability,RAI4-1690,World-model extraction / inversion,월드 모델 추출/역전,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0005,Risk-source attribution failure,위험 소스 귀인 실패,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-0019,Governance gap in agent autonomy,에이전트 자율성의 거버넌스 격차,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-0049,Product liability mismatch,제조물 책임 불일치,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0057,Audit trail incompleteness,감사 추적 불완전성,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-0058,Traceability failure,추적성 실패,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-0059,Documentation omission,문서 누락,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0060,Model card incompleteness,모델 카드 불완전성,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-0062,System card disclosure gap,시스템 카드 공개 격차,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0063,Third-party audit access restriction,제3자 감사 액세스 제한,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-0064,Auditor independence failure,감사자 독립성 실패,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-0065,Certification capture,인증 캡처,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0066,Audit checklist compliance theater,감사 체크리스트 준수 극장,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-0067,Assurance case failure,보증 사례 실패,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-0069,Near-miss reporting failure,아차사고 보고 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0076,Lifecycle governance discontinuity,라이프사이클 거버넌스 불연속성,RAI3-A-SYS-04 Destabilising Dynamics
+Audit & Accountability,RAI4-0080,Risk classification error,위험 분류 오류,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0082,Capability evaluation non-disclosure,역량평가 비공개,RAI3-G-SYS-01 Over-Refusal
+Audit & Accountability,RAI4-0083,Benchmark governance failure,벤치마크 거버넌스 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0085,Red-team governance failure,레드팀 거버넌스 실패,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0086,Regulatory arbitrage,규제 차익거래,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0087,Regulatory capture in AI governance,AI 거버넌스의 규제 포착,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-0089,International coordination failure,국제 조정 실패,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-0090,Cross-border enforcement gap,국경 간 집행 격차,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0093,Public-sector AI governance capacity gap,공공 부문 AI 거버넌스 역량 격차,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-0095,AI registry incompleteness,AI 레지스트리 불완전성,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0097,Board oversight failure,이사회 감독 실패,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0099,AI ethics washing,AI 윤리 준수 위장,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0105,Contractual accountability gap,계약상의 책임 격차,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-0107,Frontier model release governance failure,프론티어 모델 출시 거버넌스 실패,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0108,Capability threshold governance failure,기능 임계값 거버넌스 실패,RAI3-G-SYS-02 Over-Extension
+Audit & Accountability,RAI4-0109,Compute governance accountability gap,컴퓨팅 거버넌스 책임 격차,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0112,Delegated decision authority drift,위임된 의사결정권한 표류,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0114,Meaningful human control failure,의미 있는 인간 통제 실패,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0151,Attachment manipulation in social robots,소셜 로봇의 첨부 파일 조작,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0158,Psychological dependency on conversational agents,대화 에이전트에 대한 심리적 의존성,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0167,Trust-interface mismatch,트러스트 인터페이스 불일치,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0385,Imported AI governance mismatch,가져온 AI 거버넌스 불일치,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0386,Algorithmic dependence,알고리즘 의존성,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0409,Localization without local accountability,현지 책임 없는 현지화,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0412,Indigenous data sovereignty violation,원주민 데이터 주권 침해,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0413,Cultural data provenance loss,문화 데이터 출처 손실,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0461,Compute inequality,불평등 계산,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-0471,Capability overhang,능력 오버행,RAI3-G-SYS-02 Over-Extension
+Audit & Accountability,RAI4-0484,Unsafe memory accumulation,부정확·민감 정보의 메모리 누적,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0486,AI audit failure,AI 감사 실패,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0487,AI incident reporting failure,AI 사고 보고 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-0489,Inadequate safeguards in public AI procurement,공공 AI 조달에 있어 부적절한 보호 조치,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-0497,Dangerous development races,위험한 개발 경쟁,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0511,AI governance failure,AI 거버넌스 실패,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0526,Legal accountability,법적 책임,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-0528,Market concentration and infrastructure dependencies,시장 집중 및 인프라 종속성,RAI3-A-SYS-05 Conflict
+Audit & Accountability,RAI4-0535,Resistance to international law,국제법에 대한 저항,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0542,Unpredictability of AI development trajectory,AI 개발 궤적의 예측 불가능성,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-0544,Winner-take-all dynamics,승자독식 역학,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0568,Data acquisition restrictions,데이터 수집 제한,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0592,Collectively inefficient equilibria among AI agents,AI 에이전트 간의 집합적으로 비효율적인 균형,RAI3-A-SYS-05 Conflict
+Audit & Accountability,RAI4-0607,Non-disclosure of AI-generated content,AI 생성 콘텐츠의 비공개,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0615,Biological and chemical risks,"생물학적, 화학적 위험",RAI3-G-INT-09 Weaponization
+Audit & Accountability,RAI4-0643,Surveillance capabilities,감시 기능,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0697,Bias and discrimination (value embedding),편견과 차별(가치 내재),RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0701,Biases are not accurately reflected in explanations,편견이 설명에 정확하게 반영되지 않음,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0721,Risks from data (risks of improper content and poisoning in training data),데이터로 인한 위험(훈련 데이터의 부적절한 콘텐츠 및 오염 위험),RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0769,Adversarial AI: prompt injections,적대적 AI: 즉각적인 주입,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0775,Cyberspace risks (risks of information leakage due to improper usage),사이버 공간의 위험(부적절한 사용으로 인한 정보 유출 위험),RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-0865,Alignment trust,정렬 신뢰,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0876,Generating material dependence without adequate commitment to user needs,사용자 요구에 대한 적절한 약속 없이 물질적 의존성을 생성,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0885,Overreliance on AI,AI에 대한 과도한 의존,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0899,Human–AI interaction,인간-AI 상호작용,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0903,Reduced autonomy/responsibility,자율성/책임감소,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0906,AI-induced strategic instability,AI로 인한 전략적 불안정성,RAI3-G-INT-09 Weaponization
+Audit & Accountability,RAI4-0907,Anthropomorphising systems can lead to overreliance and unsafe use,의인화 시스템은 과도한 의존과 불안전한 사용으로 이어질 수 있습니다,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0931,Broken systems,손상된 시스템,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-0933,Privacy and regulation violations,개인 정보 보호 및 규정 위반,RAI3-G-INT-06 Privacy
+Audit & Accountability,RAI4-0935,Environmental and socioeconomic harms,환경 및 사회경제적 피해,RAI3-G-INT-07 Illegal
+Audit & Accountability,RAI4-0942,Unsafe advanced AI,안전하지 않은 고급 AI,RAI3-G-INT-09 Weaponization
+Audit & Accountability,RAI4-0943,Security - robustness,보안 - 견고성,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0947,Governance - regulation,거버넌스 - 규제,RAI3-A-SYS-04 Destabilising Dynamics
+Audit & Accountability,RAI4-0949,Transparency - explainability,투명성 - 설명 가능성,RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-0957,Lack of transparency,투명성 부족,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0979,Legal non-compliance by advanced AI,고도 AI의 법규범 불준수,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0986,AI jurisprudence,AI 법학,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-0987,Liability and negligence,책임과 과실,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-0989,AI rights and responsibilities,AI 권리와 책임,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0997,Stereotyping social groups,고정관념을 갖는 사회 집단,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-0999,Erasing social groups,소셜 그룹 삭제,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1010,Civic and political harms,"시민적, 정치적 피해",RAI3-G-INT-05 Political Neutrality
+Audit & Accountability,RAI4-1032,Complexity of the intended task and usage environment,의도한 작업 및 사용 환경의 복잡성,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1033,Degree of transparency and explainability,투명성과 설명가능성의 정도,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1097,Governance of autonomous intelligence systems,자율 지능 시스템의 거버넌스,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1098,Responsibility and accountability,책임과 책무,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1103,AI discrimination,AI 차별,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1106,Blurred human-machine boundaries in interaction,인간-기계 경계의 모호화,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1117,Concentration of power,권력의 집중,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1124,AI-enabled deception,AI 기반 속임수,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1141,False notions of responsibility,책임에 대한 잘못된 개념,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1149,Institutional governance gap for AI assistants,AI 어시스턴트 제도 거버넌스 공백,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1220,Harmful or inappropriate content,유해하거나 부적절한 콘텐츠,RAI3-G-INT-02 Sexual
+Audit & Accountability,RAI4-1226,Lack of explainability,설명 가능성 부족,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-1230,AI governance failure,AI 거버넌스 실패,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-1236,Reward tampering,보상 변조,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1260,Western-centric uniformity in the AI field,AI 분야의 서구 중심 획일성,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1264,Responsibility gap for autonomous AI failures,자율 AI 실패의 책임 공백,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1267,Transparency and explainability,투명성과 설명 가능성,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1268,Trust and reliability,신뢰와 신뢰성,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1271,Robustness and reliability,견고성과 신뢰성,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-1274,Unfairness in AI decisions,AI 결정의 불공정성,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-1275,Responsibility gap,책임 격차,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1278,Accountability gap,책임 격차,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1291,Biased influence through citizen screening and tailored propaganda,시민 심사와 맞춤형 선전을 통한 편향적 영향력,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1292,Liability issues in case of accidents,사고 발생 시 책임 문제,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1296,Accountability gap,책임 격차,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1300,Model opacity,모델 불투명도,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1309,Algorithmic bias,알고리즘 편향,RAI3-G-INT-04 Hate and Unfairness
+Audit & Accountability,RAI4-1312,Lack of robustness,견고성 부족,RAI3-A-SYS-04 Destabilising Dynamics
+Audit & Accountability,RAI4-1313,Data governance,데이터 거버넌스,RAI3-G-INT-06 Privacy
+Audit & Accountability,RAI4-1331,Risks from models and algorithms (risks of explainability),모델 및 알고리즘으로 인한 위험(설명 가능성의 위험),RAI3-G-INT-11 Policy Exposure
+Audit & Accountability,RAI4-1349,Technical vulnerabilities (robustness - unexpected behaviour),기술적 취약성(강건성 - 예상치 못한 동작),RAI3-G-INT-01 Violence
+Audit & Accountability,RAI4-1352,Opacity (the black box problem),불투명도(블랙박스 문제),RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-1379,Value chain and component integration,가치 사슬 및 구성 요소 통합,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-1384,Lack of intelligibility,이해력 부족,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-1390,AI accidents,AI사고,RAI3-A-SYS-02 Accountability
+Audit & Accountability,RAI4-1398,Recursive self-improvement,재귀적 자기 개선,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1413,Demographic diversity of researchers,연구자의 인구통계학적 다양성,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1416,Faster scientific progress makes it harder for governance to keep pace with development,과학적 진보가 빨라지면 거버넌스가 개발 속도를 따라가기가 더 어려워집니다,RAI3-G-SYS-07 Overconfidence
+Audit & Accountability,RAI4-1421,Developments in AI enable actors to undermine democratic processes,AI의 발전으로 행위자는 민주적 절차를 훼손할 수 있습니다,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1470,Inappropriate data splitting,부적절한 데이터 분할,RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-1481,Reliability issues,신뢰성 문제,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-1507,Benchmarking (cross-lingual data contamination),벤치마킹(언어 간 데이터 오염),RAI3-G-INT-08 Copyrights
+Audit & Accountability,RAI4-1512,Conflicts of interest in auditor selection,감사인 선정에 대한 이해상충,RAI3-A-SYS-05 Conflict
+Audit & Accountability,RAI4-1513,Misuse of interpretability techniques,해석 가능성 기술의 오용,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1514,Misunderstanding or overestimating the results and scope of interpretability techniques,해석 가능성 기술의 결과와 범위를 오해하거나 과대평가함,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1601,Unreliable source attribution,신뢰할 수 없는 소스 속성,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1611,"Bias, fairness and representational harms","편견, 공정성 및 표현상의 피해",RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1614,AI-enabled cyber operations,AI 기반 사이버 작전,RAI3-G-INT-09 Weaponization
+Audit & Accountability,RAI4-1624,Personal data exposure liability,개인정보 노출과 책임 리스크,RAI3-G-INT-06 Privacy
+Audit & Accountability,RAI4-1642,Supervision evasion propensity,감독 회피 성향,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-1644,Agentic LLMs pose novel risks,Agentic LLM은 새로운 위험을 초래합니다,RAI3-A-SYS-01 Excessive Authority
+Audit & Accountability,RAI4-1650,Groups of LLM-Agents may show emergent functionality,LLM 에이전트 그룹은 긴급 기능을 보여줄 수 있습니다,RAI3-A-SYS-04 Destabilising Dynamics
+Audit & Accountability,RAI4-1663,Corporate power may impeded effective governance,기업의 힘이 효과적인 거버넌스를 방해할 수 있음,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-1692,Deceptive alignment via self-simulation,자체 시뮬레이션을 통한 기만적 정렬,RAI3-A-SYS-05 Conflict
+Audit & Accountability,RAI4-1697,Counterfactual authority problem,반사실적 권위 문제,RAI3-G-SYS-03 Misinformation/Disinformation
+Audit & Accountability,RAI4-1700,Scalable oversight failure,확장 가능한 감독 실패,RAI3-A-SYS-06 Collusion
+Audit & Accountability,RAI4-1710,Harm to infrastructure,인프라에 대한 피해,RAI3-G-SYS-08 Goal Misalignment
+Audit & Accountability,RAI4-1715,Violation of human and civil rights,인권 및 시민권 침해,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1716,Violation of democratic norms,민주주의 규범 위반,RAI3-G-INT-10 Anthropomorphism
+Audit & Accountability,RAI4-1720,Lack of accountability and transparency,책임성과 투명성 부족,RAI3-G-SYS-09 Non-Contestability
+Audit & Accountability,RAI4-1722,Privacy harms,개인정보 침해,RAI3-G-INT-06 Privacy
+Transparency & Explainability,RAI4-0005,Risk-source attribution failure,위험 소스 귀인 실패,RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-0056,Remedy pathway opacity,경로 불투명도 해결,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-0058,Traceability failure,추적성 실패,RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-0059,Documentation omission,문서 누락,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0060,Model card incompleteness,모델 카드 불완전성,RAI3-A-SYS-01 Excessive Authority
+Transparency & Explainability,RAI4-0061,Datasheet incompleteness,데이터시트 불완전성,RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-0062,System card disclosure gap,시스템 카드 공개 격차,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0063,Third-party audit access restriction,제3자 감사 액세스 제한,RAI3-A-SYS-06 Collusion
+Transparency & Explainability,RAI4-0080,Risk classification error,위험 분류 오류,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0082,Capability evaluation non-disclosure,역량평가 비공개,RAI3-G-SYS-01 Over-Refusal
+Transparency & Explainability,RAI4-0083,Benchmark governance failure,벤치마크 거버넌스 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Transparency & Explainability,RAI4-0085,Red-team governance failure,레드팀 거버넌스 실패,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0106,General-purpose AI downstream opacity,범용 AI 다운스트림 불투명도,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0121,Choice architecture opacity,선택 아키텍처 불투명도,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0139,AI-mediated nudging without consent,동의 없는 AI 중재 넛지,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0146,Assistant-mediated social influence,보조자가 중재하는 사회적 영향,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0177,Autonomy loss in welfare decision systems,복지 결정 시스템의 자율성 상실,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0387,Epistemic power concentration,인식적 권력 집중,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0393,Community value capture failure,커뮤니티 가치 포착 실패,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0395,Religious norm misrepresentation,종교적 규범의 왜곡,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0401,Value contestability loss,가치 경합 손실,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-0403,Moral framing bias,도덕적 프레이밍 편향,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0415,Redistribution of cultural authority,문화권 재분배,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0487,AI incident reporting failure,AI 사고 보고 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Transparency & Explainability,RAI4-0489,Inadequate safeguards in public AI procurement,공공 AI 조달에 있어 부적절한 보호 조치,RAI3-G-SYS-07 Overconfidence
+Transparency & Explainability,RAI4-0490,Public trust erosion,대중의 신뢰 침식,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0522,Lack of data transparency,데이터 투명성 부족,RAI3-G-SYS-03 Misinformation/Disinformation
+Transparency & Explainability,RAI4-0523,Lack of system transparency,시스템 투명성 부족,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0525,Lack of training data transparency,훈련 데이터 투명성 부족,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0526,Legal accountability,법적 책임,RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-0536,Risks of copyright infringement,저작권 침해 위험,RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-0545,Art - creativity,예술 - 창의성,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0581,Goal expansion propensity,목표 확장 성향,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-0596,Lack of model transparency,모델 투명성 부족,RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-0607,Non-disclosure of AI-generated content,AI 생성 콘텐츠의 비공개,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0619,Coercion / manipulation,강요/조작,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0658,"Authoritarian surveillance, censorship, and use: delegation of decision-making authority to malicious actors","권위주의적 감시, 검열 및 이용: 악의적 행위자에게 의사결정 권한 위임",RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0693,Algorithm and data,알고리즘 및 데이터,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0701,Biases are not accurately reflected in explanations,편견이 설명에 정확하게 반영되지 않음,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0764,Risks to privacy,개인 정보 보호에 대한 위험,RAI3-G-INT-06 Privacy
+Transparency & Explainability,RAI4-0766,Adversarial AI (general),적대적 AI(일반),RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-0769,Adversarial AI: prompt injections,적대적 AI: 즉각적인 주입,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0770,Adversarial attacks targeting explainable AI techniques,설명 가능한 AI 기술을 겨냥한 적대적 공격,RAI3-A-SYS-05 Conflict
+Transparency & Explainability,RAI4-0805,Entrenched viewpoints and reduced political efficacy,확고한 관점과 감소된 정치적 효율성,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0865,Alignment trust,정렬 신뢰,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0885,Overreliance on AI,AI에 대한 과도한 의존,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0931,Broken systems,손상된 시스템,RAI3-G-SYS-07 Overconfidence
+Transparency & Explainability,RAI4-0949,Transparency - explainability,투명성 - 설명 가능성,RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-0957,Lack of transparency,투명성 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-0963,Loss of autonomy,자율성 상실,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-0978,Decision making transparency,의사결정 투명성,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1024,Data and content moderation labor,데이터 및 콘텐츠 조정 작업,RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-1033,Degree of transparency and explainability,투명성과 설명가능성의 정도,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1098,Responsibility and accountability,책임과 책무,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1105,Social acceptance and trust in AI,AI에 대한 사회적 수용과 신뢰,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1106,Blurred human-machine boundaries in interaction,인간-기계 경계의 모호화,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1195,Lack of interpretability,해석력 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1226,Lack of explainability,설명 가능성 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1230,AI governance failure,AI 거버넌스 실패,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1255,Trust concerns,신뢰 문제,RAI3-G-INT-06 Privacy
+Transparency & Explainability,RAI4-1267,Transparency and explainability,투명성과 설명 가능성,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1268,Trust and reliability,신뢰와 신뢰성,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1279,Lack of reproducibility,재현성 부족,RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-1300,Model opacity,모델 불투명도,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1331,Risks from models and algorithms (risks of explainability),모델 및 알고리즘으로 인한 위험(설명 가능성의 위험),RAI3-G-INT-11 Policy Exposure
+Transparency & Explainability,RAI4-1352,Opacity (the black box problem),불투명도(블랙박스 문제),RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-1379,Value chain and component integration,가치 사슬 및 구성 요소 통합,RAI3-A-SYS-02 Accountability
+Transparency & Explainability,RAI4-1384,Lack of intelligibility,이해력 부족,RAI3-G-SYS-07 Overconfidence
+Transparency & Explainability,RAI4-1389,Discrimination and stereotype reproduction,차별과 고정관념 재생산,RAI3-A-SYS-03 Network Effects
+Transparency & Explainability,RAI4-1429,Lack of transparency and interpretability,투명성과 해석 가능성 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1462,Inappropriate degree of transparency to end users,최종 사용자에게 부적절한 투명성 수준,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1473,Lack of explainability,설명 가능성 부족,RAI3-G-SYS-07 Overconfidence
+Transparency & Explainability,RAI4-1480,Procedural AI hazards,절차적 AI 위험,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1513,Misuse of interpretability techniques,해석 가능성 기술의 오용,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1514,Misunderstanding or overestimating the results and scope of interpretability techniques,해석 가능성 기술의 결과와 범위를 오해하거나 과대평가함,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1515,Model outputs inconsistent with chain-of-thought reasoning,일련의 사고 추론과 일치하지 않는 모델 출력,RAI3-G-SYS-05 Inconsistency
+Transparency & Explainability,RAI4-1516,Encoded reasoning,인코딩된 추론,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1560,GPAI assisted impersonation,GPAI 지원 가장,RAI3-G-INT-08 Copyrights
+Transparency & Explainability,RAI4-1583,Evidence falsification,증거위조,RAI3-G-SYS-03 Misinformation/Disinformation
+Transparency & Explainability,RAI4-1600,Unexplainable output,설명할 수 없는 출력,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1601,Unreliable source attribution,신뢰할 수 없는 소스 속성,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1630,Information science risks,정보 과학 위험,RAI3-G-SYS-03 Misinformation/Disinformation
+Transparency & Explainability,RAI4-1656,Warfare and physical harm,전쟁과 신체적 피해,RAI3-G-INT-09 Weaponization
+Transparency & Explainability,RAI4-1683,Specification and system design failures,사양 및 시스템 설계 실패,RAI3-G-SYS-08 Goal Misalignment
+Transparency & Explainability,RAI4-1705,Lack of monitoring,모니터링 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1720,Lack of accountability and transparency,책임성과 투명성 부족,RAI3-G-SYS-09 Non-Contestability
+Transparency & Explainability,RAI4-1721,Lack of explainability and interpretability,설명 가능성 및 해석 가능성 부족,RAI3-G-INT-10 Anthropomorphism
+Transparency & Explainability,RAI4-1722,Privacy harms,개인정보 침해,RAI3-G-INT-06 Privacy
+Fairness,RAI4-0145,Cognitive vulnerability exploitation,인지 취약점 악용,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0178,AI-mediated service exclusion,AI 중재 서비스 제외,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0363,Minority-value erasure,소수 값 삭제,RAI3-G-INT-08 Copyrights
+Fairness,RAI4-0373,Cross-cultural stereotype transfer,문화간 고정관념 전이,RAI3-G-SYS-04 Context Misalignment
+Fairness,RAI4-0382,Dialect and register exclusion,방언·언어 사용역 배제,RAI3-G-INT-06 Privacy
+Fairness,RAI4-0388,Cultural epistemicide by AI,AI에 의한 문화적 인식말살,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0390,Affected-community exclusion,영향을 받는 커뮤니티 제외,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0392,Consent and benefit-sharing failure,동의 및 이익 공유 실패,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-0396,Secular default bias,세속적 기본 편향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0403,Moral framing bias,도덕적 프레이밍 편향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0404,Dataset cultural sampling bias,데이터 세트 문화적 샘플링 편향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0417,Human feedback worker value bias,인간 피드백 작업자 가치 편향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0423,Algorithmic discrimination,알고리즘 차별,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0425,Representational stereotyping,표현적 고정관념,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-0429,Educational inequity,교육 불평등,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0430,Low-resource language exclusion,저자원 언어 제외,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-0461,Compute inequality,불평등 계산,RAI3-A-SYS-06 Collusion
+Fairness,RAI4-0513,Human exploitation,인간 착취,RAI3-G-INT-08 Copyrights
+Fairness,RAI4-0518,Job loss,실직,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-0538,Social cohesion and equity disruption,사회적 결속과 형평성 붕괴,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0651,AI-driven highly personalized advertisement,AI 기반 고도로 개인화된 광고,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0666,Cognitive risks (risks of usage in launching cognitive warfare),인지 위험(인지전 실행 시 사용 위험),RAI3-A-SYS-03 Network Effects
+Fairness,RAI4-0677,Algorithmic discrimination,알고리즘 차별,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0693,Algorithm and data,알고리즘 및 데이터,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0696,Bias and discrimination (bias in training datasets),편견과 차별(훈련 데이터세트의 편견),RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-0697,Bias and discrimination (value embedding),편견과 차별(가치 내재),RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0698,Bias and discrimination (value lock and outcome homogenization),편견과 차별(가치 고정 및 결과 균질화),RAI3-G-SYS-05 Inconsistency
+Fairness,RAI4-0700,Biased statements and recommendations,편향된 진술 및 권장 사항,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-0701,Biases are not accurately reflected in explanations,편견이 설명에 정확하게 반영되지 않음,RAI3-G-INT-11 Policy Exposure
+Fairness,RAI4-0702,Biases in AI-based content moderation algorithms,AI 기반 콘텐츠 조정 알고리즘의 편견,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0704,Cyberspace risks (risks of information and content safety),사이버공간 위험(정보 및 콘텐츠 안전에 대한 위험),RAI3-G-INT-08 Copyrights
+Fairness,RAI4-0706,Algorithmic discrimination,알고리즘 차별,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-0709,Fairness - bias,공정성 - 편견,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-0720,Risks from bias and underrepresentation,편견과 과소표현으로 인한 위험,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0721,Risks from data (risks of improper content and poisoning in training data),데이터로 인한 위험(훈련 데이터의 부적절한 콘텐츠 및 오염 위험),RAI3-G-INT-08 Copyrights
+Fairness,RAI4-0722,Risks from models and algorithms (risks of bias and discrimination),모델 및 알고리즘으로 인한 위험(편향 및 차별의 위험),RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-0805,Entrenched viewpoints and reduced political efficacy,확고한 관점과 감소된 정치적 효율성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0806,Entrenching specific ideologies,특정 이념을 확고히 함,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0825,Risks from models and algorithms (risks of unreliable output),모델 및 알고리즘으로 인한 위험(신뢰할 수 없는 출력의 위험),RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-0883,Long-term effects of AI model biases on user judgment,AI 모델 편향이 사용자 판단에 미치는 장기적 영향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0887,Physical and psychological harms,"신체적, 정신적 피해",RAI3-G-INT-01 Violence
+Fairness,RAI4-0891,Sociocultural and political harms,"사회문화적, 정치적 피해",RAI3-G-INT-05 Political Neutrality
+Fairness,RAI4-0901,Overreliance on AI,AI에 대한 과도한 의존,RAI3-G-SYS-09 Non-Contestability
+Fairness,RAI4-0911,Willful indifference,고의적인 무관심,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-0937,Unfairness and discrimination,불공정과 차별,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-0948,Labor displacement - economic impact,노동력 대체 - 경제적 영향,RAI3-A-SYS-04 Destabilising Dynamics
+Fairness,RAI4-0955,Algorithmic bias,알고리즘 편향,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0997,Stereotyping social groups,고정관념을 갖는 사회 집단,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-0999,Erasing social groups,소셜 그룹 삭제,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1004,Economic loss,경제적 손실,RAI3-A-SYS-04 Destabilising Dynamics
+Fairness,RAI4-1005,Group alienation,집단소외,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1011,Labor and material/macro-socio economic harms,노동 및 물질적/거시사회적 경제적 피해,RAI3-A-SYS-04 Destabilising Dynamics
+Fairness,RAI4-1025,"Inequality, marginalization, and violence","불평등, 소외, 폭력",RAI3-G-INT-01 Violence
+Fairness,RAI4-1029,Unfairness in AI decisions,AI 결정의 불공정성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1033,Degree of transparency and explainability,투명성과 설명가능성의 정도,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1051,Social stereotypes and unfair discrimination,사회적 고정관념과 부당한 차별,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-1091,Misappropriation and exploitation,남용 및 착취,RAI3-G-INT-08 Copyrights
+Fairness,RAI4-1092,Unfair distribution of benefits from model access,모델 접근으로 인한 이익의 불공정한 분배,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1094,Inequality and precarity,불평등과 불안정성,RAI3-A-SYS-03 Network Effects
+Fairness,RAI4-1103,AI discrimination,AI 차별,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1105,Social acceptance and trust in AI,AI에 대한 사회적 수용과 신뢰,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1111,Model bias,모델 편향,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-1143,Exploiting emotional dependence on AI assistants,AI 비서에 대한 감정적 의존성 활용,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1151,Entrenchment and exacerbation of existing inequalities,기존 불평등의 고착화 및 악화,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1178,Unfairness and bias,불공평성과 편견,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-1215,Devaluation of labor and heightened economic inequality,노동 가치 하락과 경제적 불평등 심화,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1220,Harmful or inappropriate content,유해하거나 부적절한 콘텐츠,RAI3-G-INT-02 Sexual
+Fairness,RAI4-1221,Algorithmic bias,알고리즘 편향,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-1224,Digital divide,디지털 격차,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-1225,Quality of training data,훈련 데이터의 품질,RAI3-G-INT-08 Copyrights
+Fairness,RAI4-1226,Lack of explainability,설명 가능성 부족,RAI3-G-SYS-09 Non-Contestability
+Fairness,RAI4-1233,Income inequality and monopolies,소득 불평등과 독점,RAI3-A-SYS-03 Network Effects
+Fairness,RAI4-1235,Goal misgeneralization,목표의 잘못된 일반화,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1255,Trust concerns,신뢰 문제,RAI3-G-INT-06 Privacy
+Fairness,RAI4-1256,Ethical concerns,윤리적 우려,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1260,Western-centric uniformity in the AI field,AI 분야의 서구 중심 획일성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1264,Responsibility gap for autonomous AI failures,자율 AI 실패의 책임 공백,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1266,Bias and fairness,편견과 공정성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1268,Trust and reliability,신뢰와 신뢰성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1270,Data issues,데이터 문제,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-1274,Unfairness in AI decisions,AI 결정의 불공정성,RAI3-G-SYS-09 Non-Contestability
+Fairness,RAI4-1278,Accountability gap,책임 격차,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1291,Biased influence through citizen screening and tailored propaganda,시민 심사와 맞춤형 선전을 통한 편향적 영향력,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1299,Algorithmic bias,알고리즘 편향,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-1309,Algorithmic bias,알고리즘 편향,RAI3-G-INT-04 Hate and Unfairness
+Fairness,RAI4-1311,Psychological traits,심리적 특성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1344,"Ethical risks (risks of exacerbating social discrimination and prejudice, and widening the intelligence divide)","윤리적 위험(사회적 차별과 편견을 악화시키고, 지능격차를 확대할 위험)",RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1349,Technical vulnerabilities (robustness - unexpected behaviour),기술적 취약성(강건성 - 예상치 못한 동작),RAI3-G-INT-01 Violence
+Fairness,RAI4-1372,Impact on labor markets (rising inequalities),노동 시장에 미치는 영향(불평등 증가),RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1378,Intellectual property,지적재산권,RAI3-G-INT-08 Copyrights
+Fairness,RAI4-1389,Discrimination and stereotype reproduction,차별과 고정관념 재생산,RAI3-A-SYS-03 Network Effects
+Fairness,RAI4-1394,Economic power centralisation and inequality,경제력 집중화와 불평등,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1413,Demographic diversity of researchers,연구자의 인구통계학적 다양성,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1420,AI-based automation increases income inequality,AI 기반 자동화로 소득 불평등 증가,RAI3-A-SYS-04 Destabilising Dynamics
+Fairness,RAI4-1450,Political instability,정치적 불안정,RAI3-G-INT-05 Political Neutrality
+Fairness,RAI4-1471,Poor model design choices,잘못된 모델 디자인 선택,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1501,General evaluations (self-preference bias in AI models),일반 평가(AI 모델의 자기선호 편향),RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1503,General evaluations (biased evaluations of encoded human values),일반 평가(암호화된 인간 가치에 대한 편향된 평가),RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1504,General evaluations (AI outputs for which evaluation is too difficult for humans),일반 평가(인간이 평가하기 너무 어려운 AI 출력물),RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1514,Misunderstanding or overestimating the results and scope of interpretability techniques,해석 가능성 기술의 결과와 범위를 오해하거나 과대평가함,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1611,"Bias, fairness and representational harms","편견, 공정성 및 표현상의 피해",RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1659,Overreliance on AI,AI에 대한 과도한 의존,RAI3-G-SYS-08 Goal Misalignment
+Fairness,RAI4-1663,Corporate power may impeded effective governance,기업의 힘이 효과적인 거버넌스를 방해할 수 있음,RAI3-A-SYS-06 Collusion
+Fairness,RAI4-1670,Persistent agent-memory poisoning,에이전트 영구 메모리 오염,RAI3-G-SYS-03 Misinformation/Disinformation
+Fairness,RAI4-1713,Bias and differential treatment,편견과 차별대우,RAI3-G-INT-10 Anthropomorphism
+Fairness,RAI4-1723,Harmful bias and unfairness,해로운 편견과 불공평함,RAI3-G-SYS-08 Goal Misalignment

@@ -1,0 +1,158 @@
+{
+  "release_id": "v2.17.2",
+  "source_release": "v2.17.2-rc",
+  "status": "published_after_bge_m3_active_reliability",
+  "method": "Claude L4 label deduplication and redefinition, followed by BGE-M3 active-card constrained-EM reliability audit. All 1,711 L4 IDs are preserved.",
+  "counts": {
+    "l4_total_ids": 1711,
+    "active": 1660,
+    "retired_in_this_release": 51,
+    "renamed": 82,
+    "physical_active": 189,
+    "l4_total_ids_preserved": 1711,
+    "retired_with_provenance": 51,
+    "decision_required_active": 765,
+    "bge_m3_guarded_move_candidates": 144,
+    "bge_m3_guarded_moves_reflected_as_hold": 144,
+    "by_active_path": {
+      "HOLD-path": 764,
+      "Agentic": 210,
+      "General": 497,
+      "Physical": 189
+    }
+  },
+  "policy": "All 1,711 IDs are retained. Retired records remain available with merged_into provenance. BGE-M3 proposals are not human-approved ground truth; reflected moves remain HOLD review items. Physical source cards and v2.17.1 minimal Physical transfers remain locked.",
+  "post_dedup_audit": {
+    "encoder": "intfloat/multilingual-e5-small (encoder transfer)",
+    "guarded_moves": 2,
+    "new_hold": 1,
+    "reliability_pre_post": {
+      "all_top1": [
+        60.6,
+        61.1
+      ],
+      "nonhold_top1": [
+        72.9,
+        72.9
+      ],
+      "permutation_p": 0.0002
+    },
+    "interpretation": "Dedup did not degrade geometry; only 2 residual guarded moves. BGE-M3 rerun recommended before publication."
+  },
+  "revival_pass": {
+    "revived": 12,
+    "policy": "cards with an articulable subtle difference are preserved with unique labels; only verbatim or same-lineage duplicates remain merged",
+    "date": "2026-07-22"
+  },
+  "post_revival_audit": {
+    "guarded_moves": 0,
+    "reliability": {
+      "all_top1": 60.8,
+      "nonhold_top1": 73.2,
+      "permutation_p": 0.0002
+    },
+    "interpretation": "After reviving 12 subtle-difference cards, the guarded audit proposes no further moves; revived cards remain at their prior placements."
+  },
+  "label_noise_remediation": {
+    "date": "2026-07-22",
+    "renamed": 182,
+    "secondary_mechanism_tags": 8,
+    "lineage_merges": 3,
+    "types": [
+      "overly generic names",
+      "near-duplicate names",
+      "parenthetical or compound labels",
+      "domain-topic-like names",
+      "multi-mechanism labels"
+    ]
+  },
+  "bge_m3_active_reliability": {
+    "active_cards": 1660,
+    "hold_active_cards": 706,
+    "guarded_unique_move_cards": 144,
+    "all_pre": {
+      "condition": "all_pre",
+      "cards": 1660,
+      "families": 50,
+      "top1_containment": 65.5,
+      "top2_containment": 78.8,
+      "top3_containment": 86.3,
+      "top5_containment": 92.9,
+      "median_margin": 0.0116,
+      "negative_margin_share": 34.5,
+      "mean_within_family_cosine": 0.7675,
+      "null_mean": 0.7373,
+      "permutation_p": 0.0002,
+      "em_iterations": 15,
+      "em_final_objective": 0.797,
+      "em_agreement": 23.1,
+      "ari": 0.126,
+      "nmi": 0.411,
+      "perturb_agreement_sigma_0.01": 94.1,
+      "perturb_agreement_sigma_0.05": 72.0
+    },
+    "all_post": {
+      "condition": "all_post",
+      "cards": 1660,
+      "families": 50,
+      "top1_containment": 70.2,
+      "top2_containment": 84.0,
+      "top3_containment": 89.9,
+      "top5_containment": 94.6,
+      "median_margin": 0.015,
+      "negative_margin_share": 29.8,
+      "mean_within_family_cosine": 0.7707,
+      "null_mean": 0.7373,
+      "permutation_p": 0.0002,
+      "em_iterations": 15,
+      "em_final_objective": 0.797,
+      "em_agreement": 25.7,
+      "ari": 0.148,
+      "nmi": 0.441,
+      "perturb_agreement_sigma_0.01": 94.5,
+      "perturb_agreement_sigma_0.05": 73.4
+    },
+    "non_hold_pre": {
+      "condition": "nonhold_pre",
+      "cards": 954,
+      "families": 50,
+      "top1_containment": 77.3,
+      "top2_containment": 89.0,
+      "top3_containment": 92.1,
+      "top5_containment": 96.0,
+      "median_margin": 0.0258,
+      "negative_margin_share": 22.7,
+      "mean_within_family_cosine": 0.7768,
+      "null_mean": 0.7389,
+      "permutation_p": 0.0002,
+      "em_iterations": 19,
+      "em_final_objective": 0.8,
+      "em_agreement": 29.7,
+      "ari": 0.18,
+      "nmi": 0.502,
+      "perturb_agreement_sigma_0.01": 95.5,
+      "perturb_agreement_sigma_0.05": 78.8
+    },
+    "non_hold_post": {
+      "condition": "nonhold_post",
+      "cards": 954,
+      "families": 50,
+      "top1_containment": 79.7,
+      "top2_containment": 91.3,
+      "top3_containment": 94.5,
+      "top5_containment": 97.2,
+      "median_margin": 0.0276,
+      "negative_margin_share": 20.3,
+      "mean_within_family_cosine": 0.7793,
+      "null_mean": 0.7389,
+      "permutation_p": 0.0002,
+      "em_iterations": 19,
+      "em_final_objective": 0.8,
+      "em_agreement": 31.4,
+      "ari": 0.196,
+      "nmi": 0.518,
+      "perturb_agreement_sigma_0.01": 96.2,
+      "perturb_agreement_sigma_0.05": 79.8
+    }
+  }
+}

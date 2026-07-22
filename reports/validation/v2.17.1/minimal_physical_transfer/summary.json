@@ -1,0 +1,12 @@
+{
+  "release_id": "v2.17.1",
+  "source_release": "v2.17.0",
+  "moved": 7,
+  "by_path": {
+    "HOLD-path": 727,
+    "Agentic": 237,
+    "General": 558,
+    "Physical": 189
+  },
+  "decision_required": 727
+}

@@ -1,0 +1,17 @@
+{
+  "release_id": "v2.17.0",
+  "model": "/Users/deep1003/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+  "seed": 20260721,
+  "hold_cards": 734,
+  "changed_candidates": 496,
+  "tiers_all": {
+    "strong": 0,
+    "moderate": 0,
+    "weak": 734
+  },
+  "tiers_changed": {
+    "strong": 0,
+    "moderate": 0,
+    "weak": 496
+  }
+}

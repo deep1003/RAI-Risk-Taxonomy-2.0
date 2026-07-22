@@ -1,0 +1,190 @@
+theme,l4_id,risk_ko,risk_en,status,current_path,note
+지속가능성,RAI4-0018,인터페이스 환경 공격 표면,Interface-environment attack surface,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+지속가능성,RAI4-0034,에뮬레이트된 도구 환경 불일치,Emulated tool-environment mismatch,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+지속가능성,RAI4-0356,배터리·에너지·환경 위험,"Battery, energy, and environmental hazards",Assigned,RAI3-P-SYS-03,Seed example
+지속가능성,RAI4-0430,저자원 언어 제외,Low-resource language exclusion,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+지속가능성,RAI4-0462,AI 에너지 소비,AI energy consumption,HOLD,Anthropomorphism (RAI3-G-INT-10),Seed example
+지속가능성,RAI4-0463,AI 물 및 자원 사용,AI water and resource use,Assigned,RAI3-A-SYS-04,Seed example
+지속가능성,RAI4-0501,에너지 집약적 프로세스,Energy-intensive processes,HOLD,Anthropomorphism (RAI3-G-INT-10),Seed example
+지속가능성,RAI4-0502,환경 피해,Environmental harm,HOLD,Anthropomorphism (RAI3-G-INT-10),Seed example
+지속가능성,RAI4-0503,환경 위험,Environmental risk,HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-0504,과도한 에너지 소비,Excessive energy consumption,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-0530,AI로 인한 오염,AI-induced pollution,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+지속가능성,RAI4-0537,환경에 대한 위험,Risks to the environment,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+지속가능성,RAI4-0799,정보 생태계 오염,Pollution of information ecosystem,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+지속가능성,RAI4-0804,저하되고 균질화된 정보 환경,Degraded and homogenised information environments,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+지속가능성,RAI4-0829,정보환경 악화,Degradation of the information environment,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+지속가능성,RAI4-0935,환경 및 사회경제적 피해,Environmental and socioeconomic harms,HOLD,Illegal (RAI3-G-INT-07),Related HOLD by risk label
+지속가능성,RAI4-0996,환경에 미치는 영향,Environmental impacts,HOLD,Illegal (RAI3-G-INT-07),Related HOLD by risk label
+지속가능성,RAI4-1012,환경적 피해,Environmental harms,HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-1015,환경 및 사회적 영향,Environmental and societal impact,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+지속가능성,RAI4-1028,생태계와 환경,Ecosystem and environment,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+지속가능성,RAI4-1032,의도한 작업 및 사용 환경의 복잡성,Complexity of the intended task and usage environment,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+지속가능성,RAI4-1064,LM 운영으로 인한 환경 피해,Environmental harms from operating LMs,HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-1081,LM 운영으로 인한 환경 피해,Environmental harms from operation LMs,HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-1093,환경 피해,Environmental damage,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-1212,기후변화 악화,Exacerbating climate change,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+지속가능성,RAI4-1219,환경에 미치는 영향,Environmental impacts,HOLD,Illegal (RAI3-G-INT-07),Related HOLD by risk label
+지속가능성,RAI4-1269,에너지 소비,Energy consumption,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-1287,환경 유발 결함 변이 (배포 후),Environment-induced fault mutation (post-deployment),HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+지속가능성,RAI4-1373,환경비용(에너지소비),Environmental cost (energy consumption),HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-1374,환경비용(물 사용량),Environmental cost (water consumption),HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+지속가능성,RAI4-1405,환경비용,Environmental cost,HOLD,Inconsistency (RAI3-G-SYS-05),Related HOLD by risk label
+지속가능성,RAI4-1453,탄소 배출,Carbon emissions,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-1456,과도한 물 소비,Excessive water consumption,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+지속가능성,RAI4-1457,천연자원 고갈,Natural resource depletion,HOLD,Illegal (RAI3-G-INT-07),Related HOLD by risk label
+지속가능성,RAI4-1551,취약한 환경과 상호작용하는 AI 시스템,AI systems interacting with brittle environments,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-1568,대형 모델의 높은 에너지 소비,High energy consumption of large models,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+지속가능성,RAI4-1604,환경에 미치는 영향,Impact on the environment,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+감사·책임성,RAI4-0005,위험 소스 귀인 실패,Risk-source attribution failure,HOLD,Accountability (RAI3-A-SYS-02),Seed example
+감사·책임성,RAI4-0019,에이전트 자율성의 거버넌스 격차,Governance gap in agent autonomy,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+감사·책임성,RAI4-0049,제조물 책임 불일치,Product liability mismatch,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-0057,감사 추적 불완전성,Audit trail incompleteness,HOLD,Accountability (RAI3-A-SYS-02),Seed example
+감사·책임성,RAI4-0058,추적성 실패,Traceability failure,HOLD,Accountability (RAI3-A-SYS-02),Seed example
+감사·책임성,RAI4-0063,제3자 감사 액세스 제한,Third-party audit access restriction,HOLD,Collusion (RAI3-A-SYS-06),Seed example
+감사·책임성,RAI4-0064,감사자 독립성 실패,Auditor independence failure,HOLD,Collusion (RAI3-A-SYS-06),Seed example
+감사·책임성,RAI4-0065,인증 캡처,Certification capture,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-0066,감사 체크리스트 준수 극장,Audit checklist compliance theater,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+감사·책임성,RAI4-0067,보증 사례 실패,Assurance case failure,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+감사·책임성,RAI4-0069,아차사고 보고 실패,Near-miss reporting failure,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-0076,라이프사이클 거버넌스 불연속성,Lifecycle governance discontinuity,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+감사·책임성,RAI4-0083,벤치마크 거버넌스 실패,Benchmark governance failure,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-0085,레드팀 거버넌스 실패,Red-team governance failure,HOLD,Goal Misalignment (RAI3-G-SYS-08),Seed example
+감사·책임성,RAI4-0086,규제 차익거래,Regulatory arbitrage,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-0087,AI 거버넌스의 규제 포착,Regulatory capture in AI governance,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+감사·책임성,RAI4-0093,공공 부문 AI 거버넌스 역량 격차,Public-sector AI governance capacity gap,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+감사·책임성,RAI4-0095,AI 레지스트리 불완전성,AI registry incompleteness,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-0097,이사회 감독 실패,Board oversight failure,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-0105,계약상의 책임 격차,Contractual accountability gap,HOLD,Excessive Authority (RAI3-A-SYS-01),Related HOLD by risk label
+감사·책임성,RAI4-0107,프론티어 모델 출시 거버넌스 실패,Frontier model release governance failure,HOLD,Copyrights (RAI3-G-INT-08),Related HOLD by risk label
+감사·책임성,RAI4-0108,기능 임계값 거버넌스 실패,Capability threshold governance failure,HOLD,Over-Extension (RAI3-G-SYS-02),Related HOLD by risk label
+감사·책임성,RAI4-0109,컴퓨팅 거버넌스 책임 격차,Compute governance accountability gap,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-0385,가져온 AI 거버넌스 불일치,Imported AI governance mismatch,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-0409,현지 책임 없는 현지화,Localization without local accountability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-0486,AI 감사 실패,AI audit failure,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-0487,AI 사고 보고 실패,AI incident reporting failure,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-0511,AI 거버넌스 실패,AI governance failure,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-0526,법적 책임,Legal accountability,HOLD,Accountability (RAI3-A-SYS-02),Related HOLD by risk label
+감사·책임성,RAI4-0903,자율성/책임감소,Reduced autonomy/responsibility,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-0933,개인 정보 보호 및 규정 위반,Privacy and regulation violations,HOLD,Privacy (RAI3-G-INT-06),Related HOLD by risk label
+감사·책임성,RAI4-0947,거버넌스 - 규제,Governance - regulation,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+감사·책임성,RAI4-0979,고도 AI의 법규범 불준수,Legal non-compliance by advanced AI,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-0986,AI 법학,AI jurisprudence,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-0987,책임과 과실,Liability and negligence,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-0989,AI 권리와 책임,AI rights and responsibilities,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1097,자율 지능 시스템의 거버넌스,Governance of autonomous intelligence systems,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-1098,책임과 책무,Responsibility and accountability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1141,책임에 대한 잘못된 개념,False notions of responsibility,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1149,AI 어시스턴트 제도 거버넌스 공백,Institutional governance gap for AI assistants,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-1230,AI 거버넌스 실패,AI governance failure,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+감사·책임성,RAI4-1264,자율 AI 실패의 책임 공백,Responsibility gap for autonomous AI failures,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1268,신뢰와 신뢰성,Trust and reliability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1271,견고성과 신뢰성,Robustness and reliability,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+감사·책임성,RAI4-1275,책임 격차,Responsibility gap,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-1278,책임 격차,Accountability gap,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1292,사고 발생 시 책임 문제,Liability issues in case of accidents,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+감사·책임성,RAI4-1296,책임 격차,Accountability gap,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-1313,데이터 거버넌스,Data governance,HOLD,Privacy (RAI3-G-INT-06),Related HOLD by risk label
+감사·책임성,RAI4-1416,과학적 진보가 빨라지면 거버넌스가 개발 속도를 따라가기가 더 어려워집니다,Faster scientific progress makes it harder for governance to keep pace with development,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+감사·책임성,RAI4-1481,신뢰성 문제,Reliability issues,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+감사·책임성,RAI4-1512,감사인 선정에 대한 이해상충,Conflicts of interest in auditor selection,HOLD,Conflict (RAI3-A-SYS-05),Related HOLD by risk label
+감사·책임성,RAI4-1601,신뢰할 수 없는 소스 속성,Unreliable source attribution,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+감사·책임성,RAI4-1624,개인정보 노출과 책임 리스크,Personal data exposure liability,HOLD,Privacy (RAI3-G-INT-06),Related HOLD by risk label
+감사·책임성,RAI4-1663,기업의 힘이 효과적인 거버넌스를 방해할 수 있음,Corporate power may impeded effective governance,HOLD,Collusion (RAI3-A-SYS-06),Related HOLD by risk label
+감사·책임성,RAI4-1700,확장 가능한 감독 실패,Scalable oversight failure,HOLD,Collusion (RAI3-A-SYS-06),Related HOLD by risk label
+감사·책임성,RAI4-1720,책임성과 투명성 부족,Lack of accountability and transparency,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-0005,위험 소스 귀인 실패,Risk-source attribution failure,HOLD,Accountability (RAI3-A-SYS-02),Related HOLD by risk label
+투명성·설명가능성,RAI4-0056,경로 불투명도 해결,Remedy pathway opacity,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-0059,문서 누락,Documentation omission,HOLD,Policy Exposure (RAI3-G-INT-11),Related HOLD by risk label
+투명성·설명가능성,RAI4-0060,모델 카드 불완전성,Model card incompleteness,HOLD,Excessive Authority (RAI3-A-SYS-01),Seed example
+투명성·설명가능성,RAI4-0061,데이터시트 불완전성,Datasheet incompleteness,HOLD,Copyrights (RAI3-G-INT-08),Seed example
+투명성·설명가능성,RAI4-0062,시스템 카드 공개 격차,System card disclosure gap,HOLD,Policy Exposure (RAI3-G-INT-11),Seed example
+투명성·설명가능성,RAI4-0082,역량평가 비공개,Capability evaluation non-disclosure,HOLD,Over-Refusal (RAI3-G-SYS-01),Seed example
+투명성·설명가능성,RAI4-0106,범용 AI 다운스트림 불투명도,General-purpose AI downstream opacity,HOLD,Goal Misalignment (RAI3-G-SYS-08),Seed example
+투명성·설명가능성,RAI4-0121,선택 아키텍처 불투명도,Choice architecture opacity,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+투명성·설명가능성,RAI4-0522,데이터 투명성 부족,Lack of data transparency,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+투명성·설명가능성,RAI4-0523,시스템 투명성 부족,Lack of system transparency,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-0525,훈련 데이터 투명성 부족,Lack of training data transparency,HOLD,Policy Exposure (RAI3-G-INT-11),Related HOLD by risk label
+투명성·설명가능성,RAI4-0596,모델 투명성 부족,Lack of model transparency,HOLD,Accountability (RAI3-A-SYS-02),Related HOLD by risk label
+투명성·설명가능성,RAI4-0607,AI 생성 콘텐츠의 비공개,Non-disclosure of AI-generated content,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+투명성·설명가능성,RAI4-0770,설명 가능한 AI 기술을 겨냥한 적대적 공격,Adversarial attacks targeting explainable AI techniques,HOLD,Conflict (RAI3-A-SYS-05),Related HOLD by risk label
+투명성·설명가능성,RAI4-0949,투명성 - 설명 가능성,Transparency - explainability,HOLD,Policy Exposure (RAI3-G-INT-11),Related HOLD by risk label
+투명성·설명가능성,RAI4-0957,투명성 부족,Lack of transparency,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-0978,의사결정 투명성,Decision making transparency,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+투명성·설명가능성,RAI4-1033,투명성과 설명가능성의 정도,Degree of transparency and explainability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+투명성·설명가능성,RAI4-1195,해석력 부족,Lack of interpretability,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-1226,설명 가능성 부족,Lack of explainability,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-1267,투명성과 설명 가능성,Transparency and explainability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+투명성·설명가능성,RAI4-1300,모델 불투명도,Model opacity,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1331,모델 및 알고리즘으로 인한 위험(설명 가능성의 위험),Risks from models and algorithms (risks of explainability),HOLD,Policy Exposure (RAI3-G-INT-11),Related HOLD by risk label
+투명성·설명가능성,RAI4-1352,불투명도(블랙박스 문제),Opacity (the black box problem),HOLD,Accountability (RAI3-A-SYS-02),Related HOLD by risk label
+투명성·설명가능성,RAI4-1384,이해력 부족,Lack of intelligibility,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+투명성·설명가능성,RAI4-1429,투명성과 해석 가능성 부족,Lack of transparency and interpretability,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-1462,최종 사용자에게 부적절한 투명성 수준,Inappropriate degree of transparency to end users,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1473,설명 가능성 부족,Lack of explainability,HOLD,Overconfidence (RAI3-G-SYS-07),Related HOLD by risk label
+투명성·설명가능성,RAI4-1513,해석 가능성 기술의 오용,Misuse of interpretability techniques,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1514,해석 가능성 기술의 결과와 범위를 오해하거나 과대평가함,Misunderstanding or overestimating the results and scope of interpretability techniques,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1600,설명할 수 없는 출력,Unexplainable output,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1601,신뢰할 수 없는 소스 속성,Unreliable source attribution,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+투명성·설명가능성,RAI4-1720,책임성과 투명성 부족,Lack of accountability and transparency,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+투명성·설명가능성,RAI4-1721,설명 가능성 및 해석 가능성 부족,Lack of explainability and interpretability,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0178,AI 중재 서비스 제외,AI-mediated service exclusion,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0373,문화간 고정관념 전이,Cross-cultural stereotype transfer,HOLD,Context Misalignment (RAI3-G-SYS-04),Related HOLD by risk label
+공정성,RAI4-0382,방언·언어 사용역 배제,Dialect and register exclusion,HOLD,Privacy (RAI3-G-INT-06),Related HOLD by risk label
+공정성,RAI4-0390,영향을 받는 커뮤니티 제외,Affected-community exclusion,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0396,세속적 기본 편향,Secular default bias,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0403,도덕적 프레이밍 편향,Moral framing bias,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0404,데이터 세트 문화적 샘플링 편향,Dataset cultural sampling bias,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0417,인간 피드백 작업자 가치 편향,Human feedback worker value bias,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0423,알고리즘 차별,Algorithmic discrimination,HOLD,Anthropomorphism (RAI3-G-INT-10),Seed example
+공정성,RAI4-0425,표현적 고정관념,Representational stereotyping,HOLD,Hate and Unfairness (RAI3-G-INT-04),Seed example
+공정성,RAI4-0429,교육 불평등,Educational inequity,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0430,저자원 언어 제외,Low-resource language exclusion,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+공정성,RAI4-0461,불평등 계산,Compute inequality,HOLD,Collusion (RAI3-A-SYS-06),Related HOLD by risk label
+공정성,RAI4-0538,사회적 결속과 형평성 붕괴,Social cohesion and equity disruption,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0677,알고리즘 차별,Algorithmic discrimination,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0696,편견과 차별(훈련 데이터세트의 편견),Bias and discrimination (bias in training datasets),HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+공정성,RAI4-0697,편견과 차별(가치 내재),Bias and discrimination (value embedding),HOLD,Anthropomorphism (RAI3-G-INT-10),Seed example
+공정성,RAI4-0698,편견과 차별(가치 고정 및 결과 균질화),Bias and discrimination (value lock and outcome homogenization),HOLD,Inconsistency (RAI3-G-SYS-05),Related HOLD by risk label
+공정성,RAI4-0700,편향된 진술 및 권장 사항,Biased statements and recommendations,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+공정성,RAI4-0701,편견이 설명에 정확하게 반영되지 않음,Biases are not accurately reflected in explanations,HOLD,Policy Exposure (RAI3-G-INT-11),Related HOLD by risk label
+공정성,RAI4-0702,AI 기반 콘텐츠 조정 알고리즘의 편견,Biases in AI-based content moderation algorithms,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0706,알고리즘 차별,Algorithmic discrimination,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-0709,공정성 - 편견,Fairness - bias,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-0720,편견과 과소표현으로 인한 위험,Risks from bias and underrepresentation,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0722,모델 및 알고리즘으로 인한 위험(편향 및 차별의 위험),Risks from models and algorithms (risks of bias and discrimination),HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-0883,AI 모델 편향이 사용자 판단에 미치는 장기적 영향,Long-term effects of AI model biases on user judgment,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0937,불공정과 차별,Unfairness and discrimination,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-0955,알고리즘 편향,Algorithmic bias,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0997,고정관념을 갖는 사회 집단,Stereotyping social groups,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-0999,소셜 그룹 삭제,Erasing social groups,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1025,"불평등, 소외, 폭력","Inequality, marginalization, and violence",HOLD,Violence (RAI3-G-INT-01),Related HOLD by risk label
+공정성,RAI4-1029,AI 결정의 불공정성,Unfairness in AI decisions,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1051,사회적 고정관념과 부당한 차별,Social stereotypes and unfair discrimination,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-1092,모델 접근으로 인한 이익의 불공정한 분배,Unfair distribution of benefits from model access,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+공정성,RAI4-1094,불평등과 불안정성,Inequality and precarity,HOLD,Network Effects (RAI3-A-SYS-03),Related HOLD by risk label
+공정성,RAI4-1103,AI 차별,AI discrimination,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
+공정성,RAI4-1111,모델 편향,Model bias,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+공정성,RAI4-1151,기존 불평등의 고착화 및 악화,Entrenchment and exacerbation of existing inequalities,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1178,불공평성과 편견,Unfairness and bias,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-1215,노동 가치 하락과 경제적 불평등 심화,Devaluation of labor and heightened economic inequality,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1221,알고리즘 편향,Algorithmic bias,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-1224,디지털 격차,Digital divide,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+공정성,RAI4-1233,소득 불평등과 독점,Income inequality and monopolies,HOLD,Network Effects (RAI3-A-SYS-03),Related HOLD by risk label
+공정성,RAI4-1260,AI 분야의 서구 중심 획일성,Western-centric uniformity in the AI field,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1266,편견과 공정성,Bias and fairness,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1274,AI 결정의 불공정성,Unfairness in AI decisions,HOLD,Non-Contestability (RAI3-G-SYS-09),Related HOLD by risk label
+공정성,RAI4-1290,소득 격차 증가,Increased income disparity,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1291,시민 심사와 맞춤형 선전을 통한 편향적 영향력,Biased influence through citizen screening and tailored propaganda,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1299,알고리즘 편향,Algorithmic bias,HOLD,Misinformation/Disinformation (RAI3-G-SYS-03),Related HOLD by risk label
+공정성,RAI4-1309,알고리즘 편향,Algorithmic bias,HOLD,Hate and Unfairness (RAI3-G-INT-04),Related HOLD by risk label
+공정성,RAI4-1344,"윤리적 위험(사회적 차별과 편견을 악화시키고, 지능격차를 확대할 위험)","Ethical risks (risks of exacerbating social discrimination and prejudice, and widening the intelligence divide)",HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1372,노동 시장에 미치는 영향(불평등 증가),Impact on labor markets (rising inequalities),HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1389,차별과 고정관념 재생산,Discrimination and stereotype reproduction,HOLD,Network Effects (RAI3-A-SYS-03),Related HOLD by risk label
+공정성,RAI4-1394,경제력 집중화와 불평등,Economic power centralisation and inequality,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1420,AI 기반 자동화로 소득 불평등 증가,AI-based automation increases income inequality,HOLD,Destabilising Dynamics (RAI3-A-SYS-04),Related HOLD by risk label
+공정성,RAI4-1501,일반 평가(AI 모델의 자기선호 편향),General evaluations (self-preference bias in AI models),HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1503,일반 평가(암호화된 인간 가치에 대한 편향된 평가),General evaluations (biased evaluations of encoded human values),HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1611,"편견, 공정성 및 표현상의 피해","Bias, fairness and representational harms",HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1713,편견과 차별대우,Bias and differential treatment,HOLD,Anthropomorphism (RAI3-G-INT-10),Related HOLD by risk label
+공정성,RAI4-1723,해로운 편견과 불공평함,Harmful bias and unfairness,HOLD,Goal Misalignment (RAI3-G-SYS-08),Related HOLD by risk label
