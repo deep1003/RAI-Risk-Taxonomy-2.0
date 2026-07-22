@@ -1,0 +1,58 @@
+{
+  "release": "v2.17.2",
+  "registered_ids": 1711,
+  "active_cards": 1660,
+  "physical_active_cards": 189,
+  "hold_active_cards": 765,
+  "physical_hold_cards": 0,
+  "conditions": {
+    "Overall HOLD included": {
+      "cards": 1660,
+      "em_iterations": 15,
+      "em_final_objective": 0.7971,
+      "topk": {
+        "1": 70.2,
+        "2": 84.0,
+        "3": 89.9,
+        "5": 94.6
+      },
+      "stability_sigma_0.05": 73.4
+    },
+    "Overall HOLD excluded": {
+      "cards": 895,
+      "em_iterations": 14,
+      "em_final_objective": 0.7992,
+      "topk": {
+        "1": 81.0,
+        "2": 92.0,
+        "3": 94.7,
+        "5": 97.1
+      },
+      "stability_sigma_0.05": 80.4
+    },
+    "Physical HOLD included": {
+      "cards": 189,
+      "em_iterations": 6,
+      "em_final_objective": 0.8354,
+      "topk": {
+        "1": 90.5,
+        "2": 96.8,
+        "3": 99.5,
+        "5": 100.0
+      },
+      "stability_sigma_0.05": 87.1
+    },
+    "Physical HOLD excluded": {
+      "cards": 189,
+      "em_iterations": 6,
+      "em_final_objective": 0.8354,
+      "topk": {
+        "1": 90.5,
+        "2": 96.8,
+        "3": 99.5,
+        "5": 100.0
+      },
+      "stability_sigma_0.05": 87.1
+    }
+  }
+}

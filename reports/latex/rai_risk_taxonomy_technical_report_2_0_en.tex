@@ -758,8 +758,7 @@ Agreement at $\sigma=0.05$ & 72.3\% & 74.0\% & 78.4\% & 80.0\% \\
 \end{tabular}
 \end{table}
 
-Three conclusions follow from Table~
-ef{tab:v217-bge} without restating its
+Three conclusions follow from Table~\ref{tab:v217-bge} without restating its
 entries. First, the permutation test rejects random labeling under BGE-M3 in
 every condition, so the partition encodes real semantic structure rather than
 lexical accident. Second, excluding the HOLD queue improves every indicator
@@ -820,8 +819,7 @@ Agreement at $\sigma=0.05$ & 72.0\% & 73.4\% & 78.8\% & 79.8\% \\
 \end{tabular}
 \end{table}
 
-Table~
-ef{tab:v2172-bge-active} shows that the consolidation and guarded
+Table~\ref{tab:v2172-bge-active} shows that the consolidation and guarded
 remap pass improves every reliability indicator on both populations. The
 mechanism of the gain is informative: retiring verbatim duplicates removes
 near-identical points that previously split family mass across identical
@@ -837,21 +835,20 @@ item pending human adjudication.
 
 The HOLD sensitivity analysis of Appendix~\ref{app:hist} is repeated here at
 the current release state so that the triage claim is not supported only by a
-superseded release. The procedure is identical to the historical analysis:
-the same seed, matched-size permutation design, and perturbation schedule are
-applied to the active cards, first with the HOLD queue embedded in its stored
-semantic lineage and then with the queue removed before centroid
-construction. Because the canonical BGE-M3 encoder is not available in the
-environment that produced this rerun, the analysis uses the independent
-multilingual-e5 encoder; the two conditions are therefore compared with each
-other, not with the BGE-M3 tables above, and the rerun doubles as an
-encoder-transfer replication of the sensitivity result.
+superseded release. The procedure applies the BGE-M3 active-card embeddings to
+all 1,660 active cards, including the 189 Physical AI cards. Retired merged
+records remain preserved in the 1,711-ID registry but are excluded from
+reliability metrics because they are no longer independent active risk cards.
+The comparison is deliberately not a comparison between Physical and
+non-Physical subsets. Instead, it asks whether the full active release becomes
+more stable when the HOLD review queue is excluded from centroid construction
+and released-L3 containment.
 
 \begin{table}[ht]
 \centering
-\caption{HOLD sensitivity at v2.17.2 under the transfer encoder
-(multilingual-e5-small, seed 20260721, 5{,}000 permutations, 200 perturbation
-repeats per $\sigma$).}
+\caption{HOLD sensitivity at v2.17.2 with Physical AI included
+(BGE-M3, active cards only, 5{,}000 permutations, 200 perturbation repeats per
+$\sigma$).}
 \label{tab:holdsens-v2172}
 \small
 \begin{tabular}{lrr}
@@ -859,33 +856,48 @@ repeats per $\sigma$).}
 Diagnostic & HOLD included & HOLD excluded \\
 \midrule
 Cards assessed & 1,660 & 895 \\
-Top-1 containment & 64.0\% & 76.9\% \\
-Top-2 containment & 79.3\% & 87.9\% \\
-Top-3 containment & 85.9\% & 90.6\% \\
-Top-5 containment & 92.9\% & 94.9\% \\
-Median assignment margin & 0.0032 & 0.0072 \\
-Negative-margin share & 36.0\% & 23.1\% \\
+Physical AI cards included & 189 & 189 \\
+Top-1 containment & 70.2\% & 81.0\% \\
+Top-2 containment & 84.0\% & 92.0\% \\
+Top-3 containment & 89.9\% & 94.7\% \\
+Top-5 containment & 94.6\% & 97.1\% \\
+Median assignment margin & 0.0150 & 0.0288 \\
+Negative-margin share & 29.8\% & 19.0\% \\
 Permutation $p$ & 0.0002 & 0.0002 \\
-EM iterations to fixed point & 11 & 11 \\
-EM agreement with released paths & 22.6\% & 27.9\% \\
-Agreement at $\sigma=0.01$ & 91.0\% & 92.9\% \\
-Agreement at $\sigma=0.05$ & 53.5\% & 60.7\% \\
+EM iterations to fixed point & 15 & 14 \\
+EM objective at convergence & 0.797 & 0.799 \\
+EM agreement with released paths & 25.7\% & 32.4\% \\
+Agreement at $\sigma=0.01$ & 94.5\% & 96.0\% \\
+Agreement at $\sigma=0.05$ & 73.4\% & 80.4\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The qualitative pattern of the historical analysis replicates exactly under a
-different encoder and after two release cycles of consolidation: removing the
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.17.2/full_sensitivity_bge_m3/overall_physical_included_hold_sensitivity_3panel.pdf}
+\caption{HOLD sensitivity analysis for the full v2.17.2 active release with
+Physical AI included. (a) Seed-initialized spherical EM reaches a fixed point
+after 15 iterations with HOLD included and after 14 iterations with HOLD
+excluded. (b) Released-L3 top-$k$ containment improves across $k=1,2,3,5$
+after removing HOLD cards from the evaluated active set. (c) Assignment
+stability under Gaussian embedding perturbation is higher on the non-HOLD
+subset across the tested noise schedule. Shaded bands indicate 95\% intervals
+across 200 perturbation repeats.}
+\label{fig:holdsens-v2172-full}
+\end{figure}
+
+The qualitative pattern of the historical analysis replicates under the
+canonical BGE-M3 encoder after the v2.17.2 consolidation pass: removing the
 review queue improves containment, margin quality, and perturbation stability
 together, while non-random structure holds in both conditions. This is the
 strongest available evidence that HOLD functions as a genuine triage
 separation rather than an artifact of one encoder or one release. The correct
-reading remains conditional, as in the historical analysis: the non-HOLD
-subset is cleaner because the policy deliberately concentrates weak-fit and
-multi-mechanism cases in the queue, so the comparison validates the
-separation signal, not the accuracy of individual non-HOLD assignments.
-Machine-readable outputs are stored in
-\code{reports/validation/v2\_17\_2\_hold\_sensitivity\_e5/}.
+reading remains conditional: the non-HOLD subset is cleaner because the policy
+deliberately concentrates weak-fit and multi-mechanism cases in the queue, so
+the comparison validates the separation signal, not the accuracy of every
+individual non-HOLD assignment. Machine-readable outputs are stored in
+\code{reports/validation/v2.17.2/full\_sensitivity\_bge\_m3/}.
 
 \subsection{Policy-subset separation}
 

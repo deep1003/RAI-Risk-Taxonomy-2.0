@@ -1,0 +1,33 @@
+{
+  "release": "v2.17.2",
+  "scope": "active non-Physical cards only; retired merged records excluded",
+  "registered_ids": 1711,
+  "active_cards": 1660,
+  "active_physical_cards_excluded": 189,
+  "conditions": {
+    "non-Physical HOLD included": {
+      "cards": 1471,
+      "em_iterations": 10,
+      "em_final_objective": 0.8,
+      "topk": {
+        "1": 68.9,
+        "2": 83.1,
+        "3": 89.6,
+        "5": 94.4
+      },
+      "stability_sigma_0.05": 72.4
+    },
+    "non-Physical HOLD excluded": {
+      "cards": 706,
+      "em_iterations": 11,
+      "em_final_objective": 0.8065,
+      "topk": {
+        "1": 79.9,
+        "2": 91.5,
+        "3": 94.2,
+        "5": 96.7
+      },
+      "stability_sigma_0.05": 79.5
+    }
+  }
+}
