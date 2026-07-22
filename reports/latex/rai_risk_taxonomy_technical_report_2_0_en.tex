@@ -632,6 +632,35 @@ conditions applies:
   human approval.
 \end{itemize}
 
+\subsection{Evidence-enrichment remediation, v2.16.0}
+
+Some HOLD reasons are remediable without changing the taxonomy. Label-definition
+mismatch, inherited taxonomy-family prose, and weak or overly broad source
+support are treated as data-quality defects before they are treated as final
+taxonomy decisions. Release v2.16.0 therefore introduces a remediation audit
+over all 720 HOLD cards. The audit separates cards into six operational
+classes: taxonomy-structure review, mapping revalidation, title-definition
+rewrite candidate, human taxonomy decision, evidence-enrichment candidate, and
+evidence plus taxonomy review.
+
+The first-pass audit finds 268 cards that mainly expose missing or insufficient
+L3 structure, 200 cards requiring mapping revalidation, 147 cards suitable for
+title-definition rewriting, 72 cards requiring human boundary decisions, 21
+cards suitable for evidence enrichment, and 12 cards requiring both evidence
+enrichment and taxonomy review. This confirms that weak evidence is repairable
+for a subset of HOLD, but it is not the dominant HOLD reason.
+
+The first v2.16.0 enrichment pass updates 10 governance and interaction-risk
+cards with 11 directly relevant, online-verified references and rewrites their
+definitions as specific L4 mechanisms. The affected cards include risk
+classification error, capability evaluation non-disclosure, benchmark
+governance failure, red-team governance failure, regulatory arbitrage,
+regulatory capture, international coordination failure, cross-border
+enforcement gap, AI registry incompleteness, and AI ethics washing. No card is
+automatically removed from HOLD in this pass. Evidence enrichment is a
+necessary repair step; HOLD clearance still requires a follow-up mapping
+reliability rerun or explicit human approval.
+
 \subsection{v2.12.0 HOLD baseline and v2.13.0 delta}
 
 The 689 v2.12.0 held cards are grouped by the stored primary reason in

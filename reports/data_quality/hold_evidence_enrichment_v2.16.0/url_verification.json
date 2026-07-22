@@ -1,0 +1,45 @@
+{
+  "release_id": "v2.16.0",
+  "urls": [
+    {
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.700-2.pdf",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-71",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://scholarship.law.georgetown.edu/facpub/2647/",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://arxiv.org/html/2410.13042v1",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41599-024-03560-x",
+      "status": "HTTP 303 to publisher identity flow, article endpoint resolved",
+      "verified_on": "2026-07-22"
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.06611",
+      "status": "HTTP 200",
+      "verified_on": "2026-07-22"
+    }
+  ]
+}

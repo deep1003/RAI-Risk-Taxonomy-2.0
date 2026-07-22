@@ -1,0 +1,11 @@
+{
+  "release_id": "v2.16.0",
+  "source_release": "v2.15.0",
+  "cards_enriched": 10,
+  "references_added": 11,
+  "hold_cards_before": 720,
+  "hold_cards_after": 720,
+  "hold_removed": 0,
+  "url_verifications_recorded": 8,
+  "policy": "Evidence enrichment and definition repair do not automatically clear HOLD; remediated cards require a follow-up mapping reliability rerun or human approval."
+}
