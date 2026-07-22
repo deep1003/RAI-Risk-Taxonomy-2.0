@@ -15,7 +15,6 @@
 \usepackage[hidelinks]{hyperref}
 \pgfplotsset{compat=1.18}
 
-% Portable font setup: canonical fonts on macOS, TeX Gyre fallbacks elsewhere.
 \IfFileExists{/System/Library/Fonts/Menlo.ttc}{%
   \setmainfont{Times New Roman}\setsansfont{Arial}\setmonofont{Menlo}%
   \newfontfamily\krfont{Apple SD Gothic Neo}%
@@ -23,7 +22,6 @@
   \setmainfont{TeX Gyre Termes}\setsansfont{TeX Gyre Heros}\setmonofont{TeX Gyre Cursor}%
   \newfontfamily\krfont{Noto Sans CJK KR}%
 }
-% Korean text support: wrap Hangul in \ko{...} (fixes missing-glyph breakage).
 \newcommand{\ko}[1]{{\krfont #1}}
 \setlength{\parindent}{1.4em}
 \setlength{\parskip}{0pt}
@@ -60,7 +58,6 @@
 \fancyhf{}
 \lhead{\footnotesize RAI Risk Taxonomy}
 \rhead{\footnotesize Technical Report 2.0}
-% Journal-style restructured edition (v2.17.1 state), generated 2026-07-22.
 \cfoot{\footnotesize\thepage}
 \hypersetup{
   pdftitle={RAI Risk Taxonomy Technical Report 2.0},
@@ -77,33 +74,38 @@ Top-down evidence selection and staged classification of 1,711 global AI risks}
 
 \begin{center}
 {\LARGE\bfseries RAI Risk Taxonomy 2.0:\\[2pt]
-Top-down evidence selection and staged classification of 1{,}711 global AI risks\par}
+Top-down evidence selection and staged classification of global AI risks\par}
 \vspace{8pt}
 {\large RAI Risk Taxonomy Project\par}
 \vspace{2pt}
-22 July 2026 \,·\, journal edition, release state v2.17.1
+22 July 2026 \,·\, journal edition, release state v2.17.2
 \end{center}
 
 \begin{abstract}
 \noindent
-We present a reproducible, top-down account of the evidence and classification
-pipeline behind RAI Risk Taxonomy 2.0. An integrated evidence space of
-3{,}906{,}767 AI records (papers, policy reports, patents) is filtered to an
-82{,}971-record AI-risk evidence view, from which 1{,}711 canonical L4 risk
-cards are constructed, level-validated, and assigned to 50 semantic L3
-families under a strict L0--L4 hierarchy; the 182-card Physical AI taxonomy is
-preserved as a locked gold set. Classification proceeds through a strict
-open-set gate, a suitability-ranked relaxation, and a forced-path completion,
-followed by expert review and guarded constrained-EM audits; every algorithmic
-or forced placement remains flagged for human adjudication through an explicit
-HOLD review state (727 cards, 42.5\%, at v2.17.1). A full-release BGE-M3
-validation finds statistically non-random semantic structure (permutation
-$p=0.0002$) and shows that the post-audit non-HOLD subset reaches 79.3\%
-top-1 and 97.4\% top-5 centroid containment, while global reliability of the
-consolidated 50-family partition remains undemonstrated. We specify every
-evidence filter, classification rule, and validation limit, and we document
-why HOLD concentration reflects cross-cutting risks and category overlap
-under a single-parent hierarchy rather than mere misclassification.
+This report gives a reproducible, top-down account of how RAI Risk Taxonomy
+2.0 was constructed, classified, and validated. A multi-million-record
+evidence space of papers, policy reports, and patents is filtered into a
+curated AI-risk evidence view, from which a permanent registry of canonical L4
+risk cards is built and assigned to a fixed set of semantic L3 families under
+a strict L0\textendash{}L4 hierarchy; the previously validated Physical AI taxonomy is
+preserved throughout as a locked gold set. Classification proceeds in stages:
+a strict open-set gate that releases only unanimous assignments, a
+suitability-ranked relaxation, and a forced-path completion, followed by
+independent expert review, guarded constrained-EM audits, and a
+registry-preserving consolidation that retires only verbatim duplicate
+records while keeping every identifier citable. No algorithmic or forced
+placement is treated as ground truth: each remains flagged for human
+adjudication through an explicit HOLD review state. Validation combines
+permutation tests, centroid-containment analysis, embedding-perturbation
+stability, and encoder-transfer checks. The evidence shows that the taxonomy
+carries statistically non-random semantic structure, that the HOLD mechanism
+effectively concentrates weak-fit and ambiguous cases, and that consolidation
+of duplicates measurably tightens the semantic geometry, while global
+reliability of the single-parent partition remains under review. We argue
+that residual HOLD concentration reflects cross-cutting risks and category
+overlap rather than mere misclassification, and we specify every evidence
+filter, classification rule, and validation limit needed for replication.
 \end{abstract}
 
 \noindent\textbf{Keywords:} AI risk taxonomy; evidence synthesis; open-set
@@ -134,12 +136,13 @@ The remainder of this paper is organized as an academic report. Section~\ref{sec
 describes the top-down construction of the evidence corpus and the canonical L4
 registry. Section~\ref{sec:methods} specifies the classification methodology,
 including the staged hierarchy-blind procedure, the guarded constrained-EM audit,
-and the HOLD review policy. Section~\ref{sec:results} reports release composition
-and reliability validation for the current release state (v2.17.1).
-Section~\ref{sec:discussion} interprets the validation evidence and its limits, and
-Section~\ref{sec:conclusion} states the release decision and review priorities.
-Version-by-version engineering history, detailed review policies, exploratory
-analyses, and reporting conventions are collected in the appendices.
+the registry-preserving consolidation pass, and the HOLD review policy.
+Section~\ref{sec:results} reports release composition and reliability validation
+through the current release state (v2.17.2). Section~\ref{sec:discussion}
+interprets the validation evidence and its limits, and Section~\ref{sec:conclusion}
+states the release decision and review priorities. Version-by-version engineering
+history, detailed review policies, exploratory analyses, and reporting conventions
+are collected in the appendices.
 
 \section{Evidence corpus and canonical L4 registry}
 \label{sec:data}
@@ -422,6 +425,28 @@ and stores the proposed semantic family in \code{hold\_semantic\_path}. Those
 eight cards are valid reassignment proposals but do not appear as primary L3
 moves in a direct card-to-card diff.
 
+
+\subsection{Registry-preserving consolidation and label-noise remediation (v2.17.2)}
+\label{sec:consolidation}
+
+Release v2.17.2 addresses five classes of L4 label noise identified during
+review: overly generic names, exact or near-duplicate names, parenthetical or
+compound labels mixing description and scope, domain-topic-like names, and
+multi-mechanism labels. Every exact normalized-label cluster was adjudicated
+card by card against the mechanism definitions. Records whose label and
+mechanism definition are verbatim or same-lineage duplicates (for example,
+double-indexed 2021/2022 editions of the same survey, or condensed copies of a
+source taxonomy) are retired with a \code{merged\_into} pointer, union of
+references, and alias preservation; the identifier registry is invariant, and
+no record is deleted. Cards with an articulable subtle difference are
+preserved and receive unique mechanism-bearing labels, with the distinction
+recorded in provenance; twelve initially merged records were revived under
+this preservation-first rule. Multi-mechanism cards receive a primary
+mechanism label with the secondary axes stored in a
+\code{secondary\_mechanisms} field, consistent with the multi-label extension
+discussed in Section~\ref{sec:discussion}. All label and definition changes
+carry \code{human\_review\_status=pending} with the original text preserved.
+
 \subsection{HOLD review policy}
 \label{sec:hold}
 
@@ -468,10 +493,13 @@ The qualitative retention criteria are listed in Appendix~\ref{app:holdpolicy}.
 
 \subsection{Evidence composition}
 
-Papers account for 44.8\% of the integrated AI evidence space, policy reports
-for 3.2\%, and patents for 52.0\%. Within the AI-risk evidence view, the
-corresponding shares are 60.7\%, 1.1\%, and 38.2\%. These shares use one decimal
-because their integer component is at least one.
+Figure~\ref{fig:composition} compares the document-type composition of the
+integrated evidence space with that of the AI-risk evidence view. The risk view
+is markedly more paper-weighted than the full space, which is dominated by
+patents. This asymmetry matters for interpretation: patent language describes
+mechanisms and applications rather than harms, so the curated risk view
+supplies most of the harm-mechanism vocabulary that the downstream card
+registry draws on.
 
 \begin{figure}[H]
 \centering
@@ -543,10 +571,9 @@ the eleven largest L3 nodes. Counts include assigned cards marked
 \label{fig:l3}
 \end{figure}
 
-After the v2.17.0 guarded audit and the minimal v2.17.1 Physical transfer
-(Appendix~\ref{app:history}), the public release state comprises 189
-Physical-path cards and 727 HOLD cards (42.5\%); the locked 182-card Physical
-source set is unchanged.
+After the v2.17.1 minimal Physical transfer and the v2.17.2 consolidation
+(Appendix~\ref{app:history}), the public release comprises 1,711 registered
+IDs, 1,660 active cards, 189 Physical-path cards, and 765 active HOLD records.
 
 \subsection{HOLD composition at v2.17.0}
 
@@ -626,7 +653,7 @@ not to trigger bulk remapping. The highest-priority review queue should start
 with taxonomy-gap cards, then Anthropomorphism ambiguity, then overloaded-L3
 or weak-evidence cases.
 
-\subsection{Reliability validation}
+\subsection{Reliability validation procedure}
 
 Reliability is re-evaluated on all 1,711 v2.14.0 paths using dense,
 1,024-dimensional BGE-M3 embeddings, seed 20260721, maximum sequence length
@@ -697,7 +724,7 @@ exceedances in 5,000 permutations (plus-one $p=0.0002$). The taxonomy contains
 non-random semantic structure, but its global partition is not robust under the
 tested geometry.
 
-\subsection{Reliability at the current release state}
+\subsection{Reliability of the v2.17.0 audit}
 
 The final sensitivity analysis uses the canonical BGE-M3 encoder, seed
 20260721, the same 50 semantic L3 families, 5,000 matched-size permutations,
@@ -731,21 +758,134 @@ Agreement at $\sigma=0.05$ & 72.3\% & 74.0\% & 78.4\% & 80.0\% \\
 \end{tabular}
 \end{table}
 
-Three findings follow. First, the released taxonomy is statistically
-non-random under BGE-M3: within-family cohesion exceeds every matched-size
-permutation in all four conditions ($p=0.0002$). Second, excluding HOLD
-improves every reliability indicator. After the v2.17.0 audit, top-1
-containment rises from 69.5\% to 79.3\%, top-5 containment from 95.0\% to
-97.4\%, the negative-margin share falls from 30.5\% to 20.7\%, and
-$\sigma=0.05$ perturbation stability rises from 74.0\% to 80.0\%. Third, the
-constrained audit improves local geometry but does not convert the taxonomy
-into a fully validated ground truth. EM-to-release agreement remains modest
-(22.3\% with HOLD included; 31.7\% with HOLD excluded), which is expected
-because unconstrained spherical EM has no hierarchy, protected Physical lock,
-HOLD review state, or policy constraint. The release conclusion therefore
-remains \textbf{SHARE WITH CAVEATS}: v2.17.0 is suitable for public review and
-navigation, while the 734 HOLD cards and the 22 guarded reassignment proposals
-remain priority items for human adjudication.
+Three conclusions follow from Table~
+ef{tab:v217-bge} without restating its
+entries. First, the permutation test rejects random labeling under BGE-M3 in
+every condition, so the partition encodes real semantic structure rather than
+lexical accident. Second, excluding the HOLD queue improves every indicator
+simultaneously, which is the signature of an effective triage mechanism: the
+review state absorbs the cards whose definitions genuinely underdetermine a
+single family. Third, the constrained audit improves local geometry but
+cannot, by construction, validate the taxonomy globally: unconstrained
+spherical EM lacks the hierarchy, the protected Physical lock, and the review
+policy, so its disagreement with released paths measures the difference
+between a purely geometric partition and a normative one, not an error rate.
+The release conclusion therefore remains 	extbf{SHARE WITH CAVEATS}, with
+the guarded reassignment proposals and the HOLD queue as the priority
+adjudication targets.
+
+\subsection{Current release state (v2.17.2)}
+
+Release v2.17.2 incorporates the final L4 label-deduplication and
+redefinition pass. The ID registry is invariant at 1,711 registered L4 IDs.
+Of these, 1,660 records are displayed and validated as active cards, while 51
+records are retained as merged provenance records with \code{merged\_into}
+links. The site and report therefore state both numbers together:
+\textbf{1,711 registered IDs, 1,660 active cards}. This preserves citation,
+audit, and crosswalk stability while preventing exact or same-lineage duplicate
+records from being treated as independent active risks.
+
+The BGE-M3 constrained-EM mapping algorithm was rerun on the 1,660 active
+cards using the unchanged 50 semantic L3 families from v2.17.1. The 189
+Physical-path cards are locked. The rerun produced 144 guarded move
+candidates. Following the release policy, these candidates are not treated as
+human-approved ground truth: every reflected move remains a HOLD review item.
+For cards already in HOLD, only the stored semantic review path is updated; for
+previously non-HOLD non-Physical cards, the primary path is moved into the
+appropriate General or Agentic HOLD review path and the proposed semantic L3 is
+stored in \code{hold\_semantic\_path}. This yields 765 active HOLD records.
+
+\begin{table}[ht]
+\centering
+\caption{BGE-M3 reliability after the v2.17.2 L4 revision pass.}
+\label{tab:v2172-bge-active}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & All, pre & All, post & Non-HOLD, pre & Non-HOLD, post \\
+\midrule
+Cards assessed & 1,660 & 1,660 & 954 & 954 \\
+Top-1 containment & 65.5\% & 70.2\% & 77.3\% & 79.7\% \\
+Top-2 containment & 78.8\% & 84.0\% & 89.0\% & 91.3\% \\
+Top-3 containment & 86.3\% & 89.9\% & 92.1\% & 94.5\% \\
+Top-5 containment & 92.9\% & 94.6\% & 96.0\% & 97.2\% \\
+Median assignment margin & 0.0116 & 0.0150 & 0.0258 & 0.0276 \\
+Negative-margin share & 34.5\% & 29.8\% & 22.7\% & 20.3\% \\
+Permutation $p$ & 0.0002 & 0.0002 & 0.0002 & 0.0002 \\
+EM convergence iterations & 15 & 15 & 19 & 19 \\
+EM objective at convergence & 0.797 & 0.797 & 0.800 & 0.800 \\
+EM agreement with released paths & 23.1\% & 25.7\% & 29.7\% & 31.4\% \\
+Agreement at $\sigma=0.01$ & 94.1\% & 94.5\% & 95.5\% & 96.2\% \\
+Agreement at $\sigma=0.05$ & 72.0\% & 73.4\% & 78.8\% & 79.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~
+ef{tab:v2172-bge-active} shows that the consolidation and guarded
+remap pass improves every reliability indicator on both populations. The
+mechanism of the gain is informative: retiring verbatim duplicates removes
+near-identical points that previously split family mass across identical
+intensions, and mechanism-bearing relabeling moves card text closer to the
+definitional anchor of its family. The improvement is therefore a data-quality
+effect, not an algorithmic recalibration, and it supports publication as a
+synchronized review release while every reflected move remains a HOLD review
+item pending human adjudication.
+
+
+\subsection{HOLD sensitivity at the current release state (v2.17.2)}
+\label{sec:holdsens-current}
+
+The HOLD sensitivity analysis of Appendix~\ref{app:hist} is repeated here at
+the current release state so that the triage claim is not supported only by a
+superseded release. The procedure is identical to the historical analysis:
+the same seed, matched-size permutation design, and perturbation schedule are
+applied to the active cards, first with the HOLD queue embedded in its stored
+semantic lineage and then with the queue removed before centroid
+construction. Because the canonical BGE-M3 encoder is not available in the
+environment that produced this rerun, the analysis uses the independent
+multilingual-e5 encoder; the two conditions are therefore compared with each
+other, not with the BGE-M3 tables above, and the rerun doubles as an
+encoder-transfer replication of the sensitivity result.
+
+\begin{table}[ht]
+\centering
+\caption{HOLD sensitivity at v2.17.2 under the transfer encoder
+(multilingual-e5-small, seed 20260721, 5{,}000 permutations, 200 perturbation
+repeats per $\sigma$).}
+\label{tab:holdsens-v2172}
+\small
+\begin{tabular}{lrr}
+\toprule
+Diagnostic & HOLD included & HOLD excluded \\
+\midrule
+Cards assessed & 1,660 & 895 \\
+Top-1 containment & 64.0\% & 76.9\% \\
+Top-2 containment & 79.3\% & 87.9\% \\
+Top-3 containment & 85.9\% & 90.6\% \\
+Top-5 containment & 92.9\% & 94.9\% \\
+Median assignment margin & 0.0032 & 0.0072 \\
+Negative-margin share & 36.0\% & 23.1\% \\
+Permutation $p$ & 0.0002 & 0.0002 \\
+EM iterations to fixed point & 11 & 11 \\
+EM agreement with released paths & 22.6\% & 27.9\% \\
+Agreement at $\sigma=0.01$ & 91.0\% & 92.9\% \\
+Agreement at $\sigma=0.05$ & 53.5\% & 60.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The qualitative pattern of the historical analysis replicates exactly under a
+different encoder and after two release cycles of consolidation: removing the
+review queue improves containment, margin quality, and perturbation stability
+together, while non-random structure holds in both conditions. This is the
+strongest available evidence that HOLD functions as a genuine triage
+separation rather than an artifact of one encoder or one release. The correct
+reading remains conditional, as in the historical analysis: the non-HOLD
+subset is cleaner because the policy deliberately concentrates weak-fit and
+multi-mechanism cases in the queue, so the comparison validates the
+separation signal, not the accuracy of individual non-HOLD assignments.
+Machine-readable outputs are stored in
+\code{reports/validation/v2\_17\_2\_hold\_sensitivity\_e5/}.
 
 \subsection{Policy-subset separation}
 
@@ -770,20 +910,16 @@ Forced migrations & 39 & 0.746 & -0.005 & 46.2\% & 71.8\% \\
 \end{tabular}
 \end{table}
 
-The HOLD top-1 rate is 14.8 percentage points below the non-HOLD rate, and its
-median margin is less than one quarter of the non-HOLD margin. Negative margins
-occur for 43.9\% of HOLD cards versus 29.1\% of non-HOLD cards. The protected
-Physical subset is substantially stronger, with 89.0\% top-1 and 96.7\% top-2
-containment, but remains locked because authority comes from the Physical AI
-taxonomy rather than from this geometric diagnostic.
-
-Relative to v2.12.0, v2.14.0 raises global top-1 containment by 0.1 percentage
-points, while cohesion decreases by 0.0018, top-2 decreases by 0.1 points, and
-$\sigma=0.05$ agreement is unchanged at the displayed precision. These
-differences are negligible at global scale. The correct conclusion is therefore
-\textbf{SHARE WITH CAVEATS}: the taxonomy has statistically non-random semantic
-structure and a useful HOLD separation, but strong global assignment
-reliability is not demonstrated.
+The subset ordering in the table matches what the review policy predicts: the
+locked Physical set is strongest, the non-HOLD subset intermediate, and the
+HOLD queue and forced migrations weakest. Two interpretive cautions apply. The
+Physical result evidences internal alignment of the authoritative set but is
+not an unbiased comparison, because its paths are locks rather than
+predictions. The HOLD result validates the marker as a triage instrument
+without proving any individual marker correct, since the policy itself
+concentrates weak-fit cases in the queue. Successive releases changed these
+subset statistics only marginally, so the release verdict rests on the
+qualitative separation rather than on any single decimal.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -948,8 +1084,8 @@ rather than necessarily incorrect classification. A principled future
 extension is to treat these cards through multi-label classification, in
 which one mandatory primary family and optional secondary families are coded,
 or through a polyhierarchical taxonomy in which an L4 card may hold more than
-one L3 parent. Either extension would convert forced single-parent placements
-into explicit, auditable multi-membership records while preserving
+one L3 parent. The \code{secondary\_mechanisms} field introduced in v2.17.2
+provides the first data support for this extension while preserving
 single-point operational accountability through the mandatory primary parent.
 
 \subsection{Candidate L3 expansion}
@@ -965,12 +1101,13 @@ adopted in the current release.
 \label{sec:conclusion}
 
 The release conclusion is \textbf{SHARE WITH CAVEATS}: the taxonomy exhibits
-statistically non-random semantic structure and an effective HOLD triage
-separation, but strong global assignment reliability is not demonstrated.
+statistically non-random semantic structure, an effective HOLD triage
+separation, and measurable reliability gains from the v2.17.2 consolidation,
+but strong global assignment reliability is not yet demonstrated.
 
-Review should begin with the 39 forced migrations, then the weakest global
-families and low-margin cards within Anthropomorphism.
-The 734 assigned cards marked \code{HOLD} should be adjudicated using agreement
+Review should begin with the v2.17.2 HOLD queue, especially the 144 guarded
+BGE-M3 move candidates, then the weakest global families and low-margin cards.
+The 765 active cards marked \code{HOLD} should be adjudicated using agreement
 among the risk label, mechanism-only definition, cited evidence, and candidate
 L3 definition. Each approved batch should be followed by the identical
 reliability analysis. A low score alone must not trigger automatic movement;
@@ -1001,7 +1138,7 @@ not displayed for any card because the cards do not constitute a common
 measurement population suitable for relative ranking. Existing percentile
 fields remain provenance data only.
 
-\subsection{Complete English--Korean localization (v2.5)}
+\subsection{Complete English\textendash{}Korean localization (v2.5)}
 
 Release v2.5 requires bilingual display at every taxonomy level. The supplied
 L0-L3 terminology and Korean definitions are used as the controlled glossary.
@@ -1067,7 +1204,7 @@ handled identically. Six of the excluded rows previously carried \code{HOLD},
 reducing the displayed count from 82 to 76. The protected Physical set remains
 exactly 182 cards.
 
-\subsection{Definition audit and Agentic expansion (v2.7--v2.8)}
+\subsection{Definition audit and Agentic expansion (v2.7\textendash{}v2.8)}
 
 The v2.7 audit treats L3 load as a triage signal rather than evidence of
 semantic fit. It removes 1,129 imported hierarchy-name scaffolds from L4
@@ -1282,7 +1419,7 @@ conditions applies:
   human approval.
 \end{itemize}
 
-\subsection{Historical HOLD baseline (v2.12.0--v2.13.0)}
+\subsection{Historical HOLD baseline (v2.12.0\textendash{}v2.13.0)}
 
 The 689 v2.12.0 held cards are grouped by the stored primary reason in
 Table~\ref{tab:holdreasons}. Composite taxonomy-gap labels are counted once in
@@ -1547,7 +1684,7 @@ cross-cutting adjudication queue rather than a separate risk domain.}
 \section{Historical reliability results}
 \label{app:hist}
 
-\subsection{Full-release results before HOLD separation (v2.12.0--v2.14.0)}
+\subsection{Full-release results before HOLD separation (v2.12.0\textendash{}v2.14.0)}
 
 \begin{table}[H]
 \centering
@@ -1628,7 +1765,7 @@ to 991. The improvement therefore validates HOLD as an effective triage
 separation signal; it does not prove that every non-HOLD assignment is correct
 or that moving a card into HOLD improves its semantic classification.
 
-\subsection{HOLD sensitivity analysis (v2.15.0)}
+\subsection{HOLD sensitivity analysis (v2.15.0, historical)}
 
 We next compare the same three diagnostics under two explicit conditions:
 \emph{HOLD included}, where all 1,711 v2.14.0 cards remain embedded in their
@@ -1700,6 +1837,6 @@ machine-readable statistics artifact.
 
 
 \vspace{6pt}
-\noindent\emph{This document is the restructured journal edition of RAI Risk Taxonomy Technical Report 2.0 at release state v2.17.1.}
+\noindent\emph{This document is the journal edition of RAI Risk Taxonomy Technical Report 2.0 at release state v2.17.2.}
 
 \end{document}

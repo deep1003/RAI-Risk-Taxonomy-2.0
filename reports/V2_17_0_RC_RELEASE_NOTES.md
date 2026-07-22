@@ -72,3 +72,20 @@
 - 51개 통합 카드는 삭제하지 않고 `status=retired`, `merged_into` provenance를 유지. taxonomy 브라우저에서는 `MERGED` 배지와 별도 필터로 계속 탐색 가능
 - BGE-M3 constrained-EM 신뢰성 검증은 active 1,660개 기준으로 재실행. 전체 Top-1 70.2%, 비HOLD Top-1 79.7%, 비HOLD 노이즈 안정성 79.8%
 - 144개 guarded move 후보는 자동 정답으로 확정하지 않고 HOLD 검토 상태로 반영. 최종 active HOLD는 765개
+
+## 추가 작업 (2026-07-22 심야, TR 논문판 전 파일 동기화)
+- Codex의 v2.17.2 절(BGE-M3 재실행, 1,711 ID/1,660 active/765 HOLD, top-1 70.2%/79.7%)을 반영해 논문판 재조립
+- 동기화 완료 파일:
+  - reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex ← 논문판(정본 승격, 25p 구조: 본문 6절 + Appendix A-E)
+  - reports/latex/..._en_paper.tex ← 동일 내용 유지
+  - reports/latex/..._en_flat_legacy.tex ← 기존 플랫 구조 원본 보존
+  - reports/pdf/..._en.pdf, reports/pdf/..._en_paper.pdf, output/pdf/..._en.pdf ← 재빌드 동기화 (샌드박스 대체 폰트, Mac에서 재컴파일 시 Times New Roman 적용)
+  - reports/latex/..._ko.tex ← Codex의 v2.17.2 절 포함 상태 유지 (kotex 필요, Mac 컴파일)
+- 신규 본문 요소. Methods 3.6 'Registry-preserving consolidation and label-noise remediation (v2.17.2)', Results 4.6 'Current release state (v2.17.2)', abstract를 v2.17.2 수치로 갱신, secondary_mechanisms를 multi-label 확장 근거로 Discussion에 연결
+- 구버전 미리보기 reports/pdf/..._en_v217rc_preview.pdf는 폐기 대상 (최신본으로 대체됨)
+
+## 추가 작업 (2026-07-23 준비, TR 본문 개정)
+- HOLD 민감도 분석을 공식 v2.17.2(활성 1,660, HOLD 765)로 재실행해 본문 신설 절 'HOLD sensitivity at the current release state'에 수록 (e5 encoder-transfer, 포함 1,660 vs 제외 895. top-1 64.0→76.9%, σ0.05 53.5→60.7%, perm p=0.0002 양쪽 유지). Appendix D.3은 (v2.15.0, historical)로 명시. 산출물 reports/validation/v2_17_2_hold_sensitivity_e5/
+- 초록을 수치 없는 서술형으로 전면 재작성 (절차·검증 설계·해석·한계 중심)
+- 본문에서 표·그림 수치 반복 서술 제거. Evidence composition, v2.17.0 신뢰성 3결론, v2.17.2 결과 해석, Policy-subset separation을 해석·주의사항 중심 문단으로 대체
+- PDF 3본 재동기화 (reports/pdf 2본 + output/pdf)

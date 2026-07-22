@@ -1,0 +1,16 @@
+{
+ "condition": "hold_included",
+ "cards": 1660,
+ "top1": 64.0,
+ "top2": 79.3,
+ "top3": 85.9,
+ "top5": 92.9,
+ "median_margin": 0.0032,
+ "neg_margin": 36.0,
+ "perm_p": 0.0002,
+ "em_iters": 11,
+ "em_obj": 0.933,
+ "em_agree": 22.6,
+ "s0.01": 91.0,
+ "s0.05": 53.5
+}
