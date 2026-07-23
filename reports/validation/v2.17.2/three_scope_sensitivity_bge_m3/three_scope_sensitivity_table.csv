@@ -1,0 +1,4 @@
+condition,cards,families,em_iterations,em_final_objective,top1,top2,top3,top5,median_margin,negative_margin_share,permutation_p,sigma_0.01_stability,sigma_0.05_stability
+"Overall, Physical included, HOLD included",1660,50,15,0.7971,70.2,84.0,89.9,94.6,0.015,29.8,0.0002,94.52439759036145,73.42560240963856
+"Overall, Physical included, HOLD excluded",895,50,14,0.7992,81.0,92.0,94.7,97.1,0.0288,19.0,0.0002,96.04525139664806,80.35027932960894
+Physical AI only,189,50,6,0.8354,90.5,96.8,99.5,100.0,0.0384,9.5,0.0002,96.76984126984128,87.07671957671957

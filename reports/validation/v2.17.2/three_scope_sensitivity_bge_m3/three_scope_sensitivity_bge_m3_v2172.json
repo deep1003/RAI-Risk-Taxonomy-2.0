@@ -1,0 +1,371 @@
+{
+  "release": "v2.17.2",
+  "model": "BAAI/bge-m3 cached local embeddings",
+  "seed": 20260723,
+  "registered_ids": 1711,
+  "active_cards": 1660,
+  "active_hold_cards": 765,
+  "active_non_hold_cards": 895,
+  "active_physical_cards": 189,
+  "conditions": [
+    {
+      "condition": "Overall, Physical included, HOLD included",
+      "cards": 1660,
+      "families": 50,
+      "topk": {
+        "1": 70.2,
+        "2": 84.0,
+        "3": 89.9,
+        "5": 94.6
+      },
+      "median_margin": 0.015,
+      "negative_margin_share": 29.8,
+      "mean_within_family_cosine": 0.7707,
+      "null_mean": 0.7373,
+      "permutation_p": 0.0002,
+      "em_iterations": 15,
+      "em_final_objective": 0.7971,
+      "em_agreement": 25.7,
+      "ari": 0.148,
+      "nmi": 0.441,
+      "em_curve": [
+        {
+          "iteration": 1,
+          "objective": 0.7845253348350525
+        },
+        {
+          "iteration": 2,
+          "objective": 0.7913264632225037
+        },
+        {
+          "iteration": 3,
+          "objective": 0.7937802672386169
+        },
+        {
+          "iteration": 4,
+          "objective": 0.7950021028518677
+        },
+        {
+          "iteration": 5,
+          "objective": 0.795745849609375
+        },
+        {
+          "iteration": 6,
+          "objective": 0.7963290810585022
+        },
+        {
+          "iteration": 7,
+          "objective": 0.7965448498725891
+        },
+        {
+          "iteration": 8,
+          "objective": 0.7967067360877991
+        },
+        {
+          "iteration": 9,
+          "objective": 0.7967876195907593
+        },
+        {
+          "iteration": 10,
+          "objective": 0.7968312501907349
+        },
+        {
+          "iteration": 11,
+          "objective": 0.7969046831130981
+        },
+        {
+          "iteration": 12,
+          "objective": 0.7970181107521057
+        },
+        {
+          "iteration": 13,
+          "objective": 0.7970837950706482
+        },
+        {
+          "iteration": 14,
+          "objective": 0.7971047163009644
+        },
+        {
+          "iteration": 15,
+          "objective": 0.7971272468566895
+        }
+      ],
+      "perturbation": [
+        {
+          "sigma": 0.0,
+          "mean": 100.0,
+          "low_95": 100.0,
+          "high_95": 100.0
+        },
+        {
+          "sigma": 0.01,
+          "mean": 94.52439759036145,
+          "low_95": 93.67168674698794,
+          "high_95": 95.42168674698796
+        },
+        {
+          "sigma": 0.05,
+          "mean": 73.42560240963856,
+          "low_95": 71.68524096385542,
+          "high_95": 75.06024096385542
+        },
+        {
+          "sigma": 0.1,
+          "mean": 47.49969879518072,
+          "low_95": 45.41415662650602,
+          "high_95": 49.640060240963855
+        },
+        {
+          "sigma": 0.2,
+          "mean": 17.69698795180723,
+          "low_95": 16.022590361445786,
+          "high_95": 19.397590361445783
+        },
+        {
+          "sigma": 0.3,
+          "mean": 8.551506024096385,
+          "low_95": 7.409638554216867,
+          "high_95": 9.881024096385541
+        },
+        {
+          "sigma": 0.4,
+          "mean": 5.293975903614458,
+          "low_95": 4.215361445783132,
+          "high_95": 6.447289156626507
+        },
+        {
+          "sigma": 0.5,
+          "mean": 3.75843373493976,
+          "low_95": 2.8900602409638556,
+          "high_95": 4.703313253012049
+        }
+      ]
+    },
+    {
+      "condition": "Overall, Physical included, HOLD excluded",
+      "cards": 895,
+      "families": 50,
+      "topk": {
+        "1": 81.0,
+        "2": 92.0,
+        "3": 94.7,
+        "5": 97.1
+      },
+      "median_margin": 0.0288,
+      "negative_margin_share": 19.0,
+      "mean_within_family_cosine": 0.7794,
+      "null_mean": 0.7394,
+      "permutation_p": 0.0002,
+      "em_iterations": 14,
+      "em_final_objective": 0.7992,
+      "em_agreement": 32.4,
+      "ari": 0.208,
+      "nmi": 0.528,
+      "em_curve": [
+        {
+          "iteration": 1,
+          "objective": 0.7874992489814758
+        },
+        {
+          "iteration": 2,
+          "objective": 0.7934860587120056
+        },
+        {
+          "iteration": 3,
+          "objective": 0.7960291504859924
+        },
+        {
+          "iteration": 4,
+          "objective": 0.7977426052093506
+        },
+        {
+          "iteration": 5,
+          "objective": 0.7983282208442688
+        },
+        {
+          "iteration": 6,
+          "objective": 0.7986288666725159
+        },
+        {
+          "iteration": 7,
+          "objective": 0.7986454963684082
+        },
+        {
+          "iteration": 8,
+          "objective": 0.7986895442008972
+        },
+        {
+          "iteration": 9,
+          "objective": 0.7987858653068542
+        },
+        {
+          "iteration": 10,
+          "objective": 0.7989460825920105
+        },
+        {
+          "iteration": 11,
+          "objective": 0.7990216612815857
+        },
+        {
+          "iteration": 12,
+          "objective": 0.799060046672821
+        },
+        {
+          "iteration": 13,
+          "objective": 0.7991033792495728
+        },
+        {
+          "iteration": 14,
+          "objective": 0.7991626858711243
+        }
+      ],
+      "perturbation": [
+        {
+          "sigma": 0.0,
+          "mean": 100.0,
+          "low_95": 100.0,
+          "high_95": 100.0
+        },
+        {
+          "sigma": 0.01,
+          "mean": 96.04525139664806,
+          "low_95": 94.96927374301676,
+          "high_95": 97.0977653631285
+        },
+        {
+          "sigma": 0.05,
+          "mean": 80.35027932960894,
+          "low_95": 78.54469273743017,
+          "high_95": 82.3463687150838
+        },
+        {
+          "sigma": 0.1,
+          "mean": 55.671508379888266,
+          "low_95": 52.61173184357541,
+          "high_95": 58.54748603351956
+        },
+        {
+          "sigma": 0.2,
+          "mean": 21.912849162011174,
+          "low_95": 19.553072625698324,
+          "high_95": 24.24581005586592
+        },
+        {
+          "sigma": 0.3,
+          "mean": 10.797206703910614,
+          "low_95": 8.824022346368714,
+          "high_95": 12.628491620111735
+        },
+        {
+          "sigma": 0.4,
+          "mean": 6.5720670391061455,
+          "low_95": 5.027932960893855,
+          "high_95": 8.38268156424581
+        },
+        {
+          "sigma": 0.5,
+          "mean": 4.662011173184357,
+          "low_95": 3.349162011173185,
+          "high_95": 6.033519553072626
+        }
+      ]
+    },
+    {
+      "condition": "Physical AI only",
+      "cards": 189,
+      "families": 50,
+      "topk": {
+        "1": 90.5,
+        "2": 96.8,
+        "3": 99.5,
+        "5": 100.0
+      },
+      "median_margin": 0.0384,
+      "negative_margin_share": 9.5,
+      "mean_within_family_cosine": 0.8068,
+      "null_mean": 0.7834,
+      "permutation_p": 0.0002,
+      "em_iterations": 6,
+      "em_final_objective": 0.8354,
+      "em_agreement": 26.5,
+      "ari": 0.107,
+      "nmi": 0.469,
+      "em_curve": [
+        {
+          "iteration": 1,
+          "objective": 0.8264586329460144
+        },
+        {
+          "iteration": 2,
+          "objective": 0.8290343880653381
+        },
+        {
+          "iteration": 3,
+          "objective": 0.8323723673820496
+        },
+        {
+          "iteration": 4,
+          "objective": 0.8349536657333374
+        },
+        {
+          "iteration": 5,
+          "objective": 0.8352123498916626
+        },
+        {
+          "iteration": 6,
+          "objective": 0.8354041576385498
+        }
+      ],
+      "perturbation": [
+        {
+          "sigma": 0.0,
+          "mean": 100.0,
+          "low_95": 100.0,
+          "high_95": 100.0
+        },
+        {
+          "sigma": 0.01,
+          "mean": 96.76984126984128,
+          "low_95": 94.70899470899471,
+          "high_95": 98.4126984126984
+        },
+        {
+          "sigma": 0.05,
+          "mean": 87.07671957671957,
+          "low_95": 82.52645502645503,
+          "high_95": 91.01851851851852
+        },
+        {
+          "sigma": 0.1,
+          "mean": 66.07142857142857,
+          "low_95": 60.83333333333334,
+          "high_95": 71.42857142857143
+        },
+        {
+          "sigma": 0.2,
+          "mean": 26.86243386243386,
+          "low_95": 21.67989417989418,
+          "high_95": 32.804232804232804
+        },
+        {
+          "sigma": 0.3,
+          "mean": 12.306878306878307,
+          "low_95": 8.465608465608465,
+          "high_95": 15.873015873015872
+        },
+        {
+          "sigma": 0.4,
+          "mean": 6.947089947089946,
+          "low_95": 3.7037037037037033,
+          "high_95": 11.11111111111111
+        },
+        {
+          "sigma": 0.5,
+          "mean": 4.642857142857142,
+          "low_95": 2.1164021164021163,
+          "high_95": 7.4074074074074066
+        }
+      ]
+    }
+  ]
+}

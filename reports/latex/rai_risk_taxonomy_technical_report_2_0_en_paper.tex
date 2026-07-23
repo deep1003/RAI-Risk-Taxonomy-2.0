@@ -836,68 +836,74 @@ item pending human adjudication.
 The HOLD sensitivity analysis of Appendix~\ref{app:hist} is repeated here at
 the current release state so that the triage claim is not supported only by a
 superseded release. The procedure applies the BGE-M3 active-card embeddings to
-all 1,660 active cards, including the 189 Physical AI cards. Retired merged
-records remain preserved in the 1,711-ID registry but are excluded from
-reliability metrics because they are no longer independent active risk cards.
-The comparison is deliberately not a comparison between Physical and
-non-Physical subsets. Instead, it asks whether the full active release becomes
-more stable when the HOLD review queue is excluded from centroid construction
-and released-L3 containment.
+three separately evaluated scopes: the full active release with Physical AI
+included and HOLD included, the same full active release after removing HOLD
+cards, and the Physical AI subset alone. Retired merged records remain
+preserved in the 1,711-ID registry but are excluded from reliability metrics
+because they are no longer independent active risk cards.
 
 \begin{table}[ht]
 \centering
-\caption{HOLD sensitivity at v2.17.2 with Physical AI included
+\caption{Three-scope sensitivity analysis at v2.17.2
 (BGE-M3, active cards only, 5{,}000 permutations, 200 perturbation repeats per
 $\sigma$).}
 \label{tab:holdsens-v2172}
 \small
-\begin{tabular}{lrr}
+\begin{tabular}{lrrrrrrrr}
 \toprule
-Diagnostic & HOLD included & HOLD excluded \\
+Scope & Cards & EM steps & Objective & Top-1 & Top-2 & Top-3 & Top-5 & $\sigma=0.05$ \\
 \midrule
-Cards assessed & 1,660 & 895 \\
-Physical AI cards included & 189 & 189 \\
-Top-1 containment & 70.2\% & 81.0\% \\
-Top-2 containment & 84.0\% & 92.0\% \\
-Top-3 containment & 89.9\% & 94.7\% \\
-Top-5 containment & 94.6\% & 97.1\% \\
-Median assignment margin & 0.0150 & 0.0288 \\
-Negative-margin share & 29.8\% & 19.0\% \\
-Permutation $p$ & 0.0002 & 0.0002 \\
-EM iterations to fixed point & 15 & 14 \\
-EM objective at convergence & 0.797 & 0.799 \\
-EM agreement with released paths & 25.7\% & 32.4\% \\
-Agreement at $\sigma=0.01$ & 94.5\% & 96.0\% \\
-Agreement at $\sigma=0.05$ & 73.4\% & 80.4\% \\
+Overall, Physical included, HOLD included & 1,660 & 15 & 0.797 & 70.2\% & 84.0\% & 89.9\% & 94.6\% & 73.4\% \\
+Overall, Physical included, HOLD excluded & 895 & 14 & 0.799 & 81.0\% & 92.0\% & 94.7\% & 97.1\% & 80.4\% \\
+Physical AI only & 189 & 6 & 0.835 & 90.5\% & 96.8\% & 99.5\% & 100.0\% & 87.1\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{../validation/v2.17.2/full_sensitivity_bge_m3/overall_physical_included_hold_sensitivity_3panel.pdf}
-\caption{HOLD sensitivity analysis for the full v2.17.2 active release with
-Physical AI included. (a) Seed-initialized spherical EM reaches a fixed point
-after 15 iterations with HOLD included and after 14 iterations with HOLD
-excluded. (b) Released-L3 top-$k$ containment improves across $k=1,2,3,5$
-after removing HOLD cards from the evaluated active set. (c) Assignment
-stability under Gaussian embedding perturbation is higher on the non-HOLD
-subset across the tested noise schedule. Shaded bands indicate 95\% intervals
-across 200 perturbation repeats.}
+\includegraphics[width=\textwidth]{../validation/v2.17.2/three_scope_sensitivity_bge_m3/overall_hold_included_3panel.pdf}
+\caption{Sensitivity analysis for the full v2.17.2 active release with
+Physical AI included and HOLD included. (a) Seed-initialized spherical EM
+reaches a fixed point after 15 iterations. (b) Released-L3 top-$k$ containment
+is evaluated across $k=1,2,3,5$. (c) Assignment stability is measured under
+Gaussian embedding perturbation. Shaded bands indicate 95\% intervals across
+200 perturbation repeats.}
 \label{fig:holdsens-v2172-full}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.17.2/three_scope_sensitivity_bge_m3/overall_hold_excluded_3panel.pdf}
+\caption{Sensitivity analysis for the full v2.17.2 active release with
+Physical AI included and HOLD excluded. Removing HOLD cards increases Top-1
+containment from 70.2\% to 81.0\%, increases Top-5 containment from 94.6\% to
+97.1\%, and increases assignment stability at $\sigma=0.05$ from 73.4\% to
+80.4\%.}
+\label{fig:holdsens-v2172-full-nohold}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{../validation/v2.17.2/three_scope_sensitivity_bge_m3/physical_only_3panel.pdf}
+\caption{Sensitivity analysis for the Physical AI subset alone. The 189 active
+Physical AI cards converge in 6 EM iterations, reach 90.5\% Top-1 containment
+and 100.0\% Top-5 containment, and maintain 87.1\% assignment stability at
+$\sigma=0.05$.}
+\label{fig:holdsens-v2172-physical-only}
 \end{figure}
 
 The qualitative pattern of the historical analysis replicates under the
 canonical BGE-M3 encoder after the v2.17.2 consolidation pass: removing the
 review queue improves containment, margin quality, and perturbation stability
-together, while non-random structure holds in both conditions. This is the
-strongest available evidence that HOLD functions as a genuine triage
-separation rather than an artifact of one encoder or one release. The correct
-reading remains conditional: the non-HOLD subset is cleaner because the policy
-deliberately concentrates weak-fit and multi-mechanism cases in the queue, so
-the comparison validates the separation signal, not the accuracy of every
-individual non-HOLD assignment. Machine-readable outputs are stored in
-\code{reports/validation/v2.17.2/full\_sensitivity\_bge\_m3/}.
+together, while non-random structure holds in both full-release conditions.
+The Physical AI subset remains the strongest and most stable reference
+population. The correct reading remains conditional: the non-HOLD subset is
+cleaner because the policy deliberately concentrates weak-fit and
+multi-mechanism cases in the queue, so the comparison validates the separation
+signal, not the accuracy of every individual non-HOLD assignment.
+Machine-readable outputs are stored in
+\code{reports/validation/v2.17.2/three\_scope\_sensitivity\_bge\_m3/}.
 
 \subsection{Policy-subset separation}
 
