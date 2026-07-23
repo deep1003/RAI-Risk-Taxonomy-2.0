@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAI Risk Taxonomy Space</title>
+    <link rel="stylesheet" href="./assets/risk-space.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Page navigation">
+        <a class="brand" href="./risk-taxonomy-space.html">RAI Risk Taxonomy Space</a>
+        <a class="nav-link" href="./index.html">RAI Risk Taxonomy 2.0</a>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Semantic Policy View · v2.17.2</p>
+          <h1>RAI Risk Taxonomy Space</h1>
+          <p class="subtitle">
+            BGE-M3 semantic map of active L4 risk cards, shown as an English-first taxonomy space.
+          </p>
+        </div>
+        <div class="hero-card" aria-label="Dataset summary">
+          <span id="activeCards">1,660</span>
+          <small>active L4 cards</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary-grid" aria-label="Release statistics">
+        <article class="stat-card">
+          <span class="stat-kicker">Registry</span>
+          <strong id="registeredIds">1,711</strong>
+          <span>registered IDs</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-kicker">Active</span>
+          <strong id="activeCardStat">1,660</strong>
+          <span>active cards in this space</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-kicker">Review</span>
+          <strong id="holdCards">765</strong>
+          <span>HOLD marked cards</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-kicker">Archive</span>
+          <strong id="mergedRecords">51</strong>
+          <span>merged records preserved</span>
+        </article>
+      </section>
+
+      <section class="systems-view" aria-label="Complex systems interpretation">
+        <div>
+          <p class="eyebrow">Complex Systems View</p>
+          <h2>Reading the taxonomy as a risk state space</h2>
+          <p>
+            L4 cards are local risk states. L3 families act as semantic attractors. HOLD cards mark boundary regions where the released taxonomy, card definition, or evidence base is not yet stable enough for an unqualified assignment.
+          </p>
+        </div>
+        <div class="systems-grid">
+          <article>
+            <strong>Attractors</strong>
+            <span>L3 families that pull similar L4 mechanisms into stable clusters.</span>
+          </article>
+          <article>
+            <strong>Boundaries</strong>
+            <span>HOLD-rich regions where multiple L3 families overlap or definitions need review.</span>
+          </article>
+          <article>
+            <strong>Stability</strong>
+            <span>Physical AI is expected to form sharper clusters because failure mechanisms are more concrete.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="controls" aria-label="Filters">
+          <div class="panel-title">
+            <span>Filters</span>
+            <button id="resetFilters" type="button">Reset</button>
+          </div>
+          <label>
+            Search
+            <input id="searchInput" type="search" placeholder="ID, risk name, definition" />
+          </label>
+          <label>
+            L1 domain
+            <select id="domainFilter">
+              <option value="">All domains</option>
+            </select>
+          </label>
+          <label>
+            L2 category
+            <select id="l2Filter">
+              <option value="">All L2 categories</option>
+            </select>
+          </label>
+          <label>
+            L3 category
+            <select id="l3Filter">
+              <option value="">All L3 categories</option>
+            </select>
+          </label>
+          <label>
+            Review status
+            <select id="holdFilter">
+              <option value="">All cards</option>
+              <option value="hold">HOLD only</option>
+              <option value="nonhold">Non-HOLD only</option>
+            </select>
+          </label>
+          <div class="legend" aria-label="Color legend">
+            <div><span class="dot general"></span>General-purpose AI (범용 AI)</div>
+            <div><span class="dot agentic"></span>Agentic AI (에이전틱 AI)</div>
+            <div><span class="dot physical"></span>Physical AI (피지컬 AI)</div>
+            <div><span class="dot hold"></span>HOLD marker</div>
+          </div>
+        </aside>
+
+        <section class="space-panel" aria-label="Risk taxonomy semantic space">
+          <div class="space-head">
+            <div>
+              <p class="eyebrow">Risk Space</p>
+              <h2>Semantic map of L4 risk cards</h2>
+            </div>
+            <div class="result-count"><span id="visibleCount">0</span> visible</div>
+          </div>
+          <div class="interpretation-strip" aria-label="Complex systems guide">
+            <button class="mode-pill active" type="button" data-system-mode="domain">Domain fields</button>
+            <button class="mode-pill" type="button" data-system-mode="hold">Boundary regions</button>
+            <button class="mode-pill" type="button" data-system-mode="attractor">L3 attractors</button>
+            <span id="systemModeText">Color shows L1 domains. Orange rings mark HOLD boundary signals.</span>
+          </div>
+          <div class="plot-wrap">
+            <svg id="riskPlot" role="img" aria-label="2D semantic projection of L4 risk cards"></svg>
+          </div>
+          <p class="caption">
+            Coordinates are a deterministic PCA projection of BGE-M3 L4 card embeddings. Distance is useful for exploratory review, not as a standalone risk ranking.
+          </p>
+        </section>
+
+        <aside class="details" aria-label="Selected risk card">
+          <p class="eyebrow">Selected Card</p>
+          <div id="emptyDetails" class="empty">
+            Select a point to inspect its L4 card, taxonomy path, definition, and references.
+          </div>
+          <article id="cardDetails" class="card-details hidden"></article>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./assets/risk-space.js" defer></script>
+  </body>
+</html>
