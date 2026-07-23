@@ -1,0 +1,512 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{longtable}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Menlo}
+\setCJKmainfont{Apple SD Gothic Neo}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+\definecolor{raiNavy}{HTML}{111827}
+\definecolor{raiBlue}{HTML}{3767D8}
+\definecolor{raiGreen}{HTML}{10906F}
+\definecolor{raiOrange}{HTML}{C45A14}
+\definecolor{raiGray}{HTML}{667085}
+
+\titleformat{\section}{\large\bfseries\color{raiNavy}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{raiNavy}}{\thesubsection}{0.65em}{}
+\captionsetup{font=small,labelfont=bf}
+\setstretch{1.12}
+\setlist[itemize]{leftmargin=1.25em,itemsep=0.25em,topsep=0.35em}
+
+\title{\textbf{Reviewed Mathematical Methodology for the RAI Risk Taxonomy Space}\\
+\large City-scale AI Risk Co-occurrence and Socio-technical Cascading Propagation}
+\author{RAI Risk Taxonomy 2.0 Methodology Note}
+\date{July 23, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note defines a reviewed methodology for connecting the RAI Risk Taxonomy to city-scale AI research. The primary object is not a two-dimensional embedding map. It is a typed, multilayer evidence network linking L4 risks, human and institutional actors, technical mediators, data objects, urban contexts, outcomes, controls, and observation units. Co-occurrence represents conditional association. Directional propagation is reported only when temporal order and a specific transmission or transformation mechanism are supported. The term contagion is restricted to calibrated dynamic models and is not used as a synonym for co-occurrence. The method is designed as an Urban AI Risk Observatory that can support collaboration between responsible AI evaluation and city-scale sensing, mobility, public-space, and environmental research.
+\end{abstract}
+
+\section{Purpose and Research Position}
+
+The RAI Risk Taxonomy contains 1,711 registered L4 identifiers, including 1,660 active cards and 51 merged records retained for traceability. The proposed Space connects the active taxonomy to urban AI deployments without changing the released L0 to L4 hierarchy.
+
+Senseable City Seoul studies social interaction in urban space using visual AI, big-data analytics, and sensing platforms. Its stated research scope includes variation across age, socioeconomic background, time, season, and climate \cite{senseableseoul}. This creates a suitable empirical setting for studying how AI risks combine across data collection, model operation, institutional decisions, public services, physical infrastructure, and community outcomes.
+
+The recommended platform name is:
+\begin{center}
+\textbf{RAI Risk Taxonomy Space: Urban AI Risk Observatory}
+\end{center}
+
+The recommended research programme is:
+\begin{center}
+\textbf{City-scale AI Risk Co-occurrence and Socio-technical Cascading Propagation}
+\end{center}
+
+This terminology separates three concepts that must not be conflated:
+\begin{itemize}
+  \item co-occurrence, which is an observed association within a defined urban observation;
+  \item propagation mechanism, which is a plausible or evidenced path through data, technology, decisions, and actors;
+  \item causal transition, which requires temporal order and evidence that rules out credible alternative explanations.
+\end{itemize}
+
+\section{Independent Methodological Review}
+
+Two independent expert-agent reviews were conducted before revision. One review focused on complex networks, multilayer systems, and cascading risk. The other focused on urban AI, sociotechnical governance, and living-lab research design. Both reviews reached the same central conclusion: the research direction is academically viable, but co-occurrence must not be described as contagion or causal propagation without additional evidence.
+
+\begin{table}[h]
+\centering
+\caption{Major review findings and adopted revisions}
+\begin{tabular}{p{0.25\linewidth}p{0.32\linewidth}p{0.34\linewidth}}
+\toprule
+Issue & Review finding & Adopted revision \\
+\midrule
+Risk contagion & Risks transform rather than reproduce unchanged & Use cascading propagation as the general term; reserve contagion for calibrated dynamic models \\
+Actor definition & Human, institutional, and technical objects were mixed & Separate actors, technical mediators, data objects, contexts, outcomes, and controls \\
+Co-occurrence & Joint observation does not establish direction or cause & Introduce three explicit evidence levels \\
+Network form & Pairwise projection loses event-level context & Preserve the typed hypergraph and use projections only for exploration \\
+L3 and HOLD & Attractor and boundary language was stronger than the evidence & Treat L3 as a taxonomy family and HOLD as a review status \\
+Centrality & Structural position can be mistaken for risk magnitude & Prohibit interpretation of centrality as severity or probability \\
+Validation & Semantic similarity alone is insufficient & Add coding, null-model, bootstrap, temporal, fairness, and cross-city validation \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conceptual Ontology}
+
+\subsection{Typed Objects}
+
+Let the city-scale risk system be
+\begin{equation}
+\mathcal{S} =
+\left(
+\mathcal{R},
+\mathcal{A},
+\mathcal{T},
+\mathcal{D},
+\mathcal{U},
+\mathcal{O},
+\mathcal{K},
+\mathcal{Q}
+\right),
+\end{equation}
+where:
+
+\begin{table}[h]
+\centering
+\caption{Core object types}
+\begin{tabular}{p{0.14\linewidth}p{0.34\linewidth}p{0.42\linewidth}}
+\toprule
+Set & Definition & Examples \\
+\midrule
+$\mathcal{R}$ & Active L4 risk cards & privacy loss, sensor failure, allocation bias \\
+$\mathcal{A}$ & Human and institutional actors & citizens, operators, city agencies, suppliers \\
+$\mathcal{T}$ & Technical mediators & models, sensors, platforms, robots, APIs \\
+$\mathcal{D}$ & Data objects & urban imagery, mobility traces, environmental streams \\
+$\mathcal{U}$ & Urban contexts & public spaces, transport networks, neighbourhoods \\
+$\mathcal{O}$ & Outcomes & exclusion, physical harm, trust erosion \\
+$\mathcal{K}$ & Controls & access control, human review, audit records, fallback procedures \\
+$\mathcal{Q}$ & Observation units & deployment episodes, incidents, bounded scenarios \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The term actor is restricted to persons and organisations capable of action, decision, authority, or responsibility. A dataset, model, or sensor is a technical mediator or data object unless Actor Network Theory is explicitly adopted. This distinction preserves accountability and avoids assigning normative agency to technical components.
+
+\subsection{L4 Logical Roles}
+
+L4 cards may describe different stages of a risk pathway. Each active card should therefore receive one or more logical-role attributes:
+\begin{equation}
+\text{hazard}
+\rightarrow
+\text{failure mode}
+\rightarrow
+\text{exposure}
+\rightarrow
+\text{outcome},
+\end{equation}
+with control failure represented as a cross-cutting condition. This role annotation prevents a failure mechanism and its downstream harm from being interpreted as equivalent nodes merely because they occur together.
+
+\subsection{Observation Unit}
+
+The observation unit is more specific than a full report or project:
+\begin{equation}
+q =
+\left(
+p,z,t,g,\tau,\ell
+\right),
+\end{equation}
+where $p$ is an AI deployment or use case, $z$ is an urban spatial unit, $t$ is a time interval, $g$ is an affected group, $\tau$ is an AI task, and $\ell$ is a lifecycle stage. A paper, project page, or incident report is an evidence source supporting one or more observations, not the observation itself.
+
+This design limits bias from document length, broad project descriptions, and repeated terminology. It is consistent with lifecycle and contextual approaches in the NIST AI Risk Management Framework and the OECD classification framework \cite{nist2023,oecd2022}.
+
+\section{Higher-order Network Representation}
+
+\subsection{Typed Hypergraph}
+
+The primary representation is a typed hypergraph
+\begin{equation}
+\mathcal{H} =
+\left(
+V,\mathcal{E},\psi,\rho
+\right),
+\end{equation}
+where $V$ is the union of all typed objects, $\mathcal{E}$ is the set of hyperedges, $\psi(v)$ returns the type of node $v$, and $\rho(e)$ records the evidence level of hyperedge $e$.
+
+Each observation $q$ produces a hyperedge
+\begin{equation}
+e_q =
+\left\{
+r_i,a_j,t_k,d_m,u_n,o_s,k_v
+\right\},
+\end{equation}
+containing the risks and sociotechnical elements jointly involved in that bounded urban episode. Hyperedges preserve group interactions that would be lost when every observation is decomposed into pairs \cite{battiston2020}.
+
+\subsection{Multilayer Views}
+
+For interpretation, the hypergraph can be viewed as a multilayer network:
+\begin{equation}
+\mathcal{L} =
+\{
+\text{data},
+\text{technology},
+\text{decision},
+\text{institution},
+\text{space},
+\text{outcome},
+\text{control}
+\}.
+\end{equation}
+
+Layer-specific relationships are retained separately. A combined score may be calculated for a defined analysis, but the public interface must preserve the relationship type. Multilayer representation is necessary because connectivity in one layer can produce different behaviour from connectivity in another \cite{kivela2014,boccaletti2014}.
+
+\section{Co-occurrence Estimation}
+
+\subsection{Context to Risk Incidence}
+
+Let
+\begin{equation}
+X_{qi} \in [0,1]
+\end{equation}
+denote the coding confidence that L4 risk $r_i$ is present in observation $q$. Binary coding is obtained when $X_{qi}\in\{0,1\}$.
+
+The raw co-occurrence count is
+\begin{equation}
+C_{ij} =
+\sum_{q \in \mathcal{Q}}
+X_{qi}X_{qj}.
+\end{equation}
+Raw counts are not sufficient because frequent risks and large observation units can dominate the projection.
+
+\subsection{Normalized Association}
+
+For binary observations, the Jaccard association is
+\begin{equation}
+J_{ij} =
+\frac{C_{ij}}
+{n_i+n_j-C_{ij}},
+\qquad
+n_i=\sum_q X_{qi}.
+\end{equation}
+
+Normalized pointwise mutual information is
+\begin{equation}
+\operatorname{nPMI}_{ij}
+=
+\frac{
+\log\left(p_{ij}/p_ip_j\right)
+}{
+-\log p_{ij}
+},
+\end{equation}
+where $p_i$, $p_j$, and $p_{ij}$ are estimated from the defined observation universe. Jaccard measures proportional overlap; nPMI measures departure from independent occurrence.
+
+\subsection{Statistically Validated Projection}
+
+Each candidate risk to risk edge is tested against a bipartite null model that preserves risk prevalence and observation size. Edge-specific $p$-values are corrected with the Benjamini and Hochberg false discovery rate procedure. Only edges satisfying all of the following should appear in the default public network:
+\begin{itemize}
+  \item a minimum observation-support threshold;
+  \item corrected statistical significance;
+  \item a minimum normalized-association threshold;
+  \item stable inclusion under observation-level bootstrap resampling.
+\end{itemize}
+
+This follows statistically validated bipartite-network projection rather than unfiltered one-mode projection \cite{tumminello2011,cimini2022}.
+
+\section{Evidence-graded Propagation}
+
+\subsection{Three Evidence Levels}
+
+\begin{table}[h]
+\centering
+\caption{Relationship evidence levels}
+\begin{tabular}{p{0.16\linewidth}p{0.35\linewidth}p{0.39\linewidth}}
+\toprule
+Level & Required evidence & Permitted interpretation \\
+\midrule
+E1 Association & Joint presence in a bounded observation with validated association & Risks co-occur more often than expected \\
+E2 Mechanism & E1 plus a documented data, technical, decision, or actor-mediated pathway & A plausible cascading pathway is supported \\
+E3 Temporal & E2 plus repeated temporal order and validation against alternatives & Directional propagation is empirically supported \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The following implication is invalid:
+\begin{equation}
+C_{ij}>0
+\;\not\Rightarrow\;
+r_i \rightarrow r_j.
+\end{equation}
+
+A directional relationship requires temporal precedence, an explicit mechanism, and evidence that addresses common causes and selection effects. Causal language additionally requires an intervention, quasi-experiment, or a defensible causal-identification design.
+
+\subsection{Dynamic Model}
+
+When event time is available and observations are sufficiently dense, a marked multivariate Hawkes process may represent mutually exciting risk events:
+\begin{equation}
+\lambda_j(t)
+=
+\mu_j
++
+\sum_i
+\int_0^t
+\phi_{ij}(t-s)\,dN_i(s).
+\end{equation}
+Here, $\mu_j$ is the baseline event intensity and $\phi_{ij}$ is a time-dependent excitation kernel. Marks encode mediators, actor types, locations, affected groups, and controls \cite{hawkes1971}.
+
+When temporal observations are sparse, the method must use a scenario-based stochastic cascade instead of estimating transmission probabilities. Such output is labelled a counterfactual scenario, not a city-scale forecast.
+
+SIR is not the default model. Urban AI risks can coexist, recur, persist in stored data, transform across lifecycle stages, and be reduced by controls. These properties violate the simplest assumptions of pathogen transmission models \cite{pastorsatorras2015,vespignani2012}.
+
+\section{Network Measures and Interpretation Rules}
+
+The following measures support diagnosis:
+\begin{itemize}
+  \item weighted degree, which describes the breadth of validated association;
+  \item betweenness, which identifies entities lying on many network paths;
+  \item participation coefficient, which identifies entities connecting multiple layers or communities;
+  \item community structure, which describes mesoscopic groups of co-occurring risks;
+  \item cascade size under a specified scenario, which estimates potential downstream activation under explicit assumptions.
+\end{itemize}
+
+Interpretation constraints are mandatory:
+\begin{itemize}
+  \item centrality is not severity, probability, or causal influence;
+  \item network-layout distance is not semantic similarity or causal distance;
+  \item L3 is a released taxonomy family used for colour and filtering, not a dynamical attractor;
+  \item HOLD is a taxonomy-review status, not a structural boundary unless network evidence independently supports that interpretation;
+  \item Physical AI is not called a stable subsystem without direct structural and temporal evidence.
+\end{itemize}
+
+\section{Validation Protocol}
+
+\subsection{Content and Coding Validity}
+
+Urban researchers, AI safety researchers, public-sector practitioners, and affected-community representatives review the ontology and pathway templates. Two independent coders annotate a shared sample. Reliability is reported with Krippendorff's alpha for categorical annotations and class-specific precision, recall, and F1 for multilabel extraction.
+
+\subsection{Network Statistical Validity}
+
+\begin{itemize}
+  \item compare observed edges with degree-preserving bipartite null models;
+  \item report corrected significance, association size, and support count;
+  \item calculate edge-inclusion probability through project or observation bootstrap;
+  \item test sensitivity to minimum support, Jaccard, nPMI, and ontology granularity;
+  \item repeat analyses after removing the largest projects and most frequent risks.
+\end{itemize}
+
+\subsection{Structural Stability}
+
+Community assignments are compared using adjusted Rand index or variation of information. Centrality rank stability is evaluated across bootstrap replicates. Layer-specific results are compared with combined-network results to identify artefacts introduced by aggregation.
+
+\subsection{Temporal and External Validation}
+
+When temporal data exist, an earlier interval is used for estimation and a later interval for evaluation. Recommended measures include log loss, Brier score, area under the precision-recall curve, and calibration. The dynamic model is compared with an independent-occurrence baseline and a static co-occurrence baseline.
+
+External validation uses leave-one-city-out or leave-one-project-type-out designs. Seoul can serve as the initial study site, while other urban contexts test transferability rather than being assumed equivalent.
+
+\subsection{Fairness, Privacy, and Participation}
+
+Validation is stratified by age, disability, gender where lawfully and ethically available, socioeconomic context, and geographic area. The study compares detection rates, false negatives, and uncertainty across groups. Urban imagery and sensor data require purpose limitation, minimum necessary collection, bounded retention, re-identification assessment, and limits on public spatial resolution. Living-lab participation must not treat routine presence in public space as research consent \cite{unhabitat2022,nesti2018}.
+
+\section{Interface Specification}
+
+The public Space uses a Risk to Entity to Urban Context structure rather than a dimensionality-reduction scatter plot.
+
+\begin{table}[h]
+\centering
+\caption{Visual encoding rules}
+\begin{tabular}{p{0.26\linewidth}p{0.62\linewidth}}
+\toprule
+Visual element & Meaning \\
+\midrule
+Risk node & Active L4 card; L3 appears as taxonomy colour or filter \\
+Actor node & Human or institutional decision and accountability subject \\
+Mediator node & Data object or technical component that transmits or transforms risk \\
+Context node & Urban place, time, group, task, and lifecycle condition \\
+Solid undirected edge & E1 statistically validated association \\
+Solid directional edge & E2 mechanism-supported cascading pathway \\
+Dotted directional edge & hypothesis or counterfactual simulation \\
+Evidence label & E1 association, E2 mechanism, or E3 temporal validation \\
+HOLD badge & taxonomy review state; not an independent risk family \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Force-directed placement may improve readability, but geometry has no substantive meaning. Selecting an L4 card reveals the observation support, shared mediator, downstream decision or outcome, relationship evidence level, and uncertainty.
+
+\section{Joint Research Design}
+
+\begin{table}[h]
+\centering
+\caption{Proposed KT RAI and MIT Senseable City Lab work packages}
+\begin{tabular}{p{0.11\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.25\linewidth}}
+\toprule
+Package & KT RAI contribution & MIT SCL contribution & Joint output \\
+\midrule
+WP1 & L4 definitions and risk roles & Urban entity and context ontology & Urban AI Risk Ontology \\
+WP2 & Evidence grades and taxonomy review & Project and observation structure & Project to Risk to Entity registry \\
+WP3 & Co-occurrence and HOLD diagnosis & Spatial, temporal, and interaction layers & Multilayer risk network \\
+WP4 & Controls and residual risk & Urban cascade and feedback scenarios & Cascading-risk simulator \\
+WP5 & TEVV and independent review & Field protocol and civic participation & Seoul pilot protocol \\
+WP6 & Taxonomy reproducibility & Cross-city comparison & Transferability assessment \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The staged empirical sequence is:
+\begin{enumerate}
+  \item retrospective analysis of literature, incidents, and existing urban projects;
+  \item synthetic-data and digital-twin scenario analysis;
+  \item non-interventional field observation;
+  \item citizen and stakeholder review;
+  \item limited evaluation of risk controls;
+  \item independent assessment and public reporting of non-sensitive findings.
+\end{enumerate}
+
+\section{Conclusion}
+
+The reviewed methodology replaces a primary dimension-reduction view with an evidence-graded, typed network of city-scale AI risks. Its descriptive layer identifies statistically validated co-occurrence. Its mechanistic layer represents plausible transformations through data, models, services, decisions, actors, and controls. Its dynamic layer is activated only when temporal evidence supports propagation analysis.
+
+The resulting Space is not a map of causal certainty. It is a structured Urban AI Risk Observatory that makes associations, mechanisms, uncertainty, and review status visible while preserving the RAI Risk Taxonomy as the reference classification.
+
+\begin{thebibliography}{99}
+
+\bibitem{batty2008}
+Batty, M. (2008).
+The size, scale, and shape of cities.
+\textit{Science}, 319.
+\url{https://doi.org/10.1126/science.1151419}
+
+\bibitem{battiston2020}
+Battiston, F., Cencetti, G., Iacopini, I., Latora, V., Lucas, M., Patania, A., Young, J.-G., and Petri, G. (2020).
+Networks beyond pairwise interactions: Structure and dynamics.
+\textit{Physics Reports}, 874.
+\url{https://doi.org/10.1016/j.physrep.2020.05.004}
+
+\bibitem{boccaletti2014}
+Boccaletti, S., Bianconi, G., Criado, R., del Genio, C. I., Gómez-Gardeñes, J., Romance, M., Sendiña-Nadal, I., Wang, Z., and Zanin, M. (2014).
+The structure and dynamics of multilayer networks.
+\textit{Physics Reports}, 544.
+\url{https://doi.org/10.1016/j.physrep.2014.07.001}
+
+\bibitem{cimini2022}
+Cimini, G., Carra, A., Didomenicantonio, L., and Zaccaria, A. (2022).
+Meta-validation of bipartite network projections.
+\textit{Communications Physics}, 5, 76.
+\url{https://doi.org/10.1038/s42005-022-00856-9}
+
+\bibitem{hawkes1971}
+Hawkes, A. G. (1971).
+Spectra of some self-exciting and mutually exciting point processes.
+\textit{Biometrika}, 58.
+\url{https://doi.org/10.1093/biomet/58.1.83}
+
+\bibitem{kivela2014}
+Kivelä, M., Arenas, A., Barthelemy, M., Gleeson, J. P., Moreno, Y., and Porter, M. A. (2014).
+Multilayer networks.
+\textit{Journal of Complex Networks}, 2.
+\url{https://doi.org/10.1093/comnet/cnu016}
+
+\bibitem{leveson2004}
+Leveson, N. (2004).
+A new accident model for engineering safer systems.
+\textit{Safety Science}, 42.
+\url{https://doi.org/10.1016/S0925-7535(03)00047-X}
+
+\bibitem{nesti2018}
+Nesti, G. (2018).
+Co-production for innovation: The urban living lab experience.
+\textit{Policy and Society}, 37.
+\url{https://doi.org/10.1080/14494035.2017.1374692}
+
+\bibitem{nist2023}
+National Institute of Standards and Technology. (2023).
+\textit{Artificial Intelligence Risk Management Framework 1.0}.
+\url{https://doi.org/10.6028/NIST.AI.100-1}
+
+\bibitem{oecd2022}
+OECD. (2022).
+\textit{OECD Framework for the Classification of AI Systems}.
+\url{https://doi.org/10.1787/cb6d9eca-en}
+
+\bibitem{pastorsatorras2015}
+Pastor-Satorras, R., Castellano, C., Van Mieghem, P., and Vespignani, A. (2015).
+Epidemic processes in complex networks.
+\textit{Reviews of Modern Physics}, 87.
+\url{https://doi.org/10.1103/RevModPhys.87.925}
+
+\bibitem{rasmussen1997}
+Rasmussen, J. (1997).
+Risk management in a dynamic society: A modelling problem.
+\textit{Safety Science}, 27.
+\url{https://doi.org/10.1016/S0925-7535(97)00052-0}
+
+\bibitem{senseableseoul}
+MIT Senseable City Lab. (2026).
+\textit{Senseable City Seoul}.
+\url{https://senseableseoul.mit.edu/}
+
+\bibitem{tumminello2011}
+Tumminello, M., Miccichè, S., Lillo, F., Piilo, J., and Mantegna, R. N. (2011).
+Statistically validated networks in bipartite complex systems.
+\textit{PLOS ONE}, 6, e17994.
+\url{https://doi.org/10.1371/journal.pone.0017994}
+
+\bibitem{unhabitat2022}
+UN-Habitat and Mila. (2022).
+\textit{AI and Cities: Risks, Applications and Governance}.
+\url{https://unhabitat.org/ai-cities-risks-applications-and-governance}
+
+\bibitem{vespignani2012}
+Vespignani, A. (2012).
+Modelling dynamical processes in complex socio-technical systems.
+\textit{Nature Physics}, 8.
+\url{https://doi.org/10.1038/nphys2160}
+
+\end{thebibliography}
+
+\end{document}

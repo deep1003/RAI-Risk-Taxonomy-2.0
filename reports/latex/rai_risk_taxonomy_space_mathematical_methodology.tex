@@ -1,0 +1,292 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{microtype}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Menlo}
+\setCJKmainfont{Apple SD Gothic Neo}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+\definecolor{raiNavy}{HTML}{111827}
+\definecolor{raiBlue}{HTML}{3767D8}
+\definecolor{raiGreen}{HTML}{10906F}
+\definecolor{raiRed}{HTML}{C0392B}
+\definecolor{raiOrange}{HTML}{C45A14}
+\definecolor{raiGray}{HTML}{667085}
+
+\titleformat{\section}{\large\bfseries\color{raiNavy}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{raiNavy}}{\thesubsection}{0.65em}{}
+\captionsetup{font=small,labelfont=bf}
+\setstretch{1.12}
+\setlist[itemize]{leftmargin=1.25em,itemsep=0.25em,topsep=0.35em}
+
+\title{\textbf{Mathematical Methodology for the RAI Risk Taxonomy Space}\\
+\large Semantic State Space View of L4 Risk Cards}
+\author{RAI Risk Taxonomy 2.0 Working Note}
+\date{July 23, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note defines the mathematical basis of the RAI Risk Taxonomy Space. The space is an exploratory semantic state space for active L4 risk cards, not a risk ranking system. Each L4 card is represented as a normalized semantic vector, projected into two dimensions for visual inspection, and interpreted relative to L3 family centroids. In a complex systems reading, L4 cards are local risk states, L3 families are semantic attractors, and HOLD cards indicate boundary regions where taxonomy assignment requires additional human review.
+\end{abstract}
+
+\section{Scope and Data Objects}
+
+The RAI Risk Taxonomy Space visualizes the active L4 cards in release v2.17.2. The registry preserves all identifiers, while the semantic space displays only active cards.
+
+\begin{table}[h]
+\centering
+\caption{Release scope used by the space view}
+\begin{tabular}{llr}
+\toprule
+Object & Definition & Count \\
+\midrule
+Registered L4 IDs & Complete L4 identifier registry & 1,711 \\
+Active L4 cards & Cards rendered in the semantic space & 1,660 \\
+Merged records & Retired records preserved for traceability & 51 \\
+HOLD cards & Active cards marked for taxonomy review & 765 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Let the set of active L4 risk cards be
+\begin{equation}
+\mathcal{C}=\{c_i\}_{i=1}^{N}, \qquad N=1660.
+\end{equation}
+Each card $c_i$ contains an identifier, English and Korean labels where available, a risk definition, references, scalar risk attributes, and a released taxonomy path
+\begin{equation}
+\pi_i=(\ell^{(1)}_i,\ell^{(2)}_i,\ell^{(3)}_i),
+\end{equation}
+where $\ell^{(1)}_i$ is the L1 domain, $\ell^{(2)}_i$ is the L2 category, and $\ell^{(3)}_i$ is the L3 family.
+
+\section{Semantic Representation}
+
+\subsection{Card Text Construction}
+
+For each L4 card, a semantic input string is formed from the fields that define the risk mechanism:
+\begin{equation}
+s_i =
+\operatorname{concat}
+\left(
+\operatorname{label}_{i}^{en},
+\operatorname{definition}_{i}^{en},
+\operatorname{label}_{i}^{ko},
+\operatorname{definition}_{i}^{ko}
+\right).
+\end{equation}
+The English definition is treated as the primary semantic source. Korean text is included only as supplementary information when available. This follows the English-first display principle used in the Space interface.
+
+\subsection{Embedding Function}
+
+The embedding model maps each card text into a high-dimensional vector:
+\begin{equation}
+\mathbf{z}_i = f_{\theta}(s_i) \in \mathbb{R}^{d}.
+\end{equation}
+The current release uses BGE-M3 embeddings. Vectors are treated as semantic representations of failure mechanisms and evidence patterns, not as direct measurements of severity or probability.
+
+For cosine-based comparison, vectors are normalized:
+\begin{equation}
+\mathbf{x}_i = \frac{\mathbf{z}_i}{\|\mathbf{z}_i\|_2}.
+\end{equation}
+The matrix of normalized card embeddings is
+\begin{equation}
+X = [\mathbf{x}_1^\top,\ldots,\mathbf{x}_N^\top]^\top \in \mathbb{R}^{N \times d}.
+\end{equation}
+
+\section{Two-Dimensional Projection}
+
+\subsection{Deterministic PCA}
+
+The web view uses deterministic principal component analysis (PCA) to project the active L4 embedding matrix into two dimensions. First, embeddings are centered:
+\begin{equation}
+\bar{\mathbf{x}} = \frac{1}{N}\sum_{i=1}^{N}\mathbf{x}_i, \qquad
+\tilde{\mathbf{x}}_i=\mathbf{x}_i-\bar{\mathbf{x}}.
+\end{equation}
+The first two principal axes are obtained from the singular value decomposition:
+\begin{equation}
+\tilde{X}=U\Sigma V^\top.
+\end{equation}
+Let $V_2=[\mathbf{v}_1,\mathbf{v}_2]$ be the first two right singular vectors. The raw two-dimensional coordinate is
+\begin{equation}
+\mathbf{y}_i = \tilde{\mathbf{x}}_i V_2 \in \mathbb{R}^{2}.
+\end{equation}
+
+\subsection{Display Normalization}
+
+To reduce the influence of extreme points in the browser view, each axis is scaled by its 99th percentile absolute coordinate:
+\begin{equation}
+\hat{y}_{ij} =
+\operatorname{clip}\left(
+\frac{y_{ij} - \bar{y}_{j}}{q_{0.99}(|y_{\cdot j}|)},
+-1.2,
+1.2
+\right),
+\qquad j \in \{1,2\}.
+\end{equation}
+The displayed coordinate of card $c_i$ is therefore
+\begin{equation}
+\hat{\mathbf{y}}_i=(\hat{y}_{i1},\hat{y}_{i2}).
+\end{equation}
+This scaling is purely visual. It does not change released taxonomy assignments and should not be interpreted as a calibrated risk metric.
+
+\section{L3 Families as Semantic Attractors}
+
+\subsection{Centroid Definition}
+
+For each released L3 family $g \in \mathcal{G}$, define the set of active cards assigned to that family:
+\begin{equation}
+\mathcal{C}_g=\{c_i \in \mathcal{C}:\ell^{(3)}_i=g\}.
+\end{equation}
+The high-dimensional semantic centroid is
+\begin{equation}
+\boldsymbol{\mu}_g =
+\frac{\sum_{c_i \in \mathcal{C}_g}\mathbf{x}_i}
+{\left\|\sum_{c_i \in \mathcal{C}_g}\mathbf{x}_i\right\|_2}.
+\end{equation}
+In the browser, the visual centroid is calculated in the projected plane:
+\begin{equation}
+\hat{\boldsymbol{\nu}}_g =
+\frac{1}{|\mathcal{C}_g|}
+\sum_{c_i \in \mathcal{C}_g}\hat{\mathbf{y}}_i.
+\end{equation}
+
+\subsection{Attractor Distance}
+
+For a selected card, the displayed distance to its released L3 family centroid is
+\begin{equation}
+d^{2D}_{i,g}=\left\|\hat{\mathbf{y}}_i-\hat{\boldsymbol{\nu}}_g\right\|_2.
+\end{equation}
+This distance is descriptive. It indicates whether the selected card is visually close to the center of its released L3 family in the two-dimensional projection. It is not a formal reassignment criterion by itself.
+
+The high-dimensional semantic affinity used in validation is cosine similarity:
+\begin{equation}
+a_{i,g} = \mathbf{x}_i^\top \boldsymbol{\mu}_g.
+\end{equation}
+Cards with high $a_{i,g}$ are semantically close to L3 family $g$. Cards with similar affinities to multiple families are potential boundary cases.
+
+\section{HOLD as Boundary Signal}
+
+\subsection{Interpretation}
+
+A HOLD marker is treated as a boundary signal, not as a separate risk type. A card can receive HOLD when the released assignment is operationally usable but still requires taxonomy review. The main sources of HOLD include:
+\begin{itemize}
+  \item weak separation between competing L3 families,
+  \item L4 labels or definitions that are noisy or insufficiently specific,
+  \item evidence sources that support a broad topic but not the specific L4 failure mechanism,
+  \item missing or under-defined L3 families in the current taxonomy.
+\end{itemize}
+
+\subsection{Quantitative Boundary Form}
+
+Let $g_1(i)$ and $g_2(i)$ denote the two L3 families with the highest semantic affinities for card $c_i$:
+\begin{equation}
+g_1(i)=\arg\max_{g\in\mathcal{G}} a_{i,g},
+\end{equation}
+\begin{equation}
+g_2(i)=\arg\max_{g\in\mathcal{G}\setminus\{g_1(i)\}} a_{i,g}.
+\end{equation}
+The semantic margin is
+\begin{equation}
+m_i=a_{i,g_1(i)}-a_{i,g_2(i)}.
+\end{equation}
+A small $m_i$ indicates that the card is close to a boundary between L3 attractors. A review flag can therefore be expressed as
+\begin{equation}
+H_i =
+\mathbb{I}\left[
+m_i < \tau_m
+\right]
+\lor
+\mathbb{I}\left[
+a_{i,\ell^{(3)}_i}<\tau_a
+\right]
+\lor
+Q_i,
+\end{equation}
+where $\tau_m$ is a margin threshold, $\tau_a$ is an assignment-affinity threshold, and $Q_i$ is a qualitative review indicator for label-definition mismatch, weak evidence, or unresolved taxonomy coverage. The public Space displays $H_i$ as a compact HOLD marker.
+
+\section{Complex Systems Reading}
+
+\subsection{State Space}
+
+The Space can be read as a semantic state space:
+\begin{equation}
+\mathcal{S} = \left(\mathcal{C}, X, \mathcal{G}, \Pi, H\right),
+\end{equation}
+where $\mathcal{C}$ is the set of L4 states, $X$ is the embedding matrix, $\mathcal{G}$ is the set of L3 families, $\Pi$ is the released assignment function, and $H$ is the HOLD review indicator.
+
+In this interpretation:
+\begin{itemize}
+  \item L4 cards are local risk states.
+  \item L3 families are semantic attractors that gather similar failure mechanisms.
+  \item HOLD cards are boundary states where assignment is less stable.
+  \item Physical AI forms a comparatively stable subsystem because many of its risk mechanisms involve concrete sensing, embodiment, and physical intervention.
+\end{itemize}
+
+\subsection{Interface Modes}
+
+The Space provides three visual interpretation modes.
+
+\begin{table}[h]
+\centering
+\caption{Interpretation modes in the Space interface}
+\begin{tabular}{p{0.22\linewidth}p{0.68\linewidth}}
+\toprule
+Mode & Interpretation \\
+\midrule
+Domain fields & Colors encode L1 domains: General-purpose AI, Agentic AI, and Physical AI. \\
+Boundary regions & HOLD cards are emphasized to reveal regions of taxonomy uncertainty or category overlap. \\
+L3 attractors & L3 centroids are shown to inspect whether selected cards are central or peripheral within their released L3 family. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reliability and Limits}
+
+The Space supports taxonomy diagnosis, not automatic ground-truth revision. The following limits apply:
+\begin{itemize}
+  \item PCA preserves major variance directions but does not preserve all high-dimensional neighborhoods.
+  \item A short 2D distance does not prove that two L4 cards are duplicates.
+  \item A long 2D distance does not prove that a released L3 assignment is wrong.
+  \item HOLD should be interpreted jointly with semantic margins, card definitions, and evidence quality.
+  \item Human review remains necessary for taxonomy changes, especially when a card spans multiple L3 families.
+\end{itemize}
+
+The practical role of the Space is therefore diagnostic. It helps identify crowded attractors, unstable boundaries, under-specified L3 definitions, and candidate regions where future taxonomy refinement may improve reliability.
+
+\section{Summary}
+
+The mathematical pipeline is:
+\begin{equation}
+\text{L4 card text}
+\rightarrow
+\text{BGE-M3 embedding}
+\rightarrow
+\text{PCA projection}
+\rightarrow
+\text{L3 centroid comparison}
+\rightarrow
+\text{complex systems interpretation}.
+\end{equation}
+Under this view, the RAI Risk Taxonomy Space is a semantic state-space instrument for inspecting how active L4 risk cards cluster around L3 attractors and where taxonomy boundary conditions require review.
+
+\end{document}
