@@ -11,8 +11,15 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE_DIR = ROOT / "public" / "data" / "releases" / "v2.17.2"
-EMBED_DIR = ROOT / "reports" / "validation" / "v2.17.2" / "bge_m3_active"
+RELEASE_ID = "v2.18.0-rc"
+RELEASE_DIR = ROOT / "public" / "data" / "releases" / RELEASE_ID
+EMBED_DIR = (
+    ROOT
+    / "reports"
+    / "validation"
+    / "v2.17.2"
+    / "full_mapping_sensitivity_bge_m3_20260724"
+)
 OUTPUT = RELEASE_DIR / "risk_space.json"
 
 
@@ -106,6 +113,11 @@ def main() -> None:
     active_cards = [card for card in all_cards if card.get("status") == "active"]
     card_by_id = {card["l4_id"]: card for card in active_cards}
     node_by_id = {node["node_id"]: node for node in hierarchy["nodes"]}
+    semantic_l3_count = sum(
+        1
+        for node in hierarchy["nodes"]
+        if node.get("level") == 3 and node.get("status") == "active"
+    )
 
     l4_ids = index["l4_ids"]
     active_ids = [l4_id for l4_id in l4_ids if l4_id in card_by_id]
@@ -160,7 +172,7 @@ def main() -> None:
 
     metadata = {
         "title": "RAI Risk Taxonomy Space",
-        "release_id": "v2.17.2",
+        "release_id": RELEASE_ID,
         "projection": "BGE-M3 card embeddings projected by deterministic PCA",
         "registered_ids": len(all_cards),
         "active_cards": len(active_cards),
@@ -168,7 +180,7 @@ def main() -> None:
         "hold_cards": hold_count,
         "domains": dict(sorted(domain_counts.items())),
         "l2_counts": dict(sorted(l2_counts.items())),
-        "l3_count": len(l3_counts),
+        "l3_count": semantic_l3_count,
     }
     payload = {"metadata": metadata, "points": points}
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

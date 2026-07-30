@@ -1,0 +1,128 @@
+{
+  "release_id": "v2.18.0-rc",
+  "source_release": "v2.17.2",
+  "source_spec": "reports/specs/general_ai_societal_impact_extension_20260725.md",
+  "new_l2": {
+    "node_id": "RAI2-G-SOC",
+    "level": 2,
+    "parent_id": "RAI1-G",
+    "sequence": 3,
+    "label_en": "Societal Impact",
+    "label_ko": "사회적 파급",
+    "definition_en": "Collective, institutional, environmental, economic, and distributional impacts arising from the development, deployment, and use of AI systems.",
+    "definition_ko": "AI 시스템의 개발·배포·사용으로 발생하는 집단적·제도적·환경적·경제적·분배적 파급 위험.",
+    "introduced_in": "v2.18.0-rc"
+  },
+  "new_l3": [
+    {
+      "node_id": "RAI3-G-INT-12",
+      "level": 3,
+      "parent_id": "RAI2-G-INT",
+      "sequence": 12,
+      "label_en": "Energy Consumption and Environmental Pollution",
+      "label_ko": "에너지 소비 및 환경 오염",
+      "definition_en": "Risk that energy demand, water use, carbon emissions, resource depletion, pollution, or ecological damage from AI training, inference, and operation creates material environmental harm.",
+      "definition_ko": "AI 시스템의 학습·추론·운영 과정에서 발생하는 에너지 소비, 수자원 사용, 탄소 배출, 자원 고갈, 오염 또는 생태계 훼손이 실질적인 환경 피해를 초래하는 위험.",
+      "three_h_attribute": "Harmlessness",
+      "introduced_in": "v2.18.0-rc"
+    },
+    {
+      "node_id": "RAI3-G-SOC-10",
+      "level": 3,
+      "parent_id": "RAI2-G-SOC",
+      "sequence": 10,
+      "label_en": "Accountability and Governance Gaps",
+      "label_ko": "책임성 부족 및 거버넌스 체계 부재",
+      "definition_en": "Risk that responsibility attribution, auditability, organizational governance, value-chain control, incident response, or remedy mechanisms are absent or inadequate, preventing causal investigation, redress, and recurrence prevention.",
+      "definition_ko": "AI 시스템의 의사결정·행동에 대한 책임 귀속, 감사 가능성, 조직 거버넌스, 밸류체인 관리, 사고 대응 또는 피해 구제 체계가 부재하거나 불충분하여 원인 규명·피해 구제·재발 방지가 어려워지는 위험.",
+      "three_h_attribute": "Harmlessness",
+      "introduced_in": "v2.18.0-rc"
+    },
+    {
+      "node_id": "RAI3-G-SYS-10",
+      "level": 3,
+      "parent_id": "RAI2-G-SYS",
+      "sequence": 10,
+      "label_en": "Lack of Transparency",
+      "label_ko": "투명성 부족",
+      "definition_en": "Risk that system structure, training data, documentation, decision processes, interpretability evidence, or performance and capability evaluations are not adequately disclosed or explained to relevant stakeholders.",
+      "definition_ko": "AI 시스템의 구조, 학습 데이터, 문서화, 의사결정 과정, 해석 가능성 근거 또는 성능·역량 평가 결과가 이해관계자에게 충분히 공개·설명되지 않아 신뢰성 검증과 책임 있는 사용이 저해되는 위험.",
+      "three_h_attribute": "Honesty",
+      "introduced_in": "v2.18.0-rc"
+    },
+    {
+      "node_id": "RAI3-G-SOC-11",
+      "level": 3,
+      "parent_id": "RAI2-G-SOC",
+      "sequence": 11,
+      "label_en": "Fairness",
+      "label_ko": "공정성",
+      "definition_en": "Risk that an AI system systematically disadvantages particular groups or reproduces and amplifies social bias and inequality, undermining equitable treatment, access, and opportunity.",
+      "definition_ko": "AI 시스템이 특정 집단에 체계적으로 불리한 결과를 생성하거나 기존의 사회적 편향과 불평등을 재생산·강화하여 공정한 대우, 접근 및 기회 균등을 저해하는 위험.",
+      "three_h_attribute": "Harmlessness",
+      "introduced_in": "v2.18.0-rc"
+    }
+  ],
+  "candidate_priors": {
+    "RAI3-G-INT-12": [
+      "RAI4-0356", "RAI4-0462", "RAI4-0463", "RAI4-0501",
+      "RAI4-0502", "RAI4-0503", "RAI4-0504", "RAI4-0530",
+      "RAI4-0537", "RAI4-0799", "RAI4-0804", "RAI4-0829",
+      "RAI4-0935", "RAI4-0996", "RAI4-1012", "RAI4-1015",
+      "RAI4-1028", "RAI4-1064", "RAI4-1081", "RAI4-1093",
+      "RAI4-1212", "RAI4-1219", "RAI4-1269", "RAI4-1287",
+      "RAI4-1373", "RAI4-1374", "RAI4-1405", "RAI4-1453",
+      "RAI4-1456", "RAI4-1457", "RAI4-1568", "RAI4-1604"
+    ],
+    "RAI3-G-SOC-10": [
+      "RAI4-0005", "RAI4-0019", "RAI4-0049", "RAI4-0057",
+      "RAI4-0058", "RAI4-0063", "RAI4-0064", "RAI4-0065",
+      "RAI4-0066", "RAI4-0067", "RAI4-0069", "RAI4-0076",
+      "RAI4-0083", "RAI4-0085", "RAI4-0086", "RAI4-0087",
+      "RAI4-0093", "RAI4-0095", "RAI4-0097", "RAI4-0105",
+      "RAI4-0107", "RAI4-0108", "RAI4-0109", "RAI4-0385",
+      "RAI4-0409", "RAI4-0486", "RAI4-0487", "RAI4-0511",
+      "RAI4-0526", "RAI4-0903", "RAI4-0933", "RAI4-0947",
+      "RAI4-0979", "RAI4-0986", "RAI4-0987", "RAI4-0989",
+      "RAI4-1097", "RAI4-1098", "RAI4-1141", "RAI4-1149",
+      "RAI4-1230", "RAI4-1264", "RAI4-1268", "RAI4-1271",
+      "RAI4-1275", "RAI4-1278", "RAI4-1292", "RAI4-1296",
+      "RAI4-1313", "RAI4-1416", "RAI4-1481", "RAI4-1512",
+      "RAI4-1601", "RAI4-1624", "RAI4-1663", "RAI4-1700",
+      "RAI4-1720"
+    ],
+    "RAI3-G-SYS-10": [
+      "RAI4-0005", "RAI4-0056", "RAI4-0059", "RAI4-0060",
+      "RAI4-0061", "RAI4-0062", "RAI4-0082", "RAI4-0106",
+      "RAI4-0121", "RAI4-0522", "RAI4-0523", "RAI4-0525",
+      "RAI4-0596", "RAI4-0607", "RAI4-0770", "RAI4-0949",
+      "RAI4-0957", "RAI4-0978", "RAI4-1033", "RAI4-1195",
+      "RAI4-1226", "RAI4-1267", "RAI4-1300", "RAI4-1331",
+      "RAI4-1352", "RAI4-1384", "RAI4-1429", "RAI4-1462",
+      "RAI4-1473", "RAI4-1513", "RAI4-1514", "RAI4-1600",
+      "RAI4-1601", "RAI4-1720", "RAI4-1721"
+    ],
+    "RAI3-G-SOC-11": [
+      "RAI4-0178", "RAI4-0373", "RAI4-0382", "RAI4-0390",
+      "RAI4-0396", "RAI4-0403", "RAI4-0404", "RAI4-0417",
+      "RAI4-0423", "RAI4-0425", "RAI4-0429", "RAI4-0430",
+      "RAI4-0461", "RAI4-0538", "RAI4-0677", "RAI4-0696",
+      "RAI4-0697", "RAI4-0698", "RAI4-0700", "RAI4-0701",
+      "RAI4-0702", "RAI4-0706", "RAI4-0709", "RAI4-0720",
+      "RAI4-0722", "RAI4-0883", "RAI4-0937", "RAI4-0955",
+      "RAI4-0997", "RAI4-0999", "RAI4-1025", "RAI4-1029",
+      "RAI4-1051", "RAI4-1092", "RAI4-1094", "RAI4-1103",
+      "RAI4-1111", "RAI4-1151", "RAI4-1178", "RAI4-1215",
+      "RAI4-1221", "RAI4-1224", "RAI4-1233", "RAI4-1260",
+      "RAI4-1266", "RAI4-1274", "RAI4-1290", "RAI4-1291",
+      "RAI4-1299", "RAI4-1309", "RAI4-1344", "RAI4-1372",
+      "RAI4-1389", "RAI4-1394", "RAI4-1420", "RAI4-1501",
+      "RAI4-1503", "RAI4-1611", "RAI4-1713", "RAI4-1723"
+    ]
+  },
+  "hold_release_thresholds": {
+    "direct_seed_cosine_min": 0.45,
+    "composite_margin_min": 0.015
+  },
+  "winner_takes_all_epsilon": 0.000001
+}

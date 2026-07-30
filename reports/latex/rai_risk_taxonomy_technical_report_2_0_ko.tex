@@ -1,332 +1,321 @@
 % !TEX program = xelatex
-% Technical Report 2.0, generated from the reviewed local artifacts.
+% RAI Risk Taxonomy Technical Report 2.0, Korean current release edition.
 \documentclass[11pt,a4paper]{article}
-\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage[a4paper,top=22mm,bottom=24mm,left=22mm,right=22mm]{geometry}
 \usepackage{fontspec}
-\usepackage{kotex}
-\usepackage{booktabs,longtable,tabularx,array}
-\usepackage[table]{xcolor}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,array}
 \usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb}
+\usepackage{seqsplit}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{pgfplots}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \pgfplotsset{compat=1.18}
-\setmainfont{Noto Serif CJK KR}
-\setsansfont{Noto Sans CJK KR}
-\setmonofont{Noto Sans Mono CJK KR}
-\definecolor{navy}{HTML}{173458}
-\definecolor{blue}{HTML}{3867D6}
-\definecolor{gold}{HTML}{C48A18}
-\definecolor{orange}{HTML}{D97706}
-\definecolor{ink}{HTML}{273142}
-\definecolor{muted}{HTML}{667085}
-\definecolor{grid}{HTML}{D0D5DD}
-\definecolor{light}{HTML}{F5F7FA}
+
+\IfFileExists{/System/Library/Fonts/AppleSDGothicNeo.ttc}{%
+  \setmainfont{Apple SD Gothic Neo}\setsansfont{Apple SD Gothic Neo}\setmonofont{Menlo}%
+}{%
+  \setmainfont{Noto Sans CJK KR}\setsansfont{Noto Sans CJK KR}\setmonofont{Noto Sans Mono CJK KR}%
+}
 \newcommand{\code}[1]{\texttt{#1}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+
+\definecolor{natureblue}{HTML}{0072B2}
+\pgfplotsset{
+  natureaxis/.style={
+    axis x line*=bottom,
+    axis y line*=left,
+    axis line style={black, line width=0.6pt},
+    tick align=outside,
+    tick style={black, line width=0.5pt},
+    tick label style={font=\sffamily\footnotesize, color=black},
+    label style={font=\sffamily\small, color=black},
+    grid=none,
+    clip=false
+  }
+}
+
 \pagestyle{fancy}
 \setlength{\headheight}{14pt}
 \fancyhf{}
-\lhead{RAI Risk Taxonomy}
-\rhead{Technical Report 2.0}
-\cfoot{\thepage}
-\hypersetup{pdftitle={RAI Risk Taxonomy Technical Report 2.0},pdfauthor={RAI Risk Taxonomy Project}}
-
-\title{\sffamily\bfseries RAI Risk Taxonomy\\[4pt]\Large Technical Report 2.0}
-\author{1,726개 글로벌 L4의 단계적 분류, 보류 정책 및 통계 검증}
-\date{2026년 7월 21일}
+\lhead{\footnotesize RAI Risk Taxonomy}
+\rhead{\footnotesize Technical Report 2.0}
+\cfoot{\footnotesize\thepage}
 
 \begin{document}
-\maketitle
 
 \begin{center}
-\fcolorbox{navy}{light}{\parbox{0.92\linewidth}{
-\textbf{최종 정책 결과.} 전체 1,726개 중 1,671개(96.8134\%)를 승인 대기 상태로
-50개 L3에 배치하고, 가장 불확실한 55개(3.1866\%)는 분류체계 밖의
-\code{RAI-HOLD} 검토 버킷으로 분리했다. 이 자동 배치는 사람 승인 정답이 아니다.}}
+{\LARGE\bfseries RAI Risk Taxonomy 2.0\par}
+\vspace{4pt}
+{\large 현행 계층, 재현 가능한 매핑 및 신뢰성 검증\par}
+\vspace{8pt}
+{\large RAI Risk Taxonomy Project\par}
+\vspace{2pt}
+2026년 7월 25일 \,·\, release candidate v2.18.0-rc
 \end{center}
 
-\section{기술 요약}
+\begin{abstract}
+\noindent
+RAI Risk Taxonomy 2.0은 General-purpose AI, Agentic AI, Physical AI의
+책임 AI 리스크를 통합한다. 현행 릴리스는 등록 ID 1,711개를 보존하면서 독립된
+활성 L4 카드 1,660개와 통합 이력 51개를 구분한다. 표준 기반 상위 구조와 문헌
+기반 L4 발굴을 결합한 Hybrid 접근을 사용했으며, 현재 계층은 의미 L2 3개와
+의미 L3 54개로 구성된다. General AI에는 사회적 파급 관련 L3 4개를 신설했고,
+기존 Physical AI의 사회적 영향 L3 9개는 General 사회적 파급 아래로 이동했다.
+L4 배치는 BGE-M3 임베딩, L3 정의, 군집 중심점, 키워드 유사도 및 도메인 제약을
+결합해 수행한다. 입력 파일 해시, 모델 스냅샷, 난수 시드, 반복 이력 및 불변조건
+검사를 통해 재현성을 관리한다. 활성 카드 전체에서 구면 EM은 20회에 수렴했고
+평균 코사인 목적함수는 0.8005였다. Top-1 일치율은 71.9\%, Top-5 일치율은
+95.2\%였다. 본 보고서는 현재 결과와 재현 절차를 중심으로 기술하며, 경계 사례는
+후속 휴먼 검토 대상으로 유지한다.
+\end{abstract}
 
-본 보고서는 Physical AI의 기존 182개 분류를 정답 잠금 집합으로 유지하면서,
-글로벌 L4 1,726개를 신규 50개 L3에 연결한 단계적 절차를 기술한다. 기존 글로벌
-L1\textendash{}L3는 예측 특징으로 사용하지 않았고 영구 L4 ID와 교차매핑을 보존했다.
+\section{범위와 설계 목표}
 
-Stage 1은 엄격한 rule, semantic, anchor 합의와 두 전문 에이전트의 exact-L3 합의를
-요구해 Physical 182개와 신규 제안 37개만 배치했다. Stage 2는 hierarchy-blind
-top-1 후보를 적극 수용해 1,553개(89.9768\%)를 배치하고 173개를 보류했다.
-Stage 3 실험은 173개를 모두 강제 배치했으나, 정책 검토 결과 이 중 hard hold
-55개를 다시 분리했다. 최종 정책 뷰는 1,671개 분류와 55개 검토 보류로 구성된다.
+AI 리스크는 텍스트 유해성에서 자율적 행동, 도구 사용, 다중 에이전트 상호작용,
+물리 세계 영향으로 확장되고 있다. 분류체계는 L0부터 L4까지의 5계위 구조를
+사용한다. L1은 기술 도메인, L2는 공통 안전 차원, L3는 리스크군, L4는 구체적인
+위험 메커니즘을 나타낸다.
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-  ybar, ymin=0, ymax=1800, width=0.92\linewidth, height=7cm,
-  bar width=20pt, ylabel={카드 수},
-  symbolic x coords={Stage 1,Stage 2,Stage 3 실험,최종 정책}, xtick=data,
-  nodes near coords, nodes near coords align={vertical},
-  axis line style={ink}, tick label style={font=\small},
-  ymajorgrids, grid style={grid}, legend style={at={(0.5,-0.18)},anchor=north,legend columns=2},
-]
-\addplot[fill=blue,draw=navy] coordinates {(Stage 1,219) (Stage 2,1553) (Stage 3 실험,1726) (최종 정책,1671)};
-\addplot[fill=gold,draw=orange] coordinates {(Stage 1,1507) (Stage 2,173) (Stage 3 실험,0) (최종 정책,55)};
-\legend{L3 배치,보류}
-\end{axis}
-\end{tikzpicture}
-\caption{단계별 L3 배치와 보류. 분모는 각 단계에서 동일한 1,726개다.}
-\end{figure}
+등록 ID와 분석 단위를 구분한다. ID 레지스트리는 1,711개로 고정하며, 이 중
+1,660개는 독립된 활성 카드, 51개는 인용 및 출처 추적을 위해 보존하는 통합
+이력이다. 별도 표시가 없는 모든 계층 통계와 신뢰성 검증은 활성 카드 1,660개를
+기준으로 한다.
 
-Stage 3의 100\%는 운영상 경로 완전성을 시험한 결과이고, 최종 정책의 96.8134\%는
-명백한 경계 충돌을 별도 검토하도록 선택한 결과다. 두 수치를 정확도 또는 승인률로
-해석해서는 안 된다.
-
-\section{범위, 데이터와 식별 원칙}
-
-분석 단위는 영구 ID \code{RAI4-0001}\textendash{}\code{RAI4-1726}의 L4 카드다. Physical AI
-사이트의 182개 분류는 잠금 정답이고, 동일 이름이 여러 경로에 존재할 수 있으므로
-라벨을 키로 사용하지 않는다. 상위 분류체계는 L0 1개, L1 3개, L2 6개, L3 50개로
-구성된다. \code{RAI-HOLD}는 운영 버킷이며 L3 노드가 아니다.
+\section{근거자료와 ID 레지스트리}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{lrr}
+\caption{근거자료에서 현행 분류체계까지의 단계별 집계}
+\small
+\begin{tabularx}{\linewidth}{L{0.24\linewidth}r L{0.18\linewidth}Y}
 \toprule
-최종 정책 상태 & 건수 & 전체 비율 \\
+단계 & 수량 & 단위 & 주요 포함 기준 \\
 \midrule
-Physical 정답 잠금 & 182 & 10.5446\% \\
-Stage 1 전문가 합의 제안 & 37 & 2.1437\% \\
-Stage 2 알고리즘 제안 & 1,334 & 77.2885\% \\
-Stage 3 잔여 강제 후보 유지 & 118 & 6.8366\% \\
-Taxonomy Decision Hold & 55 & 3.1866\% \\
-\midrule
-합계 & 1,726 & 100.0000\% \\
+전체 AI 근거자료 & 3,906,767 & 문헌 또는 특허 & AI 자료원, 유효 제목, 표준 스키마, 유형 내 중복 제거 \\
+AI 리스크 근거자료 & 82,971 & 문헌 또는 특허 & 검토된 리스크 자료원과 문서 유형 필터 \\
+완전일치 중복 제거 후보 & 1,725 & 카드 후보 & 정규화된 명칭과 핵심 정의의 완전일치 \\
+등록 L4 ID & 1,711 & 식별자 & 계층명 누출 제거, 모든 ID 이력 보존 \\
+활성 L4 카드 & 1,660 & 독립 카드 & 통합 이력 51개를 활성 분석에서 제외 \\
 \bottomrule
-\end{tabular}
-\caption{최종 정책 뷰의 상태 구성.}
+\end{tabularx}
 \end{table}
 
-\section{단계별 분류 절차와 기준}
+현행 빌드는 모든 ID의 유일성, 통합 이력의 활성 카드 연결, 모든 활성 카드의
+주 경로와 의미 L3 경로 존재, 통합 이력의 활성 통계 제외를 불변조건으로
+검사한다.
 
-\subsection{Stage 1: 정확 적합성 우선}
+\section{현행 계층과 커버리지}
 
-비-Physical 입력에는 계층 재진술을 제거한 L4 라벨, 직접 메커니즘 정의와 evidence
-title만 사용했다. 자동 후보는 단일 rule eligibility, rule/semantic/composite top-1
-일치, semantic score $\geq0.55$, composite score $\geq0.54$, 두 margin
-$\geq0.035$, anchor 2/3 이상 합의를 모두 만족해야 했다. gap sentinel과 다중
-메커니즘을 배제하고 두 전문 에이전트가 동일한 exact L3를 승인한 37개만 제안했다.
+의미 L2는 Interaction Safety, System Safety, Societal Impact의 3개다.
+현재 의미 L3는 General 33개, Agentic 6개, Physical 15개로 총 54개다.
+General 사회적 파급에는 에너지 소비 및 환경 오염, 책임성 부족 및 거버넌스
+체계 부재, 투명성 부족, 공정성의 L3 4개를 신설했다. 기존 Physical 사회적
+영향 L3 9개는 General 사회적 파급 아래로 이동했다.
 
-\subsection{Stage 2: 약 90\% 커버리지}
+\begin{table}[H]
+\centering
+\caption{L1 도메인별 현행 커버리지}
+\begin{tabular}{lrrr}
+\toprule
+L1 도메인 & 의미 L3 & 활성 주 경로 L4 & 활성 L4 비중 \\
+\midrule
+General-purpose AI & 33 & 1,221 & 73.6\% \\
+Agentic AI & 6 & 281 & 16.9\% \\
+Physical AI & 15 & 158 & 9.5\% \\
+\midrule
+합계 & 54 & 1,660 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Stage 2는 보호 집합 219개를 변경하지 않고 다음 순위 점수를 사용했다.
-\[
-S_2=0.55q_{sem}+0.20q_{sm}+0.10q_{cm}+0.10q_{vote}+0.05q_{rule}-p_{gap}.
-\]
-여기서 의미 점수와 두 margin은 사전 고정 구간으로 0\textendash{}1 정규화했고, anchor vote는
-3으로 나눴으며, rule support는 이진값, gap penalty는 0.05다. hard hold 55개를
-먼저 보존하고 $S_2$ 하위 118개를 추가 보류해 총 173개(10.0232\%)를 남겼다.
-나머지 1,334개는 hierarchy-blind top-1 L3에 배치했다.
+\begin{table}[H]
+\centering
+\caption{의미 L1 및 L2 경로별 활성 L4 카드}
+\begin{tabular}{lrrrr}
+\toprule
+L1 도메인 & Interaction & System & Societal Impact & 합계 \\
+\midrule
+General-purpose AI & 641 & 467 & 108 & 1,216 \\
+Agentic AI & 0 & 286 & 0 & 286 \\
+Physical AI & 64 & 94 & 0 & 158 \\
+\midrule
+합계 & 705 & 847 & 108 & 1,660 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\subsection{Stage 3와 최종 보류 정책}
-
-Stage 3 실험은 잔여 173개를 기존 top-1에 강제 연결해 100\% 경로를 시험했다.
-그러나 다음 다섯 hard-hold 사유의 55개는 자동 배치의 의미적 또는 정책적 위험이
-크므로 최종 정책 뷰에서 \code{policy\_l3\_id=null}로 되돌리고
-\code{RAI-HOLD}로 분리했다. 나머지 quota hold 118개는 강제 후보 상태와 사람
-검토 의무를 유지한다.
+첫 번째 표는 홈페이지의 주 탐색 경로를 집계한다. 두 번째 표는 경계 검토 카드의
+보존된 의미 경로를 사용한다. 이 때문에 General과 Agentic의 도메인 수에는
+5건의 차이가 있으나 전체 합계는 동일하다. 모든 활성 카드는 의미 L3 경로를
+가지며, 54개 L3 모두 비어 있지 않다. 가장 큰 L3는 Anthropomorphism 160건으로
+전체의 9.6\%이며, 상위 5개 L3는 553건으로 33.3\%다.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  xbar, xmin=0, xmax=125, width=0.70\linewidth, height=7cm,
-  xlabel={카드 수},
-  symbolic y coords={절대 적합도 부족,다중 메커니즘,전문가 불일치,전문가 거절,Physical 범위 검토,적합도 reserve},
-  ytick=data, nodes near coords, nodes near coords align={horizontal},
-  bar width=12pt, xmajorgrids, grid style={grid}, axis line style={ink},
+  natureaxis,
+  xbar,
+  xmin=0,
+  xmax=180,
+  width=0.76\linewidth,
+  height=9.2cm,
+  xlabel={활성 L4 카드},
+  symbolic y coords={Conflict,Destabilising Dynamics,Weaponization,Excessive Authority,Network Effects,Privacy,Policy Exposure,Non-Contestability,Copyrights,Misinformation/Disinformation,Goal Misalignment,Anthropomorphism},
+  ytick=data,
+  yticklabel style={font=\sffamily\scriptsize},
+  bar width=8pt,
+  nodes near coords,
+  nodes near coords style={font=\sffamily\scriptsize, anchor=west},
 ]
-\addplot[fill=gold,draw=orange] coordinates {(2,절대 적합도 부족) (6,다중 메커니즘) (7,전문가 불일치) (17,전문가 거절) (23,Physical 범위 검토)};
-\addplot[fill=blue,draw=navy] coordinates {(118,적합도 reserve)};
+\addplot[fill=natureblue, draw=natureblue] coordinates {
+  (51,Conflict)
+  (53,Destabilising Dynamics)
+  (59,Weaponization)
+  (61,Excessive Authority)
+  (65,Network Effects)
+  (81,Privacy)
+  (85,Policy Exposure)
+  (88,Non-Contestability)
+  (93,Copyrights)
+  (93,Misinformation/Disinformation)
+  (119,Goal Misalignment)
+  (160,Anthropomorphism)
+};
 \end{axis}
 \end{tikzpicture}
-\caption{Stage 2 보류 173개의 사유. 금색 55개는 최종 \code{RAI-HOLD}, 파란색 118개는 Stage 3 강제 후보 유지 대상이다.}
+\caption{활성 카드 수 기준 상위 12개 의미 L3. 경계 검토 카드는 보존된 의미
+경로로 집계하며 통합 이력 51개는 제외한다.}
 \end{figure}
 
-Physical 범위 검토 23개는 Physical AI로 확정된 카드가 아니다. robot, drone,
-autonomous vehicle, embodied AI, cyber-physical, physical actuator 등의 표현이
-탐지됐지만 잠긴 Physical 정답 182개와 동일하지 않아 경계 검토가 필요한 카드다.
+\section{재현 가능한 L4와 L3 매핑}
 
-\section{최종 분포 통계}
+활성 카드와 L3 시드는 영문 및 한글 명칭과 정의를 결합해 표현한다. BGE-M3로
+정규화된 1,024차원 벡터를 생성하고 영문 TF-IDF 키워드 벡터를 보조 신호로
+사용한다. 피지컬 AI 원천 리스크의 식별자는 고정하며, 경로는 피지컬 AI
+마스터에서 승인된 개정만 반영한다. 2026년 7월 31일 동기화에서는 24개 EM
+민감도 조건과 1,000회 부트스트랩을 통과한 2건의 이동을 반영했다.
+Agentic 후보는 자율 실행 메커니즘이 명시된 경우에만 허용하고, 이동된 사회적
+영향 L3는 General 영역 안에서 경쟁한다.
 
-\subsection{L1과 L2 분포}
+카드 $i$와 L3 $k$의 점수는 다음과 같다.
+\begin{equation}
+S_{ik}
+=0.60\cos(x_i,\mu_k)
++0.30\cos(x_i,s_k)
++0.10\cos(t_i,q_k),
+\end{equation}
+여기서 $x_i$는 카드 임베딩, $\mu_k$는 현재 L3 중심점, $s_k$는 L3 정의
+임베딩, $t_i$와 $q_k$는 TF-IDF 벡터다. L3 중심점은 현재 배정 카드, 정의 시드,
+승인된 사전 구성원의 가중평균으로 갱신한다. 도메인 제약 안에서 현재 점수보다
+설정된 margin 이상 높은 후보를 선택하고, 변경 카드가 0건이 될 때까지 반복한다.
+현행 빌드는 144건, 13건, 5건, 0건의 네 차례 반복으로 수렴했다. 총 182개 활성
+카드의 구조 또는 경쟁 경로가 갱신됐으며, 이 중 30건은 사회적 영향 구조 이동이다.
 
-보류 55개를 제외한 1,671개 중 일반 AI는 1,140개, 에이전틱 AI는 349개,
-피지컬 AI는 182개다. 분류된 카드 내 비율은 각각 68.2226\%, 20.8857\%,
-10.8917\%다. 전체 1,726개의 나머지 3.1866\%는 보류다.
+내부 경계 검토 표식은 별도 리스크군이 아니다. 직접 시드 코사인 0.45와 복합
+점수 margin 0.015를 함께 충족하지 못하거나 승인된 확장 범위 밖에 있는 경우에만
+후속 휴먼 검토 대상으로 유지한다. 현행 릴리스는 기존 검토 대상 151건을
+재배치하고 614건을 후속 검토 대상으로 유지한다.
+
+\section{신뢰성 검증}
+
+검증은 세 가지 지표를 사용한다. 첫째, 구면 EM 수렴성은 중심점과 배정을
+반복 갱신해 변경이 없어지는 시점과 평균 코사인 목적함수를 측정한다. 둘째,
+Top-$k$ 일치율은 공개 L3가 가장 가까운 $k$개 중심점 안에 포함되는 비율이다.
+셋째, 노이즈 안정성은 정규화 임베딩에 Gaussian noise를 추가한 뒤 원래
+최근접 중심점 배정과의 일치율을 측정한다.
+
+검증 시드는 20260723이며, 5,000회 순열검정과 각 noise 수준별 200회 반복을
+사용했다. 두 조건 모두 동일한 54개 L3를 유지한다.
+
+\begin{table}[H]
+\centering
+\caption{v2.18.0-rc 현행 신뢰성 검증 결과}
+\small
+\begin{tabular}{lrr}
+\toprule
+검증 지표 & 전체 활성 카드 & 공개 확정 부분집합 \\
+\midrule
+평가 카드 수 & 1,660 & 1,046 \\
+의미 L3 수 & 54 & 54 \\
+수렴 스텝 & 20 & 12 \\
+평균 코사인 목적함수 & 0.8005 & 0.8026 \\
+Top-1 일치율 & 71.9\% & 81.6\% \\
+Top-2 일치율 & 85.3\% & 91.2\% \\
+Top-3 일치율 & 91.3\% & 94.6\% \\
+Top-5 일치율 & 95.2\% & 97.2\% \\
+중앙 배정 margin & 0.0168 & 0.0310 \\
+음수 margin 비율 & 28.1\% & 18.4\% \\
+순열검정 $p$ & 0.0002 & 0.0002 \\
+안정성, $\sigma=0.01$ & 95.0\% & 96.0\% \\
+안정성, $\sigma=0.05$ & 75.0\% & 80.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-  xbar, xmin=0, xmax=1250, width=0.92\linewidth, height=5.7cm,
-  xlabel={분류된 카드 수}, symbolic y coords={Physical AI,Agentic AI,General},
-  ytick=data, nodes near coords, bar width=18pt, xmajorgrids, grid style={grid},
-]
-\addplot[fill=blue,draw=navy] coordinates {(182,Physical AI) (349,Agentic AI) (1140,General)};
-\end{axis}
-\end{tikzpicture}
-\caption{최종 정책 뷰의 L1 분포. 분모는 L3 배치가 있는 1,671개다.}
+\includegraphics[width=\textwidth]{../validation/v2.18.0-rc/hold_sensitivity_bge_m3/release_assignment_sensitivity_3panel.pdf}
+\caption{전체 활성 카드와 공개 확정 부분집합의 수렴성, Top-$k$ 일치율 및
+Gaussian perturbation 안정성. 음영은 200회 반복의 95\% 구간이다.}
 \end{figure}
 
-\begin{longtable}{llrr}
-\toprule
-L2 ID & L2 이름 & 카드 수 & 분류 1,671개 내 비율 \\
-\midrule
-\endhead
-RAI2-G-INT & General Interaction & 708 & 42.3698\% \\
-RAI2-G-SYS & General System & 432 & 25.8528\% \\
-RAI2-A-SYS & Agentic System & 349 & 20.8857\% \\
-RAI2-P-SYS & Physical System Safety & 91 & 5.4458\% \\
-RAI2-P-INT & Physical Interaction Safety & 62 & 3.7104\% \\
-RAI2-P-SOC & Physical Societal Safety & 29 & 1.7355\% \\
-\bottomrule
-\end{longtable}
+\section{재현성 관리}
 
-\subsection{L3 집중도}
-
-50개 L3 모두 최소 한 카드를 포함한다. 가장 큰 L3는 Anthropomorphism 242개로
-분류된 1,671개의 14.4823\%다. 상위 5개는 700개(41.8911\%)이며 단일 L3가
-20\%를 넘지 않는다. 이 집중도는 분포 진단일 뿐 의미 타당성 검증은 아니다.
-
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\begin{tikzpicture}
-\begin{axis}[
-  xbar, xmin=0, xmax=270, width=0.68\linewidth, height=11.2cm,
-  xlabel={카드 수},
-  symbolic y coords={Robot Control,Overconfidence,Weaponization,Non-Contestability,Conflict,Destabilising Dynamics,Excessive Authority,Network Effects,Privacy,Policy Exposure,Misinformation/Disinformation,Copyrights,Goal Misalignment,Anthropomorphism},
-  ytick=data, nodes near coords, bar width=9pt, xmajorgrids, grid style={grid},
-  tick label style={font=\small},
-]
-\addplot[fill=blue,draw=navy] coordinates {
- (45,Robot Control) (46,Overconfidence) (48,Weaponization) (55,Non-Contestability)
- (64,Conflict) (73,Destabilising Dynamics) (74,Excessive Authority) (78,Network Effects)
- (86,Privacy) (88,Policy Exposure) (107,Misinformation/Disinformation)
- (113,Copyrights) (150,Goal Misalignment) (242,Anthropomorphism)};
-\end{axis}
-\end{tikzpicture}
-\caption{최종 정책 뷰의 상위 14개 L3. 정확한 조회를 위한 전체 50개 분포는 CSV 산출물에 제공한다.}
-\end{figure}
-
-\section{보류 55개와 불확실성}
-
-\begin{longtable}{lrrr}
+\caption{고정된 재현성 사양}
+\small
+\begin{tabularx}{\linewidth}{L{0.27\linewidth}Y}
 \toprule
-보류 사유 & 건수 & 보류 내 비율 & 전체 비율 \\
+항목 & 고정값 \\
 \midrule
-\endhead
-PHYSICAL\_OUTSIDE\_LOCK & 23 & 41.8182\% & 1.3326\% \\
-FRONTIER\_EXPERT\_REJECTED & 17 & 30.9091\% & 0.9849\% \\
-FRONTIER\_EXPERT\_DISAGREEMENT & 7 & 12.7273\% & 0.4056\% \\
-MULTI\_MECHANISM & 6 & 10.9091\% & 0.3476\% \\
-LOW\_ABSOLUTE\_FIT & 2 & 3.6364\% & 0.1159\% \\
-\midrule
-합계 & 55 & 100.0000\% & 3.1866\% \\
+릴리스 & v2.18.0-rc, 밀봉된 v2.17.2 입력에서 생성 \\
+임베딩 모델 & BAAI/bge-m3, 정규화 1,024차원 \\
+매핑 시드 & 20260725 \\
+검증 시드 & 20260723 \\
+최대 매핑 반복 & 30회, 변경 0건에서 조기 종료 \\
+순열검정 & 5,000회 \\
+노이즈 검정 & $\sigma\in\{0,0.01,0.05,0.10,0.20,0.30,0.40,0.50\}$, 각 200회 \\
+카드 입력 해시 & \texttt{\seqsplit{dff3f3269a1ed8575f409923ca0c3db1aca14931259b567abeefa12da2229acf}} \\
+계층 입력 해시 & \texttt{\seqsplit{76156ee383cbbf84870989f2036f0a1de6f031308fd0b9f9d5f4b821f0450050}} \\
+카드 임베딩 해시 & \texttt{\seqsplit{8f99380ef026730105624d5103a37fea20ceb4816d2c5cace33b2e8c764c19d8}} \\
+L3 시드 해시 & \texttt{\seqsplit{5ead12763d624a8e6d92dbb82536e18710d66c1670107c1d7d3c6e2ff18f6615}} \\
 \bottomrule
-\end{longtable}
+\end{tabularx}
+\end{table}
 
-보류는 승인되지 않은 51번째 L3로 취급하지 않는다. 웹 UI와 export에서는 별도
-검토 큐로 표시하고, 원래 보류 사유, Stage 3 강제 후보 L3, semantic/composite
-점수, anchor vote를 숨기지 않아야 한다. 전문가 거절과 불일치 24개는 L3 정의의
-적합성 검토, 다중 메커니즘 6개는 primary/secondary 또는 복수 태그 구조 검토,
-Physical 경계 23개는 기존 182개 정답 집합과의 의미·근거 기반 비교가 필요하다.
+릴리스 빌드는 계층 이동표, 카드별 변경 이력, 반복 추적값, 임계값 판단 및
+콘텐츠 해시를 기록한다. 자동 검사는 등록 ID 1,711개, 활성 카드 1,660개,
+통합 이력 51개, 의미 L3 54개, 도메인별 수치, 의미 공간 노드 수 및 경로
+무결성을 확인한다. Taxonomy Explorer와 Semantic Space는 브라우저 smoke
+test와 console error 검사를 수행한다. PDF는 컴파일 후 페이지 렌더링과
+시각 검수를 실시한다.
 
-보류 카드가 특정 영역에 집중되는 현상은 분류 오류만으로 설명되지 않는다.
-다수의 L4 리스크 카드는 단일 상위 L3에 완전히 귀속되기보다 여러 위험 범주를
-가로지르는 교차적 위험성(cross-cutting risk)을 보이며, 단일 부모 계층에서는
-경계 사례(boundary case)로 나타난다. 이는 반드시 오분류라기보다 L3 내포 간
-범주 중첩(category overlap)의 문제이다. 따라서 향후 확장에서는 필수 primary
-L3와 선택적 secondary L3를 부여하는 다중 라벨 분류(multi-label
-classification), 또는 하나의 L4가 복수의 L3 부모를 가질 수 있는 다중 부모
-계층(polyhierarchy)으로 이들 카드를 수용하는 방안을 검토할 수 있다. 두 방안
-모두 primary 부모를 필수로 유지하면 운영상 단일 책임 지점은 보존된다.
+\section{해석과 한계}
 
-\section{검증, 제한과 강건성 점검}
+이 분류체계는 정책 목적을 반영한 의미 분할이며, 모든 리스크에 자연적인 단일
+부모가 존재한다는 가정이 아니다. 일부 L4는 복수 메커니즘을 포함해 여러 L3와
+가까울 수 있으므로 Top-1과 함께 Top-$k$ 결과를 제시한다. 의미 유사도는 인과적
+전파, 발생확률 또는 심각도를 의미하지 않는다. Physical 고정 경로는 안정적인
+참조 집합이지만 독립적인 예측 집합은 아니다. 신규 사회적 파급 L3와 구조 이동
+카드는 후속 휴먼 평가가 필요하다.
 
-\subsection{v2.17.2 최종 L4 통폐합, 재정의, BGE-M3 재검증}
+\section{결론}
 
-Claude의 최종 L4 명칭 정비, 일부 통폐합, 일부 재정의 결과를 v2.17.2에 반영했다.
-ID 레지스트리는 1,711개 registered L4 ID로 불변이다. 이 중 1,660개는 active
-card로 표시하고 검증하며, 51개는 \code{merged\_into} 이력을 가진 merged
-provenance record로 보존한다. 따라서 사이트와 보고서는 두 수치를 항상
-\textbf{1,711 registered IDs, 1,660 active cards} 형식으로 병기한다. 웹
-탐색에서는 merged 배지를 통해 retired ID도 계속 확인할 수 있고, 신뢰성 검증은
-active 1,660개를 기준으로 수행한다.
-
-BGE-M3 기반 constrained-EM 매핑 알고리즘을 active 1,660개에 대해 다시 실행했다.
-Physical 경로 189개는 잠금 대상으로 유지했다. 재실행 결과 144개의 guarded 이동
-후보가 도출되었으며, 이들은 정답으로 확정하지 않고 모두 HOLD 검토 항목으로
-반영했다. 기존 HOLD 카드는 \code{hold\_semantic\_path}만 갱신하고, 기존
-비-HOLD 비Physical 카드는 General 또는 Agentic HOLD 검토 경로로 이동시킨 뒤
-후보 semantic L3를 보존했다. 최종 active HOLD는 765개이다.
-
-\begin{longtable}{lrrrr}
-\toprule
-지표 & 전체 사전 & 전체 사후 & 비HOLD 사전 & 비HOLD 사후 \\
-\midrule
-\endhead
-평가 카드 수 & 1,660 & 1,660 & 954 & 954 \\
-Top-1 일치율 & 65.5\% & 70.2\% & 77.3\% & 79.7\% \\
-Top-5 일치율 & 92.9\% & 94.6\% & 96.0\% & 97.2\% \\
-중앙 margin & 0.0116 & 0.0150 & 0.0258 & 0.0276 \\
-음수 margin 비율 & 34.5\% & 29.8\% & 22.7\% & 20.3\% \\
-수렴 스텝 & 15 & 15 & 19 & 19 \\
-수렴 유사도 & 0.797 & 0.797 & 0.800 & 0.800 \\
-노이즈 안정성, $\sigma=0.05$ & 72.0\% & 73.4\% & 78.8\% & 79.8\% \\
-\bottomrule
-\end{longtable}
-
-결과적으로 L4 통폐합과 재정의 이후 전체 active 카드의 Top-1 일치율은
-65.5\%에서 70.2\%로 개선되었고, 비HOLD 카드 기준 Top-1 일치율은 77.3\%에서
-79.7\%로 개선되었다. 비HOLD 기준 노이즈 안정성은 78.8\%에서 79.8\%로
-개선되었다. 다만 144개 guarded 이동 후보와 765개 active HOLD는 여전히 사람의
-분류 검토가 필요한 항목이다.
-
-Physical 182개와 Stage 1 합의 37개는 후속 단계에서 변경되지 않았다. Stage 2와
-Stage 3 생성기는 동일 입력에서 byte-identical placement hash를 재생성했다.
-Stage 2 validator는 13 PASS/0 FAIL/3 WARN, Stage 3 validator는
-14 PASS/0 FAIL/4 WARN이었다. 최종 보류 정책 전용 테스트를 포함한 전체 회귀
-테스트 16개가 통과했다.
-
-주요 제한은 다음과 같다.
-\begin{itemize}[leftmargin=2em]
-  \item Stage 2 신규 1,334개 중 1,214개는 rule eligibility 없이 의미 top-1 중심으로 배치됐다.
-  \item Stage 2 신규 247개는 taxonomy-gap sentinel을 override했다.
-  \item Stage 3에 남긴 118개도 calibrated probability나 사람 승인 결과가 아니다.
-  \item Physical 경계 탐지는 제한된 키워드 sentinel이므로 오탐과 미탐 가능성이 있다.
-  \item 50개 L3의 사용률 100\%와 카드 커버리지 96.8134\%는 분류체계의 충분성을 입증하지 않는다.
-\end{itemize}
-
-\section{권고 검토 순서와 후속 질문}
-
-\begin{enumerate}[leftmargin=2em]
-  \item \code{RAI-HOLD} 55개를 전수 검토한다. Physical 경계 23개와 전문가 거절/불일치 24개를 우선한다.
-  \item Stage 3 quota 강제 후보 118개를 $S_2$ 오름차순으로 검토한다.
-  \item taxonomy-gap override 247개와 rule-free 배치 1,214개를 L3별 층화 표본으로 검증한다.
-  \item 검토 결과를 근거로 L3 정의 확장, 신규 L3, 복수 태그 구조 중 필요한 변경을 승인한다.
-  \item 승인된 변경만 successor release와 홈페이지에 반영하고 기존 decision ID 이력을 보존한다.
-\end{enumerate}
-
-추가로 결정해야 할 질문은 (1) Physical 경계 23개 중 기존 Physical L3로 편입할
-카드 수, (2) 다중 메커니즘 카드에 secondary L3를 허용할지, (3) Stage 3 강제 후보
-118개의 허용 가능한 사람 검토 오류율, (4) 신규 L3 제안의 최소 증거 기준이다.
-
-\vfill
-\noindent\textbf{보고서 식별자:} RAI Risk Taxonomy Technical Report 2.0\\
-\textbf{정책 데이터 뷰:} \code{stage3-review-hold-v1}\\
-\textbf{작성일:} 2026-07-21
+현행 분류체계는 등록 ID 1,711개, 활성 L4 카드 1,660개, 의미 L2 3개, 의미 L3
+54개로 구성된다. L3는 General 33개, Agentic 6개, Physical 15개다. 본 보고서의
+표와 그래프는 동일한 활성 카드 스냅샷을 사용하며, 홈페이지 주 경로와 의미 검토
+경로를 구분한다. 고정된 모델 입력, 난수 시드, 콘텐츠 해시, 반복 이력 및
+불변조건 검사를 통해 매핑과 검증을 재현할 수 있다. 현행 결과는 휴먼 평가와
+후속 릴리스 결정을 위한 기준선이며, 의미 유사도를 정답으로 간주하지 않는다.
 
 \end{document}

@@ -1,0 +1,105 @@
+{
+  "release_id": "v2.18.0-rc",
+  "source_release": "v2.17.2",
+  "method": {
+    "encoder": "BAAI/bge-m3",
+    "score": "0.60 centroid cosine + 0.30 L3 definition cosine + 0.10 TF-IDF keyword cosine",
+    "assignment": "winner takes all within domain constraints",
+    "physical_lock": "Physical System Safety and Interaction Safety retained",
+    "hold_release": {
+      "direct_seed_cosine_min": 0.45,
+      "composite_margin_min": 0.015
+    },
+    "iterations": [
+      {
+        "iteration": 1,
+        "changed_cards": 144
+      },
+      {
+        "iteration": 2,
+        "changed_cards": 13
+      },
+      {
+        "iteration": 3,
+        "changed_cards": 5
+      },
+      {
+        "iteration": 4,
+        "changed_cards": 0
+      }
+    ]
+  },
+  "counts": {
+    "registered_ids": 1711,
+    "active_cards": 1660,
+    "retired_cards": 51,
+    "semantic_l3": 54,
+    "all_active_l3_including_hold": 56,
+    "source_hold": 765,
+    "remaining_hold": 614,
+    "hold_released": 151,
+    "changed_active_cards": 182,
+    "physical_societal_structural_moves": 30,
+    "listed_candidate_ids": 181,
+    "listed_candidate_active": 179,
+    "listed_candidate_retired": 2,
+    "by_primary_domain_code": {
+      "A": 281,
+      "G": 1220,
+      "P": 159
+    }
+  },
+  "l3_migration": {
+    "RAI3-P-SOC-01": "RAI3-G-SOC-01",
+    "RAI3-P-SOC-02": "RAI3-G-SOC-02",
+    "RAI3-P-SOC-03": "RAI3-G-SOC-03",
+    "RAI3-P-SOC-04": "RAI3-G-SOC-04",
+    "RAI3-P-SOC-05": "RAI3-G-SOC-05",
+    "RAI3-P-SOC-06": "RAI3-G-SOC-06",
+    "RAI3-P-SOC-07": "RAI3-G-SOC-07",
+    "RAI3-P-SOC-08": "RAI3-G-SOC-08",
+    "RAI3-P-SOC-09": "RAI3-G-SOC-09"
+  },
+  "source_hashes": {
+    "cards_json": "66c7d41a8348fb5d75c63774ee13119b86b8533f9daae5fdb2bb448a44a291a5",
+    "hierarchy_json": "0a02afdff6a2a65a050e99d30c7f9b7ad5b9fbfeef23b32fe0a281d6685c8e94"
+  },
+  "sealed_source": {
+    "sealed": true,
+    "sealed_on": "2026-07-25",
+    "source_release": "v2.17.2",
+    "source_path": "public/data/releases/v2.17.2",
+    "source_git_commit": "b203fdc9faf4a2fd408f9f1dc15f70423eb26909",
+    "archive": "archives/sealed/v2.17.2_pre_general_societal_extension_20260725.tar.gz",
+    "archive_sha256": "041d8fe2fd82328800b5d8f7ba427dbe7bd81a1d85e0673dd9b65a8db0520e7c",
+    "archive_bytes": 1473007,
+    "source_files": {
+      "cards.json": {
+        "sha256": "66c7d41a8348fb5d75c63774ee13119b86b8533f9daae5fdb2bb448a44a291a5",
+        "bytes": 5573934
+      },
+      "hierarchy.json": {
+        "sha256": "0a02afdff6a2a65a050e99d30c7f9b7ad5b9fbfeef23b32fe0a281d6685c8e94",
+        "bytes": 88633
+      },
+      "manifest.json": {
+        "sha256": "92febd94a23127deb95c66cdb567548a9a2cfc405d5d811e9b6661407208f301",
+        "bytes": 5098
+      },
+      "revision_changelog.json": {
+        "sha256": "653f75e9870271987bc5207fe9173e04d5ad8db0f1e1ce13d35b018f65d56b2e",
+        "bytes": 150197
+      },
+      "risk_space.json": {
+        "sha256": "519d45770c7dfe5fbeb8c9d61fbf221c7fc262c968870d68762c5a74ef66b05d",
+        "bytes": 2284314
+      },
+      "semantic_proximity_network.json": {
+        "sha256": "7c40f0557f2c45f59406ba6c5c31b805d2d11d6d8462c2567e311b5826431dfe",
+        "bytes": 1237142
+      }
+    },
+    "restore_command": "tar -xzf archives/sealed/v2.17.2_pre_general_societal_extension_20260725.tar.gz -C <empty-restore-directory>",
+    "policy": "Immutable rollback snapshot. Do not edit or replace. The live v2.17.2 directory remains unchanged."
+  }
+}

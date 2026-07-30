@@ -1,6 +1,20 @@
 # RAI Risk Taxonomy
 
-Prepublication data package for mapping 1,726 global AI L4 risk cards into the new 50-L3 RAI hierarchy.
+Versioned data package for RAI Risk Taxonomy 2.0. The current release candidate
+preserves 1,711 registered L4 IDs, displays 1,660 active cards, and maps them
+against 54 semantic L3 families. Of the active cards, 614 remain marked HOLD
+for human review.
+
+## Current release candidate
+
+- Release: `v2.18.0-rc`
+- L1: 3 domains
+- L2: 3 semantic categories
+- L3: 54 semantic families, comprising 33 General, 6 Agentic, and 15 Physical
+- L4: 1,711 registered IDs, 1,660 active cards, and 51 merged records
+- Validation: HOLD included and excluded BGE-M3 sensitivity analysis
+- Website bundle: `public/data/releases/v2.18.0-rc/`
+- Validation bundle: `reports/validation/v2.18.0-rc/`
 
 This repository is independent of the two read-only source repositories:
 
@@ -10,7 +24,7 @@ This repository is independent of the two read-only source repositories:
 ## Non-negotiable rules
 
 - Legacy global L1-L3 fields are provenance and post-hoc audit fields only. They are not classification labels or predictive inputs.
-- Physical AI's 182 placements are locked: 169 exact source IDs and 13 explicit aliases.
+- Physical AI's 182 source-card identities are locked: 169 exact source IDs and 13 explicit aliases. Their released paths follow approved changes in the authoritative Physical AI master rather than the global classifier.
 - Physical AI's 360 reference/justification rows and structured 3H/Role tags are preserved in the new L4 registry.
 - L4 identity is permanent and independent of placement: `RAI4-0001` through `RAI4-1726`.
 - L3 path IDs are concise and ordered, for example `RAI3-P-INT-05`.
@@ -50,7 +64,14 @@ Open `http://127.0.0.1:8765/`. The explorer reads the exact validated public bun
 - **Stage 2 (`stage2-v1`)** preserves Stage 1 and assigns 1,334 additional cards, leaving 173 unresolved (10.0232%). These are algorithmic proposals, not human-approved truth.
 - **Stage 3 (`stage3-v1`)** preserves all 1,553 Stage 2 placements and force-matches the remaining 173 to their recorded hierarchy-blind top-1 L3, producing 100% operational coverage. Forced status and original hold reasons remain explicit.
 
-The Stage 2 and Stage 3 working reports remain source-only. The final policy assigns all 1,726 cards to the 50 L3 nodes. Fifty-five difficult cases retain a `decision_required` marker, displayed as `HOLD`; this marker is not a separate taxonomy node. The methodology, stage-specific criteria, statistics, limitations, and vector bar charts are consolidated in the canonical English `reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex` and `reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf`. The Korean edition is retained as a companion translation.
+The Stage 2 and Stage 3 descriptions below document the historical construction
+pipeline. The current release candidate uses 54 semantic L3 families and keeps
+614 active cards in the HOLD review state. HOLD remains a review overlay rather
+than a semantic L2 or L3 category. The current methodology, validation results,
+and limitations are consolidated in the canonical English
+`reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex` and
+`reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf`. The Korean edition
+is retained as a companion translation.
 
 ## Reproduce locally
 
@@ -76,4 +97,5 @@ Published release directories are never overwritten. After human approval, creat
 
 ## Release status
 
-`v1.0.0` is a `prepublication_draft` and `provisional: true`. GitHub push and publication are intentionally outside this build step.
+`v2.18.0-rc` is a release candidate pending human validation. GitHub push and
+publication are intentionally outside the deterministic build step.

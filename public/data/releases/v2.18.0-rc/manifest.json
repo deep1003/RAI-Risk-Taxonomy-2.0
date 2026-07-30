@@ -1,0 +1,107 @@
+{
+  "release_id": "v2.18.0-rc",
+  "source_release": "v2.17.2",
+  "status": "release_candidate_pending_human_validation",
+  "method": {
+    "encoder": "BAAI/bge-m3",
+    "score": "0.60 centroid cosine + 0.30 L3 definition cosine + 0.10 TF-IDF keyword cosine",
+    "assignment": "winner takes all within domain constraints",
+    "physical_lock": "Physical System Safety and Interaction Safety retained",
+    "hold_release": {
+      "direct_seed_cosine_min": 0.45,
+      "composite_margin_min": 0.015
+    },
+    "iterations": [
+      {
+        "iteration": 1,
+        "changed_cards": 144
+      },
+      {
+        "iteration": 2,
+        "changed_cards": 13
+      },
+      {
+        "iteration": 3,
+        "changed_cards": 5
+      },
+      {
+        "iteration": 4,
+        "changed_cards": 0
+      }
+    ]
+  },
+  "counts": {
+    "registered_ids": 1711,
+    "active_cards": 1660,
+    "retired_cards": 51,
+    "semantic_l3": 54,
+    "all_active_l3_including_hold": 56,
+    "source_hold": 765,
+    "remaining_hold": 614,
+    "hold_released": 151,
+    "changed_active_cards": 182,
+    "physical_societal_structural_moves": 30,
+    "listed_candidate_ids": 181,
+    "listed_candidate_active": 179,
+    "listed_candidate_retired": 2,
+    "by_primary_domain_code": {
+      "G": 1221,
+      "A": 281,
+      "P": 158
+    }
+  },
+  "sensitivity": {
+    "encoder": "BAAI/bge-m3",
+    "semantic_l3": 54,
+    "hold_included": {
+      "cards": 1660,
+      "em_iterations": 20,
+      "em_final_objective": 0.8005,
+      "top1_containment": 71.9,
+      "noise_stability_sigma_0.05": 75.0
+    },
+    "hold_excluded": {
+      "cards": 1046,
+      "em_iterations": 12,
+      "em_final_objective": 0.8026,
+      "top1_containment": 81.6,
+      "noise_stability_sigma_0.05": 80.7
+    }
+  },
+  "generated_assets": {
+    "risk_space": {
+      "path": "risk_space.json",
+      "sha256": "f9a2cac2c44bdbdb38e212347413bfef6c432f447664a6a6924795abf1a9b213"
+    },
+    "semantic_proximity_network": {
+      "path": "semantic_proximity_network.json",
+      "sha256": "3c2de06908f054576a28daa6750ef06fa61fe549c958e6cc885cedcb814ea568",
+      "nodes": 1660,
+      "edges": 11844,
+      "clusters": 54
+    }
+  },
+  "policy": "All 1,711 IDs are preserved. Overlapping L3 families are retained. Algorithmic changes are pending human validation.",
+  "physical_master_sync": {
+    "date": "2026-07-31",
+    "source": "Physical-AI-Risk-Taxonomy/data/l4_cards.json",
+    "source_sha256": "9e4b4805d009edb2ba9e163e9e1420e2940de762be7780948ea4a00fc8a65121",
+    "cards_synced": 182,
+    "wording_and_definition_records_synced": 182,
+    "approved_l3_moves": [
+      {
+        "physical_source_card_id": "PHYSBENCH-REF-0065",
+        "rai_l4_id": "RAI4-0244",
+        "from_l3_id": "RAI3-P-INT-07",
+        "to_l3_id": "RAI3-P-SYS-02"
+      },
+      {
+        "physical_source_card_id": "PHYSBENCH-REF-0107",
+        "rai_l4_id": "RAI4-0286",
+        "from_l3_id": "RAI3-P-INT-06",
+        "to_l3_id": "RAI3-G-SOC-06"
+      }
+    ],
+    "validation": "EM sensitivity across 24 model, language, and seed-weight conditions with 1,000 bootstrap repeats"
+  }
+}

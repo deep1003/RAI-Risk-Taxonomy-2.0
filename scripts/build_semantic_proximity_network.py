@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the v2.17.2 Semantic Proximity Complex Network."""
+"""Build the current Semantic Proximity Complex Network."""
 
 from __future__ import annotations
 
@@ -14,9 +14,14 @@ from scipy.sparse import csr_matrix
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE = ROOT / "public/data/releases/v2.17.2"
-EMBEDDINGS = ROOT / "reports/validation/v2.17.2/bge_m3_active/card_embeddings.npy"
-INDEX = ROOT / "reports/validation/v2.17.2/bge_m3_active/index.json"
+RELEASE_ID = "v2.18.0-rc"
+RELEASE = ROOT / "public/data/releases" / RELEASE_ID
+EMBEDDING_ROOT = (
+    ROOT
+    / "reports/validation/v2.17.2/full_mapping_sensitivity_bge_m3_20260724"
+)
+EMBEDDINGS = EMBEDDING_ROOT / "card_embeddings.npy"
+INDEX = EMBEDDING_ROOT / "index.json"
 SPACE = RELEASE / "risk_space.json"
 OUTPUT = RELEASE / "semantic_proximity_network.json"
 
@@ -323,6 +328,22 @@ def main() -> None:
     index = json.loads(INDEX.read_text(encoding="utf-8"))
     payload = json.loads(SPACE.read_text(encoding="utf-8"))
     points = payload["points"]
+    hierarchy = json.loads(
+        (RELEASE / "hierarchy.json").read_text(encoding="utf-8")
+    )
+    l3_nodes = [
+        node
+        for node in hierarchy["nodes"]
+        if node.get("level") == 3 and node.get("status") == "active"
+    ]
+    family_ids = [node["node_id"] for node in l3_nodes]
+    family_labels = {
+        node["node_id"]: (
+            node.get("label_en", ""),
+            node.get("label_ko", ""),
+        )
+        for node in l3_nodes
+    }
 
     l4_ids = index["l4_ids"]
     point_by_id = {point["id"]: point for point in points}
@@ -335,31 +356,23 @@ def main() -> None:
         graph_regularized_seeded_spherical_em(
             embeddings,
             base_graph,
-            index["fam_ids"],
+            family_ids,
             ordered_points,
         )
     )
     cluster_by_node = {
         node: int(assignments[node]) for node in range(len(ordered_points))
     }
-    family_labels = {}
-    for point in ordered_points:
-        path = point["path"]
-        if path["l3_id"] in index["fam_ids"]:
-            family_labels[path["l3_id"]] = (
-                path["l3_label_en"],
-                path.get("l3_label_ko", ""),
-            )
     affiliations = l3_affiliations(
         responsibilities,
-        index["fam_ids"],
+        family_ids,
         family_labels,
     )
     graph = build_l3_profile_projected_graph(embeddings, responsibilities)
     positions = normalized_layout(graph, communities)
     clusters = []
     for cluster_id, members in enumerate(communities):
-        family_id = index["fam_ids"][cluster_id]
+        family_id = family_ids[cluster_id]
         label_en, label_ko = family_labels[family_id]
         centroid = np.mean([positions[node] for node in members], axis=0)
         clusters.append(
@@ -414,7 +427,7 @@ def main() -> None:
     output = {
         "metadata": {
             "title": "Semantic Proximity Complex Network",
-            "release": "v2.17.2",
+            "release": RELEASE_ID,
             "embedding_model": "BAAI/bge-m3",
             "active_cards": len(nodes),
             "direct_semantic_distance": "1 - cosine_similarity",
@@ -428,7 +441,7 @@ def main() -> None:
             "em_seed_weight": EM_SEED_WEIGHT,
             "em_diagnostics": em_diagnostics,
             "l3_affiliation_threshold": round(
-                L3_AFFILIATION_FACTOR / len(index["fam_ids"]), 5
+                L3_AFFILIATION_FACTOR / len(family_ids), 5
             ),
             "projected_edge_weight": {
                 "l3_profile_similarity": L3_PROFILE_WEIGHT,

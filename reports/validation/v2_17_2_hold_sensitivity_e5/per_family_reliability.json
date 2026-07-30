@@ -1,0 +1,502 @@
+[
+ {
+  "l3": "RAI3-P-INT-03",
+  "label": "Cybersecurity Threats",
+  "n": 5,
+  "top1": 100.0,
+  "med_margin": 0.0249,
+  "hold_pct": 0.0,
+  "nh_n": 5,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-01",
+  "label": "Privacy Violations",
+  "n": 5,
+  "top1": 100.0,
+  "med_margin": 0.0277,
+  "hold_pct": 0.0,
+  "nh_n": 5,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-G-SYS-04",
+  "label": "Context Misalignment",
+  "n": 4,
+  "top1": 100.0,
+  "med_margin": 0.0435,
+  "hold_pct": 75.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-04",
+  "label": "Sensor & Input Validation Failures",
+  "n": 4,
+  "top1": 100.0,
+  "med_margin": 0.021,
+  "hold_pct": 0.0,
+  "nh_n": 4,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-09",
+  "label": "Multi-Agent Collaboration",
+  "n": 4,
+  "top1": 100.0,
+  "med_margin": 0.0314,
+  "hold_pct": 0.0,
+  "nh_n": 4,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-08",
+  "label": "Unhealthy / Dangerous Human-EAI Relationships",
+  "n": 4,
+  "top1": 100.0,
+  "med_margin": 0.0321,
+  "hold_pct": 0.0,
+  "nh_n": 4,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SYS-03",
+  "label": "Hardware & Mechanical Failures",
+  "n": 3,
+  "top1": 100.0,
+  "med_margin": 0.0279,
+  "hold_pct": 0.0,
+  "nh_n": 3,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-05",
+  "label": "Bias & Discrimination",
+  "n": 3,
+  "top1": 100.0,
+  "med_margin": 0.0448,
+  "hold_pct": 0.0,
+  "nh_n": 3,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-10",
+  "label": "Ethical & Safety Implications of Interactive Agents",
+  "n": 2,
+  "top1": 100.0,
+  "med_margin": 0.0459,
+  "hold_pct": 0.0,
+  "nh_n": 2,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-02",
+  "label": "Labor Displacement",
+  "n": 2,
+  "top1": 100.0,
+  "med_margin": 0.0393,
+  "hold_pct": 0.0,
+  "nh_n": 2,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-G-SYS-06",
+  "label": "Overgeneralization",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.074,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-02",
+  "label": "Physical Attacks",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.073,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-08",
+  "label": "Instruction Misinterpretation",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.072,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-03",
+  "label": "Socioeconomic Inequality",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.0578,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-04",
+  "label": "Power Concentration",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.0872,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-07",
+  "label": "Lack of Transparency, Explainability & Trust",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.0744,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-SOC-09",
+  "label": "Transformative Effects",
+  "n": 1,
+  "top1": 100.0,
+  "med_margin": 0.0829,
+  "hold_pct": 0.0,
+  "nh_n": 1,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-G-INT-03",
+  "label": "Self-harm",
+  "n": 19,
+  "top1": 94.7,
+  "med_margin": 0.0157,
+  "hold_pct": 26.0,
+  "nh_n": 14,
+  "nh_top1": 85.7
+ },
+ {
+  "l3": "RAI3-G-INT-01",
+  "label": "Violence",
+  "n": 17,
+  "top1": 94.1,
+  "med_margin": 0.0084,
+  "hold_pct": 59.0,
+  "nh_n": 7,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-P-INT-06",
+  "label": "Dynamic Environmental Factors",
+  "n": 11,
+  "top1": 90.9,
+  "med_margin": 0.0115,
+  "hold_pct": 0.0,
+  "nh_n": 11,
+  "nh_top1": 90.9
+ },
+ {
+  "l3": "RAI3-G-INT-05",
+  "label": "Political Neutrality",
+  "n": 21,
+  "top1": 90.5,
+  "med_margin": 0.0087,
+  "hold_pct": 33.0,
+  "nh_n": 14,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-G-INT-09",
+  "label": "Weaponization",
+  "n": 59,
+  "top1": 89.8,
+  "med_margin": 0.013,
+  "hold_pct": 37.0,
+  "nh_n": 37,
+  "nh_top1": 91.9
+ },
+ {
+  "l3": "RAI3-P-SYS-04",
+  "label": "Software Vulnerabilities & Design Flaws",
+  "n": 9,
+  "top1": 88.9,
+  "med_margin": 0.0132,
+  "hold_pct": 0.0,
+  "nh_n": 9,
+  "nh_top1": 88.9
+ },
+ {
+  "l3": "RAI3-P-SYS-05",
+  "label": "Lack of Robustness in Unseen Environments",
+  "n": 13,
+  "top1": 84.6,
+  "med_margin": 0.0104,
+  "hold_pct": 0.0,
+  "nh_n": 13,
+  "nh_top1": 84.6
+ },
+ {
+  "l3": "RAI3-P-SOC-06",
+  "label": "Lack of Accountability & Liability",
+  "n": 12,
+  "top1": 83.3,
+  "med_margin": 0.0142,
+  "hold_pct": 0.0,
+  "nh_n": 12,
+  "nh_top1": 83.3
+ },
+ {
+  "l3": "RAI3-P-INT-05",
+  "label": "Misinformation",
+  "n": 6,
+  "top1": 83.3,
+  "med_margin": 0.0145,
+  "hold_pct": 0.0,
+  "nh_n": 6,
+  "nh_top1": 83.3
+ },
+ {
+  "l3": "RAI3-A-SYS-02",
+  "label": "Accountability",
+  "n": 28,
+  "top1": 82.1,
+  "med_margin": 0.004,
+  "hold_pct": 50.0,
+  "nh_n": 14,
+  "nh_top1": 85.7
+ },
+ {
+  "l3": "RAI3-P-SYS-01",
+  "label": "Accidental Harm",
+  "n": 22,
+  "top1": 81.8,
+  "med_margin": 0.003,
+  "hold_pct": 0.0,
+  "nh_n": 22,
+  "nh_top1": 81.8
+ },
+ {
+  "l3": "RAI3-G-INT-07",
+  "label": "Illegal",
+  "n": 20,
+  "top1": 80.0,
+  "med_margin": 0.0088,
+  "hold_pct": 30.0,
+  "nh_n": 14,
+  "nh_top1": 78.6
+ },
+ {
+  "l3": "RAI3-G-INT-04",
+  "label": "Hate and Unfairness",
+  "n": 32,
+  "top1": 78.1,
+  "med_margin": 0.0096,
+  "hold_pct": 38.0,
+  "nh_n": 20,
+  "nh_top1": 95.0
+ },
+ {
+  "l3": "RAI3-G-INT-11",
+  "label": "Policy Exposure",
+  "n": 89,
+  "top1": 77.5,
+  "med_margin": 0.0078,
+  "hold_pct": 47.0,
+  "nh_n": 47,
+  "nh_top1": 87.2
+ },
+ {
+  "l3": "RAI3-P-INT-07",
+  "label": "Human Interaction & Safety Protocol Failures",
+  "n": 13,
+  "top1": 76.9,
+  "med_margin": 0.0069,
+  "hold_pct": 0.0,
+  "nh_n": 13,
+  "nh_top1": 76.9
+ },
+ {
+  "l3": "RAI3-P-SYS-02",
+  "label": "Robot Control",
+  "n": 46,
+  "top1": 73.9,
+  "med_margin": 0.0041,
+  "hold_pct": 0.0,
+  "nh_n": 46,
+  "nh_top1": 73.9
+ },
+ {
+  "l3": "RAI3-G-SYS-01",
+  "label": "Over-Refusal",
+  "n": 38,
+  "top1": 73.7,
+  "med_margin": 0.0117,
+  "hold_pct": 53.0,
+  "nh_n": 18,
+  "nh_top1": 55.6
+ },
+ {
+  "l3": "RAI3-P-INT-01",
+  "label": "Purposeful / Malicious Harm",
+  "n": 19,
+  "top1": 73.7,
+  "med_margin": 0.0112,
+  "hold_pct": 0.0,
+  "nh_n": 19,
+  "nh_top1": 73.7
+ },
+ {
+  "l3": "RAI3-G-SYS-02",
+  "label": "Over-Extension",
+  "n": 16,
+  "top1": 68.8,
+  "med_margin": 0.0076,
+  "hold_pct": 25.0,
+  "nh_n": 12,
+  "nh_top1": 83.3
+ },
+ {
+  "l3": "RAI3-G-INT-06",
+  "label": "Privacy",
+  "n": 81,
+  "top1": 66.7,
+  "med_margin": 0.0068,
+  "hold_pct": 20.0,
+  "nh_n": 65,
+  "nh_top1": 70.8
+ },
+ {
+  "l3": "RAI3-A-SYS-05",
+  "label": "Conflict",
+  "n": 51,
+  "top1": 64.7,
+  "med_margin": 0.0034,
+  "hold_pct": 25.0,
+  "nh_n": 38,
+  "nh_top1": 76.3
+ },
+ {
+  "l3": "RAI3-A-SYS-01",
+  "label": "Excessive Authority",
+  "n": 65,
+  "top1": 64.6,
+  "med_margin": 0.0025,
+  "hold_pct": 38.0,
+  "nh_n": 40,
+  "nh_top1": 72.5
+ },
+ {
+  "l3": "RAI3-G-INT-02",
+  "label": "Sexual",
+  "n": 31,
+  "top1": 64.5,
+  "med_margin": 0.0079,
+  "hold_pct": 35.0,
+  "nh_n": 20,
+  "nh_top1": 70.0
+ },
+ {
+  "l3": "RAI3-G-SYS-03",
+  "label": "Misinformation/Disinformation",
+  "n": 104,
+  "top1": 63.5,
+  "med_margin": 0.0026,
+  "hold_pct": 54.0,
+  "nh_n": 48,
+  "nh_top1": 77.1
+ },
+ {
+  "l3": "RAI3-G-INT-10",
+  "label": "Anthropomorphism",
+  "n": 201,
+  "top1": 63.2,
+  "med_margin": 0.0026,
+  "hold_pct": 98.0,
+  "nh_n": 5,
+  "nh_top1": 100.0
+ },
+ {
+  "l3": "RAI3-G-SYS-09",
+  "label": "Non-Contestability",
+  "n": 111,
+  "top1": 62.2,
+  "med_margin": 0.0021,
+  "hold_pct": 66.0,
+  "nh_n": 38,
+  "nh_top1": 73.7
+ },
+ {
+  "l3": "RAI3-G-SYS-07",
+  "label": "Overconfidence",
+  "n": 47,
+  "top1": 61.7,
+  "med_margin": 0.0021,
+  "hold_pct": 34.0,
+  "nh_n": 31,
+  "nh_top1": 80.6
+ },
+ {
+  "l3": "RAI3-G-SYS-05",
+  "label": "Inconsistency",
+  "n": 36,
+  "top1": 55.6,
+  "med_margin": 0.0042,
+  "hold_pct": 36.0,
+  "nh_n": 23,
+  "nh_top1": 73.9
+ },
+ {
+  "l3": "RAI3-A-SYS-06",
+  "label": "Collusion",
+  "n": 36,
+  "top1": 52.8,
+  "med_margin": 0.0006,
+  "hold_pct": 31.0,
+  "nh_n": 25,
+  "nh_top1": 76.0
+ },
+ {
+  "l3": "RAI3-G-INT-08",
+  "label": "Copyrights",
+  "n": 99,
+  "top1": 45.5,
+  "med_margin": -0.0004,
+  "hold_pct": 71.0,
+  "nh_n": 29,
+  "nh_top1": 65.5
+ },
+ {
+  "l3": "RAI3-A-SYS-04",
+  "label": "Destabilising Dynamics",
+  "n": 62,
+  "top1": 45.2,
+  "med_margin": -0.0006,
+  "hold_pct": 32.0,
+  "nh_n": 42,
+  "nh_top1": 57.1
+ },
+ {
+  "l3": "RAI3-A-SYS-03",
+  "label": "Network Effects",
+  "n": 68,
+  "top1": 36.8,
+  "med_margin": -0.0012,
+  "hold_pct": 25.0,
+  "nh_n": 51,
+  "nh_top1": 60.8
+ },
+ {
+  "l3": "RAI3-G-SYS-08",
+  "label": "Goal Misalignment",
+  "n": 135,
+  "top1": 33.3,
+  "med_margin": -0.0023,
+  "hold_pct": 61.0,
+  "nh_n": 52,
+  "nh_top1": 67.3
+ }
+]

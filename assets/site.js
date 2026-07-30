@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.17.2";
+const DATA_ROOT = "public/data/releases/v2.18.0-rc";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -199,9 +199,9 @@ function initializeDomainFromUrl() {
 }
 
 function renderStats() {
-  document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1).length.toLocaleString();
-  document.querySelector("#stat-l2").textContent = state.l2Categories.length.toLocaleString();
-  document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3).length.toLocaleString();
+  document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1 && node.status === "active").length.toLocaleString();
+  document.querySelector("#stat-l2").textContent = state.l2Categories.filter((category) => !category.review_overlay).length.toLocaleString();
+  document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3 && node.status === "active").length.toLocaleString();
   const l4Count = state.manifest.counts?.l4_total_ids_preserved ?? state.manifest.counts?.l4 ?? state.allCards.length ?? state.cards.length;
   document.querySelector("#stat-l4").textContent = l4Count.toLocaleString();
 }

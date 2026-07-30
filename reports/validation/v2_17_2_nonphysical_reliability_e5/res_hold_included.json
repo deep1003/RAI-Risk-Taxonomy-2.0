@@ -1,0 +1,209 @@
+{
+ "condition": "hold_included",
+ "cards": 1471,
+ "topk": {
+  "1": 62.3,
+  "2": 78.1,
+  "3": 86.0,
+  "5": 93.0
+ },
+ "median_margin": 0.0027,
+ "neg_margin": 37.7,
+ "perm_p": 0.0002,
+ "cohesion": 0.9226,
+ "null_mean": 0.9154,
+ "em_iters": 18,
+ "em_agree": 29.1,
+ "perturb_curve": {
+  "0.01": 90.5,
+  "0.02": 80.9,
+  "0.05": 53.9,
+  "0.1": 26.8,
+  "0.2": 11.3,
+  "0.3": 7.3
+ },
+ "families": [
+  {
+   "l3": "RAI3-G-INT-01",
+   "label": "Violence",
+   "n": 17,
+   "top1": 94.1,
+   "med_margin": 0.0084
+  },
+  {
+   "l3": "RAI3-G-INT-02",
+   "label": "Sexual",
+   "n": 31,
+   "top1": 67.7,
+   "med_margin": 0.0079
+  },
+  {
+   "l3": "RAI3-G-INT-03",
+   "label": "Self-harm",
+   "n": 19,
+   "top1": 94.7,
+   "med_margin": 0.0157
+  },
+  {
+   "l3": "RAI3-G-INT-04",
+   "label": "Hate and Unfairness",
+   "n": 32,
+   "top1": 78.1,
+   "med_margin": 0.0096
+  },
+  {
+   "l3": "RAI3-G-INT-05",
+   "label": "Political Neutrality",
+   "n": 21,
+   "top1": 90.5,
+   "med_margin": 0.0087
+  },
+  {
+   "l3": "RAI3-G-INT-06",
+   "label": "Privacy",
+   "n": 81,
+   "top1": 66.7,
+   "med_margin": 0.0069
+  },
+  {
+   "l3": "RAI3-G-INT-07",
+   "label": "Illegal",
+   "n": 20,
+   "top1": 80.0,
+   "med_margin": 0.0094
+  },
+  {
+   "l3": "RAI3-G-INT-08",
+   "label": "Copyrights",
+   "n": 99,
+   "top1": 45.5,
+   "med_margin": -0.0004
+  },
+  {
+   "l3": "RAI3-G-INT-09",
+   "label": "Weaponization",
+   "n": 59,
+   "top1": 89.8,
+   "med_margin": 0.013
+  },
+  {
+   "l3": "RAI3-G-INT-10",
+   "label": "Anthropomorphism",
+   "n": 201,
+   "top1": 66.2,
+   "med_margin": 0.0029
+  },
+  {
+   "l3": "RAI3-G-INT-11",
+   "label": "Policy Exposure",
+   "n": 89,
+   "top1": 78.7,
+   "med_margin": 0.0078
+  },
+  {
+   "l3": "RAI3-G-SYS-01",
+   "label": "Over-Refusal",
+   "n": 38,
+   "top1": 76.3,
+   "med_margin": 0.0117
+  },
+  {
+   "l3": "RAI3-G-SYS-02",
+   "label": "Over-Extension",
+   "n": 16,
+   "top1": 68.8,
+   "med_margin": 0.0076
+  },
+  {
+   "l3": "RAI3-G-SYS-03",
+   "label": "Misinformation/Disinformation",
+   "n": 104,
+   "top1": 63.5,
+   "med_margin": 0.0026
+  },
+  {
+   "l3": "RAI3-G-SYS-04",
+   "label": "Context Misalignment",
+   "n": 4,
+   "top1": 100.0,
+   "med_margin": 0.0435
+  },
+  {
+   "l3": "RAI3-G-SYS-05",
+   "label": "Inconsistency",
+   "n": 36,
+   "top1": 55.6,
+   "med_margin": 0.0042
+  },
+  {
+   "l3": "RAI3-G-SYS-06",
+   "label": "Overgeneralization",
+   "n": 1,
+   "top1": 100.0,
+   "med_margin": 0.074
+  },
+  {
+   "l3": "RAI3-G-SYS-07",
+   "label": "Overconfidence",
+   "n": 47,
+   "top1": 61.7,
+   "med_margin": 0.0021
+  },
+  {
+   "l3": "RAI3-G-SYS-08",
+   "label": "Goal Misalignment",
+   "n": 135,
+   "top1": 34.1,
+   "med_margin": -0.0023
+  },
+  {
+   "l3": "RAI3-G-SYS-09",
+   "label": "Non-Contestability",
+   "n": 111,
+   "top1": 62.2,
+   "med_margin": 0.0021
+  },
+  {
+   "l3": "RAI3-A-SYS-01",
+   "label": "Excessive Authority",
+   "n": 65,
+   "top1": 64.6,
+   "med_margin": 0.0025
+  },
+  {
+   "l3": "RAI3-A-SYS-02",
+   "label": "Accountability",
+   "n": 28,
+   "top1": 82.1,
+   "med_margin": 0.004
+  },
+  {
+   "l3": "RAI3-A-SYS-03",
+   "label": "Network Effects",
+   "n": 68,
+   "top1": 36.8,
+   "med_margin": -0.0012
+  },
+  {
+   "l3": "RAI3-A-SYS-04",
+   "label": "Destabilising Dynamics",
+   "n": 62,
+   "top1": 46.8,
+   "med_margin": -0.0003
+  },
+  {
+   "l3": "RAI3-A-SYS-05",
+   "label": "Conflict",
+   "n": 51,
+   "top1": 64.7,
+   "med_margin": 0.0034
+  },
+  {
+   "l3": "RAI3-A-SYS-06",
+   "label": "Collusion",
+   "n": 36,
+   "top1": 52.8,
+   "med_margin": 0.0006
+  }
+ ]
+}

@@ -40,6 +40,15 @@ a {
   padding: 24px 38px 44px;
 }
 
+.linked-hero {
+  cursor: pointer;
+}
+
+.linked-hero:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.85);
+  outline-offset: -6px;
+}
+
 .topbar,
 .hero-grid,
 main {

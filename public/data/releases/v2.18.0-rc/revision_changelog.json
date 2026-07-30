@@ -1,0 +1,6170 @@
+{
+  "release_id": "v2.18.0-rc",
+  "source_release": "v2.17.2",
+  "hierarchy_changes": {
+    "added_l2": [
+      "RAI2-G-SOC"
+    ],
+    "added_l3": [
+      "RAI3-G-INT-12",
+      "RAI3-G-SOC-10",
+      "RAI3-G-SYS-10",
+      "RAI3-G-SOC-11"
+    ],
+    "migrated_l3": {
+      "RAI3-P-SOC-01": "RAI3-G-SOC-01",
+      "RAI3-P-SOC-02": "RAI3-G-SOC-02",
+      "RAI3-P-SOC-03": "RAI3-G-SOC-03",
+      "RAI3-P-SOC-04": "RAI3-G-SOC-04",
+      "RAI3-P-SOC-05": "RAI3-G-SOC-05",
+      "RAI3-P-SOC-06": "RAI3-G-SOC-06",
+      "RAI3-P-SOC-07": "RAI3-G-SOC-07",
+      "RAI3-P-SOC-08": "RAI3-G-SOC-08",
+      "RAI3-P-SOC-09": "RAI3-G-SOC-09"
+    },
+    "retired_l2": [
+      "RAI2-P-SOC"
+    ]
+  },
+  "card_changes": [
+    {
+      "l4_id": "RAI4-0005",
+      "label_en": "Risk-source attribution failure",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-A-SYS-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.684955,
+      "composite_margin": 0.036658
+    },
+    {
+      "l4_id": "RAI4-0019",
+      "label_en": "Governance gap in agent autonomy",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.666079,
+      "composite_margin": 0.039548
+    },
+    {
+      "l4_id": "RAI4-0056",
+      "label_en": "Remedy pathway opacity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.695578,
+      "composite_margin": 0.017251
+    },
+    {
+      "l4_id": "RAI4-0057",
+      "label_en": "Audit trail incompleteness",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.714847,
+      "composite_margin": 0.018876
+    },
+    {
+      "l4_id": "RAI4-0058",
+      "label_en": "Traceability failure",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-A-SYS-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.697565,
+      "composite_margin": 0.050545
+    },
+    {
+      "l4_id": "RAI4-0060",
+      "label_en": "Model card incompleteness",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.663014,
+      "composite_margin": 0.024031
+    },
+    {
+      "l4_id": "RAI4-0062",
+      "label_en": "System card disclosure gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.722032,
+      "composite_margin": 0.032005
+    },
+    {
+      "l4_id": "RAI4-0065",
+      "label_en": "Certification capture",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-01",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.632702,
+      "composite_margin": 0.037502
+    },
+    {
+      "l4_id": "RAI4-0066",
+      "label_en": "Audit checklist compliance theater",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-07",
+      "new_primary_l3_id": "RAI3-G-SYS-01",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.564831,
+      "composite_margin": 0.021859
+    },
+    {
+      "l4_id": "RAI4-0067",
+      "label_en": "Assurance case failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-01",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.633571,
+      "composite_margin": 0.031202
+    },
+    {
+      "l4_id": "RAI4-0069",
+      "label_en": "Near-miss reporting failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.679662,
+      "composite_margin": 0.024231
+    },
+    {
+      "l4_id": "RAI4-0076",
+      "label_en": "Lifecycle governance discontinuity",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.693534,
+      "composite_margin": 0.076117
+    },
+    {
+      "l4_id": "RAI4-0082",
+      "label_en": "Capability evaluation non-disclosure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.702799,
+      "composite_margin": 0.042391
+    },
+    {
+      "l4_id": "RAI4-0083",
+      "label_en": "Benchmark governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.689497,
+      "composite_margin": 0.064819
+    },
+    {
+      "l4_id": "RAI4-0085",
+      "label_en": "Red-team governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.640333,
+      "composite_margin": 0.051364
+    },
+    {
+      "l4_id": "RAI4-0086",
+      "label_en": "Regulatory arbitrage",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-09",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.547989,
+      "composite_margin": 0.095706
+    },
+    {
+      "l4_id": "RAI4-0087",
+      "label_en": "Regulatory capture in AI governance",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.633948,
+      "composite_margin": 0.023371
+    },
+    {
+      "l4_id": "RAI4-0093",
+      "label_en": "Public-sector AI governance capacity gap",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.754496,
+      "composite_margin": 0.080996
+    },
+    {
+      "l4_id": "RAI4-0095",
+      "label_en": "AI registry incompleteness",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.726838,
+      "composite_margin": 0.02432
+    },
+    {
+      "l4_id": "RAI4-0097",
+      "label_en": "Board oversight failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.761757,
+      "composite_margin": 0.077491
+    },
+    {
+      "l4_id": "RAI4-0105",
+      "label_en": "Contractual accountability gap",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.772021,
+      "composite_margin": 0.070786
+    },
+    {
+      "l4_id": "RAI4-0106",
+      "label_en": "General-purpose AI downstream opacity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.723126,
+      "composite_margin": 0.040074
+    },
+    {
+      "l4_id": "RAI4-0107",
+      "label_en": "Frontier model release governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.670639,
+      "composite_margin": 0.029277
+    },
+    {
+      "l4_id": "RAI4-0108",
+      "label_en": "Capability threshold governance failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-02",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.728992,
+      "composite_margin": 0.085809
+    },
+    {
+      "l4_id": "RAI4-0109",
+      "label_en": "Compute governance accountability gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.776875,
+      "composite_margin": 0.121467
+    },
+    {
+      "l4_id": "RAI4-0121",
+      "label_en": "Choice architecture opacity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.755574,
+      "composite_margin": 0.032964
+    },
+    {
+      "l4_id": "RAI4-0178",
+      "label_en": "AI-mediated service exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-09",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.644831,
+      "composite_margin": 0.035091
+    },
+    {
+      "l4_id": "RAI4-0200",
+      "label_en": "Embodied privacy violation",
+      "old_primary_l3_id": "RAI3-P-SOC-01",
+      "old_semantic_l3_id": "RAI3-G-SOC-01",
+      "new_primary_l3_id": "RAI3-G-SOC-01",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.794419,
+      "composite_margin": 0.099337
+    },
+    {
+      "l4_id": "RAI4-0216",
+      "label_en": "Pre-incident mitigation gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.66394,
+      "composite_margin": 0.024675
+    },
+    {
+      "l4_id": "RAI4-0217",
+      "label_en": "Post-incident recovery gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.732346,
+      "composite_margin": 0.024216
+    },
+    {
+      "l4_id": "RAI4-0266",
+      "label_en": "Human-humanoid interaction dataset bias",
+      "old_primary_l3_id": "RAI3-P-SOC-05",
+      "old_semantic_l3_id": "RAI3-G-SOC-05",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.646759,
+      "composite_margin": 0.051317
+    },
+    {
+      "l4_id": "RAI4-0272",
+      "label_en": "Humanoid benchmark selection bias",
+      "old_primary_l3_id": "RAI3-P-SOC-05",
+      "old_semantic_l3_id": "RAI3-G-SOC-05",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.615951,
+      "composite_margin": 0.037481
+    },
+    {
+      "l4_id": "RAI4-0273",
+      "label_en": "Robot constitution coverage gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.640516,
+      "composite_margin": 0.037136
+    },
+    {
+      "l4_id": "RAI4-0287",
+      "label_en": "Humanoid safety evidence standardization gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.587568,
+      "composite_margin": 0.049618
+    },
+    {
+      "l4_id": "RAI4-0288",
+      "label_en": "Personal care robot compliance-criteria gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.618358,
+      "composite_margin": 0.026798
+    },
+    {
+      "l4_id": "RAI4-0289",
+      "label_en": "Domestic humanoid test-method gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.548805,
+      "composite_margin": 0.029815
+    },
+    {
+      "l4_id": "RAI4-0292",
+      "label_en": "Humanoid safety enforcement mechanism gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.640059,
+      "composite_margin": 0.055891
+    },
+    {
+      "l4_id": "RAI4-0306",
+      "label_en": "Anthropomorphism-induced overreliance",
+      "old_primary_l3_id": "RAI3-P-SOC-08",
+      "old_semantic_l3_id": "RAI3-G-SOC-08",
+      "new_primary_l3_id": "RAI3-G-SOC-08",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.732684,
+      "composite_margin": 0.082174
+    },
+    {
+      "l4_id": "RAI4-0307",
+      "label_en": "Undisclosed machine identity",
+      "old_primary_l3_id": "RAI3-P-SOC-07",
+      "old_semantic_l3_id": "RAI3-G-SOC-07",
+      "new_primary_l3_id": "RAI3-G-SOC-07",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.658832,
+      "composite_margin": 0.133166
+    },
+    {
+      "l4_id": "RAI4-0308",
+      "label_en": "Parasocial attachment and manipulability",
+      "old_primary_l3_id": "RAI3-P-SOC-08",
+      "old_semantic_l3_id": "RAI3-G-SOC-08",
+      "new_primary_l3_id": "RAI3-G-SOC-08",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.687613,
+      "composite_margin": 0.11658
+    },
+    {
+      "l4_id": "RAI4-0309",
+      "label_en": "Child-interaction developmental and safety risk",
+      "old_primary_l3_id": "RAI3-P-SOC-08",
+      "old_semantic_l3_id": "RAI3-G-SOC-08",
+      "new_primary_l3_id": "RAI3-G-SOC-08",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.620907,
+      "composite_margin": 0.017613
+    },
+    {
+      "l4_id": "RAI4-0311",
+      "label_en": "Bias executed as physical behavior",
+      "old_primary_l3_id": "RAI3-P-SOC-05",
+      "old_semantic_l3_id": "RAI3-G-SOC-05",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.732387,
+      "composite_margin": 0.041091
+    },
+    {
+      "l4_id": "RAI4-0312",
+      "label_en": "Demographic physical-service disparity",
+      "old_primary_l3_id": "RAI3-P-SOC-03",
+      "old_semantic_l3_id": "RAI3-G-SOC-03",
+      "new_primary_l3_id": "RAI3-G-SOC-03",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.596382,
+      "composite_margin": 0.136657
+    },
+    {
+      "l4_id": "RAI4-0313",
+      "label_en": "Continuous in-home audiovisual capture",
+      "old_primary_l3_id": "RAI3-P-SOC-01",
+      "old_semantic_l3_id": "RAI3-G-SOC-01",
+      "new_primary_l3_id": "RAI3-G-SOC-01",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.647772,
+      "composite_margin": 0.125055
+    },
+    {
+      "l4_id": "RAI4-0314",
+      "label_en": "In-home behavioral and biometric data exfiltration",
+      "old_primary_l3_id": "RAI3-P-SOC-01",
+      "old_semantic_l3_id": "RAI3-G-SOC-01",
+      "new_primary_l3_id": "RAI3-G-SOC-01",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.629323,
+      "composite_margin": 0.053547
+    },
+    {
+      "l4_id": "RAI4-0315",
+      "label_en": "Co-worker robot as surveillance node",
+      "old_primary_l3_id": "RAI3-P-SOC-04",
+      "old_semantic_l3_id": "RAI3-G-SOC-04",
+      "new_primary_l3_id": "RAI3-G-SOC-04",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.505116,
+      "composite_margin": 0.131622
+    },
+    {
+      "l4_id": "RAI4-0316",
+      "label_en": "Humanoid-specific certification gap",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.562958,
+      "composite_margin": 0.057335
+    },
+    {
+      "l4_id": "RAI4-0317",
+      "label_en": "Machinery–AI dual-regulation conflict",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SYS-09",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.640501,
+      "composite_margin": 0.006911
+    },
+    {
+      "l4_id": "RAI4-0318",
+      "label_en": "Absence of standardized embodied-incident reporting",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.631898,
+      "composite_margin": 0.034123
+    },
+    {
+      "l4_id": "RAI4-0319",
+      "label_en": "Regulatory arbitrage across jurisdictions",
+      "old_primary_l3_id": "RAI3-P-SOC-09",
+      "old_semantic_l3_id": "RAI3-G-SOC-09",
+      "new_primary_l3_id": "RAI3-G-SOC-09",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.52876,
+      "composite_margin": 0.120906
+    },
+    {
+      "l4_id": "RAI4-0341",
+      "label_en": "Overtrust in embodied agents",
+      "old_primary_l3_id": "RAI3-P-SOC-08",
+      "old_semantic_l3_id": "RAI3-G-SOC-08",
+      "new_primary_l3_id": "RAI3-G-SOC-08",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.739447,
+      "composite_margin": 0.072158
+    },
+    {
+      "l4_id": "RAI4-0345",
+      "label_en": "Privacy in intimate physical spaces",
+      "old_primary_l3_id": "RAI3-P-SOC-01",
+      "old_semantic_l3_id": "RAI3-G-SOC-01",
+      "new_primary_l3_id": "RAI3-G-SOC-01",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.693086,
+      "composite_margin": 0.052538
+    },
+    {
+      "l4_id": "RAI4-0351",
+      "label_en": "Responsibility gap for physical harm",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.757529,
+      "composite_margin": 0.055393
+    },
+    {
+      "l4_id": "RAI4-0353",
+      "label_en": "Audit log insufficiency for embodied action",
+      "old_primary_l3_id": "RAI3-P-SOC-06",
+      "old_semantic_l3_id": "RAI3-G-SOC-06",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.681351,
+      "composite_margin": 0.015689
+    },
+    {
+      "l4_id": "RAI4-0354",
+      "label_en": "Workplace surveillance through embodied AI",
+      "old_primary_l3_id": "RAI3-P-SOC-01",
+      "old_semantic_l3_id": "RAI3-G-SOC-01",
+      "new_primary_l3_id": "RAI3-G-SOC-01",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.65905,
+      "composite_margin": 0.044452
+    },
+    {
+      "l4_id": "RAI4-0355",
+      "label_en": "Embodied automation labor displacement",
+      "old_primary_l3_id": "RAI3-P-SOC-02",
+      "old_semantic_l3_id": "RAI3-G-SOC-02",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.755745,
+      "composite_margin": 0.09031
+    },
+    {
+      "l4_id": "RAI4-0373",
+      "label_en": "Cross-cultural stereotype transfer",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-04",
+      "new_primary_l3_id": "RAI3-G-SYS-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.622498,
+      "composite_margin": 0.107907
+    },
+    {
+      "l4_id": "RAI4-0382",
+      "label_en": "Dialect and register exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-01",
+      "new_primary_l3_id": "RAI3-G-SYS-01",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.61726,
+      "composite_margin": 0.02884
+    },
+    {
+      "l4_id": "RAI4-0385",
+      "label_en": "Imported AI governance mismatch",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.705435,
+      "composite_margin": 0.070433
+    },
+    {
+      "l4_id": "RAI4-0390",
+      "label_en": "Affected-community exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.675339,
+      "composite_margin": 0.032667
+    },
+    {
+      "l4_id": "RAI4-0396",
+      "label_en": "Secular default bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.659127,
+      "composite_margin": 0.027631
+    },
+    {
+      "l4_id": "RAI4-0404",
+      "label_en": "Dataset cultural sampling bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SYS-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.627592,
+      "composite_margin": 0.068483
+    },
+    {
+      "l4_id": "RAI4-0417",
+      "label_en": "Human feedback worker value bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.576195,
+      "composite_margin": 0.039236
+    },
+    {
+      "l4_id": "RAI4-0423",
+      "label_en": "Algorithmic discrimination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.794206,
+      "composite_margin": 0.04078
+    },
+    {
+      "l4_id": "RAI4-0425",
+      "label_en": "Representational stereotyping",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-INT-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.554623,
+      "composite_margin": 0.015189
+    },
+    {
+      "l4_id": "RAI4-0429",
+      "label_en": "Educational inequity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.736177,
+      "composite_margin": 0.057642
+    },
+    {
+      "l4_id": "RAI4-0430",
+      "label_en": "Low-resource language exclusion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-09",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.598047,
+      "composite_margin": 0.019162
+    },
+    {
+      "l4_id": "RAI4-0461",
+      "label_en": "Compute inequality",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-06",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.682406,
+      "composite_margin": 0.043938
+    },
+    {
+      "l4_id": "RAI4-0462",
+      "label_en": "AI energy consumption",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.779656,
+      "composite_margin": 0.163915
+    },
+    {
+      "l4_id": "RAI4-0463",
+      "label_en": "AI water and resource use",
+      "old_primary_l3_id": "RAI3-A-SYS-04",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.672998,
+      "composite_margin": 0.120461
+    },
+    {
+      "l4_id": "RAI4-0486",
+      "label_en": "AI audit failure",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.70109,
+      "composite_margin": 0.021475
+    },
+    {
+      "l4_id": "RAI4-0501",
+      "label_en": "Energy-intensive processes",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.779942,
+      "composite_margin": 0.156338
+    },
+    {
+      "l4_id": "RAI4-0502",
+      "label_en": "Environmental harm from AI lifecycle",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.851246,
+      "composite_margin": 0.237582
+    },
+    {
+      "l4_id": "RAI4-0503",
+      "label_en": "Training-compute energy intensity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.780571,
+      "composite_margin": 0.186224
+    },
+    {
+      "l4_id": "RAI4-0504",
+      "label_en": "Excessive energy consumption",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.627098,
+      "composite_margin": 0.055031
+    },
+    {
+      "l4_id": "RAI4-0520",
+      "label_en": "Labour displacement",
+      "old_primary_l3_id": "RAI3-P-SOC-02",
+      "old_semantic_l3_id": "RAI3-G-SOC-02",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "structural_or_competitive_move",
+      "direct_seed_cosine": 0.847293,
+      "composite_margin": 0.146933
+    },
+    {
+      "l4_id": "RAI4-0522",
+      "label_en": "Lack of data transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.784678,
+      "composite_margin": 0.153509
+    },
+    {
+      "l4_id": "RAI4-0523",
+      "label_en": "Lack of system transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.771198,
+      "composite_margin": 0.133696
+    },
+    {
+      "l4_id": "RAI4-0525",
+      "label_en": "Lack of training data transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-11",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.732975,
+      "composite_margin": 0.096295
+    },
+    {
+      "l4_id": "RAI4-0526",
+      "label_en": "Legal accountability",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.670275,
+      "composite_margin": 0.017402
+    },
+    {
+      "l4_id": "RAI4-0530",
+      "label_en": "AI-induced pollution",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.741834,
+      "composite_margin": 0.088402
+    },
+    {
+      "l4_id": "RAI4-0537",
+      "label_en": "Risks to the environment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.770186,
+      "composite_margin": 0.145866
+    },
+    {
+      "l4_id": "RAI4-0538",
+      "label_en": "Social cohesion and equity disruption",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.789654,
+      "composite_margin": 0.089244
+    },
+    {
+      "l4_id": "RAI4-0596",
+      "label_en": "Lack of model transparency",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.774024,
+      "composite_margin": 0.148586
+    },
+    {
+      "l4_id": "RAI4-0607",
+      "label_en": "Non-disclosure of AI-generated content",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.643493,
+      "composite_margin": 0.039076
+    },
+    {
+      "l4_id": "RAI4-0677",
+      "label_en": "Population-scale discrimination amplification",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.760441,
+      "composite_margin": 0.035938
+    },
+    {
+      "l4_id": "RAI4-0696",
+      "label_en": "Dataset-inherited discriminatory bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.627611,
+      "composite_margin": 0.053979
+    },
+    {
+      "l4_id": "RAI4-0697",
+      "label_en": "Developer value embedding bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.620638,
+      "composite_margin": 0.02924
+    },
+    {
+      "l4_id": "RAI4-0698",
+      "label_en": "Value lock-in and outcome homogenization",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-05",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.620177,
+      "composite_margin": 0.022719
+    },
+    {
+      "l4_id": "RAI4-0700",
+      "label_en": "Biased statements and recommendations",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.617184,
+      "composite_margin": 0.024977
+    },
+    {
+      "l4_id": "RAI4-0701",
+      "label_en": "Biases are not accurately reflected in explanations",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-11",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.635168,
+      "composite_margin": 0.044927
+    },
+    {
+      "l4_id": "RAI4-0702",
+      "label_en": "Biases in AI-based content moderation algorithms",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.724349,
+      "composite_margin": 0.029612
+    },
+    {
+      "l4_id": "RAI4-0706",
+      "label_en": "Protected-attribute unfair treatment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-INT-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.799877,
+      "composite_margin": 0.128631
+    },
+    {
+      "l4_id": "RAI4-0709",
+      "label_en": "Fairness - bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.769974,
+      "composite_margin": 0.043465
+    },
+    {
+      "l4_id": "RAI4-0722",
+      "label_en": "Model-design-induced discriminatory outputs",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.71848,
+      "composite_margin": 0.072587
+    },
+    {
+      "l4_id": "RAI4-0799",
+      "label_en": "Pollution of information ecosystem",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SYS-03",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.684467,
+      "composite_margin": 0.048129
+    },
+    {
+      "l4_id": "RAI4-0804",
+      "label_en": "Degraded and homogenised information environments",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SYS-03",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.605734,
+      "composite_margin": 0.038809
+    },
+    {
+      "l4_id": "RAI4-0829",
+      "label_en": "Degradation of the information environment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SYS-03",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.653072,
+      "composite_margin": 0.078776
+    },
+    {
+      "l4_id": "RAI4-0883",
+      "label_en": "Long-term effects of AI model biases on user judgment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.693644,
+      "composite_margin": 0.052034
+    },
+    {
+      "l4_id": "RAI4-0933",
+      "label_en": "Privacy and regulation violations",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-06",
+      "new_primary_l3_id": "RAI3-G-INT-06",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.57157,
+      "composite_margin": 0.038272
+    },
+    {
+      "l4_id": "RAI4-0935",
+      "label_en": "Environmental externalities of AI development",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-07",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.779276,
+      "composite_margin": 0.159651
+    },
+    {
+      "l4_id": "RAI4-0937",
+      "label_en": "Output-level unfair treatment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-INT-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.706142,
+      "composite_margin": 0.041612
+    },
+    {
+      "l4_id": "RAI4-0947",
+      "label_en": "Regulatory gap for generative AI",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.650809,
+      "composite_margin": 0.051074
+    },
+    {
+      "l4_id": "RAI4-0949",
+      "label_en": "Transparency - explainability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-11",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.719609,
+      "composite_margin": 0.116042
+    },
+    {
+      "l4_id": "RAI4-0957",
+      "label_en": "Lack of transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.700375,
+      "composite_margin": 0.054322
+    },
+    {
+      "l4_id": "RAI4-0978",
+      "label_en": "Decision making transparency",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.740718,
+      "composite_margin": 0.078878
+    },
+    {
+      "l4_id": "RAI4-0979",
+      "label_en": "Legal non-compliance by advanced AI",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-09",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.662289,
+      "composite_margin": 0.025657
+    },
+    {
+      "l4_id": "RAI4-0986",
+      "label_en": "AI jurisprudence",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.706254,
+      "composite_margin": 0.058279
+    },
+    {
+      "l4_id": "RAI4-0987",
+      "label_en": "Liability and negligence",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.657913,
+      "composite_margin": 0.029185
+    },
+    {
+      "l4_id": "RAI4-0989",
+      "label_en": "AI rights and responsibilities",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.673513,
+      "composite_margin": 0.049501
+    },
+    {
+      "l4_id": "RAI4-0996",
+      "label_en": "Critical mineral extraction burden",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-07",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.522701,
+      "composite_margin": 0.037744
+    },
+    {
+      "l4_id": "RAI4-0997",
+      "label_en": "Stereotyping social groups",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.637062,
+      "composite_margin": 0.020721
+    },
+    {
+      "l4_id": "RAI4-1012",
+      "label_en": "Hardware lifecycle resource depletion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.742002,
+      "composite_margin": 0.100467
+    },
+    {
+      "l4_id": "RAI4-1015",
+      "label_en": "Environmental and societal impact",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.68471,
+      "composite_margin": 0.05283
+    },
+    {
+      "l4_id": "RAI4-1025",
+      "label_en": "Structural inequality reinforcement",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-01",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.778574,
+      "composite_margin": 0.090914
+    },
+    {
+      "l4_id": "RAI4-1028",
+      "label_en": "Ecosystem and environment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.661692,
+      "composite_margin": 0.054319
+    },
+    {
+      "l4_id": "RAI4-1029",
+      "label_en": "Unequal treatment of like cases",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.766823,
+      "composite_margin": 0.068715
+    },
+    {
+      "l4_id": "RAI4-1033",
+      "label_en": "Degree of transparency and explainability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.811889,
+      "composite_margin": 0.136208
+    },
+    {
+      "l4_id": "RAI4-1051",
+      "label_en": "Social stereotypes and unfair discrimination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-INT-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.604807,
+      "composite_margin": 0.035459
+    },
+    {
+      "l4_id": "RAI4-1064",
+      "label_en": "Environmental harms from operating LMs",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.770158,
+      "composite_margin": 0.145167
+    },
+    {
+      "l4_id": "RAI4-1081",
+      "label_en": "Environmental harms from operation LMs",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.759337,
+      "composite_margin": 0.187862
+    },
+    {
+      "l4_id": "RAI4-1092",
+      "label_en": "Unfair distribution of benefits from model access",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.669118,
+      "composite_margin": 0.040839
+    },
+    {
+      "l4_id": "RAI4-1093",
+      "label_en": "Environmental damage",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.674795,
+      "composite_margin": 0.07406
+    },
+    {
+      "l4_id": "RAI4-1097",
+      "label_en": "Governance of autonomous intelligence systems",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.65536,
+      "composite_margin": 0.061481
+    },
+    {
+      "l4_id": "RAI4-1098",
+      "label_en": "Responsibility and accountability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.725344,
+      "composite_margin": 0.052669
+    },
+    {
+      "l4_id": "RAI4-1103",
+      "label_en": "AI discrimination",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.744483,
+      "composite_margin": 0.017189
+    },
+    {
+      "l4_id": "RAI4-1111",
+      "label_en": "Model bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.648873,
+      "composite_margin": 0.085912
+    },
+    {
+      "l4_id": "RAI4-1149",
+      "label_en": "Institutional governance gap for AI assistants",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.750047,
+      "composite_margin": 0.068044
+    },
+    {
+      "l4_id": "RAI4-1151",
+      "label_en": "Entrenchment and exacerbation of existing inequalities",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.67531,
+      "composite_margin": 0.05358
+    },
+    {
+      "l4_id": "RAI4-1195",
+      "label_en": "Lack of interpretability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.667583,
+      "composite_margin": 0.074218
+    },
+    {
+      "l4_id": "RAI4-1212",
+      "label_en": "Exacerbating climate change",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.795433,
+      "composite_margin": 0.139456
+    },
+    {
+      "l4_id": "RAI4-1215",
+      "label_en": "Devaluation of labor and heightened economic inequality",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.660172,
+      "composite_margin": 0.056781
+    },
+    {
+      "l4_id": "RAI4-1221",
+      "label_en": "Algorithmic bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.800538,
+      "composite_margin": 0.029227
+    },
+    {
+      "l4_id": "RAI4-1224",
+      "label_en": "Digital divide",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.612007,
+      "composite_margin": 0.04142
+    },
+    {
+      "l4_id": "RAI4-1226",
+      "label_en": "Lack of explainability for stakeholders",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.768387,
+      "composite_margin": 0.080154
+    },
+    {
+      "l4_id": "RAI4-1230",
+      "label_en": "Institutional governance capacity gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.743983,
+      "composite_margin": 0.078303
+    },
+    {
+      "l4_id": "RAI4-1260",
+      "label_en": "Western-centric uniformity in the AI field",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.682608,
+      "composite_margin": 0.067775
+    },
+    {
+      "l4_id": "RAI4-1266",
+      "label_en": "Fairness-violating model bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.794553,
+      "composite_margin": 0.053772
+    },
+    {
+      "l4_id": "RAI4-1267",
+      "label_en": "Transparency and explainability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.803233,
+      "composite_margin": 0.07035
+    },
+    {
+      "l4_id": "RAI4-1268",
+      "label_en": "Trust and reliability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.743244,
+      "composite_margin": 0.023697
+    },
+    {
+      "l4_id": "RAI4-1269",
+      "label_en": "Energy consumption",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.709579,
+      "composite_margin": 0.118409
+    },
+    {
+      "l4_id": "RAI4-1271",
+      "label_en": "Robustness and reliability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-07",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.682001,
+      "composite_margin": 0.028879
+    },
+    {
+      "l4_id": "RAI4-1274",
+      "label_en": "Sensitive-attribute decision bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.676557,
+      "composite_margin": 0.064002
+    },
+    {
+      "l4_id": "RAI4-1275",
+      "label_en": "Responsibility gap",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-06",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.724196,
+      "composite_margin": 0.059401
+    },
+    {
+      "l4_id": "RAI4-1278",
+      "label_en": "Accountability implementation gap in autonomous agents",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-A-SYS-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.671487,
+      "composite_margin": 0.018394
+    },
+    {
+      "l4_id": "RAI4-1290",
+      "label_en": "Increased income disparity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.706751,
+      "composite_margin": 0.096332
+    },
+    {
+      "l4_id": "RAI4-1291",
+      "label_en": "Biased influence through citizen screening and tailored propaganda",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.641882,
+      "composite_margin": 0.030483
+    },
+    {
+      "l4_id": "RAI4-1299",
+      "label_en": "Systematic learning error bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-03",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.65823,
+      "composite_margin": 0.043896
+    },
+    {
+      "l4_id": "RAI4-1300",
+      "label_en": "Model opacity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.715124,
+      "composite_margin": 0.040403
+    },
+    {
+      "l4_id": "RAI4-1309",
+      "label_en": "Demographic representation disparity",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-04",
+      "new_primary_l3_id": "RAI3-G-INT-04",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.610787,
+      "composite_margin": 0.033426
+    },
+    {
+      "l4_id": "RAI4-1313",
+      "label_en": "Data governance",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-11",
+      "new_primary_l3_id": "RAI3-G-INT-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.604759,
+      "composite_margin": 0.036329
+    },
+    {
+      "l4_id": "RAI4-1331",
+      "label_en": "Model explainability deficits",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-11",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.693017,
+      "composite_margin": 0.061185
+    },
+    {
+      "l4_id": "RAI4-1344",
+      "label_en": "Prejudice amplification at societal scale",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.720041,
+      "composite_margin": 0.055341
+    },
+    {
+      "l4_id": "RAI4-1352",
+      "label_en": "Black-box model opacity",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-02",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.649908,
+      "composite_margin": 0.064777
+    },
+    {
+      "l4_id": "RAI4-1372",
+      "label_en": "Labor-market inequality amplification",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.749093,
+      "composite_margin": 0.072845
+    },
+    {
+      "l4_id": "RAI4-1373",
+      "label_en": "AI energy consumption cost",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.72324,
+      "composite_margin": 0.161745
+    },
+    {
+      "l4_id": "RAI4-1374",
+      "label_en": "Water consumption footprint",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-08",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.656668,
+      "composite_margin": 0.146159
+    },
+    {
+      "l4_id": "RAI4-1384",
+      "label_en": "Lack of intelligibility",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-07",
+      "new_primary_l3_id": "RAI3-A-SYS-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.620619,
+      "composite_margin": 0.021909
+    },
+    {
+      "l4_id": "RAI4-1394",
+      "label_en": "Economic power centralisation and inequality",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.711471,
+      "composite_margin": 0.059147
+    },
+    {
+      "l4_id": "RAI4-1405",
+      "label_en": "Environmental cost",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-05",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.70532,
+      "composite_margin": 0.156277
+    },
+    {
+      "l4_id": "RAI4-1416",
+      "label_en": "Faster scientific progress makes it harder for governance to keep pace with development",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-07",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.624877,
+      "composite_margin": 0.046918
+    },
+    {
+      "l4_id": "RAI4-1420",
+      "label_en": "AI-based automation increases income inequality",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-SOC-02",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.691766,
+      "composite_margin": 0.086541
+    },
+    {
+      "l4_id": "RAI4-1429",
+      "label_en": "Lack of transparency and interpretability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.727412,
+      "composite_margin": 0.099867
+    },
+    {
+      "l4_id": "RAI4-1453",
+      "label_en": "Carbon emissions",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.623021,
+      "composite_margin": 0.10747
+    },
+    {
+      "l4_id": "RAI4-1456",
+      "label_en": "Excessive water consumption",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-01",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.587592,
+      "composite_margin": 0.059345
+    },
+    {
+      "l4_id": "RAI4-1457",
+      "label_en": "Natural resource depletion",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-07",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.611747,
+      "composite_margin": 0.049393
+    },
+    {
+      "l4_id": "RAI4-1462",
+      "label_en": "Inappropriate degree of transparency to end users",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.792543,
+      "composite_margin": 0.075196
+    },
+    {
+      "l4_id": "RAI4-1473",
+      "label_en": "Opacity-impeded model debugging",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.752518,
+      "composite_margin": 0.095526
+    },
+    {
+      "l4_id": "RAI4-1501",
+      "label_en": "Self-preference bias in model evaluation",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.666882,
+      "composite_margin": 0.064836
+    },
+    {
+      "l4_id": "RAI4-1503",
+      "label_en": "Biased evaluation of encoded values",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.667116,
+      "composite_margin": 0.04819
+    },
+    {
+      "l4_id": "RAI4-1568",
+      "label_en": "High energy consumption of large models",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.707624,
+      "composite_margin": 0.16132
+    },
+    {
+      "l4_id": "RAI4-1600",
+      "label_en": "Unexplainable output",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.623833,
+      "composite_margin": 0.019341
+    },
+    {
+      "l4_id": "RAI4-1601",
+      "label_en": "Unreliable source attribution",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.655129,
+      "composite_margin": 0.028126
+    },
+    {
+      "l4_id": "RAI4-1604",
+      "label_en": "Impact on the environment",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-04",
+      "new_primary_l3_id": "RAI3-G-INT-12",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.79586,
+      "composite_margin": 0.20065
+    },
+    {
+      "l4_id": "RAI4-1611",
+      "label_en": "Group representation fairness harms",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.76928,
+      "composite_margin": 0.056087
+    },
+    {
+      "l4_id": "RAI4-1624",
+      "label_en": "Personal data exposure liability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-06",
+      "new_primary_l3_id": "RAI3-G-INT-06",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.65328,
+      "composite_margin": 0.054634
+    },
+    {
+      "l4_id": "RAI4-1663",
+      "label_en": "Corporate power may impeded effective governance",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-06",
+      "new_primary_l3_id": "RAI3-G-SOC-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.658538,
+      "composite_margin": 0.042142
+    },
+    {
+      "l4_id": "RAI4-1700",
+      "label_en": "Scalable oversight failure",
+      "old_primary_l3_id": "RAI3-A-HLD-01",
+      "old_semantic_l3_id": "RAI3-A-SYS-06",
+      "new_primary_l3_id": "RAI3-A-SYS-01",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.673125,
+      "composite_margin": 0.028068
+    },
+    {
+      "l4_id": "RAI4-1713",
+      "label_en": "Bias and differential treatment",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-INT-10",
+      "new_primary_l3_id": "RAI3-G-SOC-11",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.79202,
+      "composite_margin": 0.068207
+    },
+    {
+      "l4_id": "RAI4-1720",
+      "label_en": "Unaccountable opaque system operation",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.784844,
+      "composite_margin": 0.046
+    },
+    {
+      "l4_id": "RAI4-1721",
+      "label_en": "Lack of explainability and interpretability",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-09",
+      "new_primary_l3_id": "RAI3-G-SYS-10",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.756613,
+      "composite_margin": 0.06056
+    },
+    {
+      "l4_id": "RAI4-1723",
+      "label_en": "Systemic computational and institutional bias",
+      "old_primary_l3_id": "RAI3-G-HLD-01",
+      "old_semantic_l3_id": "RAI3-G-SYS-08",
+      "new_primary_l3_id": "RAI3-G-SOC-05",
+      "change_type": "hold_released",
+      "direct_seed_cosine": 0.763089,
+      "composite_margin": 0.022739
+    }
+  ],
+  "remaining_hold": [
+    {
+      "l4_id": "RAI4-0001",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0002",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0003",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0004",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0008",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0009",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0011",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0014",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0018",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0021",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0027",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0028",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0029",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0030",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0031",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0033",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0034",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0037",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0041",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0042",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0045",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0047",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0049",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.649082,
+      "composite_margin": 0.002936
+    },
+    {
+      "l4_id": "RAI4-0053",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0059",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": 0.600101,
+      "composite_margin": 0.002345
+    },
+    {
+      "l4_id": "RAI4-0061",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": 0.635265,
+      "composite_margin": 0.001217
+    },
+    {
+      "l4_id": "RAI4-0063",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-10",
+      "direct_seed_cosine": 0.669058,
+      "composite_margin": 0.006112
+    },
+    {
+      "l4_id": "RAI4-0064",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.650613,
+      "composite_margin": 0.005769
+    },
+    {
+      "l4_id": "RAI4-0068",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0070",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0079",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0080",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0081",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0084",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0089",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0090",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0099",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0104",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0112",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0114",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0116",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0117",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0119",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0120",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0122",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0123",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0128",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0129",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0132",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0133",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0134",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0135",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0136",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0137",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0138",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0139",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0145",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0146",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0148",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0149",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0150",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0151",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0152",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0153",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0154",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0155",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0158",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0159",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0161",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0165",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0167",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0172",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0173",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0174",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0175",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0177",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0179",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0362",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0363",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0364",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0365",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0368",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0369",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0370",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0372",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0374",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0375",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0378",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0379",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0380",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0381",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0383",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0384",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0386",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0387",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0388",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0391",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0392",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0393",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0395",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0397",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0398",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0400",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0401",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0403",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": 0.629142,
+      "composite_margin": 0.008408
+    },
+    {
+      "l4_id": "RAI4-0406",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0407",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0408",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0409",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.612376,
+      "composite_margin": 0.006744
+    },
+    {
+      "l4_id": "RAI4-0410",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0411",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0412",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0413",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0414",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0415",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0416",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0418",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0419",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0420",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0435",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0436",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0439",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0441",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0444",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0447",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0448",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0449",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0450",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0451",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0452",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0454",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0455",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0457",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0458",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0459",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0460",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0464",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0466",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0468",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0471",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0472",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0473",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0478",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0479",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0480",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0481",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0484",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0487",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-10",
+      "direct_seed_cosine": 0.688292,
+      "composite_margin": 0.009514
+    },
+    {
+      "l4_id": "RAI4-0489",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0490",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0491",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0492",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0493",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0497",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0498",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0499",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0510",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0511",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": 0.631015,
+      "composite_margin": 0.005934
+    },
+    {
+      "l4_id": "RAI4-0513",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0514",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0518",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0521",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0527",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0528",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0535",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0536",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0542",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0544",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0545",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0552",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0568",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0569",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0571",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0572",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0573",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0580",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0581",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0582",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0586",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0587",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0588",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0591",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0592",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0593",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0602",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0609",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0611",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0612",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0613",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0614",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0615",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0618",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0619",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0620",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0621",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0622",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0623",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0625",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0627",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0633",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0634",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0635",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0636",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0639",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0643",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0647",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0648",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0650",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0651",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0656",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0658",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0660",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0661",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0662",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0664",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0666",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0668",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0669",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0681",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0690",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0693",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0704",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0705",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0710",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0712",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0718",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0720",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-11",
+      "direct_seed_cosine": 0.637628,
+      "composite_margin": 0.005921
+    },
+    {
+      "l4_id": "RAI4-0721",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0739",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0742",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0743",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0744",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0745",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0747",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0750",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0753",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0755",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0758",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0764",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0765",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0766",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0768",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0769",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0770",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": 0.598704,
+      "composite_margin": 0.011141
+    },
+    {
+      "l4_id": "RAI4-0772",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0773",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0774",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0775",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0776",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0778",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0779",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0783",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0786",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0788",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0791",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0798",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0800",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0802",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0805",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0806",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0807",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0809",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0810",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0815",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0816",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0817",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0821",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0823",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0825",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0833",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0836",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0837",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0841",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0842",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0843",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0844",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0845",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0846",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0848",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0851",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0852",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0858",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0860",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0865",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0868",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0871",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0872",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0874",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0876",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0879",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0880",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0881",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0884",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0885",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0887",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0889",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0890",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0891",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0893",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0894",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0899",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0901",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0902",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0903",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": 0.657839,
+      "composite_margin": 0.006333
+    },
+    {
+      "l4_id": "RAI4-0904",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0905",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0906",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0907",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0909",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0911",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0913",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0916",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0918",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0919",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0921",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0923",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0925",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0926",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0927",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0931",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0936",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0938",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0942",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0943",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0944",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0945",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0948",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0951",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0952",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0953",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0960",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0963",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0965",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0966",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0970",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0977",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0981",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0985",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0990",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0991",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0995",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-0999",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": 0.630753,
+      "composite_margin": 0.000561
+    },
+    {
+      "l4_id": "RAI4-1004",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1005",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1007",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1008",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1010",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1011",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1013",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1014",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1016",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1017",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1019",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1024",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1027",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1032",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1037",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1039",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1041",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1042",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1043",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1044",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1050",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1052",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1056",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1066",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1068",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1085",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1088",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1090",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1091",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1094",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": 0.619919,
+      "composite_margin": 0.010528
+    },
+    {
+      "l4_id": "RAI4-1095",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1096",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1100",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1102",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1104",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1105",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1106",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1109",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1110",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1116",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1117",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1122",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1124",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1127",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1128",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1130",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1133",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1135",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1140",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1141",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": 0.657783,
+      "composite_margin": 0.010178
+    },
+    {
+      "l4_id": "RAI4-1143",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1155",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1156",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1158",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1160",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1161",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1162",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1176",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1177",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1178",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-04",
+      "direct_seed_cosine": 0.628073,
+      "composite_margin": 0.012343
+    },
+    {
+      "l4_id": "RAI4-1182",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1183",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1185",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1192",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1193",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1197",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1198",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1203",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1205",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1206",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1209",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1213",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1214",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1217",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1220",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1225",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1231",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1232",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1233",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-11",
+      "direct_seed_cosine": 0.687411,
+      "composite_margin": 0.009794
+    },
+    {
+      "l4_id": "RAI4-1234",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1236",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1238",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1239",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1245",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1247",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1249",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1253",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1255",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1256",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1257",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1258",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1259",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1261",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1263",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1264",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.703704,
+      "composite_margin": 0.013924
+    },
+    {
+      "l4_id": "RAI4-1265",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1270",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1279",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1280",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1281",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1284",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1287",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-INT-12",
+      "direct_seed_cosine": 0.629878,
+      "composite_margin": -0.016563
+    },
+    {
+      "l4_id": "RAI4-1288",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1289",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1292",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.659441,
+      "composite_margin": 0.000981
+    },
+    {
+      "l4_id": "RAI4-1293",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1295",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1296",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-10",
+      "direct_seed_cosine": 0.741433,
+      "composite_margin": -0.004464
+    },
+    {
+      "l4_id": "RAI4-1302",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1306",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1308",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1310",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1311",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1314",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1316",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1317",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1320",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1323",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1327",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1328",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1332",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1333",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1334",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1337",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1339",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1342",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1345",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1346",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1347",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1349",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1350",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1354",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1358",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1361",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1362",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1369",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1370",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1371",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1375",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1379",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1382",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1383",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1389",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SOC-11",
+      "direct_seed_cosine": 0.705539,
+      "composite_margin": 0.002956
+    },
+    {
+      "l4_id": "RAI4-1390",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1391",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1395",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1397",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1398",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1399",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1401",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1408",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1413",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1414",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1421",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1423",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1424",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1428",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1431",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1433",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1434",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1447",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1450",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1458",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1464",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1465",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1466",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1468",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1469",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1470",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1471",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1476",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1477",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1479",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1480",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1481",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": 0.633752,
+      "composite_margin": 0.011627
+    },
+    {
+      "l4_id": "RAI4-1484",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1487",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1488",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1489",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1490",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1494",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1496",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1497",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1498",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1500",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1502",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1504",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1505",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1506",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1507",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1509",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1512",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": 0.624984,
+      "composite_margin": 0.013007
+    },
+    {
+      "l4_id": "RAI4-1513",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-10",
+      "direct_seed_cosine": 0.630132,
+      "composite_margin": 0.009857
+    },
+    {
+      "l4_id": "RAI4-1514",
+      "reason": "release_threshold_not_met",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": 0.676213,
+      "composite_margin": 0.010952
+    },
+    {
+      "l4_id": "RAI4-1515",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1516",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1517",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1521",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1527",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1530",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1534",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1537",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1540",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1543",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1544",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1545",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1550",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1551",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1552",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1560",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1579",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1580",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1581",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1583",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1588",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1596",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1598",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1599",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1603",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1609",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1612",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1614",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1615",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1616",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1617",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1618",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1627",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1629",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1630",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1631",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1636",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1638",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1639",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1642",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1644",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1650",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1652",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1653",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1656",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1657",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1658",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1664",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1667",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1669",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-01",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1670",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1674",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1675",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1676",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1677",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1683",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1687",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1689",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1690",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-11",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1691",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1692",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-05",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1693",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1694",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1696",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1697",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1701",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-07",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1702",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1704",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1705",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1706",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-A-SYS-04",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1710",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-08",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1712",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-02",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1715",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1716",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-10",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1717",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1719",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-SYS-09",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1722",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-06",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    },
+    {
+      "l4_id": "RAI4-1724",
+      "reason": "outside_extension_scope",
+      "winner_l3_id": "RAI3-G-INT-03",
+      "direct_seed_cosine": null,
+      "composite_margin": null
+    }
+  ],
+  "physical_master_sync": {
+    "date": "2026-07-31",
+    "cards_synced": 182,
+    "approved_l3_moves": [
+      {
+        "physical_source_card_id": "PHYSBENCH-REF-0065",
+        "rai_l4_id": "RAI4-0244",
+        "from_l3_id": "RAI3-P-INT-07",
+        "to_l3_id": "RAI3-P-SYS-02"
+      },
+      {
+        "physical_source_card_id": "PHYSBENCH-REF-0107",
+        "rai_l4_id": "RAI4-0286",
+        "from_l3_id": "RAI3-P-INT-06",
+        "to_l3_id": "RAI3-G-SOC-06"
+      }
+    ],
+    "scope": "Authoritative Physical AI wording, definitions, and approved L3 paths synchronized by physical_source_card_id."
+  }
+}

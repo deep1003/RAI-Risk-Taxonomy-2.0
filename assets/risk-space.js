@@ -1,5 +1,5 @@
-const DATA_URL = "./public/data/releases/v2.17.2/risk_space.json";
-const NETWORK_URL = "./public/data/releases/v2.17.2/semantic_proximity_network.json";
+const DATA_URL = "./public/data/releases/v2.18.0-rc/risk_space.json";
+const NETWORK_URL = "./public/data/releases/v2.18.0-rc/semantic_proximity_network.json";
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 const state = {
@@ -45,7 +45,7 @@ const els = {
 };
 
 const MODE_TEXT = {
-  community: "Color shows 50 EM communities; node size shows the number of meaningful L3 affiliations.",
+  community: "Color shows 54 EM communities; node size shows the number of meaningful L3 affiliations.",
   hold: "HOLD cards are pale gray; other nodes remain lightly colored by community.",
   attractor: "The selected card's released L3 family is highlighted.",
   path: "Select a start card and a target card to trace the shortest semantic-distance path.",

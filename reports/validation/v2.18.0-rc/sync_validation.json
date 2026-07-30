@@ -1,0 +1,70 @@
+{
+  "release_id": "v2.18.0-rc",
+  "validated_at": "2026-07-25",
+  "scope": [
+    "release data",
+    "taxonomy explorer",
+    "semantic space",
+    "HOLD sensitivity outputs",
+    "English Technical Report",
+    "Korean Technical Report"
+  ],
+  "counts": {
+    "registered_ids": 1711,
+    "active_cards": 1660,
+    "retired_cards": 51,
+    "hold_active": 614,
+    "semantic_l2": 3,
+    "semantic_l3": 54,
+    "l3_by_domain": {
+      "general": 33,
+      "agentic": 6,
+      "physical": 15
+    },
+    "semantic_space_nodes": 1660,
+    "semantic_space_edges": 11851,
+    "semantic_space_clusters": 54
+  },
+  "sensitivity": {
+    "hold_included": {
+      "cards": 1660,
+      "em_iterations": 20,
+      "em_final_objective": 0.8005,
+      "top1_containment": 71.9,
+      "noise_stability_sigma_0.05": 75.0
+    },
+    "hold_excluded": {
+      "cards": 1046,
+      "em_iterations": 12,
+      "em_final_objective": 0.8026,
+      "top1_containment": 81.6,
+      "noise_stability_sigma_0.05": 80.7
+    }
+  },
+  "checks": {
+    "unit_tests": "6 passed",
+    "taxonomy_browser_smoke": "passed",
+    "semantic_space_smoke": "passed",
+    "browser_console_errors": 0,
+    "english_pdf_pages": 7,
+    "korean_pdf_pages": 4,
+    "pdf_visual_review": "passed"
+  },
+  "sha256": {
+    "cards.json": "dff3f3269a1ed8575f409923ca0c3db1aca14931259b567abeefa12da2229acf",
+    "hierarchy.json": "76156ee383cbbf84870989f2036f0a1de6f031308fd0b9f9d5f4b821f0450050",
+    "manifest.json": "b9485d9961d7549b2a2ae0dd963bdbee6c4e8e1303396a3a375dd1d542542aaf",
+    "risk_space.json": "2078c89b72a27b906aa0c2cce7fec52b7c440fab81eb196253404331ce7f422e",
+    "semantic_proximity_network.json": "cca46c8d66d1a58d4046608ab5a27bb7f2de6cb2ec4d2f7dd026c453b70cba79",
+    "sensitivity_results.json": "9d0c0e5732bb15cc7c642a3fdb8d7e55fc86bbf219224b7afd8463cac1e533b2",
+    "release_sensitivity_figure.pdf": "52bd6bd078f1daa501813975e9f2ea0b9ec4c833b3ca577db58e7ad0d786ca42",
+    "technical_report_en.pdf": "269853bb9a0d5ea14275dfbe24433b30b8d6659f5eb93a41488397eafdb81736",
+    "technical_report_ko.pdf": "fea9fcd9a7040e388cf1bc11e476e499748ca7f40de08ab4e294665607476a73"
+  },
+  "publication": {
+    "local_files_synchronized": true,
+    "committed": false,
+    "pushed": false,
+    "online_deployed": false
+  }
+}

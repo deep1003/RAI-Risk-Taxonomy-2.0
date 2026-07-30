@@ -1,0 +1,638 @@
+\documentclass[fleqn,10pt]{wlscirep}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\title{Semantic network structure of an AI risk taxonomy reveals loss-of-control concepts as connector hubs}
+
+\author[1,2,*]{Youngsam Chun}
+
+\affil[1]{Adjunct Professor, Ulsan National Institute of Science and Technology (UNIST), Ulsan, Republic of Korea}
+\affil[2]{Frontier AI Lab, KT Corporation, Seoul, Republic of Korea}
+\affil[*]{deep1003@snu.ac.kr; ORCID: \href{https://orcid.org/0000-0002-6877-6230}{0000-0002-6877-6230}}
+
+\keywords{AI risk taxonomy, semantic network, complex networks, expectation--maximization, loss of control, responsible AI}
+
+\begin{document}
+
+\sloppy
+\raggedbottom
+
+\begin{abstract}
+Operational AI risk taxonomies are trees, although risk meanings overlap
+across category boundaries. We analyse the
+semantic space of a large taxonomy: 1,660 active level-4 risk
+cards distilled via a documented evidence chain from 3,906,767 research,
+policy, and patent records. Two expectation--maximization
+procedures structure the space: a constrained-EM audit stabilizing category
+assignment, and a graph-regularized seeded spherical EM partitioning the
+card network into 50 communities. In the released network, 27.7\% of cards
+belong meaningfully to two or more level-3 families---the first
+quantification of what a single-parent tree discards. To measure connectivity as a
+property of the risks themselves, we rebuild the network as a
+similarity-threshold graph with no nearest-neighbour floor. Degree heterogeneity is substantial (Gini
+0.50), yet formal tests reject a power-law tail. The semantic
+core is dominated by concepts of eroding human control and miscalibrated
+trust---automation bias, overreliance, delegation to misaligned agents,
+collectively inefficient multi-agent equilibria---which rank highest across
+thresholds, connect over 40 of 50 communities, and are far more likely to
+be under taxonomy review. This centrality is a structural property of
+system-level risk concepts, with implications for taxonomy design and
+review prioritization.
+\end{abstract}
+
+\maketitle
+
+% =====================================================================
+\section*{Introduction}
+
+Organizations that build or govern AI systems increasingly rely on structured
+risk taxonomies to inventory what can go wrong. Public efforts include
+harm taxonomies for language models\cite{weidinger2022}, the MIT AI Risk
+Repository, which consolidates hundreds of risks from dozens of source
+frameworks\cite{slattery2024}, surveys of catastrophic AI
+risks\cite{hendrycks2023}, and governance frameworks such as the NIST AI Risk
+Management Framework\cite{nist2023} and the OECD classification of AI
+systems\cite{oecd2022}. In operational practice these taxonomies share one
+structural commitment: they are trees. Every leaf-level risk is filed under
+exactly one parent category, because single-parent hierarchies are easy to
+audit, assign ownership over, and keep consistent across releases.
+
+Risks, however, are not defined by their position in a tree. They are defined
+by natural-language descriptions of failure mechanisms, and the semantics of
+those descriptions overlap freely across category boundaries. A card about
+AI-generated scams is simultaneously about fraud, misinformation, and
+manipulation; a card about loss of human oversight touches nearly every
+operational category. A single-parent hierarchy must pick one shelf for each
+such concept and silently discard the rest of its meaning. How much is
+discarded, and which concepts sit where the discarding is most severe, has to
+our knowledge not been quantified for a production AI risk taxonomy.
+
+Here we treat a large operational taxonomy---the KT RAI Risk Taxonomy 2.0,
+release v2.17.2---as an empirical semantic system and study it with the tools
+of network science\cite{newman2018}. The taxonomy's 1,660 active level-4 (L4)
+risk cards descend, through a documented and reproducible evidence chain, from
+3,906,767 research papers, policy reports, and patents. Each card carries a
+bilingual mechanism definition, and the released pipeline embeds these
+definitions\cite{chen2024bgem3}, links each card to its nearest semantic
+neighbours, and partitions the resulting proximity network into semantic
+communities.
+
+This paper makes three contributions. First, we describe the two
+expectation--maximization (EM) procedures\cite{dempster1977} that give the
+taxonomy its semantic structure: a \emph{constrained-EM audit} used during
+construction to test and stabilize category assignments under explicit
+guards, and a \emph{graph-regularized seeded spherical EM}\cite{banerjee2005}
+used to detect communities in the proximity network while respecting both
+embedding geometry and network topology. Second, we characterize the semantic
+proximity network itself and quantify cross-category overlap: 459 cards
+(27.7\%) carry non-trivial responsibility in two or more level-3 (L3)
+families, which is precisely the information a single-parent tree cannot
+represent. Third, we characterize the connectivity of the risk space as a
+property of the risks themselves rather than of any particular graph
+construction: because the released union-$k$NN network imposes a degree
+floor and suppresses hubs, we recompute the card embeddings and rebuild the
+network as a similarity-threshold graph with no floor, subject the resulting
+degree distribution to formal tail diagnostics\cite{clauset2009,broido2019},
+and show that its semantic core is dominated by concepts of eroding human
+control and miscalibrated trust. We explain why such system-level concepts
+must occupy the centre of any sufficiently comprehensive AI risk space,
+connecting an empirical observation about taxonomy structure to theoretical
+arguments about gradual human disempowerment\cite{russell2019,bengio2024,
+kulveit2025}.
+
+Throughout, we report what the tail statistics actually support: the degree
+distribution is strongly heterogeneous but likelihood-ratio tests reject a
+power-law tail, so we make no scale-free claim\cite{clauset2009,broido2019}.
+And we treat semantic proximity as a statement about meaning, not about
+causal transmission between risks\cite{helbing2013}: the network records
+which failure descriptions resemble one another, not which failures cause
+one another.
+
+% =====================================================================
+\section*{Results}
+
+\subsection*{An evidence-grounded risk registry}
+
+The analysed release (v2.17.2) rests on a five-step distillation
+(Methods). An integrated AI evidence space of 3,906,767 records (1,749,159
+papers, 125,372 policy reports, 2,032,236 patents) is filtered to a
+source-governed AI-risk evidence view of 82,971 records. Joining source risk
+identifiers and reviewing redundancy yields 1,726 candidate L4 rows;
+exact-label deduplication and removal of taxonomy-level leakage yield 1,711
+canonical cards with permanent identifiers; retiring merged records leaves
+1,660 active cards, each carrying a mechanism-level bilingual definition and
+its evidence references. All 1,660 active cards are assigned to one of the
+taxonomy's L3 families, with 765 cards (46.1\%) additionally carrying a HOLD
+marker indicating that the assignment is operationally usable but queued for
+further human review. Card-level scalar attributes such as estimated severity
+or probability exist in the registry but are intentionally excluded from all
+analyses reported here, because they are editorial estimates rather than
+measured quantities.
+
+\subsection*{The semantic proximity network}
+
+Embedding each card's bilingual mechanism definition with BGE-M3 and linking
+mutual nearest neighbours (base $k=8$, minimum cosine similarity 0.62,
+projected union-$k$NN $k=10$; edge weight mixes an L3-profile similarity with
+direct cosine similarity at 0.65/0.35; Methods) produces a network of 1,660
+nodes and 11,869 edges. The network is a single connected component with
+density 0.0086, mean degree 14.30 (median 13), maximum degree 41, average
+clustering coefficient 0.333, and slightly positive degree assortativity
+($+0.093$). Figure~\ref{fig:map} shows the network in its released
+ForceAtlas2 layout\cite{jacomy2014}. This released network defines the
+taxonomy's community structure and visual layout; because its union-$k$NN
+construction guarantees every node ten projected neighbours and truncates
+each node's outgoing choices, we use a separate construction-free network,
+introduced below, for all degree and centrality analysis.
+
+The graph-regularized seeded spherical EM partitions the network into 50
+semantic communities (sizes 2--140, median 25), each seeded by an L3-family
+centroid but free to reorganize cards across family boundaries
+(Methods). The largest communities are Weaponization (140 cards), Policy
+Exposure (114), Non-Contestability (90), Anthropomorphism (71), and
+Misinformation/Disinformation (68). The EM converged in 16 iterations to a
+mean within-community cosine similarity of 0.751.
+
+\subsection*{Quantifying what a tree discards}
+
+For every card we compute a responsibility distribution over L3 families from
+its neighbourhood structure (Methods). At a responsibility threshold of
+0.03, 459 of 1,660 cards (27.7\%) belong appreciably to two or more
+families, and individual cards reach up to eight family affiliations. In
+other words, more than a quarter of the taxonomy's leaf concepts are
+multi-parent concepts being stored in a single-parent data structure. This is,
+to our knowledge, the first direct quantification of the representational
+loss imposed by tree-shaped AI risk taxonomies, and it identifies exactly
+which cards would benefit from an explicit multi-label extension.
+
+Cross-community membership is the norm rather than the exception at the
+level of neighbourhoods as well: in the construction-free network
+introduced below, the median participation coefficient\cite{guimera2005}
+across all cards is 0.880, meaning that a typical card's semantic
+neighbours are spread over many communities.
+
+\subsection*{Degree structure without construction artifacts}
+
+Degree in the released network is not a clean property of the risks: the
+union-$k$NN construction imposes a hard floor at $k=10$ and truncates every
+node's outgoing choices, compressing heterogeneity (Gini 0.153) and
+suppressing hubs. To measure connectivity as a characteristic of the risk
+concepts themselves, we recompute the BGE-M3 embeddings of all 1,660 cards
+(reproduction fidelity against the released edge similarities: $r=0.980$,
+mean absolute error 0.014; Methods) and build a similarity-threshold graph:
+two cards are linked if and only if their cosine similarity is at least
+$\theta$, with no neighbour count imposed anywhere. At the pipeline's own
+minimum-similarity value $\theta=0.62$ this yields 90,848 edges, mean degree
+109.5 (median 69), maximum degree 554, five isolates, a giant component of
+1,655 nodes, clustering 0.432, and assortativity $+0.197$.
+
+Freed from the floor, the degree distribution is strongly heterogeneous:
+the Gini coefficient more than triples to 0.504, the maximum degree is
+eight times the median, and 162 cards (9.8\%) exceed four times the median
+(Fig.~\ref{fig:structure}a). Heterogeneity is not an artifact of the
+specific threshold: across $\theta \in [0.55, 0.70]$ the Gini coefficient
+rises monotonically from 0.33 to 0.58 while degree rankings remain stable
+(Spearman $\rho = 0.89$ between $\theta=0.62$ and $\theta=0.68$; $\rho =
+0.94$ against the fully threshold-free strength $\sum_j s_{ij}$;
+Fig.~\ref{fig:structure}b). Formal tail diagnostics, however, reject a
+power law: likelihood-ratio tests\cite{clauset2009} favour lognormal and
+exponential alternatives over a power-law tail (all $p<0.001$), consistent
+with the observation that genuinely scale-free networks are
+rare\cite{broido2019}. The risk space is therefore best described as
+broadly---but not scale-freely---heterogeneous: a substantial semantic core
+of highly connected concepts over a large periphery of specific mechanisms.
+
+\subsection*{Concepts of eroding human control dominate the semantic core}
+
+Table~\ref{tab:hubs} lists the ten highest-degree cards of the
+construction-free network. The single most-connected concept in the entire
+risk space is RAI4-0592, ``Collectively inefficient equilibria among AI
+agents'' ($k=554$), and its rank is robust: it is first at every threshold
+from 0.60 to 0.65 and second at 0.68. More broadly, the top of the ranking
+interleaves two kinds of concepts: system-level erosion of human control
+and trust---automation bias (rank 2), delegation of decision-making power
+to misaligned AIs, misaligned rogue behaviour, overreliance undermining
+user autonomy, anthropomorphic overtrust, miscalibrated trust, loss of
+human agency and autonomy---and broad misuse and integrity concepts (abuse
+and misuse, systemic bias, misinformation dissemination, insufficient
+security). Coding the 30 highest-degree cards by mechanism, 16 of 30
+describe the erosion of human control, autonomy, or calibrated trust over
+AI systems. The loss-of-control theme is thus not carried by a single
+labelled card but saturates the semantic core, and it sharpens as the
+threshold tightens: at $\theta=0.68$, overreliance (RAI4-1552) ranks first
+and loss of human agency (RAI4-0894) fifth.
+
+Transparency requires noting what changed relative to the released
+construction: RAI4-1616 (``Future AI systems might actively reduce human
+control''), the highest-degree node of the union-$k$NN network, ranks 58th
+(top 3.5\%) in the construction-free graph
+(Fig.~\ref{fig:structure}d)---its former first place partly reflected
+mutual-selection dynamics of the $k$NN projection rather than raw semantic
+reach. The thematic conclusion survives the correction; the specific
+figurehead does not, which is precisely why the construction-free analysis
+matters.
+
+These hubs are connectors, not local centres. The four highest-ranked
+control-erosion cards have participation coefficients\cite{guimera2005} of
+0.92--0.94 and neighbourhoods spanning 42--47 of the 50 communities;
+top-decile hubs generally sit at the 87th--100th percentiles of $P$. In the
+role terminology of Guimer\`a and Amaral, the semantic core of the taxonomy
+is built from connector hubs: concepts whose neighbours are distributed
+across many communities rather than concentrated in their own.
+
+HOLD status rises monotonically with degree: 63.5\% of cards in the top
+degree decile carry HOLD markers versus 44.1\% of the remainder, against an
+overall rate of 46.1\% (Fig.~\ref{fig:structure}c). We interpret this not
+as a defect of the hub cards but as a structural signal: cards whose
+meaning spans many families are precisely the cards for which a single
+released parent is hardest to defend, and the review process detects this.
+
+\begin{table}[ht]
+\centering
+\caption{The ten highest-degree L4 risk cards in the construction-free
+similarity-threshold network ($\theta=0.62$, release v2.17.2 card set).
+$k$: degree; $s$: strength (summed similarity weight); community: EM
+community of the card in the released network; $P$: participation
+coefficient (percentile in parentheses); review: HOLD marks cards queued
+for taxonomy review. Cards marked $\dagger$ describe erosion of human
+control, autonomy, or calibrated trust.}
+\label{tab:hubs}
+\small
+\begin{tabular}{llrrlrl}
+\toprule
+ID & Label (abbreviated) & $k$ & $s$ & Community & $P$ & review \\
+\midrule
+RAI4-0592$^\dagger$ & Collectively inefficient equilibria among AI agents & 554 & 366 & Conflict & 0.94 (96) & HOLD \\
+RAI4-1482$^\dagger$ & Automation bias & 527 & 349 & Non-Contestability & 0.94 (97) & --- \\
+RAI4-1013 & Abuse and misuse & 523 & 347 & Weaponization & 0.93 (89) & HOLD \\
+RAI4-1566 & Systemic bias across specific communities & 499 & 328 & Hate and Unfairness & 0.94 (96) & --- \\
+RAI4-0844 & Disseminating false or misleading information & 494 & 327 & Misinf./Disinf. & 0.94 (99) & HOLD \\
+RAI4-1186 & Insufficient security measures & 489 & 319 & Weaponization & 0.93 (87) & --- \\
+RAI4-1038 & Misapplication of AI & 487 & 321 & Goal Misalignment & 0.95 (99) & --- \\
+RAI4-1425$^\dagger$ & Delegating decision-making power to misaligned AIs & 487 & 322 & Goal Misalignment & 0.93 (92) & --- \\
+RAI4-0565$^\dagger$ & Misaligned rogue AI behavior & 485 & 318 & Goal Misalignment & 0.95 (100) & --- \\
+RAI4-1719 & Lack of security and resilience & 485 & 319 & Non-Contestability & 0.93 (93) & HOLD \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/fig1_network_map.pdf}
+\caption{\textbf{The semantic proximity network of 1,660 active L4 risk
+cards.} Nodes are risk cards positioned by the released ForceAtlas2 layout;
+node area scales with construction-free degree (similarity-threshold graph,
+$\theta=0.62$); colours mark the ten largest of the 50 EM-detected semantic
+communities (legend, with sizes), and grey marks the remaining 40. Edges of
+the released union-$k$NN network (11,869) are drawn in light grey. Black
+rings and italic labels mark four of the highest-ranked control-erosion
+hubs (RAI4-0592, RAI4-1482, RAI4-1552, RAI4-0894), which sit in different
+communities and regions of the space, consistent with their role as
+cross-community connectors. Bold labels mark the centroids of the five
+largest communities. The layout is used for display only; no analysis in
+this paper depends on layout coordinates.}
+\label{fig:map}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/fig2_structure.pdf}
+\caption{\textbf{Degree structure of the construction-free risk network.}
+(\textbf{a}) Complementary cumulative degree distribution of the
+similarity-threshold graph ($\theta=0.62$; log--log axes). The distribution
+is strongly heterogeneous (median 69, maximum 554, Gini 0.50), but
+likelihood-ratio tests reject a power-law tail against lognormal and
+exponential alternatives (all $p<0.001$), so no scale-free claim is made.
+(\textbf{b}) Threshold sensitivity: median degree, maximum degree (left
+axis, log scale), and Gini coefficient (right axis) across $\theta \in
+[0.55, 0.70]$. Heterogeneity grows as the threshold tightens; degree
+rankings remain stable (Spearman $\rho=0.89$ between $\theta=0.62$ and
+$0.68$). (\textbf{c}) Share of cards under HOLD taxonomy review by degree
+decile. HOLD rises monotonically with degree, reaching 63.5\% in the top
+decile against an overall rate of 46.1\%. (\textbf{d}) Released union-$k$NN
+degree versus construction-free degree (Spearman $\rho=0.36$). The $k$NN
+floor at 10 (dotted line) and hub suppression flatten the released degrees;
+RAI4-0592 (rank 1, construction-free) and RAI4-1616, whose union-$k$NN
+rank~1 falls to rank~58 without the construction, are highlighted.}
+\label{fig:structure}
+\end{figure}
+
+% =====================================================================
+\section*{Discussion}
+
+\subsection*{Why loss-of-control concepts must sit at the centre}
+
+The empirical finding is that concepts of declining human control occupy the
+top of the degree ranking and act as cross-community connectors. We offer
+three mutually reinforcing explanations.
+
+First, \emph{semantic generality}. Control-erosion cards describe
+system-level failure conditions---human oversight weakening, agency shifting
+to machines, trust miscalibrated---rather than domain-specific mechanisms.
+Almost every concrete risk description (a manipulated consumer, an
+unaccountable decision, an autonomous weapon, an addictive companion)
+contains, as part of its meaning, a local instance of humans losing control
+over an outcome. In embedding space, the general concept therefore sits
+within the similarity threshold of many specific ones, and degree records
+exactly that reach. The same mechanism places broad misuse concepts high in
+the ranking, which is why generality alone does not fully explain the
+pattern: among comparably general concepts, those about control and trust
+are systematically over-represented (16 of the top 30).
+
+Second, \emph{bridging position}. The hubs' participation coefficients of
+0.92--0.95, with neighbourhoods spanning more than 40 of the 50
+communities, show that their connectivity is not concentrated in one
+region: these cards lie on short semantic paths between operational
+communities (manipulation, governance, safety, economic concentration). A
+reader moving conceptually from ``persuasive design'' to ``concentration of
+decision power'' passes naturally through ``humans no longer steer the
+system''. Connector-hub status is the network signature of that conceptual
+throughway.
+
+Third, \emph{consilience with theory}. Independent theoretical work argues
+that the most structurally important AI risks are not exotic single failures
+but gradual erosions of human control: the assistance-game framing of
+Russell\cite{russell2019}, the argument by Bengio and colleagues that
+advanced agentic systems require management of catastrophic and
+loss-of-control scenarios\cite{bengio2024}, and the gradual-disempowerment
+analysis of Kulveit and colleagues\cite{kulveit2025}. The specific hubs we
+find read like that literature's mechanism list: automation bias,
+overreliance, delegation to misaligned agents, and collectively inefficient
+multi-agent equilibria are precisely the incremental channels through which
+gradual disempowerment is argued to proceed. Our result is an empirical,
+bottom-up counterpart: when nearly seventeen hundred risk concepts
+distilled from four decades of literature, policy, and patents are laid out
+by meaning alone, the concepts these theories place at the centre of
+concern also sit at the centre of the semantic space. The taxonomy was not
+designed to produce this: community seeds, guards, and audits operate at
+the family level, and no step of the pipeline privileges any card.
+
+\subsection*{Implications for taxonomy design and review}
+
+Two practical consequences follow. First, the 27.7\% multi-affiliation rate
+argues for multi-label extensions of operational risk taxonomies: a released
+single parent can remain the operational assignment while secondary family
+memberships are stored alongside, exactly where our responsibility
+distributions are non-trivial. Second, degree and participation supply a
+principled review-prioritization signal. The monotonic rise of HOLD status
+with degree---63.5\% in the top decile---indicates that the human review
+process already gravitates toward semantically ambiguous, high-centrality
+cards; making that signal explicit would let review effort track structural
+importance directly.
+
+\subsection*{Limitations}
+
+Three caveats bound the interpretation. Semantic proximity is not causal
+transmission: our network records similarity of failure descriptions, not
+pathways along which one failure triggers another, and coupling of the
+causal kind requires separate evidence of mechanism and temporal
+order\cite{helbing2013}. Absolute degree values still depend on the choice
+of similarity threshold; our claims therefore rest on rankings and
+concentration measures shown to be stable across thresholds ($\rho \geq
+0.89$) and against the fully threshold-free strength centrality ($\rho =
+0.94$), not on any single graph. Degree in a similarity graph also rewards
+semantic generality as such---broad catch-all labels rank high alongside
+substantively central concepts---which is why we report the thematic
+composition of the core rather than treating any individual rank as
+meaningful by itself. Finally, the underlying registry, while
+evidence-grounded and bilingual, reflects the coverage of its source
+corpora; risks under-represented in research, policy, and patent literature
+are under-represented here as well.
+
+% =====================================================================
+\section*{Methods}
+
+\subsection*{Evidence chain and registry}
+
+The integrated AI evidence space contains 3,906,767 records: 1,749,159 papers
+(global Web of Science AI collections), 125,372 policy reports (curated
+AI-policy master plus policy-materials collection), and 2,032,236 patents
+(AI patent master). Records are standardized to a common schema, retained
+only with a non-empty title, and deduplicated within document type and
+analytical category by an ordered key hierarchy (patent application ID, DOI,
+source record ID, URL, normalized title--year--institution fallback). A
+source-governed AI-risk evidence view selects 82,971 records (50,375 papers,
+938 policy reports, 31,658 patents). Joining source risk identifiers through
+a crosswalk and reviewing semantic redundancy yields 1,726 candidate L4
+rows; exact normalized-label deduplication (semantic-similarity thresholds
+are deliberately not used) and removal of fourteen taxonomy-level leakage
+rows yield 1,711 canonical cards with permanent identifiers RAI4-0001 through
+RAI4-1726; registry-preserving consolidation of duplicate lineages leaves
+1,660 active cards, with all retirements kept as traceable
+\texttt{merged\_into} records. Card-level severity, probability, and impact
+attributes are excluded from every analysis in this paper.
+
+\subsection*{Algorithm 1: constrained-EM audit}
+
+During taxonomy construction, category assignments are tested with a
+constrained expectation--maximization audit rather than unconstrained
+nearest-centroid reassignment. Each audit allows only a selected set of
+source-family cards to move, treats all other cards as fixed anchors,
+excludes protected destinations (the 182-card Physical AI subtree), and
+alternates between (E) scoring each movable card against candidate family
+centroids and (M) recomputing those centroids, until no assignment changes.
+The composite score of card $i$ against family $k$ is
+\begin{equation}
+S(i,k) \;=\; 0.60\,c(i,k) \;+\; 0.30\,d(i,k) \;+\; 0.10\,w(i,k),
+\end{equation}
+where $c$ is cosine similarity to the current family centroid, $d$ is cosine
+similarity to the family definition, and $w$ is TF--IDF keyword cosine
+similarity. A move is accepted only if the destination improves on the source
+by at least 0.020 and has keyword cosine of at least 0.015, with additional
+destination-specific definition guards. Audited moves remain HOLD until
+human adjudication. An unguarded control run on revised definitions produced
+151 candidate moves, used as sensitivity evidence only; the guarded release
+records 22 defensible proposals, of which 14 change the operational parent.
+
+\subsection*{Semantic proximity network}
+
+Each active card's bilingual mechanism text (English label and definition,
+with Korean as supplementary signal) is embedded with BGE-M3\cite{chen2024bgem3}
+(pinned snapshot) and $\ell_2$-normalized. A base mutual-$k$NN graph is built
+with $k=8$ and minimum cosine similarity 0.62; a projected union-$k$NN graph
+with $k=10$ defines the released edge set, so every node holds at least its
+own ten projected neighbours (degree floor). Edge weights combine an
+L3-profile similarity (cosine similarity between the cards'
+family-responsibility profiles) and the direct embedding cosine at
+$0.65/0.35$. The released two-dimensional layout is ForceAtlas2\cite{jacomy2014}
+with fixed seed 42 and is used for display only.
+
+\subsection*{Algorithm 2: graph-regularized seeded spherical EM}
+
+Communities are detected with a spherical (von Mises--Fisher-style) EM on the
+unit-normalized embeddings\cite{banerjee2005}, seeded by L3-family centroids
+(seed weight 5) and regularized by the network: the E-step responsibility of
+community $g$ for card $i$ combines an embedding term
+$\exp\{\beta\,\mathbf{x}_i^{\top}\boldsymbol{\mu}_g\}$ ($\beta=18$) with a
+graph term weighting the community memberships of $i$'s network neighbours
+($\lambda=2$), and the M-step re-estimates unit-norm community centroids from
+responsibility-weighted cards. The procedure converged in 16 iterations
+(final change rate 0, final mean within-community cosine similarity 0.751),
+yielding 50 communities of sizes 2--140. Multi-affiliation counts use the
+final responsibility distributions with threshold 0.03.
+
+\subsection*{Construction-free similarity network}
+
+For degree and centrality analysis we rebuild the network without any
+nearest-neighbour machinery. The bilingual card texts (English label and
+definition, followed by the Korean label and definition) are re-embedded
+with BGE-M3 (dense embeddings, FlagEmbedding implementation,
+$\ell_2$-normalized) and validated against the released artefact: across
+the 11,869 released edges, the recomputed cosine similarities match the
+stored direct similarities with $r=0.980$ and mean absolute error 0.014.
+The construction-free graph links cards $i$ and $j$ if and only if
+$\cos(\mathbf{x}_i,\mathbf{x}_j) \geq \theta$, weighted by the cosine. The
+primary threshold $\theta=0.62$ is the released pipeline's own
+minimum-similarity parameter; sensitivity is reported for $\theta \in
+\{0.55, 0.58, 0.60, 0.62, 0.65, 0.68, 0.70\}$, together with the fully
+threshold-free strength centrality $s_i=\sum_j \cos(\mathbf{x}_i,
+\mathbf{x}_j)$. Rank stability across these choices is summarized with
+Spearman correlations.
+
+\subsection*{Network statistics and tail diagnostics}
+
+Statistics are computed with NetworkX: degree, strength, clustering, degree
+assortativity, Gini coefficients, community size distributions, and
+participation coefficients $P_i = 1-\sum_g (k_{ig}/k_i)^2$ over the 50 EM
+communities\cite{guimera2005} of the released network. Percentiles for $P$
+are computed over all 1,660 cards. Tail diagnostics follow Clauset and
+colleagues\cite{clauset2009} as implemented in the \texttt{powerlaw}
+package: a discrete power law is fitted above an estimated $x_{\min}$
+(maximum-likelihood $\hat{\alpha}=1.93$, $x_{\min}=42$) and compared with
+lognormal, exponential, stretched-exponential, and truncated power-law
+alternatives via normalized likelihood-ratio tests; the power law is
+rejected against every alternative (all $p<0.001$). Thematic coding of the
+30 highest-degree cards as control-erosion versus other was performed by
+the author from the card definitions and is reproducible from the released
+registry. Analysis code that reproduces every number and figure in this
+paper is available with the data (Data availability).
+
+\subsection*{Use of artificial intelligence tools}
+
+Claude (Anthropic) was used to assist with analysis scripting, figure
+preparation, and manuscript editing under the author's direction. The author
+reviewed and takes full responsibility for all content.
+
+% =====================================================================
+\section*{Data availability}
+The complete release data for taxonomy v2.17.2, including the semantic
+proximity network (\texttt{semantic\_proximity\_network.json}), card
+coordinates and registry (\texttt{risk\_space.json}), and an interactive
+explorer, are publicly available at
+\url{https://github.com/deep1003/RAI-Risk-Taxonomy-2.0}. A versioned archive
+will be deposited on Zenodo with a DOI upon acceptance.
+
+\section*{Code availability}
+The analysis scripts that reproduce all statistics and figures
+(\texttt{embed\_cards.py}, \texttt{threshold\_network.py},
+\texttt{network\_stats.py}, \texttt{make\_figures\_v2.py}) are available in
+the same repository under the MIT licence.
+
+\section*{Acknowledgements}
+The author thanks the KT Responsible AI team for maintaining the taxonomy
+release infrastructure, and the Ulsan National Institute of Science and
+Technology (UNIST) for academic support.
+
+\section*{Author contributions}
+Y.C.\ designed the study, conducted all analyses, prepared the figures, and
+wrote the manuscript.
+
+\section*{Competing interests}
+The author is employed by KT Corporation, which develops and maintains the
+RAI Risk Taxonomy analysed in this work. The author declares no other
+competing interests.
+
+% ----- References -----
+\begin{thebibliography}{20}
+
+\bibitem{weidinger2022}
+Weidinger, L. \emph{et~al.}
+Taxonomy of risks posed by language models.
+In \emph{Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency}, 214--229 (2022).
+
+\bibitem{slattery2024}
+Slattery, P. \emph{et~al.}
+The AI Risk Repository: a comprehensive meta-review, database, and taxonomy of risks from artificial intelligence.
+Preprint at \url{https://arxiv.org/abs/2408.12622} (2024).
+
+\bibitem{hendrycks2023}
+Hendrycks, D., Mazeika, M. \& Woodside, T.
+An overview of catastrophic AI risks.
+Preprint at \url{https://arxiv.org/abs/2306.12001} (2023).
+
+\bibitem{nist2023}
+National Institute of Standards and Technology.
+\emph{Artificial Intelligence Risk Management Framework (AI RMF 1.0)}.
+NIST AI 100-1 (2023).
+
+\bibitem{oecd2022}
+OECD.
+\emph{OECD Framework for the Classification of AI Systems}.
+OECD Digital Economy Papers No.~323 (2022).
+
+\bibitem{newman2018}
+Newman, M. E. J.
+\emph{Networks}, 2nd edn (Oxford University Press, 2018).
+
+\bibitem{chen2024bgem3}
+Chen, J. \emph{et~al.}
+BGE M3-Embedding: multi-lingual, multi-functionality, multi-granularity text embeddings through self-knowledge distillation.
+Preprint at \url{https://arxiv.org/abs/2402.03216} (2024).
+
+\bibitem{dempster1977}
+Dempster, A. P., Laird, N. M. \& Rubin, D. B.
+Maximum likelihood from incomplete data via the EM algorithm.
+\emph{Journal of the Royal Statistical Society: Series B} \textbf{39}, 1--22 (1977).
+
+\bibitem{banerjee2005}
+Banerjee, A., Dhillon, I. S., Ghosh, J. \& Sra, S.
+Clustering on the unit hypersphere using von Mises--Fisher distributions.
+\emph{Journal of Machine Learning Research} \textbf{6}, 1345--1382 (2005).
+
+\bibitem{russell2019}
+Russell, S.
+\emph{Human Compatible: Artificial Intelligence and the Problem of Control}
+(Viking, 2019).
+
+\bibitem{bengio2024}
+Bengio, Y. \emph{et~al.}
+Managing extreme AI risks amid rapid progress.
+\emph{Science} \textbf{384}, 842--845 (2024).
+
+\bibitem{kulveit2025}
+Kulveit, J. \emph{et~al.}
+Gradual disempowerment: systemic existential risks from incremental AI development.
+Preprint at \url{https://arxiv.org/abs/2501.16946} (2025).
+
+\bibitem{clauset2009}
+Clauset, A., Shalizi, C. R. \& Newman, M. E. J.
+Power-law distributions in empirical data.
+\emph{SIAM Review} \textbf{51}, 661--703 (2009).
+
+\bibitem{broido2019}
+Broido, A. D. \& Clauset, A.
+Scale-free networks are rare.
+\emph{Nature Communications} \textbf{10}, 1017 (2019).
+
+\bibitem{helbing2013}
+Helbing, D.
+Globally networked risks and how to respond.
+\emph{Nature} \textbf{497}, 51--59 (2013).
+
+\bibitem{guimera2005}
+Guimer\`a, R. \& Amaral, L. A. N.
+Functional cartography of complex metabolic networks.
+\emph{Nature} \textbf{433}, 895--900 (2005).
+
+\bibitem{jacomy2014}
+Jacomy, M., Venturini, T., Heymann, S. \& Bastian, M.
+ForceAtlas2, a continuous graph layout algorithm for handy network visualization designed for the Gephi software.
+\emph{PLOS ONE} \textbf{9}, e98679 (2014).
+
+\end{thebibliography}
+
+\end{document}

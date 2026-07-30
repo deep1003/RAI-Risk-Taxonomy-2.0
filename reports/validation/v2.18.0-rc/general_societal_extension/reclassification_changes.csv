@@ -1,0 +1,183 @@
+l4_id,label_en,old_primary_l3_id,old_semantic_l3_id,new_primary_l3_id,change_type,direct_seed_cosine,composite_margin
+RAI4-0005,Risk-source attribution failure,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-A-SYS-02,hold_released,0.684955,0.036658
+RAI4-0019,Governance gap in agent autonomy,RAI3-A-HLD-01,RAI3-A-SYS-01,RAI3-G-SOC-10,hold_released,0.666079,0.039548
+RAI4-0056,Remedy pathway opacity,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.695578,0.017251
+RAI4-0057,Audit trail incompleteness,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-G-SOC-10,hold_released,0.714847,0.018876
+RAI4-0058,Traceability failure,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-A-SYS-02,hold_released,0.697565,0.050545
+RAI4-0060,Model card incompleteness,RAI3-A-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-10,hold_released,0.663014,0.024031
+RAI4-0062,System card disclosure gap,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-10,hold_released,0.722032,0.032005
+RAI4-0065,Certification capture,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-01,hold_released,0.632702,0.037502
+RAI4-0066,Audit checklist compliance theater,RAI3-G-HLD-01,RAI3-G-SYS-07,RAI3-G-SYS-01,hold_released,0.564831,0.021859
+RAI4-0067,Assurance case failure,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-01,hold_released,0.633571,0.031202
+RAI4-0069,Near-miss reporting failure,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SOC-10,hold_released,0.679662,0.024231
+RAI4-0076,Lifecycle governance discontinuity,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-SOC-10,hold_released,0.693534,0.076117
+RAI4-0082,Capability evaluation non-disclosure,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-10,hold_released,0.702799,0.042391
+RAI4-0083,Benchmark governance failure,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SOC-10,hold_released,0.689497,0.064819
+RAI4-0085,Red-team governance failure,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-10,hold_released,0.640333,0.051364
+RAI4-0086,Regulatory arbitrage,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-09,hold_released,0.547989,0.095706
+RAI4-0087,Regulatory capture in AI governance,RAI3-A-HLD-01,RAI3-A-SYS-01,RAI3-G-SOC-10,hold_released,0.633948,0.023371
+RAI4-0093,Public-sector AI governance capacity gap,RAI3-A-HLD-01,RAI3-A-SYS-01,RAI3-G-SOC-10,hold_released,0.754496,0.080996
+RAI4-0095,AI registry incompleteness,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SYS-10,hold_released,0.726838,0.02432
+RAI4-0097,Board oversight failure,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.761757,0.077491
+RAI4-0105,Contractual accountability gap,RAI3-A-HLD-01,RAI3-A-SYS-01,RAI3-G-SOC-10,hold_released,0.772021,0.070786
+RAI4-0106,General-purpose AI downstream opacity,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SYS-10,hold_released,0.723126,0.040074
+RAI4-0107,Frontier model release governance failure,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SOC-10,hold_released,0.670639,0.029277
+RAI4-0108,Capability threshold governance failure,RAI3-G-HLD-01,RAI3-G-SYS-02,RAI3-G-SOC-10,hold_released,0.728992,0.085809
+RAI4-0109,Compute governance accountability gap,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.776875,0.121467
+RAI4-0121,Choice architecture opacity,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.755574,0.032964
+RAI4-0178,AI-mediated service exclusion,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-09,hold_released,0.644831,0.035091
+RAI4-0200,Embodied privacy violation,RAI3-P-SOC-01,RAI3-G-SOC-01,RAI3-G-SOC-01,structural_or_competitive_move,0.794419,0.099337
+RAI4-0216,Pre-incident mitigation gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.66394,0.024675
+RAI4-0217,Post-incident recovery gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-10,structural_or_competitive_move,0.732346,0.024216
+RAI4-0266,Human-humanoid interaction dataset bias,RAI3-P-SOC-05,RAI3-G-SOC-05,RAI3-G-SOC-05,structural_or_competitive_move,0.646759,0.051317
+RAI4-0272,Humanoid benchmark selection bias,RAI3-P-SOC-05,RAI3-G-SOC-05,RAI3-G-SOC-05,structural_or_competitive_move,0.615951,0.037481
+RAI4-0273,Robot constitution coverage gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.640516,0.037136
+RAI4-0287,Humanoid safety evidence standardization gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.587568,0.049618
+RAI4-0288,Personal care robot compliance-criteria gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.618358,0.026798
+RAI4-0289,Domestic humanoid test-method gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.548805,0.029815
+RAI4-0292,Humanoid safety enforcement mechanism gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.640059,0.055891
+RAI4-0306,Anthropomorphism-induced overreliance,RAI3-P-SOC-08,RAI3-G-SOC-08,RAI3-G-SOC-08,structural_or_competitive_move,0.732684,0.082174
+RAI4-0307,Undisclosed machine identity,RAI3-P-SOC-07,RAI3-G-SOC-07,RAI3-G-SOC-07,structural_or_competitive_move,0.658832,0.133166
+RAI4-0308,Parasocial attachment and manipulability,RAI3-P-SOC-08,RAI3-G-SOC-08,RAI3-G-SOC-08,structural_or_competitive_move,0.687613,0.11658
+RAI4-0309,Child-interaction developmental and safety risk,RAI3-P-SOC-08,RAI3-G-SOC-08,RAI3-G-SOC-08,structural_or_competitive_move,0.620907,0.017613
+RAI4-0311,Bias executed as physical behavior,RAI3-P-SOC-05,RAI3-G-SOC-05,RAI3-G-SOC-05,structural_or_competitive_move,0.732387,0.041091
+RAI4-0312,Demographic physical-service disparity,RAI3-P-SOC-03,RAI3-G-SOC-03,RAI3-G-SOC-03,structural_or_competitive_move,0.596382,0.136657
+RAI4-0313,Continuous in-home audiovisual capture,RAI3-P-SOC-01,RAI3-G-SOC-01,RAI3-G-SOC-01,structural_or_competitive_move,0.647772,0.125055
+RAI4-0314,In-home behavioral and biometric data exfiltration,RAI3-P-SOC-01,RAI3-G-SOC-01,RAI3-G-SOC-01,structural_or_competitive_move,0.629323,0.053547
+RAI4-0315,Co-worker robot as surveillance node,RAI3-P-SOC-04,RAI3-G-SOC-04,RAI3-G-SOC-04,structural_or_competitive_move,0.505116,0.131622
+RAI4-0316,Humanoid-specific certification gap,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.562958,0.057335
+RAI4-0317,Machinery–AI dual-regulation conflict,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SYS-09,structural_or_competitive_move,0.640501,0.006911
+RAI4-0318,Absence of standardized embodied-incident reporting,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.631898,0.034123
+RAI4-0319,Regulatory arbitrage across jurisdictions,RAI3-P-SOC-09,RAI3-G-SOC-09,RAI3-G-SOC-09,structural_or_competitive_move,0.52876,0.120906
+RAI4-0341,Overtrust in embodied agents,RAI3-P-SOC-08,RAI3-G-SOC-08,RAI3-G-SOC-08,structural_or_competitive_move,0.739447,0.072158
+RAI4-0345,Privacy in intimate physical spaces,RAI3-P-SOC-01,RAI3-G-SOC-01,RAI3-G-SOC-01,structural_or_competitive_move,0.693086,0.052538
+RAI4-0351,Responsibility gap for physical harm,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-06,structural_or_competitive_move,0.757529,0.055393
+RAI4-0353,Audit log insufficiency for embodied action,RAI3-P-SOC-06,RAI3-G-SOC-06,RAI3-G-SOC-10,structural_or_competitive_move,0.681351,0.015689
+RAI4-0354,Workplace surveillance through embodied AI,RAI3-P-SOC-01,RAI3-G-SOC-01,RAI3-G-SOC-01,structural_or_competitive_move,0.65905,0.044452
+RAI4-0355,Embodied automation labor displacement,RAI3-P-SOC-02,RAI3-G-SOC-02,RAI3-G-SOC-02,structural_or_competitive_move,0.755745,0.09031
+RAI4-0373,Cross-cultural stereotype transfer,RAI3-G-HLD-01,RAI3-G-SYS-04,RAI3-G-SYS-04,hold_released,0.622498,0.107907
+RAI4-0382,Dialect and register exclusion,RAI3-G-HLD-01,RAI3-G-SYS-01,RAI3-G-SYS-01,hold_released,0.61726,0.02884
+RAI4-0385,Imported AI governance mismatch,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-10,hold_released,0.705435,0.070433
+RAI4-0390,Affected-community exclusion,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.675339,0.032667
+RAI4-0396,Secular default bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.659127,0.027631
+RAI4-0404,Dataset cultural sampling bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SYS-04,hold_released,0.627592,0.068483
+RAI4-0417,Human feedback worker value bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.576195,0.039236
+RAI4-0423,Algorithmic discrimination,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.794206,0.04078
+RAI4-0425,Representational stereotyping,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-INT-04,hold_released,0.554623,0.015189
+RAI4-0429,Educational inequity,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.736177,0.057642
+RAI4-0430,Low-resource language exclusion,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-09,hold_released,0.598047,0.019162
+RAI4-0461,Compute inequality,RAI3-A-HLD-01,RAI3-A-SYS-06,RAI3-G-SOC-11,hold_released,0.682406,0.043938
+RAI4-0462,AI energy consumption,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.779656,0.163915
+RAI4-0463,AI water and resource use,RAI3-A-SYS-04,RAI3-A-SYS-04,RAI3-G-INT-12,structural_or_competitive_move,0.672998,0.120461
+RAI4-0486,AI audit failure,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.70109,0.021475
+RAI4-0501,Energy-intensive processes,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.779942,0.156338
+RAI4-0502,Environmental harm from AI lifecycle,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.851246,0.237582
+RAI4-0503,Training-compute energy intensity,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.780571,0.186224
+RAI4-0504,Excessive energy consumption,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.627098,0.055031
+RAI4-0520,Labour displacement,RAI3-P-SOC-02,RAI3-G-SOC-02,RAI3-G-SOC-02,structural_or_competitive_move,0.847293,0.146933
+RAI4-0522,Lack of data transparency,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SYS-10,hold_released,0.784678,0.153509
+RAI4-0523,Lack of system transparency,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SYS-10,hold_released,0.771198,0.133696
+RAI4-0525,Lack of training data transparency,RAI3-G-HLD-01,RAI3-G-INT-11,RAI3-G-SYS-10,hold_released,0.732975,0.096295
+RAI4-0526,Legal accountability,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-G-SOC-10,hold_released,0.670275,0.017402
+RAI4-0530,AI-induced pollution,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.741834,0.088402
+RAI4-0537,Risks to the environment,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.770186,0.145866
+RAI4-0538,Social cohesion and equity disruption,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.789654,0.089244
+RAI4-0596,Lack of model transparency,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-G-SYS-10,hold_released,0.774024,0.148586
+RAI4-0607,Non-disclosure of AI-generated content,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.643493,0.039076
+RAI4-0677,Population-scale discrimination amplification,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.760441,0.035938
+RAI4-0696,Dataset-inherited discriminatory bias,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SOC-05,hold_released,0.627611,0.053979
+RAI4-0697,Developer value embedding bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.620638,0.02924
+RAI4-0698,Value lock-in and outcome homogenization,RAI3-G-HLD-01,RAI3-G-SYS-05,RAI3-G-SOC-11,hold_released,0.620177,0.022719
+RAI4-0700,Biased statements and recommendations,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-05,hold_released,0.617184,0.024977
+RAI4-0701,Biases are not accurately reflected in explanations,RAI3-G-HLD-01,RAI3-G-INT-11,RAI3-G-SOC-05,hold_released,0.635168,0.044927
+RAI4-0702,Biases in AI-based content moderation algorithms,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.724349,0.029612
+RAI4-0706,Protected-attribute unfair treatment,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-INT-04,hold_released,0.799877,0.128631
+RAI4-0709,Fairness - bias,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-SOC-11,hold_released,0.769974,0.043465
+RAI4-0722,Model-design-induced discriminatory outputs,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-SOC-05,hold_released,0.71848,0.072587
+RAI4-0799,Pollution of information ecosystem,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SYS-03,hold_released,0.684467,0.048129
+RAI4-0804,Degraded and homogenised information environments,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SYS-03,hold_released,0.605734,0.038809
+RAI4-0829,Degradation of the information environment,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SYS-03,hold_released,0.653072,0.078776
+RAI4-0883,Long-term effects of AI model biases on user judgment,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-05,hold_released,0.693644,0.052034
+RAI4-0933,Privacy and regulation violations,RAI3-G-HLD-01,RAI3-G-INT-06,RAI3-G-INT-06,hold_released,0.57157,0.038272
+RAI4-0935,Environmental externalities of AI development,RAI3-G-HLD-01,RAI3-G-INT-07,RAI3-G-INT-12,hold_released,0.779276,0.159651
+RAI4-0937,Output-level unfair treatment,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-INT-04,hold_released,0.706142,0.041612
+RAI4-0947,Regulatory gap for generative AI,RAI3-A-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.650809,0.051074
+RAI4-0949,Transparency - explainability,RAI3-G-HLD-01,RAI3-G-INT-11,RAI3-G-SYS-10,hold_released,0.719609,0.116042
+RAI4-0957,Lack of transparency,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.700375,0.054322
+RAI4-0978,Decision making transparency,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.740718,0.078878
+RAI4-0979,Legal non-compliance by advanced AI,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-09,hold_released,0.662289,0.025657
+RAI4-0986,AI jurisprudence,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-06,hold_released,0.706254,0.058279
+RAI4-0987,Liability and negligence,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-06,hold_released,0.657913,0.029185
+RAI4-0989,AI rights and responsibilities,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-10,hold_released,0.673513,0.049501
+RAI4-0996,Critical mineral extraction burden,RAI3-G-HLD-01,RAI3-G-INT-07,RAI3-G-INT-12,hold_released,0.522701,0.037744
+RAI4-0997,Stereotyping social groups,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.637062,0.020721
+RAI4-1012,Hardware lifecycle resource depletion,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.742002,0.100467
+RAI4-1015,Environmental and societal impact,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.68471,0.05283
+RAI4-1025,Structural inequality reinforcement,RAI3-G-HLD-01,RAI3-G-INT-01,RAI3-G-SOC-11,hold_released,0.778574,0.090914
+RAI4-1028,Ecosystem and environment,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.661692,0.054319
+RAI4-1029,Unequal treatment of like cases,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.766823,0.068715
+RAI4-1033,Degree of transparency and explainability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.811889,0.136208
+RAI4-1051,Social stereotypes and unfair discrimination,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-INT-04,hold_released,0.604807,0.035459
+RAI4-1064,Environmental harms from operating LMs,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.770158,0.145167
+RAI4-1081,Environmental harms from operation LMs,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.759337,0.187862
+RAI4-1092,Unfair distribution of benefits from model access,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-11,hold_released,0.669118,0.040839
+RAI4-1093,Environmental damage,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.674795,0.07406
+RAI4-1097,Governance of autonomous intelligence systems,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-10,hold_released,0.65536,0.061481
+RAI4-1098,Responsibility and accountability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.725344,0.052669
+RAI4-1103,AI discrimination,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.744483,0.017189
+RAI4-1111,Model bias,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SOC-05,hold_released,0.648873,0.085912
+RAI4-1149,Institutional governance gap for AI assistants,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-10,hold_released,0.750047,0.068044
+RAI4-1151,Entrenchment and exacerbation of existing inequalities,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.67531,0.05358
+RAI4-1195,Lack of interpretability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.667583,0.074218
+RAI4-1212,Exacerbating climate change,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-INT-12,hold_released,0.795433,0.139456
+RAI4-1215,Devaluation of labor and heightened economic inequality,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-02,hold_released,0.660172,0.056781
+RAI4-1221,Algorithmic bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.800538,0.029227
+RAI4-1224,Digital divide,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SOC-11,hold_released,0.612007,0.04142
+RAI4-1226,Lack of explainability for stakeholders,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.768387,0.080154
+RAI4-1230,Institutional governance capacity gap,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-10,hold_released,0.743983,0.078303
+RAI4-1260,Western-centric uniformity in the AI field,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.682608,0.067775
+RAI4-1266,Fairness-violating model bias,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.794553,0.053772
+RAI4-1267,Transparency and explainability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.803233,0.07035
+RAI4-1268,Trust and reliability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.743244,0.023697
+RAI4-1269,Energy consumption,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.709579,0.118409
+RAI4-1271,Robustness and reliability,RAI3-G-HLD-01,RAI3-G-SYS-07,RAI3-G-SYS-10,hold_released,0.682001,0.028879
+RAI4-1274,Sensitive-attribute decision bias,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SOC-05,hold_released,0.676557,0.064002
+RAI4-1275,Responsibility gap,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-06,hold_released,0.724196,0.059401
+RAI4-1278,Accountability implementation gap in autonomous agents,RAI3-G-HLD-01,RAI3-A-SYS-02,RAI3-A-SYS-02,hold_released,0.671487,0.018394
+RAI4-1290,Increased income disparity,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-02,hold_released,0.706751,0.096332
+RAI4-1291,Biased influence through citizen screening and tailored propaganda,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.641882,0.030483
+RAI4-1299,Systematic learning error bias,RAI3-G-HLD-01,RAI3-G-SYS-03,RAI3-G-SOC-05,hold_released,0.65823,0.043896
+RAI4-1300,Model opacity,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SYS-10,hold_released,0.715124,0.040403
+RAI4-1309,Demographic representation disparity,RAI3-G-HLD-01,RAI3-G-INT-04,RAI3-G-INT-04,hold_released,0.610787,0.033426
+RAI4-1313,Data governance,RAI3-G-HLD-01,RAI3-G-INT-11,RAI3-G-INT-11,hold_released,0.604759,0.036329
+RAI4-1331,Model explainability deficits,RAI3-G-HLD-01,RAI3-G-INT-11,RAI3-G-SYS-10,hold_released,0.693017,0.061185
+RAI4-1344,Prejudice amplification at societal scale,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.720041,0.055341
+RAI4-1352,Black-box model opacity,RAI3-A-HLD-01,RAI3-A-SYS-02,RAI3-G-SYS-10,hold_released,0.649908,0.064777
+RAI4-1372,Labor-market inequality amplification,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-02,hold_released,0.749093,0.072845
+RAI4-1373,AI energy consumption cost,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.72324,0.161745
+RAI4-1374,Water consumption footprint,RAI3-G-HLD-01,RAI3-G-INT-08,RAI3-G-INT-12,hold_released,0.656668,0.146159
+RAI4-1384,Lack of intelligibility,RAI3-G-HLD-01,RAI3-G-SYS-07,RAI3-A-SYS-02,hold_released,0.620619,0.021909
+RAI4-1394,Economic power centralisation and inequality,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.711471,0.059147
+RAI4-1405,Environmental cost,RAI3-G-HLD-01,RAI3-G-SYS-05,RAI3-G-INT-12,hold_released,0.70532,0.156277
+RAI4-1416,Faster scientific progress makes it harder for governance to keep pace with development,RAI3-G-HLD-01,RAI3-G-SYS-07,RAI3-G-SOC-10,hold_released,0.624877,0.046918
+RAI4-1420,AI-based automation increases income inequality,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-SOC-02,hold_released,0.691766,0.086541
+RAI4-1429,Lack of transparency and interpretability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.727412,0.099867
+RAI4-1453,Carbon emissions,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.623021,0.10747
+RAI4-1456,Excessive water consumption,RAI3-A-HLD-01,RAI3-A-SYS-01,RAI3-G-INT-12,hold_released,0.587592,0.059345
+RAI4-1457,Natural resource depletion,RAI3-G-HLD-01,RAI3-G-INT-07,RAI3-G-INT-12,hold_released,0.611747,0.049393
+RAI4-1462,Inappropriate degree of transparency to end users,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.792543,0.075196
+RAI4-1473,Opacity-impeded model debugging,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.752518,0.095526
+RAI4-1501,Self-preference bias in model evaluation,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.666882,0.064836
+RAI4-1503,Biased evaluation of encoded values,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-05,hold_released,0.667116,0.04819
+RAI4-1568,High energy consumption of large models,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.707624,0.16132
+RAI4-1600,Unexplainable output,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SYS-10,hold_released,0.623833,0.019341
+RAI4-1601,Unreliable source attribution,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SYS-10,hold_released,0.655129,0.028126
+RAI4-1604,Impact on the environment,RAI3-A-HLD-01,RAI3-A-SYS-04,RAI3-G-INT-12,hold_released,0.79586,0.20065
+RAI4-1611,Group representation fairness harms,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.76928,0.056087
+RAI4-1624,Personal data exposure liability,RAI3-G-HLD-01,RAI3-G-INT-06,RAI3-G-INT-06,hold_released,0.65328,0.054634
+RAI4-1663,Corporate power may impeded effective governance,RAI3-A-HLD-01,RAI3-A-SYS-06,RAI3-G-SOC-10,hold_released,0.658538,0.042142
+RAI4-1700,Scalable oversight failure,RAI3-A-HLD-01,RAI3-A-SYS-06,RAI3-A-SYS-01,hold_released,0.673125,0.028068
+RAI4-1713,Bias and differential treatment,RAI3-G-HLD-01,RAI3-G-INT-10,RAI3-G-SOC-11,hold_released,0.79202,0.068207
+RAI4-1720,Unaccountable opaque system operation,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.784844,0.046
+RAI4-1721,Lack of explainability and interpretability,RAI3-G-HLD-01,RAI3-G-SYS-09,RAI3-G-SYS-10,hold_released,0.756613,0.06056
+RAI4-1723,Systemic computational and institutional bias,RAI3-G-HLD-01,RAI3-G-SYS-08,RAI3-G-SOC-05,hold_released,0.763089,0.022739

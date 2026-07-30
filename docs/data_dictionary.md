@@ -1,5 +1,13 @@
 # Data dictionary
 
+## Current release interpretation
+
+Release `v2.18.0-rc` distinguishes 1,711 permanent registered IDs from 1,660
+active cards and 51 merged provenance records. The released hierarchy contains
+54 semantic L3 families. HOLD is a review state and navigation overlay, not an
+additional semantic family. Active HOLD cards retain a semantic review path
+while awaiting human adjudication.
+
 ## Identity and placement are separate
 
 `l4_registry.json` stores permanent card identity, labels, definitions, metrics, and references. It never stores a current L3.

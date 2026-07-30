@@ -1,0 +1,38 @@
+{
+  "sealed": true,
+  "sealed_on": "2026-07-25",
+  "source_release": "v2.17.2",
+  "source_path": "public/data/releases/v2.17.2",
+  "source_git_commit": "b203fdc9faf4a2fd408f9f1dc15f70423eb26909",
+  "archive": "archives/sealed/v2.17.2_pre_general_societal_extension_20260725.tar.gz",
+  "archive_sha256": "041d8fe2fd82328800b5d8f7ba427dbe7bd81a1d85e0673dd9b65a8db0520e7c",
+  "archive_bytes": 1473007,
+  "source_files": {
+    "cards.json": {
+      "sha256": "66c7d41a8348fb5d75c63774ee13119b86b8533f9daae5fdb2bb448a44a291a5",
+      "bytes": 5573934
+    },
+    "hierarchy.json": {
+      "sha256": "0a02afdff6a2a65a050e99d30c7f9b7ad5b9fbfeef23b32fe0a281d6685c8e94",
+      "bytes": 88633
+    },
+    "manifest.json": {
+      "sha256": "92febd94a23127deb95c66cdb567548a9a2cfc405d5d811e9b6661407208f301",
+      "bytes": 5098
+    },
+    "revision_changelog.json": {
+      "sha256": "653f75e9870271987bc5207fe9173e04d5ad8db0f1e1ce13d35b018f65d56b2e",
+      "bytes": 150197
+    },
+    "risk_space.json": {
+      "sha256": "519d45770c7dfe5fbeb8c9d61fbf221c7fc262c968870d68762c5a74ef66b05d",
+      "bytes": 2284314
+    },
+    "semantic_proximity_network.json": {
+      "sha256": "7c40f0557f2c45f59406ba6c5c31b805d2d11d6d8462c2567e311b5826431dfe",
+      "bytes": 1237142
+    }
+  },
+  "restore_command": "tar -xzf archives/sealed/v2.17.2_pre_general_societal_extension_20260725.tar.gz -C <empty-restore-directory>",
+  "policy": "Immutable rollback snapshot. Do not edit or replace. The live v2.17.2 directory remains unchanged."
+}

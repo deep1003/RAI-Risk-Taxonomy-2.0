@@ -1,4 +1,13 @@
-# v1.0.0 mapping methodology
+# Mapping methodology
+
+The numbered procedure below records the v1.0.0 construction baseline. The
+current `v2.18.0-rc` release preserves 1,711 registered IDs and 1,660 active
+cards across 54 semantic L3 families. It adds General AI Societal Impact,
+migrates the former Physical societal families into that shared branch, and
+retains 614 active cards in the HOLD review overlay. Current BGE-M3 sensitivity
+results are stored under `reports/validation/v2.18.0-rc/`.
+
+## v1.0.0 construction baseline
 
 1. Freeze and hash the global 1,726-card source, Physical AI 182-card source, and user-provided 50-L3 definitions.
 2. Allocate `RAI4-####` by ASCII lexicographic order of frozen global source IDs.
