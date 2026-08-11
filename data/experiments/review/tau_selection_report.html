@@ -1,4 +1,4 @@
-<!doctype html><html lang=ko><head><meta charset=utf-8><title>병합 임계(τ) 선정 — 기술 보고서</title><style>body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;margin:0;color:#1c1c1c}
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Merge-threshold selection — technical report</title><style>body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;margin:0;color:#1c1c1c}
 header{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd;padding:10px 18px;z-index:20}
 h1{font-size:18px;margin:0 0 6px}.sub{color:#555;font-size:12.5px;line-height:1.7}
 nav a{display:inline-block;margin-right:10px;padding:4px 11px;border:1px solid #bbb;border-radius:14px;text-decoration:none;color:#333;font-size:12.5px}
@@ -13,60 +13,70 @@ th,td{border:1px solid #e0e0e0;padding:6px 9px;text-align:left}th{background:#f5
 .num{text-align:right}
 .note{background:#fbf9f3;border:1px solid #d8d2c2;border-radius:6px;padding:8px 12px;font-size:12.5px;line-height:1.7}
 .cap{font-size:12px;color:#555;line-height:1.7;margin:-4px 0 14px}</style></head><body>
-<header><h1>L4 병합 임계(τ) 선정 — 기술 보고서</h1>
-<div class=sub>임계 그래프 침투(percolation) 분석에 의한 fidelity·compression 최적 구간 도출 · 2026-08-11</div><nav><a href='index.html'>개요</a><a href='c80.html'>C80</a><a href='c70.html'>C70</a><a href='glossary.html'>용어사전</a><a href='landscape_report.html'>지형도 보고서</a><a href='c83.html'>C83</a><a href='tau_selection_report.html' class=on>τ 선정 보고서</a><a href='tier_design_report.pdf'>기술 보고서 (PDF)</a></nav></header><main>
+<header><h1>L4 merge-threshold (τ) selection — technical report</h1>
+<div class=sub>Deriving the fidelity–compression optimum by percolation analysis of the threshold graph · 2026-08-11</div><nav><a href='index.html'>Overview</a><a href='f1.html'>F1 audit</a><a href='f4.html'>F4 audit</a><a href='glossary.html'>Glossary</a><a href='tau_selection_report.html' class=on>Threshold report</a></nav></header><main>
 
-<h2>1. 배경</h2>
-<p>통합 전 L4 리스크 카드는 1,711장으로 실질적 관리가 부담스러운 규모였고, 표현만 다른 중복 항목이 다수
-발견되어 유사 카드의 병합이 필요했다. 유사도가 높은 쌍부터 단계적으로 통합하는 고전적 병합은 가능하나,
-<b>어느 수준까지 병합할 것인가</b>라는 임계의 문제가 남는다. 이는 손실 압축의 고전적 트레이드오프인
-<b>fidelity(충실도) 대 compression(압축)</b>의 문제다: 지나치게 병합하면 원래 의도한 리스크 개념이
-사라져 두루뭉술해지고(충실도 손실), 너무 보수적으로 병합하면 개수가 실질적으로 줄지 않는다(압축 부족).</p>
+<h2>1. Background</h2>
+<p>Before consolidation the L4 risk-card inventory stood at 1,711 cards — a scale that is burdensome to manage
+in practice — and contained many duplicate items that differed only in wording, so merging similar cards was
+necessary. Classical agglomerative merging, joining the most similar pairs first, is straightforward; what
+remains is the threshold question: <b>how far should merging go?</b> This is the classical lossy-compression
+trade-off between <b>fidelity and compression</b>: merge too aggressively and the originally intended risk
+concepts blur away (fidelity loss); merge too conservatively and the card count barely shrinks
+(insufficient compression).</p>
 
-<h2>2. 실험 설정</h2>
-<p>각 L4 카드의 한/영 명칭·정의를 임베딩하고, 카드 쌍의 코사인 유사도가 임계 τ 이상이면 연결하는
-임계 그래프 G(τ)=(V, {(i,j): cos(e<sub>i</sub>,e<sub>j</sub>)≥τ})를 구성했다. 그래프의 연결 성분을
-병합 군집으로 간주하고, τ를 0.94에서 0.50까지 0.01 간격으로 낮추며 다음을 측정했다.</p>
+<h2>2. Experimental setup</h2>
+<p>We embedded each L4 card's Korean/English label and definition, and built the threshold graph
+G(τ)=(V, {(i,j): cos(e<sub>i</sub>,e<sub>j</sub>)≥τ}), connecting a card pair whenever its cosine similarity
+is at least τ. Treating the graph's connected components as merge clusters, we lowered τ from 0.94 to 0.50 in
+steps of 0.01 and measured the following.</p>
 <ul>
-<li><b>군집 내 평균 쌍 유사도</b> — 병합의 평균 품질(fidelity의 대리 지표)</li>
-<li><b>군집별 최소 쌍 유사도의 평균</b> — 한 군집에서 가장 안 닮은 두 카드. 과병합의 조기 경보</li>
-<li><b>군집 수·최대 성분 크기</b> — 압축량과 연쇄 병합(chaining)의 지표</li>
+<li><b>Mean within-cluster pairwise similarity</b> — average merge quality (a proxy for fidelity)</li>
+<li><b>Mean of the per-cluster minimum pairwise similarity</b> — the two least similar cards in each cluster; an early warning of over-merging</li>
+<li><b>Cluster count and largest-component size</b> — indicators of compression and of chained merging</li>
 </ul>
-<p>스윕 범위의 근거: 0.94는 데이터상 최대 쌍 유사도로 이 위에서는 병합이 전혀 발생하지 않으며,
-0.50은 전체 쌍 평균 유사도(0.570) 이하로 사실상 무작위 병합 수준이다. 판정 원리는 임계 그래프의
-<b>침투(percolation) 현상</b>이다 — τ가 임계값을 지나면 국소 군집이 거대 성분으로 연쇄 붕괴하므로,
-상전이 직전 지점이 병합의 자연스러운 한계가 된다.</p>
+<p>Rationale for the sweep range: 0.94 is the maximum pairwise similarity in the data — no merge occurs above
+it — and 0.50 lies below the all-pairs mean similarity (0.570), i.e. effectively random merging. The decision
+principle is the <b>percolation phenomenon</b> of threshold graphs: once τ passes a critical value, local
+clusters cascade into a giant component, so the point just before this phase transition is the natural limit
+of merging.</p>
 
-<h2>3. 결과</h2>
+<h2>3. Results</h2>
 <img src='tau_cohesion_nature_094.png' alt='tau cohesion'>
-<p class=cap><b>그림 1 | 병합 임계 τ에 따른 군집 내 응집도 (0.0001 간격, 부분표본 10회 평균±2 s.d.).</b>
-상단: 군집 내 평균 쌍 유사도(초록), 군집별 최소 쌍 유사도 평균(주황), 무작위 병합 기준선(회색).
-하단: 군집 수·최대 군집·2위 군집(로그). 음영: 충실도 구간 [0.80, 0.84], 압축 구간 [0.70, 0.71].</p>
-<p>품질 곡선에 두 개의 변화점이 관측된다.</p>
+<p class=cap><b>Figure 1 | Within-cluster cohesion versus merge threshold τ (0.0001 steps, mean ± 2 s.d. over 10 subsamples).</b>
+Top: mean within-cluster pairwise similarity (green), mean per-cluster minimum pairwise similarity (orange),
+random-merge baseline (grey). Bottom: cluster count, largest cluster, and second-largest cluster (log scale).
+Shading: fidelity band [0.80, 0.84], compression band [0.70, 0.71].</p>
+<p>Two change points are observed in the quality curves.</p>
 <ul>
-<li><b>1차 전이 (τ₁ = 0.818 ± 0.009)</b> — 평균 응집도가 급락하고 최대 군집이 급팽창하는 연쇄 병합의 시작점.</li>
-<li><b>2차 변화점 (τ₂ = 0.688 ± 0.008)</b> — 거대 군집이 이미 97%를 보유한 초임계 영역에서 최악 사례 응집도가 붕괴하는 지점.
-연결 전이가 아니라 최악 병합 품질의 붕괴로 해석한다.</li>
+<li><b>First transition (τ₁ = 0.818 ± 0.010)</b> — the onset of chained merging, where mean cohesion drops sharply and the largest cluster expands abruptly.</li>
+<li><b>Second change point (τ₂ = 0.690 ± 0.009)</b> — the point where worst-case cohesion collapses, deep in the supercritical regime where the giant cluster already holds 97% of cards.
+We interpret this not as a connectivity transition but as a collapse of worst-case merge quality.</li>
 </ul>
-<h2>4. 진화적 기준: 응집–인력 교차</h2>
+<h2>4. Evolutionary criterion: cohesion–attraction crossing</h2>
 <img src='fig3_cohesion_attraction.png' alt='cohesion attraction'>
-<p class=cap><b>그림 2 | Within-cluster cohesion과 Between-cluster attraction의 교차.</b>
-군집 내 응집(초록)과 최근접 군집 인력(빨강)이 τ*=0.828±0.004(전량 0.833)에서 교차한다.
-교차 이후는 군집이 내부보다 외부 이웃에 더 끌리는 영역으로, 응집 종 개념의 위반에 해당한다.</p>
-<p>독립된 두 기준 — 연결성(1차 전이)과 진화적 군집 품질(교차) — 이 같은 경계를 지목한다.
-교차점은 규모 의존적이며(카드 수 2배당 약 +0.024), 인벤토리가 커질수록 위로 이동한다 —
-압축 티어 쪽으로 내려오지 않는다.</p>
-<h2>5. 릴리스 티어</h2>
-<table><tr><th>티어</th><th class=num>τ</th><th class=num>카드</th><th>근거</th></tr>
-<tr><td>Master</td><td class=num>—</td><td class=num>1,612</td><td>정본</td></tr>
-<tr><td><a href='c83.html'>C83</a></td><td class=num>0.833</td><td class=num>1,385</td><td>응집–인력 교차점(무제약 참조 티어)</td></tr>
-<tr><td><a href='c80.html'>C80</a></td><td class=num>0.80</td><td class=num>1,369</td><td>충실도 구간(운영, 규범 제약)</td></tr>
-<tr><td><a href='c70.html'>C70</a></td><td class=num>0.70</td><td class=num>937</td><td>압축 구간(운영, 규범 제약)</td></tr></table>
-<p>데이터가 도출한 최적 규모(C83, 1,385장)는 운영상 선택된 C80(1,369장)과 1.2% 이내로 일치한다 — 두 절차의 상호 검증.
-0.83과 0.70 사이의 중간 τ는 압축과 품질 모두에서 C70에 지배당하므로(U자형 격차 곡선) 제3의 중간 티어는 두지 않는다.</p>
-<h2>6. 해석 및 한계</h2>
-<p>충실도 구간은 개별 카드 구분이 중요한 규제 매핑·감사 용도, 압축 구간은 개관·교육 용도에 적합하며,
-단일 τ가 두 목적을 만족할 수 없다는 것이 2-티어 릴리스의 근거다. 병합은 유사도를 필요조건으로,
-규범 제약(교차 수준 병합 금지·보호 쌍 분리)을 추가 조건으로 하는 결합 기준이다.
-본 분석의 응집도는 병합 품질의 대리 지표이므로 최종 확정은 병합 표본의 휴먼 평가로 검증한다.</p>
+<p class=cap><b>Figure 2 | Crossing of within-cluster cohesion and between-cluster attraction.</b>
+Within-cluster cohesion (green) and nearest-cluster attraction (red) cross at τ*=0.828±0.004
+(0.833 on the full inventory). Beyond the crossing, clusters are pulled more toward outside neighbours than
+toward their own interior — a violation of the cohesive-species concept.</p>
+<p>Two independent criteria — connectivity (first transition) and evolutionary cluster quality (the crossing) —
+point to the same boundary. The crossing point is density-dependent (about +0.024 per doubling of the card
+count) and moves upward as the inventory grows — it does not descend toward the compression tiers.</p>
+<h2>5. Flow tiers</h2>
+<table><tr><th>Tier</th><th class=num>τ</th><th class=num>Cards</th><th>Basis</th></tr>
+<tr><td>Master</td><td class=num>—</td><td class=num>1,612</td><td>Canonical inventory</td></tr>
+<tr><td><a href='f1.html'>F1</a></td><td class=num>0.8329</td><td class=num>1,383</td><td>Cohesion–attraction crossing; first flow state</td></tr>
+<tr><td>F2</td><td class=num>0.8033</td><td class=num>1,154</td><td>Intermediate flow state</td></tr>
+<tr><td>F3</td><td class=num>0.7903</td><td class=num>1,038</td><td>Intermediate flow state</td></tr>
+<tr><td><a href='f4.html'>F4</a></td><td class=num>0.7753</td><td class=num>901</td><td>Audit tier; final flow state</td></tr></table>
+<p>The tiers are successive states of a single granularity flow rather than independent cuts. From F1 to F4
+the flow performs 28 consolidations, the cohesion of the affected groups descends from 0.8329 to 0.6062, and
+the validity rule first fires at step 15. F4, the terminal state, is the tier placed under human audit.</p>
+<h2>6. Interpretation and limitations</h2>
+<p>The fidelity band suits regulatory-mapping and audit uses where individual card distinctions matter, while
+the compression band suits overview and education uses; no single τ satisfies both purposes, which is the
+rationale for releasing multiple flow tiers. Merging is a conjunctive criterion: similarity is a necessary
+condition, with normative constraints (no cross-level merges; protected pairs kept separate) as additional
+conditions. Because the cohesion measured here is a proxy for merge quality, final confirmation rests on
+human evaluation of merge samples — the F1 and F4 audit pages.</p>
 </main></body></html>
