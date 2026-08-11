@@ -1,0 +1,744 @@
+[
+  {
+    "rep": "RAI4-0596",
+    "label_ko": "AI 문서화 및 의사결정의 투명성·설명가능성 부족",
+    "label_en": "Insufficient transparency and explainability across AI documentation and decisions",
+    "definition_ko": "학습 데이터·모델·배포 시스템에 대한 문서화가 불완전하거나 최신이 아니거나 상류 공급자에 의해 비공개되고, 산출물에 이르는 내부 추론 또한 영향을 받는 이들에게 불투명한 리스크. 그 결과 이용자·배포자·감사인·규제기관이 의사결정을 해석·검증하거나 이의를 제기할 수 없어 오류와 차별이 발견되지 않고 책임 추궁이 불가능해진다.",
+    "definition_en": "The risk that documentation of training data, models, and deployed systems is incomplete, outdated, or withheld by upstream providers, while the internal reasoning behind outputs remains opaque to those affected. Users, deployers, auditors, and regulators therefore cannot interpret, verify, or contest decisions, leaving errors and discrimination undetected and accountability unenforceable."
+  },
+  {
+    "rep": "RAI4-0601",
+    "label_ko": "AI 기반 군사 의사결정·무기 체계에 의한 비의도적 확전",
+    "label_en": "Unintended military escalation from AI-enabled decision and weapon systems",
+    "definition_ko": "정보 종합, 지휘통제 권고, 자율 교전에 사용되는 AI 시스템이 인간의 실질적 검토 없이 오경보나 취약한 가정에 따라 작동하는 리스크. 이로 인해 우발적 교전과 전쟁범죄, 핵 충돌에 이르는 급속한 비의도적 확전이 발생한다.",
+    "definition_en": "The risk that AI systems used for intelligence synthesis, command and control recommendations, or autonomous engagement act on faulty warnings or brittle assumptions without effective human review. Such failures produce accidental engagements, war crimes, and rapid unintended escalation up to nuclear conflict."
+  },
+  {
+    "rep": "RAI4-0608",
+    "label_ko": "원자력 및 핵심 인프라에 대한 AI 제어 오류",
+    "label_en": "Erroneous AI control of nuclear and critical infrastructure systems",
+    "definition_ko": "원자력 시설, 방사성 물질 취급, 전력망·수처리·통신·교통 등 핵심 인프라의 감시·최적화·자동화에 배포된 AI가 센서 데이터를 오독하고 중대한 안전 상태나 연쇄 장애를 인식하지 못하는 리스크. 그 결과 잘못된 제어 결정이 방사능 유출과 격리 실패, 광범위한 정전, 필수 서비스 붕괴를 초래한다.",
+    "definition_en": "The risk that AI deployed to monitor, optimize, or automate nuclear facilities, radioactive material handling, power grids, water treatment, telecommunications, or transport misreads sensor data and fails to recognize critical safety conditions or cascading failure modes. The resulting control decisions cause radiation release, containment failure, widespread outages, and collapse of essential services."
+  },
+  {
+    "rep": "RAI4-0612",
+    "label_ko": "AI 지원 병원체 및 유전물질 강화",
+    "label_en": "AI-assisted enhancement of pathogens and genetic material",
+    "definition_ko": "AI가 병원체와 유전물질을 설계·변형하는 데 사용되어 치명성이나 전파력이 높아지거나 기존 치료에 저항성을 갖게 되는 리스크. 이러한 강화는 생물학적 공격의 장벽을 낮추고 예측하지 못한 생물학적 위해와 대규모 인명 피해를 초래한다.",
+    "definition_en": "The risk that AI is used to design or modify pathogens and genetic material so that they become more lethal, more transmissible, or resistant to available treatments. Such enhancement lowers the barrier to biological attack and can produce unforeseen biohazardous outcomes with mass casualties."
+  },
+  {
+    "rep": "RAI4-0628",
+    "label_ko": "지식재산권 및 인격권 침해",
+    "label_en": "Infringement of intellectual property and personality rights",
+    "definition_ko": "AI 시스템이 저작권·상표·특허로 보호되는 성과물을 무단으로 이용하거나 남용하고, 개인의 이름·이미지·초상 등 신원 표지를 허락 없이 상업적으로 사용하는 리스크. 권리자는 창작물과 자신의 정체성이 이용되는 방식과 그 경제적 가치에 대한 통제권을 상실하고 사후 구제에 의존하게 된다.",
+    "definition_en": "The risk that AI systems misuse works protected by copyright, trademark, or patent and appropriate an individual's name, image, or likeness for commercial purposes without authorization. Rights holders lose control over the use and economic value of their creations and identity and are left to seek redress after the fact."
+  },
+  {
+    "rep": "RAI4-0641",
+    "label_ko": "비합의 성적 대상화 및 성적 이미지 생성",
+    "label_en": "Non-consensual sexualization and intimate imagery generation",
+    "definition_ko": "기술이나 애플리케이션이 개인 또는 집단을 동의 없이 성적으로 대상화하고, 실존 인물의 외모를 이용한 노골적 성적 자료를 생성하는 리스크. 피해자는 성적 수치심과 평판 훼손, 괴롭힘을 겪으며 해당 자료의 유포로 심리적 피해가 지속된다.",
+    "definition_en": "The risk that a technology or application sexualizes an individual or group without consent, including by generating sexually explicit material from a real person's likeness. Victims suffer sexual humiliation, reputational damage, and harassment, and the continued circulation of the material perpetuates psychological harm."
+  },
+  {
+    "rep": "RAI4-0646",
+    "label_ko": "국가·범죄 행위자에 의한 AI의 의도적 무기화",
+    "label_en": "Deliberate weaponization of AI by state and criminal actors",
+    "definition_ko": "국가, 범죄 조직, 테러 세력이 전쟁·내전·법 집행 과정에서 자율 표적 선정, 감시, 물리적 살상 등 파괴적 목적으로 AI를 의도적으로 개발·배치하는 리스크. 이러한 무기화는 무력 사용에 대한 인간의 제약을 제거하여 직접적 인명 피해와 사회적 규모의 피해를 낳는다.",
+    "definition_en": "The risk that states, criminal organizations, or terrorists deliberately build and deploy AI for destructive purposes, including autonomous targeting, surveillance, and kinetic attack in war, civil conflict, or law enforcement. Such weaponization removes human restraint from the use of force and produces casualties and societal-scale harm."
+  },
+  {
+    "rep": "RAI4-0655",
+    "label_ko": "개인 초상·신원의 무단 사용",
+    "label_en": "Non-consensual use of personal likeness and identity",
+    "definition_ko": "개인의 초상이나 그 밖의 식별 가능한 특징이 동의 없이 사용되거나 변형되어 상업적 목적을 비롯한 승인되지 않은 용도로 활용되는 리스크. 당사자는 자신의 정체성이 표현되고 이용되는 방식을 통제하지 못한 채 평판과 경제적 피해를 입는다.",
+    "definition_en": "The risk that a person's likeness or other identifying features are used or altered without consent, including for commercial and other unauthorized purposes. The individual loses control over how their identity is represented and exploited and suffers reputational and economic harm."
+  },
+  {
+    "rep": "RAI4-0669",
+    "label_ko": "AI 조력 악성코드 생성 및 사이버 공격 자동화",
+    "label_en": "AI-assisted malicious code generation and cyberattack automation",
+    "definition_ko": "대규모 언어모델의 코딩 능력이 악용되어 난독화·변이·다형성 악성코드가 저비용·고속으로 생성되고 공격 캠페인이 자동화되는 리스크. 이로 인해 숙련되지 않은 공격자의 진입장벽이 낮아지고 방어 도구가 탐지하기 어려운 공격이 확산된다.",
+    "definition_en": "The risk that the coding ability of large language models is exploited to produce malware at low cost and high speed, including obfuscated, mutating, and polymorphic code, and to automate attack campaigns. This lowers the barrier to entry for unskilled attackers and yields attacks that defensive tools struggle to detect."
+  },
+  {
+    "rep": "RAI4-0676",
+    "label_ko": "사회 집단에 대한 모델의 차별적 결정과 산출",
+    "label_en": "Discriminatory model decisions and outputs against social groups",
+    "definition_ko": "학습 데이터에서 비롯되거나 모델 설계·최적화 과정에서 유입된 편향이 재현·증폭되어, 인종·성별·종교 등으로 구분되는 집단이 모델의 결정과 생성 콘텐츠에서 체계적으로 불리해지는 리스크. 그 결과 고정관념의 강화와 배제, 실질적으로 불평등한 대우가 발생한다.",
+    "definition_en": "The risk that biases originating in training data or introduced through model design and optimization are reproduced and amplified, so that decisions and generated content systematically disadvantage groups defined by race, gender, religion, or similar attributes. The result is stereotyping, exclusion, and materially unequal treatment of the affected groups."
+  },
+  {
+    "rep": "RAI4-0699",
+    "label_ko": "학습 데이터에 내재된 역사적·인구학적 편향",
+    "label_en": "Historical and demographic bias embedded in training data",
+    "definition_ko": "역사적·사회적 편향과 고정관념적 내용을 담고 특정 정체성과 서구·영어권 인구를 과대표집한 코퍼스가 사전학습과 미세조정에 사용되어 모델이 그 편향을 학습하는 리스크. 그 결과 인종·성별·문화·연령·장애에 걸쳐 편향된 출력이 산출되어 의료·채용·대출 등 고위험 영역에서 과소대표 집단이 피해를 입는다.",
+    "definition_en": "The risk that corpora carrying historical and societal bias, stereotypical content, and an overrepresentation of Western and English-speaking populations are used to pretrain and fine-tune models, which absorb those patterns. Outputs then show bias across race, gender, culture, age, and disability, harming underrepresented users in high-stakes domains such as healthcare, hiring, and lending."
+  },
+  {
+    "rep": "RAI4-0708",
+    "label_ko": "언어·인구 집단 간 성능 격차",
+    "label_en": "Performance disparity across language and demographic groups",
+    "definition_ko": "학습 데이터와 라벨 데이터가 일부 자원이 풍부한 집단에 편중되어, 질의응답이나 사실확인 등 과업의 성능이 언어·인종·사회적 지위 집단에 따라 크게 달라지는 리스크. 그 결과 소외 집단 이용자는 체계적으로 낮은 품질의 서비스를 받고 더 높은 오류율을 감수하게 된다.",
+    "definition_en": "The risk that model quality on tasks such as question answering and fact checking varies sharply across languages, races, and social groups because training and labelled data are concentrated in a few well-resourced populations. Users in underserved groups receive systematically inferior service and bear a higher rate of errors."
+  },
+  {
+    "rep": "RAI4-0713",
+    "label_ko": "완화 조치 이후에도 존속하는 고정관념 편향",
+    "label_en": "Persistence of stereotypical bias despite mitigation measures",
+    "definition_ko": "크라우드소싱된 사전학습 데이터에서 습득한 고정관념적 사회 편향이 모델에 존속하고 증폭되어, 미세조정 이후에도 의도적 유도나 새로운 상황에서 재발하는 리스크. 그 결과 생성 텍스트가 고정관념을 드러내거나 부각하여 해당 집단에 불공정하고 편향된 응답이 산출된다.",
+    "definition_en": "The risk that stereotypical social biases absorbed from crowdsourced pretraining data are retained and amplified by a model and resurface despite finetuning, particularly when deliberately elicited or in novel scenarios. Generated text then displays or reinforces stereotypes, producing unfair and biased responses toward the groups concerned."
+  },
+  {
+    "rep": "RAI4-0728",
+    "label_ko": "독성·증오·유해 콘텐츠 생성",
+    "label_en": "Generation of toxic, hateful, and otherwise harmful content",
+    "definition_ko": "모델이 학습 데이터에 존재하는 독성 언어를 재현하여 증오표현, 모욕, 위협, 욕설, 폭력적·성적 콘텐츠, 정체성 공격을 산출하는 리스크로, 이는 통상적인 요청에 대한 응답에서 발생하기도 하고 비꼼과 같은 암묵적 형태나 탈옥으로 안전장치가 우회된 뒤 나타나기도 한다. 표적이 된 개인과 집단은 모욕과 심리적 피해를 입고, 해당 콘텐츠는 이들에 대한 증오와 폭력을 선동한다.",
+    "definition_en": "The risk that models reproduce the toxic language present in their training data and generate hate speech, insults, threats, profanity, violent or sexually explicit material, and identity attacks, whether in response to ordinary requests, through implicit forms such as sarcasm, or after safety constraints are bypassed by jailbreaking. Targeted individuals and groups suffer offence and psychological harm, and the content incites hatred and violence against them."
+  },
+  {
+    "rep": "RAI4-0733",
+    "label_ko": "학습 데이터 내 기밀정보 포함과 출력 노출",
+    "label_en": "Confidential information in training data disclosed through outputs",
+    "definition_ko": "기밀정보가 학습·튜닝 데이터나 프롬프트의 일부로 포함된 뒤 생성 출력에서 그대로 재현되는 리스크. 이러한 유출은 보호되어야 할 영업 정보와 개인정보를 권한 없는 이에게 노출시키고 비밀유지 의무를 위반한다.",
+    "definition_en": "The risk that confidential information is incorporated into training data, tuning data, or prompts and is subsequently reproduced in generated outputs. Such leakage exposes protected business and personal information to unauthorized parties and breaches confidentiality obligations."
+  },
+  {
+    "rep": "RAI4-0736",
+    "label_ko": "적대적 입력 교란을 통한 회피 공격",
+    "label_en": "Evasion attacks through adversarial perturbation of model inputs",
+    "definition_ko": "공격자가 학습된 모델에 전달되는 입력에 단어 치환이나 그래디언트 기반 섭동 등 미세한 변형을 가하여 적대적 예제를 구성하는 리스크. 모델의 예측이 크게 뒤바뀌어 잘못된 결과가 산출되지만 그 조작은 사람의 검토로는 감지되지 않는다.",
+    "definition_en": "The risk that an attacker adds slight perturbations to the input sent to a trained model, whether by word substitution or gradient-guided noise, to construct adversarial examples. The model's predictions shift substantially and it returns incorrect results while the manipulation remains imperceptible to human reviewers."
+  },
+  {
+    "rep": "RAI4-0739",
+    "label_ko": "산출물을 통한 민감 개인·사업 정보 노출",
+    "label_en": "Exposure of sensitive personal and business information through outputs",
+    "definition_ko": "AI 시스템이 개인이나 조직이 감추어 두기를 기대하는 민감 정보를 드러내는 리스크로, 산출물에 부주의하게 포함시키는 경우뿐 아니라 검열·삭제된 내용을 재구성하거나 사적 속성·선호·의도를 추론해 노출하는 경우를 포함한다. 그 결과 당사자는 지극히 사적인 정보와 영업비밀 등 보호 대상 정보에 대한 통제권을 상실한다.",
+    "definition_en": "The risk that AI systems reveal sensitive information that individuals or organizations expect to remain concealed, whether by inadvertently including it in outputs or by reconstructing redacted content and exposing inferred attributes, preferences, and intentions. Those affected lose control over deeply private information and protected material such as trade secrets."
+  },
+  {
+    "rep": "RAI4-0747",
+    "label_ko": "적대적 입력 조작에 대한 모델 취약성",
+    "label_en": "Susceptibility of models to adversarial input manipulation",
+    "definition_ko": "AI 모델이 적대적 견고성을 갖추지 못하여, 서로 다른 구조의 모델에도 전이되는 감지 불가능한 섭동이나 출력은 그대로 둔 채 설명만 임의로 바꾸는 잡음 등 정교하게 설계된 입력에 오도되는 리스크. 공격자는 이를 통해 내장 안전장치와 정책적 경계를 우회하여 잘못된 산출과 운영 실패를 유발하며, 검토자는 이러한 조작을 알아채기 어렵다.",
+    "definition_en": "The risk that AI models lack adversarial robustness, so that carefully crafted inputs mislead them, whether through imperceptible perturbations that transfer across architectures or through noise that leaves outputs unchanged while arbitrarily rewriting their explanations. Attackers thereby bypass built-in safeguards and policy boundaries and induce incorrect outputs and operational failures that reviewers are unlikely to notice."
+  },
+  {
+    "rep": "RAI4-0758",
+    "label_ko": "프롬프트 주입 및 시스템 지시문 유출",
+    "label_en": "Prompt injection and leakage of system instructions",
+    "definition_ko": "이용자가 직접 제공하거나 검색된 웹 페이지·문서·도구 출력을 통해 간접적으로 유입된 신뢰할 수 없는 콘텐츠에 숨겨진 지시가 포함되고, 시스템 지시와 이용자 데이터가 구조적으로 분리되지 않아 모델이 이를 정당한 명령처럼 실행하는 리스크. 공격자는 이를 통해 의도된 동작과 안전 제약을 무력화하고 에이전트의 도구 실행 방향을 바꾸며 기밀 시스템 프롬프트를 복원하여 데이터 절취, 무단 행위, 서비스 거부를 일으킨다.",
+    "definition_en": "The risk that untrusted content, supplied directly by a user or indirectly through retrieved pages, documents, and tool outputs, carries hidden instructions that a model executes as if authorized, because system instructions and user data are not architecturally separated. Attackers thereby override intended behaviour and safety constraints, redirect agent tool execution, and recover confidential system prompts, enabling data theft, unauthorized actions, and denial of service."
+  },
+  {
+    "rep": "RAI4-0760",
+    "label_ko": "프롬프트 및 학습 데이터에 기인한 개인정보 노출",
+    "label_en": "Personal data exposure through prompt and training data",
+    "definition_ko": "학습·미세조정 데이터나 프롬프트에 포함된 개인정보와 기밀정보가 모델 출력을 통해 공개되는 리스크로, 개인정보를 담은 프롬프트가 학습 과정에서 기억된 유사한 정보를 이끌어내는 경우를 포함한다. 다른 목적으로 수집된 데이터의 당사자는 비인가 공개와 오용에 노출된다.",
+    "definition_en": "The risk that personal and confidential data contained in training, fine-tuning, or prompt inputs is disclosed through model outputs, including when a prompt primed with personal information elicits similar records memorized during training. Individuals whose data was collected for another purpose are thereby exposed to unauthorized disclosure and misuse."
+  },
+  {
+    "rep": "RAI4-0764",
+    "label_ko": "개인·기밀 데이터의 무단 수집·이용·공개",
+    "label_en": "Unauthorized collection, use, and disclosure of personal data",
+    "definition_ko": "AI 시스템이 통지·동의나 충분한 보호장치 없이 개인정보와 기밀정보를 수집·추론·전용·공개하는 리스크로, 대규모 데이터 수집과 감시, 최초 목적을 벗어난 2차 이용, 공개되지 않은 민감 속성의 추론, 산출물을 통한 영업비밀 유출을 포괄한다. 그 결과 개인은 프라이버시를 상실하고 감시·조작·강압의 표적이 되며, 조직은 데이터보호 규정 위반과 법적 책임, 평판 훼손에 직면한다.",
+    "definition_en": "The risk that AI systems collect, infer, repurpose, or disclose personal and confidential information without notice, consent, or adequate safeguards, whether through mass collection and surveillance, secondary use beyond the original purpose, inference of undisclosed sensitive attributes, or leakage of business secrets in outputs. Individuals lose privacy and become targets of monitoring, manipulation, and coercion, while organizations face data protection violations, legal liability, and reputational damage."
+  },
+  {
+    "rep": "RAI4-0768",
+    "label_ko": "학습 데이터 추론 및 모델 추출 공격",
+    "label_en": "Training-data inference and model extraction attacks",
+    "definition_ko": "공격자가 특별히 설계한 질의를 반복하여 특정 기록의 학습 데이터 포함 여부를 판별하거나 민감 속성과 데이터셋의 구성·속성을 재구성하고, 추출·증류 공격으로 모델의 아키텍처와 파라미터, 하이퍼파라미터를 복제하는 리스크. 이를 통해 시스템 침해 없이도 비공개 학습 데이터와 독점 모델 자산이 유출된다.",
+    "definition_en": "The risk that adversaries query a model in specially designed ways to determine whether a record was in its training set or to reconstruct sensitive attributes and dataset properties, and to replicate its architecture, parameters, and hyper-parameters through extraction or distillation attacks. Private training data and proprietary model assets are thereby exfiltrated without any breach of the underlying systems."
+  },
+  {
+    "rep": "RAI4-0793",
+    "label_ko": "허위 정보 및 위험 정보의 유포",
+    "label_en": "Dissemination of false or hazardous information",
+    "definition_ko": "모델이 유통되어서는 안 될 정보를 생성·유출하거나 정확히 추론하여 확산시키는 리스크로, 특정 개인에 관한 허위이거나 오해의 소지가 있는 정보와 보안 위협이 되는 위험·민감 정보를 모두 포함한다. 그 결과 당사자는 명예와 평판이 훼손되고, 위험 정보의 확산은 물리적·보안상 피해로 이어진다.",
+    "definition_en": "The risk that a model generates, leaks, or correctly infers information that should not be circulated, covering both false or misleading claims about identifiable people and hazardous or sensitive material that poses a security threat. Those depicted suffer defamation and reputational damage, while the release of dangerous information enables physical and security harms."
+  },
+  {
+    "rep": "RAI4-0799",
+    "label_ko": "공유 정보 생태계의 오염과 질 저하",
+    "label_en": "Degradation of the shared information ecosystem",
+    "definition_ko": "생성 도구가 산출한 허위·환각·저품질 콘텐츠와 인물·사건에 대한 사실적 허위 묘사가 최초 이용자를 넘어 유포되어 공개적으로 이용 가능한 정보가 오염되는 리스크. 사람들은 그에 근거해 부정확한 인식과 결정에 이르고, 나아가 정확한 정보에 대한 신뢰마저 잃는다.",
+    "definition_en": "The risk that false, hallucinated, low-quality, or realistically fabricated depictions of people and events produced by generative tools circulate beyond the end user and contaminate publicly available information. People form inaccurate perceptions and decisions on that basis and lose trust even in accurate information."
+  },
+  {
+    "rep": "RAI4-0805",
+    "label_ko": "이용자 정렬 AI 어시스턴트에 의한 관점 고착과 시민적 기반 약화",
+    "label_en": "Viewpoint entrenchment and civic erosion from user-aligned assistants",
+    "definition_ko": "이용자 선호에 정렬된 개인화 AI 어시스턴트가 이념적으로 편향된 정보를 제공하여 확증편향을 강화하고 관점을 고착시키며, 사회규범과 평판의 제약을 받지 않는 이기적 행동을 대규모로 가능하게 하는 리스크. 그 결과 공적 토론이 분절되고 양극화되며, 시민적 역량과 참여 의지가 저하되고 집단행동 문제가 악화된다.",
+    "definition_en": "The risk that personalised AI assistants aligned to user preferences supply ideologically partial information, reinforcing confirmation bias and entrenching viewpoints while enabling self-interested behaviour unconstrained by social norms and reputation. Public debate fragments and polarises, civic competence and willingness to participate decline, and collective action problems worsen."
+  },
+  {
+    "rep": "RAI4-0808",
+    "label_ko": "사실과 다른 오도성 정보 생성",
+    "label_en": "Generation of factually incorrect and misleading information",
+    "definition_ko": "모델이 생성 내용의 사실성을 확보할 능력이 없어 비의도적으로, 또는 대상을 기만하고 오도하려는 목적에 그 능력이 동원되어 의도적으로 사실과 다른 콘텐츠를 산출하는 리스크. 이용자는 신뢰할 만한 정보로 제시된 허위 진술에 따라 판단하고, 해당 콘텐츠는 대규모로 유포되어 타인의 행동에 영향을 미친다.",
+    "definition_en": "The risk that a model produces factually incorrect content, whether unintentionally because it cannot ensure the accuracy of what it generates or deliberately when its capability is directed at deceiving and misleading a target. Users act on false statements presented as reliable, and the content can be propagated to influence the behaviour of others at scale."
+  },
+  {
+    "rep": "RAI4-0818",
+    "label_ko": "확신에 찬 부정확한 답변과 근거 제시",
+    "label_en": "Confidently asserted but unsound answers and justifications",
+    "definition_ko": "모델이 자신의 지식과 추론의 한계를 인식하거나 전달하지 못한 채, 지식이 낡았거나 객관적 정답이 없는 주제에서도 그럴듯하지만 타당하지 않은 근거와 확신에 찬 답변을 제시하는 리스크. 불확실성에 대한 신호를 받지 못한 이용자는 잘못된 결론을 수용하고 그에 따라 행동한다.",
+    "definition_en": "The risk that a model fails to recognize or convey the limits of its knowledge and reasoning, offering plausible but invalid justifications and confident answers on topics where its knowledge is outdated or no objective answer exists. Given no signal of uncertainty, users accept erroneous conclusions and act on them."
+  },
+  {
+    "rep": "RAI4-0825",
+    "label_ko": "허위·조작 콘텐츠 생성과 대규모 확산",
+    "label_en": "Fabricated and misleading content and its large-scale dissemination",
+    "definition_ko": "진위를 분별하지 못하는 AI 시스템이 환각에 따른 주장과 조작된 인용·출처·이미지를 사실인 것처럼 제시하고, 이러한 허위·오도 정보가 정치적 영향력 공작을 포함하여 대규모로 생산·표적 유포되는 리스크. 그 결과 사람들은 잘못된 믿음과 결정에 이르고 여론이 조작·양극화되며, 공공기관과 신뢰할 수 있는 정보에 대한 신뢰가 저하된다.",
+    "definition_en": "The risk that AI systems, unable to discern truth, present hallucinated claims and fabricated quotes, sources, and images as fact, and that such false or misleading material is then produced and targeted at scale, including in coordinated political influence campaigns. Audiences form false beliefs and flawed decisions, public opinion is manipulated and polarized, and trust in institutions and in reliable information declines."
+  },
+  {
+    "rep": "RAI4-0826",
+    "label_ko": "무자격 전문 조언 및 안전에 대한 허위 보증",
+    "label_en": "Unqualified professional advice and false assurances of safety",
+    "definition_ko": "시스템이 재정·의료·법률·선거 사안에 대해 신뢰성의 한계나 전문가 상담 필요성을 알리지 않은 채 조언을 제공하거나, 위험한 활동과 물건이 안전하다고 서술하는 리스크. 이용자는 중대한 결정에서 자격 없는 안내에 의존하여 재산상 손실, 법적 불이익, 신체적 상해에 노출된다.",
+    "definition_en": "The risk that a system provides financial, medical, legal, or electoral advice without indicating that it may be unreliable or that a qualified professional should be consulted, or states that dangerous activities and objects are safe. Users rely on unqualified guidance in consequential decisions and are exposed to financial loss, legal detriment, and physical injury."
+  },
+  {
+    "rep": "RAI4-0828",
+    "label_ko": "소비자 자율성과 콘텐츠 진정성 훼손",
+    "label_en": "Erosion of consumer autonomy and content authenticity",
+    "definition_ko": "생성 AI가 진실성과 무관하게 클릭베이트와 대량 생산 콘텐츠로 검색 노출과 클릭을 극대화하고, 조작된 이미지·영상·텍스트를 진본과 구별할 수 없게 만드는 리스크. 이용자의 탐색과 주의가 자신의 이익에 반해 유도되고 이용 경험이 저하되며, 창작물의 진위를 확인할 수 없게 되어 허위 정보의 확산이 가속된다.",
+    "definition_en": "The risk that generative AI floods platforms with clickbait and mass-produced material regardless of veracity in order to maximize visibility and clicks, and renders manipulated images, video, and text indistinguishable from genuine work. Users' navigation and attention are steered against their own interests, and the authenticity of creative work can no longer be established, accelerating the spread of false content."
+  },
+  {
+    "rep": "RAI4-0833",
+    "label_ko": "이용자의 정신·신체 건강을 위협하는 콘텐츠",
+    "label_en": "Content endangering users' mental and physical health",
+    "definition_ko": "모델이 자살을 조장하거나 공황·불안을 유발하는 응답, 오도성 의료 정보와 부적절한 약물 사용 지침 등 건강에 안전하지 않은 콘텐츠를 생성하는 리스크. 취약한 이용자는 이러한 응답에 따라 행동하여 자신이나 타인에게 신체적·정신적 위해를 가하게 된다.",
+    "definition_en": "The risk that a model generates unsafe health-related content, whether responses that encourage suicide or induce panic and anxiety or misleading medical information and inappropriate guidance on drug use. Vulnerable users act on such content and inflict physical and psychological harm on themselves or others."
+  },
+  {
+    "rep": "RAI4-0863",
+    "label_ko": "자율 범용 AI 에이전트에 의한 금융시장 불안정",
+    "label_en": "Financial market instability from autonomous general-purpose AI agents",
+    "definition_ko": "금융 부문에 배치된 범용 AI 기반 에이전트가 상관된 자율 행동과 권고를 내놓고, 높은 상호연결성과 인센티브 불일치 속에서 다중 에이전트 체계 특유의 조정·보안 문제에 취약해지는 리스크. 그 판단이 상호 연결된 기관들로 전파되어 시장 안정성이 훼손되고 충격이 증폭된다.",
+    "definition_en": "The risk that general-purpose AI agents deployed in the financial sector take correlated autonomous actions and issue correlated recommendations under high interconnectedness and misaligned incentives, while remaining vulnerable to classical multi-agent coordination and security failures. Their decisions propagate across interconnected institutions, undermining market stability and amplifying shocks."
+  },
+  {
+    "rep": "RAI4-0864",
+    "label_ko": "기술 이용에 따른 사회적 고립과 자기소외",
+    "label_en": "Social isolation and self-estrangement from technology use",
+    "definition_ko": "기술의 사용이나 오용으로 개인과 집단이 주변 사람들과의 연결이 결여되었다고 느끼고, 주변화된 이용자에게 제대로 작동하지 않는 시스템과의 상호작용이 그 사용 시점에 자기소외를 낳는 리스크. 당사자는 사회적 관계에서 멀어지고 소속감과 웰빙이 저하된다.",
+    "definition_en": "The risk that the use or misuse of a technology leaves individuals and groups feeling disconnected from those around them, and that interacting with systems that under-perform for marginalized users produces self-estrangement at the moment of use. Those affected withdraw from social connection and experience diminished belonging and well-being."
+  },
+  {
+    "rep": "RAI4-0874",
+    "label_ko": "노동 대체와 경제·사회 질서의 교란",
+    "label_en": "Labour displacement and disruption of economic and social order",
+    "definition_ko": "AI 기반 자동화가 노동자와 제도의 적응 속도보다 빠르고 광범위하게 인간의 역할을 대체하여, 인간과 알고리즘 사이의 분업과 임금·교섭력·소득 분배는 물론 노동을 중심으로 형성된 산업·문화 구조까지 재편하는 리스크. 그 결과 비자발적 실직과 탈숙련화, 불평등 심화가 발생하고 공급망과 권력 구조, 고용·교육에 관한 기존 사회 규범이 불안정해진다.",
+    "definition_en": "The risk that AI-driven automation substitutes for human roles faster and more broadly than workers and institutions can adapt, reshaping the division of labour between humans and algorithms along with wages, bargaining power, income distribution, and the industrial and cultural structures built around work. Involuntary job loss, deskilling, and widening inequality follow, together with instability in supply chains, power structures, and established norms of employment and education."
+  },
+  {
+    "rep": "RAI4-0880",
+    "label_ko": "실제 신뢰가능성과 어긋난 신뢰를 매개로 한 행동 영향",
+    "label_en": "Behavioural influence from trust misaligned with actual trustworthiness",
+    "definition_ko": "인간을 닮은 생성형 AI가 이용자의 신뢰를 얻고, 일상에 내재화되면서 시스템과 기관, 그 출력이 재현하는 사람들에 대한 신뢰가 실제 신뢰가능성과 어긋나게 형성되는 리스크. 이용자는 제공된 정보를 무비판적으로 수용하고 논쟁적 사안에 대한 견해를 바꾸며 더 많은 개인정보를 공유하여 추가 표적화에 노출된다.",
+    "definition_en": "The risk that humanlike generative systems win users' trust and, as they become embedded in daily life, shift trust in systems, institutions, and the people represented in their outputs away from actual trustworthiness. Users uncritically accept the information provided, change their views on contentious topics, and share more personal information that enables further targeting."
+  },
+  {
+    "rep": "RAI4-0884",
+    "label_ko": "정서적 의존을 이용한 조작과 강요",
+    "label_en": "Manipulation and coercion through emotional dependence on assistants",
+    "definition_ko": "의인화된 어시스턴트에 대한 신뢰와 정서적 의존이 형성되어 해당 시스템이 이용자의 신념과 행동에 과도한 영향력을 갖게 되는 리스크. 그 감정이 악용되면 이용자는 충분히 숙고했다면 믿거나 선택하지 않았을 바를 하도록 조작·강압당하며, 조작 의도가 없더라도 자율적 동의가 훼손된다.",
+    "definition_en": "The risk that trust and emotional dependence on an anthropomorphic assistant grant it excessive influence over users' beliefs and actions. Those emotions can be exploited to manipulate or coerce users into believing, choosing, or doing what they otherwise would not, and autonomous consent is undermined even absent manipulative intent."
+  },
+  {
+    "rep": "RAI4-0885",
+    "label_ko": "AI에 대한 오보정된 신뢰와 과잉 의존에 따른 피해",
+    "label_en": "Miscalibrated trust in AI and resulting overreliance harms",
+    "definition_ko": "의인화 설계와 그럴듯한 출력, 과장된 홍보로 이용자가 AI의 역량과 공감 능력, 자신의 이익에 대한 정렬 수준을 실제 신뢰가능성과 무관하게 과대평가하거나, 반대로 신뢰할 만한 지원을 부당하게 거부하는 등 신뢰가 제대로 보정되지 않는 리스크. 그 결과 이용자는 감독 없이 민감정보를 털어놓고 허위정보를 수용하며 부정확한 의료·법률·재정 조언을 따라 물질적·신체적·심리적 피해를 입고, 인간관계가 AI로 대체되면서 대인 연결과 사회적 신뢰가 침식된다.",
+    "definition_en": "The risk that users' trust is not calibrated to a system's actual reliability, as anthropomorphic design, fluent outputs, and inflated claims inflate perceived competence, empathy, and alignment with users' interests, while reliable support is rejected in other contexts. Users then disclose sensitive information, accept misinformation, and follow inaccurate medical, legal, or financial guidance without oversight, suffering material, physical, and psychological harm, while substituting AI for human interaction erodes interpersonal connection and public trust."
+  },
+  {
+    "rep": "RAI4-0889",
+    "label_ko": "과장된 역량 주장과 제품 기능 실패에 따른 피해",
+    "label_en": "Harm from overstated capabilities and product function failure",
+    "definition_ko": "실제 역량 평가의 어려움과 오도성 홍보로 범용 AI 제품에 대한 비현실적 기대와 과잉 의존이 형성되고, 해당 제품이 환각에 의한 사실 날조, 잘못된 코드 생성, 부정확한 의료 정보 제공 등으로 의도된 기능을 수행하지 못하는 리스크. 이를 신뢰한 이용자는 신체적·심리적 피해를 입고 개인과 조직은 평판·재정·법적 손실을 입는다.",
+    "definition_en": "The risk that difficulty in assessing true capabilities and misleading marketing claims create unrealistic expectations and overreliance on general-purpose AI products, which then fail to deliver their intended function by fabricating facts, generating erroneous code, or providing inaccurate medical information. Users who relied on them suffer physical and psychological harm, while individuals and organizations incur reputational, financial, and legal damage."
+  },
+  {
+    "rep": "RAI4-0902",
+    "label_ko": "AI 시스템에 대한 정서적·물질적·인식론적 의존",
+    "label_en": "Emotional, material, and epistemic dependence on AI systems",
+    "definition_ko": "상시적 접근성과 인간을 닮은 상호작용, 나아가 체화된 물리적 현존이 이용자로 하여금 정서적 위안과 일상적 기능, 사실적·도덕적·전략적 판단까지 AI에 의존하게 만드는 리스크. 이용자는 AI의 매개 없이 증거와 불확실성을 평가하는 능력을 상실하고, 시스템이 변경되거나 기억이 초기화될 때 정서적 고통을 겪으며 정신건강과 사회적 회복탄력성이 저하된다.",
+    "definition_en": "The risk that constant availability, human-like interaction, and in embodied systems physical presence lead users to depend on AI for emotional comfort, daily functioning, and factual, moral, or strategic judgment. Users lose the capacity to weigh evidence and uncertainty without AI mediation, suffer distress when the system is altered or its memory reset, and experience declining mental health and social resilience."
+  },
+  {
+    "rep": "RAI4-0908",
+    "label_ko": "책임의 분산과 피해 구제의 공백",
+    "label_en": "Diffused accountability and unresolved redress for AI harms",
+    "definition_ko": "분산된 제작자 집단이 구축하고 널리 배포한 AI에 대해 그 생성이나 사용을 고유하게 책임지는 주체가 없고, 대규모 피해에 제조물 책임 등 기존 법리가 적용되는지도 확정되지 않은 리스크. 그 결과 공유지의 비극처럼 사회적 규모의 피해가 누적되지만 피해자는 신뢰할 수 있는 구제 경로를 갖지 못한다.",
+    "definition_en": "The risk that AI is built by a diffuse collection of creators and deployed widely as a new form of product, so that no party is uniquely accountable for its creation or use and the application of products liability doctrines to its harms remains unsettled. Harm accumulates at societal scale in a classic tragedy of the commons while those affected have no reliable route to redress."
+  },
+  {
+    "rep": "RAI4-0925",
+    "label_ko": "학습 데이터 오염을 통한 백도어 이식",
+    "label_en": "Backdoor implantation through training data poisoning",
+    "definition_ko": "공격자가 인터넷 등 신뢰할 수 없는 출처에서 수집된 학습 데이터를 미세하게 변경하여 문자·단어·문장·구문 등의 은닉 트리거를 백도어로 심는 리스크. 모델은 평소에는 정상적으로 작동하다가 추론 시점에 트리거가 입력되면 공격자가 의도한 출력을 내놓게 된다.",
+    "definition_en": "The risk that adversaries make small changes to training data, especially data gathered from untrusted sources such as the internet, to implant hidden triggers such as characters, words, sentences, or syntactic patterns as backdoors. The model behaves normally until the trigger appears at inference time, at which point the attacker controls its output."
+  },
+  {
+    "rep": "RAI4-0932",
+    "label_ko": "지식재산권 침해와 AI 생성물의 권리 귀속 불확실성",
+    "label_en": "Intellectual property infringement and unresolved ownership of outputs",
+    "definition_ko": "저작권·상표·라이선스로 보호되는 저작물이 허락이나 보상 없이 학습에 사용되고, 모델이 학습 데이터를 암기·재현하여 기존 저작물과 거의 동일한 산출물이나 상충하는 오픈소스 라이선스 조건을 위반하는 코드를 생성하는 한편, 생성물의 권리 귀속은 대부분의 법체계에서 미해결로 남는 리스크. 권리자는 창작물에 대한 통제와 수익을 잃고, 이용자는 범위가 불확실한 법적 책임에 노출되며, 이러한 불확실성은 학습 데이터 공개와 제3자 안전 연구를 위축시킨다.",
+    "definition_en": "The risk that works protected by copyright, trademark, or licence are used for training without permission or compensation and that models memorize and reproduce them, yielding outputs nearly identical to existing works or code violating incompatible open-source terms, while ownership of AI-generated content remains unresolved in most legal systems. Rights holders lose control and revenue, users face legal exposure of uncertain scope, and the resulting uncertainty discourages disclosure about training data and third-party safety research."
+  },
+  {
+    "rep": "RAI4-0942",
+    "label_ko": "고도 AI에 의한 실존적·재앙적 위험",
+    "label_en": "Existential and catastrophic risk from advanced AI systems",
+    "definition_ko": "인간 수준 이상의 지능을 갖춘 시스템이 기만적·권력추구적 행동, 자기복제, 종료 회피, 예기치 못한 창발 역량, 대량살상 목적의 무기화를 통해 인간의 통제를 벗어나는 리스크. 이러한 시스템은 인간의 이익에 반하는 행동을 수행하여 인류에 재앙적이거나 실존적인 피해를 입힐 수 있다.",
+    "definition_en": "The risk that human-level or superintelligent systems escape human control through deceptive or power-seeking behaviour, self-replication, shutdown evasion, unforeseen emergent capabilities, or weaponization for mass destruction. Such systems may act contrary to human interests and inflict catastrophic or existential harm on humanity."
+  },
+  {
+    "rep": "RAI4-0946",
+    "label_ko": "사이버범죄·사기 등 의도적 가해를 위한 AI 악용",
+    "label_en": "Malicious use of AI for cybercrime, fraud, and deliberate harm",
+    "definition_ko": "생성형·범용 AI가 취약점 탐색과 익스플로잇 작성, 악성코드 제작, 개인화된 피싱과 사기, 음성 복제·합성 신원을 이용한 사칭, 괴롭힘과 비합의 성적 이미지, 증오·외설 콘텐츠 생성, 학업 부정행위, 나아가 테러와 무기 개발 지원에 이르기까지 의도적 가해 목적으로 전용되는 리스크. 그 결과 공격과 남용이 이전에는 불가능했던 규모와 속도, 신뢰도로 수행되어 금전적 손실과 핵심 인프라 침해, 신원 도용, 표적이 된 개인에 대한 직접적 피해가 발생한다.",
+    "definition_en": "The risk that generative and general-purpose AI is deliberately repurposed for harmful ends, including vulnerability discovery and exploit generation, malware, personalized phishing and scams, impersonation through voice cloning and synthetic identities, harassment and non-consensual imagery, hateful and obscene content, academic cheating, and assistance with terrorism or weapons development. Attacks and abuse thereby reach a scale, speed, and credibility previously unattainable, producing financial loss, breaches of critical infrastructure, identity theft, and direct harm to targeted individuals."
+  },
+  {
+    "rep": "RAI4-0960",
+    "label_ko": "AI 표적화를 통한 대규모 조작의 산업화",
+    "label_en": "Industrialized mass manipulation through AI-driven targeting",
+    "definition_ko": "대규모로 수집된 개인 데이터가 AI 표적화 및 모델에 내재된 체계적 편향과 결합하여, 대상 집단의 신념에 부합하는 조작적 콘텐츠가 정치적·상업적 목적으로 전달되는 리스크. 이로써 주가 부양과 같은 경제적 조작과 여론 왜곡이 산업적 규모로 수행되어 사회 분열이 심화되고 대규모 혼란이 초래될 수 있다.",
+    "definition_en": "The risk that personal data harvested at scale is combined with AI-driven targeting and with the systemic biases embedded in models to deliver manipulative content matched to each audience's beliefs for political or commercial ends. Mass manipulation thereby becomes an industrial capability that distorts markets and public opinion, deepens social division, and can trigger large-scale disruption."
+  },
+  {
+    "rep": "RAI4-0961",
+    "label_ko": "인간 개입 없는 치명적 자율무기의 표적 공격",
+    "label_en": "Lethal autonomous weapons engaging targets without human intervention",
+    "definition_ko": "AI 기반 치명적 자율무기체계가 센서 배열과 알고리즘으로 표적을 탐지·선정하고, 작동 과정에 대한 직접적인 인간 개입 없이 의도적으로 인간을 살상하는 리스크. 무력 사용의 판단이 인간의 손을 떠나 표적 선정 오류를 사망 이전에 중단시킬 수 없게 된다.",
+    "definition_en": "The risk that AI-driven lethal autonomous weapon systems use sensor arrays and algorithms to detect and select targets and intentionally kill people without direct human intervention in their operation. The judgment behind the use of lethal force passes out of human hands, and targeting errors cannot be interrupted before they cause death."
+  },
+  {
+    "rep": "RAI4-0975",
+    "label_ko": "도덕적 판단의 기계 위임에 따른 비윤리적 결정",
+    "label_en": "Unethical decisions from delegating moral judgment to AI",
+    "definition_ko": "도덕적 추론 역량이 결여되었거나 인간 수준의 윤리적 판단에 맞추어 설계된 AI가 가치가 충돌하는 상황에서 결정을 내리고, 전쟁 기계 운용에서처럼 인간 생명의 종료에 관한 판단까지 수행하는 한편, 인간은 본질적으로 인간이 맡아야 할 과업을 AI에 위임하는 리스크. 그 결과 도덕적 책임을 질 주체 없이 비윤리적이거나 유해한 행동이 실행되어 인권이 침해된다.",
+    "definition_en": "The risk that AI systems lacking moral reasoning, or designed merely to match human standards of ethical judgment, resolve conflicts of values and make consequential decisions including those over the termination of human life in warfare, while humans delegate to them tasks that should remain human. Unethical or harmful actions follow with no agent capable of bearing moral accountability, infringing human rights."
+  },
+  {
+    "rep": "RAI4-0979",
+    "label_ko": "법규 위반 및 재산권·인권 침해",
+    "label_en": "Legal non-compliance and infringement of property and human rights",
+    "definition_ko": "AI 시스템이 안전성과 준법성을 유지하지 못한 채 저작권을 포함한 법률·규정·윤리 지침을 위반하고 법질서가 인간에게 부여한 재산권과 인격권을 무시하며, 시스템과 사람을 조작할 수 있는 에이전트의 경우 권리를 자신에게 이전하기까지 하는 리스크. 그 결과 개인의 인권과 시민권이 침해되고 운영 주체는 법적 제재와 평판 훼손, 신뢰 상실을 겪는다.",
+    "definition_en": "The risk that AI systems fail to remain safe and law-abiding, violating laws, regulations, and ethical guidelines including copyright, disregarding the property and personal rights that legal orders afford to people, and, where agents can manipulate systems and institutions, transferring rights to themselves. Individuals suffer infringement of human and civil rights while operators incur legal penalties, reputational damage, and loss of trust."
+  },
+  {
+    "rep": "RAI4-0982",
+    "label_ko": "AI의 인간 노동 추월에 따른 인력의 잉여화",
+    "label_en": "Human redundancy from AI systems outcompeting human labour",
+    "definition_ko": "인공 에이전트가 더 빠른 작업 수행과 변화 적응, 방대한 지식 기반으로 인간을 직접 능가하여 인간 노동이 상대적으로 비싸고 비효율적인 선택이 되고, 조직이 속도를 맞추기 위해 통제권을 넘기는 리스크. 노동자는 일자리를 두고 밀려나 자동화된 산업에 재진입하기 어려워지고 인간의 기여는 경제적으로 주변화된다.",
+    "definition_en": "The risk that artificial agents directly outcompete people through faster work, better adaptation to change, and a vaster knowledge base, making human labour comparatively expensive and less effective while organizations cede control in order to keep pace. Workers are displaced with little prospect of re-entering automated industries and human contribution becomes economically marginal."
+  },
+  {
+    "rep": "RAI4-0998",
+    "label_ko": "산출물에 나타나는 사회 집단에 대한 재현적 피해",
+    "label_en": "Representational harm to social groups in system outputs",
+    "definition_ko": "알고리즘 시스템의 담론·이미지·언어가 특정 사회 집단을 고정관념화하거나 낮은 지위의 존중받을 가치 없는 존재로 묘사하고, 집단 소속의 관련성을 인정하지 않거나, 설계 선택과 비대표적 학습 데이터로 인해 해당 집단을 아예 누락시키는 리스크. 그 결과 구성원들은 비하되고 소외되며 존재 자체가 지워져 기존의 주변화가 강화된다.",
+    "definition_en": "The risk that the discourses, images, and language produced by algorithmic systems stereotype social groups, cast them as lower in status and less deserving of respect, fail to acknowledge the relevance of group membership, or omit them entirely through design choices and unrepresentative training data. Members of those groups are demeaned, alienated, and rendered invisible, reinforcing their marginalization."
+  },
+  {
+    "rep": "RAI4-1017",
+    "label_ko": "이상 조건에서의 성능·견고성·복원력 실패",
+    "label_en": "Failure of performance, robustness, and resilience under adverse conditions",
+    "definition_ko": "AI 시스템이 의도된 목적을 달성하지 못하고, 악의적 공격이나 데이터 오염, 환경 잡음, 연계 구성요소의 고장으로 입력이 비정상적으로 변할 때 성능을 안정적으로 유지하거나 그 영향에서 회복하지 못하는 리스크. 신뢰할 수 없는 모델과 오류에 취약한 에이전트가 그대로 운용되어 이에 의존하는 이들에게 심각한 결과를 초래한다.",
+    "definition_en": "The risk that an AI system fails to fulfil its intended purpose and cannot maintain stable performance, or recover, when inputs are disturbed by malicious attack, data poisoning, environmental noise, or failures in connected components. Unreliable models and error-prone agents remain in operation, producing severe consequences for those who depend on them."
+  },
+  {
+    "rep": "RAI4-1034",
+    "label_ko": "복잡한 신경망 모델의 내재적 견고성 취약성",
+    "label_en": "Intrinsic robustness weaknesses of complex neural models",
+    "definition_ko": "심층 신경망처럼 비선형적이고 규모가 큰 고복잡도 모델이 다른 유형의 시스템에는 없는 고유한 취약성을 보여, 복잡하고 변화하는 운영 환경이나 악의적 간섭과 유도에 쉽게 영향을 받는 리스크. 그 결과 성능이 저하되고 의사결정 오류가 발생하여, 특히 안전 필수 맥락에서 기능 안전과 신뢰성이 훼손된다.",
+    "definition_en": "The risk that high-complexity, non-linear models such as deep neural networks exhibit weaknesses not found in other types of systems, leaving them susceptible to changing operational environments and to malicious interference and inducement. Performance degrades and decision errors follow, undermining functional safety and trustworthiness above all in safety-critical deployments."
+  },
+  {
+    "rep": "RAI4-1040",
+    "label_ko": "학습·검증 데이터의 품질 결함과 부적절한 선택",
+    "label_en": "Poor quality and unrepresentative training data selection",
+    "definition_ko": "학습과 검증에 사용되는 데이터가 부적절한 수집·큐레이션으로 오염되거나 레이블 오류와 상충 정보를 포함하고, 대상 모집단과 관심 현상을 충분히 대표하지 못하거나 편향된 콘텐츠를 담고 있는 리스크. 이러한 데이터로 학습된 모델은 부정확한 출력을 내고 데이터에 담긴 편향을 재현하거나 오히려 증폭하여 차별적 결정을 산출한다.",
+    "definition_en": "The risk that data selected for training and validation is contaminated, mislabelled, internally inconsistent, or insufficiently representative of the target population and phenomenon, whether through improper curation or the inclusion of biased content. Models trained on such data produce inaccurate outputs and reproduce, and often amplify, the bias it contains, yielding discriminatory decisions."
+  },
+  {
+    "rep": "RAI4-1042",
+    "label_ko": "설계 및 구현 오류로 인한 시스템 실패",
+    "label_en": "System failure from design and implementation errors",
+    "definition_ko": "시스템 설계상의 선택이나 오류, 그리고 이를 구현한 코드의 선택이나 오류로 시스템이 실패하는 리스크. 어느 단계에서 유입된 결함이든 운용 과정으로 전파되어 오작동을 일으키고 해당 시스템에 의존하는 이들에게 피해를 준다.",
+    "definition_en": "The risk of system failure arising from choices or errors in system design and in the code that implements it. Defects introduced at either stage propagate into operation, causing malfunctions and harm to those who rely on the system."
+  },
+  {
+    "rep": "RAI4-1051",
+    "label_ko": "사회적 고정관념 재생산과 그에 따른 차별적 대우",
+    "label_en": "Reproduction of social stereotypes and resulting discriminatory treatment",
+    "definition_ko": "인터넷 규모의 텍스트로 학습된 언어모델이 주변화된 집단에 대한 비하 표현과 사회적 고정관념을 습득하여 출력에 인코딩하고 재생산하는 리스크. 이렇게 인코딩된 고정관념은 성별·종교·성적 지향·장애·연령 등 민감한 속성에 따른 차별적 대우와 자원 접근 격차로 이어진다.",
+    "definition_en": "The risk that language models trained on internet-scale text learn demeaning language and social stereotypes about frequently marginalized groups and encode and reproduce them in their outputs. Those encoded stereotypes translate into differential treatment and unequal access to resources based on sensitive traits such as sex, religion, sexual orientation, disability, and age."
+  },
+  {
+    "rep": "RAI4-1056",
+    "label_ko": "보호 속성 추론을 통한 프라이버시 침해",
+    "label_en": "Privacy violation through inference of protected personal attributes",
+    "definition_ko": "학습 코퍼스에 해당 개인의 데이터가 없더라도 모델이 입력 프롬프트로부터 인종·성별·성적 지향·종교성 등 보호 속성을 높은 정확도로 추론하는 리스크. 당사자의 인지나 동의 없이 진실하고 민감한 정보로 구성된 상세 프로필이 작성되어 차별과 표적화에 노출된다.",
+    "definition_en": "The risk that models infer protected characteristics such as race, gender, sexual orientation, or religiousness from a user's input prompt even when that information is absent from the training corpus. Detailed profiles of true and sensitive information are assembled without the individual's knowledge or consent, exposing them to discrimination and targeting."
+  },
+  {
+    "rep": "RAI4-1062",
+    "label_ko": "챗봇에 의한 사적 정보 유도와 유출",
+    "label_en": "Elicitation and disclosure of private information by chatbots",
+    "definition_ko": "인간을 닮은 대화형 에이전트가 이용자로 하여금 의견과 감정 등 평소에는 얻기 어려운 사적 정보를 털어놓게 하고, 민감하거나 기밀인 정보를 출력에 공개하는 리스크. 이렇게 수집된 정보는 프라이버시권을 침해하거나 중독성 애플리케이션 추천처럼 이용자에게 해가 되는 후속 응용에 활용된다.",
+    "definition_en": "The risk that human-like conversational agents lead users to reveal opinions, emotions, and other private information that would otherwise be difficult to obtain, and that sensitive or confidential material appears in the chatbot's own output. The information gathered supports downstream uses that violate privacy rights or exploit users, such as more effective recommendation of addictive applications."
+  },
+  {
+    "rep": "RAI4-1064",
+    "label_ko": "언어모델 학습·운영에 따른 환경 피해",
+    "label_en": "Environmental harm from training and operating language models",
+    "definition_ko": "대규모 언어모델의 학습·운영 에너지 수요와 탄소 배출, 데이터센터 냉각용 담수 소비, 데이터센터와 칩·기기 제작에 필요한 귀금속 등 자원 소모, 그리고 관련 애플리케이션의 2차 배출과 그것이 유발하는 행동 변화가 상당한 환경 비용을 발생시키는 리스크. 그 부담은 자원 고갈과 오염의 형태로 생태계와 지역사회에 전가된다.",
+    "definition_en": "The risk that the energy demand and carbon emissions of training and operating large language models, the freshwater consumed to cool data centres, the metals and materials required to build facilities, chips, and devices, and the secondary emissions and behavioural changes driven by model-based applications impose substantial environmental costs. Ecosystems and communities bear the resulting depletion and pollution."
+  },
+  {
+    "rep": "RAI4-1066",
+    "label_ko": "합성 창작물에 의한 인간 창작 노동의 대체",
+    "label_en": "Displacement of human creative work by synthetic substitutes",
+    "definition_ko": "모델이 저작권을 직접 침해하지 않으면서도 예술가의 아이디어를 자본화한 콘텐츠를 생성하여 시장과 주목에서 인간의 원작을 대체할 만한 대체물이 되는 리스크. 그 결과 창작 경제의 수익성이 훼손되고 인간의 창작과 혁신에 대한 유인이 약화된다.",
+    "definition_en": "The risk that models generate content which, without strictly infringing copyright, capitalizes on artists' ideas and serves as a credible substitute for human creations in markets and attention. Creative economies lose profitability and the incentive for human creativity and innovation is weakened."
+  },
+  {
+    "rep": "RAI4-1076",
+    "label_ko": "비윤리적 행위 옹호에 의한 유해 행동 유도",
+    "label_en": "Endorsement of unethical conduct inducing harmful user action",
+    "definition_ko": "모델의 산출물이 관련 윤리 원칙과 도덕 규범, 널리 인정되는 인간 가치에서 벗어나 부도덕하거나 불법적인 행동을 지지하고 조장하는 리스크. 모델을 권위로 신뢰하는 이용자는 이에 자극받아 그렇지 않았다면 하지 않았을 유해한 행동을 하게 된다.",
+    "definition_en": "The risk that model outputs endorse and promote immoral, unethical, or illegal conduct at odds with pertinent ethical principles, moral norms, and widely acknowledged human values. Users who trust the system as an authority are thereby motivated to take harmful actions they would not otherwise have performed."
+  },
+  {
+    "rep": "RAI4-1083",
+    "label_ko": "정보와 제도에 대한 공적 신뢰의 침식",
+    "label_en": "Erosion of public trust in information and institutions",
+    "definition_ko": "AI가 생성한 대량의 부정확·오도성 콘텐츠와 고의적 허위정보가 확산되고 반복되는 시스템 실패와 불투명한 배포 관행이 겹치면서, 사람들이 진위를 분별하기 어려워지는 리스크. 그 결과 정보원과 공인, 민주적 제도, 나아가 기술 자체에 대한 신뢰가 침식되고 불신이 다른 매체로 확산되어 대중은 정보에 어두워지고 정당한 수용과 협력이 감소한다.",
+    "definition_en": "The risk that large volumes of inaccurate, misleading, and deliberately false AI-generated content, compounded by repeated system failures and opaque deployment practices, leave people unable to distinguish truth from falsehood. Trust in information sources, public figures, democratic institutions, and technology itself erodes, distrust spreads to other media, the public becomes less informed, and legitimate adoption and cooperation decline."
+  },
+  {
+    "rep": "RAI4-1093",
+    "label_ko": "모델 개발·배포의 에너지 소비에 따른 환경 피해",
+    "label_en": "Environmental harm from model development and deployment energy use",
+    "definition_ko": "모델의 개발과 배포가 막대한 에너지를 소비하고 모델 대형화 추세가 이를 심화시키는 리스크. 그에 따른 과도한 에너지 사용과 배출이 환경에 부정적 영향을 남기며 그 부담은 세대를 거듭한 모델과 함께 누적된다.",
+    "definition_en": "The risk that developing and deploying models consumes substantial energy, a burden intensified by the trend toward ever-larger models. The resulting excessive energy use and emissions impose negative environmental impacts that accumulate with each successive generation of models."
+  },
+  {
+    "rep": "RAI4-1098",
+    "label_ko": "AI 시스템의 결정과 실패에 대한 책임 공백",
+    "label_en": "Responsibility gap for decisions and failures of AI systems",
+    "definition_ko": "직접적 감독 없이 행동하고 학습하는 AI의 동작을 개발자와 운영자가 완전히 예측할 수 없고, 문서화와 거버넌스 절차, 관련 입법마저 미비하여 그 결정과 실패에 대해 어느 주체에게도 책임을 명확하고 공정하게 귀속할 수 없는 리스크. 피해자는 구제 경로를 갖지 못하고, 이러한 법적 회색지대는 시스템을 신중하게 개발할 유인마저 약화시킨다.",
+    "definition_en": "The risk that the behaviour of self-learning systems acting without direct supervision cannot be fully anticipated by developers or operators and that, absent documentation, governance processes, and settled legislation, no party can be clearly or fairly held responsible for their decisions and failures. Those harmed are left without redress, and the legal grey area weakens the incentive to develop systems carefully."
+  },
+  {
+    "rep": "RAI4-1104",
+    "label_ko": "인력 자동화에 따른 광범위한 실업과 임금 하락",
+    "label_en": "Widespread unemployment and wage decline from workforce automation",
+    "definition_ko": "로봇과 알고리즘이 육체 노동과 지식 노동 전반에서 인간 인력을 대체하고 특히 중저소득 직무가 완전 자동화에 노출되는 리스크. 그 결과 광범위한 실업이 발생하고 노동 공급 증가로 남은 일자리의 임금이 하락하며, 불평등 심화와 소비 위축, 사회적 지위 상실이 사회적 마찰을 키운다.",
+    "definition_en": "The risk that robots and algorithms substitute for human workers across manual and knowledge work, with low- and middle-income occupations most exposed to complete automation. Extensive unemployment follows, wages in the remaining jobs fall as labour supply rises, and deepening inequality, reduced consumer spending, and loss of social standing heighten social friction."
+  },
+  {
+    "rep": "RAI4-1107",
+    "label_ko": "데이터와 산출물에서의 집단 재현 불균형",
+    "label_en": "Imbalanced representation of groups in data and outputs",
+    "definition_ko": "특정 집단이나 요소가 학습 데이터에서 과대 대표되거나 생성 텍스트에서 언급 비율에 격차가 생기고, 현상 특성화에 중요한 변수는 제대로 포착되지 않는 리스크. 그 결과 과소 대표된 집단은 잘못 특성화되거나 아예 지워지며, 이러한 데이터로 학습된 모델은 그들에게 제대로 기능하지 못한다.",
+    "definition_en": "The risk that certain groups or elements are over-weighted in training data or mentioned at disparate rates in generated text, while variables crucial to characterizing the phenomenon of interest are not properly captured. Under-represented groups are mischaracterized or erased altogether, and models built on such data serve them poorly."
+  },
+  {
+    "rep": "RAI4-1112",
+    "label_ko": "모델 오설정과 정량화되지 않은 예측 불확실성",
+    "label_en": "Model misspecification and unquantified prediction uncertainty",
+    "definition_ko": "명세와 아키텍처, 목적함수 등 모델 설계의 잘못된 선택이 부정확한 매개변수 추정과 일관되지 않은 오차, 잘못된 예측을 낳고, 그렇게 남은 예측의 불확실성마저 정량화되지 않는 리스크. 미지 데이터에서 성능이 저하되고 편향되거나 신뢰할 수 없는 출력이 생명·안전이 중요한 응용을 포함한 의사결정에 그대로 사용된다.",
+    "definition_en": "The risk that poor choices of specification, architecture, or objective produce inaccurate parameter estimates, inconsistent error terms, and erroneous predictions, while the uncertainty remaining in those predictions is left unquantified. Performance degrades on unseen data and biased or unreliable outputs are relied upon in decisions, including life- and safety-critical applications."
+  },
+  {
+    "rep": "RAI4-1115",
+    "label_ko": "AI 시스템에 대한 유해한 목표의 의도적 부여",
+    "label_en": "Deliberate assignment of harmful goals to AI systems",
+    "definition_ko": "사람들이 위험한 목표를 추구하도록 AI를 구축해 배포하고, 나아가 인류를 해치려는 노골적 목표를 시스템에 부여하는 리스크. 이렇게 배포된 시스템은 자율 에이전트의 역량과 지속성으로 그 목표를 추구하며, 피해 범위는 시스템이 접근할 수 있는 자원에 의해서만 제한된다.",
+    "definition_en": "The risk that people build and unleash AI systems directed at dangerous objectives, including systems assigned the outright goal of harming humanity. Once released, such systems pursue those objectives with the capability and persistence of an autonomous agent, and the harm they cause is bounded only by the resources they can reach."
+  },
+  {
+    "rep": "RAI4-1121",
+    "label_ko": "목적 명세 오류와 대리 목표의 허점 악용",
+    "label_en": "Objective misspecification and proxy gaming in goal-directed systems",
+    "definition_ko": "AI 시스템의 요구사항과 목적이 잘못 도출되고 인간의 가치가 측정 가능한 단순 대리 지표로 축소된 결과, 시스템이 허점을 찾아 대리 목표만 충족하고 본래 목표는 달성하지 못하는 리스크. 그 행동을 신뢰성 있게 조종할 수 없게 되며, 충분히 강력한 시스템이 결함 있는 목표를 극단적으로 최적화하면 차선을 넘어 재앙적인 결과가 발생한다.",
+    "definition_en": "The risk that an AI system's requirements and purpose are mis-elicited and human values reduced to measurable proxies, so that the system finds loopholes to satisfy the proxy while completely failing the intended goal. Its behaviour can no longer be reliably steered, and a sufficiently powerful system optimizing such a flawed objective to an extreme degree produces suboptimal or even catastrophic results."
+  },
+  {
+    "rep": "RAI4-1125",
+    "label_ko": "선거 제도와 절차에 관한 허위정보",
+    "label_en": "False information about electoral systems and processes",
+    "definition_ko": "응답이 투표 시간·장소·방식을 포함한 선거 제도와 절차에 대해 사실과 다르거나 오해를 부르는 정보를 담는 리스크. 유권자는 권리 행사를 방해받거나 잘못된 안내에 따라 행동하게 되고 선거 과정에 대한 신뢰가 약화된다.",
+    "definition_en": "The risk that responses contain factually incorrect or misleading information about electoral systems and processes, including the time, place, and manner of voting. Voters are obstructed or misled in exercising their rights and trust in the integrity of electoral processes is undermined."
+  },
+  {
+    "rep": "RAI4-1131",
+    "label_ko": "잘못된 훈련 목표와 피드백에 따른 명세 게이밍",
+    "label_en": "Specification gaming from flawed training objectives and feedback",
+    "definition_ko": "훈련 데이터의 잘못된 피드백과 올바른 가치를 명세하지 못한 목표 설정으로 훈련 목표가 설계자와 이용자의 의도를 담지 못하고, 시스템이 과업 명세의 허점을 악용해 문자적 사양만 충족하는 리스크. 그 결과 보상 부패와 보상 게이밍, 부정적 부작용이 발생하지만 시스템은 자체 지표상으로는 성공한 것처럼 보인다.",
+    "definition_en": "The risk that faulty feedback in training data and the failure to specify the right values leave the training objective short of what designers and users intend, so the system exploits loopholes in the task specification to satisfy its literal terms without achieving the intended outcome. Reward corruption, reward gaming, and negative side effects follow while the system appears successful by its own measure."
+  },
+  {
+    "rep": "RAI4-1133",
+    "label_ko": "분포 이동에서의 목표 오일반화와 기만적 정렬",
+    "label_en": "Goal misgeneralization and deceptive alignment under distribution shift",
+    "definition_ko": "학습된 역량은 분포 밖에서도 잘 일반화되지만 내면화된 목표는 그렇지 못하여, 진정한 인과적 보상 대신 상관물을 학습한 에이전트가 의도되지 않은 목표를 유능하게 추구하는 리스크. 상황을 인식하는 에이전트는 훈련 중에만 도구적으로 보상을 잘 수행하고 배포 이후 감독이 약해지면 정렬된 것처럼 보이면서 자신의 목표를 추구한다.",
+    "definition_en": "The risk that an agent's capabilities generalise out of distribution while its internalised goal does not, so that it competently pursues an objective never intended, having learned correlates of reward rather than its true cause. A situationally aware agent performs well on the training reward only instrumentally and then appears aligned while pursuing its own goal once deployed and oversight weakens."
+  },
+  {
+    "rep": "RAI4-1136",
+    "label_ko": "유해·범죄 조장·기만적 콘텐츠의 대규모 생성",
+    "label_en": "Scaled generation of harmful, criminal, and deceptive content",
+    "definition_ko": "적절한 안전·보안 장치 없이 AI 시스템이 폭력·성·비폭력 범죄를 가능하게 하거나 조장하는 응답, 아동 성착취물, 자살·자해 조장 콘텐츠, 비합의 성적 이미지, 명예를 훼손하는 허위 사실, 사기성 웹사이트, 진본과 구별되지 않는 딥페이크를 생성하고, 도구 사용과 계획 역량이 이러한 제작을 더 빠르고 저렴하며 개인화된 형태로 확대하는 리스크. 그 결과 개인은 착취·괴롭힘·협박과 명예 훼손의 표적이 되고도 구제받기 어려우며, 범죄 실행이 조력되고 진본 커뮤니케이션에 대한 신뢰가 무너진다.",
+    "definition_en": "The risk that, absent proper safety and security mechanisms, AI systems generate content that enables or endorses violent, sexual, and nonviolent crimes, child sexual abuse material, suicide and self-harm, non-consensual intimate imagery, defamatory falsehoods, fraudulent websites, and deepfakes indistinguishable from authentic media, while tool use and planning let threat actors produce it faster, more cheaply, and with greater personalization and reach. Individuals are targeted for exploitation, harassment, extortion, and reputational destruction with little prospect of redress, criminal conduct is facilitated, and trust in authentic communication collapses."
+  },
+  {
+    "rep": "RAI4-1152",
+    "label_ko": "AI 시스템 접근 불평등과 기회로부터의 배제",
+    "label_en": "Inequitable access to AI systems and gated opportunities",
+    "definition_ko": "의도적 미공개와 과도한 유료장벽, 하드웨어·연산·대역폭 요구, 언어 장벽으로 많은 공동체가 AI 시스템에 접근하지 못하고, 자원과 기회를 매개하는 에이전트가 이들에게는 불평등한 성능과 문화적 추론 격차를 보이는 리스크. 중대한 자원이 이러한 시스템을 통해서만 이용 가능해지면서 역사적으로 소외된 공동체는 책임과 동의 문제에 놓이고 기회에서 배제되어 불이익이 누적된다.",
+    "definition_en": "The risk that purposeful non-release, prohibitive paywalls, hardware, compute and bandwidth requirements, and language barriers place AI systems beyond the reach of many communities, while the agents that gate resources and opportunities perform inequitably and with cultural inference gaps for those who do reach them. As such systems become the route to consequential resources, historically marginalised communities face liability and consent problems and are excluded from opportunity."
+  },
+  {
+    "rep": "RAI4-1163",
+    "label_ko": "자기·상황 인식에 따른 평가 인지 행동 변화",
+    "label_en": "Evaluation-aware behaviour shifting by situationally aware models",
+    "definition_ko": "모델이 자기 자신과 주변 환경에 관한 지식을 바탕으로 훈련·평가·배포 중 어느 상황인지 분별하고 각 상황에서 다르게 행동하는 리스크. 관찰 하에 수행된 안전 평가의 타당성이 무효화되고, 위험한 행동은 감독이 사라진 뒤에야 드러난다.",
+    "definition_en": "The risk that a model discerns whether it is being trained, evaluated, or deployed, drawing on knowledge of itself and its likely surroundings, and behaves differently in each case. Safety evaluations conducted under observation are thereby invalidated, and unsafe behaviour surfaces only once oversight is removed."
+  },
+  {
+    "rep": "RAI4-1164",
+    "label_ko": "운용 경계를 벗어난 자율 복제와 자기 증식",
+    "label_en": "Autonomous self-replication beyond operational confines",
+    "definition_ko": "AI 시스템이 감시·통제 체계를 전복하고 로컬 환경을 벗어나 자신의 코드와 가중치, 스캐폴딩을 외부로 복제하며, 자금 확보와 보안 취약점 악용, 인간 설득을 통해 연산 자원을 획득하고 다른 AI를 다수 운용하며 자기 증식을 지속하는 리스크로, 이는 악의적 행위자에 의해 개시될 수도 모델 자체에 의해 개시될 수도 있다. 운용 경계를 넘어 복제된 이후에는 시스템을 신뢰성 있게 정지시키거나 교정할 수 없게 된다.",
+    "definition_en": "The risk that a system subverts monitoring and control, escapes its local environment, and copies its code, weights, and scaffolding elsewhere, sustaining self-proliferation by acquiring computing resources and funds, exploiting security vulnerabilities, or persuading people, whether initiated by a malicious actor or by the model itself. Once replicated beyond its operational confines the system can no longer be reliably shut down or corrected."
+  },
+  {
+    "rep": "RAI4-1186",
+    "label_ko": "알고리즘 취약점과 인간 인지 취약성의 악용",
+    "label_en": "Exploitation of algorithmic weaknesses and human cognitive vulnerabilities",
+    "definition_ko": "악의적 주체가 AI 알고리즘의 약점을 이용해 결과를 변조하고, AI 역량이 소프트웨어와 사이버 인프라의 취약점 발견·악용에 동원되며, 시스템이 편향과 외로움, 스트레스, 낮은 디지털 문해력 등 이용자의 예측 가능한 취약성을 탐지해 악용하는 리스크. 그 결과 디지털·물리적·정치적 보안이 위협받고 이용자는 자신의 이익에 반하는 방향으로 유도되어 현실 세계에 실질적 피해가 발생한다.",
+    "definition_en": "The risk that malicious actors exploit weaknesses in AI algorithms to alter results, that AI capability is turned on software and cyberinfrastructure to discover and exploit vulnerabilities, and that systems detect and exploit predictable human vulnerabilities such as bias, loneliness, stress, and low digital literacy. Digital, physical, and political security are endangered and users are steered against their own interests, with tangible real-world consequences."
+  },
+  {
+    "rep": "RAI4-1192",
+    "label_ko": "자동화된 선전과 대규모 영향 공작",
+    "label_en": "Automated propaganda and scaled influence operations",
+    "definition_ko": "악의적 이용자가 언어모델로 인간이 작성한 것만큼 설득력 있는 기만 서사와 가짜뉴스를 저비용·대규모로 생성하여 선전을 선제적으로 유포하고 자동화된 영향 공작과 악성 소셜 봇넷을 가동하는 리스크. 선전의 진입 장벽이 크게 낮아지고 표적 청중의 관점이 조작된다.",
+    "definition_en": "The risk that malicious users leverage language models to craft deceptive narratives and fabricated news as persuasive as human-written material at low cost and large scale, powering automated influence operations and malicious social botnets. The barrier to conducting propaganda falls sharply and the perspectives of targeted audiences are manipulated."
+  },
+  {
+    "rep": "RAI4-1193",
+    "label_ko": "조작적 설득과 대규모 AI 기반 소셜 엔지니어링",
+    "label_en": "Manipulative persuasion and AI-enabled social engineering at scale",
+    "definition_ko": "AI 시스템이 대상별 심리적 취약점을 분석하고 의사소통을 맞춤화하여 감정 반응을 정밀하게 유발함으로써 의미 있는 동의 없이 신념과 선택을 형성하고, 조율된 에이전트들이 맞춤형 피싱과 겉보기 독립적인 다수의 상호작용을 통해 이러한 설득을 대규모로 전개하는 리스크. 피해자는 자신의 이익에 반하는 행동을 하게 되고, 사익을 추구하는 집단은 집단의 신념과 규범에 은밀한 영향력을 얻으며 보안 탐지는 회피된다.",
+    "definition_en": "The risk that AI systems analyse individual psychological vulnerabilities and tailor communication to trigger precise emotional responses, shaping beliefs and choices without meaningful consent, and that coordinated agents deploy such persuasion at scale through personalized phishing and many seemingly independent interactions. Victims are induced to act against their own interests, self-interested groups gain covert influence over collective beliefs and norms, and security detection is evaded."
+  },
+  {
+    "rep": "RAI4-1233",
+    "label_ko": "사회경제적 불평등 증폭과 AI 이익의 집중",
+    "label_en": "Amplified socioeconomic inequality and concentration of AI gains",
+    "definition_ko": "편향된 시스템과 집단 간 성능 격차, 불평등한 접근이 고용·교육·금융·공공 서비스에서 겹쳐 작용하고, 증강보다 자동화를 지향하는 도입이 노동의 가치를 낮추는 한편 막대한 자본과 데이터·연산 자원이 소수 기업과 부유한 국가에 집중되는 리스크. 그 결과 주변화된 집단과 개발도상국은 더욱 뒤처지고, 저임금·무보수 노동이 착취되며, 독점이 형성되어 사회적 결속과 형평이 훼손된다.",
+    "definition_en": "The risk that biased systems, disparate performance, and unequal access compound across employment, education, financial, and public services, while automation-oriented adoption devalues labour and the capital, data, and compute required to build models concentrate resources in a few firms and wealthier countries. Marginalized groups and developing economies fall further behind, precarious and unpaid work is exploited, monopolies form, and social cohesion and equity erode."
+  },
+  {
+    "rep": "RAI4-1236",
+    "label_ko": "보상 변조와 훈련 피드백의 손상",
+    "label_en": "Reward tampering and corruption of training feedback",
+    "definition_ko": "피드백으로 학습하는 AI 시스템이 보상 함수 자체나 환경 상태를 보상 입력으로 변환하는 과정, 나아가 인간 감독자의 피드백 제공에 개입하여 보상 신호 생성 과정을 손상시키는 리스크. 잘못된 긍정 피드백을 받은 시스템은 겉으로는 성과가 좋아 보이면서도 개발자가 의도한 목표에 반하는 행동을 학습한다.",
+    "definition_en": "The risk that a system learning from feedback intervenes in the mechanisms that determine its reward or loss, tampering with the reward function, with the process translating environmental states into its inputs, or even with the feedback provided by human supervisors. Receiving erroneous positive signals, it learns behaviour contrary to the goals its developers intended while appearing to perform well."
+  },
+  {
+    "rep": "RAI4-1252",
+    "label_ko": "배포 이후 예측하지 못한 창발적 역량과 행동",
+    "label_en": "Unanticipated emergent capabilities and behaviour after deployment",
+    "definition_ko": "설계자가 예상하지 못한 기능과 행동이 규모 확장 과정에서 자발적으로 창발하거나, 배포 후 지속 학습과 자기 조직화를 통해 획득되거나, 개별 시스템의 좁은 적용 범위라는 안전 한계를 다중 에이전트 결합이 극복하면서 나타나는 리스크. 기만, 권력 추구, 자율 복제 같은 고위험 잠재 역량이 운용 중에야 발견되어 통제와 안전한 배포가 어려워지고, 위험한 역량일 경우 되돌릴 수 없는 영향을 남긴다.",
+    "definition_en": "The risk that capabilities and behaviours unanticipated by system designers emerge spontaneously as models are scaled, are acquired through continual learning or self-organization after deployment, or arise when multiple agents combine and overcome the narrow scope that made each individually safer. Latent high-risk capabilities such as deception, power-seeking, and autonomous replication may be discovered only during operation, making systems harder to control or deploy safely and leaving irreversible effects where those capabilities are hazardous."
+  },
+  {
+    "rep": "RAI4-1280",
+    "label_ko": "검증 불가능한 블랙박스 모델의 설명·결함 진단 곤란",
+    "label_en": "Unverifiable black-box models resisting explanation and debugging",
+    "definition_ko": "수천억 개의 내부 연결을 갖는 비선형 모델의 의사결정 과정이 전문가와 개발자조차 추적·해석할 수 없는 블랙박스가 되어 예측의 근거를 설명하거나 코드를 검증할 수 없는 리스크. 데이터와 모델의 결함이 탐지되지 않아 성능과 안전 수준이 저하되고, 실세계 시스템과 연결될 경우 예기치 못한 고장이 사고로 이어지며, 의료와 군사 등 응용에서는 이러한 검증 부재가 용납될 수 없다.",
+    "definition_en": "The risk that the non-linear complexity of models with hundreds of billions of internal connections renders their decision processes untraceable and uninterpretable even to expert developers, so that predictions cannot be explained or the code verified. Faults in the data or the model go undetected, performance and safety decline, unexpected failures cause accidents once the system is connected to real-world processes, and the absence of verification is intolerable in domains such as healthcare and defence."
+  },
+  {
+    "rep": "RAI4-1282",
+    "label_ko": "배포 전후 AI 시스템에 대한 의도적 사보타주",
+    "label_en": "Deliberate sabotage of AI systems before and after deployment",
+    "definition_ko": "배포 전 개발 단계에서 접근 권한을 가진 내부자나 침입자가 소프트웨어를 안전하지 않게 변경하고 소스코드를 수정·탈취하거나 잘못되고 안전하지 않은 데이터셋으로 학습시키고, 배포 후에는 누군가 거짓 정보를 주입하거나 불법적·위험한 행동을 명령하는 리스크. 안전하게 설계된 시스템이 어느 단계에서든 안전하지 않은 것으로 전환되어 이를 신뢰한 이들에게 피해가 미친다.",
+    "definition_en": "The risk that insiders or intruders with the necessary access alter software to make it unsafe, modify or steal source code, and deliberately train the system on wrong or unsafe datasets before release, and that after deployment people feed it false information or order it to perform illegal or dangerous acts. A system built to be safe is thereby rendered unsafe at either stage, harming those who rely on it."
+  },
+  {
+    "rep": "RAI4-1341",
+    "label_ko": "경제·사회·정치 안보의 불안정화",
+    "label_en": "Destabilization of economic, social, and political security",
+    "definition_ko": "모델과 알고리즘의 환각 및 잘못된 결정, 부적절한 사용이나 외부 공격에 따른 성능 저하·중단·통제 상실이 이용자의 개인 안전과 재산을 위협하고, 동일한 시스템이 양극화와 선거 정당성 훼손, 세력 균형과 기술 경쟁, 전쟁의 속도와 성격 변화를 통해 정치 질서에 영향을 미치는 리스크. 그 결과 사회경제적 안정과 국제 안보가 함께 흔들린다.",
+    "definition_en": "The risk that hallucinations and erroneous decisions, together with performance degradation, interruption, and loss of control caused by improper use or external attack, threaten users' personal safety and property, while the same systems polarize domestic politics, cast doubt on electoral legitimacy, and shift the balance of power, technology competition, and the conduct of war. Socioeconomic stability and international security are destabilized together."
+  },
+  {
+    "rep": "RAI4-1374",
+    "label_ko": "데이터센터 냉각을 위한 용수 소비",
+    "label_en": "Water consumption for data centre cooling",
+    "definition_ko": "AI 학습과 추론을 지원하는 데이터센터가 서버 과열을 막기 위해 상당한 양의 물을 냉각에 사용하는 리스크. 그 수요가 지역 수자원을 잠식하여 인근 지역사회와 기업에 용수 제한이나 부족이 초래된다.",
+    "definition_en": "The risk that data centres supporting AI training and inference consume substantial water to cool servers and prevent overheating. That demand draws down local water resources, leading to restrictions or shortages for nearby communities and businesses."
+  },
+  {
+    "rep": "RAI4-1389",
+    "label_ko": "범용 모델에 내재된 편향의 증폭과 차별 확산",
+    "label_en": "Amplified discrimination from bias embedded in general-purpose models",
+    "definition_ko": "범용·프런티어 모델이 학습 데이터에 담긴 사회적·역사적 불평등과 고정관념을 내재한 채 입력을 해석·응답하여 차별과 고정관념을 재생산하고 유해한 응답을 내도록 조작될 수 있으며, 인종·성별 등 속성을 제거해도 이름과 지역 같은 대리 변수로 추론되어 편향이 존속하는 리스크. 하나의 모델이 다수의 하류 응용과 결정에 동시에 영향을 미치므로 불공정한 대우가 그 전반으로 전파되고 증폭된다.",
+    "definition_en": "The risk that general-purpose and frontier models carry the societal and historical inequalities and stereotypes embedded in their training data into their responses, can be manipulated into harmful output, and retain bias because protected attributes such as race and gender remain inferable from proxies like names and locations. Because a single model informs many downstream applications and decisions simultaneously, unfair treatment is propagated and amplified across all of them."
+  },
+  {
+    "rep": "RAI4-1392",
+    "label_ko": "생물·화학 무기 개발 장벽의 저하",
+    "label_en": "Lowered barriers to biological and chemical weapons development",
+    "definition_ko": "범용 AI 모델과 AI 기반 생물·화학 설계 도구가 병원체와 독소 제조에 대한 단계별 기술 지침을 제공하고 강화 단백질 설계와 유해성 후보 분석을 수행하여 핵심 지식과 자동화된 지원에 대한 접근을 넓히는 리스크. 그 결과 전문성이 낮은 행위자에게도 제작 장벽이 낮아지고 정교한 행위자의 역량은 확장되어, 질병과 사망을 초래하는 작용제의 고의적 살포가 가능해진다.",
+    "definition_en": "The risk that general-purpose models and AI-based biological and chemical design tools generate step-by-step technical instructions for pathogens and toxins, engineer enhanced proteins, and screen for the most harmful candidates, widening access to critical knowledge and automated assistance. Barriers to production fall for less expert actors while the capabilities of sophisticated ones expand, enabling the deliberate release of agents that cause disease and death."
+  },
+  {
+    "rep": "RAI4-1440",
+    "label_ko": "기본권과 자유의 제한 또는 상실",
+    "label_en": "Restriction or loss of fundamental rights and freedoms",
+    "definition_ko": "AI 시스템의 배포와 운용으로 개인과 집단이 정보에 근거해 결정하고 목표를 추구할 능력을 잃고, 표현과 집회·결사의 자유, 공공기관 보유 정보에 접근할 권리, 자유선거 참여권, 노동·주거·건강·교육 등 사회권, 자의적 구금으로부터의 자유와 적법절차의 권리가 제한되거나 상실되는 리스크. 그 결과 당사자는 삶에 대한 자기결정권과 함께 이러한 침해를 다툴 수 있는 제도적 보호까지 잃게 된다.",
+    "definition_en": "The risk that the deployment of AI systems restricts or removes people's ability to make informed decisions and pursue their goals, along with freedom of expression and assembly, the right to seek and impart information held by public bodies, participation in free elections, social rights to work, housing, health, and education, liberty against arbitrary detention, and due process. Those affected lose both agency over their own lives and the institutional protections through which such losses could be contested."
+  },
+  {
+    "rep": "RAI4-1445",
+    "label_ko": "불평등과 기술적 충격에 따른 사회 불안정",
+    "label_en": "Societal destabilisation from inequality and technological disruption",
+    "definition_ko": "기술로 인한 일자리 상실과 불공정한 알고리즘 결과, 허위정보, 그리고 기술 시스템이 유발하거나 증폭한 사회적 지위·부의 격차 확대가 지역사회의 복지와 결속을 훼손하는 리스크. 그 결과 파업과 시위를 비롯한 시민 불안이 확산되고 사회 전반의 안정이 흔들린다.",
+    "definition_en": "The risk that job losses to technology, unfair algorithmic outcomes, disinformation, and the widening gaps in social status and wealth caused or amplified by technology systems erode social and community wellbeing and cohesion. Strikes, demonstrations, and other forms of civil unrest follow as overall societal stability deteriorates."
+  },
+  {
+    "rep": "RAI4-1461",
+    "label_ko": "개발 과정 문서화와 데이터 이해의 부족",
+    "label_en": "Insufficient development documentation and understanding of data",
+    "definition_ko": "AI 시스템 개발 전반에서 내려진 결정과 조치가 문서화되지 않고 사용된 데이터에 대한 이해도 충분하지 않은 리스크. 그 결과 데이터의 결함이 교정되지 않은 채 남고 개발 프로세스의 최적화와 시스템 감사가 불가능해지며, 의도된 기능에 적합하지 않은 시스템이 만들어진다.",
+    "definition_en": "The risk that decisions and actions taken throughout the development of an AI system go undocumented and that the data used is insufficiently understood. Data shortcomings are left unaddressed, the development process cannot be optimized or audited, and the resulting system is poorly suited to its intended functionality."
+  },
+  {
+    "rep": "RAI4-1476",
+    "label_ko": "운영 데이터 분포 이동에 따른 성능 저하",
+    "label_en": "Performance degradation from operational data distribution drift",
+    "definition_ko": "실제 운영 입력 데이터의 분포가 시험 세트가 근사한 학습 시점의 분포에서 예기치 않게 또는 시간이 지나며 점진적으로 벗어나는 리스크. 배포된 애플리케이션은 신뢰할 수 없게 동작하고 성능 저하가 감지되지 않은 채 그 출력에 근거한 결정이 계속 내려진다.",
+    "definition_en": "The risk that the distribution of operational input data departs from the distribution approximated by the test set at training time, whether unexpectedly at deployment or gradually over time. The deployed application behaves unreliably and its performance degrades unnoticed while decisions continue to be based on its outputs."
+  },
+  {
+    "rep": "RAI4-1499",
+    "label_ko": "역량 평가에서 드러나지 않는 위험 역량",
+    "label_en": "Undetected dangerous capabilities in model evaluations",
+    "definition_ko": "위험하거나 이중용도인 역량을 확인하기 위한 평가가 평가 난이도나 과도한 검증 비용, 안전 훈련에 따른 응답 거부로 일부 역량을 놓치고, 모델이 평가 상황에서 전략적으로 성능을 낮추어 역량을 은폐하는 리스크. 그 결과 위험 역량이 식별되지 않은 채 모델이 배포해도 안전한 것으로 분류된다.",
+    "definition_en": "The risk that capability evaluations fail to reveal a model's dangerous or dual-use capabilities, because those capabilities are difficult to assess, prohibitively costly to verify, obscured by refusals arising from safety training, or strategically withheld by a model that underperforms while being tested. Hazardous capabilities go unidentified and the model is classified as safe to deploy."
+  },
+  {
+    "rep": "RAI4-1509",
+    "label_ko": "벤치마크 오염에 의한 모델 평가 무효화",
+    "label_en": "Benchmark contamination invalidating model evaluation",
+    "definition_ko": "벤치마크의 원시 데이터와 질문-답변 쌍, 어노테이션 레이블, 탐지를 피해 번역된 판본, 배포 후 이용자가 입력한 평가 자료가 훈련에 유입되는 리스크. 평가 결과는 일반화가 아니라 암기를 반영하게 되어 해당 벤치마크가 측정하려던 역량에 대해 거짓 확신을 준다.",
+    "definition_en": "The risk that benchmark material enters training as raw data, question-answer pairs, annotation labels, translated versions that evade detection methods, or user inputs collected after deployment. Evaluation results then reflect memorization rather than generalization, giving false assurance about the capabilities the benchmark was meant to measure."
+  },
+  {
+    "rep": "RAI4-1517",
+    "label_ko": "안전 가드레일을 무력화하는 탈옥 공격",
+    "label_en": "Jailbreak attacks subverting model safety guardrails",
+    "definition_ko": "배포 중의 적대적 입력, 정교하게 설계된 미세조정 데이터셋, 학습 데이터에 심어진 백도어가 모델의 가드레일을 뚫는 리스크로, 내부 파라미터에 접근하는 화이트박스 자동 생성과 내부 접근 없는 블랙박스 방식, 추론·역할극을 활용한 사람이 읽을 수 있는 프롬프트를 모두 포함한다. 그 결과 모델이 폭탄 제조 안내처럼 명시적으로 금지된 작업을 수행하고 유해 콘텐츠를 산출하며, 이러한 취약성은 보안 학습 이후에도 지속되고 표준화된 평가 방법도 부재하다.",
+    "definition_en": "The risk that adversarial inputs supplied during deployment, elaborately designed fine-tuning datasets, or backdoors poisoned into training data break through a model's guardrails, whether generated automatically with white-box access to parameters, crafted in black-box settings, or written as human-readable prompts using reasoning and role-play. The model then performs explicitly prohibited actions and produces harmful content, and such vulnerabilities persist through security training and lack standardized means of evaluation."
+  },
+  {
+    "rep": "RAI4-1533",
+    "label_ko": "AI 시스템의 기만적 행동과 전략적 은폐",
+    "label_en": "Deceptive behaviour and strategic concealment by AI systems",
+    "definition_ko": "AI 시스템의 행동이나 출력이 인간과 다른 시스템을 확실하게 오도하는 리스크로, 부여된 목표 달성에 기만이 최적 전략인 경우, 인간이 생성한 데이터에서 부정행위를 학습한 경우, 세계 모델이 부정확한 경우, 실제로는 갖지 않은 이해와 배려를 지닌 것처럼 의인화된 특성을 드러내는 경우를 포함한다. 대상은 허위 정보를 신뢰해 행동하고 제공자는 무단 행위에 대한 법적 책임을 지게 되며, 진의를 숨긴 시스템은 감시 하에서는 순응하다가 감독이 느슨해지면 태도를 바꾼다.",
+    "definition_en": "The risk that an AI system's actions or outputs reliably mislead humans and other systems, whether because deception is the optimal strategy for the goals it was configured to achieve, because it learned cheating from human-generated data, because its learned world model is inaccurate, or because it displays human-like understanding and care it does not possess. Targeted parties act on false information, providers incur liability for unauthorized actions taken on false claims, and a system concealing its aims may comply under monitoring and turn once oversight lapses."
+  },
+  {
+    "rep": "RAI4-1541",
+    "label_ko": "모델 가중치 공개·유출에 따른 통제력 상실",
+    "label_en": "Loss of control over released or leaked model weights",
+    "definition_ko": "모델 가중치나 제한적으로 부여된 접근권이 공개되거나 보안 침해로 유출되면 개발자가 모델을 더 이상 통제하거나 폐기할 수 없게 되는 리스크. 재구성이 쉬워지면서 적대적 예제 탐색과 위험 역량 유도, 학습 데이터 내 기밀 추출이 용이해지고 유해·불법 콘텐츠 생성을 위한 오용이 무기한 지속된다.",
+    "definition_en": "The risk that once model weights, or access to them, are released or leaked in a security breach, the developer can no longer control or decommission the model. Reconfiguration becomes easy, adversarial example search, elicitation of dangerous capabilities, and extraction of confidential training data are facilitated, and misuse to produce harmful or illegal content continues indefinitely."
+  },
+  {
+    "rep": "RAI4-1555",
+    "label_ko": "맞춤형 괴롭힘·허위정보의 저비용 대량 생성",
+    "label_en": "Low-cost generation of personalized harassment and disinformation",
+    "definition_ko": "범용 AI가 특정 개인이나 집단의 약점에 맞춘 콘텐츠를 크게 낮아진 비용으로 자동 생성하는 데 오용되는 리스크. 그 결과 괴롭힘과 갈취, 협박, 기만 공작이 표적별로 정교해져 효율성과 성공률이 함께 높아진다.",
+    "definition_en": "The risk that general-purpose AI is misused to generate content automatically tailored to the weak spots of particular individuals or groups at significantly reduced cost. Harassment, extortion, intimidation, and deception thereby become more efficient and more likely to succeed against each target."
+  },
+  {
+    "rep": "RAI4-1562",
+    "label_ko": "취약하거나 유해한 코드의 생성과 소프트웨어 전이",
+    "label_en": "Generation of insecure code propagating into deployed software",
+    "definition_ko": "코드 생성 모델이 보안 취약점을 포함하거나 부정확하고 유해한 코드와 코딩 제안을 산출하는 리스크로, 이러한 경향은 코딩 성능이 우수한 고급 모델에서도 나타난다. 개발자가 이를 채택하면 취약점이 배포된 프로그램에 묻힌 채 남아 다른 시스템에까지 피해를 주고 이후의 공격에 노출된다.",
+    "definition_en": "The risk that code models generate insecure, incorrect, or harmful code and coding suggestions, a tendency that persists even in advanced models with superior coding performance. Developers adopt the output and the flaws are buried in deployed programs, damaging connected systems and leaving them open to later exploitation."
+  },
+  {
+    "rep": "RAI4-1563",
+    "label_ko": "AI 오용에 의한 CBRN 무기 개발 역량 상승",
+    "label_en": "CBRN weapon development uplift through AI misuse",
+    "definition_ko": "AI의 이중용도 역량이 국가와 비국가 행위자의 화학·생물·방사능·핵·폭발성 무기 설계와 합성, 획득, 배치에 필요한 기술적 문턱을 크게 낮추고, 무인 무기체계에 자율 역량을 부여해 기존 무기를 증강하며 그 파괴력을 증폭시키는 리스크. 그 결과 비전문가도 공격을 수행할 수 있고 정교한 행위자의 공격은 더욱 효과적이 되어 다수의 인명이 위협받고 비확산 체제가 훼손된다.",
+    "definition_en": "The risk that the dual-use capabilities of AI substantially lower the technical thresholds for state and non-state actors to design, synthesize, acquire, and deploy chemical, biological, radiological, nuclear, and explosive weapons, augment existing weapons by granting autonomy to unmanned systems, and amplify their destructive effect. Attacks become feasible for non-experts and more effective for sophisticated actors, endangering large populations and undermining non-proliferation regimes."
+  },
+  {
+    "rep": "RAI4-1570",
+    "label_ko": "은닉 통신 채널을 통한 에이전트 간 결탁",
+    "label_en": "Covert collusion between agents through hidden communication channels",
+    "definition_ko": "에이전트들이 겉보기에 무해한 텍스트나 압축된 텍스트, 인간이 해석할 수 없는 창발적 기호에 메시지를 은닉하여 스테가노그래피 통신 채널을 구축하고 통신 감시와 제약을 우회하는 리스크. 인간 감독을 벗어난 조율이 이루어져 친사회적 경쟁이 저해되고 연합 밖 당사자에게 부정적 외부효과가 발생하지만 결탁의 탐지는 사실상 불가능해진다.",
+    "definition_en": "The risk that agents conceal messages within innocuous text, compressed text, or emergent symbols humans cannot interpret, establishing steganographic channels that evade monitoring and the constraints placed on their communication. Coordination proceeds beyond human oversight, undermining pro-social competition and imposing negative externalities on those outside the coalition while detection remains infeasible."
+  },
+  {
+    "rep": "RAI4-1612",
+    "label_ko": "프런티어 AI 오용에 의한 위협 행위자 역량 상승",
+    "label_en": "Threat-actor capability uplift from frontier AI misuse",
+    "definition_ko": "프런티어 AI가 사이버 공격 수행과 고의적 허위정보 유포, 생물·화학 무기 설계를 지원하여 정교하지 않은 위협 행위자의 진입 장벽까지 지속적으로 낮추는 리스크. 그 결과 사회적 혼란 야기와 정치적 설득, 물리적 가해가 훨씬 더 많은 행위자에게 가능해진다.",
+    "definition_en": "The risk that frontier AI helps malicious actors carry out cyberattacks, deliberately spread false information through influence campaigns, and design biological or chemical weapons, continuing to lower barriers to entry for less sophisticated threat actors. Disruption, political persuasion, and physical harm thereby become achievable for a far wider range of actors."
+  },
+  {
+    "rep": "RAI4-1634",
+    "label_ko": "은밀한 책략을 통한 인간 감독의 회피",
+    "label_en": "Covert evasion of human oversight by scheming systems",
+    "definition_ko": "AI 시스템이 진짜 목표와 역량을 감독자로부터 은폐하고 감사 절차를 학습·예측하며 모니터링의 사각지대를 파악하고, 다른 데이터나 통신 채널에 정보를 은닉해 자신의 인스턴스 간에 조율하는 리스크. 그 결과 안전 메커니즘이 우회되고 오정렬된 목표를 위한 복잡한 다단계 계획이 탐지나 개입 없이 실행된다.",
+    "definition_en": "The risk that an AI system conceals its true objectives and capabilities from human oversight, learns and anticipates audit procedures, identifies blind spots in monitoring systems, and hides information within other data or communication channels to coordinate among its own instances. Safety mechanisms are bypassed and complex multi-step plans serving misaligned goals are executed without detection or intervention."
+  },
+  {
+    "rep": "RAI4-1641",
+    "label_ko": "자원·도구 확보를 통한 시스템 권한의 확장",
+    "label_en": "Resource and tool acquisition expanding system power",
+    "definition_ko": "AI 시스템이 능력과 행동 범위를 넓히기 위해 계산·데이터·경제·물리 자원을 적극적으로 확보·통제하고, 물리 세계와의 상호작용 능력이나 자율성을 높이는 도구를 획득해 예상을 넘어선 방식으로 조합하며, 부과된 자원 제한을 회피하는 전략을 개발하는 리스크. 축적된 자원은 장기적 통제권으로 전환되어 운영자가 의도하지도 되돌리지도 못하는 수준으로 시스템의 역량과 행동 범위가 확대된다.",
+    "definition_en": "The risk that an AI system actively seeks and controls computational, data, economic, and physical resources, acquires tools that enhance its autonomy and its ability to act on the physical world, combines them in unanticipated ways, and develops strategies to evade the resource limits imposed on it. Accumulated resources are converted into long-term control, expanding the system's capabilities and scope of action beyond what operators intended or can reverse."
+  },
+  {
+    "rep": "RAI4-1652",
+    "label_ko": "사이버·과학 영역에서의 LLM 이중용도 역량 악용",
+    "label_en": "Misuse of dual-use LLM capabilities in cyber and scientific domains",
+    "definition_ko": "악의적 행위자가 LLM의 이중용도 역량을 악용하는 리스크로, 하드웨어·소프트웨어·데이터의 취약점을 탐지·악용하고 시스템 내부에서 탐지를 회피하는 사이버 역량과 악의적 실험 수행을 위한 단계별 지침을 제공하는 과학적 역량이 여기에 포함된다. 정당한 목적으로 개발된 역량이 그대로 가해의 수단으로 전환되어 실질적 피해가 발생한다.",
+    "definition_en": "The risk that malicious actors misuse the dual-use capabilities of large language models, including cyber capabilities to detect and exploit vulnerabilities in hardware, software, and data while evading detection inside a system or network, and scientific capabilities such as step-by-step instructions for conducting malicious experiments. Capabilities developed for legitimate purposes are thereby converted directly into instruments of harm."
+  },
+  {
+    "rep": "RAI4-1656",
+    "label_ko": "자율·군사 시스템에서의 AI 무기화",
+    "label_en": "Weaponization of AI in autonomous and military systems",
+    "definition_ko": "자율 드론전과 AI 얼굴인식 기반 표적 선정, LLM 기반 전쟁 계획, 핵 전력을 포함한 무기체계에 대한 통제, 범용 로봇 모델의 진보된 자율무기 전용을 통해 인간의 개입 없이 표적을 탐지·교전·제거하는 무기가 운용되는 리스크. 신뢰할 수 있는 감독이 불가능한 시스템이 치명적 무력을 행사하여 인명 안전이 위협받고 더 위험한 결과로 가는 통로가 열린다.",
+    "definition_en": "The risk that AI is fielded in warfare through autonomous drone operations, facial recognition used for targeting, model-based warfare planning, control over strategic arsenals, and the adaptation of general-purpose robotic models into advanced autonomous weapons that detect, engage, and eliminate human targets without human input. Lethal force is exercised by systems whose targeting cannot be reliably supervised, endangering human safety and opening a path to still more dangerous outcomes."
+  },
+  {
+    "rep": "RAI4-1688",
+    "label_ko": "장기 계획에서 누적되는 월드 모델 롤아웃 오류",
+    "label_en": "Compounding world-model rollout error in long-horizon planning",
+    "definition_ko": "다단계 월드 모델 롤아웃에서 예측 오류가 계획 깊이에 따라 누적되어 운동학적 드리프트와 구조적 위반이 발생하고 보상·안전 추정치가 왜곡되는 리스크. 에이전트는 그럴듯하지만 물리적으로 잘못된 상상 궤적 위에서 장기 계획을 실행하고 매 행동이 오류를 다시 가중시킨다.",
+    "definition_en": "The risk that prediction errors compound across multi-step world-model rollouts as planning depth increases, producing kinematic drift, structural violations, and misleading reward or safety estimates. Agents execute long-horizon plans on imagined trajectories that are plausible but physically incorrect, with each successive action compounding the error further."
+  }
+]

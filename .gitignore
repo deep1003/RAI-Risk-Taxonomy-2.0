@@ -15,3 +15,15 @@ output/jupyter-notebook/.virtual_documents/
 *.synctex.gz
 *.xdv
 output/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf
+
+# paper under submission (do not publish)
+paper_tau_percolation/
+# large intermediate chunks
+data/experiments/review/*_c[0-9]*.npz
+data/experiments/review/e5_chunk_*.npy
+data/experiments/review/boot1000_c*.npz
+data/experiments/stage1/
+data/experiments/stage2/
+data/experiments/tau_tiers_v2_19/
+.virtual_documents/
+HANDOVER_taxonomy_pipeline.md

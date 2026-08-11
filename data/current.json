@@ -1,5 +1,5 @@
 {
-  "current_release": "v1.0.0",
-  "release_status": "prepublication_draft",
-  "manifest": "data/releases/v1.0.0/manifest.json"
+  "current_release": "v2.18.0-rc",
+  "release_status": "release_candidate",
+  "manifest": "public/data/releases/v2.18.0-rc/manifest.json"
 }

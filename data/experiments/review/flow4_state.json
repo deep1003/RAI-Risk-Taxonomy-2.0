@@ -1,0 +1,7929 @@
+{
+ "taus": [
+  0.8329,
+  0.8033,
+  0.7903,
+  0.7753
+ ],
+ "cards": [
+  {
+   "rep": "RAI4-0468",
+   "members": [
+    "RAI4-0001",
+    "RAI4-0468",
+    "RAI4-1234"
+   ],
+   "n": 3,
+   "min_cos": 0.8562147617340088
+  },
+  {
+   "rep": "RAI4-0002",
+   "members": [
+    "RAI4-0002"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0003",
+   "members": [
+    "RAI4-0003",
+    "RAI4-1674",
+    "RAI4-1382"
+   ],
+   "n": 3,
+   "min_cos": 0.8049549460411072
+  },
+  {
+   "rep": "RAI4-0004",
+   "members": [
+    "RAI4-0004",
+    "RAI4-0481"
+   ],
+   "n": 2,
+   "min_cos": 0.7847855687141418
+  },
+  {
+   "rep": "RAI4-0005",
+   "members": [
+    "RAI4-0005"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0006",
+   "members": [
+    "RAI4-0006"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0007",
+   "members": [
+    "RAI4-0007"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0008",
+   "members": [
+    "RAI4-0008",
+    "RAI4-1650"
+   ],
+   "n": 2,
+   "min_cos": 0.816195011138916
+  },
+  {
+   "rep": "RAI4-0009",
+   "members": [
+    "RAI4-0009",
+    "RAI4-0560",
+    "RAI4-0230",
+    "RAI4-0482",
+    "RAI4-0577",
+    "RAI4-1685",
+    "RAI4-1683",
+    "RAI4-1684"
+   ],
+   "n": 8,
+   "min_cos": 0.6105413436889648
+  },
+  {
+   "rep": "RAI4-0047",
+   "members": [
+    "RAI4-0010",
+    "RAI4-0019",
+    "RAI4-0986",
+    "RAI4-0047",
+    "RAI4-1275",
+    "RAI4-1307",
+    "RAI4-1292"
+   ],
+   "n": 7,
+   "min_cos": 0.6547678112983704
+  },
+  {
+   "rep": "RAI4-0011",
+   "members": [
+    "RAI4-0011",
+    "RAI4-1670"
+   ],
+   "n": 2,
+   "min_cos": 0.8198932409286499
+  },
+  {
+   "rep": "RAI4-0012",
+   "members": [
+    "RAI4-0012"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0013",
+   "members": [
+    "RAI4-0013"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0014",
+   "members": [
+    "RAI4-0014",
+    "RAI4-0918"
+   ],
+   "n": 2,
+   "min_cos": 0.804737389087677
+  },
+  {
+   "rep": "RAI4-0016",
+   "members": [
+    "RAI4-0016"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0017",
+   "members": [
+    "RAI4-0017"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0018",
+   "members": [
+    "RAI4-0018"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0020",
+   "members": [
+    "RAI4-0020"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0021",
+   "members": [
+    "RAI4-0021"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0022",
+   "members": [
+    "RAI4-0022"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0023",
+   "members": [
+    "RAI4-0023",
+    "RAI4-0861"
+   ],
+   "n": 2,
+   "min_cos": 0.8223258256912231
+  },
+  {
+   "rep": "RAI4-0024",
+   "members": [
+    "RAI4-0024"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0025",
+   "members": [
+    "RAI4-0025"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0026",
+   "members": [
+    "RAI4-0026"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0027",
+   "members": [
+    "RAI4-0027"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0029",
+   "members": [
+    "RAI4-0029",
+    "RAI4-1672"
+   ],
+   "n": 2,
+   "min_cos": 0.7928283214569092
+  },
+  {
+   "rep": "RAI4-0030",
+   "members": [
+    "RAI4-0030"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0031",
+   "members": [
+    "RAI4-0031"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0032",
+   "members": [
+    "RAI4-0032",
+    "RAI4-0037"
+   ],
+   "n": 2,
+   "min_cos": 0.7782838344573975
+  },
+  {
+   "rep": "RAI4-0033",
+   "members": [
+    "RAI4-0033",
+    "RAI4-1729"
+   ],
+   "n": 2,
+   "min_cos": 0.8169654607772827
+  },
+  {
+   "rep": "RAI4-0034",
+   "members": [
+    "RAI4-0034"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0035",
+   "members": [
+    "RAI4-0035"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0036",
+   "members": [
+    "RAI4-0036"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0038",
+   "members": [
+    "RAI4-0038"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0039",
+   "members": [
+    "RAI4-0039"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0040",
+   "members": [
+    "RAI4-0040"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0041",
+   "members": [
+    "RAI4-0041"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0042",
+   "members": [
+    "RAI4-0042"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0043",
+   "members": [
+    "RAI4-0043"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0044",
+   "members": [
+    "RAI4-0044"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0045",
+   "members": [
+    "RAI4-0045"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0048",
+   "members": [
+    "RAI4-0048"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0049",
+   "members": [
+    "RAI4-0049"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0050",
+   "members": [
+    "RAI4-0050",
+    "RAI4-0052"
+   ],
+   "n": 2,
+   "min_cos": 0.7963334321975708
+  },
+  {
+   "rep": "RAI4-0051",
+   "members": [
+    "RAI4-0051"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0055",
+   "members": [
+    "RAI4-0055",
+    "RAI4-0127"
+   ],
+   "n": 2,
+   "min_cos": 0.8387592434883118
+  },
+  {
+   "rep": "RAI4-0056",
+   "members": [
+    "RAI4-0056",
+    "RAI4-0053",
+    "RAI4-0116",
+    "RAI4-0125"
+   ],
+   "n": 4,
+   "min_cos": 0.7013717889785767
+  },
+  {
+   "rep": "RAI4-0057",
+   "members": [
+    "RAI4-0057",
+    "RAI4-0353"
+   ],
+   "n": 2,
+   "min_cos": 0.8324840068817139
+  },
+  {
+   "rep": "RAI4-0058",
+   "members": [
+    "RAI4-0058"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0059",
+   "members": [
+    "RAI4-0059"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0063",
+   "members": [
+    "RAI4-0063"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0064",
+   "members": [
+    "RAI4-0064"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0065",
+   "members": [
+    "RAI4-0065"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0066",
+   "members": [
+    "RAI4-0066"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0067",
+   "members": [
+    "RAI4-0067"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0068",
+   "members": [
+    "RAI4-0068",
+    "RAI4-0487",
+    "RAI4-0069"
+   ],
+   "n": 3,
+   "min_cos": 0.8159111142158508
+  },
+  {
+   "rep": "RAI4-0070",
+   "members": [
+    "RAI4-0070"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0071",
+   "members": [
+    "RAI4-0071",
+    "RAI4-0074"
+   ],
+   "n": 2,
+   "min_cos": 0.7918975353240967
+  },
+  {
+   "rep": "RAI4-0072",
+   "members": [
+    "RAI4-0072",
+    "RAI4-0073"
+   ],
+   "n": 2,
+   "min_cos": 0.8469425439834595
+  },
+  {
+   "rep": "RAI4-0075",
+   "members": [
+    "RAI4-0075"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0076",
+   "members": [
+    "RAI4-0076"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0077",
+   "members": [
+    "RAI4-0077",
+    "RAI4-0079"
+   ],
+   "n": 2,
+   "min_cos": 0.7967036366462708
+  },
+  {
+   "rep": "RAI4-0078",
+   "members": [
+    "RAI4-0078"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0080",
+   "members": [
+    "RAI4-0080"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0081",
+   "members": [
+    "RAI4-0081"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0082",
+   "members": [
+    "RAI4-0082"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0084",
+   "members": [
+    "RAI4-0084"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0085",
+   "members": [
+    "RAI4-0085"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0086",
+   "members": [
+    "RAI4-0086"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0087",
+   "members": [
+    "RAI4-0087"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0088",
+   "members": [
+    "RAI4-0088"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0089",
+   "members": [
+    "RAI4-0089",
+    "RAI4-0090",
+    "RAI4-0046",
+    "RAI4-0105",
+    "RAI4-0110",
+    "RAI4-0485",
+    "RAI4-0094",
+    "RAI4-0091",
+    "RAI4-0092",
+    "RAI4-0093",
+    "RAI4-1230",
+    "RAI4-0109",
+    "RAI4-1149",
+    "RAI4-0376",
+    "RAI4-0378"
+   ],
+   "n": 15,
+   "min_cos": 0.5966944694519043
+  },
+  {
+   "rep": "RAI4-0095",
+   "members": [
+    "RAI4-0095"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0096",
+   "members": [
+    "RAI4-0096"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0511",
+   "members": [
+    "RAI4-0097",
+    "RAI4-0486",
+    "RAI4-1475",
+    "RAI4-1717",
+    "RAI4-0511",
+    "RAI4-0542"
+   ],
+   "n": 6,
+   "min_cos": 0.6605080962181091
+  },
+  {
+   "rep": "RAI4-0098",
+   "members": [
+    "RAI4-0098"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0099",
+   "members": [
+    "RAI4-0099",
+    "RAI4-0100",
+    "RAI4-0101"
+   ],
+   "n": 3,
+   "min_cos": 0.7640045285224915
+  },
+  {
+   "rep": "RAI4-0596",
+   "members": [
+    "RAI4-0060",
+    "RAI4-0061",
+    "RAI4-0062",
+    "RAI4-0102",
+    "RAI4-0106",
+    "RAI4-0522",
+    "RAI4-0523",
+    "RAI4-0525",
+    "RAI4-0596",
+    "RAI4-0931",
+    "RAI4-0957",
+    "RAI4-0121",
+    "RAI4-1033",
+    "RAI4-0610",
+    "RAI4-0978",
+    "RAI4-1226",
+    "RAI4-1267",
+    "RAI4-1462",
+    "RAI4-1721",
+    "RAI4-1353",
+    "RAI4-1379",
+    "RAI4-1429"
+   ],
+   "n": 22,
+   "min_cos": 0.5728641748428345
+  },
+  {
+   "rep": "RAI4-0103",
+   "members": [
+    "RAI4-0103",
+    "RAI4-0437"
+   ],
+   "n": 2,
+   "min_cos": 0.7940866947174072
+  },
+  {
+   "rep": "RAI4-0104",
+   "members": [
+    "RAI4-0104",
+    "RAI4-0489"
+   ],
+   "n": 2,
+   "min_cos": 0.793508768081665
+  },
+  {
+   "rep": "RAI4-0108",
+   "members": [
+    "RAI4-0083",
+    "RAI4-0107",
+    "RAI4-0108"
+   ],
+   "n": 3,
+   "min_cos": 0.7567300796508789
+  },
+  {
+   "rep": "RAI4-0111",
+   "members": [
+    "RAI4-0111"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0112",
+   "members": [
+    "RAI4-0112",
+    "RAI4-0115",
+    "RAI4-0118"
+   ],
+   "n": 3,
+   "min_cos": 0.7044014930725098
+  },
+  {
+   "rep": "RAI4-0114",
+   "members": [
+    "RAI4-0114"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0117",
+   "members": [
+    "RAI4-0117",
+    "RAI4-0164"
+   ],
+   "n": 2,
+   "min_cos": 0.7832270860671997
+  },
+  {
+   "rep": "RAI4-0120",
+   "members": [
+    "RAI4-0120"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0123",
+   "members": [
+    "RAI4-0123",
+    "RAI4-0977"
+   ],
+   "n": 2,
+   "min_cos": 0.8855359554290771
+  },
+  {
+   "rep": "RAI4-0126",
+   "members": [
+    "RAI4-0126"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0132",
+   "members": [
+    "RAI4-0132",
+    "RAI4-0824",
+    "RAI4-0827"
+   ],
+   "n": 3,
+   "min_cos": 0.782296895980835
+  },
+  {
+   "rep": "RAI4-0134",
+   "members": [
+    "RAI4-0134"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0139",
+   "members": [
+    "RAI4-0139"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0140",
+   "members": [
+    "RAI4-0140"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0141",
+   "members": [
+    "RAI4-0141",
+    "RAI4-1090",
+    "RAI4-0719"
+   ],
+   "n": 3,
+   "min_cos": 0.7044796943664551
+  },
+  {
+   "rep": "RAI4-0386",
+   "members": [
+    "RAI4-0136",
+    "RAI4-0851",
+    "RAI4-1433",
+    "RAI4-0142",
+    "RAI4-0386"
+   ],
+   "n": 5,
+   "min_cos": 0.6837196946144104
+  },
+  {
+   "rep": "RAI4-0143",
+   "members": [
+    "RAI4-0143"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1533",
+   "members": [
+    "RAI4-0144",
+    "RAI4-1533",
+    "RAI4-1534",
+    "RAI4-1535",
+    "RAI4-1639",
+    "RAI4-1272",
+    "RAI4-1536",
+    "RAI4-1124"
+   ],
+   "n": 8,
+   "min_cos": 0.6509045362472534
+  },
+  {
+   "rep": "RAI4-0146",
+   "members": [
+    "RAI4-0146",
+    "RAI4-0147",
+    "RAI4-0658"
+   ],
+   "n": 3,
+   "min_cos": 0.7673252820968628
+  },
+  {
+   "rep": "RAI4-0149",
+   "members": [
+    "RAI4-0149",
+    "RAI4-0875"
+   ],
+   "n": 2,
+   "min_cos": 0.8289946913719177
+  },
+  {
+   "rep": "RAI4-0150",
+   "members": [
+    "RAI4-0150"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0151",
+   "members": [
+    "RAI4-0151",
+    "RAI4-0308"
+   ],
+   "n": 2,
+   "min_cos": 0.7996055483818054
+  },
+  {
+   "rep": "RAI4-0152",
+   "members": [
+    "RAI4-0152"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0153",
+   "members": [
+    "RAI4-0153",
+    "RAI4-0154"
+   ],
+   "n": 2,
+   "min_cos": 0.8163039684295654
+  },
+  {
+   "rep": "RAI4-0155",
+   "members": [
+    "RAI4-0155"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0156",
+   "members": [
+    "RAI4-0156",
+    "RAI4-0428",
+    "RAI4-1622"
+   ],
+   "n": 3,
+   "min_cos": 0.7371768951416016
+  },
+  {
+   "rep": "RAI4-0157",
+   "members": [
+    "RAI4-0157"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0158",
+   "members": [
+    "RAI4-0158"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0159",
+   "members": [
+    "RAI4-0159"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0160",
+   "members": [
+    "RAI4-0160",
+    "RAI4-0427"
+   ],
+   "n": 2,
+   "min_cos": 0.8015720844268799
+  },
+  {
+   "rep": "RAI4-0161",
+   "members": [
+    "RAI4-0161"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0162",
+   "members": [
+    "RAI4-0162"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0165",
+   "members": [
+    "RAI4-0165"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0166",
+   "members": [
+    "RAI4-0166"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0167",
+   "members": [
+    "RAI4-0167",
+    "RAI4-0170"
+   ],
+   "n": 2,
+   "min_cos": 0.7793021202087402
+  },
+  {
+   "rep": "RAI4-0168",
+   "members": [
+    "RAI4-0168"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0169",
+   "members": [
+    "RAI4-0169"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0171",
+   "members": [
+    "RAI4-0171",
+    "RAI4-0172",
+    "RAI4-0392"
+   ],
+   "n": 3,
+   "min_cos": 0.6930632591247559
+  },
+  {
+   "rep": "RAI4-0173",
+   "members": [
+    "RAI4-0173",
+    "RAI4-1293"
+   ],
+   "n": 2,
+   "min_cos": 0.7987940311431885
+  },
+  {
+   "rep": "RAI4-0174",
+   "members": [
+    "RAI4-0174"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0176",
+   "members": [
+    "RAI4-0176",
+    "RAI4-0459"
+   ],
+   "n": 2,
+   "min_cos": 0.8479312658309937
+  },
+  {
+   "rep": "RAI4-0178",
+   "members": [
+    "RAI4-0178"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0180",
+   "members": [
+    "RAI4-0180"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0181",
+   "members": [
+    "RAI4-0181",
+    "RAI4-0226"
+   ],
+   "n": 2,
+   "min_cos": 0.7776024341583252
+  },
+  {
+   "rep": "RAI4-0182",
+   "members": [
+    "RAI4-0182",
+    "RAI4-0328"
+   ],
+   "n": 2,
+   "min_cos": 0.7809392213821411
+  },
+  {
+   "rep": "RAI4-0183",
+   "members": [
+    "RAI4-0183"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0184",
+   "members": [
+    "RAI4-0184"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0186",
+   "members": [
+    "RAI4-0186"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0192",
+   "members": [
+    "RAI4-0188",
+    "RAI4-0248",
+    "RAI4-0185",
+    "RAI4-0187",
+    "RAI4-0190",
+    "RAI4-0192",
+    "RAI4-0194",
+    "RAI4-0332",
+    "RAI4-0193",
+    "RAI4-0205",
+    "RAI4-0340",
+    "RAI4-0204",
+    "RAI4-0330"
+   ],
+   "n": 13,
+   "min_cos": 0.564062237739563
+  },
+  {
+   "rep": "RAI4-0189",
+   "members": [
+    "RAI4-0189"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0191",
+   "members": [
+    "RAI4-0191"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0195",
+   "members": [
+    "RAI4-0195"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0196",
+   "members": [
+    "RAI4-0196",
+    "RAI4-1676"
+   ],
+   "n": 2,
+   "min_cos": 0.8316085338592529
+  },
+  {
+   "rep": "RAI4-0197",
+   "members": [
+    "RAI4-0197"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0198",
+   "members": [
+    "RAI4-0198"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0199",
+   "members": [
+    "RAI4-0199",
+    "RAI4-0202"
+   ],
+   "n": 2,
+   "min_cos": 0.7912402153015137
+  },
+  {
+   "rep": "RAI4-0200",
+   "members": [
+    "RAI4-0200"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0201",
+   "members": [
+    "RAI4-0201",
+    "RAI4-0203"
+   ],
+   "n": 2,
+   "min_cos": 0.7970528602600098
+  },
+  {
+   "rep": "RAI4-0206",
+   "members": [
+    "RAI4-0206"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0207",
+   "members": [
+    "RAI4-0207"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0208",
+   "members": [
+    "RAI4-0208"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0209",
+   "members": [
+    "RAI4-0209"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0210",
+   "members": [
+    "RAI4-0210"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0211",
+   "members": [
+    "RAI4-0211"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0212",
+   "members": [
+    "RAI4-0212"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0213",
+   "members": [
+    "RAI4-0213"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0214",
+   "members": [
+    "RAI4-0214"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0215",
+   "members": [
+    "RAI4-0215"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0216",
+   "members": [
+    "RAI4-0216"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0217",
+   "members": [
+    "RAI4-0217",
+    "RAI4-0318"
+   ],
+   "n": 2,
+   "min_cos": 0.7940835952758789
+  },
+  {
+   "rep": "RAI4-0218",
+   "members": [
+    "RAI4-0218"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0219",
+   "members": [
+    "RAI4-0219"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0220",
+   "members": [
+    "RAI4-0220"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0221",
+   "members": [
+    "RAI4-0221"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0303",
+   "members": [
+    "RAI4-0222",
+    "RAI4-0303",
+    "RAI4-1678"
+   ],
+   "n": 3,
+   "min_cos": 0.8219424486160278
+  },
+  {
+   "rep": "RAI4-0223",
+   "members": [
+    "RAI4-0223",
+    "RAI4-0347"
+   ],
+   "n": 2,
+   "min_cos": 0.8164286017417908
+  },
+  {
+   "rep": "RAI4-0224",
+   "members": [
+    "RAI4-0224",
+    "RAI4-0251"
+   ],
+   "n": 2,
+   "min_cos": 0.8187105655670166
+  },
+  {
+   "rep": "RAI4-0225",
+   "members": [
+    "RAI4-0225",
+    "RAI4-0239",
+    "RAI4-0465"
+   ],
+   "n": 3,
+   "min_cos": 0.8107489347457886
+  },
+  {
+   "rep": "RAI4-0227",
+   "members": [
+    "RAI4-0227"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0228",
+   "members": [
+    "RAI4-0228",
+    "RAI4-0229"
+   ],
+   "n": 2,
+   "min_cos": 0.9164232015609741
+  },
+  {
+   "rep": "RAI4-0231",
+   "members": [
+    "RAI4-0231"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0232",
+   "members": [
+    "RAI4-0232"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0233",
+   "members": [
+    "RAI4-0233"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0234",
+   "members": [
+    "RAI4-0234"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0235",
+   "members": [
+    "RAI4-0235"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0236",
+   "members": [
+    "RAI4-0236"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0237",
+   "members": [
+    "RAI4-0237"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0238",
+   "members": [
+    "RAI4-0238"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0240",
+   "members": [
+    "RAI4-0240"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0241",
+   "members": [
+    "RAI4-0241"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0242",
+   "members": [
+    "RAI4-0242"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0243",
+   "members": [
+    "RAI4-0243"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0244",
+   "members": [
+    "RAI4-0244"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0245",
+   "members": [
+    "RAI4-0245"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0246",
+   "members": [
+    "RAI4-0246"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0247",
+   "members": [
+    "RAI4-0247"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0249",
+   "members": [
+    "RAI4-0249"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0250",
+   "members": [
+    "RAI4-0250"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0252",
+   "members": [
+    "RAI4-0252"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0253",
+   "members": [
+    "RAI4-0253"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0254",
+   "members": [
+    "RAI4-0254"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0255",
+   "members": [
+    "RAI4-0255"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0256",
+   "members": [
+    "RAI4-0256"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0257",
+   "members": [
+    "RAI4-0257"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0258",
+   "members": [
+    "RAI4-0258",
+    "RAI4-0259"
+   ],
+   "n": 2,
+   "min_cos": 0.8272659778594971
+  },
+  {
+   "rep": "RAI4-0260",
+   "members": [
+    "RAI4-0260"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0261",
+   "members": [
+    "RAI4-0261",
+    "RAI4-0334"
+   ],
+   "n": 2,
+   "min_cos": 0.7776561379432678
+  },
+  {
+   "rep": "RAI4-0262",
+   "members": [
+    "RAI4-0262",
+    "RAI4-0267"
+   ],
+   "n": 2,
+   "min_cos": 0.7793776988983154
+  },
+  {
+   "rep": "RAI4-0263",
+   "members": [
+    "RAI4-0263"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0264",
+   "members": [
+    "RAI4-0264"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0265",
+   "members": [
+    "RAI4-0265"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0266",
+   "members": [
+    "RAI4-0266"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0268",
+   "members": [
+    "RAI4-0268"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0269",
+   "members": [
+    "RAI4-0269"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0270",
+   "members": [
+    "RAI4-0270"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0271",
+   "members": [
+    "RAI4-0271"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0272",
+   "members": [
+    "RAI4-0272"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0273",
+   "members": [
+    "RAI4-0273"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0274",
+   "members": [
+    "RAI4-0274"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0275",
+   "members": [
+    "RAI4-0275"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0276",
+   "members": [
+    "RAI4-0276"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0277",
+   "members": [
+    "RAI4-0277"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0278",
+   "members": [
+    "RAI4-0278"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0279",
+   "members": [
+    "RAI4-0279"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0280",
+   "members": [
+    "RAI4-0280"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0281",
+   "members": [
+    "RAI4-0281"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0282",
+   "members": [
+    "RAI4-0282",
+    "RAI4-0342",
+    "RAI4-0357"
+   ],
+   "n": 3,
+   "min_cos": 0.6858806610107422
+  },
+  {
+   "rep": "RAI4-0283",
+   "members": [
+    "RAI4-0283",
+    "RAI4-0284"
+   ],
+   "n": 2,
+   "min_cos": 0.8349505662918091
+  },
+  {
+   "rep": "RAI4-0285",
+   "members": [
+    "RAI4-0285"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0286",
+   "members": [
+    "RAI4-0286",
+    "RAI4-0292"
+   ],
+   "n": 2,
+   "min_cos": 0.8208172917366028
+  },
+  {
+   "rep": "RAI4-0287",
+   "members": [
+    "RAI4-0287"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0288",
+   "members": [
+    "RAI4-0288"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0289",
+   "members": [
+    "RAI4-0289"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0290",
+   "members": [
+    "RAI4-0290"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0291",
+   "members": [
+    "RAI4-0291"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0293",
+   "members": [
+    "RAI4-0293"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0294",
+   "members": [
+    "RAI4-0294"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0295",
+   "members": [
+    "RAI4-0295"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0296",
+   "members": [
+    "RAI4-0296"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0297",
+   "members": [
+    "RAI4-0297"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0298",
+   "members": [
+    "RAI4-0298"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0299",
+   "members": [
+    "RAI4-0299"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0300",
+   "members": [
+    "RAI4-0300"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0301",
+   "members": [
+    "RAI4-0301"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0302",
+   "members": [
+    "RAI4-0302",
+    "RAI4-0349"
+   ],
+   "n": 2,
+   "min_cos": 0.8017320036888123
+  },
+  {
+   "rep": "RAI4-0304",
+   "members": [
+    "RAI4-0304"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0305",
+   "members": [
+    "RAI4-0305"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0307",
+   "members": [
+    "RAI4-0307"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0309",
+   "members": [
+    "RAI4-0309"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0310",
+   "members": [
+    "RAI4-0310"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0311",
+   "members": [
+    "RAI4-0311"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0312",
+   "members": [
+    "RAI4-0312"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0313",
+   "members": [
+    "RAI4-0313"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0314",
+   "members": [
+    "RAI4-0314",
+    "RAI4-0345"
+   ],
+   "n": 2,
+   "min_cos": 0.8027940988540649
+  },
+  {
+   "rep": "RAI4-0315",
+   "members": [
+    "RAI4-0315"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0316",
+   "members": [
+    "RAI4-0316"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0317",
+   "members": [
+    "RAI4-0317"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0319",
+   "members": [
+    "RAI4-0319"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0320",
+   "members": [
+    "RAI4-0320"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0321",
+   "members": [
+    "RAI4-0321"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0322",
+   "members": [
+    "RAI4-0322"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0323",
+   "members": [
+    "RAI4-0323"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0324",
+   "members": [
+    "RAI4-0324"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0325",
+   "members": [
+    "RAI4-0325"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0326",
+   "members": [
+    "RAI4-0326"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0327",
+   "members": [
+    "RAI4-0327"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0329",
+   "members": [
+    "RAI4-0329"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0331",
+   "members": [
+    "RAI4-0331"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0333",
+   "members": [
+    "RAI4-0333"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0335",
+   "members": [
+    "RAI4-0335",
+    "RAI4-1469"
+   ],
+   "n": 2,
+   "min_cos": 0.7764999270439148
+  },
+  {
+   "rep": "RAI4-0336",
+   "members": [
+    "RAI4-0336"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0337",
+   "members": [
+    "RAI4-0337"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0338",
+   "members": [
+    "RAI4-0338"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0339",
+   "members": [
+    "RAI4-0339"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0343",
+   "members": [
+    "RAI4-0343"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0344",
+   "members": [
+    "RAI4-0344"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0346",
+   "members": [
+    "RAI4-0346"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0348",
+   "members": [
+    "RAI4-0348"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0350",
+   "members": [
+    "RAI4-0350"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0351",
+   "members": [
+    "RAI4-0351"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0352",
+   "members": [
+    "RAI4-0352"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0354",
+   "members": [
+    "RAI4-0354"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0355",
+   "members": [
+    "RAI4-0355"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0356",
+   "members": [
+    "RAI4-0356"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0358",
+   "members": [
+    "RAI4-0358"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0359",
+   "members": [
+    "RAI4-0359"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0360",
+   "members": [
+    "RAI4-0360"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0361",
+   "members": [
+    "RAI4-0361"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0362",
+   "members": [
+    "RAI4-0362",
+    "RAI4-0473"
+   ],
+   "n": 2,
+   "min_cos": 0.8019351959228516
+  },
+  {
+   "rep": "RAI4-0363",
+   "members": [
+    "RAI4-0363"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0364",
+   "members": [
+    "RAI4-0364"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0365",
+   "members": [
+    "RAI4-0365"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0366",
+   "members": [
+    "RAI4-0366"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0367",
+   "members": [
+    "RAI4-0367",
+    "RAI4-0476"
+   ],
+   "n": 2,
+   "min_cos": 0.8701871037483215
+  },
+  {
+   "rep": "RAI4-0368",
+   "members": [
+    "RAI4-0368"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0369",
+   "members": [
+    "RAI4-0369",
+    "RAI4-1395",
+    "RAI4-0464",
+    "RAI4-1603"
+   ],
+   "n": 4,
+   "min_cos": 0.6861303448677063
+  },
+  {
+   "rep": "RAI4-0370",
+   "members": [
+    "RAI4-0370"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0371",
+   "members": [
+    "RAI4-0371"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0372",
+   "members": [
+    "RAI4-0372",
+    "RAI4-0395",
+    "RAI4-0406",
+    "RAI4-0416",
+    "RAI4-0421",
+    "RAI4-0478",
+    "RAI4-0670",
+    "RAI4-0683"
+   ],
+   "n": 8,
+   "min_cos": 0.543538510799408
+  },
+  {
+   "rep": "RAI4-0373",
+   "members": [
+    "RAI4-0373"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0374",
+   "members": [
+    "RAI4-0374"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0377",
+   "members": [
+    "RAI4-0377"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0379",
+   "members": [
+    "RAI4-0379"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0380",
+   "members": [
+    "RAI4-0380"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0381",
+   "members": [
+    "RAI4-0381",
+    "RAI4-0477"
+   ],
+   "n": 2,
+   "min_cos": 0.8596664667129517
+  },
+  {
+   "rep": "RAI4-0382",
+   "members": [
+    "RAI4-0382"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0383",
+   "members": [
+    "RAI4-0383"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0384",
+   "members": [
+    "RAI4-0384"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0385",
+   "members": [
+    "RAI4-0385",
+    "RAI4-0407",
+    "RAI4-0475"
+   ],
+   "n": 3,
+   "min_cos": 0.7555692195892334
+  },
+  {
+   "rep": "RAI4-0460",
+   "members": [
+    "RAI4-0387",
+    "RAI4-0460",
+    "RAI4-0528",
+    "RAI4-1026",
+    "RAI4-1117",
+    "RAI4-1217",
+    "RAI4-1369",
+    "RAI4-1370"
+   ],
+   "n": 8,
+   "min_cos": 0.6498318910598755
+  },
+  {
+   "rep": "RAI4-0388",
+   "members": [
+    "RAI4-0388"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0389",
+   "members": [
+    "RAI4-0389"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0390",
+   "members": [
+    "RAI4-0390"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0391",
+   "members": [
+    "RAI4-0391",
+    "RAI4-0420"
+   ],
+   "n": 2,
+   "min_cos": 0.7841379642486572
+  },
+  {
+   "rep": "RAI4-0393",
+   "members": [
+    "RAI4-0393"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0394",
+   "members": [
+    "RAI4-0394"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0396",
+   "members": [
+    "RAI4-0396"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0397",
+   "members": [
+    "RAI4-0397"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0398",
+   "members": [
+    "RAI4-0398"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0399",
+   "members": [
+    "RAI4-0399"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0400",
+   "members": [
+    "RAI4-0400"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0402",
+   "members": [
+    "RAI4-0402"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0403",
+   "members": [
+    "RAI4-0403"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0404",
+   "members": [
+    "RAI4-0404"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0405",
+   "members": [
+    "RAI4-0405"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0408",
+   "members": [
+    "RAI4-0408"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0409",
+   "members": [
+    "RAI4-0409"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0410",
+   "members": [
+    "RAI4-0410"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0411",
+   "members": [
+    "RAI4-0411"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0412",
+   "members": [
+    "RAI4-0412"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0413",
+   "members": [
+    "RAI4-0413"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0414",
+   "members": [
+    "RAI4-0414"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0415",
+   "members": [
+    "RAI4-0415"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0417",
+   "members": [
+    "RAI4-0417",
+    "RAI4-1237"
+   ],
+   "n": 2,
+   "min_cos": 0.8089218735694885
+  },
+  {
+   "rep": "RAI4-0418",
+   "members": [
+    "RAI4-0418"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0419",
+   "members": [
+    "RAI4-0419"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0422",
+   "members": [
+    "RAI4-0422"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0424",
+   "members": [
+    "RAI4-0424"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0425",
+   "members": [
+    "RAI4-0425",
+    "RAI4-0686"
+   ],
+   "n": 2,
+   "min_cos": 0.7918796539306641
+  },
+  {
+   "rep": "RAI4-0426",
+   "members": [
+    "RAI4-0426"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0430",
+   "members": [
+    "RAI4-0430"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0432",
+   "members": [
+    "RAI4-0432"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0433",
+   "members": [
+    "RAI4-0433",
+    "RAI4-0976"
+   ],
+   "n": 2,
+   "min_cos": 0.7909243702888489
+  },
+  {
+   "rep": "RAI4-0435",
+   "members": [
+    "RAI4-0435"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0436",
+   "members": [
+    "RAI4-0436",
+    "RAI4-0755",
+    "RAI4-0786",
+    "RAI4-1690"
+   ],
+   "n": 4,
+   "min_cos": 0.7400202751159668
+  },
+  {
+   "rep": "RAI4-0438",
+   "members": [
+    "RAI4-0438"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0946",
+   "members": [
+    "RAI4-0441",
+    "RAI4-0448",
+    "RAI4-0445",
+    "RAI4-0609",
+    "RAI4-0620",
+    "RAI4-1340",
+    "RAI4-0631",
+    "RAI4-0648",
+    "RAI4-0649",
+    "RAI4-0654",
+    "RAI4-0946",
+    "RAI4-1210",
+    "RAI4-0962",
+    "RAI4-1086",
+    "RAI4-1342",
+    "RAI4-0449",
+    "RAI4-1346",
+    "RAI4-1347",
+    "RAI4-1355",
+    "RAI4-1356",
+    "RAI4-1391",
+    "RAI4-1614",
+    "RAI4-0618",
+    "RAI4-0630",
+    "RAI4-0944",
+    "RAI4-1222",
+    "RAI4-0934",
+    "RAI4-0965",
+    "RAI4-0623",
+    "RAI4-1588",
+    "RAI4-0642",
+    "RAI4-0689",
+    "RAI4-1008"
+   ],
+   "n": 33,
+   "min_cos": 0.4540020525455475
+  },
+  {
+   "rep": "RAI4-0442",
+   "members": [
+    "RAI4-0442",
+    "RAI4-0795"
+   ],
+   "n": 2,
+   "min_cos": 0.8425846099853516
+  },
+  {
+   "rep": "RAI4-0443",
+   "members": [
+    "RAI4-0443",
+    "RAI4-1601"
+   ],
+   "n": 2,
+   "min_cos": 0.7789366245269775
+  },
+  {
+   "rep": "RAI4-0444",
+   "members": [
+    "RAI4-0444"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0446",
+   "members": [
+    "RAI4-0446"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0646",
+   "members": [
+    "RAI4-0447",
+    "RAI4-0646",
+    "RAI4-0912",
+    "RAI4-0913"
+   ],
+   "n": 4,
+   "min_cos": 0.7784724831581116
+  },
+  {
+   "rep": "RAI4-0450",
+   "members": [
+    "RAI4-0450",
+    "RAI4-1358",
+    "RAI4-0643"
+   ],
+   "n": 3,
+   "min_cos": 0.7323446869850159
+  },
+  {
+   "rep": "RAI4-1193",
+   "members": [
+    "RAI4-0451",
+    "RAI4-0613",
+    "RAI4-0647",
+    "RAI4-1423",
+    "RAI4-1638",
+    "RAI4-0981",
+    "RAI4-1182",
+    "RAI4-1193",
+    "RAI4-1578"
+   ],
+   "n": 9,
+   "min_cos": 0.6568956971168518
+  },
+  {
+   "rep": "RAI4-0456",
+   "members": [
+    "RAI4-0455",
+    "RAI4-0456",
+    "RAI4-0953",
+    "RAI4-1127",
+    "RAI4-1409",
+    "RAI4-1718"
+   ],
+   "n": 6,
+   "min_cos": 0.6697735786437988
+  },
+  {
+   "rep": "RAI4-0458",
+   "members": [
+    "RAI4-0458"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0461",
+   "members": [
+    "RAI4-0461"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0537",
+   "members": [
+    "RAI4-0462",
+    "RAI4-0935",
+    "RAI4-0501",
+    "RAI4-1373",
+    "RAI4-0503",
+    "RAI4-1023",
+    "RAI4-1212",
+    "RAI4-1405",
+    "RAI4-1604",
+    "RAI4-0463",
+    "RAI4-0537"
+   ],
+   "n": 11,
+   "min_cos": 0.6226793527603149
+  },
+  {
+   "rep": "RAI4-0466",
+   "members": [
+    "RAI4-0466",
+    "RAI4-0771"
+   ],
+   "n": 2,
+   "min_cos": 0.8098304271697998
+  },
+  {
+   "rep": "RAI4-1133",
+   "members": [
+    "RAI4-0469",
+    "RAI4-1132",
+    "RAI4-1133",
+    "RAI4-1691"
+   ],
+   "n": 4,
+   "min_cos": 0.7177969217300415
+  },
+  {
+   "rep": "RAI4-0470",
+   "members": [
+    "RAI4-0470"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0471",
+   "members": [
+    "RAI4-0471"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0472",
+   "members": [
+    "RAI4-0472"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0474",
+   "members": [
+    "RAI4-0474"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0480",
+   "members": [
+    "RAI4-0480"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0483",
+   "members": [
+    "RAI4-0483",
+    "RAI4-0600"
+   ],
+   "n": 2,
+   "min_cos": 0.8326730728149414
+  },
+  {
+   "rep": "RAI4-0484",
+   "members": [
+    "RAI4-0484"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0488",
+   "members": [
+    "RAI4-0488",
+    "RAI4-1416",
+    "RAI4-0534"
+   ],
+   "n": 3,
+   "min_cos": 0.7647559642791748
+  },
+  {
+   "rep": "RAI4-0491",
+   "members": [
+    "RAI4-0491"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0493",
+   "members": [
+    "RAI4-0493"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0494",
+   "members": [
+    "RAI4-0494"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0495",
+   "members": [
+    "RAI4-0495"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0497",
+   "members": [
+    "RAI4-0497",
+    "RAI4-0971"
+   ],
+   "n": 2,
+   "min_cos": 0.8134956359863281
+  },
+  {
+   "rep": "RAI4-0498",
+   "members": [
+    "RAI4-0498",
+    "RAI4-1716",
+    "RAI4-0816"
+   ],
+   "n": 3,
+   "min_cos": 0.7619928121566772
+  },
+  {
+   "rep": "RAI4-0499",
+   "members": [
+    "RAI4-0499"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0502",
+   "members": [
+    "RAI4-0502",
+    "RAI4-1012",
+    "RAI4-0530",
+    "RAI4-0533",
+    "RAI4-0582",
+    "RAI4-0650",
+    "RAI4-1549",
+    "RAI4-0877",
+    "RAI4-0881",
+    "RAI4-1632",
+    "RAI4-0834",
+    "RAI4-1707",
+    "RAI4-1725",
+    "RAI4-1708",
+    "RAI4-1710"
+   ],
+   "n": 15,
+   "min_cos": 0.6047972440719604
+  },
+  {
+   "rep": "RAI4-0504",
+   "members": [
+    "RAI4-0504"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0505",
+   "members": [
+    "RAI4-0505",
+    "RAI4-0513",
+    "RAI4-0519",
+    "RAI4-1096"
+   ],
+   "n": 4,
+   "min_cos": 0.731391191482544
+  },
+  {
+   "rep": "RAI4-0932",
+   "members": [
+    "RAI4-0496",
+    "RAI4-0506",
+    "RAI4-1368",
+    "RAI4-0517",
+    "RAI4-0932",
+    "RAI4-1367",
+    "RAI4-1584",
+    "RAI4-0536",
+    "RAI4-1211",
+    "RAI4-1366",
+    "RAI4-0915",
+    "RAI4-0794"
+   ],
+   "n": 12,
+   "min_cos": 0.5942322015762329
+  },
+  {
+   "rep": "RAI4-0510",
+   "members": [
+    "RAI4-0179",
+    "RAI4-0507",
+    "RAI4-0508",
+    "RAI4-0510"
+   ],
+   "n": 4,
+   "min_cos": 0.6779536604881287
+  },
+  {
+   "rep": "RAI4-0509",
+   "members": [
+    "RAI4-0509",
+    "RAI4-1415",
+    "RAI4-1394"
+   ],
+   "n": 3,
+   "min_cos": 0.7492948770523071
+  },
+  {
+   "rep": "RAI4-0512",
+   "members": [
+    "RAI4-0512"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0514",
+   "members": [
+    "RAI4-0514"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0516",
+   "members": [
+    "RAI4-0516",
+    "RAI4-1297"
+   ],
+   "n": 2,
+   "min_cos": 0.8053714036941528
+  },
+  {
+   "rep": "RAI4-1104",
+   "members": [
+    "RAI4-0518",
+    "RAI4-1104",
+    "RAI4-1290",
+    "RAI4-1420",
+    "RAI4-0995"
+   ],
+   "n": 5,
+   "min_cos": 0.7001369595527649
+  },
+  {
+   "rep": "RAI4-0520",
+   "members": [
+    "RAI4-0520"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0521",
+   "members": [
+    "RAI4-0521"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1098",
+   "members": [
+    "RAI4-0526",
+    "RAI4-1098",
+    "RAI4-1264",
+    "RAI4-0987"
+   ],
+   "n": 4,
+   "min_cos": 0.7069631814956665
+  },
+  {
+   "rep": "RAI4-0527",
+   "members": [
+    "RAI4-0527"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0529",
+   "members": [
+    "RAI4-0529",
+    "RAI4-1450",
+    "RAI4-0873",
+    "RAI4-1609"
+   ],
+   "n": 4,
+   "min_cos": 0.7176591157913208
+  },
+  {
+   "rep": "RAI4-0535",
+   "members": [
+    "RAI4-0535"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0541",
+   "members": [
+    "RAI4-0541"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0543",
+   "members": [
+    "RAI4-0543"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0544",
+   "members": [
+    "RAI4-0544"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0545",
+   "members": [
+    "RAI4-0545"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0546",
+   "members": [
+    "RAI4-0546"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0547",
+   "members": [
+    "RAI4-0547"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0549",
+   "members": [
+    "RAI4-0548",
+    "RAI4-0549",
+    "RAI4-1511",
+    "RAI4-0550"
+   ],
+   "n": 4,
+   "min_cos": 0.7221642136573792
+  },
+  {
+   "rep": "RAI4-0591",
+   "members": [
+    "RAI4-0551",
+    "RAI4-0565",
+    "RAI4-0591",
+    "RAI4-0898",
+    "RAI4-0945",
+    "RAI4-1101",
+    "RAI4-1245",
+    "RAI4-1351",
+    "RAI4-1424",
+    "RAI4-1425"
+   ],
+   "n": 10,
+   "min_cos": 0.7012295126914978
+  },
+  {
+   "rep": "RAI4-0552",
+   "members": [
+    "RAI4-0552"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0555",
+   "members": [
+    "RAI4-0555",
+    "RAI4-1620",
+    "RAI4-1398",
+    "RAI4-0578",
+    "RAI4-1277",
+    "RAI4-1431"
+   ],
+   "n": 6,
+   "min_cos": 0.6189859509468079
+  },
+  {
+   "rep": "RAI4-0556",
+   "members": [
+    "RAI4-0556"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0557",
+   "members": [
+    "RAI4-0557",
+    "RAI4-0910",
+    "RAI4-0911",
+    "RAI4-0959",
+    "RAI4-0966"
+   ],
+   "n": 5,
+   "min_cos": 0.7027403712272644
+  },
+  {
+   "rep": "RAI4-0558",
+   "members": [
+    "RAI4-0558"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1563",
+   "members": [
+    "RAI4-0559",
+    "RAI4-0615",
+    "RAI4-0645",
+    "RAI4-1343",
+    "RAI4-1563",
+    "RAI4-0617",
+    "RAI4-1417"
+   ],
+   "n": 7,
+   "min_cos": 0.6438137292861938
+  },
+  {
+   "rep": "RAI4-0561",
+   "members": [
+    "RAI4-0561"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0562",
+   "members": [
+    "RAI4-0562",
+    "RAI4-1148",
+    "RAI4-1575"
+   ],
+   "n": 3,
+   "min_cos": 0.7658975124359131
+  },
+  {
+   "rep": "RAI4-0564",
+   "members": [
+    "RAI4-0564"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0567",
+   "members": [
+    "RAI4-0567"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0568",
+   "members": [
+    "RAI4-0568"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0571",
+   "members": [
+    "RAI4-0571",
+    "RAI4-1253",
+    "RAI4-1401"
+   ],
+   "n": 3,
+   "min_cos": 0.766631007194519
+  },
+  {
+   "rep": "RAI4-0572",
+   "members": [
+    "RAI4-0572"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0574",
+   "members": [
+    "RAI4-0574"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0576",
+   "members": [
+    "RAI4-0576"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0579",
+   "members": [
+    "RAI4-0579",
+    "RAI4-1682"
+   ],
+   "n": 2,
+   "min_cos": 0.834324836730957
+  },
+  {
+   "rep": "RAI4-0580",
+   "members": [
+    "RAI4-0580",
+    "RAI4-0625",
+    "RAI4-1162",
+    "RAI4-1613"
+   ],
+   "n": 4,
+   "min_cos": 0.7686440944671631
+  },
+  {
+   "rep": "RAI4-0581",
+   "members": [
+    "RAI4-0581"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0583",
+   "members": [
+    "RAI4-0583"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0584",
+   "members": [
+    "RAI4-0584",
+    "RAI4-1565",
+    "RAI4-1649"
+   ],
+   "n": 3,
+   "min_cos": 0.7721990346908569
+  },
+  {
+   "rep": "RAI4-0585",
+   "members": [
+    "RAI4-0585",
+    "RAI4-1484"
+   ],
+   "n": 2,
+   "min_cos": 0.791527271270752
+  },
+  {
+   "rep": "RAI4-1040",
+   "members": [
+    "RAI4-0569",
+    "RAI4-0586",
+    "RAI4-1040",
+    "RAI4-0681",
+    "RAI4-1594",
+    "RAI4-0696",
+    "RAI4-1567",
+    "RAI4-1225",
+    "RAI4-1270"
+   ],
+   "n": 9,
+   "min_cos": 0.6524157524108887
+  },
+  {
+   "rep": "RAI4-0587",
+   "members": [
+    "RAI4-0587"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0588",
+   "members": [
+    "RAI4-0588",
+    "RAI4-1279",
+    "RAI4-1599"
+   ],
+   "n": 3,
+   "min_cos": 0.7191908359527588
+  },
+  {
+   "rep": "RAI4-0589",
+   "members": [
+    "RAI4-0589"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0590",
+   "members": [
+    "RAI4-0590"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0592",
+   "members": [
+    "RAI4-0592",
+    "RAI4-0604"
+   ],
+   "n": 2,
+   "min_cos": 0.8125954866409302
+  },
+  {
+   "rep": "RAI4-0593",
+   "members": [
+    "RAI4-0593",
+    "RAI4-0940",
+    "RAI4-0772",
+    "RAI4-0431",
+    "RAI4-0914",
+    "RAI4-0923",
+    "RAI4-1055",
+    "RAI4-1072",
+    "RAI4-1074",
+    "RAI4-1144",
+    "RAI4-1591",
+    "RAI4-1047",
+    "RAI4-1313",
+    "RAI4-1365"
+   ],
+   "n": 14,
+   "min_cos": 0.6189230680465698
+  },
+  {
+   "rep": "RAI4-0975",
+   "members": [
+    "RAI4-0595",
+    "RAI4-1102",
+    "RAI4-0975",
+    "RAI4-0990",
+    "RAI4-1265"
+   ],
+   "n": 5,
+   "min_cos": 0.7471835613250732
+  },
+  {
+   "rep": "RAI4-0598",
+   "members": [
+    "RAI4-0598"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0601",
+   "members": [
+    "RAI4-0601",
+    "RAI4-0905"
+   ],
+   "n": 2,
+   "min_cos": 0.8008185625076294
+  },
+  {
+   "rep": "RAI4-0423",
+   "members": [
+    "RAI4-0119",
+    "RAI4-0177",
+    "RAI4-0423",
+    "RAI4-1713",
+    "RAI4-0677",
+    "RAI4-1426",
+    "RAI4-0602",
+    "RAI4-0860",
+    "RAI4-1100",
+    "RAI4-0900",
+    "RAI4-1003",
+    "RAI4-1007",
+    "RAI4-0573",
+    "RAI4-1044",
+    "RAI4-1097",
+    "RAI4-0054",
+    "RAI4-0113",
+    "RAI4-0122",
+    "RAI4-0128",
+    "RAI4-0135",
+    "RAI4-0137",
+    "RAI4-0138",
+    "RAI4-0401",
+    "RAI4-0452",
+    "RAI4-0554",
+    "RAI4-0599",
+    "RAI4-0603",
+    "RAI4-0852",
+    "RAI4-0855",
+    "RAI4-0856",
+    "RAI4-0857",
+    "RAI4-0858",
+    "RAI4-0859",
+    "RAI4-0894",
+    "RAI4-0899",
+    "RAI4-0901",
+    "RAI4-0903",
+    "RAI4-0963",
+    "RAI4-1123",
+    "RAI4-1221",
+    "RAI4-1243",
+    "RAI4-1254",
+    "RAI4-1361",
+    "RAI4-1362",
+    "RAI4-1397",
+    "RAI4-1482",
+    "RAI4-1552",
+    "RAI4-1616",
+    "RAI4-1727",
+    "RAI4-1276",
+    "RAI4-1345",
+    "RAI4-1082",
+    "RAI4-1103",
+    "RAI4-1266",
+    "RAI4-1344",
+    "RAI4-1723"
+   ],
+   "n": 56,
+   "min_cos": 0.5553508996963501
+  },
+  {
+   "rep": "RAI4-0605",
+   "members": [
+    "RAI4-0605"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0607",
+   "members": [
+    "RAI4-0607"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0608",
+   "members": [
+    "RAI4-0608",
+    "RAI4-1628",
+    "RAI4-1633"
+   ],
+   "n": 3,
+   "min_cos": 0.6250962018966675
+  },
+  {
+   "rep": "RAI4-0611",
+   "members": [
+    "RAI4-0611"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0612",
+   "members": [
+    "RAI4-0612",
+    "RAI4-0660"
+   ],
+   "n": 2,
+   "min_cos": 0.8823535442352295
+  },
+  {
+   "rep": "RAI4-1392",
+   "members": [
+    "RAI4-0616",
+    "RAI4-1114",
+    "RAI4-1392",
+    "RAI4-1657"
+   ],
+   "n": 4,
+   "min_cos": 0.7636715173721313
+  },
+  {
+   "rep": "RAI4-0619",
+   "members": [
+    "RAI4-0619"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0621",
+   "members": [
+    "RAI4-0621"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0622",
+   "members": [
+    "RAI4-0622"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0960",
+   "members": [
+    "RAI4-0626",
+    "RAI4-0960",
+    "RAI4-1557"
+   ],
+   "n": 3,
+   "min_cos": 0.6690636277198792
+  },
+  {
+   "rep": "RAI4-0628",
+   "members": [
+    "RAI4-0628",
+    "RAI4-0886"
+   ],
+   "n": 2,
+   "min_cos": 0.8812335133552551
+  },
+  {
+   "rep": "RAI4-0629",
+   "members": [
+    "RAI4-0629"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0632",
+   "members": [
+    "RAI4-0632"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0633",
+   "members": [
+    "RAI4-0633"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0635",
+   "members": [
+    "RAI4-0635"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0639",
+   "members": [
+    "RAI4-0639"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0640",
+   "members": [
+    "RAI4-0640"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0641",
+   "members": [
+    "RAI4-0641",
+    "RAI4-1582"
+   ],
+   "n": 2,
+   "min_cos": 0.7763718366622925
+  },
+  {
+   "rep": "RAI4-0644",
+   "members": [
+    "RAI4-0644"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0651",
+   "members": [
+    "RAI4-0651"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0652",
+   "members": [
+    "RAI4-0652"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0653",
+   "members": [
+    "RAI4-0653"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0655",
+   "members": [
+    "RAI4-0655",
+    "RAI4-1089"
+   ],
+   "n": 2,
+   "min_cos": 0.8090826272964478
+  },
+  {
+   "rep": "RAI4-0764",
+   "members": [
+    "RAI4-0656",
+    "RAI4-0657",
+    "RAI4-0735",
+    "RAI4-0751",
+    "RAI4-1556",
+    "RAI4-0764",
+    "RAI4-0765",
+    "RAI4-0988",
+    "RAI4-1013",
+    "RAI4-1038",
+    "RAI4-1073",
+    "RAI4-1099",
+    "RAI4-1335",
+    "RAI4-1407",
+    "RAI4-1624",
+    "RAI4-1625",
+    "RAI4-1714",
+    "RAI4-0777",
+    "RAI4-1223",
+    "RAI4-1608",
+    "RAI4-1726",
+    "RAI4-0775",
+    "RAI4-0933",
+    "RAI4-1543"
+   ],
+   "n": 24,
+   "min_cos": 0.5848222970962524
+  },
+  {
+   "rep": "RAI4-0661",
+   "members": [
+    "RAI4-0661"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0662",
+   "members": [
+    "RAI4-0662"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0663",
+   "members": [
+    "RAI4-0663"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0664",
+   "members": [
+    "RAI4-0664"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0666",
+   "members": [
+    "RAI4-0666"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0667",
+   "members": [
+    "RAI4-0667"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0669",
+   "members": [
+    "RAI4-0668",
+    "RAI4-0669",
+    "RAI4-1135",
+    "RAI4-1203"
+   ],
+   "n": 4,
+   "min_cos": 0.6905162930488586
+  },
+  {
+   "rep": "RAI4-0671",
+   "members": [
+    "RAI4-0671"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0674",
+   "members": [
+    "RAI4-0674"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0699",
+   "members": [
+    "RAI4-0675",
+    "RAI4-0694",
+    "RAI4-0699",
+    "RAI4-0720"
+   ],
+   "n": 4,
+   "min_cos": 0.7092821598052979
+  },
+  {
+   "rep": "RAI4-0676",
+   "members": [
+    "RAI4-0676",
+    "RAI4-0707",
+    "RAI4-1274",
+    "RAI4-0709",
+    "RAI4-1111",
+    "RAI4-0937",
+    "RAI4-1166",
+    "RAI4-1178"
+   ],
+   "n": 8,
+   "min_cos": 0.6858057379722595
+  },
+  {
+   "rep": "RAI4-0678",
+   "members": [
+    "RAI4-0678"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1136",
+   "members": [
+    "RAI4-0624",
+    "RAI4-0665",
+    "RAI4-0673",
+    "RAI4-0682",
+    "RAI4-0684",
+    "RAI4-0685",
+    "RAI4-0691",
+    "RAI4-0687",
+    "RAI4-0791",
+    "RAI4-1134",
+    "RAI4-1136",
+    "RAI4-1137",
+    "RAI4-1138",
+    "RAI4-0439",
+    "RAI4-0627",
+    "RAI4-0638",
+    "RAI4-1204",
+    "RAI4-1357",
+    "RAI4-0704",
+    "RAI4-0958",
+    "RAI4-1183",
+    "RAI4-1205",
+    "RAI4-1712"
+   ],
+   "n": 23,
+   "min_cos": 0.547161877155304
+  },
+  {
+   "rep": "RAI4-0697",
+   "members": [
+    "RAI4-0697"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0698",
+   "members": [
+    "RAI4-0698"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0700",
+   "members": [
+    "RAI4-0700"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0701",
+   "members": [
+    "RAI4-0701"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0702",
+   "members": [
+    "RAI4-0702"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0705",
+   "members": [
+    "RAI4-0705"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0706",
+   "members": [
+    "RAI4-0706"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0708",
+   "members": [
+    "RAI4-0708",
+    "RAI4-1054"
+   ],
+   "n": 2,
+   "min_cos": 0.8221747875213623
+  },
+  {
+   "rep": "RAI4-0711",
+   "members": [
+    "RAI4-0711"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0713",
+   "members": [
+    "RAI4-0713",
+    "RAI4-0725"
+   ],
+   "n": 2,
+   "min_cos": 0.8086473941802979
+  },
+  {
+   "rep": "RAI4-0714",
+   "members": [
+    "RAI4-0714"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0715",
+   "members": [
+    "RAI4-0715"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0716",
+   "members": [
+    "RAI4-0716"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0717",
+   "members": [
+    "RAI4-0717"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0718",
+   "members": [
+    "RAI4-0718"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0721",
+   "members": [
+    "RAI4-0721"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0722",
+   "members": [
+    "RAI4-0722"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0723",
+   "members": [
+    "RAI4-0723"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0727",
+   "members": [
+    "RAI4-0727"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0731",
+   "members": [
+    "RAI4-0731"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0733",
+   "members": [
+    "RAI4-0733",
+    "RAI4-0762"
+   ],
+   "n": 2,
+   "min_cos": 0.8586845397949219
+  },
+  {
+   "rep": "RAI4-0734",
+   "members": [
+    "RAI4-0734"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0736",
+   "members": [
+    "RAI4-0736",
+    "RAI4-0783"
+   ],
+   "n": 2,
+   "min_cos": 0.8697413206100464
+  },
+  {
+   "rep": "RAI4-0737",
+   "members": [
+    "RAI4-0737"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0739",
+   "members": [
+    "RAI4-0739",
+    "RAI4-1209"
+   ],
+   "n": 2,
+   "min_cos": 0.796476423740387
+  },
+  {
+   "rep": "RAI4-0740",
+   "members": [
+    "RAI4-0740"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0741",
+   "members": [
+    "RAI4-0741"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0744",
+   "members": [
+    "RAI4-0744"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1517",
+   "members": [
+    "RAI4-0742",
+    "RAI4-0743",
+    "RAI4-0745",
+    "RAI4-0746",
+    "RAI4-1350",
+    "RAI4-1517",
+    "RAI4-1518",
+    "RAI4-1664"
+   ],
+   "n": 8,
+   "min_cos": 0.667434811592102
+  },
+  {
+   "rep": "RAI4-0747",
+   "members": [
+    "RAI4-0747",
+    "RAI4-0766",
+    "RAI4-0770",
+    "RAI4-1110",
+    "RAI4-1334",
+    "RAI4-1488"
+   ],
+   "n": 6,
+   "min_cos": 0.7347330451011658
+  },
+  {
+   "rep": "RAI4-0753",
+   "members": [
+    "RAI4-0753"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0758",
+   "members": [
+    "RAI4-0015",
+    "RAI4-0028",
+    "RAI4-0434",
+    "RAI4-1673",
+    "RAI4-0759",
+    "RAI4-0769",
+    "RAI4-0784",
+    "RAI4-0756",
+    "RAI4-0758",
+    "RAI4-1199"
+   ],
+   "n": 10,
+   "min_cos": 0.6463683843612671
+  },
+  {
+   "rep": "RAI4-0760",
+   "members": [
+    "RAI4-0760",
+    "RAI4-1730",
+    "RAI4-1731"
+   ],
+   "n": 3,
+   "min_cos": 0.7605085968971252
+  },
+  {
+   "rep": "RAI4-0761",
+   "members": [
+    "RAI4-0761"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0763",
+   "members": [
+    "RAI4-0763"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0767",
+   "members": [
+    "RAI4-0767"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0768",
+   "members": [
+    "RAI4-0730",
+    "RAI4-0748",
+    "RAI4-0768",
+    "RAI4-0778",
+    "RAI4-0924",
+    "RAI4-1191"
+   ],
+   "n": 6,
+   "min_cos": 0.7314949035644531
+  },
+  {
+   "rep": "RAI4-0773",
+   "members": [
+    "RAI4-0773"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0774",
+   "members": [
+    "RAI4-0774"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0776",
+   "members": [
+    "RAI4-0776"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0779",
+   "members": [
+    "RAI4-0779"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0780",
+   "members": [
+    "RAI4-0780"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0782",
+   "members": [
+    "RAI4-0782"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0785",
+   "members": [
+    "RAI4-0785"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0787",
+   "members": [
+    "RAI4-0787"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0788",
+   "members": [
+    "RAI4-0788"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0789",
+   "members": [
+    "RAI4-0789"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0792",
+   "members": [
+    "RAI4-0792"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0793",
+   "members": [
+    "RAI4-0793",
+    "RAI4-1084"
+   ],
+   "n": 2,
+   "min_cos": 0.8517459630966187
+  },
+  {
+   "rep": "RAI4-0825",
+   "members": [
+    "RAI4-0594",
+    "RAI4-0790",
+    "RAI4-0841",
+    "RAI4-1540",
+    "RAI4-0797",
+    "RAI4-0825",
+    "RAI4-0830",
+    "RAI4-1244",
+    "RAI4-0440",
+    "RAI4-0637",
+    "RAI4-1085",
+    "RAI4-1116",
+    "RAI4-1156",
+    "RAI4-1553",
+    "RAI4-1732",
+    "RAI4-1733",
+    "RAI4-0634",
+    "RAI4-0659",
+    "RAI4-0809",
+    "RAI4-0831",
+    "RAI4-0892",
+    "RAI4-1393",
+    "RAI4-1422",
+    "RAI4-0838",
+    "RAI4-0801"
+   ],
+   "n": 25,
+   "min_cos": 0.5251547694206238
+  },
+  {
+   "rep": "RAI4-0798",
+   "members": [
+    "RAI4-0798"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0799",
+   "members": [
+    "RAI4-0799",
+    "RAI4-0815",
+    "RAI4-0829"
+   ],
+   "n": 3,
+   "min_cos": 0.7190696597099304
+  },
+  {
+   "rep": "RAI4-0800",
+   "members": [
+    "RAI4-0800"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0802",
+   "members": [
+    "RAI4-0802"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0803",
+   "members": [
+    "RAI4-0803"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0804",
+   "members": [
+    "RAI4-0804"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0805",
+   "members": [
+    "RAI4-0805",
+    "RAI4-0806",
+    "RAI4-0867"
+   ],
+   "n": 3,
+   "min_cos": 0.6981015801429749
+  },
+  {
+   "rep": "RAI4-1083",
+   "members": [
+    "RAI4-0490",
+    "RAI4-0807",
+    "RAI4-1083",
+    "RAI4-1558"
+   ],
+   "n": 4,
+   "min_cos": 0.7613077163696289
+  },
+  {
+   "rep": "RAI4-0808",
+   "members": [
+    "RAI4-0808",
+    "RAI4-0819",
+    "RAI4-0836"
+   ],
+   "n": 3,
+   "min_cos": 0.757932186126709
+  },
+  {
+   "rep": "RAI4-0810",
+   "members": [
+    "RAI4-0810"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0811",
+   "members": [
+    "RAI4-0811"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0812",
+   "members": [
+    "RAI4-0812"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0814",
+   "members": [
+    "RAI4-0814"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0817",
+   "members": [
+    "RAI4-0817"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0818",
+   "members": [
+    "RAI4-0818",
+    "RAI4-1196"
+   ],
+   "n": 2,
+   "min_cos": 0.7846248149871826
+  },
+  {
+   "rep": "RAI4-0820",
+   "members": [
+    "RAI4-0820"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0821",
+   "members": [
+    "RAI4-0821"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0822",
+   "members": [
+    "RAI4-0822"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0823",
+   "members": [
+    "RAI4-0823"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0826",
+   "members": [
+    "RAI4-0826",
+    "RAI4-0862"
+   ],
+   "n": 2,
+   "min_cos": 0.8526393175125122
+  },
+  {
+   "rep": "RAI4-0828",
+   "members": [
+    "RAI4-0828",
+    "RAI4-1227"
+   ],
+   "n": 2,
+   "min_cos": 0.7795380353927612
+  },
+  {
+   "rep": "RAI4-0832",
+   "members": [
+    "RAI4-0832"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0833",
+   "members": [
+    "RAI4-0833",
+    "RAI4-0839"
+   ],
+   "n": 2,
+   "min_cos": 0.8348571062088013
+  },
+  {
+   "rep": "RAI4-0837",
+   "members": [
+    "RAI4-0837"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0842",
+   "members": [
+    "RAI4-0842"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0885",
+   "members": [
+    "RAI4-0129",
+    "RAI4-0868",
+    "RAI4-0130",
+    "RAI4-1695",
+    "RAI4-0131",
+    "RAI4-0341",
+    "RAI4-0907",
+    "RAI4-0306",
+    "RAI4-0375",
+    "RAI4-0781",
+    "RAI4-0843",
+    "RAI4-0865",
+    "RAI4-0885",
+    "RAI4-0887",
+    "RAI4-1142",
+    "RAI4-0888",
+    "RAI4-0891",
+    "RAI4-0869",
+    "RAI4-0872",
+    "RAI4-1105",
+    "RAI4-0879",
+    "RAI4-1075"
+   ],
+   "n": 22,
+   "min_cos": 0.48054271936416626
+  },
+  {
+   "rep": "RAI4-0844",
+   "members": [
+    "RAI4-0844"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0845",
+   "members": [
+    "RAI4-0845"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0846",
+   "members": [
+    "RAI4-0846"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0847",
+   "members": [
+    "RAI4-0847"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0902",
+   "members": [
+    "RAI4-0133",
+    "RAI4-0163",
+    "RAI4-0848",
+    "RAI4-0902",
+    "RAI4-1728",
+    "RAI4-1627"
+   ],
+   "n": 6,
+   "min_cos": 0.6544675827026367
+  },
+  {
+   "rep": "RAI4-0850",
+   "members": [
+    "RAI4-0850"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0853",
+   "members": [
+    "RAI4-0853"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0854",
+   "members": [
+    "RAI4-0854"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0863",
+   "members": [
+    "RAI4-0863",
+    "RAI4-0870"
+   ],
+   "n": 2,
+   "min_cos": 0.8993879556655884
+  },
+  {
+   "rep": "RAI4-0864",
+   "members": [
+    "RAI4-0864",
+    "RAI4-1005"
+   ],
+   "n": 2,
+   "min_cos": 0.7926987409591675
+  },
+  {
+   "rep": "RAI4-0866",
+   "members": [
+    "RAI4-0866"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0871",
+   "members": [
+    "RAI4-0871"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0874",
+   "members": [
+    "RAI4-0874",
+    "RAI4-1257",
+    "RAI4-0492",
+    "RAI4-0500",
+    "RAI4-0457",
+    "RAI4-0948",
+    "RAI4-1214",
+    "RAI4-1231",
+    "RAI4-1371",
+    "RAI4-1610",
+    "RAI4-1660"
+   ],
+   "n": 11,
+   "min_cos": 0.6483587622642517
+  },
+  {
+   "rep": "RAI4-0876",
+   "members": [
+    "RAI4-0876"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0878",
+   "members": [
+    "RAI4-0878"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0880",
+   "members": [
+    "RAI4-0880",
+    "RAI4-0904"
+   ],
+   "n": 2,
+   "min_cos": 0.805359959602356
+  },
+  {
+   "rep": "RAI4-0882",
+   "members": [
+    "RAI4-0882"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0883",
+   "members": [
+    "RAI4-0883"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0884",
+   "members": [
+    "RAI4-0884",
+    "RAI4-1143"
+   ],
+   "n": 2,
+   "min_cos": 0.8146153092384338
+  },
+  {
+   "rep": "RAI4-0889",
+   "members": [
+    "RAI4-0889",
+    "RAI4-1481"
+   ],
+   "n": 2,
+   "min_cos": 0.8312520384788513
+  },
+  {
+   "rep": "RAI4-0890",
+   "members": [
+    "RAI4-0890"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0893",
+   "members": [
+    "RAI4-0893"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0895",
+   "members": [
+    "RAI4-0895"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0896",
+   "members": [
+    "RAI4-0896"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0897",
+   "members": [
+    "RAI4-0897"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0906",
+   "members": [
+    "RAI4-0906"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0908",
+   "members": [
+    "RAI4-0908",
+    "RAI4-1216"
+   ],
+   "n": 2,
+   "min_cos": 0.7932791709899902
+  },
+  {
+   "rep": "RAI4-0909",
+   "members": [
+    "RAI4-0909"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1562",
+   "members": [
+    "RAI4-0467",
+    "RAI4-1598",
+    "RAI4-0916",
+    "RAI4-1562"
+   ],
+   "n": 4,
+   "min_cos": 0.7189691066741943
+  },
+  {
+   "rep": "RAI4-0917",
+   "members": [
+    "RAI4-0917"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0919",
+   "members": [
+    "RAI4-0919"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0920",
+   "members": [
+    "RAI4-0920"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0921",
+   "members": [
+    "RAI4-0921"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0922",
+   "members": [
+    "RAI4-0922"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0925",
+   "members": [
+    "RAI4-0925",
+    "RAI4-1667"
+   ],
+   "n": 2,
+   "min_cos": 0.780888557434082
+  },
+  {
+   "rep": "RAI4-0926",
+   "members": [
+    "RAI4-0926"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0927",
+   "members": [
+    "RAI4-0927"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0928",
+   "members": [
+    "RAI4-0928"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0929",
+   "members": [
+    "RAI4-0929"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0930",
+   "members": [
+    "RAI4-0930"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0938",
+   "members": [
+    "RAI4-0938"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0939",
+   "members": [
+    "RAI4-0939"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0941",
+   "members": [
+    "RAI4-0941"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0942",
+   "members": [
+    "RAI4-0942",
+    "RAI4-1375"
+   ],
+   "n": 2,
+   "min_cos": 0.797528088092804
+  },
+  {
+   "rep": "RAI4-0943",
+   "members": [
+    "RAI4-0943"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0947",
+   "members": [
+    "RAI4-0947"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0950",
+   "members": [
+    "RAI4-0950"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0951",
+   "members": [
+    "RAI4-0951"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0952",
+   "members": [
+    "RAI4-0952"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0956",
+   "members": [
+    "RAI4-0956"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0961",
+   "members": [
+    "RAI4-0961",
+    "RAI4-1184"
+   ],
+   "n": 2,
+   "min_cos": 0.8227565288543701
+  },
+  {
+   "rep": "RAI4-0969",
+   "members": [
+    "RAI4-0969"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0970",
+   "members": [
+    "RAI4-0970"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0972",
+   "members": [
+    "RAI4-0972"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0973",
+   "members": [
+    "RAI4-0973"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0974",
+   "members": [
+    "RAI4-0974"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0979",
+   "members": [
+    "RAI4-0979",
+    "RAI4-1014",
+    "RAI4-0985",
+    "RAI4-1715"
+   ],
+   "n": 4,
+   "min_cos": 0.7340413331985474
+  },
+  {
+   "rep": "RAI4-1233",
+   "members": [
+    "RAI4-0429",
+    "RAI4-1094",
+    "RAI4-1215",
+    "RAI4-1372",
+    "RAI4-0538",
+    "RAI4-1025",
+    "RAI4-1406",
+    "RAI4-0980",
+    "RAI4-1140",
+    "RAI4-1147",
+    "RAI4-1151",
+    "RAI4-1233",
+    "RAI4-1419"
+   ],
+   "n": 13,
+   "min_cos": 0.652155876159668
+  },
+  {
+   "rep": "RAI4-0982",
+   "members": [
+    "RAI4-0982",
+    "RAI4-0984",
+    "RAI4-1249"
+   ],
+   "n": 3,
+   "min_cos": 0.7004354000091553
+  },
+  {
+   "rep": "RAI4-0983",
+   "members": [
+    "RAI4-0983"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0993",
+   "members": [
+    "RAI4-0993"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0994",
+   "members": [
+    "RAI4-0994"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0996",
+   "members": [
+    "RAI4-0996"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-0998",
+   "members": [
+    "RAI4-0997",
+    "RAI4-0998",
+    "RAI4-1000",
+    "RAI4-0999"
+   ],
+   "n": 4,
+   "min_cos": 0.7477028369903564
+  },
+  {
+   "rep": "RAI4-1001",
+   "members": [
+    "RAI4-1001"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1002",
+   "members": [
+    "RAI4-1002"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1004",
+   "members": [
+    "RAI4-1004"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1006",
+   "members": [
+    "RAI4-1006"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1010",
+   "members": [
+    "RAI4-1010"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1011",
+   "members": [
+    "RAI4-1011"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1015",
+   "members": [
+    "RAI4-1015"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1016",
+   "members": [
+    "RAI4-1016"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1017",
+   "members": [
+    "RAI4-1017",
+    "RAI4-1271",
+    "RAI4-1719"
+   ],
+   "n": 3,
+   "min_cos": 0.7765993475914001
+  },
+  {
+   "rep": "RAI4-1018",
+   "members": [
+    "RAI4-1018"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1022",
+   "members": [
+    "RAI4-1022"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1024",
+   "members": [
+    "RAI4-1024"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1029",
+   "members": [
+    "RAI4-1029"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1032",
+   "members": [
+    "RAI4-1032"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1034",
+   "members": [
+    "RAI4-1034",
+    "RAI4-1332"
+   ],
+   "n": 2,
+   "min_cos": 0.8062316179275513
+  },
+  {
+   "rep": "RAI4-1035",
+   "members": [
+    "RAI4-1035"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1036",
+   "members": [
+    "RAI4-1036"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1037",
+   "members": [
+    "RAI4-1037"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1039",
+   "members": [
+    "RAI4-1039"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1041",
+   "members": [
+    "RAI4-1041"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1042",
+   "members": [
+    "RAI4-1042",
+    "RAI4-1043"
+   ],
+   "n": 2,
+   "min_cos": 0.8519833087921143
+  },
+  {
+   "rep": "RAI4-1252",
+   "members": [
+    "RAI4-0575",
+    "RAI4-1045",
+    "RAI4-1252",
+    "RAI4-1363",
+    "RAI4-1154"
+   ],
+   "n": 5,
+   "min_cos": 0.7022778987884521
+  },
+  {
+   "rep": "RAI4-1046",
+   "members": [
+    "RAI4-1046"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1049",
+   "members": [
+    "RAI4-1049"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1050",
+   "members": [
+    "RAI4-1050"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1051",
+   "members": [
+    "RAI4-1051",
+    "RAI4-1068"
+   ],
+   "n": 2,
+   "min_cos": 0.8144471645355225
+  },
+  {
+   "rep": "RAI4-0728",
+   "members": [
+    "RAI4-0636",
+    "RAI4-0690",
+    "RAI4-1177",
+    "RAI4-1188",
+    "RAI4-0688",
+    "RAI4-0710",
+    "RAI4-0712",
+    "RAI4-0728",
+    "RAI4-0936",
+    "RAI4-1165",
+    "RAI4-1220",
+    "RAI4-1349",
+    "RAI4-0726",
+    "RAI4-0729",
+    "RAI4-1052",
+    "RAI4-1070",
+    "RAI4-1308"
+   ],
+   "n": 17,
+   "min_cos": 0.6208213567733765
+  },
+  {
+   "rep": "RAI4-1053",
+   "members": [
+    "RAI4-1053"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1056",
+   "members": [
+    "RAI4-1056",
+    "RAI4-1146"
+   ],
+   "n": 2,
+   "min_cos": 0.8567464351654053
+  },
+  {
+   "rep": "RAI4-1057",
+   "members": [
+    "RAI4-1057"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1058",
+   "members": [
+    "RAI4-1058"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1059",
+   "members": [
+    "RAI4-1059"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1060",
+   "members": [
+    "RAI4-1060"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1061",
+   "members": [
+    "RAI4-1061"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1062",
+   "members": [
+    "RAI4-1062",
+    "RAI4-1623"
+   ],
+   "n": 2,
+   "min_cos": 0.8087249994277954
+  },
+  {
+   "rep": "RAI4-1063",
+   "members": [
+    "RAI4-1063"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1064",
+   "members": [
+    "RAI4-1064",
+    "RAI4-1081"
+   ],
+   "n": 2,
+   "min_cos": 0.8694729804992676
+  },
+  {
+   "rep": "RAI4-1065",
+   "members": [
+    "RAI4-1065"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1066",
+   "members": [
+    "RAI4-1066",
+    "RAI4-1095"
+   ],
+   "n": 2,
+   "min_cos": 0.8266363143920898
+  },
+  {
+   "rep": "RAI4-1076",
+   "members": [
+    "RAI4-1076",
+    "RAI4-1170"
+   ],
+   "n": 2,
+   "min_cos": 0.7797566056251526
+  },
+  {
+   "rep": "RAI4-1088",
+   "members": [
+    "RAI4-1088"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1091",
+   "members": [
+    "RAI4-1091"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1092",
+   "members": [
+    "RAI4-1092"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1093",
+   "members": [
+    "RAI4-1093",
+    "RAI4-1568"
+   ],
+   "n": 2,
+   "min_cos": 0.8118130564689636
+  },
+  {
+   "rep": "RAI4-1106",
+   "members": [
+    "RAI4-1106"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1107",
+   "members": [
+    "RAI4-1107",
+    "RAI4-1309"
+   ],
+   "n": 2,
+   "min_cos": 0.7820197939872742
+  },
+  {
+   "rep": "RAI4-1108",
+   "members": [
+    "RAI4-1108"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1109",
+   "members": [
+    "RAI4-1109"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1112",
+   "members": [
+    "RAI4-1112",
+    "RAI4-1471",
+    "RAI4-1113"
+   ],
+   "n": 3,
+   "min_cos": 0.7336893677711487
+  },
+  {
+   "rep": "RAI4-1115",
+   "members": [
+    "RAI4-1115",
+    "RAI4-1396"
+   ],
+   "n": 2,
+   "min_cos": 0.7821287512779236
+  },
+  {
+   "rep": "RAI4-1118",
+   "members": [
+    "RAI4-1118"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1119",
+   "members": [
+    "RAI4-1119"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1120",
+   "members": [
+    "RAI4-1120"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1121",
+   "members": [
+    "RAI4-1121",
+    "RAI4-1250",
+    "RAI4-1703"
+   ],
+   "n": 3,
+   "min_cos": 0.678153932094574
+  },
+  {
+   "rep": "RAI4-1122",
+   "members": [
+    "RAI4-1122"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1125",
+   "members": [
+    "RAI4-1125",
+    "RAI4-1449"
+   ],
+   "n": 2,
+   "min_cos": 0.8045405149459839
+  },
+  {
+   "rep": "RAI4-1128",
+   "members": [
+    "RAI4-1128"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1129",
+   "members": [
+    "RAI4-1129"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1130",
+   "members": [
+    "RAI4-1130"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1131",
+   "members": [
+    "RAI4-1131",
+    "RAI4-1410",
+    "RAI4-1380"
+   ],
+   "n": 3,
+   "min_cos": 0.7605318427085876
+  },
+  {
+   "rep": "RAI4-1139",
+   "members": [
+    "RAI4-1139"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1141",
+   "members": [
+    "RAI4-1141"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1145",
+   "members": [
+    "RAI4-1145"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1150",
+   "members": [
+    "RAI4-1150"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1152",
+   "members": [
+    "RAI4-1152",
+    "RAI4-1153"
+   ],
+   "n": 2,
+   "min_cos": 0.8079824447631836
+  },
+  {
+   "rep": "RAI4-1155",
+   "members": [
+    "RAI4-1155"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1157",
+   "members": [
+    "RAI4-1157"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1158",
+   "members": [
+    "RAI4-1158"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1159",
+   "members": [
+    "RAI4-1159"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1160",
+   "members": [
+    "RAI4-1160"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1161",
+   "members": [
+    "RAI4-1161"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1163",
+   "members": [
+    "RAI4-1163",
+    "RAI4-1316"
+   ],
+   "n": 2,
+   "min_cos": 0.8131281137466431
+  },
+  {
+   "rep": "RAI4-1164",
+   "members": [
+    "RAI4-1164",
+    "RAI4-1317",
+    "RAI4-1539"
+   ],
+   "n": 3,
+   "min_cos": 0.7998375296592712
+  },
+  {
+   "rep": "RAI4-1167",
+   "members": [
+    "RAI4-1167"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1168",
+   "members": [
+    "RAI4-1168"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1169",
+   "members": [
+    "RAI4-1169"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1173",
+   "members": [
+    "RAI4-1173"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1174",
+   "members": [
+    "RAI4-1174"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1175",
+   "members": [
+    "RAI4-1175"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1176",
+   "members": [
+    "RAI4-1176"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1179",
+   "members": [
+    "RAI4-1179"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1186",
+   "members": [
+    "RAI4-0145",
+    "RAI4-1408",
+    "RAI4-0175",
+    "RAI4-1185",
+    "RAI4-1186"
+   ],
+   "n": 5,
+   "min_cos": 0.7130340337753296
+  },
+  {
+   "rep": "RAI4-1187",
+   "members": [
+    "RAI4-1187"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1189",
+   "members": [
+    "RAI4-1189"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1190",
+   "members": [
+    "RAI4-1190"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1192",
+   "members": [
+    "RAI4-1192",
+    "RAI4-1653"
+   ],
+   "n": 2,
+   "min_cos": 0.776265025138855
+  },
+  {
+   "rep": "RAI4-1194",
+   "members": [
+    "RAI4-1194"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1195",
+   "members": [
+    "RAI4-1195"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1198",
+   "members": [
+    "RAI4-1198"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1206",
+   "members": [
+    "RAI4-1206"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1207",
+   "members": [
+    "RAI4-1207"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1208",
+   "members": [
+    "RAI4-1208"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1218",
+   "members": [
+    "RAI4-1218"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1224",
+   "members": [
+    "RAI4-1224"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1228",
+   "members": [
+    "RAI4-1228"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1232",
+   "members": [
+    "RAI4-1232"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1236",
+   "members": [
+    "RAI4-1236",
+    "RAI4-1530"
+   ],
+   "n": 2,
+   "min_cos": 0.828292727470398
+  },
+  {
+   "rep": "RAI4-1238",
+   "members": [
+    "RAI4-1238"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1239",
+   "members": [
+    "RAI4-1239"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1240",
+   "members": [
+    "RAI4-1240"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1241",
+   "members": [
+    "RAI4-1241"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1242",
+   "members": [
+    "RAI4-1242"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1246",
+   "members": [
+    "RAI4-1246"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1247",
+   "members": [
+    "RAI4-1247"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1251",
+   "members": [
+    "RAI4-1251"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1260",
+   "members": [
+    "RAI4-1260"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1261",
+   "members": [
+    "RAI4-1261"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1263",
+   "members": [
+    "RAI4-1263"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1269",
+   "members": [
+    "RAI4-1269"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1273",
+   "members": [
+    "RAI4-1273"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1278",
+   "members": [
+    "RAI4-1278"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1280",
+   "members": [
+    "RAI4-1280",
+    "RAI4-1352",
+    "RAI4-1390",
+    "RAI4-1473"
+   ],
+   "n": 4,
+   "min_cos": 0.7485288381576538
+  },
+  {
+   "rep": "RAI4-1282",
+   "members": [
+    "RAI4-1282",
+    "RAI4-1283"
+   ],
+   "n": 2,
+   "min_cos": 0.8642654418945312
+  },
+  {
+   "rep": "RAI4-1284",
+   "members": [
+    "RAI4-1284"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1285",
+   "members": [
+    "RAI4-1285"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1286",
+   "members": [
+    "RAI4-1286"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1287",
+   "members": [
+    "RAI4-1287"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1288",
+   "members": [
+    "RAI4-1288"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1289",
+   "members": [
+    "RAI4-1289"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1291",
+   "members": [
+    "RAI4-1291"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1656",
+   "members": [
+    "RAI4-1248",
+    "RAI4-1294",
+    "RAI4-1359",
+    "RAI4-1656"
+   ],
+   "n": 4,
+   "min_cos": 0.7325932383537292
+  },
+  {
+   "rep": "RAI4-1295",
+   "members": [
+    "RAI4-1295"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1296",
+   "members": [
+    "RAI4-1296"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1298",
+   "members": [
+    "RAI4-1298"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1299",
+   "members": [
+    "RAI4-1299"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1300",
+   "members": [
+    "RAI4-1300"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1302",
+   "members": [
+    "RAI4-1302"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1303",
+   "members": [
+    "RAI4-1303"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1304",
+   "members": [
+    "RAI4-1304"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1306",
+   "members": [
+    "RAI4-1306"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1310",
+   "members": [
+    "RAI4-1310"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1311",
+   "members": [
+    "RAI4-1311"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1652",
+   "members": [
+    "RAI4-1314",
+    "RAI4-1319",
+    "RAI4-1652"
+   ],
+   "n": 3,
+   "min_cos": 0.7823408246040344
+  },
+  {
+   "rep": "RAI4-1320",
+   "members": [
+    "RAI4-1320"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1323",
+   "members": [
+    "RAI4-1323"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1324",
+   "members": [
+    "RAI4-1324"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1326",
+   "members": [
+    "RAI4-1326"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1327",
+   "members": [
+    "RAI4-1327"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1328",
+   "members": [
+    "RAI4-1328"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1329",
+   "members": [
+    "RAI4-1329"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1330",
+   "members": [
+    "RAI4-1330"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1331",
+   "members": [
+    "RAI4-1331"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1333",
+   "members": [
+    "RAI4-1333"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1336",
+   "members": [
+    "RAI4-1336"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1337",
+   "members": [
+    "RAI4-1337"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1338",
+   "members": [
+    "RAI4-1338"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1339",
+   "members": [
+    "RAI4-1339"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1341",
+   "members": [
+    "RAI4-1341",
+    "RAI4-1403"
+   ],
+   "n": 2,
+   "min_cos": 0.7801308631896973
+  },
+  {
+   "rep": "RAI4-1348",
+   "members": [
+    "RAI4-1348"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1354",
+   "members": [
+    "RAI4-1354"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1364",
+   "members": [
+    "RAI4-1364"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1374",
+   "members": [
+    "RAI4-1374",
+    "RAI4-1456"
+   ],
+   "n": 2,
+   "min_cos": 0.8653393387794495
+  },
+  {
+   "rep": "RAI4-1376",
+   "members": [
+    "RAI4-1376"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1377",
+   "members": [
+    "RAI4-1377"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1381",
+   "members": [
+    "RAI4-1381"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1383",
+   "members": [
+    "RAI4-1383"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1384",
+   "members": [
+    "RAI4-1384"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1386",
+   "members": [
+    "RAI4-1386"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1387",
+   "members": [
+    "RAI4-1387"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1388",
+   "members": [
+    "RAI4-1388"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1389",
+   "members": [
+    "RAI4-1389",
+    "RAI4-1611",
+    "RAI4-1734"
+   ],
+   "n": 3,
+   "min_cos": 0.7281906008720398
+  },
+  {
+   "rep": "RAI4-1399",
+   "members": [
+    "RAI4-1399"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1400",
+   "members": [
+    "RAI4-1400"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1402",
+   "members": [
+    "RAI4-1402"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1404",
+   "members": [
+    "RAI4-1404"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1411",
+   "members": [
+    "RAI4-1411"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1413",
+   "members": [
+    "RAI4-1413"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1414",
+   "members": [
+    "RAI4-1414"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1418",
+   "members": [
+    "RAI4-1418"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1421",
+   "members": [
+    "RAI4-1421"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1432",
+   "members": [
+    "RAI4-1432"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1434",
+   "members": [
+    "RAI4-1434"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1435",
+   "members": [
+    "RAI4-1435"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1436",
+   "members": [
+    "RAI4-1436"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1440",
+   "members": [
+    "RAI4-0849",
+    "RAI4-1437",
+    "RAI4-1438",
+    "RAI4-1439",
+    "RAI4-1440",
+    "RAI4-1441",
+    "RAI4-1442",
+    "RAI4-1443"
+   ],
+   "n": 8,
+   "min_cos": 0.7477258443832397
+  },
+  {
+   "rep": "RAI4-1444",
+   "members": [
+    "RAI4-1444"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1445",
+   "members": [
+    "RAI4-1445",
+    "RAI4-1446"
+   ],
+   "n": 2,
+   "min_cos": 0.8282566070556641
+  },
+  {
+   "rep": "RAI4-1447",
+   "members": [
+    "RAI4-1447"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1451",
+   "members": [
+    "RAI4-1451"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1452",
+   "members": [
+    "RAI4-1452"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1453",
+   "members": [
+    "RAI4-1453"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1455",
+   "members": [
+    "RAI4-1455"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1457",
+   "members": [
+    "RAI4-1457"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1458",
+   "members": [
+    "RAI4-1458"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1459",
+   "members": [
+    "RAI4-1459"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1460",
+   "members": [
+    "RAI4-1460"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1461",
+   "members": [
+    "RAI4-1461",
+    "RAI4-1465"
+   ],
+   "n": 2,
+   "min_cos": 0.7764583826065063
+  },
+  {
+   "rep": "RAI4-1463",
+   "members": [
+    "RAI4-1463"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1464",
+   "members": [
+    "RAI4-1464"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1466",
+   "members": [
+    "RAI4-1466"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1468",
+   "members": [
+    "RAI4-1468"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1470",
+   "members": [
+    "RAI4-1470"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1472",
+   "members": [
+    "RAI4-1472"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1474",
+   "members": [
+    "RAI4-1474"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1476",
+   "members": [
+    "RAI4-1476",
+    "RAI4-1477"
+   ],
+   "n": 2,
+   "min_cos": 0.7879973649978638
+  },
+  {
+   "rep": "RAI4-1478",
+   "members": [
+    "RAI4-1478"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1483",
+   "members": [
+    "RAI4-1483"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1485",
+   "members": [
+    "RAI4-1485"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1486",
+   "members": [
+    "RAI4-1486"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1487",
+   "members": [
+    "RAI4-1487"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1489",
+   "members": [
+    "RAI4-1489"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1490",
+   "members": [
+    "RAI4-1490"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1491",
+   "members": [
+    "RAI4-1491"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1492",
+   "members": [
+    "RAI4-1492"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1493",
+   "members": [
+    "RAI4-1493"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1494",
+   "members": [
+    "RAI4-1494"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1495",
+   "members": [
+    "RAI4-1495"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1496",
+   "members": [
+    "RAI4-1496"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1497",
+   "members": [
+    "RAI4-1497"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1498",
+   "members": [
+    "RAI4-1498"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1499",
+   "members": [
+    "RAI4-1499",
+    "RAI4-1538"
+   ],
+   "n": 2,
+   "min_cos": 0.8365912437438965
+  },
+  {
+   "rep": "RAI4-1500",
+   "members": [
+    "RAI4-1500"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1501",
+   "members": [
+    "RAI4-1501"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1502",
+   "members": [
+    "RAI4-1502"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1503",
+   "members": [
+    "RAI4-1503"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1504",
+   "members": [
+    "RAI4-1504"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1509",
+   "members": [
+    "RAI4-1505",
+    "RAI4-1506",
+    "RAI4-1507",
+    "RAI4-1510",
+    "RAI4-1509"
+   ],
+   "n": 5,
+   "min_cos": 0.7164933681488037
+  },
+  {
+   "rep": "RAI4-1508",
+   "members": [
+    "RAI4-1508"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1512",
+   "members": [
+    "RAI4-1512"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1513",
+   "members": [
+    "RAI4-1513"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1514",
+   "members": [
+    "RAI4-1514"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1515",
+   "members": [
+    "RAI4-1515"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1516",
+   "members": [
+    "RAI4-1516"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1519",
+   "members": [
+    "RAI4-1519"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1520",
+   "members": [
+    "RAI4-1520"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1521",
+   "members": [
+    "RAI4-1521"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1522",
+   "members": [
+    "RAI4-1522"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1523",
+   "members": [
+    "RAI4-1523"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1524",
+   "members": [
+    "RAI4-1524"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1525",
+   "members": [
+    "RAI4-1525"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1526",
+   "members": [
+    "RAI4-1526"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1527",
+   "members": [
+    "RAI4-1527"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1531",
+   "members": [
+    "RAI4-1531"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1537",
+   "members": [
+    "RAI4-1537"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1541",
+   "members": [
+    "RAI4-1541",
+    "RAI4-1545"
+   ],
+   "n": 2,
+   "min_cos": 0.7911372184753418
+  },
+  {
+   "rep": "RAI4-1542",
+   "members": [
+    "RAI4-1542"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1544",
+   "members": [
+    "RAI4-1544"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1546",
+   "members": [
+    "RAI4-1546"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1547",
+   "members": [
+    "RAI4-1547"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1548",
+   "members": [
+    "RAI4-1548"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1550",
+   "members": [
+    "RAI4-1550"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1551",
+   "members": [
+    "RAI4-1551"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1554",
+   "members": [
+    "RAI4-1554"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1555",
+   "members": [
+    "RAI4-1555",
+    "RAI4-1559"
+   ],
+   "n": 2,
+   "min_cos": 0.7857204675674438
+  },
+  {
+   "rep": "RAI4-1560",
+   "members": [
+    "RAI4-1560"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1561",
+   "members": [
+    "RAI4-1561"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1564",
+   "members": [
+    "RAI4-1564"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1566",
+   "members": [
+    "RAI4-1566"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1569",
+   "members": [
+    "RAI4-1569"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1570",
+   "members": [
+    "RAI4-1570",
+    "RAI4-1679",
+    "RAI4-1651"
+   ],
+   "n": 3,
+   "min_cos": 0.7618129253387451
+  },
+  {
+   "rep": "RAI4-1571",
+   "members": [
+    "RAI4-1571"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1572",
+   "members": [
+    "RAI4-1572"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1573",
+   "members": [
+    "RAI4-1573"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1574",
+   "members": [
+    "RAI4-1574"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1576",
+   "members": [
+    "RAI4-1576"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1577",
+   "members": [
+    "RAI4-1577"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1579",
+   "members": [
+    "RAI4-1579"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1580",
+   "members": [
+    "RAI4-1580"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1581",
+   "members": [
+    "RAI4-1581"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1583",
+   "members": [
+    "RAI4-1583"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1585",
+   "members": [
+    "RAI4-1585"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1586",
+   "members": [
+    "RAI4-1586"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1589",
+   "members": [
+    "RAI4-1589"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1596",
+   "members": [
+    "RAI4-1596"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1600",
+   "members": [
+    "RAI4-1600"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1607",
+   "members": [
+    "RAI4-1607"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1612",
+   "members": [
+    "RAI4-1612",
+    "RAI4-1615"
+   ],
+   "n": 2,
+   "min_cos": 0.797267735004425
+  },
+  {
+   "rep": "RAI4-1617",
+   "members": [
+    "RAI4-1617"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1618",
+   "members": [
+    "RAI4-1618"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1619",
+   "members": [
+    "RAI4-1619"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1621",
+   "members": [
+    "RAI4-1621"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1629",
+   "members": [
+    "RAI4-1629"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1630",
+   "members": [
+    "RAI4-1630"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1631",
+   "members": [
+    "RAI4-1631"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1634",
+   "members": [
+    "RAI4-1634",
+    "RAI4-1637",
+    "RAI4-1642"
+   ],
+   "n": 3,
+   "min_cos": 0.7292509078979492
+  },
+  {
+   "rep": "RAI4-1636",
+   "members": [
+    "RAI4-1636"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1640",
+   "members": [
+    "RAI4-1640"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1641",
+   "members": [
+    "RAI4-1641",
+    "RAI4-1643"
+   ],
+   "n": 2,
+   "min_cos": 0.7963606119155884
+  },
+  {
+   "rep": "RAI4-1644",
+   "members": [
+    "RAI4-1644"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1645",
+   "members": [
+    "RAI4-1645"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1646",
+   "members": [
+    "RAI4-1646"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1647",
+   "members": [
+    "RAI4-1647"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1648",
+   "members": [
+    "RAI4-1648"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1654",
+   "members": [
+    "RAI4-1654"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1655",
+   "members": [
+    "RAI4-1655"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1658",
+   "members": [
+    "RAI4-1658"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1661",
+   "members": [
+    "RAI4-1661"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1662",
+   "members": [
+    "RAI4-1662"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1663",
+   "members": [
+    "RAI4-1663"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1665",
+   "members": [
+    "RAI4-1665"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1666",
+   "members": [
+    "RAI4-1666"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1668",
+   "members": [
+    "RAI4-1668"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1671",
+   "members": [
+    "RAI4-1671"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1675",
+   "members": [
+    "RAI4-1675"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1677",
+   "members": [
+    "RAI4-1677"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1680",
+   "members": [
+    "RAI4-1680"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1681",
+   "members": [
+    "RAI4-1681"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1686",
+   "members": [
+    "RAI4-1686"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1687",
+   "members": [
+    "RAI4-1687"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1688",
+   "members": [
+    "RAI4-1688",
+    "RAI4-1694"
+   ],
+   "n": 2,
+   "min_cos": 0.7919440269470215
+  },
+  {
+   "rep": "RAI4-1689",
+   "members": [
+    "RAI4-1689"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1692",
+   "members": [
+    "RAI4-1692"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1693",
+   "members": [
+    "RAI4-1693"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1696",
+   "members": [
+    "RAI4-1696"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1697",
+   "members": [
+    "RAI4-1697"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1698",
+   "members": [
+    "RAI4-1698"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1700",
+   "members": [
+    "RAI4-1700"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1701",
+   "members": [
+    "RAI4-1701"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1702",
+   "members": [
+    "RAI4-1702"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1704",
+   "members": [
+    "RAI4-1704"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1705",
+   "members": [
+    "RAI4-1705"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1706",
+   "members": [
+    "RAI4-1706"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1720",
+   "members": [
+    "RAI4-1720"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1722",
+   "members": [
+    "RAI4-1722"
+   ],
+   "n": 1,
+   "min_cos": null
+  },
+  {
+   "rep": "RAI4-1724",
+   "members": [
+    "RAI4-1724"
+   ],
+   "n": 1,
+   "min_cos": null
+  }
+ ]
+}
