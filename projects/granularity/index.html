@@ -1,18 +1,17 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Granularity Project · 의미 공간의 침투 전이와 택소노미 세분성</title>
+<title>Granularity Project · Percolation Transitions in Semantic Space</title>
 <meta name="description" content="Percolation transitions in semantic space determine the granularity of AI risk taxonomies — project page">
 <style>
 *{box-sizing:border-box}
-body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;margin:0;color:#1c1c1c;background:#fafaf8}
+body{font-family:-apple-system,'Segoe UI','Noto Sans',sans-serif;margin:0;color:#1c1c1c;background:#fafaf8}
 header{background:#101418;color:#fff;padding:34px 22px 26px}
 header .wrap{max-width:920px;margin:0 auto}
 .kicker{letter-spacing:.14em;font-size:12px;color:#9fb3c8;margin:0 0 8px}
 h1{font-size:26px;line-height:1.35;margin:0 0 10px}
-h1 .en{display:block;font-size:15px;font-weight:400;color:#c9d6e2;margin-top:6px}
 .meta{font-size:12.5px;color:#8fa3b5;margin-top:12px}
 nav.crumb{max-width:920px;margin:0 auto 14px;font-size:12.5px}
 nav.crumb a{color:#9fc;text-decoration:none}
@@ -36,71 +35,81 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 <body>
 <header><div class="wrap">
 <p class="kicker">PROJECT · RESPONSIBLE AI</p>
-<h1>의미 공간의 임계 경계가 결정하는 택소노미 세분성
-<span class="en">Percolation transitions in semantic space determine the granularity of AI risk taxonomies</span></h1>
-<div class="meta">Responsible AI Department, Frontier AI Lab, KT Corporation · 2026 · 논문 투고 중 (원고 비공개)</div>
+<h1>Percolation transitions in semantic space determine the granularity of AI risk taxonomies</h1>
+<div class="meta">Responsible AI Department, Frontier AI Lab, KT Corporation · 2026 · Manuscript under submission (not included in this repository)</div>
 </div></header>
 <main>
-<nav class="crumb"><a href="../../index.html">← RAI Risk Taxonomy 2.0 홈</a></nav>
+<nav class="crumb"><a href="../../index.html">← RAI Risk Taxonomy 2.0 home</a></nav>
 
-<h2>무엇을 발견했나</h2>
-<p>대형 AI 리스크 택소노미는 이질적 문헌을 통합하며 의미 중복을 누적하고, "어디까지 병합할 것인가"라는
-임계는 지금까지 분석가의 관행("0.8이면 적당하다")으로 정해졌다. 이 프로젝트는 그 임계가 선택이 아니라
-<b>측정</b>의 대상임을 보인다. 1,612장의 리스크 카드를 다국어 임베딩 공간에 놓고 유사도 임계 그래프를
-정밀 스윕하면 두 개의 침투(percolation)형 전이가 나타나 충실도·압축의 운영 체제를 구획하고, 진화생물학의
-응집 종 개념에서 빌린 독립 기준 — 군집 내부 응집이 외부 인력을 상회하는 마지막 지점(교차점 τ* = 0.833) —
-이 같은 경계를 지목한다.</p>
-<p>교차점에서 병합하면 공간의 밀도가 바뀌고 경계도 함께 이동한다. 병합 → 경계 재도출 → 반복이라는
-자기일관적 절차는 <b>granularity flow</b>를 만든다: 28회의 병합이 1,612장을 32장까지 끌고 가며,
-매 단계가 자기 인벤토리의 무작위 병합 null 검정을 통과하다가 15차에서 품질 규칙이 발동해 허용 범위를
-스스로 구획한다. 릴리스 티어(F1: 1,383장, F4: 901장)는 이 궤적의 스냅숏이다. 전혀 다른 임베딩 모델로
-반복해도 교차점이 선택하는 세분성은 사실상 동일하다 — 세분성은 임베딩 눈금이 아니라 데이터의 속성이다.</p>
+<h2>What we found</h2>
+<p>Large AI risk taxonomies accumulate semantic duplicates as they integrate heterogeneous literature,
+and the merge threshold that fixes their leaf-level granularity has conventionally been set by analyst
+judgment ("0.8 seems reasonable"). This project shows that the threshold is a quantity to be
+<b>measured</b>, not chosen. Sweeping a similarity-threshold graph over 1,612 risk cards embedded in a
+multilingual sentence-embedding space reveals two percolation-like transitions that bound a
+fidelity-oriented and a compression-oriented operating regime, and an independent criterion borrowed
+from evolutionary biology's cohesion species concept — the last point at which within-cluster cohesion
+exceeds between-cluster attraction (the crossing, τ* = 0.833) — selects the same boundary.</p>
+<p>Merging at the crossing changes the density of the space, and the boundary moves with it. Iterating
+merge → re-derive → repeat generates a <b>granularity flow</b>: twenty-eight consolidations carry the
+inventory from 1,612 down to 32 cards, each step passing a per-iteration random-group null until a
+stepwise validity rule fires at step 15 and delimits the admissible range by itself. The released tiers
+(F1: 1,383 cards; F4: 901 cards) are snapshots of this trajectory. Repeating the analysis with an
+entirely different embedding model selects essentially the same granularity — granularity is a property
+of the inventory, not of the embedding scale.</p>
 
-<h2>핵심 결과 그림</h2>
+<h2>Key figures</h2>
 <figure><img src="figs/fig1_transitions_crossing.png" alt="transitions and crossing">
-<figcaption><b>두 침투형 전이와 응집–인력 교차.</b> a: 군집 수·최대 군집·2위 군집의 연결성 곡선 —
-τ₁=0.818에서 연쇄 병합이 시작되고 τ₂=0.690에서 거대 군집이 전체를 흡수한다.
-b: 군집 내 응집 통계 — 평균은 τ₁에서, 최악 사례는 τ₂에서 붕괴한다.
-c: 응집 Φ_coh와 인력 Φ_att의 교차 τ*=0.828±0.004 — 데이터가 유도하는 병합의 마지막 정당 지점.</figcaption></figure>
+<figcaption><b>Two percolation-like transitions and the cohesion–attraction crossing.</b>
+a: connectivity curves (number of clusters, largest and second-largest cluster) — similarity chaining
+sets in at τ₁ = 0.818 and the giant cluster absorbs the inventory by τ₂ = 0.690.
+b: within-cluster cohesion statistics — the pooled mean breaks at τ₁, the worst case collapses at τ₂.
+c: the crossing of cohesion Φ_coh and attraction Φ_att at τ* = 0.828 ± 0.004 — the last defensible
+merge boundary, derived from the data.</figcaption></figure>
 <figure><img src="figs/fig2_flow.png" alt="granularity flow">
-<figcaption><b>Granularity flow와 정지 규칙.</b> 병합-재도출 반복이 만드는 경계의 수열(τ*: 0.8329→0.6062)과
-단계별 품질 — 15차에서 검증 규칙이 발동하며 허용 범위(1–14차)를 데이터가 스스로 정한다.</figcaption></figure>
+<figcaption><b>The granularity flow and its stopping rule.</b> The sequence of boundaries emitted by
+iterated consolidation (τ*: 0.8329 → 0.6062) and per-step merge quality — the validity rule fires at
+step 15, so the data delimit their own admissible range (steps 1–14).</figcaption></figure>
 <figure><img src="figs/fig3_anatomy.png" alt="merge anatomy">
-<figcaption><b>F4 병합의 해부.</b> Master(1,612장)가 F4(901장)로 압축되는 과정 — 211개 병합 그룹,
-크기 분포, 그리고 무작위 그룹 null 대비 병합 품질.</figcaption></figure>
+<figcaption><b>Anatomy of the F4 consolidation.</b> How the Master inventory (1,612 cards) compresses
+to F4 (901 cards): 211 merge groups, their size distribution, and merge quality against a size-matched
+random-group null.</figcaption></figure>
 
-<h2>릴리스 티어</h2>
+<h2>Released tiers</h2>
 <table>
-<tr><th>티어</th><th class="num">τ*</th><th class="num">카드 수</th><th>역할</th></tr>
-<tr><td>Master</td><td class="num">–</td><td class="num">1,612</td><td>정본 인벤토리</td></tr>
-<tr><td>F1</td><td class="num">0.8329</td><td class="num">1,383</td><td>충실도 티어 (교차점)</td></tr>
-<tr><td>F2</td><td class="num">0.8033</td><td class="num">1,154</td><td>2차 병합 상태</td></tr>
-<tr><td>F3</td><td class="num">0.7903</td><td class="num">1,038</td><td>3차 병합 상태</td></tr>
-<tr><td>F4</td><td class="num">0.7753</td><td class="num">901</td><td>압축 티어 · 휴먼 감사 대상</td></tr>
+<tr><th>Tier</th><th class="num">τ*</th><th class="num">Cards</th><th>Role</th></tr>
+<tr><td>Master</td><td class="num">–</td><td class="num">1,612</td><td>canonical inventory</td></tr>
+<tr><td>F1</td><td class="num">0.8329</td><td class="num">1,383</td><td>fidelity tier (the crossing)</td></tr>
+<tr><td>F2</td><td class="num">0.8033</td><td class="num">1,154</td><td>second consolidation</td></tr>
+<tr><td>F3</td><td class="num">0.7903</td><td class="num">1,038</td><td>third consolidation</td></tr>
+<tr><td>F4</td><td class="num">0.7753</td><td class="num">901</td><td>compression tier · designated for human audit</td></tr>
 </table>
 
-<h2>인터랙티브 자료</h2>
+<h2>Interactive materials</h2>
 <div class="links">
-<a href="../../data/experiments/review/f1.html"><b>F1 휴먼 검수</b><small>1,383장 · EM 기반 L3 배정 · 3항목 판정</small></a>
-<a href="../../data/experiments/review/f4.html"><b>F4 휴먼 검수</b><small>901장 · 통합 명칭·정의 재작성본</small></a>
-<a href="../../data/experiments/review/tau_selection_report.html"><b>τ 선정 기술 보고서</b><small>침투 분석·교차 기준·티어 근거</small></a>
-<a href="../../analysis/README.md"><b>분석 코드</b><small>flow·스윕·그림 재현 스크립트</small></a>
+<a href="../../data/experiments/review/f1.html"><b>F1 human audit</b><small>1,383 cards · EM-based L3 assignment · three-criteria review</small></a>
+<a href="../../data/experiments/review/f4.html"><b>F4 human audit</b><small>901 cards · consolidated labels and definitions rewritten for representativeness</small></a>
+<a href="../../data/experiments/review/tau_selection_report.html"><b>Threshold selection report</b><small>percolation analysis · crossing criterion · tier rationale</small></a>
+<a href="../../analysis/README.md"><b>Analysis code</b><small>flow, sweeps, and figure-reproduction scripts</small></a>
 </div>
 
-<h2>방법 요약</h2>
+<h2>Methods in brief</h2>
 <ul>
-<li><b>임계 그래프</b>: 카드 쌍 코사인 유사도 ≥ τ이면 연결; 연결 성분 = 병합 군집 (단일연결과 동치).</li>
-<li><b>두 전이</b>: 0.0001 격자 이벤트 스윕, 1,000회 부분표본 반복 — τ₁ = 0.818 ± 0.010 (연쇄 시작),
-τ₂ = 0.690 ± 0.009 (최악 품질 붕괴).</li>
-<li><b>교차 기준</b>: Φ_coh(군집 내 평균 유사도) ≥ Φ_att(군집별 최대 외부 유사도)를 만족하는 최소 τ.
-절대 눈금이 아니라 순서 관계만 읽으므로 임베딩 모델이 바뀌어도 같은 세분성을 선택한다.</li>
-<li><b>Flow</b>: 교차점 병합 → 재도출 반복. 단계별로 크기를 맞춘 무작위 그룹 null 대비 z-점수로 검증
-(중앙값 z ≈ 3.0–5.4, 이항 p < 10⁻²⁰).</li>
+<li><b>Threshold graph</b>: connect card pairs with cosine similarity ≥ τ; connected components are
+merge clusters (equivalent to single-linkage clustering).</li>
+<li><b>Two transitions</b>: event-driven sweep on a 0.0001 grid with 1,000 subsample replicates —
+τ₁ = 0.818 ± 0.010 (chaining onset), τ₂ = 0.690 ± 0.009 (worst-case collapse).</li>
+<li><b>Crossing criterion</b>: the smallest τ with Φ_coh (pooled within-cluster similarity) ≥
+Φ_att (per-cluster maximum external similarity). It reads order relations rather than absolute
+scale, so it transfers across embedding models.</li>
+<li><b>Flow</b>: merge at the crossing, re-derive, repeat. Every step is scored against a size-matched
+random-group null on its own inventory (median z ≈ 3.0–5.4; step-level binomial p &lt; 10⁻²⁰ within
+the admissible range).</li>
 </ul>
 
-<p class="note">본 페이지는 투고 중인 논문의 프로젝트 공개 페이지입니다. 원고 전문은 게재 확정 시 공개되며,
-분석 코드와 산출물(그림·검수 페이지·flow 상태 아카이브)만 이 저장소에 포함되어 있습니다.
-문의: ys.chun@kt.com</p>
+<p class="note">This is the public project page for a manuscript currently under submission. The full
+text will be released upon publication; this repository contains the analysis code and derived
+artifacts only (figures, audit pages, flow-state archives). Contact: ys.chun@kt.com</p>
 </main>
 </body>
 </html>
