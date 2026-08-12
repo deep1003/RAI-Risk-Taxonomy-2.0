@@ -19,6 +19,13 @@ table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0}
 th,td{border:1px solid #e2e2df;padding:6px 9px;text-align:left}th{background:#f4f4f1}
 td.n{text-align:right;font-variant-numeric:tabular-nums}
 tr.cur td{background:#eef4f9;font-weight:600}
+.algo{border:1px solid #d9d9d4;border-radius:8px;background:#fcfcfb;margin:14px 0;overflow-x:auto}
+.algo-h{border-bottom:1px solid #e4e4df;padding:8px 12px;font-size:13px;font-weight:600;background:#f4f4f1}
+.algo-io{padding:8px 12px;font-size:12.5px;color:#444;border-bottom:1px solid #eee;line-height:1.7}
+.algo pre{margin:0;padding:10px 12px 14px;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+ font-size:12px;line-height:1.75;color:#1c1c1c;white-space:pre}
+.algo pre b{font-weight:700}
+.algo .c{color:#0f6e56}
 </style></head><body>
 <header><h1>RAI Risk Taxonomy — human audit</h1>
 <div class=sub>Audit tiers are snapshots of the granularity flow. Each consolidation step merges at the
@@ -111,98 +118,62 @@ the accompanying null tests.
 </div>
 
 <div class=card><h2>How consolidation runs</h2>
-<div class=sub>The deduplication pipeline in one view. Green boxes are measurements taken from the data, the orange diamond is the only stopping decision, and it too is decided by a test rather than by judgement. The dashed return path is what makes this a flow rather than a single cut: every merge changes the density of the space, so the boundary is measured again on the inventory that merging produced.</div>
-<figure style="margin:14px 0;text-align:center"><svg viewBox="0 0 880 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:820px;height:auto;font-family:-apple-system,'Segoe UI','Noto Sans',sans-serif">
-<defs>
-<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-<path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
-<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-<path d="M0,0 L10,5 L0,10 z" fill="#1f6f5c"/></marker>
-</defs>
-<style>
-.box{fill:#fff;stroke:#c9c9c4;stroke-width:1.2;rx:7}
-.mea{fill:#f2f7f5;stroke:#1f6f5c;stroke-width:1.2;rx:7}
-.dec{fill:#fdf5ee;stroke:#c1550c;stroke-width:1.2}
-.out{fill:#f6f2f8;stroke:#7a4b8f;stroke-width:1.4;rx:7}
-.t{font-size:12.5px;fill:#1c1c1c}
-.s{font-size:10.5px;fill:#777}
-.lab{font-size:10.5px;fill:#555}
-.hd{font-size:11px;fill:#777;letter-spacing:.08em}
-line,path.c{stroke:#555;stroke-width:1.2;fill:none;marker-end:url(#ah)}
-path.loop{stroke:#1f6f5c;stroke-width:1.4;fill:none;stroke-dasharray:5 4;marker-end:url(#ahg)}
-</style>
+<div class=sub>The procedure in full, written as an algorithm. Everything turns on one quantity, the
+<b>gap</b> &Delta;(&tau;) = &Phi;<sub>coh</sub>(&tau;) &minus; &Phi;<sub>att</sub>(&tau;): how much more a
+cluster resembles itself than it resembles the nearest card outside it. Merging is defensible while the gap is
+positive. Two percolation thresholds, measured independently of the gap, bound the region where the question is
+even meaningful.</div>
 
-<text class="hd" x="24" y="24">INPUT</text>
-<rect class="box" x="24" y="34" width="210" height="52"/>
-<text class="t" x="36" y="55">Risk card inventory</text>
-<text class="s" x="36" y="72">1,612 cards &#183; bilingual label + definition</text>
+<div class="algo">
+<div class="algo-h">Algorithm&nbsp;1 &nbsp; Granularity flow by the cohesion&ndash;attraction gap</div>
+<div class="algo-io"><b>Input</b> card set <i>V</i>, unit embeddings <i>e</i>, grid &delta; = 10<sup>&minus;4</sup>, null level (90%, 2&sigma;)<br>
+<b>Output</b> tier sequence <i>F</i><sub>1</sub>, <i>F</i><sub>2</sub>, &hellip;</div>
+<pre>
+ 1  <b>function</b> Gap(S, &tau;)
+ 2      C &larr; connected components of G(&tau;) = (S, {(i,j) : cos(e_i, e_j) &ge; &tau;})
+ 3      &Phi;_coh &larr; mean of cos(e_i, e_j) over all pairs inside the same component
+ 4      &Phi;_att &larr; mean over components of max cos(e_i, e_j), j outside the component
+ 5      <b>return</b> &Phi;_coh &minus; &Phi;_att                        <span class=c>&#9655; the gap &Delta;(&tau;)</span>
 
-<line x1="129" y1="86" x2="129" y2="112"/>
-<rect class="box" x="24" y="112" width="210" height="52"/>
-<text class="t" x="36" y="133">Sentence embedding</text>
-<text class="s" x="36" y="150">BGE-M3 &#183; 1,024-d &#183; normalized</text>
+ 6  <b>function</b> PercolationThresholds(S)
+ 7      &tau;&#8321; &larr; &tau; of the steepest fall of &Phi;_coh over a 0.01 window   <span class=c>&#9655; chaining onset</span>
+ 8      &tau;&#8322; &larr; &tau; of the steepest fall of the per-cluster minimum      <span class=c>&#9655; giant cluster forms</span>
+ 9      <b>return</b> (&tau;&#8321;, &tau;&#8322;)                              <span class=c>&#9655; 0.818, 0.690 on the Master set</span>
 
-<line x1="129" y1="164" x2="129" y2="190"/>
-<rect class="box" x="24" y="190" width="210" height="60"/>
-<text class="t" x="36" y="211">Threshold graph G(&#964;)</text>
-<text class="s" x="36" y="228">edge when cos &#8805; &#964;;</text>
-<text class="s" x="36" y="243">components are merge clusters</text>
+10  S&#8320; &larr; V ;  t &larr; 0
+11  (&tau;&#8321;, &tau;&#8322;) &larr; PercolationThresholds(S&#8320;)              <span class=c>&#9655; above &tau;&#8321;: isolated pairs</span>
+                                                    <span class=c>&#9655; below &tau;&#8322;: one blob, no partition left</span>
+12  <b>repeat</b>
+13      t &larr; t + 1
+14      &tau;*_t &larr; min { &tau; on the &delta; grid : Gap(S_{t&minus;1}, &tau;) &ge; 0 }   <span class=c>&#9655; last &tau; with a positive gap</span>
+15      <b>assert</b> &tau;*_t &ge; &tau;&#8321;(S_{t&minus;1}) &gt; &tau;&#8322;(S_{t&minus;1})            <span class=c>&#9655; the boundary sits above chaining</span>
+16      M &larr; { components of G(&tau;*_t) with more than one member }
+17      <b>for each</b> g &isin; M
+18          z(g) &larr; (min-similarity(g) &minus; &mu;_null(|g|)) / &sigma;_null(|g|)   <span class=c>&#9655; size-matched random groups</span>
+19      <b>if</b> |{ g &isin; M : z(g) &gt; 2 }| / |M| &lt; 0.90 <b>then break</b>       <span class=c>&#9655; validity rule; first fails at t = 15</span>
+20      S_t &larr; { medoid(c) : c component of G(&tau;*_t) }        <span class=c>&#9655; representatives are original cards</span>
+21      <b>emit</b> F_t &larr; S_t
+22  <b>until</b> S_t = S_{t&minus;1}
+23  <b>return</b> F&#8321; &hellip; F&#8321;&#8324;                                <span class=c>&#9655; released for audit: F&#8321; &hellip; F&#8325;</span>
+</pre>
+</div>
 
-<text class="hd" x="330" y="24">MEASURE</text>
-<line x1="234" y1="220" x2="322" y2="220"/>
-<rect class="mea" x="322" y="176" width="228" height="88"/>
-<text class="t" x="334" y="197">Sweep &#964; on a 10&#8315;&#8308; grid</text>
-<text class="s" x="334" y="215">&#934;_coh: pooled within-cluster mean</text>
-<text class="s" x="334" y="231">&#934;_att: mean of per-cluster nearest</text>
-<text class="s" x="334" y="247">outsider &#183; 1,000 subsample replicates</text>
-
-<line x1="436" y1="264" x2="436" y2="292"/>
-<rect class="mea" x="322" y="292" width="228" height="60"/>
-<text class="t" x="334" y="313">Crossing boundary &#964;*</text>
-<text class="s" x="334" y="331">smallest &#964; with &#934;_coh &#8805; &#934;_att</text>
-<text class="s" x="334" y="346">step 1: &#964;* = 0.8329</text>
-
-<text class="hd" x="640" y="24">CONSOLIDATE</text>
-<line x1="550" y1="322" x2="628" y2="322"/>
-<rect class="box" x="628" y="292" width="226" height="60"/>
-<text class="t" x="640" y="313">Merge at &#964;*</text>
-<text class="s" x="640" y="331">connected components collapse to</text>
-<text class="s" x="640" y="346">their medoid, an original card</text>
-
-<line x1="741" y1="352" x2="741" y2="380"/>
-<rect class="mea" x="628" y="380" width="226" height="62"/>
-<text class="t" x="640" y="401">Per-step null test</text>
-<text class="s" x="640" y="419">size-matched random groups on the</text>
-<text class="s" x="640" y="434">same inventory &#183; z per merge group</text>
-
-<line x1="741" y1="442" x2="741" y2="466"/>
-<path class="dec" d="M741,466 L881,516 L741,566 L601,516 Z" transform="translate(0,0)"/>
-<text class="t" x="741" y="512" text-anchor="middle">Validity rule</text>
-<text class="s" x="741" y="529" text-anchor="middle">&#8805; 90% of groups above 2&#963;?</text>
-
-<text class="lab" x="596" y="508" text-anchor="end">yes</text>
-<path class="loop" d="M601,516 L470,516 L470,600 L129,600 L129,258"/>
-<text class="lab" x="300" y="592">re-derive the boundary on the new inventory (granularity flow)</text>
-
-<text class="lab" x="756" y="588">no</text>
-<line x1="741" y1="566" x2="741" y2="600"/>
-<rect class="box" x="628" y="600" width="226" height="56"/>
-<text class="t" x="640" y="621">Stop</text>
-<text class="s" x="640" y="639">first violated at step 15; steps 1&#8211;14 admissible</text>
-
-<text class="hd" x="24" y="404">RELEASE</text>
-<rect class="out" x="24" y="414" width="330" height="86"/>
-<text class="t" x="36" y="435">Tiers F1 &#8230; F5</text>
-<text class="s" x="36" y="453">each state of the flow is a tier: 1,383 &#8594; 1,154 &#8594; 1,038</text>
-<text class="s" x="36" y="469">&#8594; 901 &#8594; 792 cards, boundary 0.8329 &#8594; 0.7634</text>
-<text class="s" x="36" y="485">L3 re-assigned by the seed-anchored damped EM</text>
-<path class="c" d="M628,516 L520,516 L520,457 L358,457" marker-end="url(#ah)"/>
-
-<line x1="189" y1="500" x2="189" y2="528"/>
-<rect class="box" x="24" y="528" width="330" height="52"/>
-<text class="t" x="36" y="549">Human audit</text>
-<text class="s" x="36" y="566">description adequacy &#183; L3 mapping &#183; redundancy</text>
-</svg></figure>
+<div class=sub style="margin-top:12px">
+<b>Why the gap and not a fixed threshold.</b> Line&nbsp;14 does not ask whether similarity is high in absolute
+terms; it asks whether the inside still beats the outside. That comparison is scale free, which is why the same
+line returns 0.8329 here and 0.8190 on the MIT repository without a parameter being touched.<br>
+<b>Why percolation matters.</b> Lines&nbsp;7 and&nbsp;8 locate the two thresholds at which the connectivity of
+the graph changes character: above &tau;&#8321; components grow by mutual similarity, between &tau;&#8321; and
+&tau;&#8322; they grow by transitive chains, and below &tau;&#8322; a giant component has swallowed the
+inventory (97% of cards by &tau; &asymp; 0.70). Line&nbsp;15 records the finding that the gap boundary lands at
+or above the chaining onset, so the two criteria agree although they are measured from unrelated statistics.<br>
+<b>Why iterate.</b> Line&nbsp;20 changes the inventory, and a sparser inventory has a different density, so
+&tau;* must be measured again in line&nbsp;14. The empirical dependence is
+&tau;* &asymp; 0.576 + 0.035&nbsp;ln&nbsp;<i>n</i>, roughly +0.024 per doubling of the inventory.<br>
+<b>Why it stops by itself.</b> Line&nbsp;19 is the only exit, and it is a test rather than a preference. It
+first fires at <i>t</i> = 15, which is what makes steps 1 to 14 an admissible range rather than an arbitrary
+cut-off.
+</div>
 </div>
 
 <div class=card><h2>Granularity flow tiers</h2>
