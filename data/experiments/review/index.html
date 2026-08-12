@@ -29,6 +29,18 @@ Hierarchy order: General &rarr; Agentic &rarr; Physical.</div>
 </header><main>
 
 <div class=card><h2>Granularity flow tiers</h2>
+<figure style="margin:12px 0">
+<img src="figA_master_overview.png" alt="Two transitions and the granularity flow of the Master inventory"
+ style="width:100%;border:1px solid #e2e2df;border-radius:8px;background:#fff">
+<figcaption style="font-size:12px;color:#666;line-height:1.7;margin-top:6px">
+<b>a</b>, Within-cluster cohesion against the merge threshold on the Master inventory, as the mean of 1,000
+subsample replicates with 95% bands. The pooled mean pairwise similarity breaks at &tau;<sub>1</sub> = 0.818,
+where similarity chaining sets in, and the per-cluster minimum collapses at &tau;<sub>2</sub> = 0.690, where the
+worst case within a cluster stops being a merge at all. Triangles mark the five crossing boundaries emitted by
+the flow. <b>b</b>, The flow itself: each consolidation lowers the crossing boundary &tau;*<sub>t</sub>
+(green, left axis) and the inventory size <i>n<sub>t</sub></i> (purple, right axis), from 1,612 cards to 792 in
+five steps. Tiers F1 to F5 are these five states.
+</figcaption></figure>
 <table>
 <tr><th>Tier</th><th>&tau;*</th><th>Cards</th><th>Merge groups</th><th>Absorbed</th><th>G / A / P</th><th>Role</th></tr>
 <tr><td>Master</td><td class=n>&ndash;</td><td class=n>1,612</td><td class=n>&ndash;</td><td class=n>&ndash;</td><td>1,154 / 155 / 303</td><td>canonical inventory</td></tr>
