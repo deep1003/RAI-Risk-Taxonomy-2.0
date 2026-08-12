@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2.4cm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small}
+
+\title{\textbf{Defining the Merge Threshold $\tau$ and a Consolidation Procedure for Reducing L4 Risk Cards}\\[4pt]
+\large Technical Report on Consolidating the 1{,}502 Non-Physical Cards of RAI Risk Taxonomy 2.0 (v2.18.0-rc)}
+\author{Youngsam Chun (Responsible AI, KT)}
+\date{August 6, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This report specifies a procedure for consolidating the active L4 risk cards of RAI Risk Taxonomy 2.0. Of the 1{,}660 active cards, the 158 Physical AI cards are frozen, and the remaining 1{,}502 non-physical cards (General 1{,}221, Agentic 281) are merged on the basis of semantic similarity. We give a technical, mathematical, and algorithmic definition of the central parameter, the merge threshold $\tau$; formalize the threshold graph and a complete-linkage merge algorithm; and report an empirically measured reduction curve over $\tau$ computed on the BGE-M3 proximity network of v2.18.0-rc. The non-physical set contains genuine duplicate pairs with $\cos \geq 0.94$, and applying $\tau = 0.90$ removes about 148 cards under single-linkage counting. To control the chaining risk of single linkage and the problem of cross-L3 merges, we propose four safeguards: complete-linkage merging, automatic approval only within the same L3 family, expert adjudication for cross-L3 pairs, and full merge-lineage recording.
+\end{abstract}
+
+\section{Background and Objective}
+
+The v2.18.0-rc release of RAI Risk Taxonomy 2.0 comprises 1{,}660 active L4 cards. The 158 cards of the Physical AI domain (RAI1-P) were already refined by the iterative merge procedure of the technical report (Algorithm 1, $\tau_{\mathrm{merge}}=0.94$) and are excluded from this consolidation round. The 1{,}502 non-physical cards, by contrast, were aggregated from multiple external risk repositories and benchmarks without an equivalent semantic deduplication pass, and measurement confirms clear duplicates (for example, ``exposure of personal information'' versus ``personal information in data'', similarity 0.956). The objectives of this report are (i) to define the merge threshold $\tau$ technically, mathematically, and algorithmically, (ii) to quantify how the choice of $\tau$ affects the card count, and (iii) to fix a staged consolidation procedure that preserves hierarchy integrity and backward compatibility.
+
+\section{Definition of the Merge Threshold $\tau$}
+
+\subsection{Embedding Space and Similarity}
+
+Each L4 card $r_i$ is represented by the concatenation $x_i$ of its bilingual label and definition, and is mapped by a multilingual sentence encoder $\mathrm{Enc}$ (BGE-M3 in our implementation) to a vector on the unit hypersphere $\mathbb{S}^{d-1}$:
+\begin{equation}
+\mathbf{e}_i \;=\; \frac{\mathrm{Enc}(x_i)}{\lVert \mathrm{Enc}(x_i) \rVert_2} \;\in\; \mathbb{S}^{d-1}, \qquad d=1024.
+\end{equation}
+Semantic similarity between two cards is defined as cosine similarity, which for unit vectors equals the inner product:
+\begin{equation}
+s_{ij} \;=\; \mathrm{sim}_{\cos}(\mathbf{e}_i,\mathbf{e}_j) \;=\; \mathbf{e}_i \cdot \mathbf{e}_j \;\in\; [-1,1],
+\qquad
+d_{ij} \;=\; 1 - s_{ij}.
+\end{equation}
+
+\subsection{Mathematical Definition of $\tau$}
+
+The merge threshold $\tau \in (0,1)$ is the similarity lower bound at which two cards are judged to be duplicate expressions of the same risk concept. The decision function
+\begin{equation}
+\mathrm{dup}(i,j) \;=\; \mathbb{1}\!\left[\, s_{ij} \geq \tau \,\right]
+\end{equation}
+marks a pair as a merge candidate when it equals 1. Geometrically, $\tau$ corresponds to an angular radius $\theta_\tau = \arccos(\tau)$ on the hypersphere: $\tau=0.94$ treats pairs within a cone of about $19.9^\circ$ as duplicates, and $\tau=0.90$ widens the cone to about $25.8^\circ$. Lowering $\tau$ widens the cone and increases merging; raising it narrows the cone and preserves distinctions.
+
+\subsection{Threshold Graph and Two Merge Topologies}
+
+Define the threshold graph over the card set $V=\{1,\dots,N\}$:
+\begin{equation}
+G_\tau \;=\; (V, E_\tau), \qquad E_\tau \;=\; \{(i,j) : s_{ij} \geq \tau\}.
+\end{equation}
+The merge outcome depends on the clustering rule applied to $G_\tau$.
+
+\textbf{Single linkage.} Merge groups are the connected components of $G_\tau$. Because $i \sim j$ requires only a chain $s_{ik_1} \geq \tau,\ s_{k_1 k_2} \geq \tau, \dots$, cards with low direct similarity can snowball into one group through intermediaries (chaining).
+
+\textbf{Complete linkage.} A merge group $C$ is valid only if every pair inside it clears the threshold:
+\begin{equation}
+\min_{i,j \in C,\; i \neq j} s_{ij} \;\geq\; \tau .
+\label{eq:complete}
+\end{equation}
+This requires $C$ to be clique-like in $G_\tau$ and therefore blocks chaining. The present procedure adopts the complete-linkage rule of Eq.~\eqref{eq:complete}.
+
+\subsection{Representative-Vector Update and Iterative Merging}
+
+As in Algorithm 1, the representative vector of a merged group $C$ is the normalized mean of its member embeddings:
+\begin{equation}
+\bar{\mathbf{e}}_C \;=\; \frac{\sum_{i \in C} \mathbf{e}_i}{\left\lVert \sum_{i \in C} \mathbf{e}_i \right\rVert_2}.
+\end{equation}
+Iterative merging proceeds greedily from the highest-similarity pair, with the stopping condition
+\begin{equation}
+\max_{i<j} \; s_{ij} \;<\; \tau .
+\end{equation}
+
+\section{Consolidation Algorithm}
+
+\begin{algorithm}[htbp]
+\caption{Constrained Complete-Linkage Merge}
+\begin{algorithmic}[1]
+\Require Non-physical active cards $V$ ($N=1{,}502$), embeddings $\{\mathbf{e}_i\}$, threshold $\tau$, L3 assignment $\ell(\cdot)$
+\Ensure Consolidated card set, merge lineage $\mathcal{M}$
+\State $S \gets [\,s_{ij}\,]$ \Comment{pairwise cosine-similarity matrix}
+\Repeat
+    \State $(i^*,j^*) \gets \arg\max_{i<j} s_{ij}$
+    \If{$s_{i^*j^*} \geq \tau$}
+        \If{$\ell(i^*) = \ell(j^*)$} \Comment{same L3: automatic merge candidate}
+            \State $C \gets C_{i^*} \cup C_{j^*}$;\; \textbf{if} $\min_{u,v \in C} s_{uv} \geq \tau$ \textbf{then} merge$(C)$; update $\bar{\mathbf{e}}_C$
+        \Else \Comment{cross-L3: route to expert queue}
+            \State $\mathcal{Q}_{\mathrm{expert}} \gets \mathcal{Q}_{\mathrm{expert}} \cup \{(i^*,j^*)\}$;\; $s_{i^*j^*} \gets -\infty$
+        \EndIf
+    \EndIf
+\Until{$\max s_{ij} < \tau$}
+\State Expert adjudication: for each pair in $\mathcal{Q}_{\mathrm{expert}}$, decide merge, re-assign hierarchy, or keep separate
+\State Record \texttt{merged\_into} and \texttt{merged\_source\_l4\_ids} in $\mathcal{M}$ \Comment{backward-compatible lineage}
+\end{algorithmic}
+\end{algorithm}
+
+Expert adjudication applies three criteria: identity of the failure mechanism (same causal pathway), the distinction between hazard source and consequence (cause cards and consequence cards are not merged), and evaluability (cards that are separate benchmark or evaluation targets remain separate).
+
+\section{Empirical Results}
+
+\subsection{Reduction Curve over $\tau$ (1{,}502 Non-Physical Cards)}
+
+Table~\ref{tab:sweep} reports the reduction curve measured on the BGE-M3 proximity network of v2.18.0-rc ($k=8$ nearest neighbors, minimum similarity 0.62, 10{,}417 non-physical pairs), using single-linkage counting as an upper-bound estimate. Complete-linkage merging yields more conservative reductions.
+
+\begin{table}[htbp]
+\centering
+\caption{Measured merges by $\tau$ (single-linkage upper bound)}
+\label{tab:sweep}
+\begin{tabular}{ccccc}
+\toprule
+$\tau$ & Pairs with $\cos\geq\tau$ & Cards removed & Resulting cards & Cross-L3 groups \\
+\midrule
+0.94 & 7 & 7 & 1{,}495 & 2 \\
+0.92 & 43 & 41 & 1{,}461 & 14 \\
+0.90 & 186 & 148 & 1{,}354 & 35 \\
+0.88 & 531 & 339 & 1{,}163 & 57 \\
+0.86 & 1{,}153 & 578 & 924 & 63 \\
+0.84 & 2{,}220 & 825 & 677 & 40 \\
+0.82 & 3{,}588 & 1{,}052 & 450 & 34 \\
+0.80 & 5{,}129 & 1{,}253 & 249 & 25 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The steep collapse of the card count for $\tau \leq 0.84$ reflects semantic breakdown driven by single-linkage chaining rather than genuine deduplication; this range is not adopted.
+
+\subsection{Nature of the Top Duplicate Pairs}
+
+The highest-similarity pairs are dominated by genuine duplicates: exposure of personal information versus personal information in data (0.956), misinformation and disinformation versus spread of disinformation (0.955), toxic content versus harmful content generation (0.944), and lack of system transparency versus lack of model transparency (0.937). At the same time, pairs such as non-violent crimes versus violent crimes (0.945) are close in embedding space yet must remain normatively distinct; these are the canonical occupants of the cross-L3 expert queue. For reference, a separate measurement on the Physical AI set (158 active cards; formerly the 182-card release) shows a maximum pairwise similarity of only 0.909, so the same procedure produces almost no reduction there. That set was already refined at $\tau=0.94$.
+
+\subsection{Joint Handling with HOLD Cards}
+
+Of the 1{,}502 non-physical cards, 614 sit in the HOLD (classification review pending) branch, and by review status 1{,}205 cards await human review. A large share of the top duplicate pairs involves HOLD cards, so merge adjudication and HOLD resolution are combined into a single review round to avoid duplicate effort.
+
+\section{Recommended Procedure and Target Range}
+
+\begin{enumerate}
+\item \textbf{Freeze.} Physical AI cards (RAI1-P) are not modified in this round.
+\item \textbf{Automatic merge.} Apply complete-linkage merging at $\tau=0.94$ to remove genuine duplicates immediately (on the order of several to tens of cards).
+\item \textbf{Semi-automatic merge.} For same-L3 pairs with $0.88 \leq s_{ij} < 0.94$, generate definition and evidence comparison sheets and merge after batch review.
+\item \textbf{Expert adjudication.} Judge cross-L3 pairs (about 60 groups) by the three criteria: failure mechanism, hazard source versus consequence, and evaluability.
+\item \textbf{Concurrent HOLD resolution.} Decide re-assignment or retirement of the 614 HOLD cards in the same round as merge adjudication.
+\item \textbf{Lineage and release.} Record every merge in \texttt{merged\_into} and \texttt{merged\_source\_l4\_ids}, ship a full old-to-new ID mapping table, and release as v2.19 with an explicit date. Then re-run the EM-based L3 assignment and re-compute the three validation metrics (convergence, internal consistency, perturbation stability), reporting a before-and-after comparison in an appendix.
+\end{enumerate}
+
+A defensible first-round target is approximately 1{,}150 to 1{,}350 cards from the non-physical base of 1{,}502. Further reduction below that range should be decided in a subsequent round, informed by the outcome of HOLD resolution and expert adjudication.
+
+\section*{Conclusion}
+
+$\tau$ is the cosine-similarity lower bound on the unit hypersphere at which two cards are judged to express the same risk concept, and it becomes a safe reduction instrument only when combined with the complete-linkage merge rule on the threshold graph $G_\tau$. The non-physical set of 1{,}502 cards contains sufficient genuine duplication for this rule to operate, so a staged procedure combining automatic merging at $\tau=0.94$, semi-automatic same-L3 merging at $0.88$ and above, and expert adjudication of cross-L3 pairs can reduce the card count while preserving hierarchy integrity and backward compatibility.
+
+\end{document}

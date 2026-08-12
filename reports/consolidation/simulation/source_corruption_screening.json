@@ -1,0 +1,53 @@
+[
+ {
+  "definition": "Alternative financial data of a company is any data about the company not produced by that company. Examples of such data that can benefit from improved collection and aggregation using AI models include stock discussions on social media, product reviews, and satellite imagery. The use of alternativ",
+  "cards": [
+   {
+    "id": "RAI4-0659",
+    "label": "Automatically generating disinformation at scale",
+    "l3": "RAI3-G-SYS-03",
+    "src": "global_1726"
+   },
+   {
+    "id": "RAI4-0892",
+    "label": "Use of alternative financial data via AI",
+    "l3": "RAI3-G-SYS-09",
+    "src": "global_1726"
+   }
+  ]
+ },
+ {
+  "definition": "The deployment of GPAI based agents in the financial sector can negatively impact market stability due to correlated autonomous actions, high interconnectedness, or incentive misalignment [4]. Furthermore, such GPAI agents in the same environment are vulnerable to classical challenges in multi-agent",
+  "cards": [
+   {
+    "id": "RAI4-0863",
+    "label": "AI-generated advice influencing user moral judgment",
+    "l3": "RAI3-A-SYS-05",
+    "src": "global_1726"
+   },
+   {
+    "id": "RAI4-0870",
+    "label": "Deployment of GPAI agents in finance",
+    "l3": "RAI3-A-SYS-05",
+    "src": "global_1726"
+   }
+  ]
+ },
+ {
+  "definition": "Current Frontier AI mdoels amplify existing biases within their training data and can be manipulated into providing potentially harmful responses, for example abusive language or discriminatory responses91,92. This not limited to text generation but can be seen across all modalities of generative AI",
+  "cards": [
+   {
+    "id": "RAI4-1427",
+    "label": "Amplification of biases",
+    "l3": "RAI3-A-SYS-03",
+    "src": "global_1726"
+   },
+   {
+    "id": "RAI4-1428",
+    "label": "Harmful responses",
+    "l3": "RAI3-G-HLD-01",
+    "src": "global_1726"
+   }
+  ]
+ }
+]

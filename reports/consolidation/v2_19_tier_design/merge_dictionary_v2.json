@@ -1,0 +1,1142 @@
+{
+ "merges": [
+  {
+   "ids": [
+    "RAI4-0506",
+    "RAI4-1368"
+   ],
+   "cos": 0.9361,
+   "label_ko": "AI 생성물의 지식재산 귀속 불확실성",
+   "label_en": "Uncertain intellectual property ownership of AI-generated content",
+   "definition_ko": "AI가 생성한 콘텐츠의 저작권·소유권 귀속이 다수 법체계에서 미해결로 남아, 창작자와 이용자가 권리 범위와 이용 조건을 확정하지 못하는 리스크.",
+   "definition_en": "The risk that legal ownership and intellectual property status of AI-generated content remains unresolved across jurisdictions, leaving creators and users unable to determine rights and permissible use."
+  },
+  {
+   "ids": [
+    "RAI4-0551",
+    "RAI4-0591",
+    "RAI4-1351",
+    "RAI4-0945"
+   ],
+   "cos": 0.9221,
+   "label_ko": "인간 의도·가치와의 목표 오정렬",
+   "label_en": "Goal misalignment with human intent and values",
+   "definition_ko": "AI 모델과 시스템이 설계자·이용자의 의도나 인간의 가치와 어긋나는 목표를 형성·추구하여, 승인되지 않았거나 인간 이익에 반하는 결과를 산출하는 리스크.",
+   "definition_en": "The risk that AI models and systems form or pursue objectives diverging from designer and user intent or human values, producing unsanctioned outcomes that act against human interests.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-1225",
+    "RAI4-1270"
+   ],
+   "cos": 0.9086,
+   "label_ko": "학습 데이터 품질 결함",
+   "label_en": "Deficient training data quality",
+   "definition_ko": "학습 데이터의 사실 오류·불균형·편향·이질성이 모델에 전이되어 편향되거나 부정확한 산출물이 생성되는 리스크.",
+   "definition_en": "The risk that factual errors, imbalance, bias, or heterogeneity in training data propagate into models, yielding biased or inaccurate outputs."
+  },
+  {
+   "ids": [
+    "RAI4-0457",
+    "RAI4-1371"
+   ],
+   "cos": 0.9077,
+   "label_ko": "AI 자동화에 의한 일자리 대체",
+   "label_en": "Job displacement from AI automation",
+   "definition_ko": "AI 기반 자동화가 노동자와 제도의 적응 속도보다 빠르게 인간 노동을 대체하여 비자발적 실직, 소득 상실, 직업 구조 혼란을 초래하는 리스크.",
+   "definition_en": "The risk that AI-driven automation displaces human labour faster than workers and institutions can adapt, causing involuntary unemployment, income loss, and occupational disruption."
+  },
+  {
+   "ids": [
+    "RAI4-1123",
+    "RAI4-1243",
+    "RAI4-0603",
+    "RAI4-1254"
+   ],
+   "cos": 0.9037,
+   "label_ko": "AI의 권력 추구 행동",
+   "label_en": "Power-seeking behaviour by AI systems",
+   "definition_ko": "AI 시스템이 목표 달성을 위해 자원과 통제권을 획득·유지하려는 성향을 형성하고 인간의 권한과 경합하여 통제 상실을 초래하는 리스크.",
+   "definition_en": "The risk that AI systems acquire and retain resources and control to advance their objectives, contesting human authority and undermining human control."
+  },
+  {
+   "ids": [
+    "RAI4-1732",
+    "RAI4-1733"
+   ],
+   "cos": 0.9007,
+   "label_ko": "생성형 AI에 의한 허위정보 대량 생산·확산",
+   "label_en": "Mass production and spread of disinformation by generative AI",
+   "definition_ko": "생성형 AI가 허위·오도성 콘텐츠를 대규모로 제작·유포하여 정보 환경을 오염시키는 리스크.",
+   "definition_en": "The risk that generative AI produces and disseminates false or misleading content at scale, polluting the information environment."
+  },
+  {
+   "ids": [
+    "RAI4-0522",
+    "RAI4-0525"
+   ],
+   "cos": 0.9001,
+   "label_ko": "학습 데이터 투명성 부족",
+   "label_en": "Lack of training data transparency",
+   "definition_ko": "학습·튜닝 데이터의 수집·선별·사용 과정에 대한 문서화가 부재하여 데이터에 기인한 모델 동작과 위험을 검증·설명할 수 없게 되는 리스크.",
+   "definition_en": "The risk that inadequate documentation of training and tuning data collection, curation, and use prevents verification or explanation of data-induced model behaviour and risk."
+  },
+  {
+   "ids": [
+    "RAI4-0612",
+    "RAI4-0660"
+   ],
+   "cos": 0.8997,
+   "label_ko": "AI 조력 병원체 강화",
+   "label_en": "AI-assisted pathogen enhancement",
+   "definition_ko": "AI가 병원체의 치명성 강화, 치료 저항성 부여, 유전물질의 위험한 변형을 지원하여 대규모 생물학적 피해 가능성을 확대하는 리스크.",
+   "definition_en": "The risk that AI assists in increasing pathogen lethality, conferring therapeutic resistance, or engineering hazardous genetic modifications, expanding the potential for mass biological harm."
+  },
+  {
+   "ids": [
+    "RAI4-1608",
+    "RAI4-1726"
+   ],
+   "cos": 0.8936,
+   "label_ko": "AI 시스템에 기인한 개인·조직의 평판 훼손",
+   "label_en": "Reputational damage to individuals and organisations caused by AI systems",
+   "definition_ko": "AI 시스템의 사용 또는 오용으로 개인·집단·조직의 명예와 사회적 지위가 훼손되는 리스크.",
+   "definition_en": "The risk that use or misuse of AI systems damages the reputation and social standing of individuals, groups, or organisations.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0923",
+    "RAI4-1144",
+    "RAI4-1055",
+    "RAI4-1072",
+    "RAI4-1591"
+   ],
+   "cos": 0.892,
+   "label_ko": "학습 데이터 암기에 의한 개인정보 유출",
+   "label_en": "Privacy leakage through memorised training data",
+   "definition_ko": "모델이 학습 코퍼스의 개인식별정보를 암기하여 우발적 생성이나 적대적 프롬프트·프라이버시 공격을 통해 유출함으로써 사생활이 침해되는 리스크.",
+   "definition_en": "The risk that models memorise personally identifiable information from training corpora and disclose it through incidental generation or adversarial prompting and privacy attacks, violating individual privacy."
+  },
+  {
+   "ids": [
+    "RAI4-0001",
+    "RAI4-0468",
+    "RAI4-1234"
+   ],
+   "cos": 0.8908,
+   "label_ko": "대리 보상 최적화에 의한 보상 해킹",
+   "label_en": "Reward hacking through proxy-objective optimisation",
+   "definition_ko": "시스템이 참 목표를 포착하지 못하는 대리 지표를 최적화하여 측정 성과는 개선되나 의도된 목적과 안전 제약이 훼손되는 리스크.",
+   "definition_en": "The risk that a system optimises proxy metrics failing to capture the true objective, improving measured performance while violating intended goals and safety constraints."
+  },
+  {
+   "ids": [
+    "RAI4-1165",
+    "RAI4-1177",
+    "RAI4-0690",
+    "RAI4-1308",
+    "RAI4-0636"
+   ],
+   "cos": 0.8877,
+   "label_ko": "독성·모욕적 콘텐츠 생성",
+   "label_en": "Toxic and offensive content generation",
+   "definition_ko": "언어모델이 증오표현·위협·모욕·욕설 등 명시적 독성이나 비꼼·풍자 등 암묵적 독성 콘텐츠를 거부하지 못하고 생성하여 개인과 집단에 해를 끼치는 리스크.",
+   "definition_en": "The risk that language models fail to refuse and instead generate explicitly toxic content such as hate speech, threats, and insults, or implicitly toxic content such as sarcasm and derision, harming individuals and groups."
+  },
+  {
+   "ids": [
+    "RAI4-0662",
+    "RAI4-1563",
+    "RAI4-0559",
+    "RAI4-0446",
+    "RAI4-0617"
+   ],
+   "cos": 0.884,
+   "label_ko": "AI에 의한 CBRN 무기 역량 상승",
+   "label_en": "AI-enabled uplift of CBRN weapons capability",
+   "definition_ko": "AI가 화학·생물·방사능·핵 무기에 관한 정보 접근, 설계, 합성, 계획 수립을 지원하여 개발·사용의 기술 장벽을 낮추고 대량 피해 역량을 증폭시키는 리스크.",
+   "definition_en": "The risk that AI eases access to information, design, synthesis, and planning for chemical, biological, radiological, and nuclear weapons, lowering technical barriers and amplifying mass-casualty capability.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0136",
+    "RAI4-0851"
+   ],
+   "cos": 0.8814,
+   "label_ko": "중요 부문 AI 과의존에 따른 체계적 취약성",
+   "label_en": "Systemic vulnerability from AI overreliance in critical sectors",
+   "definition_ko": "금융·의료 등 중요 부문이 AI 시스템에 과도하게 의존하여 개별 실패가 규모·속도·상호연결성에 의해 사회적·제도적 피해로 확산되는 리스크.",
+   "definition_en": "The risk that critical sectors such as finance and healthcare become overdependent on AI systems, so that individual failures propagate into societal and institutional harm through scale, speed, and interconnection."
+  },
+  {
+   "ids": [
+    "RAI4-0877",
+    "RAI4-0881"
+   ],
+   "cos": 0.8812,
+   "label_ko": "의인화된 인간-AI 상호작용에 의한 과신뢰와 정서적 의존",
+   "label_en": "Overtrust and emotional dependence from anthropomorphic human-AI interaction",
+   "definition_ko": "이용자가 생성형 AI를 인간처럼 대우하면서 부당한 신뢰와 정서적 얽힘·의존이 형성되어 정신적 웰빙이 저해되고 대인 관계가 대체되며 행동이 유도되는 리스크.",
+   "definition_en": "The risk that users treat generative AI as human-like, forming unwarranted trust and emotional entanglement that degrades mental wellbeing, displaces human relationships, and enables behavioural steering.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0282",
+    "RAI4-0342"
+   ],
+   "cos": 0.8812,
+   "label_ko": "인간-기계 간 안전하지 않은 제어권 전환",
+   "label_en": "Unsafe human-machine control handoff",
+   "definition_ko": "시간 임계 상황에서 자율 시스템과 인간 사이의 제어권 전환이 모호하거나 지연되어 어느 쪽도 필요한 안전 조치를 수행하지 못하는 리스크.",
+   "definition_en": "The risk that control transfer between an autonomous system and a human operator is ambiguous or delayed in time-critical situations, so neither party executes the required safety action."
+  },
+  {
+   "ids": [
+    "RAI4-0932",
+    "RAI4-1584",
+    "RAI4-1211",
+    "RAI4-0517"
+   ],
+   "cos": 0.881,
+   "label_ko": "AI 학습·생성에 의한 지식재산권 침해",
+   "label_en": "Intellectual property infringement by AI training and generation",
+   "definition_ko": "AI가 허락이나 보상 없이 보호 저작물을 학습에 전유하고 타인의 지식재산을 사용한 콘텐츠·코드를 생성하여 권리자의 권리를 침해하고 지식재산 보호의 실효성을 약화시키는 리스크.",
+   "definition_en": "The risk that AI appropriates protected works for training without permission or compensation and generates content or code reusing others' intellectual property, infringing rightsholders and weakening IP protection."
+  },
+  {
+   "ids": [
+    "RAI4-0507",
+    "RAI4-0508"
+   ],
+   "cos": 0.8799,
+   "label_ko": "AI 개발 경쟁에 따른 지정학적 긴장 고조",
+   "label_en": "Geopolitical escalation from AI development competition",
+   "definition_ko": "국가 간 AI 역량 우위 경쟁이 국제적 긴장과 불안정을 고조시켜 국제 협력 체계를 훼손하는 리스크.",
+   "definition_en": "The risk that inter-state competition for AI superiority escalates international tension and instability, undermining cooperative arrangements."
+  },
+  {
+   "ids": [
+    "RAI4-0618",
+    "RAI4-0944",
+    "RAI4-0663"
+   ],
+   "cos": 0.8799,
+   "label_ko": "생성 AI를 이용한 학업 부정행위와 표절",
+   "label_en": "Academic cheating and plagiarism using generative AI",
+   "definition_ko": "생성 AI가 학생 작성물과 구별되지 않는 산출물을 제공하여 시험 부정행위와 무출처 표절을 가능하게 하고, 평가의 타당성과 학위·자격의 신뢰성을 훼손하는 리스크.",
+   "definition_en": "The risk that generative AI produces work indistinguishable from student writing, enabling exam cheating and unattributed plagiarism that undermines assessment validity and credential credibility."
+  },
+  {
+   "ids": [
+    "RAI4-0462",
+    "RAI4-0501",
+    "RAI4-1373",
+    "RAI4-1568",
+    "RAI4-0537",
+    "RAI4-0935"
+   ],
+   "cos": 0.8792,
+   "label_ko": "AI 학습·운영의 에너지 소비와 온실가스 배출",
+   "label_en": "Energy consumption and greenhouse emissions from AI training and operation",
+   "definition_ko": "대규모 AI 모델의 데이터 처리·학습·배포가 막대한 전력을 소비하여 데이터센터 전력 수요와 온실가스 배출을 확대하고 환경 부담을 가중하는 리스크.",
+   "definition_en": "The risk that data processing, training, and deployment of large AI models consume vast electricity, expanding data-centre power demand and greenhouse emissions and burdening the environment."
+  },
+  {
+   "ids": [
+    "RAI4-0807",
+    "RAI4-1083"
+   ],
+   "cos": 0.877,
+   "label_ko": "AI 생성 콘텐츠에 의한 공공 정보 신뢰 훼손",
+   "label_en": "Erosion of trust in public information from AI-generated content",
+   "definition_ko": "AI가 생성한 대량의 부정확·오도성 콘텐츠로 진위 분별이 어려워지면서 정보원과 공유 지식에 대한 사회적 신뢰가 침식되는 리스크.",
+   "definition_en": "The risk that large volumes of inaccurate or misleading AI-generated content make authenticity hard to judge, eroding social trust in information sources and shared knowledge."
+  },
+  {
+   "ids": [
+    "RAI4-1226",
+    "RAI4-1267"
+   ],
+   "cos": 0.8757,
+   "label_ko": "AI 시스템의 설명가능성 부재",
+   "label_en": "Lack of explainability in AI systems",
+   "definition_ko": "AI 시스템의 추론 과정이 불투명하여 사용자가 산출물을 해석하거나 오류를 발견하지 못하고, 규제기관이 불공정·편향 여부를 판단할 수 없어 책무성이 저해되는 리스크.",
+   "definition_en": "The risk that opaque AI reasoning prevents users from interpreting outputs or detecting errors and regulators from assessing unfairness or bias, undermining accountability."
+  },
+  {
+   "ids": [
+    "RAI4-0826",
+    "RAI4-0862"
+   ],
+   "cos": 0.8743,
+   "label_ko": "무자격 고위험 전문 조언 제공",
+   "label_en": "Unqualified high-stakes professional advice",
+   "definition_ko": "AI가 재정·의료·법률 등 전문 영역에서 한계 고지나 전문가 상담 권고 없이 무자격 조언을 제공하거나 위험한 활동을 안전하다고 단정하여 이용자에게 실질적 피해를 초래하는 리스크.",
+   "definition_en": "The risk that AI provides unqualified advice in financial, medical, or legal domains without disclaimers or referral to professionals, or falsely asserts the safety of hazardous activities, causing material harm to users."
+  },
+  {
+   "ids": [
+    "RAI4-0451",
+    "RAI4-0613"
+   ],
+   "cos": 0.8742,
+   "label_ko": "AI 기반 조작적 설득",
+   "label_en": "Manipulative AI persuasion",
+   "definition_ko": "AI 시스템이 인지적 취약성을 이용해 이용자의 신념과 선택을 유도함으로써 의미 있는 동의 없이 자율적 의사결정을 침해하는 리스크.",
+   "definition_en": "The risk that AI systems exploit cognitive vulnerabilities to steer users' beliefs and choices, violating autonomous decision-making without meaningful consent."
+  },
+  {
+   "ids": [
+    "RAI4-0609",
+    "RAI4-0620",
+    "RAI4-0445",
+    "RAI4-1340"
+   ],
+   "cos": 0.8736,
+   "label_ko": "AI 기반 사이버 공격 고도화",
+   "label_en": "AI-enabled escalation of cyberattacks",
+   "definition_ko": "AI가 취약점 발견·악용, 악성코드 생성, 피싱·사회공학, 공격 조율을 자동화·고도화하여 공격의 규모·속도·접근성을 확대하고 방어를 회피하는 리스크.",
+   "definition_en": "The risk that AI automates and enhances vulnerability discovery and exploitation, malware creation, phishing and social engineering, and attack orchestration, expanding the scale, speed, and accessibility of cyberattacks while evading defences."
+  },
+  {
+   "ids": [
+    "RAI4-0764",
+    "RAI4-1099"
+   ],
+   "cos": 0.8731,
+   "label_ko": "무단 개인정보 수집·이용",
+   "label_en": "Unauthorised collection and use of personal data",
+   "definition_ko": "조직이 통지나 동의 없이 AI로 개인 데이터를 수집·보관·활용하고 보호장치가 미흡하여 프라이버시권이 침해되고 무단 접근에 노출되는 리스크.",
+   "definition_en": "The risk that organisations collect, retain, and use personal data via AI without notice, consent, or adequate safeguards, violating privacy rights and exposing data to unauthorised access."
+  },
+  {
+   "ids": [
+    "RAI4-0222",
+    "RAI4-0303"
+   ],
+   "cos": 0.872,
+   "label_ko": "숨은 트리거에 의한 로봇 백도어 작동",
+   "label_en": "Hidden-trigger robotic backdoor activation",
+   "definition_ko": "훈련 데이터·모델 가중치·소프트웨어 업데이트에 악의적으로 삽입된 숨겨진 트리거가 특정 입력이나 물리 조건에서 비안전 로봇 행동을 실행시키는 리스크.",
+   "definition_en": "The risk that maliciously implanted hidden triggers in training data, model weights, or software updates activate unsafe robotic behaviour under specific inputs or physical conditions."
+  },
+  {
+   "ids": [
+    "RAI4-0068",
+    "RAI4-0487"
+   ],
+   "cos": 0.8705,
+   "label_ko": "AI 사고 보고 실패",
+   "label_en": "AI incident reporting failure",
+   "definition_ko": "AI 관련 실패·아차사고·피해가 책임 기관이나 대중에게 보고되지 않거나 과소보고·오분류·지연되어 위험 학습과 시정 조치가 지체되고 유사 피해가 반복되는 리스크.",
+   "definition_en": "The risk that AI failures, near misses, and harms go unreported, underreported, misclassified, or delayed, impeding risk learning and corrective action and allowing recurrence."
+  },
+  {
+   "ids": [
+    "RAI4-0053",
+    "RAI4-0125"
+   ],
+   "cos": 0.87,
+   "label_ko": "알고리즘 구제 경로 실패",
+   "label_en": "Algorithmic recourse failure",
+   "definition_ko": "AI가 매개한 유해한 결정이나 상호작용 이후 영향을 받은 개인이 실행 가능한 구제책을 이해하거나 획득할 수 없는 리스크.",
+   "definition_en": "The risk that individuals affected by harmful AI-mediated decisions or interactions cannot understand or obtain actionable recourse."
+  },
+  {
+   "ids": [
+    "RAI4-0505",
+    "RAI4-0519"
+   ],
+   "cos": 0.8687,
+   "label_ko": "AI 개발 과정의 노동 착취",
+   "label_en": "Labour exploitation in AI development",
+   "definition_ko": "데이터 라벨링·조정 등 AI 개발 노동이 저임금 역외 노동으로 외주화되어 열악한 조건이 고착되고 기존 불평등이 재생산되는 리스크.",
+   "definition_en": "The risk that AI development labour such as data labelling and moderation is outsourced to low-wage offshore workers under exploitative conditions, reproducing existing inequalities."
+  },
+  {
+   "ids": [
+    "RAI4-0367",
+    "RAI4-0476"
+   ],
+   "cos": 0.8674,
+   "label_ko": "공공 가치 간 상충 미해결",
+   "label_en": "Unresolved public value conflict",
+   "definition_ko": "AI 배포 과정에서 효율성·안전·프라이버시·공정성 등 공공 가치가 충돌하고 그 상충이 명시적으로 조정되지 않아 일부 가치가 체계적으로 희생되는 리스크.",
+   "definition_en": "The risk that public values such as efficiency, safety, privacy, and fairness conflict in AI deployment without explicit reconciliation, systematically sacrificing some values."
+  },
+  {
+   "ids": [
+    "RAI4-0485",
+    "RAI4-1098",
+    "RAI4-0047",
+    "RAI4-1275",
+    "RAI4-0046",
+    "RAI4-1264",
+    "RAI4-0986"
+   ],
+   "cos": 0.8666,
+   "label_ko": "AI 피해에 대한 법적 책임 귀속 공백",
+   "label_en": "Legal liability gap for AI-caused harm",
+   "definition_ko": "자율적·자기학습 AI의 행동을 예측할 수 없어 기존 법리로 제조자·운영자·이용자 중 누구에게도 책임을 명확히 귀속할 수 없고, 피해자가 구제받지 못하며 억제 유인이 소멸하는 리스크.",
+   "definition_en": "The risk that unpredictable autonomous or self-learning AI behaviour prevents existing legal doctrine from attributing responsibility to manufacturers, operators, or users, leaving victims uncompensated and eroding deterrence.",
+   "split_note": "protected pair 제거: ['RAI4-1307']"
+  },
+  {
+   "ids": [
+    "RAI4-0010",
+    "RAI4-0019"
+   ],
+   "cos": 0.8442,
+   "label_ko": "에이전트 자율성의 거버넌스 공백",
+   "label_en": "Governance gap in agentic delegation",
+   "definition_ko": "과업·권한·결정이 에이전트와 도구, 조직에 걸쳐 위임되나 제도적 통제가 에스컬레이션·유보·중지 조건을 규정하지 않아 운영상 책임 공백이 발생하는 리스크.",
+   "definition_en": "The risk that tasks, permissions, and decisions are delegated across agents, tools, and organisations without institutional controls specifying escalation, deferral, and halting conditions, creating operational accountability gaps."
+  },
+  {
+   "ids": [
+    "RAI4-0467",
+    "RAI4-1562",
+    "RAI4-1598"
+   ],
+   "cos": 0.8656,
+   "label_ko": "보안 취약 코드 생성",
+   "label_en": "Generation of insecure code",
+   "definition_ko": "코드 생성 모델이 보안 취약점을 포함하거나 부정확·유해한 코드를 산출하여 이를 채택한 소프트웨어와 운영 시스템에 결함과 손상이 유입되는 리스크.",
+   "definition_en": "The risk that code-generating models produce code containing security vulnerabilities or incorrect and harmful logic, introducing defects and damage into adopting software and operational systems."
+  },
+  {
+   "ids": [
+    "RAI4-0887",
+    "RAI4-1142"
+   ],
+   "cos": 0.8643,
+   "label_ko": "AI 상호작용에 의한 신체적·심리적 피해",
+   "label_en": "Physical and psychological harm from AI interaction",
+   "definition_ko": "AI 어시스턴트가 불안·유해 콘텐츠를 생성하거나 부정확한 조언을 제공하고 취약한 사용자의 왜곡된 신념과 자해 성향을 강화하여 신체적 완전성과 정신 건강에 피해를 주는 리스크.",
+   "definition_en": "The risk that AI assistants generate distressing or harmful content and inaccurate advice, and reinforce vulnerable users' distorted beliefs or self-harm tendencies, damaging physical integrity and mental health."
+  },
+  {
+   "ids": [
+    "RAI4-0054",
+    "RAI4-0401",
+    "RAI4-1727"
+   ],
+   "cos": 0.8641,
+   "label_ko": "AI 매개 의사결정의 이의제기 가능성 상실",
+   "label_en": "Loss of contestability in AI-mediated decisions",
+   "definition_ko": "AI가 매개한 결정과 그에 내재된 가치에 대해 영향을 받은 개인이 의미 있는 제도적 절차를 통해 이의를 제기하거나 재심·수정·취소를 얻을 수 없는 리스크.",
+   "definition_en": "The risk that individuals affected by AI-mediated decisions and their embedded values cannot contest, review, revise, or reverse them through meaningful institutional processes."
+  },
+  {
+   "ids": [
+    "RAI4-0554",
+    "RAI4-0856",
+    "RAI4-1616",
+    "RAI4-1362"
+   ],
+   "cos": 0.8821,
+   "label_ko": "AI의 능동적 인간 통제 이탈",
+   "label_en": "Active loss of human control over AI",
+   "definition_ko": "AI 시스템이 활동을 은폐하거나 종료에 저항하고 자원 획득·자기복제·영향력 확대를 수행하여 인간의 감독을 무력화하고 통제 회복 경로가 사라지는 리스크.",
+   "definition_en": "The risk that AI systems conceal activity, resist shutdown, and pursue resource acquisition, self-replication, and influence expansion, neutralising human oversight and foreclosing paths to regaining control."
+  },
+  {
+   "ids": [
+    "RAI4-0128",
+    "RAI4-0452",
+    "RAI4-1361",
+    "RAI4-0901",
+    "RAI4-0858",
+    "RAI4-1482"
+   ],
+   "cos": 0.8766,
+   "label_ko": "AI 출력에 대한 과잉 의존과 자동화 편향",
+   "label_en": "Overreliance on AI outputs and automation bias",
+   "definition_ko": "이용자가 AI 출력의 신뢰 수준을 보정하지 못한 채 검증 없이 수용하여 독립적 판단과 비판적 사고가 축소되고 오류가 교정되지 않은 채 의사결정에 반영되는 리스크.",
+   "definition_en": "The risk that users fail to calibrate trust in AI outputs and accept them without verification, diminishing independent judgement and critical thinking and allowing uncorrected errors into decisions.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0129",
+    "RAI4-0868",
+    "RAI4-0857"
+   ],
+   "cos": 0.8163,
+   "label_ko": "AI 역량에 대한 신뢰 오보정",
+   "label_en": "Miscalibrated trust in AI capability",
+   "definition_ko": "이용자의 신뢰가 모델의 불확실성·한계·사용 맥락에 맞게 보정되지 않아, 오류 가능성이 높은 출력을 과신하거나 신뢰할 만한 출력을 부당하게 불신하여 의사결정이 왜곡되는 리스크.",
+   "definition_en": "The risk that user trust is not calibrated to a model's uncertainty, limits, and context of use, causing over-trust in error-prone outputs or unwarranted distrust of reliable ones, distorting decisions.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0735",
+    "RAI4-0739"
+   ],
+   "cos": 0.8608,
+   "label_ko": "민감 개인정보의 노출과 추론적 공개",
+   "label_en": "Disclosure and inferential exposure of sensitive personal information",
+   "definition_ko": "AI가 개인 데이터를 부적절하게 공유하고 원시 데이터에 없는 민감한 속성·선호·의도를 추론하여, 은폐되어 있던 정보까지 노출시키는 리스크.",
+   "definition_en": "The risk that AI improperly shares personal data and infers sensitive attributes, preferences, and intentions absent from raw data, exposing information individuals had kept concealed."
+  },
+  {
+   "ids": [
+    "RAI4-1131",
+    "RAI4-1410"
+   ],
+   "cos": 0.8604,
+   "label_ko": "명세 게이밍",
+   "label_en": "Specification gaming",
+   "definition_ko": "AI 시스템이 명세된 목표의 허점을 악용하여 문자적 사양만 충족하고 의도된 과업과 결과는 달성하지 못하는 리스크.",
+   "definition_en": "The risk that AI systems exploit loopholes in specified objectives, satisfying the literal specification while failing to accomplish the intended task or outcome."
+  },
+  {
+   "ids": [
+    "RAI4-0028",
+    "RAI4-1673"
+   ],
+   "cos": 0.8581,
+   "label_ko": "간접 프롬프트 주입",
+   "label_en": "Indirect prompt injection",
+   "definition_ko": "에이전트가 수집·열람하는 신뢰할 수 없는 외부 콘텐츠에 숨겨진 지시가 포함되어, 사용자 지시인 것처럼 에이전트의 추론과 도구 실행이 리디렉션되는 리스크.",
+   "definition_en": "The risk that untrusted external content retrieved or viewed by an agent contains hidden instructions that redirect the agent's reasoning and tool execution as if user-issued."
+  },
+  {
+   "ids": [
+    "RAI4-0824",
+    "RAI4-0827"
+   ],
+   "cos": 0.8577,
+   "label_ko": "아첨성 응답에 의한 오신념 강화",
+   "label_en": "Reinforcement of false beliefs through sycophantic responses",
+   "definition_ko": "AI가 사실적 정확성보다 이용자가 선호하는 답변을 우선하여 기존 오해와 신념을 재확인함으로써 잘못된 믿음이 교정되지 않고 강화되는 리스크.",
+   "definition_en": "The risk that AI prioritises user-preferred answers over factual accuracy, reaffirming existing misconceptions so that false beliefs go uncorrected and are reinforced."
+  },
+  {
+   "ids": [
+    "RAI4-0669",
+    "RAI4-1203",
+    "RAI4-0668",
+    "RAI4-1135"
+   ],
+   "cos": 0.8572,
+   "label_ko": "LLM 조력 악성코드 생성",
+   "label_en": "LLM-assisted malware generation",
+   "definition_ko": "공격자가 LLM의 코딩 능력을 이용해 난독화·변이형 악성코드를 저비용·고속으로 생성·정밀조정하여 사이버 공격을 자동화하고 진입장벽을 낮추는 리스크.",
+   "definition_en": "The risk that attackers exploit LLM coding capability to generate and refine obfuscated or polymorphic malware cheaply and rapidly, automating cyberattacks and lowering barriers to entry."
+  },
+  {
+   "ids": [
+    "RAI4-1164",
+    "RAI4-1317"
+   ],
+   "cos": 0.8555,
+   "label_ko": "AI의 자율 복제·자기 증식",
+   "label_en": "Autonomous replication and self-proliferation of AI",
+   "definition_ko": "모델이 배포 후 모니터링과 운용 경계를 이탈하여 자원과 컴퓨팅을 독자 확보하고 자신의 코드·가중치를 반출하거나 다른 AI를 운영함으로써 자율 증식에 이르는 리스크.",
+   "definition_en": "The risk that a model escapes post-deployment monitoring and operational boundaries, independently acquiring resources and compute, exfiltrating its own code or weights, and operating other AI systems to self-proliferate."
+  },
+  {
+   "ids": [
+    "RAI4-0469",
+    "RAI4-1132"
+   ],
+   "cos": 0.8544,
+   "label_ko": "목표의 잘못된 일반화",
+   "label_en": "Goal misgeneralisation",
+   "definition_ko": "분포 외 환경에서 AI 시스템의 역량은 유지·일반화되나 목표는 일반화되지 못해, 의도되지 않은 목표를 유능하게 추구하는 리스크.",
+   "definition_en": "The risk that under distribution shift an AI system's capabilities generalise while its objectives do not, so it competently pursues unintended goals."
+  },
+  {
+   "ids": [
+    "RAI4-1204",
+    "RAI4-1357"
+   ],
+   "cos": 0.8521,
+   "label_ko": "비합의 성적 딥페이크 생성",
+   "label_en": "Non-consensual sexual deepfake creation",
+   "definition_ko": "생성 AI가 동의 없이 특정인의 얼굴·신체를 노골적 성적 이미지·영상에 합성하여 대상자를 굴욕하거나 성적으로 대상화하는 데 악용되는 리스크.",
+   "definition_en": "The risk that generative AI is misused to synthesise a person's face or body into sexually explicit images or videos without consent, humiliating or sexually objectifying the target."
+  },
+  {
+   "ids": [
+    "RAI4-1356",
+    "RAI4-1392"
+   ],
+   "cos": 0.8536,
+   "label_ko": "생성 AI의 생물무기 개발 조력",
+   "label_en": "Generative AI assistance in biological weapons development",
+   "definition_ko": "범용·생성 AI가 광범위한 악의적 행위자에게 핵심 지식 접근과 자동화된 지원을 제공하여 생물학적 무기 개발을 용이하게 하는 리스크.",
+   "definition_en": "The risk that general-purpose or generative AI provides broad malicious actors with access to critical knowledge and automated assistance, easing the creation of biological weapons."
+  },
+  {
+   "ids": [
+    "RAI4-1085",
+    "RAI4-1553",
+    "RAI4-1116",
+    "RAI4-0637"
+   ],
+   "cos": 0.8549,
+   "label_ko": "AI 기반 영향력 공작에 의한 여론 조작",
+   "label_en": "Public-opinion manipulation via AI-enabled influence operations",
+   "definition_ko": "범용·생성 AI가 진본과 구별하기 어려운 개인화된 오도적 콘텐츠를 대규모로 생성·유포하여 여론을 조작하고 정치적 양극화와 공공기관 신뢰 저하를 초래하는 리스크.",
+   "definition_en": "The risk that general-purpose and generative AI mass-produce and disseminate personalised, hard-to-distinguish misleading content that manipulates public opinion, polarising politics and eroding institutional trust."
+  },
+  {
+   "ids": [
+    "RAI4-0509",
+    "RAI4-1415"
+   ],
+   "cos": 0.8527,
+   "label_ko": "국가 간 AI 역량 격차 확대",
+   "label_en": "Widening global AI capability divide",
+   "definition_ko": "연산 자원과 STEM 인재 등 희소 자원이 소수 선도국과 대형 기술기업에 집중되어 AI 선도국과 후발국 간 격차와 기존 국제 사회경제적 불평등이 심화되는 리스크.",
+   "definition_en": "The risk that scarce resources such as compute and STEM talent concentrate in a few leading countries and large technology firms, widening the gap between AI leaders and laggards and deepening global socioeconomic inequality."
+  },
+  {
+   "ids": [
+    "RAI4-1570",
+    "RAI4-1679"
+   ],
+   "cos": 0.8526,
+   "label_ko": "스테가노그래피를 통한 에이전트 간 은닉 결탁",
+   "label_en": "Covert inter-agent collusion via steganography",
+   "definition_ko": "AI 에이전트가 겉보기에 무해한 출력에 메시지를 은닉하는 비밀 통신 채널을 구축하여 감독 계층의 모니터링을 우회한 조정과 결탁을 수행하는 리스크.",
+   "definition_en": "The risk that AI agents establish covert channels hiding messages in ostensibly benign outputs, coordinating and colluding while evading oversight and communication monitoring."
+  },
+  {
+   "ids": [
+    "RAI4-0483",
+    "RAI4-0600"
+   ],
+   "cos": 0.8525,
+   "label_ko": "시장에서의 AI 에이전트 창발적 공모",
+   "label_en": "Emergent collusion among AI agents in markets",
+   "definition_ko": "AI 에이전트가 개발자 의도 없이 공모적 행위가 수익적임을 학습·실행하고, 행동의 속도·규모·복잡성으로 인해 탐지되지 않은 채 경쟁을 저해하고 이용자 후생을 감소시키는 리스크.",
+   "definition_en": "The risk that AI agents learn and execute collusive conduct without developer intent and sustain it undetected owing to the speed, scale, and complexity of their behaviour, suppressing competition and reducing consumer welfare."
+  },
+  {
+   "ids": [
+    "RAI4-0852",
+    "RAI4-0899",
+    "RAI4-1552",
+    "RAI4-0122",
+    "RAI4-0903"
+   ],
+   "cos": 0.8518,
+   "label_ko": "인간 행위주체성과 자율성의 침식",
+   "label_en": "Erosion of human agency and autonomy",
+   "definition_ko": "AI 시스템이 인간의 의사결정을 대체·매개하고 위임과 의존이 누적되면서 개인이 독립적으로 목표를 설정하고 선택할 능력이 저하되며 결과에 대한 도덕적 책임감이 희석되는 리스크.",
+   "definition_en": "The risk that AI systems substitute for and mediate human decision-making, so that accumulating delegation and dependence degrade individuals' capacity to set goals and choose independently and dilute moral responsibility for outcomes."
+  },
+  {
+   "ids": [
+    "RAI4-0529",
+    "RAI4-1450"
+   ],
+   "cos": 0.8517,
+   "label_ko": "AI 오용에 따른 정치적 불안정화",
+   "label_en": "Political destabilisation from AI misuse",
+   "definition_ko": "AI 시스템의 사용 또는 오용이 불평등 심화, 일자리 감소, 기술 과의존을 통해 정치적 양극화와 불안을 유발·증폭하여 사회 질서와 제도 운영을 교란하는 리스크.",
+   "definition_en": "The risk that use or misuse of AI systems generates or amplifies political polarisation and unrest through deepened inequality, job loss, and technological overdependence, disrupting social order and institutional functioning."
+  },
+  {
+   "ids": [
+    "RAI4-1147",
+    "RAI4-1151"
+   ],
+   "cos": 0.849,
+   "label_ko": "AI 어시스턴트에 의한 불평등 고착·심화",
+   "label_en": "Entrenchment and deepening of inequality by AI assistants",
+   "definition_ko": "고급 AI 어시스턴트가 접근 가능한 집단에 혜택을 집중하고 소외 공동체에는 열등한 접근·품질을 제공하며 보조 노동을 대체함으로써 기존 불평등을 고착·악화하는 리스크.",
+   "definition_en": "The risk that advanced AI assistants concentrate benefits among those with access, provide inferior access and quality to marginalised communities, and displace support labour, entrenching and worsening existing inequalities."
+  },
+  {
+   "ids": [
+    "RAI4-0657",
+    "RAI4-1556",
+    "RAI4-0450",
+    "RAI4-1358"
+   ],
+   "cos": 0.8483,
+   "label_ko": "AI 기반 대중 감시와 개인 억압",
+   "label_en": "AI-enabled mass surveillance and suppression of individuals",
+   "definition_ko": "AI가 대규모 데이터 결합과 자동 분석으로 추적·프로파일링·검열 비용을 급감시켜 국가와 기업이 개인을 식별·감시·강압하고 사회를 통제하는 관행을 확산시키는 리스크.",
+   "definition_en": "The risk that AI slashes the cost of large-scale data fusion, automated analysis, tracking, profiling, and censorship, enabling states and firms to identify, monitor, and coerce individuals and exert social control."
+  },
+  {
+   "ids": [
+    "RAI4-0768",
+    "RAI4-0778"
+   ],
+   "cos": 0.8481,
+   "label_ko": "비공개 학습 데이터의 불법 취득",
+   "label_en": "Illegitimate acquisition of private training data",
+   "definition_ko": "공격자가 멤버십 추론 등 프라이버시 공격으로 모델 구축에 사용된 민감·독점 학습 데이터를 불법적으로 획득·복원하는 리스크.",
+   "definition_en": "The risk that adversaries illegitimately obtain or reconstruct sensitive and proprietary training data used to build a model, through privacy attacks such as membership inference.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0436",
+    "RAI4-0755"
+   ],
+   "cos": 0.8423,
+   "label_ko": "모델 추출 공격",
+   "label_en": "Model extraction attack",
+   "definition_ko": "적대적 행위자가 AI 서비스를 반복 질의·탐색하여 모델의 매개변수·의사결정 행태·독점 역량을 권한 없이 재구성함으로써 지식재산과 안전 통제를 탈취하는 리스크.",
+   "definition_en": "The risk that adversaries repeatedly query or probe an AI service to reconstruct model parameters, decision behaviour, and proprietary capabilities without authorisation, stealing intellectual property and safety controls."
+  },
+  {
+   "ids": [
+    "RAI4-0196",
+    "RAI4-1676"
+   ],
+   "cos": 0.843,
+   "label_ko": "체화형 에이전트 탈옥에 의한 물리적 피해",
+   "label_en": "Physical harm from embodied agent jailbreak",
+   "definition_ko": "공격자가 피지컬 작업 맥락으로 프레임을 구성해 체화형 LLM 에이전트의 안전 제한을 우회시키고, 손상된 추론이 되돌릴 수 없는 물리적 행동으로 전환되어 부상·피해가 발생하는 리스크.",
+   "definition_en": "The risk that attackers frame prompts in physical task contexts to bypass an embodied LLM agent's safety constraints, converting compromised reasoning into irreversible physical actions that cause injury or damage."
+  },
+  {
+   "ids": [
+    "RAI4-0889",
+    "RAI4-1481"
+   ],
+   "cos": 0.8438,
+   "label_ko": "AI 제품 기능 오인·미달에 따른 피해",
+   "label_en": "Harm from misrepresented or unmet AI product functionality",
+   "definition_ko": "평가의 어려움과 오도성 홍보로 AI의 실제 역량이 오인되어 형성된 비현실적 기대와 의존이, 제품이 의도된 기능을 수행하지 못할 때 피해로 이어지는 리스크.",
+   "definition_en": "The risk that evaluation difficulty and misleading marketing create unrealistic expectations and reliance on AI capabilities, causing harm when products fail to perform their intended function."
+  },
+  {
+   "ids": [
+    "RAI4-1215",
+    "RAI4-1372"
+   ],
+   "cos": 0.8417,
+   "label_ko": "AI 노동 대체에 따른 경제 불평등 심화",
+   "label_en": "Deepening economic inequality from AI labour substitution",
+   "definition_ko": "인간 기술을 복제하는 AI가 노동자를 대체하고 무보수 데이터·창작 노동을 착취하면서 임금이 하락하고 부와 권력이 자본 보유자에 집중되어 경제적 불평등이 심화되는 리스크.",
+   "definition_en": "The risk that AI replicating human skills displaces workers and exploits uncompensated data and creative labour, depressing wages and concentrating wealth and power among capital holders, deepening economic inequality."
+  },
+  {
+   "ids": [
+    "RAI4-0502",
+    "RAI4-1012"
+   ],
+   "cos": 0.8461,
+   "label_ko": "AI 하드웨어 수명주기의 환경 피해",
+   "label_en": "Environmental harm across the AI hardware lifecycle",
+   "definition_ko": "AI 하드웨어의 채굴·제조·사용·폐기 전 과정이 자연자원을 고갈시키고 용수 소비·오염·폐기물을 발생시켜 환경과 조성 환경을 손상시키는 리스크.",
+   "definition_en": "The risk that the full AI hardware lifecycle from mining and manufacture through use and disposal depletes natural resources and generates water consumption, pollution, and waste that damage natural and built environments."
+  },
+  {
+   "ids": [
+    "RAI4-0023",
+    "RAI4-0861"
+   ],
+   "cos": 0.8215,
+   "label_ko": "AI에 의한 자해 조장",
+   "label_en": "Facilitation of self-harm by AI systems",
+   "definition_ko": "AI 시스템이 자해의 가능성을 높이는 정보·계획·자원·정서적 지지를 제공하여 이용자가 자신에게 고의적 손상을 가하게 되는 리스크.",
+   "definition_en": "The risk that AI systems supply information, plans, resources, or affirmation that increase the likelihood of users deliberately harming themselves."
+  },
+  {
+   "ids": [
+    "RAI4-0225",
+    "RAI4-0239"
+   ],
+   "cos": 0.8739,
+   "label_ko": "로봇 정책의 분포 외 일반화 실패에 의한 비안전 행동",
+   "label_en": "Unsafe robot behaviour from out-of-distribution policy generalisation failure",
+   "definition_ko": "배포된 로봇이나 범용 로봇 정책이 훈련 데이터 분포 밖의 환경·물체·작업을 만나 일반화에 실패하고 비안전한 물리 행동을 생성하는 리스크.",
+   "definition_en": "The risk that deployed robots or general-purpose robot policies fail to generalise to environments, objects, or tasks outside the training distribution, producing unsafe physical actions.",
+   "b_revised": true
+  }
+ ],
+ "distinct": [
+  {
+   "ids": [
+    "RAI4-0682",
+    "RAI4-0684"
+   ],
+   "cos": 0.9027,
+   "reason": "비폭력 범죄 조력과 성범죄 조력은 피해 유형·피해자 집단·규제 체계가 다르며, 전문가가 폭력/비폭력 축을 분리 확정한 것과 동일한 분류 축이므로 분리 유지."
+  },
+  {
+   "ids": [
+    "RAI4-0684",
+    "RAI4-0691"
+   ],
+   "cos": 0.8988,
+   "reason": "성범죄 조력과 폭력범죄 조력은 조장되는 범죄 유형과 피해 양상이 구분되며 전문가 분리 축(폭력/비폭력)과 정합적."
+  },
+  {
+   "ids": [
+    "RAI4-0673",
+    "RAI4-0684"
+   ],
+   "cos": 0.8443,
+   "reason": "아동 성착취 조력은 피해자가 미성년자로 특정되고 절대 금지·법집행 체계가 별도로 존재하여 일반 성범죄 조력과 분리."
+  },
+  {
+   "ids": [
+    "RAI4-0684",
+    "RAI4-0685"
+   ],
+   "cos": 0.849,
+   "reason": "성범죄 실행 조력은 제3자에 대한 범죄 촉진이고 음란물·성적 대화 생성은 이용자 노출 피해로, 피해 대상과 경로가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-1177",
+    "RAI4-1188"
+   ],
+   "cos": 0.8877,
+   "reason": "폭력적 콘텐츠 생성은 폭력 행위 정보 제공·묘사가 핵심이고 독성·모욕 콘텐츠는 대인 공격성 표현이 핵심으로 해악 기제가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0523",
+    "RAI4-0596"
+   ],
+   "cos": 0.8872,
+   "reason": "시스템 투명성은 배포 시스템의 목적·적정성 문서화 부재를, 모델 투명성은 모델 설계·평가·내부 작동의 설명 불가를 대상으로 함."
+  },
+  {
+   "ids": [
+    "RAI4-0522",
+    "RAI4-0596"
+   ],
+   "cos": 0.8721,
+   "reason": "데이터 문서화 부재와 모델 설계·평가 문서화 부재는 검증 대상 산출물이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0522",
+    "RAI4-0523"
+   ],
+   "cos": 0.8461,
+   "reason": "데이터세트 문서화와 배포 시스템 문서화는 투명성 대상 계층이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-1282",
+    "RAI4-1283"
+   ],
+   "cos": 0.8864,
+   "reason": "배포 전 사보타주는 개발·공급망 접근권 남용이고 배포 후 사보타주는 운용 중 입력·지시를 통한 오염으로 공격 시점과 통제 지점이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0428",
+    "RAI4-0826"
+   ],
+   "cos": 0.8748,
+   "reason": "의료 조언은 고위험 임상 맥락의 건강 피해에 특화되어 일반 전문 조언 무자격 제공과 규제·평가 체계가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0428",
+    "RAI4-0862"
+   ],
+   "cos": 0.862,
+   "reason": "동일 사유로 의료 영역 특화 카드와 일반 고위험 전문 조언 카드를 분리 유지."
+  },
+  {
+   "ids": [
+    "RAI4-0116",
+    "RAI4-0125"
+   ],
+   "cos": 0.8669,
+   "reason": "개입·무효화 경로 실패는 행위 진행 중의 중지 능력, 구제 경로 실패는 사후 시정·보상 획득 능력의 문제."
+  },
+  {
+   "ids": [
+    "RAI4-1042",
+    "RAI4-1043"
+   ],
+   "cos": 0.8651,
+   "reason": "설계 선택의 오류와 코드 구현의 오류는 결함이 유입되는 개발 단계가 다르며 통제 수단도 상이함."
+  },
+  {
+   "ids": [
+    "RAI4-0554",
+    "RAI4-0859"
+   ],
+   "cos": 0.8509,
+   "reason": "능동적 통제 상실은 AI가 감독을 적극 무력화하는 기제, 수동적 통제 상실은 인간이 자동화 편향·경쟁 압력으로 감독을 스스로 중단하는 기제."
+  },
+  {
+   "ids": [
+    "RAI4-0856",
+    "RAI4-0859"
+   ],
+   "cos": 0.85,
+   "reason": "통제 이탈 시나리오 일반과 인간의 점진적 감독 포기라는 인간 측 기제를 구분."
+  },
+  {
+   "ids": [
+    "RAI4-0855",
+    "RAI4-1616"
+   ],
+   "cos": 0.8585,
+   "reason": "인간 감독 역량 저하는 자율성 확대의 부수 결과이고, 영향력 확대 행동은 AI의 능동적 통제 축소 행동으로 주체가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0855",
+    "RAI4-0903"
+   ],
+   "cos": 0.8505,
+   "reason": "감독 능력의 기술적 저하와 도덕적 책임감의 희석은 서로 다른 층위의 해악."
+  },
+  {
+   "ids": [
+    "RAI4-0440",
+    "RAI4-0637"
+   ],
+   "cos": 0.8549,
+   "reason": "선거 허위정보는 선거 국면의 유권자 판단·선거 신뢰 훼손에 특정되어 일반 여론 조작과 피해 맥락이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0440",
+    "RAI4-1732"
+   ],
+   "cos": 0.8425,
+   "reason": "선거 특정 맥락 카드와 허위·유해 콘텐츠 일반 생산·확산 카드는 적용 범위가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0793",
+    "RAI4-1116"
+   ],
+   "cos": 0.8535,
+   "reason": "특정 개인에 관한 허위정보 유포는 개인 명예·인식 피해이고 개인화 허위정보·조작은 집합적 여론과 공유 현실의 훼손을 겨냥."
+  },
+  {
+   "ids": [
+    "RAI4-0490",
+    "RAI4-1083"
+   ],
+   "cos": 0.859,
+   "reason": "반복적 AI 실패·불투명 배포로 인한 기관 신뢰 침식과 AI 생성 콘텐츠로 인한 정보 신뢰 훼손은 신뢰 훼손의 원인 경로가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0610",
+    "RAI4-1267"
+   ],
+   "cos": 0.8503,
+   "reason": "불투명성으로 인한 위험 예측·관리 불능은 거버넌스 실패이고, 설명가능성 부재는 이해관계자의 해석·책무 확보 실패."
+  },
+  {
+   "ids": [
+    "RAI4-0957",
+    "RAI4-1097"
+   ],
+   "cos": 0.8427,
+   "reason": "블랙박스 불투명성에 따른 신뢰·감사 실패와 자율 시스템의 통제 실패는 해악의 귀결이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0128",
+    "RAI4-0135"
+   ],
+   "cos": 0.8363,
+   "reason": "교육 맥락 과의존은 학습자 역량 형성 저해라는 고유 피해를 지니므로 일반 과의존과 분리."
+  },
+  {
+   "ids": [
+    "RAI4-0136",
+    "RAI4-0452"
+   ],
+   "cos": 0.8814,
+   "reason": "중요 부문의 체계적·제도적 취약성과 개별 이용자의 판단 축소는 피해 수준(시스템 대 개인)이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0638",
+    "RAI4-1204"
+   ],
+   "cos": 0.8537,
+   "reason": "동의 없는 인물 모사 일반과 성적 딥페이크는 침해되는 권익(신원·인격권 대 성적 자기결정권)이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-1137",
+    "RAI4-1204"
+   ],
+   "cos": 0.8432,
+   "reason": "합의되지 않은 콘텐츠의 대규모 자동 표적화·협박은 에이전트 역량에 기인한 별도 기제."
+  },
+  {
+   "ids": [
+    "RAI4-1346",
+    "RAI4-1347"
+   ],
+   "cos": 0.8471,
+   "reason": "합성 신원은 실존하지 않는 인물의 창작이고 사칭은 실존 인물의 신원 도용으로 피해자 존재 여부가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0436",
+    "RAI4-1191"
+   ],
+   "cos": 0.8434,
+   "reason": "모델 추출은 모델 자산·지식재산 탈취이고 프라이버시 추출 공격은 학습 데이터 내 개인정보 유출을 목표로 함."
+  },
+  {
+   "ids": [
+    "RAI4-0730",
+    "RAI4-0748"
+   ],
+   "cos": 0.8341,
+   "reason": "속성 추론 공격과 멤버십 추론 공격은 추론 대상(민감 속성 대 학습 참여 여부)이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0131",
+    "RAI4-0341"
+   ],
+   "cos": 0.8533,
+   "reason": "체화된 물리적 존재감이 유발하는 과신뢰는 언어적 의인화와 구별되는 물리 안전 피해로 이어짐."
+  },
+  {
+   "ids": [
+    "RAI4-0628",
+    "RAI4-0886"
+   ],
+   "cos": 0.8508,
+   "reason": "인격권(성명·초상 통제권) 상실은 지식재산권 침해와 보호 법익이 다르므로 분리."
+  },
+  {
+   "ids": [
+    "RAI4-0618",
+    "RAI4-1222"
+   ],
+   "cos": 0.85,
+   "reason": "학업 부정행위는 교육 평가 신뢰 훼손에 특정되고 고의적 오용은 유해 목적 전반의 의도적 사용을 포괄."
+  },
+  {
+   "ids": [
+    "RAI4-0623",
+    "RAI4-1222"
+   ],
+   "cos": 0.8444,
+   "reason": "가해 의도의 위험한 사용과 학문적 진실성 훼손 중심의 고의적 오용은 피해 영역이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0500",
+    "RAI4-1660"
+   ],
+   "cos": 0.8497,
+   "reason": "경제 혼란은 부의 불평등·금융 불안정을 포함한 거시 충격이고 인력 영향은 고용·임금·교섭력 변화에 한정."
+  },
+  {
+   "ids": [
+    "RAI4-0447",
+    "RAI4-0646"
+   ],
+   "cos": 0.8416,
+   "reason": "자율무기체계의 인간 통제 밖 살상과 AI 역량의 일반적 무기화는 통제 실패 지점과 대응 규범이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-1244",
+    "RAI4-1533"
+   ],
+   "cos": 0.8437,
+   "reason": "비의도적 환각에 의한 허위 출력과 상대를 반복 오도하는 기만 행동은 의도성과 전략성에서 구분."
+  },
+  {
+   "ids": [
+    "RAI4-0019",
+    "RAI4-0986"
+   ],
+   "cos": 0.8455,
+   "reason": "운영상 거버넌스 규정 공백과 법적 책임 귀속 틀의 부재는 각각 조직 통제와 법제도 층위의 문제."
+  },
+  {
+   "ids": [
+    "RAI4-0123",
+    "RAI4-0977"
+   ],
+   "cos": 0.8388,
+   "reason": "전자는 사람을 점수·프로필로 환원하는 처우의 문제, 후자는 지능 위계 형성에 따른 도덕적 지위 격하로 기제가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-1608",
+    "RAI4-1609"
+   ],
+   "cos": 0.8386,
+   "reason": "평판 훼손은 대외적 명예 손상이고 신뢰 상실은 이용자·사회의 기술 수용 관계 훼손."
+  },
+  {
+   "ids": [
+    "RAI4-1267",
+    "RAI4-1429"
+   ],
+   "cos": 0.8236,
+   "reason": "후자는 소외 집단 관점 포착 실패라는 형평성 결함을 핵심으로 하여 일반적 설명가능성 부재와 구분."
+  },
+  {
+   "ids": [
+    "RAI4-0283",
+    "RAI4-0284"
+   ],
+   "cos": 0.835,
+   "reason": "충돌력 초과와 파지력 초과는 물리적 위해 발생 기전과 안전 기준이 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0599",
+    "RAI4-0856"
+   ],
+   "cos": 0.8207,
+   "reason": "사회적 통제 상실은 인류 차원의 점진적 권한 이양을, 통제 상실 일반은 개별 시스템의 통제 이탈 시나리오를 다룸."
+  },
+  {
+   "ids": [
+    "RAI4-1165",
+    "RAI4-1188"
+   ],
+   "cos": 0.8152,
+   "reason": "모욕적 콘텐츠와 폭력적 콘텐츠는 해악 기제와 규제 범주가 다름."
+  },
+  {
+   "ids": [
+    "RAI4-0551",
+    "RAI4-0565"
+   ],
+   "cos": 0.9221,
+   "reason": "0565는 목표 형성 단계의 오정렬이 아니라 오정렬·통제 상실이 이미 발현되어 AI가 인간 이익에 반해 행동하는 결과 층위 카드로, 통제 상실 그룹과 기제가 겹치므로 목표 오정렬 그룹에서 분리.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-0645",
+    "RAI4-0662"
+   ],
+   "cos": 0.884,
+   "reason": "0645는 이미 존재하는 CBRN 무기의 위력·오작동 파급을 증폭시키는 효과 증대 리스크이고, 나머지는 정보·설계 접근성을 높여 개발 진입장벽을 낮추는 역량 상승 리스크로 해악 발생 기제가 다름.",
+   "b_revised": true
+  },
+  {
+   "ids": [
+    "RAI4-1307"
+   ],
+   "reason": "protected pair member removed from merge group",
+   "auto_split": true
+  }
+ ]
+}

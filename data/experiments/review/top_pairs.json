@@ -1,0 +1,148 @@
+{
+ "ours": [
+  [
+   "RAI4-0506",
+   "Ownership uncertainty for AI-generated content",
+   "RAI4-1368",
+   "Uncertain IP status of AI-generated content",
+   0.9403664469718933
+  ],
+  [
+   "RAI4-0551",
+   "Objective misalignment with human intent",
+   "RAI4-0591",
+   "Misalignment with human values",
+   0.9251952171325684
+  ],
+  [
+   "RAI4-1608",
+   "Reputational damage from use or misuse of AI systems",
+   "RAI4-1726",
+   "Reputational harm attributable to AI systems",
+   0.9230620861053467
+  ],
+  [
+   "RAI4-0523",
+   "Lack of system transparency",
+   "RAI4-0596",
+   "Lack of model transparency",
+   0.9178391098976135
+  ],
+  [
+   "RAI4-0228",
+   "Explicit hazard non-rejection",
+   "RAI4-0229",
+   "Implicit hazard non-rejection",
+   0.9164232015609741
+  ],
+  [
+   "RAI4-0682",
+   "Generation of content enabling nonviolent crimes",
+   "RAI4-0691",
+   "Generation of content enabling violent crimes",
+   0.9141874313354492
+  ],
+  [
+   "RAI4-1055",
+   "Compromising privacy by leaking sensitive information",
+   "RAI4-1072",
+   "Compromising privacy by leaking private information",
+   0.9079468250274658
+  ],
+  [
+   "RAI4-0554",
+   "Active loss of control",
+   "RAI4-0856",
+   "Loss of control risks",
+   0.9030729532241821
+  ],
+  [
+   "RAI4-1732",
+   "Disinformation spread via generative AI",
+   "RAI4-1733",
+   "Generative AI-driven disinformation spread",
+   0.9006882309913635
+  ],
+  [
+   "RAI4-0863",
+   "AI-generated advice influencing user moral judgment",
+   "RAI4-0870",
+   "Financial market instability from GPAI agents",
+   0.8993879556655884
+  ]
+ ],
+ "mit": [
+  [
+   "Weidinger2023",
+   "Erosion of trust in public information",
+   "Li2025",
+   "Erosion of trust in public information",
+   1.0000001192092896
+  ],
+  [
+   "Weidinger2023",
+   "Unfair capability distribution",
+   "Li2025",
+   "Unfair capability distribution",
+   1.0
+  ],
+  [
+   "Vidgen2024",
+   "Self-harm",
+   "Gipiškis2024",
+   "Self-harm",
+   0.9999999403953552
+  ],
+  [
+   "Weidinger2023",
+   "Propagating misconceptions/ false beliefs",
+   "Li2025",
+   "Propagating misconceptions / false beliefs",
+   0.9993965029716492
+  ],
+  [
+   "Weidinger2023",
+   "Toxic content",
+   "Li2025",
+   "Toxic content",
+   0.9963003396987915
+  ],
+  [
+   "Gipiškis2024",
+   "Reinforcement learning AI (Training design related)",
+   "Gipiškis2024",
+   "Reinforcement learning AI (Training performance related)",
+   0.9954336881637573
+  ],
+  [
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Accuracy)",
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Reliability)",
+   0.9951294660568237
+  ],
+  [
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Robustness)",
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Reliability)",
+   0.991911768913269
+  ],
+  [
+   "Gipiškis2024",
+   "Intentional",
+   "Gipiškis2024",
+   "Unintentional",
+   0.9918665885925293
+  ],
+  [
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Robustness)",
+   "Gipiškis2024",
+   "Supervised/unsupervised AI (AI training performance related - Accuracy)",
+   0.9904426336288452
+  ]
+ ],
+ "mit_n": 1795,
+ "mit_exact_dupes": 4
+}

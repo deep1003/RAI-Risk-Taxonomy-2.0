@@ -1,0 +1,432 @@
+{
+ "round": "non_risk_screen_20260806",
+ "process": "6 batches parallel expert review, definition-based",
+ "non_risk_count": 82,
+ "borderline_count": 94,
+ "non_risk": [
+  {
+   "l4_id": "RAI4-0515",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-0522",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-0524",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0545",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-0556",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-0561",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-0563",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0566",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0567",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0570",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0571",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-0576",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0598",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0602",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-0604",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-0614",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0659",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-0680",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0693",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-0703",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0716",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0834",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0836",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0840",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0862",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0865",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0867",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0892",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0938",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0944",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0945",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0947",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-0949",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0967",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-0978",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-0986",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0989",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-0991",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1019",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1021",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1028",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1031",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1033",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1040",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1050",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1097",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1098",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1105",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1128",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1157",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1159",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1161",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1162",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1197",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1213",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1216",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1228",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1258",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1262",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1268",
+   "category": "원칙"
+  },
+  {
+   "l4_id": "RAI4-1273",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1277",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1279",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1297",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1305",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1314",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1320",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1380",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1381",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1383",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1384",
+   "category": "대응책"
+  },
+  {
+   "l4_id": "RAI4-1385",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1400",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1430",
+   "category": "빈정의"
+  },
+  {
+   "l4_id": "RAI4-1454",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1479",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1480",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1528",
+   "category": "관리산물"
+  },
+  {
+   "l4_id": "RAI4-1537",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1592",
+   "category": "중립현상"
+  },
+  {
+   "l4_id": "RAI4-1638",
+   "category": "능력"
+  },
+  {
+   "l4_id": "RAI4-1644",
+   "category": "빈정의"
+  }
+ ],
+ "borderline": [
+  "RAI4-0005",
+  "RAI4-0006",
+  "RAI4-0021",
+  "RAI4-0036",
+  "RAI4-0040",
+  "RAI4-0506",
+  "RAI4-0509",
+  "RAI4-0523",
+  "RAI4-0541",
+  "RAI4-0542",
+  "RAI4-0555",
+  "RAI4-0558",
+  "RAI4-0559",
+  "RAI4-0584",
+  "RAI4-0588",
+  "RAI4-0596",
+  "RAI4-0606",
+  "RAI4-0613",
+  "RAI4-0632",
+  "RAI4-0655",
+  "RAI4-0673",
+  "RAI4-0682",
+  "RAI4-0684",
+  "RAI4-0685",
+  "RAI4-0687",
+  "RAI4-0691",
+  "RAI4-0699",
+  "RAI4-0726",
+  "RAI4-0751",
+  "RAI4-0772",
+  "RAI4-0782",
+  "RAI4-0821",
+  "RAI4-0863",
+  "RAI4-0868",
+  "RAI4-0877",
+  "RAI4-0923",
+  "RAI4-0927",
+  "RAI4-0943",
+  "RAI4-0952",
+  "RAI4-0968",
+  "RAI4-0973",
+  "RAI4-0984",
+  "RAI4-0985",
+  "RAI4-0987",
+  "RAI4-1017",
+  "RAI4-1036",
+  "RAI4-1037",
+  "RAI4-1102",
+  "RAI4-1103",
+  "RAI4-1108",
+  "RAI4-1113",
+  "RAI4-1129",
+  "RAI4-1148",
+  "RAI4-1153",
+  "RAI4-1154",
+  "RAI4-1160",
+  "RAI4-1163",
+  "RAI4-1184",
+  "RAI4-1214",
+  "RAI4-1224",
+  "RAI4-1225",
+  "RAI4-1230",
+  "RAI4-1255",
+  "RAI4-1256",
+  "RAI4-1257",
+  "RAI4-1259",
+  "RAI4-1267",
+  "RAI4-1271",
+  "RAI4-1278",
+  "RAI4-1281",
+  "RAI4-1286",
+  "RAI4-1304",
+  "RAI4-1368",
+  "RAI4-1369",
+  "RAI4-1382",
+  "RAI4-1387",
+  "RAI4-1388",
+  "RAI4-1461",
+  "RAI4-1464",
+  "RAI4-1465",
+  "RAI4-1492",
+  "RAI4-1525",
+  "RAI4-1571",
+  "RAI4-1573",
+  "RAI4-1593",
+  "RAI4-1599",
+  "RAI4-1600",
+  "RAI4-1602",
+  "RAI4-1631",
+  "RAI4-1634",
+  "RAI4-1637",
+  "RAI4-1650",
+  "RAI4-1701",
+  "RAI4-1702"
+ ]
+}

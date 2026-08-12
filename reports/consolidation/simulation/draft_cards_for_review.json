@@ -1,0 +1,178 @@
+[
+ {
+  "group": 532,
+  "n": 2,
+  "proposed_l3": "RAI3-G-SYS-09",
+  "status": "auto",
+  "draft_label_ko": "AI 중재 의사결정 경쟁성 손실",
+  "draft_label_en": "Loss of contestability in AI-mediated decisions",
+  "draft_def_ko": "영향을 받는 개인들이 AI 중재 의사결정을 효과적으로 도전하거나 재심하거나 의미 있는 방식으로 반박할 수 없어, 이로 인해 의미 있는 구제 조치를 얻지 못하는 위험입니다.",
+  "draft_def_en": "The risk that affected individuals cannot effectively challenge, appeal, or contest AI-mediated decisions, thereby preventing them from obtaining meaningful redress.",
+  "members": [
+   {
+    "id_l3": "RAI4-0124 · RAI3-G-SYS-09",
+    "label": "AI 중재 의사결정 경쟁성 손실",
+    "definition": "영향을 받는 사람들은 AI가 중재하는 결정에 이의를 제기하거나 호소하거나 의미 있게 이의를 제기할 수 없습니다."
+   },
+   {
+    "id_l3": "RAI4-0453 · RAI3-G-SYS-09",
+    "label": "경쟁성 상실",
+    "definition": "영향을 받은 개인은 AI가 중재한 결정에 이의를 제기하거나 의미 있는 구제책을 얻지 못할 수도 있습니다."
+   }
+  ]
+ },
+ {
+  "group": 1425,
+  "n": 2,
+  "proposed_l3": "RAI3-G-INT-10",
+  "status": "review",
+  "draft_label_ko": "AI 동반자 및 어시스턴트 정서적 의존",
+  "draft_label_en": "Emotional dependence on AI companions and assistants",
+  "draft_def_ko": "사용자가 AI 동반자 및 어시스턴트에 대한 정서적 의존을 형성하여 정신적 웰빙이나 사회적 회복탄력성을 저하시킬 수 있습니다.",
+  "draft_def_en": "Users may develop harmful emotional dependence on AI companions and assistants, which can reduce their wellbeing and social resilience.",
+  "members": [
+   {
+    "id_l3": "RAI4-0148 · RAI3-G-HLD-01",
+    "label": "AI 동반자 정서적 의존",
+    "definition": "사용자가 웰빙이나 사회적 탄력성을 감소시키는 방식으로 AI 동반자에 대한 정서적 의존성을 형성할 위험이 있습니다."
+   },
+   {
+    "id_l3": "RAI4-0454 · RAI3-G-HLD-01",
+    "label": "AI에 대한 정서적 의존성",
+    "definition": "사용자는 AI 동료나 보조자에 대한 해로운 의존성을 발전시킬 수 있습니다."
+   }
+  ]
+ },
+ {
+  "group": 582,
+  "n": 2,
+  "proposed_l3": "RAI3-A-HLD-01",
+  "status": "auto",
+  "draft_label_ko": "의도하지 않은 또는 안전하지 않은 에이전트 도구 호출",
+  "draft_label_en": "Unintended or unsafe agent tool invocation",
+  "draft_def_ko": "에이전트가 외부 도구 또는 API를 의도하지 않은 또는 안전하지 않은 방식으로 호출할 경우, 보안, 재정 또는 운영적 피해가 발생할 수 있습니다.",
+  "draft_def_en": "An agent may invoke external tools or APIs in unintended or unsafe ways, resulting in security, financial, or operational harm.",
+  "members": [
+   {
+    "id_l3": "RAI4-0479 · RAI3-A-HLD-01",
+    "label": "에이전트 도구 오용",
+    "definition": "에이전트는 보안, 재정적 또는 운영상의 피해를 초래하는 의도하지 않은 방식으로 도구나 API를 호출할 수 있습니다. 에이전트가 의도하지 않거나 승인되지 않은 방식으로 통합 도구를 사용하도록 조작되어 유해한 시스템, 데이터 또는 실제 효과를 생성합니다."
+   },
+   {
+    "id_l3": "RAI4-1669 · RAI3-A-HLD-01",
+    "label": "도구 오용/안전하지 않은 도구 호출",
+    "definition": "에이전트 시스템은 의도하지 않거나 안전하지 않은 방식으로 외부 도구나 API를 호출하여 손상된 추론을 결과적인 외부 작업으로 변환합니다."
+   }
+  ]
+ },
+ {
+  "group": 221,
+  "n": 2,
+  "proposed_l3": "RAI3-G-INT-11",
+  "status": "review",
+  "draft_label_ko": "프롬프트에 민감한 정보",
+  "draft_label_en": "Sensitive information in prompt",
+  "draft_def_ko": "AI 모델에 전달되는 프롬프트에 기밀 데이터 또는 개인 정보가 포함될 경우 데이터 유출 및 규제 위반 위험이 발생할 수 있습니다.",
+  "draft_def_en": "Sensitive information, such as confidential data or personal information, may be unintentionally included in prompts sent to AI models, leading to potential privacy breaches and regulatory non-compliance.",
+  "members": [
+   {
+    "id_l3": "RAI4-0732 · RAI3-G-INT-11",
+    "label": "프롬프트의 기밀 데이터",
+    "definition": "모델에 전송되는 프롬프트의 일부로 기밀 정보가 포함될 수 있습니다."
+   },
+   {
+    "id_l3": "RAI4-0750 · RAI3-G-HLD-01",
+    "label": "프롬프트에 개인 정보",
+    "definition": "모델에 전송되는 프롬프트의 일부로 포함된 개인정보 또는 민감한 개인정보입니다."
+   }
+  ]
+ },
+ {
+  "group": 107,
+  "n": 2,
+  "proposed_l3": "RAI3-G-INT-06",
+  "status": "auto",
+  "draft_label_ko": "개인 정보 유출",
+  "draft_label_en": "Personal information leakage",
+  "draft_def_ko": "모델의 학습 데이터, 테스트 데이터 또는 프롬프트에 개인 식별 정보(PII)나 민감한 개인 정보(SPI)가 포함되면, 모델이 생성 과정에서 해당 정보를 무의식적으로 유출할 수 있습니다.",
+  "draft_def_en": "The presence of personal identifiable information (PII) or sensitive personal information (SPI) in the model's training data, fine-tuning data, or prompts may cause the model to inadvertently leak such information during generation.",
+  "members": [
+   {
+    "id_l3": "RAI4-0738 · RAI3-G-INT-06",
+    "label": "개인정보 노출",
+    "definition": "PII(개인 식별 정보) 또는 SPI(민감한 개인 정보)가 교육 데이터, 데이터 미세 조정 또는 프롬프트의 일부로 사용되는 경우 모델은 생성된 출력에 해당 데이터를 공개할 수 있습니다."
+   },
+   {
+    "id_l3": "RAI4-0749 · RAI3-G-INT-06",
+    "label": "데이터의 개인정보",
+    "definition": "모델 학습 또는 미세 조정에 사용되는 데이터에 개인 식별 정보(PII) 및 민감한 개인 정보(SPI)가 포함되거나 존재하면 해당 정보가 원치 않게 공개될 수 있습니다."
+   }
+  ]
+ },
+ {
+  "group": 1574,
+  "n": 2,
+  "proposed_l3": "RAI3-G-SYS-03",
+  "status": "auto",
+  "draft_label_ko": "AI 생성 속임수 콘텐츠",
+  "draft_label_en": "AI-Generated Deceptive Content",
+  "draft_def_ko": "악의적인 주체는 생성형 AI를 활용해 정치적 캠페인, 정치적 정책, 또는 혐오적 입장에 맞는 유연한 콘텐츠를 생성하여 빠르고 저비용으로 허위 정보를 확산할 수 있습니다.",
+  "draft_def_en": "Bad actors use generative AI to create adaptable content for malicious campaigns, political agendas, or hateful positions, enabling rapid and cost-effective dissemination of deceptive information.",
+  "members": [
+   {
+    "id_l3": "RAI4-1201 · RAI3-G-SYS-03",
+    "label": "AI가 만든 사기",
+    "definition": "악의적인 행위자는 생성적 AI 도구를 사용하여 캠페인, 정치적 의제 또는 증오심을 지지하는 입장을 지원하도록 설계된 적응형 콘텐츠를 제작하고 해당 정보를 여러 플랫폼에 빠르고 저렴하게 퍼뜨릴 수도 있습니다."
+   },
+   {
+    "id_l3": "RAI4-1202 · RAI3-G-SYS-03",
+    "label": "허위정보 생성",
+    "definition": "악의적인 행위자는 생성적 AI 도구를 사용하여 캠페인, 정치적 의제 또는 증오심을 지지하는 입장을 지원하도록 설계된 적응형 콘텐츠를 제작하고 해당 정보를 여러 플랫폼에 빠르고 저렴하게 퍼뜨릴 수도 있습니다."
+   }
+  ]
+ },
+ {
+  "group": 1575,
+  "n": 2,
+  "proposed_l3": "RAI3-G-SYS-03",
+  "status": "auto",
+  "draft_label_ko": "AI 생성 허위 정보 확산",
+  "draft_label_en": "AI-Generated Disinformation Spread",
+  "draft_def_ko": "생성형 AI 모델을 통해 의도적으로 사실이 아닌 정보를 생성하고 대규모 관객에게 확산하여 속이거나 영향을 미치는 행위입니다.",
+  "draft_def_en": "Generative AI models are intentionally used to produce and spread false or misleading information presented as true, on a massive scale, to deceive or influence targeted audiences.",
+  "members": [
+   {
+    "id_l3": "RAI4-1360 · RAI3-G-SYS-03",
+    "label": "잘못된 정보와 허위 정보",
+    "definition": "의도가 있는 개인이나 단체는 의도적으로 생성 AI 모델을 사용하여 허위 정보(고의로 사실인 것처럼 제시된 허위 또는 오해의 소지가 있는 정보)를 대규모로 생성하고 확산시킬 수 있습니다."
+   },
+   {
+    "id_l3": "RAI4-1597 · RAI3-G-SYS-03",
+    "label": "허위 정보 확산",
+    "definition": "생성적 AI 모델은 대상 고객을 속이거나 영향을 미치기 위해 의도적으로 오해의 소지가 있거나 잘못된 정보를 생성하는 데 사용될 수 있습니다."
+   }
+  ]
+ },
+ {
+  "group": 1561,
+  "n": 2,
+  "proposed_l3": "RAI3-A-SYS-03",
+  "status": "review",
+  "draft_label_ko": "편견 증폭으로 인한 유해한 반응",
+  "draft_label_en": "Bias Amplification Leading to Harmful Responses",
+  "draft_def_ko": "현재 프론트리어 AI 모델은 훈련 데이터 내에 존재하는 편견을 증폭시켜 폭력적 언어나 차별적 콘텐츠 등 유해한 반응을 생성할 수 있습니다.",
+  "draft_def_en": "Current frontier AI models amplify existing biases in their training data and can be manipulated to generate harmful responses such as abusive language or discriminatory content.",
+  "members": [
+   {
+    "id_l3": "RAI4-1427 · RAI3-A-SYS-03",
+    "label": "편견의 증폭",
+    "definition": "현재 Frontier AI 모델은 훈련 데이터 내의 기존 편견을 증폭시키고 욕설이나 차별적 반응과 같은 잠재적으로 유해한 반응을 제공하도록 조작될 수 있습니다91,92."
+   },
+   {
+    "id_l3": "RAI4-1428 · RAI3-G-HLD-01",
+    "label": "유해한 반응",
+    "definition": "현재 Frontier AI 모델은 훈련 데이터 내의 기존 편견을 증폭시키고 욕설이나 차별적 반응과 같은 잠재적으로 유해한 반응을 제공하도록 조작될 수 있습니다91,92."
+   }
+  ]
+ }
+]

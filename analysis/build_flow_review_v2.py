@@ -1,5 +1,5 @@
-# build_flow_review_v2.py — f1.html / f4.html 휴먼 검수 페이지 재생성
-# c70.html(build_review_pages.build_set)과 동일한 시각 포맷 + 3항목 휴먼 검수 열(EM 재배정 기준)
+# build_flow_review_v2.py — regenerate f1.html / f4.html human-audit pages
+# Same visual format as c70.html (build_review_pages.build_set) + 3-criterion human-audit column (EM re-assignment basis)
 import json, os, html as H
 from collections import defaultdict
 
@@ -12,6 +12,33 @@ L1_ORDER=['RAI1-G','RAI1-A','RAI1-P']
 SUF_ORDER={'SYS':0,'INT':1,'SOC':2,'HLD':3}
 
 MASTER={c['l4_id']:c for c in json.load(open('data/experiments/stage1/out/master.json'))['cards']}
+
+# Societal Safety scope split: the SOC axis is one concept family applied at three scopes.
+# L3 numbering is shared across scopes (RAI3-{G|A|P}-SOC-nn denotes the same risk concept);
+# L4 identifiers are unchanged, only the owning L3 branches by scope.
+SOC_SCOPE={}
+with open(f'{OUT}/master_soc_scope_mapping.csv', encoding='utf-8') as fh:
+    next(fh)
+    for line in fh:
+        parts=line.rstrip('\n').split(',')
+        if len(parts)>=5: SOC_SCOPE[parts[0]]=(parts[3], parts[4])
+for scope in ('A','P'):
+    g2, n2 = 'RAI2-G-SOC', f'RAI2-{scope}-SOC'
+    src=nd[g2]
+    nd[n2]=dict(src, node_id=n2, parent_id=f'RAI1-{scope}')
+    for k in range(1,12):
+        g3=f'RAI3-G-SOC-{k:02d}'
+        if g3 not in nd: continue
+        n3=f'RAI3-{scope}-SOC-{k:02d}'
+        nd[n3]=dict(nd[g3], node_id=n3, parent_id=n2)
+
+def apply_soc_scope(cards):
+    """Route SOC cards to the General, Agentic or Physical scope of the same L3 concept."""
+    for c in cards:
+        m=SOC_SCOPE.get(c['rep'])
+        if m and '-SOC-' in c['l3'] and m[0] in nd:
+            c['l3']=m[0]
+    return cards
 
 def esc(s): return H.escape(s or '')
 
@@ -43,6 +70,10 @@ details.l3>summary::before{content:'▸ ';color:#888}
 details.l3[open]>summary::before{content:'▾ '}
 details.l3>summary .cnt{color:#0f6e56;font-weight:600;margin-left:6px}
 details.l3>summary .en{color:#777;font-weight:400;font-size:11.5px}
+details.l3>summary .l3hr{float:right;min-width:180px;border:1px solid #d5d5d5;border-radius:4px;
+  background:#fff;padding:2px 7px;font-size:12px;font-weight:400;color:#333;margin-left:10px}
+details.l3>summary .l3hr:empty::before{content:'Human audit';color:#bbb}
+details.l3>summary .l3hr:focus{outline:none;border-color:#2a5a8a;background:#f7fbff}
 .l3def{padding:0 12px 6px;color:#666;font-size:11.5px;border-bottom:1px dotted #e5e5e5;margin-bottom:4px}
 table.cards{width:100%;border-collapse:collapse;font-size:12.5px}
 table.cards th{background:#f5f5f3;font-weight:600;padding:5px 8px;border:1px solid #e6e6e6;text-align:left;font-size:11.5px}
@@ -71,6 +102,14 @@ details.mem .memb div{margin:1px 0}
 
 
 .hidden{display:none!important}
+table.summary{border-collapse:collapse;font-size:12px;margin:8px 0 2px}
+table.summary th,table.summary td{border:1px solid #e2e2e2;padding:4px 9px;text-align:left;white-space:nowrap}
+table.summary th{background:#f5f5f3;font-weight:600}
+table.summary td.n{text-align:right;font-variant-numeric:tabular-nums}
+table.summary tr.cur td{background:#eef4f9;font-weight:600}
+table.summary td.hr{min-width:150px;background:#fff;font-weight:400}
+table.summary td.hr:focus{outline:1px solid #2a5a8a}
+details.ov{margin:8px 0 2px}details.ov>summary{cursor:pointer;font-size:12.5px;color:#2a5a8a}
 #bbar{position:fixed;left:0;right:0;bottom:0;background:#2a2a2a;color:#eee;font-size:12.5px;
  padding:8px 18px;display:flex;gap:14px;align-items:center;z-index:30}
 #bbar button{background:#0f6e56;color:#fff;border:none;padding:5px 12px;border-radius:4px}
@@ -96,13 +135,13 @@ function apply(){
     const n=[...d.querySelectorAll('tr.card')].filter(r=>!r.classList.contains('hidden')).length;
     d.classList.toggle('hidden',n===0);
     if((q||filt)&&n) d.open=true;
-    const c=d.querySelector('.shown'); if(c) c.textContent=(q||filt)?(' / '+n+' 표시'):'';
+    const c=d.querySelector('.shown'); if(c) c.textContent=(q||filt)?(' / '+n+' shown'):'';
   });
   document.querySelectorAll('.l2,.l1').forEach(g=>{
     const n=[...g.querySelectorAll('details.l3')].filter(d=>!d.classList.contains('hidden')).length;
     g.classList.toggle('hidden',n===0);
   });
-  document.getElementById('cnt').textContent=shown+'장 표시';
+  document.getElementById('cnt').textContent=shown+' cards shown';
   prog();
 }
 function answered(r){
@@ -112,7 +151,7 @@ function answered(r){
 function prog(){
   const vis=rows.filter(r=>!r.classList.contains('hidden'));
   const done=vis.filter(answered).length;
-  document.getElementById('ptxt').textContent='진행률 '+done+' / '+vis.length;
+  document.getElementById('ptxt').textContent='Audit progress '+done+' / '+vis.length;
   document.getElementById('pfill').style.width=(vis.length?100*done/vis.length:0)+'%';
 }
 function val(name){const e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:null;}
@@ -138,19 +177,41 @@ def judge_cell(rep):
     def pair(prefix, num, txt):
         nm=f"{prefix}_{rep}"
         return (f"<div class=jrow><span class=jt>{num} {txt}</span>"
-                f"<label><input type=radio name='{nm}' value=yes>예</label>"
-                f"<label><input type=radio name='{nm}' value=no>아니오</label></div>")
+                f"<label><input type=radio name='{nm}' value=yes>Yes</label>"
+                f"<label><input type=radio name='{nm}' value=no>No</label></div>")
     return ("<td class=hv><div class=judge>"
-            + pair('d','①','기술 적절성')
-            + pair('m','②','L3 매핑')
-            + pair('r','③','중복성')
-            + "<input class=memo type=text placeholder='메모'>"
+            + pair('d','①','Description')
+            + pair('m','②','L3 mapping')
+            + pair('r','③','Duplicate')
+            + "<input class=memo type=text placeholder='notes'>"
             + "</div></td>")
 
+TIERS=[
+ ('Master','–','1,612','–','–','1,154 / 155 / 303','canonical inventory'),
+ ('F1','0.8329','1,383','109','229','906 / 140 / 337','fidelity tier (crossing)'),
+ ('F2','0.8033','1,154','121','458','734 / 128 / 292','second consolidation'),
+ ('F3','0.7903','1,038','81','574','653 / 112 / 273','third consolidation'),
+ ('F4','0.7753','901','82','711','568 / 92 / 241','compression tier'),
+ ('F5','0.7634','792','70','820','491 / 83 / 218','extended compression tier'),
+]
+
+def tier_summary(cur):
+    rows=[]
+    for name,tau,n,grp,absorbed,gap,role in TIERS:
+        cls=" class=cur" if name.lower()==cur else ""
+        rows.append(f"<tr{cls}><td>{name}</td><td class=n>{tau}</td><td class=n>{n}</td>"
+                    f"<td class=n>{grp}</td><td class=n>{absorbed}</td><td class=n>{gap}</td><td>{role}</td>"
+                    f"<td class=hr contenteditable=true></td></tr>")
+    return ("<details class=ov><summary>Tier overview (granularity flow)</summary>"
+            "<table class=summary><tr><th>Tier</th><th>\u03c4*</th><th>Cards</th><th>Merge groups</th>"
+            "<th>Absorbed</th><th>G / A / P</th><th>Role</th><th>Human audit</th></tr>"+''.join(rows)+"</table>"
+            "<div style='font-size:11.5px;color:#777;margin-top:4px'>Merge groups and absorbed cards are, respectively, per consolidation step and cumulative from the Master inventory. The F4 page reports 211 refined groups, the cumulative count over steps 1\u20134. The Societal Safety axis is one concept family applied at three scopes, so its cards are counted under General, Agentic or Physical (RAI3-{G|A|P}-SOC-nn share the same numbering and meaning).</div></details>")
+
 def build(page_id, cards, title, sub_extra):
+    cards=apply_soc_scope(cards)
     byl3=defaultdict(list)
     for c in cards: byl3[c['l3']].append(c)
-    # 계층 구성: L1 -> L2 -> L3
+    # Hierarchy layout: L1 -> L2 -> L3
     l3_by_l2=defaultdict(list)
     l2_by_l1=defaultdict(set)
     for l3id in byl3:
@@ -183,9 +244,9 @@ def build(page_id, cards, title, sub_extra):
                     if merged:
                         lis=''.join(f"<div><span class=mid>{m}</span>{esc((MASTER.get(m) or {}).get('label_ko'))}</div>"
                                     for m in x['members'])
-                        memblock=(f"<details class=mem><summary>기존 구성원 {x['n']}장</summary>"
-                                  f"<div class=memb><b>기존:</b> min_cos={x['min_cos']:.4f}"
-                                  + (" · <b style='color:#a32d2d'>L3 혼재</b>" if x.get('l3_conflict') else '')
+                        memblock=(f"<details class=mem><summary>Source members ({x['n']})</summary>"
+                                  f"<div class=memb><b>Source:</b> min_cos={x['min_cos']:.4f}"
+                                  + (" · <b style='color:#a32d2d'>Mixed L3</b>" if x.get('l3_conflict') else '')
                                   + lis + "</div></details>")
                     cls='card'+(' mrg' if merged else '')+(' hold' if hold else '')
                     trs+=(f"<tr class='{cls}' data-id='{i}' data-l3='{l3id}' "
@@ -200,50 +261,60 @@ def build(page_id, cards, title, sub_extra):
                           + judge_cell(i) + "</tr>")
                 blocks+=(f"<details class=l3><summary><code>{l3id}</code> {esc(n['label_ko'])} "
                          f"<span class=en>{esc(n.get('label_en'))}</span>"
-                         f"<span class=cnt>{len(items)}장</span><span class=shown></span></summary>"
+                         f"<span class=cnt>{len(items)} cards</span><span class=shown></span>"
+                         f"<span class=l3hr contenteditable=true "
+                         f"onclick=\"event.preventDefault();event.stopPropagation()\"></span></summary>"
                          f"<div class=l3def>{esc(n.get('definition_ko') or n.get('definition_en'))}</div>"
-                         f"<table class=cards><tr><th>ID</th><th>L4 리스크 카드 (한/영 명칭·정의)</th>"
-                         f"<th>휴먼 검수 (3기준)</th></tr>{trs}</table></details>")
+                         f"<table class=cards><tr><th>ID</th><th>Card</th>"
+                         f"<th>Human audit</th></tr>{trs}</table></details>")
             if blocks:
                 l1cnt+=l2cnt
                 sec+=(f"<div class=l2><h3>{esc(l2n['label_ko'])} <span class=n>· {esc(l2n.get('label_en'))} "
-                      f"· {l2cnt}장</span></h3>{blocks}</div>")
+                      f"· {l2cnt} cards</span></h3>{blocks}</div>")
         if sec:
             body+=(f"<div class=l1><h2>{esc(l1n['label_ko'])} <span class=n>· {esc(l1n.get('label_en'))} "
-                   f"· {l1cnt}장</span></h2>{sec}</div>")
-    nav=(f"<nav><a href='index.html'>개요</a>"
-         f"<a href='f1.html' class='{'on' if page_id=='f1' else ''}'>F1 검증</a>"
-         f"<a href='f4.html' class='{'on' if page_id=='f4' else ''}'>F4 검증</a>"
-         f"<a href='glossary.html'>용어사전</a>"
-         f"<a href='tau_selection_report.html'>τ 선정 보고서</a></nav>")
+                   f"· {l1cnt} cards</span></h2>{sec}</div>")
+    nav=(f"<nav><a href='index.html'>Overview</a>"
+         f"<a href='f1.html' class='{'on' if page_id=='f1' else ''}'>F1 audit</a>"
+         f"<a href='f4.html' class='{'on' if page_id=='f4' else ''}'>F4 audit</a>"
+         f"<a href='f5.html' class='{'on' if page_id=='f5' else ''}'>F5 audit</a>"
+         f"<a href='glossary.html'>Glossary</a>"
+         f"</nav>")
+    summary=tier_summary(page_id)
     nmerged=sum(1 for c in cards if c['n']>1)
     nhold=sum(1 for c in cards if c.get('em_status')=='hold')
     js=JS_TMPL.replace('__TIER__', page_id)
-    page=(f"<!doctype html><html lang=ko><head><meta charset=utf-8><title>{title}</title><style>{CSS}</style></head><body>"
+    page=(f"<!doctype html><html lang=en><head><meta charset=utf-8><title>{title}</title><style>{CSS}</style></head><body>"
           f"<header><h1>{title}</h1>"
-          f"<div class=sub>총 <b>{total}장</b> · L3 {len(byl3)}개 사용 · 통합 그룹 {nmerged}개 · {sub_extra} "
-          f"계층 순서: General → Agentic → Physical. "
-          f"검수 3기준: <b>① 기술 적절성</b>(카드가 리스크를 올바르게 기술?) · <b>② L3 매핑 적절성</b>(L3 배정이 적절?) · "
-          f"<b>③ 타 카드와의 중복성</b>(다른 카드와 중복?). "
-          f"L3 배정은 EM(시드 고정 하이브리드) 재수행 결과입니다.</div>{nav}"
-          f"<div class=tools><input type=text id=q placeholder='검색: ID / 명칭 / 정의 (한·영)'>"
-          f"<button data-f='' class=on>전체</button>"
-          f"<button data-f=merged>병합만</button>"
+          f"<div class=sub>Total <b>{total} cards</b> · {len(byl3)} L3 categories in use · {nmerged} merged groups · {sub_extra} "
+          f"Hierarchy order: General → Agentic → Physical. "
+          f"Review criteria: <b>① Description adequacy</b> (is the risk correctly described?) · <b>② L3 mapping</b> (is the assigned L3 appropriate?) · "
+          f"<b>③ Redundancy</b> (does it duplicate other cards?). "
+          f"L3 assignments are re-derived by the seed-anchored hybrid EM.</div>{summary}{nav}"
+          f"<div class=tools><input type=text id=q placeholder='Search: ID / label / definition (KO·EN)'>"
+          f"<button data-f='' class=on>All</button>"
+          f"<button data-f=merged>Merged only</button>"
           ""
-          f"<button id=expand>전체 펼치기</button><button id=collapse>전체 접기</button>"
+          f"<button id=expand>Expand all</button><button id=collapse>Collapse all</button>"
           f"<span id=cnt class=sub></span></div></header><main>{body}</main>"
-          f"<div id=bbar><span id=ptxt>진행률 0 / {total}</span><div id=pbar><div id=pfill></div></div>"
-          f"<button id=exp>판정 JSON 내보내기</button></div>"
+          f"<div id=bbar><span id=ptxt>Audit progress 0 / {total}</span><div id=pbar><div id=pfill></div></div>"
+          f"<button id=exp>Export judgments (JSON)</button>"
+          f"<span style='color:#bbb'>Export before closing — judgments are not saved automatically.</span></div>"
           f"<script>{js}</script></body></html>")
     open(f'{OUT}/{page_id}.html','w').write(page)
     print(page_id, total, 'cards,', nmerged, 'merged,', nhold, 'hold,', len(byl3), 'L3')
 
 F1=json.load(open(f'{OUT}/f1_state.json'))
 build('f1', F1['cards'],
-      'F1 — τ*₁=0.8329 granularity flow 1차 티어 (휴먼 검수)',
-      f"τ={F1['tau']:.4f} · 대표 텍스트는 medoid 원문 · L3는 EM 재배정.")
+      'F1 — granularity-flow tier 1 (human audit)',
+      f"τ={F1['tau']:.4f} · representative text is the medoid original · L3 re-assigned by EM.")
 
 F4=json.load(open(f'{OUT}/flow4_cards_full.json'))
 build('f4', F4['cards'],
-      'F4 — granularity flow 4차 티어 (휴먼 검수)',
-      'τ* 0.8329→0.7753 · L3는 EM 재배정.')
+      'F4 — granularity-flow tier 4 (human audit)',
+      'τ* 0.8329→0.7753 · L3 re-assigned by EM.')
+
+F5=json.load(open(f'{OUT}/f5_state.json'))
+build('f5', F5['cards'],
+      'F5 — granularity-flow tier 5 (human audit)',
+      'τ* 0.8329→0.7634 · L3 propagated from the F4 EM assignment.')

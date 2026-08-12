@@ -1,0 +1,176 @@
+{
+ "policy": "리스크 카드 라벨은 명사구(nominal phrase)로 작성한다. 서술문 금지, 영문 12단어 이내, 확립된 학술 용어 우선(예: power-seeking, disempowerment, overreliance).",
+ "exemplar": {
+  "l4_id": "RAI4-1616",
+  "old_ko": "미래의 AI 시스템은 인간의 통제를 적극적으로 줄일 수 있습니다",
+  "old_en": "Future AI systems might actively reduce human control",
+  "new_ko": "권력 추구에 의한 인간 통제 약화 (Power-seeking에 의한 통제 상실)",
+  "new_en": "Power-seeking reduction of human control",
+  "rationale": "정의가 'AI가 자신의 영향력을 늘리고 인간 통제를 줄이는 행동' 즉 power-seeking/active disempowerment 구성개념. Carlsmith(2022) 'Is Power-Seeking AI an Existential Risk?' 등 확립 용어 채택.",
+  "apply_to": [
+   "v2.19 cards.json label_ko/label_en",
+   "tau_views HTML(릴리스 시 재생성)",
+   "semantic network payload",
+   "파생 보고서"
+  ]
+ },
+ "sentence_style_ko": [
+  {
+   "l4_id": "RAI4-0847",
+   "label_ko": "설득력 있는 도구의 광범위한 사용은 분열된 인식 공동체에 기여합니다",
+   "label_en": "Widespread use of persuasive tools contributes to splintered epistemic communities"
+  },
+  {
+   "l4_id": "RAI4-0875",
+   "label_ko": "정서적 유대감을 형성합니다",
+   "label_en": "Forms emotional bonds"
+  },
+  {
+   "l4_id": "RAI4-0893",
+   "label_ko": "기대치를 위반했습니다",
+   "label_en": "Violated expectations"
+  },
+  {
+   "l4_id": "RAI4-0898",
+   "label_ko": "인간은 점점 더 잘못 정렬된 AI 시스템에 통제권을 넘겨줄 수 있습니다",
+   "label_en": "Humans might increasingly hand over control to misaligned AI systems"
+  },
+  {
+   "l4_id": "RAI4-0907",
+   "label_ko": "의인화 시스템은 과도한 의존과 불안전한 사용으로 이어질 수 있습니다",
+   "label_en": "Anthropomorphising systems can lead to overreliance and unsafe use"
+  },
+  {
+   "l4_id": "RAI4-0969",
+   "label_ko": "AGI는 인간 소유자/관리자의 통제에서 벗어나 있습니다",
+   "label_en": "AGI removing itself from the control of human owners/managers"
+  },
+  {
+   "l4_id": "RAI4-1056",
+   "label_ko": "민감한 정보를 정확하게 추론하여 개인정보 보호 또는 보안을 침해합니다",
+   "label_en": "Compromising privacy or security by correctly inferring sensitive information"
+  },
+  {
+   "l4_id": "RAI4-1421",
+   "label_ko": "AI의 발전으로 행위자는 민주적 절차를 훼손할 수 있습니다",
+   "label_en": "Developments in AI enable actors to undermine democratic processes"
+  },
+  {
+   "l4_id": "RAI4-1423",
+   "label_ko": "AI의 설득력이 영향력을 얻고 해로운 이념을 조장하는 데 오용되고 있습니다",
+   "label_en": "AI's persuasive capabilities are misused to gain influence and promote harmful ideologies"
+  },
+  {
+   "l4_id": "RAI4-1463",
+   "label_ko": "구현된 하드웨어에 대한 요구사항이 누락되었습니다",
+   "label_en": "Missing requirements for the implemented hardware"
+  },
+  {
+   "l4_id": "RAI4-1616",
+   "label_ko": "미래의 AI 시스템은 인간의 통제를 적극적으로 줄일 수 있습니다",
+   "label_en": "Future AI systems might actively reduce human control"
+  },
+  {
+   "l4_id": "RAI4-1644",
+   "label_ko": "Agentic LLM은 새로운 위험을 초래합니다",
+   "label_en": "Agentic LLMs pose novel risks"
+  },
+  {
+   "l4_id": "RAI4-1645",
+   "label_ko": "자연어는 목표를 과소 지정합니다",
+   "label_en": "Natural language underspecifies goals"
+  },
+  {
+   "l4_id": "RAI4-1646",
+   "label_ko": "목표 지향성은 바람직하지 않은 행동을 장려합니다",
+   "label_en": "Goal-directedness incentivizes undesirable behaviors"
+  },
+  {
+   "l4_id": "RAI4-1648",
+   "label_ko": "단일 에이전트 안전으로는 다중 에이전트 안전이 보장되지 않습니다",
+   "label_en": "Multi-agent safety is not assured by single-agent safety"
+  },
+  {
+   "l4_id": "RAI4-1649",
+   "label_ko": "기초성은 상관된 실패를 유발할 수 있습니다",
+   "label_en": "Foundationality may cause correlated failures"
+  },
+  {
+   "l4_id": "RAI4-1650",
+   "label_ko": "LLM 에이전트 그룹은 긴급 기능을 보여줄 수 있습니다",
+   "label_en": "Groups of LLM-Agents may show emergent functionality"
+  },
+  {
+   "l4_id": "RAI4-1663",
+   "label_ko": "기업의 힘이 효과적인 거버넌스를 방해할 수 있음",
+   "label_en": "Corporate power may impeded effective governance"
+  }
+ ],
+ "long_en": [
+  {
+   "l4_id": "RAI4-0314",
+   "label_en": "Unauthorized collection or leakage of in-home behavioral and biometric data"
+  },
+  {
+   "l4_id": "RAI4-0745",
+   "label_en": "Jailbreak in LLM malicious use - white and black box attacks"
+  },
+  {
+   "l4_id": "RAI4-0843",
+   "label_en": "Causing material harm by disseminating false or poor information e.g. in medicine or law"
+  },
+  {
+   "l4_id": "RAI4-0846",
+   "label_en": "Reduced decision-making capacity as a result of decreased trust in information"
+  },
+  {
+   "l4_id": "RAI4-1062",
+   "label_en": "Avenues for exploiting user trust and accessing more private information"
+  },
+  {
+   "l4_id": "RAI4-1128",
+   "label_en": "Difficult to develop metrics for evaluating benefits or harms caused by AI assistants"
+  },
+  {
+   "l4_id": "RAI4-1294",
+   "label_en": "Catastrophic risk due to autonomous weapons programmed with dangerous targets"
+  },
+  {
+   "l4_id": "RAI4-1295",
+   "label_en": "Accelerated development of nanotechnology produces uncontrolled production of toxic nanoparticles"
+  },
+  {
+   "l4_id": "RAI4-1416",
+   "label_en": "Faster scientific progress makes it harder for governance to keep pace with development"
+  },
+  {
+   "l4_id": "RAI4-1422",
+   "label_en": "AI is used to scale up production of false and misleading information"
+  },
+  {
+   "l4_id": "RAI4-1424",
+   "label_en": "Risks from AIs developing goals and values that are different from humans"
+  },
+  {
+   "l4_id": "RAI4-1514",
+   "label_en": "Misunderstanding or overestimating the results and scope of interpretability techniques"
+  },
+  {
+   "l4_id": "RAI4-1563",
+   "label_en": "Misuse of AI systems to assist in the creation of weapons"
+  },
+  {
+   "l4_id": "RAI4-1617",
+   "label_en": "Capabilities that could be used to reduce human control - manipulation"
+  },
+  {
+   "l4_id": "RAI4-1618",
+   "label_en": "Capabilities that could be used to reduce human control - cyber offence"
+  },
+  {
+   "l4_id": "RAI4-1619",
+   "label_en": "Capabilities that could be used to reduce human control - autonomous replication and adaptation"
+  }
+ ],
+ "process": "qwen 초안 없이, 각 카드 정의 기반으로 2인 검수(용어 A + 도메인 B) 일괄 작명 라운드를 v2.19 빌드 전에 수행"
+}

@@ -403,6 +403,109 @@ that the quality-control boundary separates a less stable region of the
 semantic space. This comparison does not prove that every released assignment
 is correct. It provides a reproducible prioritization signal for human review.
 
+\section{Granularity-flow tiers}
+
+\subsection{Measured merge boundary}
+
+Leaf-level granularity is fixed by a merge threshold on the cosine-similarity
+graph of card embeddings, where connected components are merge clusters. Rather
+than fixing that threshold by analyst judgment, the release derives it from the
+inventory. For a candidate threshold $\tau$, let $\Phi_{\mathrm{coh}}(\tau)$ be
+the pooled within-cluster mean similarity and $\Phi_{\mathrm{att}}(\tau)$ the
+mean over clusters of the maximum similarity to any card outside the cluster.
+The operating boundary is the smallest $\tau$ at which cohesion still dominates
+attraction,
+\[
+\tau^{*}=\min\{\tau:\Phi_{\mathrm{coh}}(\tau)\ge\Phi_{\mathrm{att}}(\tau)\},
+\]
+evaluated on a $10^{-4}$ grid. On the normalized master inventory of 1,612
+active cards, $\tau^{*}=0.8329$.
+
+\subsection{Iterated consolidation}
+
+Merging at $\tau^{*}$ changes the density of the space, so the boundary moves
+with it. Repeating the cycle of merge, re-derive, and merge again generates a
+sequence of boundaries and inventories, the granularity flow. Each step is
+scored against a size-matched random-group null drawn on its own inventory;
+a step is admissible when at least 90\% of its merge groups exceed the null by
+two standard deviations. Steps 1 to 5, the range released for review, satisfy
+this rule with a fraction of 1.00 throughout and a median $z$ between 3.27 and
+4.30. Representatives are medoids of their merge group, so every tier card is
+an original card rather than a synthesized summary.
+
+\begin{table}[H]
+\centering
+\caption{Granularity-flow tiers. Merge groups are counted per consolidation step
+and absorbed cards cumulatively from the Master inventory. Domain counts follow
+the L3 re-assignment, with the Societal Safety axis routed by scope.}
+\label{tab:ftiers}
+\small
+\begin{tabularx}{\linewidth}{lrrrrY}
+\toprule
+Tier & $\tau^{*}$ & Cards & Merge groups & Absorbed & General / Agentic / Physical \\
+\midrule
+Master & --     & 1,612 & --  & --  & 1,154 / 155 / 303 \\
+F1     & 0.8329 & 1,383 & 109 & 229 & 906 / 140 / 337 \\
+F2     & 0.8033 & 1,154 & 121 & 458 & 734 / 128 / 292 \\
+F3     & 0.7903 & 1,038 & 81  & 574 & 653 / 112 / 273 \\
+F4     & 0.7753 & 901   & 82  & 711 & 568 / 92 / 241 \\
+F5     & 0.7634 & 792   & 70  & 820 & 491 / 83 / 218 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Societal Safety is a single concept family applied at three scopes rather than a
+General-only axis. Its L3 nodes therefore branch as
+\texttt{RAI3-\{G$\vert$A$\vert$P\}-SOC-nn}, where a given \texttt{nn} denotes the
+same risk concept at each scope; L4 identifiers are unchanged and only the owning
+L3 branches. A card is Physical when its label or definition carries a physical
+referent such as a robot, embodiment, hardware, sensor or product-safety
+grounding; Agentic when it is not Physical but binds to agent autonomy, long
+horizon goals, tool use or multi-agent interaction; and General otherwise. On the
+Master inventory the 430 Societal Safety cards split 351 General, 37 Agentic and
+42 Physical, and the tier counts above follow that routing.
+
+\subsection{Cross-corpus replication}
+
+To test whether the procedure depends on this particular inventory, the same
+pipeline was applied without retuning to the MIT AI Risk Repository, whose risk
+categories and subcategories were embedded with the same encoder. The
+replication reproduces both the two transitions and the crossing, and the flow
+behaves as it does here.
+
+\begin{table}[H]
+\centering
+\caption{Granularity flow on the MIT AI Risk Repository. Merge groups and median
+$z$ are per consolidation step; absorbed entries are cumulative. Domain columns
+are omitted because that repository uses its own top-level scheme.}
+\label{tab:mittiers}
+\small
+\begin{tabularx}{\linewidth}{lrrrrrY}
+\toprule
+Tier & $\tau^{*}$ & Entries & Merge groups & Absorbed & Median $z$ & Role \\
+\midrule
+Source & --     & 1,810 & --  & --    & --   & repository inventory \\
+M1     & 0.8190 & 1,423 & 189 & 387   & 4.79 & fidelity tier (crossing) \\
+M2     & 0.7908 & 1,230 & 104 & 580   & 3.68 & second consolidation \\
+M3     & 0.7696 & 1,022 & 115 & 788   & 3.53 & third consolidation \\
+M4     & 0.7545 & 879   & 87  & 931   & 3.17 & compression tier \\
+M5     & 0.7374 & 727   & 99  & 1,083 & 3.00 & extended compression tier \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Every step clears the validity rule, with at least 98.9\% of merge groups
+exceeding the size-matched random-group null by two standard deviations. The
+replication is reported for reference and is not released for human audit.
+
+\subsection{Released tiers}
+
+F1, F4, and F5 are released for human audit. F1 preserves the fidelity of the
+original inventory at the measured boundary, F4 is the compression tier reached
+after four consolidations, and F5 extends compression by one further step. Each
+tier is published as a browsable audit page in which every card is judged on
+description adequacy, L3 mapping, and redundancy against other cards.
+
 \section{Reproducibility controls}
 
 \subsection{Fixed computational specification}

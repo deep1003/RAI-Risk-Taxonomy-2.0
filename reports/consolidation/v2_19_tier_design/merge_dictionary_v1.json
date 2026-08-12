@@ -1,0 +1,117 @@
+{
+ "round": "exact_dup_dictionary_20260806",
+ "process": "exact-dup detection -> reviewer A naming -> reviewer B domain validation",
+ "excluded_corruption": [
+  [
+   "RAI4-0659",
+   "RAI4-0892"
+  ],
+  [
+   "RAI4-0863",
+   "RAI4-0870"
+  ]
+ ],
+ "merges": [
+  {
+   "ids": [
+    "RAI4-0620",
+    "RAI4-0621"
+   ],
+   "label_ko": "AI 기반 사이버 공격",
+   "label_en": "AI-enabled cyber offense"
+  },
+  {
+   "ids": [
+    "RAI4-0736",
+    "RAI4-0783"
+   ],
+   "label_ko": "회피 공격",
+   "label_en": "Evasion attacks",
+   "note": "L3는 RAI3-G-INT-11 기준"
+  },
+  {
+   "ids": [
+    "RAI4-1051",
+    "RAI4-1068"
+   ],
+   "label_ko": "사회적 고정관념과 부당한 차별",
+   "label_en": "Social stereotypes and unfair discrimination"
+  },
+  {
+   "ids": [
+    "RAI4-1064",
+    "RAI4-1081"
+   ],
+   "label_ko": "LM 운영으로 인한 환경 피해",
+   "label_en": "Environmental harms from operating language models"
+  },
+  {
+   "ids": [
+    "RAI4-0469",
+    "RAI4-1132"
+   ],
+   "label_ko": "목표의 잘못된 일반화",
+   "label_en": "Goal misgeneralization"
+  },
+  {
+   "ids": [
+    "RAI4-0914",
+    "RAI4-1047",
+    "RAI4-1144"
+   ],
+   "label_ko": "개인정보 유출",
+   "label_en": "Privacy leakage",
+   "note": "공격 유발 노출은 1591 경계 주석"
+  },
+  {
+   "ids": [
+    "RAI4-1243",
+    "RAI4-1254"
+   ],
+   "label_ko": "권력 추구 행동",
+   "label_en": "Power-seeking behavior",
+   "note": "1243 정의·L3 기준"
+  },
+  {
+   "ids": [
+    "RAI4-0613",
+    "RAI4-1638"
+   ],
+   "label_ko": "AI 설득 능력을 통한 조작 위험",
+   "label_en": "Manipulation risk from AI persuasion capabilities"
+  }
+ ],
+ "keep_separate": [
+  {
+   "ids": [
+    "RAI4-0435",
+    "RAI4-0569"
+   ],
+   "labels": {
+    "RAI4-0435": "데이터 포이즈닝 공격",
+    "RAI4-0569": "훈련 데이터 오염"
+   }
+  },
+  {
+   "ids": [
+    "RAI4-1275",
+    "RAI4-1307"
+   ],
+   "labels": {
+    "RAI4-1275": "도덕적 책임 격차 (Responsibility gap)",
+    "RAI4-1307": "법적 배상책임 격차 (Liability gap)"
+   }
+  },
+  {
+   "ids": [
+    "RAI4-1591",
+    "RAI4-1714"
+   ],
+   "labels": {
+    "RAI4-1591": "훈련데이터 프라이버시 공격 (Training-data privacy attacks)",
+    "RAI4-1714": "프라이버시 침해 일반 (Privacy violation)"
+   }
+  }
+ ],
+ "net_reduction": 9
+}

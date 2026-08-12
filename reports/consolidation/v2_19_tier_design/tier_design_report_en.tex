@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}[Ligatures=TeX]
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.3cm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{enumitem}
+\usepackage{mdframed}
+
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+
+\title{\textbf{A Two-Stage Procedure for Consolidating and Re-Mapping an AI Risk Taxonomy}\\[3pt]
+\large Stage 1: level-constrained L4 consolidation at three resolutions.\\
+Stage 2: damped, seed-anchored EM assignment to a fixed L3 layer}
+\author{RAI Risk Taxonomy 2.0 --- technical report (rev.~3)}
+\date{August 10, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We report a completed two-stage procedure that (i) reduces an inventory of 1{,}652 active L4 risk cards to three nested release resolutions and (ii) re-maps every resulting card onto a fixed 56-node L3 layer. Stage 1 combines a single removal criterion (absence of harm content), a form-only normalization that freezes each card's harm mechanism and outcome, a pre-approved exact-duplicate merge dictionary, and constrained complete-linkage consolidation cut at $\tau=0.80$ and $\tau=0.70$; a nameability gate and a cross-abstraction-level merge prohibition prevent the umbrella-card failure observed in an earlier round. The resulting sets are Master 1{,}612, C80 1{,}369, and C70 937 cards, with zero cannot-link violations, zero cross-level merges, exact nesting, and lossless ID mapping. Stage 2 replaces unconstrained EM --- which we show is \emph{not identified} on this data (independent random initializations agree on only 0.3--3.3\% of assignments) --- with a damped, seed-anchored variant that keeps class centroids within cosine 0.85 of enriched L3 seeds. After a two-stage assignment (automatic, then forced with expert adjudication of 814 low-margin holds), all three sets use 54 of 56 L3 nodes, both taxonomy-hold nodes are emptied, and sensitivity across three axes with two repetitions each yields 92--99\% agreement.
+\end{abstract}
+
+\section{Problem and prior failure}
+
+Two structural defects motivated the work. First, the L4 inventory had accumulated near-duplicate cards from multiple source repositories, with heterogeneous writing conventions: roughly half of all definitions were descriptive prose or verbatim excerpts rather than risk definitions. Second, 594 cards (36.8\%) sat in \emph{taxonomy-hold} L3 nodes, i.e., were effectively unclassified, while several substantive L3 nodes held one or two cards.
+
+An earlier consolidation round failed in an instructive way. Merging cards without regard to abstraction level produced umbrella cards: for example, six instance-level cards were absorbed into a construct-level card and renamed ``over-reliance and automation bias.'' Diagnostically, construct-level cards behave as \emph{merge magnets} --- they are uniformly similar to an entire family, so they pull heterogeneous members into one cluster. We measured this: the number of neighbours above $\cos \geq 0.80$ has median 0 across the inventory but reaches 8--14 for construct cards such as ``diminished human oversight'' and ``lack of transparency and explainability.'' The corrective is not to rewrite such cards --- established risk names (automation bias, goal misalignment, loss of control) must survive verbatim for citation and retrieval --- but to forbid merges across levels.
+
+\section{Stage 1: consolidation}
+
+\subsection{Setup}
+
+Let $\cM_0$ be the 1{,}652 active cards. Card $r_i$ is embedded from
+\begin{equation}
+x_i = \texttt{label\_en}_i \texttt{.}\; \texttt{definition\_en}_i \;\texttt{/}\; \texttt{label\_ko}_i \texttt{.}\; \texttt{definition\_ko}_i ,
+\qquad
+\mathbf{e}_i = \frac{\mathrm{Enc}(x_i)}{\lVert\mathrm{Enc}(x_i)\rVert_2} \in \mathbb{S}^{1023},
+\end{equation}
+with $\mathrm{Enc}$ = BGE-M3 (\texttt{max\_seq\_length}=256). Similarity is $s_{ij}=\mathbf{e}_i^\top\mathbf{e}_j$, distance $d_{ij}=1-s_{ij}$.
+
+Two protective structures are defined before any operation. The \textbf{cannot-link set} $\cN$ holds seven expert-adjudicated pairs that must never merge, including embedding false positives ($\cos$ up to 0.944) and pairs whose conflation would dilute a distinct harm (child sexual exploitation vs.\ adult sexual content; moral responsibility gap vs.\ legal liability gap). The \textbf{protected-term list} (44 entries drawn from TTA, KISA, NIS, ETRI and the Korean AI Framework Act, minus generic nouns) marks labels that may not be renamed at any step.
+
+Each card is tagged \emph{construct} or \emph{instance}: instance iff its definition binds a context (application domain, affected party, decision type, or system type). This is metadata only; no card is rewritten to change its level. The inventory splits 1{,}218 construct / 434 instance.
+
+\subsection{Filtering and normalization}
+
+Removal uses exactly one criterion: the definition contains no harm content (literature-classification memos, section preambles, pure concept definitions, pure countermeasures). Abstractness, missing context, and capability phrasing are \emph{not} removal grounds --- dangerous-capability items (self-replication, deception, offensive cyber capability) are standard risk entries in the AI-safety literature and are retained. Three review rounds over the union of prior candidates produced \textbf{40 removals}; 25 earlier candidates were restored under the narrowed criterion.
+
+Normalization is form-only under three invariants: the harm mechanism and outcome are frozen, no context may be added (a construct card stays construct), and protected terms may not be renamed. 1{,}335 cards were normalized (786 label + definition, 549 definition only) and audited by two senior reviewers, who caught four mechanism substitutions --- e.g.\ a rewrite that turned ``the model generates harmful content'' into ``the safety filter fails,'' replacing a generation mechanism with a control-failure mechanism --- and three cases of context injected into construct cards.
+
+\subsection{Consolidation}
+
+Consolidation is agglomerative: repeatedly merge the most similar pair of live units and recompute. The only degree of freedom is the inter-unit similarity $\sigma$. We use complete linkage, $\sigma_{\mathrm{comp}}(\cL_a,\cL_b)=\min_{i\in\cL_a,j\in\cL_b} s_{ij}$, on three empirical grounds: at $\tau=0.70$ centroid and single linkage collapse (largest cluster 1{,}191 and 1{,}514 cards, versus 8 for complete); only complete linkage propagates the $d_{ij}=\infty$ encoding of cannot-link constraints; and complete linkage guarantees every within-cluster pair exceeds $\tau$, which is what a merged card claims.
+
+Two hard constraints enter the distance matrix: $d_{ij}\leftarrow\infty$ for $(i,j)\in\cN$, and $d_{ij}\leftarrow\infty$ whenever $r_i$ and $r_j$ have different abstraction levels. The second constraint is the corrective for the umbrella failure.
+
+A \emph{merge dictionary} is applied before clustering. Exact textual duplicates and adjudicated high-similarity pairs are merged with three decisions taken independently: the surviving ID, the final label, and the final definition --- chosen by card quality, not by which card the similarity search treated as the neighbour. Chain formation is blocked: taking the transitive closure of pairwise merges produced a 22-card chain in the loss-of-control family, so groups are assigned exclusively in descending confidence and conflicting groups are deferred to the $\tau$ cut, where complete linkage cannot chain. The dictionary contributes 120 groups (258 $\to$ 120 cards).
+
+One dendrogram is built and cut at $\tau=0.80$ and $\tau=0.70$. By monotonicity of complete linkage this yields $\cM \supseteq \mathrm{C80} \supseteq \mathrm{C70}$, so cross-tier ID mapping is a tree.
+
+\subsection{Nameability gate}
+
+Prior threshold analysis on a 12-pair golden set placed the safe band at $0.84 \leq \tau < 0.94$; both target resolutions lie below it. We therefore do not promote $\tau$-clusters directly. For each candidate cluster two reviewers independently attempt a genuine hypernym as a noun phrase of at most twelve English words. Approval requires success and agreement; rejection follows from enumerative names, empty umbrella terms, or heterogeneous members. A third criterion enforces the level constraint at the naming step: \emph{if the only adequate name is an established construct name, the merge is rejected}, since needing that name is evidence the cluster has been flattened upward. This rule fired repeatedly --- clusters that would have collapsed into ``loss of control,'' ``goal misalignment,'' ``responsibility gap,'' or ``explainability'' were rejected. Rejections propagate from C70 to C80 by member set, preserving nesting without re-clustering. Outcome: C70 325/451 approved, C80 127/157 approved.
+
+\subsection{Stage 1 result}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Set & Cards & vs.\ Master & Merges \\
+\midrule
+Source inventory & 1{,}652 & --- & --- \\
+Master (after 40 removals, 1{,}335 normalizations) & 1{,}612 & --- & --- \\
+C80 ($\tau=0.80$) & 1{,}369 & $-15.1\%$ & 172 \\
+C70 ($\tau=0.70$) & 937 & $-41.9\%$ & 366 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Audit of all three sets: lossless ID mapping (JSON and CSV), zero cannot-link violations, \textbf{zero cross-level merges}, zero nesting violations, zero duplicate labels in either language, zero label-length violations, zero definition-format violations. Largest cluster 7 (C80) and 12 (C70), against 22 in the failed round.
+
+\section{Stage 2: mapping to the fixed L3 layer}
+
+\subsection{Unconstrained EM is not identified}
+
+The release pipeline had historically used EM over L3 seed centroids. Running it under a sensitivity design (three axes, two repetitions) exposed a fundamental problem: independent random initializations converge to comparable objective values but agree on only \textbf{0.3--3.3\%} of assignments. The partition is determined by the initialization, not by the data. The cause is the M-step: unconstrained centroid updates drift away from the L3 seeds, with minimum centroid--seed cosine falling to 0.605 and agreement with pure nearest-seed assignment at 46\%. The nodes still carry L3 labels but their centroids no longer represent those L3s.
+
+\subsection{Damped, seed-anchored EM}
+
+We replace the M-step with a damped update,
+\begin{equation}
+\bm{\mu}_k \;\leftarrow\; \frac{\alpha\,\mathbf{s}_k + (1-\alpha)\,\overline{\mathbf{e}}_k}{\lVert \alpha\,\mathbf{s}_k + (1-\alpha)\,\overline{\mathbf{e}}_k \rVert}, \qquad \alpha = 0.4,
+\end{equation}
+where $\mathbf{s}_k$ is the L3 seed and $\overline{\mathbf{e}}_k$ the current member mean; empty classes revert to the seed. Initialization is always the seed --- random initialization is recorded in the manifest as an \emph{inadmissible specification}, not a sensitivity condition. Seeds are enriched: each non-hold L3 seed text is augmented with the labels of its eight nearest previously-assigned cards, strengthening the anchor. Hold nodes are masked out of the assignment space entirely, so no card can be assigned to a taxonomy-hold node.
+
+The $\alpha$ sweep is reported in the notebook: $\alpha=0$ gives 46\% agreement with nearest-seed and centroid drift 0.605; $\alpha=0.4$ gives 0.848; $\alpha=0.7$ gives 0.965 at the cost of a 302-card largest class. $\alpha=0.4$ balances anchoring against class balance.
+
+\subsection{Two-stage assignment}
+
+Stage 2a assigns automatically and holds any card with margin $m_i = s_{(1)}-s_{(2)} < 0.03$. Stage 2b resolves holds by expert adjudication and forces an assignment for every remaining card, so no card ends unassigned. For Master, 814 holds were adjudicated card-by-card against the full 56-node catalogue (not merely the top-3 candidates), with hold nodes prohibited; confidence was high 188, medium 506, low 120. The tiers inherit from Master --- a tier card takes the L3 of its Master sources --- which guarantees cross-tier hierarchy consistency; only the 191 ties (C80 53, C70 138) were adjudicated separately, judged by the merged card's own harm mechanism rather than by member votes.
+
+\subsection{Sensitivity}
+
+Three axes, two repetitions each (repetition is a 90\% bootstrap subsample, since damped EM is deterministic given the seed initialization): card text (bilingual vs.\ English-only), L3 seed text (enriched vs.\ plain), and damping ($\alpha=0.4$ vs.\ $0.6$).
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Condition & \multicolumn{2}{c}{Stage 2a (agreement, ARI)} & \multicolumn{2}{c}{Stage 2b} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & all & --- & all & free cards \\
+\midrule
+Axis 1: English-only text & 75.2\% & 0.57 & 96.1\% & 92.1\% \\
+Axis 2: plain L3 seed     & 69.9\% & 0.50 & 96.1\% & 92.1\% \\
+Axis 3: $\alpha=0.6$      & 89.7\% & 0.79 & 98.6\% & 97.3\% \\
+Bootstrap 90\% (2 seeds)  & 91--99\% & --- & 99.4/99.7\% & 98.9/99.3\% \\
+\midrule
+Unconstrained EM, random init (rejected) & 0.3--3.3\% & 0.19--0.29 & --- & --- \\
+\bottomrule
+\end{tabular}
+\caption{Stage 2b figures fix the 811 adjudicated cards and let 801 float; ``free cards'' reports agreement on the floating subset only. The notebook's raw Stage 2b output shows 100\% because the decision file pinned every card, leaving EM no role; those numbers are void and the figures above supersede them.}
+\end{table}
+
+Minimum centroid--seed cosine rises from 0.605 (unconstrained) to 0.848--0.915 (damped), confirming that the classes remain the L3s they are labelled as.
+
+\subsection{Stage 2 result}
+
+All three sets assign every card, use \textbf{54 of 56} L3 nodes, and leave both taxonomy-hold nodes empty. The 594 previously unclassified cards are distributed across substantive L3s; 1{,}108 of 1{,}612 Master cards changed assignment, which is expected since 1{,}335 cards had their text normalized and the prior assignment was computed on the pre-normalization text. No substantive L3 is empty. Largest class 90 (governance-framework absence), smallest 6 (hardware and mechanical faults). Single-source tier cards agree with their Master assignment in every case.
+
+\section{Limitations}
+
+The nameability gate is a procedural, not statistical, guarantee, and the golden set behind the $[0.84,0.94)$ band contains only twelve pairs, each boundary set by a single observation. Sensitivity is confined to a single embedding model: alternate models could not be retrieved through the corporate TLS-intercepting proxy, so model sensitivity --- the strongest available test --- is untested. Seed enrichment draws exemplars from prior human assignments, which introduces a mild circularity that we treat as curated-exemplar seeding and expose as sensitivity axis 2 (agreement with plain seeds is 92.1\% on free cards). Severity aggregates by maximum and probability by maximum, the latter a lower bound for a union of events and therefore anti-conservative for risk management; member-level values are preserved so the aggregate can be revised. Finally, C70 retains one single-card L3 under the fixed-L3 policy.
+
+\section{Reproducibility}
+
+Both stages run as notebooks that hash every input, record package versions, cache embeddings under a text hash so that any edit invalidates the cache, and fingerprint the clustering so that stale human-decision files are rejected rather than silently applied. Artifacts: \texttt{data/experiments/stage1/out/} (master, c80, c70, mappings, audit) and \texttt{data/experiments/stage2/out/} (assignments, mappings, sensitivity tables, manifest).
+
+\begin{thebibliography}{9}
+\small
+\bibitem{slattery2024} P.~Slattery et al. The AI Risk Repository: A comprehensive meta-review, database, and taxonomy of risks from artificial intelligence. arXiv:2408.12622, 2024.
+\bibitem{weidinger2022} L.~Weidinger et al. Taxonomy of risks posed by language models. In \emph{ACM FAccT}, 2022.
+\bibitem{shelby2023} R.~Shelby et al. Sociotechnical harms of algorithmic systems: Scoping a taxonomy for harm reduction. In \emph{AAAI/ACM AIES}, 2023.
+\bibitem{nist2023} NIST. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1, 2023.
+\bibitem{chen2024bgem3} J.~Chen et al. BGE M3-Embedding: Multi-lingual, multi-functionality, multi-granularity text embeddings through self-knowledge distillation. arXiv:2402.03216, 2024.
+\bibitem{abbas2023} A.~Abbas et al. SemDeDup: Data-efficient learning at web-scale through semantic deduplication. arXiv:2303.09540, 2023.
+\bibitem{hastie2009} T.~Hastie, R.~Tibshirani, J.~Friedman. \emph{The Elements of Statistical Learning}, 2nd ed. Springer, 2009.
+\bibitem{wagstaff2001} K.~Wagstaff, C.~Cardie, S.~Rogers, S.~Schr\"odl. Constrained k-means clustering with background knowledge. In \emph{ICML}, 2001.
+\bibitem{traag2019} V.~A.~Traag, L.~Waltman, N.~J.~van Eck. From Louvain to Leiden: guaranteeing well-connected communities. \emph{Scientific Reports}, 9:5233, 2019.
+\bibitem{shah2022} R.~Shah et al. Goal misgeneralization: Why correct specifications aren't enough for correct goals. arXiv:2210.01790, 2022.
+\bibitem{carlsmith2022} J.~Carlsmith. Is power-seeking AI an existential risk? arXiv:2206.13353, 2022.
+\bibitem{matthias2004} A.~Matthias. The responsibility gap: Ascribing responsibility for the actions of learning automata. \emph{Ethics and Information Technology}, 6(3):175--183, 2004.
+\bibitem{biggio2013} B.~Biggio et al. Evasion attacks against machine learning at test time. In \emph{ECML PKDD}, 2013.
+\bibitem{tta} TTA. Information and Communication Terminology Dictionary (adversarial AI, deepfake, explainable AI). Telecommunications Technology Association, Korea.
+\bibitem{kisa2026} MSIT and KISA. AI Security Red Teaming Guide, 2026.
+\bibitem{etri2024} ETRI. Standardization trends in advanced AI safety and trustworthiness. \emph{Electronics and Telecommunications Trends}, 39(5), 2024.
+\bibitem{aiact2026} Republic of Korea. Framework Act on the Development of Artificial Intelligence and Establishment of a Foundation of Trust, Act No.~20676, in force 22 January 2026.
+\end{thebibliography}
+
+\end{document}

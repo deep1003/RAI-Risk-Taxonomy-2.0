@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\xeCJKsetup{CJKspace=true}
+\setCJKmainfont{Apple SD Gothic Neo}
+\setmainfont{Times New Roman}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2.4cm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small}
+
+\title{\textbf{L4 리스크 카드 축소를 위한 병합 임계값 $\tau$의 정의와 통합 절차}\\[4pt]
+\large RAI Risk Taxonomy 2.0 (v2.18.0-rc) 비물리 카드 1{,}502장 통합 기술 보고서}
+\author{천영삼 (Responsible AI, KT)}
+\date{2026년 8월 6일}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+본 보고서는 RAI Risk Taxonomy 2.0의 활성 L4 리스크 카드 1{,}660장 중 Physical AI 158장을 동결하고 나머지 비물리 카드 1{,}502장(General 1{,}221, Agentic 281)을 의미 유사도 기반으로 통합·축소하는 절차를 기술한다. 핵심 파라미터인 병합 임계값 $\tau$를 수리적으로 정의하고, 임계값 그래프와 완전 연결(complete-linkage) 병합 알고리즘을 형식화하며, v2.18.0-rc의 BGE-M3 근접 네트워크에서 실측한 $\tau$별 감축 곡선을 보고한다. 실측 결과 비물리 집합에는 $\cos \geq 0.94$의 실질 중복 쌍이 존재하며, $\tau = 0.90$ 적용 시 단일 연결 기준 약 148장이 감축된다. 단일 연결의 연쇄 병합 위험과 교차 L3 병합 문제를 통제하기 위해 완전 연결 병합, 동일 L3 자동 승인, 교차 L3 전문가 심의, 병합 계보 기록의 4중 안전장치를 제안한다.
+\end{abstract}
+
+\section{배경과 목적}
+
+RAI Risk Taxonomy 2.0의 v2.18.0-rc 릴리스는 활성 L4 카드 1{,}660장으로 구성된다. 이 중 Physical AI 도메인(RAI1-P) 158장은 이미 반복 병합 절차(기술보고서 Algorithm 1, $\tau_{\mathrm{merge}}=0.94$)로 정제된 집합이므로 본 축소 작업에서 제외한다. 반면 비물리 카드 1{,}502장은 다수의 외부 리스크 저장소와 벤치마크를 취합한 뒤 동일한 수준의 의미적 중복 제거를 거치지 않은 상태이며, 실측에서 명백한 중복 쌍(예: ``개인정보 노출''과 ``데이터의 개인정보'', 유사도 0.956)이 확인된다. 본 보고서의 목적은 (i) 병합 임계값 $\tau$를 기술적·수리적·알고리즘적으로 정의하고, (ii) $\tau$ 선택이 카드 수에 미치는 영향을 실측으로 제시하며, (iii) 계층 무결성과 하위 호환성을 보존하는 단계적 축소 절차를 확정하는 것이다.
+
+\section{병합 임계값 $\tau$의 정의}
+
+\subsection{임베딩 공간과 유사도}
+
+각 L4 카드 $r_i$는 이중언어 명칭과 정의를 연결한 텍스트 $x_i$로 표현되고, 다국어 문장 임베딩 인코더 $\mathrm{Enc}$(실시예에서 BGE-M3)를 통해 단위 초구면 $\mathbb{S}^{d-1}$ 위의 벡터로 사상된다.
+\begin{equation}
+\mathbf{e}_i \;=\; \frac{\mathrm{Enc}(x_i)}{\lVert \mathrm{Enc}(x_i) \rVert_2} \;\in\; \mathbb{S}^{d-1}, \qquad d=1024.
+\end{equation}
+두 카드의 의미 유사도는 코사인 유사도로 정의한다. 단위 벡터이므로 내적과 같다.
+\begin{equation}
+s_{ij} \;=\; \mathrm{sim}_{\cos}(\mathbf{e}_i,\mathbf{e}_j) \;=\; \mathbf{e}_i \cdot \mathbf{e}_j \;\in\; [-1,1],
+\qquad
+d_{ij} \;=\; 1 - s_{ij}.
+\end{equation}
+
+\subsection{$\tau$의 수리적 정의}
+
+병합 임계값 $\tau \in (0,1)$은 두 카드를 동일 리스크 개념의 중복 표현으로 판정하는 유사도 하한이다. 즉 판정 함수
+\begin{equation}
+\mathrm{dup}(i,j) \;=\; \mathbb{1}\!\left[\, s_{ij} \geq \tau \,\right]
+\end{equation}
+가 1이면 병합 후보로 간주한다. 기하학적으로 $\tau$는 초구면 위의 각도 반경 $\theta_\tau = \arccos(\tau)$에 대응하며, $\tau=0.94$는 약 $19.9^\circ$, $\tau=0.90$은 약 $25.8^\circ$의 원뿔 내부에 있는 카드 쌍을 중복으로 본다. $\tau$를 내릴수록 원뿔이 넓어져 병합이 많아지고, 올릴수록 좁아져 분리 유지가 늘어난다.
+
+\subsection{임계값 그래프와 두 가지 병합 위상}
+
+카드 집합 $V=\{1,\dots,N\}$ 위에 임계값 그래프를 정의한다.
+\begin{equation}
+G_\tau \;=\; (V, E_\tau), \qquad E_\tau \;=\; \{(i,j) : s_{ij} \geq \tau\}.
+\end{equation}
+병합 결과는 $G_\tau$ 위의 군집화 규칙에 따라 달라진다.
+
+\textbf{단일 연결(single linkage).} 병합 그룹을 $G_\tau$의 연결 성분(connected component)으로 정의한다. $i \sim j$가 성립하려면 $s_{ik_1} \geq \tau,\ s_{k_1 k_2} \geq \tau, \dots$의 사슬만 있으면 되므로, 직접 유사도가 낮은 카드들이 매개 카드를 통해 눈덩이처럼 병합되는 연쇄(chaining) 현상이 발생한다.
+
+\textbf{완전 연결(complete linkage).} 병합 그룹 $C$가 유효하려면 그룹 내 모든 쌍이 임계값을 넘어야 한다.
+\begin{equation}
+\min_{i,j \in C,\; i \neq j} s_{ij} \;\geq\; \tau .
+\label{eq:complete}
+\end{equation}
+이는 $G_\tau$에서 $C$가 클리크(clique)에 가깝게 응집되어 있음을 요구하므로 연쇄를 차단한다. 본 절차는 식~\eqref{eq:complete}의 완전 연결을 채택한다.
+
+\subsection{대표 벡터 갱신과 반복 병합}
+
+Algorithm 1과 동일하게, 병합된 그룹 $C$의 대표 벡터는 구성 카드 임베딩의 정규화 평균으로 갱신한다.
+\begin{equation}
+\bar{\mathbf{e}}_C \;=\; \frac{\sum_{i \in C} \mathbf{e}_i}{\left\lVert \sum_{i \in C} \mathbf{e}_i \right\rVert_2}.
+\end{equation}
+반복 병합은 최대 유사도 쌍부터 탐욕적으로 진행하며, 종료 조건은 다음과 같다.
+\begin{equation}
+\max_{i<j} \; s_{ij} \;<\; \tau .
+\end{equation}
+
+\section{통합 알고리즘}
+
+\begin{algorithm}[htbp]
+\caption{제약 완전 연결 병합 (Constrained Complete-Linkage Merge)}
+\begin{algorithmic}[1]
+\Require 비물리 활성 카드 $V$ ($N=1{,}502$), 임베딩 $\{\mathbf{e}_i\}$, 임계값 $\tau$, L3 배정 $\ell(\cdot)$
+\Ensure 통합 카드 집합, 병합 계보 $\mathcal{M}$
+\State $S \gets [\,s_{ij}\,]$ \Comment{쌍별 코사인 유사도 행렬}
+\Repeat
+    \State $(i^*,j^*) \gets \arg\max_{i<j} s_{ij}$
+    \If{$s_{i^*j^*} \geq \tau$}
+        \If{$\ell(i^*) = \ell(j^*)$} \Comment{동일 L3: 자동 병합 후보}
+            \State $C \gets C_{i^*} \cup C_{j^*}$;\; \textbf{if} $\min_{u,v \in C} s_{uv} \geq \tau$ \textbf{then} merge$(C)$; $\bar{\mathbf{e}}_C$ 갱신
+        \Else \Comment{교차 L3: 전문가 심의 큐로 이관}
+            \State $\mathcal{Q}_{\mathrm{expert}} \gets \mathcal{Q}_{\mathrm{expert}} \cup \{(i^*,j^*)\}$;\; $s_{i^*j^*} \gets -\infty$
+        \EndIf
+    \EndIf
+\Until{$\max s_{ij} < \tau$}
+\State 전문가 심의: $\mathcal{Q}_{\mathrm{expert}}$의 각 쌍에 대해 병합, 계층 재배정, 분리 유지 중 판정
+\State $\mathcal{M}$에 \texttt{merged\_into}, \texttt{merged\_source\_l4\_ids} 기록 \Comment{하위 호환 계보}
+\end{algorithmic}
+\end{algorithm}
+
+전문가 심의의 판정 기준은 세 가지다. 첫째 실패 메커니즘의 동일성(같은 원인 경로인가), 둘째 위험원과 결과의 구분(원인 카드와 결과 카드는 병합하지 않음), 셋째 평가 가능성(별도의 벤치마크·평가 대상이면 분리 유지)이다.
+
+\section{실측 결과}
+
+\subsection{$\tau$ 감축 곡선 (비물리 1{,}502장)}
+
+v2.18.0-rc의 BGE-M3 근접 네트워크($k=8$ 최근접, 최소 유사도 0.62, 비물리 쌍 10{,}417개)에서 단일 연결 기준 감축 곡선을 실측하였다(표~\ref{tab:sweep}). 완전 연결 채택 시 감축 수는 이보다 보수적으로 나타난다.
+
+\begin{table}[htbp]
+\centering
+\caption{$\tau$별 병합 실측 (단일 연결 상한 추정)}
+\label{tab:sweep}
+\begin{tabular}{ccccc}
+\toprule
+$\tau$ & $\cos\geq\tau$ 쌍 & 감축 수 & 결과 카드 수 & 교차 L3 그룹 \\
+\midrule
+0.94 & 7 & 7 & 1{,}495 & 2 \\
+0.92 & 43 & 41 & 1{,}461 & 14 \\
+0.90 & 186 & 148 & 1{,}354 & 35 \\
+0.88 & 531 & 339 & 1{,}163 & 57 \\
+0.86 & 1{,}153 & 578 & 924 & 63 \\
+0.84 & 2{,}220 & 825 & 677 & 40 \\
+0.82 & 3{,}588 & 1{,}052 & 450 & 34 \\
+0.80 & 5{,}129 & 1{,}253 & 249 & 25 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+$\tau \leq 0.84$ 구간에서 결과 카드 수가 급락하는 것은 의미적 중복 제거가 아니라 단일 연결의 연쇄 병합에 따른 의미 붕괴이며, 이 구간은 채택하지 않는다.
+
+\subsection{최상위 중복 쌍의 성격}
+
+유사도 상위 쌍은 실질 중복이 지배적이다. 개인정보 노출과 데이터의 개인정보(0.956), 잘못된 정보와 허위 정보와 허위 정보 확산(0.955), 독성 콘텐츠와 유해한 콘텐츠 생성(0.944), 시스템 투명성 부족과 모델 투명성 부족(0.937)이 대표적이다. 반면 비폭력 범죄와 폭력 범죄(0.945)처럼 임베딩상 인접하지만 규범적으로 구분해야 하는 쌍도 존재하며, 이들이 교차 L3 심의 큐의 전형이다. 참고로 Physical AI 158장(구 182장 체계)은 최대 쌍별 유사도가 0.909에 그쳐 동일 절차를 적용해도 감축이 거의 발생하지 않음을 별도 실측으로 확인하였다. 이는 해당 집합이 이미 $\tau=0.94$에서 정제되었기 때문이다.
+
+\subsection{HOLD 카드와의 결합 처리}
+
+비물리 1{,}502장 중 614장이 분류 검토 보류(HOLD) 상태이고, 검토 상태 기준으로는 인간 검토 대기가 1{,}205장에 이른다. 상위 유사 쌍의 상당수가 HOLD 카드와 연루되므로, 병합 심의와 HOLD 해소를 동일 라운드로 통합하여 이중 검토를 방지한다.
+
+\section{권고 절차와 목표 범위}
+
+\begin{enumerate}
+\item \textbf{동결.} Physical AI 카드(RAI1-P)는 본 라운드에서 변경하지 않는다.
+\item \textbf{자동 병합.} $\tau=0.94$ 완전 연결로 실질 중복을 즉시 통합한다(수 장에서 수십 장 수준).
+\item \textbf{준자동 병합.} $0.88 \leq s_{ij} < 0.94$의 동일 L3 쌍은 정의·근거 문헌 대조표를 생성하여 일괄 심의 후 병합한다.
+\item \textbf{전문가 심의.} 교차 L3 쌍(약 60그룹)은 실패 메커니즘, 위험원 대 결과, 평가 가능성의 3기준으로 판정한다.
+\item \textbf{HOLD 동시 처리.} HOLD 614장의 재배정·은퇴 판정을 병합 심의와 같은 라운드에서 수행한다.
+\item \textbf{계보와 릴리스.} 모든 병합은 \texttt{merged\_into}와 \texttt{merged\_source\_l4\_ids}에 기록하고, 구 ID 전량의 신 ID 매핑 테이블을 포함하여 v2.19로 날짜 명기 릴리스한다. 이후 EM 기반 L3 배정과 수렴성·내부 일치성·섭동 안정성 검증을 재산출하여 신구 비교를 부록으로 남긴다.
+\end{enumerate}
+
+1차 방어 가능 목표는 비물리 기준 1{,}502장에서 약 1{,}150장에서 1{,}350장이다. 그 이하의 추가 감축은 HOLD 해소 결과와 전문가 심의 판정에 따라 후속 라운드에서 결정한다.
+
+\section*{결론}
+
+$\tau$는 단위 초구면 임베딩 공간에서 두 카드를 동일 리스크 개념으로 판정하는 코사인 유사도 하한이며, 임계값 그래프 $G_\tau$ 위의 완전 연결 병합 규칙과 결합될 때에만 안전한 축소 수단이 된다. 비물리 1{,}502장에는 이 규칙을 적용할 실질 중복이 충분히 존재하므로, $\tau=0.94$ 자동 병합과 $0.88$ 이상 동일 L3 준자동 병합, 교차 L3 전문가 심의를 조합한 단계적 절차로 계층 무결성과 하위 호환성을 보존하면서 카드 수를 축소할 수 있다.
+
+\end{document}

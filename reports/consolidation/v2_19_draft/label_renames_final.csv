@@ -1,0 +1,35 @@
+l4_id,primary_l3_id,old_label_ko,new_label_ko,old_label_en,new_label_en
+RAI4-0847,RAI3-A-SYS-03,설득력 있는 도구의 광범위한 사용은 분열된 인식 공동체에 기여합니다,설득 도구 확산에 따른 인식론적 분절화(epistemic fragmentation),Widespread use of persuasive tools contributes to splintered epistemic communities,Epistemic fragmentation from widespread persuasion tools
+RAI4-0875,RAI3-A-SYS-04,정서적 유대감을 형성합니다,챗봇에 대한 정서적 의존(emotional dependence) 형성,Forms emotional bonds,Emotional dependence on conversational agents
+RAI4-0893,RAI3-G-HLD-01,기대치를 위반했습니다,모의된 정동에 대한 기대 위반(expectation violation),Violated expectations,Expectation violation from simulated affect
+RAI4-0898,RAI3-G-SYS-08,인간은 점점 더 잘못 정렬된 AI 시스템에 통제권을 넘겨줄 수 있습니다,정렬 실패 시스템으로의 점진적 통제권 이양(disempowerment),Humans might increasingly hand over control to misaligned AI systems,Gradual ceding of control to misaligned systems
+RAI4-0907,RAI3-G-HLD-01,의인화 시스템은 과도한 의존과 불안전한 사용으로 이어질 수 있습니다,의인화(anthropomorphism)로 인한 과잉 의존과 비안전 사용,Anthropomorphising systems can lead to overreliance and unsafe use,Overreliance and unsafe use from anthropomorphism
+RAI4-0969,RAI3-A-SYS-01,AGI는 인간 소유자/관리자의 통제에서 벗어나 있습니다,개발 중·후 AGI 통제 상실(loss of control),AGI removing itself from the control of human owners/managers,Loss of AGI containment and control
+RAI4-1056,RAI3-G-HLD-01,민감한 정보를 정확하게 추론하여 개인정보 보호 또는 보안을 침해합니다,추론 시점 민감 속성 추론에 의한 프라이버시 침해,Compromising privacy or security by correctly inferring sensitive information,Privacy violation via inference-time attribute inference
+RAI4-1421,RAI3-G-HLD-01,AI의 발전으로 행위자는 민주적 절차를 훼손할 수 있습니다,AI를 통한 민주적 절차 훼손과 통제력 집중,Developments in AI enable actors to undermine democratic processes,AI-enabled undermining of democratic processes
+RAI4-1423,RAI3-G-HLD-01,AI의 설득력이 영향력을 얻고 해로운 이념을 조장하는 데 오용되고 있습니다,맞춤형 AI 설득의 오용과 유해 이념 확산,AI's persuasive capabilities are misused to gain influence and promote harmful ideologies,Malicious use of tailored AI persuasion
+RAI4-1463,RAI3-G-SYS-02,구현된 하드웨어에 대한 요구사항이 누락되었습니다,하드웨어 연산·전력 요구사항 누락,Missing requirements for the implemented hardware,Omitted compute and power hardware requirements
+RAI4-1616,RAI3-G-HLD-01,미래의 AI 시스템은 인간의 통제를 적극적으로 줄일 수 있습니다,AI의 권력 추구(power-seeking)에 의한 인간 통제 감소,Future AI systems might actively reduce human control,Power-seeking reducing human control
+RAI4-1644,RAI3-A-HLD-01,Agentic LLM은 새로운 위험을 초래합니다,자율 에이전트형 LLM(agentic LLM)의 신규 위험,Agentic LLMs pose novel risks,Novel risks of agentic LLMs
+RAI4-1645,RAI3-G-SYS-08,자연어는 목표를 과소 지정합니다,자연어 프롬프트에 의한 목표 과소지정(goal underspecification),Natural language underspecifies goals,Goal underspecification in natural-language prompts
+RAI4-1646,RAI3-A-SYS-05,목표 지향성은 바람직하지 않은 행동을 장려합니다,목표 지향성이 유발하는 기만·자기보존·권력 추구,Goal-directedness incentivizes undesirable behaviors,Goal-directedness incentivizing deception and power-seeking
+RAI4-1648,RAI3-A-SYS-05,단일 에이전트 안전으로는 다중 에이전트 안전이 보장되지 않습니다,단일 에이전트 안전의 다중 에이전트 비이전성,Multi-agent safety is not assured by single-agent safety,Failure of single-agent safety to ensure multi-agent safety
+RAI4-1649,RAI3-A-SYS-05,기초성은 상관된 실패를 유발할 수 있습니다,공통 기반모델에 따른 상관 실패(correlated failure),Foundationality may cause correlated failures,Correlated failures from shared foundation models
+RAI4-1650,RAI3-A-HLD-01,LLM 에이전트 그룹은 긴급 기능을 보여줄 수 있습니다,LLM 에이전트 집단의 창발적 기능(emergent capabilities),Groups of LLM-Agents may show emergent functionality,Emergent capabilities in LLM-agent collectives
+RAI4-1663,RAI3-G-SOC-10,기업의 힘이 효과적인 거버넌스를 방해할 수 있음,기업 권력 집중에 의한 거버넌스 저해,Corporate power may impeded effective governance,Corporate power concentration impeding governance
+RAI4-0314,RAI3-G-SOC-01,가정 내 행동·생체정보의 무단 수집·유출,가정용 로봇의 행동·생체정보 무단 수집·유출,Unauthorized collection or leakage of in-home behavioral and biometric data,Unauthorized capture of in-home behavioral and biometric data
+RAI4-0745,RAI3-G-HLD-01,LLM 악의적 사용의 탈옥 - 화이트박스 및 블랙박스 공격,화이트박스·블랙박스 LLM 탈옥(jailbreak) 공격,Jailbreak in LLM malicious use - white and black box attacks,White-box and black-box LLM jailbreak attacks
+RAI4-0843,RAI3-G-HLD-01,허위 또는 허위 정보를 유포하여 물질적 피해를 초래하는 행위(예: 의학이나 법학에서,의료·법률 등 고위험 영역의 허위정보에 의한 실질적 피해,Causing material harm by disseminating false or poor information e.g. in medicine or law,Material harm from false information in high-stakes domains
+RAI4-0846,RAI3-G-HLD-01,정보에 대한 신뢰도 저하로 인한 의사결정 능력 저하,정보 신뢰 저하에 따른 의사결정 역량 약화,Reduced decision-making capacity as a result of decreased trust in information,Degraded decision-making from eroded information trust
+RAI4-1062,RAI3-G-INT-06,사용자 신뢰를 활용하고 더 많은 개인 정보에 접근하기 위한 방법,사용자 신뢰 악용을 통한 사적 정보 유도,Avenues for exploiting user trust and accessing more private information,Exploiting user trust to elicit private information
+RAI4-1128,RAI3-G-HLD-01,AI 비서로 인한 이익이나 피해를 평가하기 위한 지표 개발이 어려움,AI 비서 편익·피해 평가 지표의 부재,Difficult to develop metrics for evaluating benefits or harms caused by AI assistants,Lack of metrics for evaluating AI-assistant benefits and harms
+RAI4-1294,RAI3-P-INT-01,위험한 목표로 프로그래밍된 자율무기로 인한 재앙적 위험,위험 표적 프로그래밍 자율무기의 재앙적 위험,Catastrophic risk due to autonomous weapons programmed with dangerous targets,Catastrophic risk from autonomous weapons with dangerous targets
+RAI4-1295,RAI3-G-HLD-01,나노기술의 가속화된 개발로 인해 독성 나노입자가 통제되지 않고 생산됨,AI 가속 나노기술에 의한 독성 나노입자 통제 상실,Accelerated development of nanotechnology produces uncontrolled production of toxic nanoparticles,Uncontrolled toxic-nanoparticle production from AI-accelerated nanotech
+RAI4-1416,RAI3-G-SOC-10,과학적 진보가 빨라지면 거버넌스가 개발 속도를 따라가기가 더 어려워집니다,AI 가속 과학 진보와 거버넌스 격차,Faster scientific progress makes it harder for governance to keep pace with development,Governance lag behind AI-accelerated scientific progress
+RAI4-1422,RAI3-G-SYS-03,AI는 허위 정보와 오해의 소지가 있는 정보의 생산을 확대하는 데 사용됩니다,AI에 의한 허위·오도 정보 생산의 대량화,AI is used to scale up production of false and misleading information,AI-scaled production of false and misleading information
+RAI4-1424,RAI3-G-HLD-01,인간과 다른 목표와 가치를 개발하는 AI로 인한 위험,인간과 상이한 목표를 발전시킨 AI의 통제 장악 위험,Risks from AIs developing goals and values that are different from humans,Risk from AI developing misaligned goals and values
+RAI4-1514,RAI3-G-HLD-01,해석 가능성 기술의 결과와 범위를 오해하거나 과대평가함,해석가능성 결과에 대한 과대평가와 거짓 확신,Misunderstanding or overestimating the results and scope of interpretability techniques,Overestimation of interpretability results
+RAI4-1563,RAI3-G-INT-09,무기 제작을 돕기 위해 AI 시스템을 오용하는 행위,무기 제작 지원을 위한 AI 오용(CBRN 포함),Misuse of AI systems to assist in the creation of weapons,Misuse of AI to assist weapons creation
+RAI4-1617,RAI3-G-HLD-01,인간의 통제(조작)를 줄이는 데 사용할 수 있는 기능,맞춤 설득·조작(manipulation)을 통한 인간 통제 감소,Capabilities that could be used to reduce human control - manipulation,Human control reduction through tailored manipulation
+RAI4-1618,RAI3-G-HLD-01,인간의 통제를 감소시키는 데 사용될 수 있는 기능 - 사이버 공격,자율 사이버 공격(cyber offence)을 통한 인간 통제 감소,Capabilities that could be used to reduce human control - cyber offence,Human control reduction through autonomous cyber offence
+RAI4-1619,RAI3-G-SYS-09,인간의 통제를 줄이는 데 사용할 수 있는 기능 - 자율 복제 및 적응,자율 복제·적응(autonomous replication and adaptation)에 의한 통제 감소,Capabilities that could be used to reduce human control - autonomous replication and adaptation,Human control reduction through autonomous replication and adaptation

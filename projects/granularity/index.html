@@ -54,7 +54,7 @@ exceeds between-cluster attraction (the crossing, τ* = 0.833) — selects the s
 merge → re-derive → repeat generates a <b>granularity flow</b>: twenty-eight consolidations carry the
 inventory from 1,612 down to 32 cards, each step passing a per-iteration random-group null until a
 stepwise validity rule fires at step 15 and delimits the admissible range by itself. The released tiers
-(F1: 1,383 cards; F4: 901 cards) are snapshots of this trajectory. Repeating the analysis with an
+(F1: 1,383 cards; F4: 901 cards; F5: 792 cards) are snapshots of this trajectory. Repeating the analysis with an
 entirely different embedding model selects essentially the same granularity — granularity is a property
 of the inventory, not of the embedding scale.</p>
 
@@ -77,18 +77,22 @@ random-group null.</figcaption></figure>
 
 <h2>Released tiers</h2>
 <table>
-<tr><th>Tier</th><th class="num">τ*</th><th class="num">Cards</th><th>Role</th></tr>
-<tr><td>Master</td><td class="num">–</td><td class="num">1,612</td><td>canonical inventory</td></tr>
-<tr><td>F1</td><td class="num">0.8329</td><td class="num">1,383</td><td>fidelity tier (the crossing)</td></tr>
-<tr><td>F2</td><td class="num">0.8033</td><td class="num">1,154</td><td>second consolidation</td></tr>
-<tr><td>F3</td><td class="num">0.7903</td><td class="num">1,038</td><td>third consolidation</td></tr>
-<tr><td>F4</td><td class="num">0.7753</td><td class="num">901</td><td>compression tier · designated for human audit</td></tr>
+<tr><th>Tier</th><th class="num">&tau;*</th><th class="num">Cards</th><th class="num">Absorbed</th><th>G / A / P</th><th>Role</th></tr>
+<tr><td>Master</td><td class="num">&ndash;</td><td class="num">1,612</td><td class="num">&ndash;</td><td>1,154 / 155 / 303</td><td>canonical inventory</td></tr>
+<tr><td>F1</td><td class="num">0.8329</td><td class="num">1,383</td><td class="num">229</td><td>906 / 140 / 337</td><td>fidelity tier (the crossing) &middot; released for human audit</td></tr>
+<tr><td>F2</td><td class="num">0.8033</td><td class="num">1,154</td><td class="num">458</td><td>734 / 128 / 292</td><td>second consolidation</td></tr>
+<tr><td>F3</td><td class="num">0.7903</td><td class="num">1,038</td><td class="num">574</td><td>653 / 112 / 273</td><td>third consolidation</td></tr>
+<tr><td>F4</td><td class="num">0.7753</td><td class="num">901</td><td class="num">711</td><td>568 / 92 / 241</td><td>compression tier &middot; released for human audit</td></tr>
+<tr><td>F5</td><td class="num">0.7634</td><td class="num">792</td><td class="num">820</td><td>491 / 83 / 218</td><td>extended compression tier &middot; released for human audit</td></tr>
 </table>
+<p style="font-size:12.5px;color:#666;line-height:1.7">Absorbed cards are cumulative from the Master inventory.
+Domain counts follow the EM re-assignment; F2, F3 and F5 inherit theirs from the representative of each merge group. The Societal Safety axis is one concept family applied at three scopes, so its cards are counted under General, Agentic or Physical (RAI3-{G|A|P}-SOC-nn share the same numbering and meaning).</p>
 
 <h2>Interactive materials</h2>
 <div class="links">
 <a href="../../data/experiments/review/f1.html"><b>F1 human audit</b><small>1,383 cards · EM-based L3 assignment · three-criteria review</small></a>
 <a href="../../data/experiments/review/f4.html"><b>F4 human audit</b><small>901 cards · consolidated labels and definitions rewritten for representativeness</small></a>
+<a href="../../data/experiments/review/f5.html"><b>F5 human audit</b><small>792 cards · fifth consolidation · L3 propagated from the F4 representatives</small></a>
 <a href="../../analysis/README.md"><b>Analysis code</b><small>flow, sweeps, and figure-reproduction scripts</small></a>
 </div>
 

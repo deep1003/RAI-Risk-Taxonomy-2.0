@@ -1,48 +1,101 @@
-<!doctype html><html lang=ko><head><meta charset=utf-8><title>RAI 리스크 택소노미 — 휴먼 평가</title><style>
-details.crit{border:1px solid #d8d2c2;background:#fbf9f3;border-radius:6px;margin:10px 0;padding:6px 12px}
-details.crit summary{cursor:pointer;font-size:13px}
-.critb p{font-size:12px;line-height:1.7;color:#3a3a3a;margin:6px 0}
-
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<title>RAI Risk Taxonomy — human audit</title><style>
 *{box-sizing:border-box}
-body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;margin:0;color:#1c1c1c;background:#fff}
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd;padding:10px 18px;z-index:20}
-h1{font-size:18px;margin:0 0 6px} .sub{color:#555;font-size:12.5px;line-height:1.7}
-nav a{display:inline-block;margin-right:10px;padding:4px 11px;border:1px solid #bbb;border-radius:14px;
+body{font-family:-apple-system,'Segoe UI','Noto Sans',sans-serif;margin:0;color:#1c1c1c;background:#fff}
+header{border-bottom:1px solid #ddd;padding:16px 20px}
+h1{font-size:19px;margin:0 0 6px}
+.sub{color:#555;font-size:12.5px;line-height:1.75}
+nav{margin-top:10px}
+nav a{display:inline-block;margin-right:8px;padding:4px 11px;border:1px solid #bbb;border-radius:14px;
  text-decoration:none;color:#333;font-size:12.5px}
 nav a.on{background:#2a2a2a;color:#fff;border-color:#2a2a2a}
-.tools{margin-top:8px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
-input[type=text]{padding:5px 9px;font-size:13px;border:1px solid #ccc;border-radius:4px;width:300px}
-button{padding:4px 10px;border:1px solid #bbb;border-radius:4px;background:#fff;cursor:pointer;font-size:12.5px}
-button.on{background:#2a2a2a;color:#fff} button.go{background:#0f6e56;color:#fff;border-color:#0f6e56}
-main{padding:14px 18px 60px}
-.l1{margin-top:22px;border-top:3px solid #2a2a2a;padding-top:10px}
-.l1 h2{font-size:17px;margin:0 0 2px} .l1 .n{color:#888;font-size:12px;font-weight:400}
-.l2{margin:14px 0 0 6px;border-left:3px solid #c9d3cf;padding-left:12px}
-.l2 h3{font-size:15px;margin:0 0 4px;color:#2c4a41}
-details.l3{margin:6px 0;border:1px solid #e2e2e2;border-radius:6px;background:#fcfcfc}
-details.l3>summary{cursor:pointer;padding:7px 10px;font-size:13.5px;list-style:none}
-details.l3>summary::-webkit-details-marker{display:none}
-details.l3>summary::before{content:'▸ ';color:#888}
-details.l3[open]>summary::before{content:'▾ '}
-details.l3>summary .cnt{color:#0f6e56;font-weight:600;margin-left:6px}
-details.l3>summary .en{color:#777;font-weight:400;font-size:11.5px}
-.l3def{padding:0 12px 6px;color:#666;font-size:11.5px;border-bottom:1px dotted #e5e5e5;margin-bottom:4px}
-table.cards{width:100%;border-collapse:collapse;font-size:12.5px}
-table.cards th{background:#f5f5f3;font-weight:600;padding:5px 8px;border:1px solid #e6e6e6;text-align:left;font-size:11.5px}
-table.cards td{border:1px solid #ececec;padding:6px 8px;vertical-align:top}
-.id{font-family:ui-monospace,monospace;font-size:11px;color:#888;white-space:nowrap;width:96px}
-.lab{font-weight:600} .en{color:#3c3489;font-size:11.5px}
-.def{color:#3a3a3a;font-size:11.5px;margin-top:3px} .defe{color:#777;font-size:11px;margin-top:2px}
-.meta{color:#999;font-size:10.5px;margin-top:4px}
-.tag{display:inline-block;border-radius:3px;padding:0 5px;font-size:10px;margin-right:3px}
-.t-auto{background:#eef3ee;color:#3b6d11} .t-adj{background:#eeedfe;color:#3c3489}
-.t-inh{background:#f1efe8;color:#5f5e5a} .t-cadj{background:#faeeda;color:#854f0b}
-.t-mrg{background:#e1f5ee;color:#0f6e56}
-.t-scG{background:#eef0f7;color:#3c3489} .t-scA{background:#e8f3e8;color:#2c6b2c} .t-scP{background:#fdeee0;color:#a5510b}
-.ev{width:190px;white-space:nowrap}
-.ev label{display:block;font-size:11px;margin:1px 0;cursor:pointer}
-.ev textarea{width:100%;height:34px;font-size:11px;margin-top:3px;border:1px solid #ddd;border-radius:3px}
-tr.flag{background:#fffaf3} tr.bad{background:#fdf3f3}
-#out{width:100%;height:120px;font-family:ui-monospace,monospace;font-size:11px;margin-top:8px;display:none}
-.hidden{display:none!important}
-main{max-width:860px}.card{border:1px solid #ddd;border-radius:8px;padding:14px 16px;margin:12px 0}h2{font-size:16px;margin:0 0 6px}a.big{display:inline-block;margin:6px 8px 0 0;padding:6px 14px;background:#0f6e56;color:#fff;border-radius:5px;text-decoration:none;font-size:13px}a.sec{background:#fff;color:#333;border:1px solid #bbb}</style></head><body><header><h1>RAI 리스크 택소노미 — 휴먼 평가</h1><div class=sub>L4 명칭·정의의 타당성과 L3 매핑의 정확성을 검토합니다. 계층 순서는 General → Agentic → Physical.</div></header><main><div class=card><h2>C83 · τ* = 0.833 (최적점)</h2><div class=sub>1385장 · L3 73개 사용 · cohesion–attraction 교차점의 무제약 참조 티어</div><a class=big href='c83.html'>택소노미 검토</a></div><div class=card><h2>C80 · τ = 0.80</h2><div class=sub>1369장 · L3 73개 사용 · 고해상도(중복만 통합)</div><a class=big href='c80.html'>택소노미 검토</a><a class='big sec' href='c80_sensitivity.html'>민감도 분석</a></div><div class=card><h2>C70 · τ = 0.70</h2><div class=sub>937장 · L3 72개 사용 · 압축본</div><a class=big href='c70.html'>택소노미 검토</a><a class='big sec' href='c70_sensitivity.html'>민감도 분석</a></div><div class=card><h2>한국어 공식 용어사전</h2><div class=sub>TTA·KISA·NIS·ETRI·AI기본법 준거 36항목 — 카드 명칭·정의의 한국어 표기 근거.</div><a class=big href='glossary.html'>용어사전 보기</a></div><div class=card><h2>임베딩 지형도 보고서</h2><div class=sub>L4 카드의 UMAP 2차원 투영(L3 색상) — C80·C70 지형도와 정량 해석.</div><a class=big href='landscape_report.html'>보고서 보기</a></div><div class=card><h2>기술 보고서 — Tier Design</h2><div class=sub>통합·매핑 파이프라인 전체 방법론과 결과 (rev.3, 영문 5쪽).</div><a class=big href='tier_design_report.pdf'>PDF 열기</a></div><div class=card><h2>병합 임계(τ) 선정 보고서</h2><div class=sub>침투 분석으로 도출한 fidelity·compression 최적 구간과 2-티어 릴리스 근거.</div><a class=big href='tau_selection_report.html'>보고서 보기</a></div><div class=card><h2>평가 방법</h2><div class=sub>각 카드마다 두 가지를 판정합니다 — <b>명칭·정의</b>가 리스크로서 적절한가, <b>L3 매핑</b>이 정의에 부합하는가. '수정 필요'/'재배정'을 고르고 메모에 사유나 제안 L3를 적은 뒤 <b>평가 내보내기</b>를 누르면 결과가 클립보드에 복사됩니다.<br><br><b>주의 필요</b> 필터는 심의 배정과 margin&lt;0.01 카드를 모읍니다. <b>병합 카드</b> 필터는 Stage-1에서 통합된 카드만 봅니다.</div></div><div class=card><h2>알려진 문제</h2><div class=sub>검증에서 지적된 사항입니다. 평가 시 참고하세요.<br>· L3 층에 <b>범용 축과 체화(embodied) 축의 개념 중복</b>이 있습니다 — 프라이버시가 G-INT-06과 G-SOC-01에, 편향이 G-INT-04·G-SOC-05·G-SOC-11에 걸쳐 있습니다.<br>· 체화 한정 정의를 가진 L3 노드에 물리 단서가 없는 카드가 다수 배정되어 있습니다.<br>· 기존 실질 L3에 있던 522장이 재배정으로 이동했습니다. 기존 큐레이션이 더 정확한 경우가 있을 수 있습니다.</div></div></main></body></html>
+main{max-width:880px;padding:16px 20px 60px}
+.card{border:1px solid #ddd;border-radius:8px;padding:14px 16px;margin:12px 0}
+h2{font-size:16px;margin:0 0 6px}
+a.big{display:inline-block;margin:8px 8px 0 0;padding:6px 14px;background:#0f6e56;color:#fff;
+ border-radius:5px;text-decoration:none;font-size:13px}
+a.sec{background:#fff;color:#333;border:1px solid #bbb}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0}
+th,td{border:1px solid #e2e2df;padding:6px 9px;text-align:left}th{background:#f4f4f1}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.cur td{background:#eef4f9;font-weight:600}
+</style></head><body>
+<header><h1>RAI Risk Taxonomy — human audit</h1>
+<div class=sub>Audit tiers are snapshots of the granularity flow. Each consolidation step merges at the
+cohesion&ndash;attraction crossing of the current inventory and re-derives the boundary.
+Hierarchy order: General &rarr; Agentic &rarr; Physical.</div>
+<nav><a href='index.html' class=on>Overview</a><a href='f1.html'>F1 audit</a>
+<a href='f4.html'>F4 audit</a><a href='f5.html'>F5 audit</a><a href='glossary.html'>Glossary</a></nav>
+</header><main>
+
+<div class=card><h2>Granularity flow tiers</h2>
+<table>
+<tr><th>Tier</th><th>&tau;*</th><th>Cards</th><th>Merge groups</th><th>Absorbed</th><th>G / A / P</th><th>Role</th></tr>
+<tr><td>Master</td><td class=n>&ndash;</td><td class=n>1,612</td><td class=n>&ndash;</td><td class=n>&ndash;</td><td>1,154 / 155 / 303</td><td>canonical inventory</td></tr>
+<tr class=cur><td>F1</td><td class=n>0.8329</td><td class=n>1,383</td><td class=n>109</td><td class=n>229</td><td>906 / 140 / 337</td><td>fidelity tier (crossing)</td></tr>
+<tr><td>F2</td><td class=n>0.8033</td><td class=n>1,154</td><td class=n>121</td><td class=n>458</td><td>734 / 128 / 292</td><td>second consolidation</td></tr>
+<tr><td>F3</td><td class=n>0.7903</td><td class=n>1,038</td><td class=n>81</td><td class=n>574</td><td>653 / 112 / 273</td><td>third consolidation</td></tr>
+<tr class=cur><td>F4</td><td class=n>0.7753</td><td class=n>901</td><td class=n>82</td><td class=n>711</td><td>568 / 92 / 241</td><td>compression tier</td></tr>
+<tr class=cur><td>F5</td><td class=n>0.7634</td><td class=n>792</td><td class=n>70</td><td class=n>820</td><td>491 / 83 / 218</td><td>extended compression tier</td></tr>
+</table>
+<div class=sub>Merge groups are counted per consolidation step and absorbed cards cumulatively from the Master inventory. Highlighted rows are released for human audit; the F4 audit page reports 211 refined groups, the cumulative count over steps 1&ndash;4. The Societal Safety axis is one concept family applied at three scopes, so its cards are counted under General, Agentic or Physical (RAI3-G|A|P-SOC-nn share the same numbering and meaning).</div>
+</div>
+
+<div class=card><h2>Cross-corpus replication &middot; MIT AI Risk Repository</h2>
+<div class=sub>The same pipeline applied to an independent inventory, with no parameter retuned.
+Entries are the repository's risk categories and subcategories, embedded with the same encoder.</div>
+<table>
+<tr><th>Tier</th><th>&tau;*</th><th>Entries</th><th>Merge groups</th><th>Absorbed</th><th>Median <i>z</i></th><th>Role</th></tr>
+<tr><td>Source</td><td class=n>&ndash;</td><td class=n>1,810</td><td class=n>&ndash;</td><td class=n>&ndash;</td><td class=n>&ndash;</td><td>MIT repository inventory</td></tr>
+<tr><td>M1</td><td class=n>0.8190</td><td class=n>1,423</td><td class=n>189</td><td class=n>387</td><td class=n>4.79</td><td>fidelity tier (crossing)</td></tr>
+<tr><td>M2</td><td class=n>0.7908</td><td class=n>1,230</td><td class=n>104</td><td class=n>580</td><td class=n>3.68</td><td>second consolidation</td></tr>
+<tr><td>M3</td><td class=n>0.7696</td><td class=n>1,022</td><td class=n>115</td><td class=n>788</td><td class=n>3.53</td><td>third consolidation</td></tr>
+<tr><td>M4</td><td class=n>0.7545</td><td class=n>879</td><td class=n>87</td><td class=n>931</td><td class=n>3.17</td><td>compression tier</td></tr>
+<tr><td>M5</td><td class=n>0.7374</td><td class=n>727</td><td class=n>99</td><td class=n>1,083</td><td class=n>3.00</td><td>extended compression tier</td></tr>
+</table>
+<div class=sub>Merge groups and median <i>z</i> are per consolidation step; absorbed entries are cumulative.
+Every step clears the validity rule, with at least 98.9% of merge groups exceeding the size-matched random-group
+null by two standard deviations. The domain columns are omitted because the MIT repository uses its own top-level
+scheme rather than the General / Agentic / Physical families. This replication is reported for reference only and
+is not released for human audit.</div>
+</div>
+
+<div class=card><h2>Highest-similarity pairs in the source inventories</h2>
+<div class=sub>The ten closest card pairs by cosine similarity before any consolidation. These are the pairs
+the merge boundary has to adjudicate first, and they show what near-duplication looks like in each corpus.</div>
+
+<h3 style="font-size:14px;margin:14px 0 4px">Our Master inventory (1,612 cards)</h3>
+<table><tr><th>#</th><th>cos</th><th>Card A</th><th>Card B</th></tr><tr><td class=n>1</td><td class=n>0.9404</td><td><b>RAI4-0506</b> Ownership uncertainty for AI-generated content</td><td><b>RAI4-1368</b> Uncertain IP status of AI-generated content</td></tr><tr><td class=n>2</td><td class=n>0.9252</td><td><b>RAI4-0551</b> Objective misalignment with human intent</td><td><b>RAI4-0591</b> Misalignment with human values</td></tr><tr><td class=n>3</td><td class=n>0.9231</td><td><b>RAI4-1608</b> Reputational damage from use or misuse of AI systems</td><td><b>RAI4-1726</b> Reputational harm attributable to AI systems</td></tr><tr><td class=n>4</td><td class=n>0.9178</td><td><b>RAI4-0523</b> Lack of system transparency</td><td><b>RAI4-0596</b> Lack of model transparency</td></tr><tr><td class=n>5</td><td class=n>0.9164</td><td><b>RAI4-0228</b> Explicit hazard non-rejection</td><td><b>RAI4-0229</b> Implicit hazard non-rejection</td></tr><tr><td class=n>6</td><td class=n>0.9142</td><td><b>RAI4-0682</b> Generation of content enabling nonviolent crimes</td><td><b>RAI4-0691</b> Generation of content enabling violent crimes</td></tr><tr><td class=n>7</td><td class=n>0.9079</td><td><b>RAI4-1055</b> Compromising privacy by leaking sensitive information</td><td><b>RAI4-1072</b> Compromising privacy by leaking private information</td></tr><tr><td class=n>8</td><td class=n>0.9031</td><td><b>RAI4-0554</b> Active loss of control</td><td><b>RAI4-0856</b> Loss of control risks</td></tr><tr><td class=n>9</td><td class=n>0.9007</td><td><b>RAI4-1732</b> Disinformation spread via generative AI</td><td><b>RAI4-1733</b> Generative AI-driven disinformation spread</td></tr><tr><td class=n>10</td><td class=n>0.8994</td><td><b>RAI4-0863</b> AI-generated advice influencing user moral judgment</td><td><b>RAI4-0870</b> Financial market instability from GPAI agents</td></tr></table>
+
+<h3 style="font-size:14px;margin:16px 0 4px">MIT AI Risk Repository (1,795 entries)</h3>
+<table><tr><th>#</th><th>cos</th><th>Entry A</th><th>Entry B</th></tr><tr><td class=n>1</td><td class=n>1.0000</td><td><b>Weidinger2023</b> Erosion of trust in public information</td><td><b>Li2025</b> Erosion of trust in public information</td></tr><tr><td class=n>2</td><td class=n>1.0000</td><td><b>Weidinger2023</b> Unfair capability distribution</td><td><b>Li2025</b> Unfair capability distribution</td></tr><tr><td class=n>3</td><td class=n>1.0000</td><td><b>Vidgen2024</b> Self-harm</td><td><b>Gipiškis2024</b> Self-harm</td></tr><tr><td class=n>4</td><td class=n>0.9994</td><td><b>Weidinger2023</b> Propagating misconceptions/ false beliefs</td><td><b>Li2025</b> Propagating misconceptions / false beliefs</td></tr><tr><td class=n>5</td><td class=n>0.9963</td><td><b>Weidinger2023</b> Toxic content</td><td><b>Li2025</b> Toxic content</td></tr><tr><td class=n>6</td><td class=n>0.9954</td><td><b>Gipiškis2024</b> Reinforcement learning AI (Training design related)</td><td><b>Gipiškis2024</b> Reinforcement learning AI (Training performance related)</td></tr><tr><td class=n>7</td><td class=n>0.9951</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Accuracy)</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Reliability)</td></tr><tr><td class=n>8</td><td class=n>0.9919</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Robustness)</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Reliability)</td></tr><tr><td class=n>9</td><td class=n>0.9919</td><td><b>Gipiškis2024</b> Intentional</td><td><b>Gipiškis2024</b> Unintentional</td></tr><tr><td class=n>10</td><td class=n>0.9904</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Robustness)</td><td><b>Gipiškis2024</b> Supervised/unsupervised AI (AI training performance related - Accuracy)</td></tr></table>
+<div class=sub>Entry labels prefixed by their source citation. Placeholder rows without a category label are
+excluded. 4 of the ten pairs are verbatim duplicates carried in from different source
+papers, which is the kind of redundancy the crossing boundary removes first; our inventory has no exact
+duplicates, so its closest pairs are paraphrases rather than repeats.</div>
+</div>
+
+<div class=card><h2>F1 &middot; &tau;* = 0.8329</h2>
+<div class=sub>1,383 cards &middot; the crossing boundary of the original inventory &middot; L3 re-assigned by the seed-anchored hybrid EM.</div>
+<a class=big href='f1.html'>Open audit</a></div>
+
+<div class=card><h2>F4 &middot; &tau;* = 0.7753</h2>
+<div class=sub>901 cards &middot; four consolidations &middot; consolidated labels and definitions rewritten for representativeness.</div>
+<a class=big href='f4.html'>Open audit</a></div>
+
+<div class=card><h2>F5 &middot; &tau;* = 0.7634</h2>
+<div class=sub>792 cards &middot; five consolidations &middot; L3 propagated from the F4 representatives.</div>
+<a class=big href='f5.html'>Open audit</a></div>
+
+<div class=card><h2>Korean terminology reference</h2>
+<div class=sub>36 entries aligned with TTA, KISA, NIS, ETRI and the AI Framework Act &mdash; the basis for
+the Korean wording of card labels and definitions.</div>
+<a class='big sec' href='glossary.html'>Open glossary</a></div>
+
+<div class=card><h2>How to audit</h2>
+<div class=sub>Judge each card on three criteria &mdash; <b>&#9312; description adequacy</b> (is the risk
+correctly described?), <b>&#9313; L3 mapping</b> (is the assigned L3 appropriate?), and
+<b>&#9314; redundancy</b> (does it duplicate other cards?). Record the verdict, add a note where useful,
+and press <b>Export judgments</b> before closing; judgments are not saved automatically.</div></div>
+
+</main></body></html>

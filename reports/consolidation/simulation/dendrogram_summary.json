@@ -1,0 +1,619 @@
+{
+  "summary": {
+    "complete": {
+      "0.94": {
+        "n_clusters": 1658,
+        "reduction": 2,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "multi_groups": 2,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.88": {
+        "n_clusters": 1648,
+        "reduction": 12,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "multi_groups": 12,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.82": {
+        "n_clusters": 1545,
+        "reduction": 115,
+        "largest": 4,
+        "top5": [
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "multi_groups": 109,
+        "crossL1": 11,
+        "physmix": 1
+      },
+      "0.76": {
+        "n_clusters": 1233,
+        "reduction": 427,
+        "largest": 5,
+        "top5": [
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "multi_groups": 346,
+        "crossL1": 64,
+        "physmix": 9
+      },
+      "0.7": {
+        "n_clusters": 844,
+        "reduction": 816,
+        "largest": 8,
+        "top5": [
+          8,
+          8,
+          7,
+          7,
+          7
+        ],
+        "multi_groups": 510,
+        "crossL1": 115,
+        "physmix": 17
+      }
+    },
+    "average": {
+      "0.94": {
+        "n_clusters": 1658,
+        "reduction": 2,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "multi_groups": 2,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.88": {
+        "n_clusters": 1648,
+        "reduction": 12,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "multi_groups": 12,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.82": {
+        "n_clusters": 1545,
+        "reduction": 115,
+        "largest": 4,
+        "top5": [
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "multi_groups": 108,
+        "crossL1": 11,
+        "physmix": 1
+      },
+      "0.76": {
+        "n_clusters": 1189,
+        "reduction": 471,
+        "largest": 9,
+        "top5": [
+          9,
+          7,
+          6,
+          6,
+          5
+        ],
+        "multi_groups": 321,
+        "crossL1": 65,
+        "physmix": 9
+      },
+      "0.7": {
+        "n_clusters": 702,
+        "reduction": 958,
+        "largest": 21,
+        "top5": [
+          21,
+          17,
+          16,
+          15,
+          14
+        ],
+        "multi_groups": 384,
+        "crossL1": 109,
+        "physmix": 19
+      }
+    },
+    "single": {
+      "0.94": {
+        "n_clusters": 1658,
+        "reduction": 2,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "multi_groups": 2,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.88": {
+        "n_clusters": 1648,
+        "reduction": 12,
+        "largest": 2,
+        "top5": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "multi_groups": 12,
+        "crossL1": 1,
+        "physmix": 0
+      },
+      "0.82": {
+        "n_clusters": 1514,
+        "reduction": 146,
+        "largest": 8,
+        "top5": [
+          8,
+          7,
+          6,
+          5,
+          5
+        ],
+        "multi_groups": 99,
+        "crossL1": 13,
+        "physmix": 2
+      },
+      "0.76": {
+        "n_clusters": 827,
+        "reduction": 833,
+        "largest": 600,
+        "top5": [
+          600,
+          22,
+          18,
+          9,
+          8
+        ],
+        "multi_groups": 114,
+        "crossL1": 30,
+        "physmix": 11
+      },
+      "0.7": {
+        "n_clusters": 128,
+        "reduction": 1532,
+        "largest": 1514,
+        "top5": [
+          1514,
+          3,
+          3,
+          2,
+          2
+        ],
+        "multi_groups": 18,
+        "crossL1": 3,
+        "physmix": 1
+      }
+    }
+  },
+  "silhouette": {
+    "0.94": 0.0018976955907419324,
+    "0.88": 0.007394418586045504,
+    "0.82": 0.03769416734576225,
+    "0.76": 0.08721863478422165,
+    "0.7": 0.11842748522758484
+  },
+  "reliability": {
+    "0.01": {
+      "0.94": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.88": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.82": {
+        "mean": 0.10103798529413457,
+        "std": 0.015211220920031823
+      },
+      "0.76": {
+        "mean": 0.21267696202031558,
+        "std": 0.01056131456267849
+      },
+      "0.7": {
+        "mean": 0.43261577599623746,
+        "std": 0.011014017981279014
+      }
+    },
+    "0.03": {
+      "0.94": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.88": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.82": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.76": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.7": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "0.05": {
+      "0.94": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.88": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.82": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.76": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "0.7": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "l3_mapping_reliability": {
+    "em_J_curve": [
+      0.8320062160491943,
+      0.8453269004821777
+    ],
+    "top1": 1.0,
+    "top3": 1.0,
+    "margin": [
+      0.05971121788024902,
+      0.011162161827087402,
+      0.0012916922569274902,
+      0.0013319849967956543,
+      0.06936222314834595,
+      0.0638200044631958,
+      0.08707582950592041,
+      0.00951308012008667
+    ],
+    "perturbation": {
+      "0.01": {
+        "mean": 0.925,
+        "std": 0.08196798155377501
+      },
+      "0.03": {
+        "mean": 0.82875,
+        "std": 0.1167997752566331
+      },
+      "0.05": {
+        "mean": 0.801875,
+        "std": 0.12517331734439252
+      }
+    }
+  },
+  "tau_sweep": {
+    "tau": [
+      0.94,
+      0.92,
+      0.9,
+      0.88,
+      0.86,
+      0.84,
+      0.82,
+      0.8,
+      0.78,
+      0.76,
+      0.74,
+      0.72,
+      0.7
+    ],
+    "n_groups": [
+      2,
+      2,
+      7,
+      12,
+      29,
+      53,
+      109,
+      188,
+      249,
+      346,
+      423,
+      474,
+      510
+    ],
+    "auto": [
+      0.0,
+      0.0,
+      0.5714285714285714,
+      0.5,
+      0.3793103448275862,
+      0.32075471698113206,
+      0.3394495412844037,
+      0.31382978723404253,
+      0.27710843373493976,
+      0.2658959537572254,
+      0.2576832151300236,
+      0.25738396624472576,
+      0.23137254901960785
+    ],
+    "margin": [
+      0.012045353651046753,
+      0.012045353651046753,
+      0.03417201712727547,
+      0.028445357456803322,
+      0.032855600118637085,
+      0.036637626588344574,
+      0.037923287600278854,
+      0.038756027817726135,
+      0.0366755835711956,
+      0.03519444540143013,
+      0.03372729942202568,
+      0.031392652541399,
+      0.03015189617872238
+    ],
+    "agree": [
+      1.0,
+      0.98,
+      0.9971428571428572,
+      0.92,
+      0.9448275862068966,
+      0.950188679245283,
+      0.950091743119266,
+      0.9570212765957448,
+      0.9615261044176706,
+      0.962543352601156,
+      0.964113475177305,
+      0.9519831223628691,
+      0.9562352941176471
+    ],
+    "sil": [
+      0.0018976955907419324,
+      0.0018976955907419324,
+      0.005098107736557722,
+      0.007394418586045504,
+      0.015219737775623798,
+      0.0228069219738245,
+      0.03769416734576225,
+      0.05576964095234871,
+      0.06919175386428833,
+      0.08721863478422165,
+      0.10150279104709625,
+      0.11237969249486923,
+      0.11842748522758484
+    ],
+    "crossL1_rate": [
+      0.5,
+      0.5,
+      0.14285714285714285,
+      0.08333333333333333,
+      0.06896551724137931,
+      0.03773584905660377,
+      0.10091743119266056,
+      0.13297872340425532,
+      0.1606425702811245,
+      0.18497109826589594,
+      0.20567375886524822,
+      0.21308016877637131,
+      0.22549019607843138
+    ],
+    "giant_frac": [
+      0.0012048192771084338,
+      0.0012048192771084338,
+      0.0012048192771084338,
+      0.0012048192771084338,
+      0.0018072289156626507,
+      0.0024096385542168677,
+      0.004819277108433735,
+      0.02650602409638554,
+      0.13192771084337349,
+      0.3614457831325301,
+      0.6216867469879518,
+      0.7945783132530121,
+      0.9120481927710843
+    ]
+  },
+  "tau_floor": 0.94,
+  "coarse_examples": [
+    {
+      "cluster": 750,
+      "size": 8,
+      "l1_mix": {
+        "RAI1-G": 8
+      },
+      "sample_labels": [
+        "Autonomy loss in welfare decision systems",
+        "Impact on human agency",
+        "Limited human oversight in decisions",
+        "Loss of human agency and autonomy",
+        "Agency erosion in human-AI decision loops",
+        "Reduced autonomy/responsibility"
+      ]
+    },
+    {
+      "cluster": 819,
+      "size": 8,
+      "l1_mix": {
+        "RAI1-G": 8
+      },
+      "sample_labels": [
+        "AI-generated election misinformation",
+        "Manipulation of public opinion",
+        "AI-generated scams",
+        "Disinformation generation",
+        "Misinformation and disinformation",
+        "Politically motivated misuse"
+      ]
+    },
+    {
+      "cluster": 221,
+      "size": 7,
+      "l1_mix": {
+        "RAI1-A": 4,
+        "RAI1-G": 3
+      },
+      "sample_labels": [
+        "AI advice overreliance",
+        "Sycophantic advice dependence",
+        "Educational AI overreliance",
+        "Long-horizon planning overreliance",
+        "Behavioral dependency induction",
+        "Automation overreliance"
+      ]
+    },
+    {
+      "cluster": 793,
+      "size": 7,
+      "l1_mix": {
+        "RAI1-G": 7
+      },
+      "sample_labels": [
+        "Cyber offense automation",
+        "AI-enabled offensive cyber operations",
+        "Cyber offence",
+        "AI-Assisted software vulnerability discovery",
+        "Offensive cyber operation capability",
+        "Abuse of AI for cyberattacks"
+      ]
+    },
+    {
+      "cluster": 591,
+      "size": 7,
+      "l1_mix": {
+        "RAI1-G": 7
+      },
+      "sample_labels": [
+        "Lack of ability to generate accurate information",
+        "False or misleading information",
+        "Inaccurate content with fabricated sourcing",
+        "Unreliable model output quality",
+        "Multimodal hallucination",
+        "Disseminating false or misleading information"
+      ]
+    },
+    {
+      "cluster": 520,
+      "size": 7,
+      "l1_mix": {
+        "RAI1-G": 7
+      },
+      "sample_labels": [
+        "Loss of freedom of speech/expression",
+        "Loss of freedom of assembly/association",
+        "Loss of social rights and access to public servi",
+        "Loss of right to information",
+        "Loss of right to free elections",
+        "Loss of right to liberty and security"
+      ]
+    },
+    {
+      "cluster": 164,
+      "size": 6,
+      "l1_mix": {
+        "RAI1-P": 6
+      },
+      "sample_labels": [
+        "Kinematics and reach constraint violation",
+        "Workspace limit violation",
+        "Critical separation-distance violation",
+        "Whole-body reach-limit violation",
+        "Speed and force limit violation",
+        "Proxemic boundary violation"
+      ]
+    },
+    {
+      "cluster": 148,
+      "size": 6,
+      "l1_mix": {
+        "RAI1-G": 6
+      },
+      "sample_labels": [
+        "Missing standardized humanoid sensor safety test",
+        "Non-comparable evidence for humanoid safety clai",
+        "Missing measurable compliance criteria for perso",
+        "Missing repeatable test methods for domestic hum",
+        "Missing institutional enforcement of humanoid sa",
+        "No applicable certification pathway for general-"
+      ]
+    },
+    {
+      "cluster": 98,
+      "size": 6,
+      "l1_mix": {
+        "RAI1-G": 6
+      },
+      "sample_labels": [
+        "Intellectual property violation",
+        "Risks of copyright infringement",
+        "Intellectual property rights violations",
+        "Copyright - authorship",
+        "Training on copyrighted works",
+        "Output-level copyright infringement"
+      ]
+    },
+    {
+      "cluster": 44,
+      "size": 6,
+      "l1_mix": {
+        "RAI1-A": 1,
+        "RAI1-G": 5
+      },
+      "sample_labels": [
+        "Decision bias",
+        "Discriminative data bias",
+        "Fairness - bias",
+        "Data representation imbalance",
+        "Model bias",
+        "Sensitive-attribute decision bias"
+      ]
+    }
+  ]
+}

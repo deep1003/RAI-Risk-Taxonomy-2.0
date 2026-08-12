@@ -1,0 +1,130 @@
+{
+ "unconstrained|complete|0.8": {
+  "n": 1458,
+  "multi": 188,
+  "largest": 4,
+  "mean_multi_size": 2.07,
+  "crossL3": 100,
+  "dnm_viol": 4
+ },
+ "unconstrained|complete|0.7": {
+  "n": 844,
+  "multi": 510,
+  "largest": 8,
+  "mean_multi_size": 2.6,
+  "crossL3": 341,
+  "dnm_viol": 4
+ },
+ "unconstrained|average|0.8": {
+  "n": 1445,
+  "multi": 184,
+  "largest": 5,
+  "mean_multi_size": 2.17,
+  "crossL3": 102,
+  "dnm_viol": 4
+ },
+ "unconstrained|average|0.7": {
+  "n": 702,
+  "multi": 384,
+  "largest": 21,
+  "mean_multi_size": 3.49,
+  "crossL3": 270,
+  "dnm_viol": 4
+ },
+ "unconstrained|centroid|0.8": {
+  "n": 1383,
+  "multi": 161,
+  "largest": 12,
+  "mean_multi_size": 2.72,
+  "crossL3": 97,
+  "dnm_viol": 4
+ },
+ "unconstrained|centroid|0.7": {
+  "n": 354,
+  "multi": 77,
+  "largest": 1191,
+  "mean_multi_size": 17.96,
+  "crossL3": 49,
+  "dnm_viol": 4
+ },
+ "unconstrained|single|0.8": {
+  "n": 1360,
+  "multi": 150,
+  "largest": 44,
+  "mean_multi_size": 3.0,
+  "crossL3": 93,
+  "dnm_viol": 4
+ },
+ "unconstrained|single|0.7": {
+  "n": 128,
+  "multi": 18,
+  "largest": 1514,
+  "mean_multi_size": 86.11,
+  "crossL3": 13,
+  "dnm_viol": 4
+ },
+ "cannot_link|complete|0.8": {
+  "n": 1462,
+  "multi": 184,
+  "largest": 4,
+  "mean_multi_size": 2.08,
+  "crossL3": 98,
+  "dnm_viol": 0
+ },
+ "cannot_link|complete|0.7": {
+  "n": 847,
+  "multi": 509,
+  "largest": 8,
+  "mean_multi_size": 2.6,
+  "crossL3": 340,
+  "dnm_viol": 0
+ },
+ "cannot_link|average|0.8": {
+  "n": 1449,
+  "multi": 181,
+  "largest": 5,
+  "mean_multi_size": 2.17,
+  "crossL3": 100,
+  "dnm_viol": 0
+ },
+ "cannot_link|average|0.7": {
+  "n": 705,
+  "multi": 382,
+  "largest": 21,
+  "mean_multi_size": 3.5,
+  "crossL3": 269,
+  "dnm_viol": 0
+ },
+ "cannot_link|centroid|0.8": {
+  "n": 1387,
+  "multi": 158,
+  "largest": 12,
+  "mean_multi_size": 2.73,
+  "crossL3": 95,
+  "dnm_viol": 0
+ },
+ "cannot_link|centroid|0.7": {
+  "n": 353,
+  "multi": 75,
+  "largest": 1194,
+  "mean_multi_size": 18.43,
+  "crossL3": 48,
+  "dnm_viol": 1
+ },
+ "cannot_link|single|0.8": {
+  "n": 1363,
+  "multi": 147,
+  "largest": 44,
+  "mean_multi_size": 3.02,
+  "crossL3": 91,
+  "dnm_viol": 1
+ },
+ "cannot_link|single|0.7": {
+  "n": 129,
+  "multi": 18,
+  "largest": 1513,
+  "mean_multi_size": 86.06,
+  "crossL3": 13,
+  "dnm_viol": 3
+ }
+}

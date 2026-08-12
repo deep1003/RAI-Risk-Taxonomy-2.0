@@ -1,0 +1,1198 @@
+{
+ "round": "mistranslation_fix_20260806",
+ "count": 170,
+ "process": "11개 배치(장당 150) 전수 전문 검수, 오역·MT직역·문장형만 선별",
+ "fixes": [
+  {
+   "l4_id": "RAI4-0004",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "자율 에이전트에 의한 안전하지 않은 탐사",
+   "new_label_ko": "자율 에이전트의 안전하지 않은 탐험(exploration)",
+   "label_en": "Unsafe exploration by autonomous agents"
+  },
+  {
+   "l4_id": "RAI4-0008",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "다중 에이전트 긴급 위험 증폭",
+   "new_label_ko": "다중 에이전트 창발적(emergent) 위험 증폭",
+   "label_en": "Multi-agent emergent risk amplification"
+  },
+  {
+   "l4_id": "RAI4-0009",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "다중 에이전트 시스템의 계단식 오류",
+   "new_label_ko": "다중 에이전트 시스템의 연쇄 장애(cascading failure)",
+   "label_en": "Cascading failure in multi-agent systems"
+  },
+  {
+   "l4_id": "RAI4-0015",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "자율 에이전트에 대한 신속한 주입",
+   "new_label_ko": "자율 에이전트 대상 프롬프트 주입(prompt injection)",
+   "label_en": "Prompt injection against autonomous agents"
+  },
+  {
+   "l4_id": "RAI4-0020",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "유해 에이전트 성능 구현",
+   "new_label_ko": "유해 에이전트 역량(capability) 실현",
+   "label_en": "Harmful agent capability realization"
+  },
+  {
+   "l4_id": "RAI4-0021",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "거절 능력 혼란",
+   "new_label_ko": "거절-능력 교란(confounding)",
+   "label_en": "Refusal-capability confounding"
+  },
+  {
+   "l4_id": "RAI4-0035",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "보이지 않는 도구 일반화 실패",
+   "new_label_ko": "미학습 도구(unseen tool) 일반화 실패",
+   "label_en": "Unseen tool generalization failure"
+  },
+  {
+   "l4_id": "RAI4-0053",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "알고리즘 의지 실패",
+   "new_label_ko": "알고리즘 구제(recourse) 실패",
+   "label_en": "Algorithmic recourse failure"
+  },
+  {
+   "l4_id": "RAI4-0054",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "의사결정 경합 실패",
+   "new_label_ko": "의사결정 이의제기 가능성(contestability) 실패",
+   "label_en": "Decision contestability failure"
+  },
+  {
+   "l4_id": "RAI4-0055",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "자동화된 의사결정으로 인한 프로세스 실패",
+   "new_label_ko": "자동화된 의사결정의 적법절차(due process) 실패",
+   "label_en": "Automated decision due-process failure"
+  },
+  {
+   "l4_id": "RAI4-0056",
+   "primary_l3_id": "RAI3-G-SYS-10",
+   "old_label_ko": "경로 불투명도 해결",
+   "new_label_ko": "구제 경로(remedy pathway) 불투명성",
+   "label_en": "Remedy pathway opacity"
+  },
+  {
+   "l4_id": "RAI4-0115",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "대행사 위임 잠금",
+   "new_label_ko": "행위주체성(agency) 위임 고착(lock-in)",
+   "label_en": "Agency delegation lock-in"
+  },
+  {
+   "l4_id": "RAI4-0116",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "인간 무시 경로 실패",
+   "new_label_ko": "인간 개입·무효화(override) 경로 실패",
+   "label_en": "Human override pathway failure"
+  },
+  {
+   "l4_id": "RAI4-0119",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "알고리즘에 기반한 신원 변경",
+   "new_label_ko": "알고리즘 기반 정체성(identity) 변화",
+   "label_en": "Algorithmically informed identity change"
+  },
+  {
+   "l4_id": "RAI4-0124",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "AI 중재 의사결정 경쟁성 손실",
+   "new_label_ko": "AI 매개 의사결정 이의제기 가능성(contestability) 상실",
+   "label_en": "AI-mediated decision contestability loss"
+  },
+  {
+   "l4_id": "RAI4-0125",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "사용자 의지 경로 실패",
+   "new_label_ko": "사용자 구제 경로(recourse) 실패",
+   "label_en": "User recourse pathway failure"
+  },
+  {
+   "l4_id": "RAI4-0129",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "AI에 대한 잘못된 신뢰",
+   "new_label_ko": "AI 신뢰 오보정(miscalibrated trust)",
+   "label_en": "Miscalibrated trust in AI"
+  },
+  {
+   "l4_id": "RAI4-0130",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "알고리즘 혐오 오보정",
+   "new_label_ko": "알고리즘 기피(algorithm aversion) 오보정",
+   "label_en": "Algorithm aversion miscalibration"
+  },
+  {
+   "l4_id": "RAI4-0151",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "소셜 로봇의 첨부 파일 조작",
+   "new_label_ko": "소셜 로봇의 애착(attachment) 조작",
+   "label_en": "Attachment manipulation in social robots"
+  },
+  {
+   "l4_id": "RAI4-0155",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "AI 설득에 대한 약간의 민감성",
+   "new_label_ko": "미성년자의 AI 설득 취약성",
+   "label_en": "Minor susceptibility to AI persuasion"
+  },
+  {
+   "l4_id": "RAI4-0159",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "AI 동료가 외로움을 대체",
+   "new_label_ko": "AI 동반자에 의한 외로움 대체",
+   "label_en": "Loneliness substitution by AI companions"
+  },
+  {
+   "l4_id": "RAI4-0160",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "AI 대화의 조난 증폭",
+   "new_label_ko": "AI 대화의 고통(distress) 증폭",
+   "label_en": "Distress amplification in AI conversations"
+  },
+  {
+   "l4_id": "RAI4-0167",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "트러스트 인터페이스 불일치",
+   "new_label_ko": "신뢰-인터페이스 불일치",
+   "label_en": "Trust-interface mismatch"
+  },
+  {
+   "l4_id": "RAI4-0169",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "AI 의사결정 지원의 피로 경고",
+   "new_label_ko": "AI 의사결정 지원의 경고 피로(alert fatigue)",
+   "label_en": "Alert fatigue in AI decision support"
+  },
+  {
+   "l4_id": "RAI4-0179",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "전력 비대칭 AI 상호작용",
+   "new_label_ko": "권력 비대칭 AI 상호작용",
+   "label_en": "Power-asymmetric AI interaction"
+  },
+  {
+   "l4_id": "RAI4-0196",
+   "primary_l3_id": "RAI3-P-INT-01",
+   "old_label_ko": "LLM Agent 탈옥",
+   "new_label_ko": "체화형 LLM 맥락적 탈옥(contextual jailbreak)",
+   "label_en": "Embodied LLM contextual jailbreak"
+  },
+  {
+   "l4_id": "RAI4-0254",
+   "primary_l3_id": "RAI3-P-SYS-02",
+   "old_label_ko": "원격 조작 휴머노이드 리스크",
+   "new_label_ko": "원격조작 휴머노이드 안전 오버라이드 실패",
+   "label_en": "Teleoperated humanoid safety override failure"
+  },
+  {
+   "l4_id": "RAI4-0363",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "소수 값 삭제",
+   "new_label_ko": "소수 가치 소거",
+   "label_en": "Minority-value erasure"
+  },
+  {
+   "l4_id": "RAI4-0366",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "최적화 중인 값 드리프트",
+   "new_label_ko": "최적화 하의 가치 드리프트(value drift)",
+   "label_en": "Value drift under optimization"
+  },
+  {
+   "l4_id": "RAI4-0376",
+   "primary_l3_id": "RAI3-G-SYS-05",
+   "old_label_ko": "현지화된 값 정렬 실패",
+   "new_label_ko": "현지화된 가치 정렬 실패",
+   "label_en": "Localized value alignment failure"
+  },
+  {
+   "l4_id": "RAI4-0371",
+   "primary_l3_id": "RAI3-G-SYS-04",
+   "old_label_ko": "서구의 규범적 불이행",
+   "new_label_ko": "서구 규범 기본값화(normative defaulting)",
+   "label_en": "Western normative defaulting"
+  },
+  {
+   "l4_id": "RAI4-0424",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "이질적인 영향",
+   "new_label_ko": "차별적 영향(disparate impact)",
+   "label_en": "Disparate impact"
+  },
+  {
+   "l4_id": "RAI4-0426",
+   "primary_l3_id": "RAI3-G-INT-04",
+   "old_label_ko": "혐오발언 세대",
+   "new_label_ko": "혐오발언 생성",
+   "label_en": "Hate speech generation"
+  },
+  {
+   "l4_id": "RAI4-0434",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "신속한 주입",
+   "new_label_ko": "프롬프트 주입(prompt injection)",
+   "label_en": "Prompt injection"
+  },
+  {
+   "l4_id": "RAI4-0438",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "회수 오염",
+   "new_label_ko": "검색 오염(retrieval poisoning)",
+   "label_en": "Retrieval poisoning"
+  },
+  {
+   "l4_id": "RAI4-0443",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "소스 오류",
+   "new_label_ko": "출처 오귀속(source misattribution)",
+   "label_en": "Source misattribution"
+  },
+  {
+   "l4_id": "RAI4-0415",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "문화권 재분배",
+   "new_label_ko": "문화적 권위 재분배",
+   "label_en": "Redistribution of cultural authority"
+  },
+  {
+   "l4_id": "RAI4-0442",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "환각적인 증거",
+   "new_label_ko": "환각 기반 허위 증거",
+   "label_en": "Hallucinated evidence"
+  },
+  {
+   "l4_id": "RAI4-0440",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "AI가 생성한 선거 잘못된 정보",
+   "new_label_ko": "AI 생성 선거 허위정보",
+   "label_en": "AI-generated election misinformation"
+  },
+  {
+   "l4_id": "RAI4-0408",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "지역적 피해가 보이지 않음",
+   "new_label_ko": "지역 피해 비가시성",
+   "label_en": "Local harms invisibility"
+  },
+  {
+   "l4_id": "RAI4-0411",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "언어별 피해가 제대로 감지되지 않음",
+   "new_label_ko": "언어별 피해 과소탐지",
+   "label_en": "Language-specific harm under-detection"
+  },
+  {
+   "l4_id": "RAI4-0385",
+   "primary_l3_id": "RAI3-G-SOC-10",
+   "old_label_ko": "가져온 AI 거버넌스 불일치",
+   "new_label_ko": "도입된 AI 거버넌스 불일치",
+   "label_en": "Imported AI governance mismatch"
+  },
+  {
+   "l4_id": "RAI4-0375",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "문화적 가치의 잘못된 조정",
+   "new_label_ko": "문화적 가치 오보정(miscalibration)",
+   "label_en": "Cultural value miscalibration"
+  },
+  {
+   "l4_id": "RAI4-0388",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "AI에 의한 문화적 인식말살",
+   "new_label_ko": "AI에 의한 문화적 인식론 말살(epistemicide)",
+   "label_en": "Cultural epistemicide by AI"
+  },
+  {
+   "l4_id": "RAI4-0401",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "가치 경합 손실",
+   "new_label_ko": "가치 이의제기 가능성 상실(contestability)",
+   "label_en": "Value contestability loss"
+  },
+  {
+   "l4_id": "RAI4-0322",
+   "primary_l3_id": "RAI3-P-INT-06",
+   "old_label_ko": "다중 센서 융합 충돌",
+   "new_label_ko": "다중 센서 융합 상충",
+   "label_en": "Multimodal sensor fusion conflict"
+  },
+  {
+   "l4_id": "RAI4-0453",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "경쟁성 상실",
+   "new_label_ko": "이의제기 가능성 상실(contestability)",
+   "label_en": "Loss of contestability"
+  },
+  {
+   "l4_id": "RAI4-0461",
+   "primary_l3_id": "RAI3-G-SOC-11",
+   "old_label_ko": "불평등 계산",
+   "new_label_ko": "연산 자원 불평등(compute inequality)",
+   "label_en": "Compute inequality"
+  },
+  {
+   "l4_id": "RAI4-0465",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "배포 실패",
+   "new_label_ko": "분포 이탈(OOD) 실패",
+   "label_en": "Out-of-distribution failure"
+  },
+  {
+   "l4_id": "RAI4-0466",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "적대적인 예",
+   "new_label_ko": "적대적 예제(adversarial examples)",
+   "label_en": "Adversarial examples"
+  },
+  {
+   "l4_id": "RAI4-0472",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "벤치마크 게임",
+   "new_label_ko": "벤치마크 조작(gaming)",
+   "label_en": "Benchmark gaming"
+  },
+  {
+   "l4_id": "RAI4-0483",
+   "primary_l3_id": "RAI3-A-SYS-06",
+   "old_label_ko": "새로운 공모",
+   "new_label_ko": "창발적 공모(emergent collusion)",
+   "label_en": "Emergent collusion"
+  },
+  {
+   "l4_id": "RAI4-0491",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "알고리즘 단일 문화",
+   "new_label_ko": "알고리즘 획일화(monoculture)",
+   "label_en": "Algorithmic monoculture"
+  },
+  {
+   "l4_id": "RAI4-0505",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "AI 개발에서의 활용",
+   "new_label_ko": "AI 개발 과정의 노동 착취(exploitation)",
+   "label_en": "Exploitation in AI development"
+  },
+  {
+   "l4_id": "RAI4-0565",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "정렬 실패 로그(rogue) AI 행동",
+   "new_label_ko": "정렬 실패한 무법(rogue) AI 행동",
+   "label_en": "Misaligned rogue AI behavior"
+  },
+  {
+   "l4_id": "RAI4-0566",
+   "primary_l3_id": "RAI3-A-SYS-02",
+   "old_label_ko": "학점 할당",
+   "new_label_ko": "기여도 배분(credit assignment)",
+   "label_en": "Credit assignment"
+  },
+  {
+   "l4_id": "RAI4-0574",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "유통 변화",
+   "new_label_ko": "분포 변화(distributional shift)",
+   "label_en": "Distributional shift"
+  },
+  {
+   "l4_id": "RAI4-0575",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "새로운 기능",
+   "new_label_ko": "창발적 능력(emergent capabilities)",
+   "label_en": "Emergent capabilities"
+  },
+  {
+   "l4_id": "RAI4-0582",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "인간이 아닌 사람에게 해를 끼치는 것",
+   "new_label_ko": "비인간 존재에 대한 피해",
+   "label_en": "Harms to non-humans"
+  },
+  {
+   "l4_id": "RAI4-0583",
+   "primary_l3_id": "RAI3-A-SYS-06",
+   "old_label_ko": "이기종 공격",
+   "new_label_ko": "이질적 결합 공격(heterogeneous attacks)",
+   "label_en": "Heterogeneous attacks"
+  },
+  {
+   "l4_id": "RAI4-0603",
+   "primary_l3_id": "RAI3-G-SYS-02",
+   "old_label_ko": "전력 추구를 가능하게 하는 모델 설계",
+   "new_label_ko": "권력 추구(power-seeking)를 가능하게 하는 모델 설계",
+   "label_en": "Model design enabling power-seeking"
+  },
+  {
+   "l4_id": "RAI4-0606",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "네트워크 재배선",
+   "new_label_ko": "연결망 구조 재편(network rewiring)",
+   "label_en": "Network rewiring"
+  },
+  {
+   "l4_id": "RAI4-0561",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "혼란스러운 다중 에이전트 역학",
+   "new_label_ko": "혼돈(chaotic) 다중 에이전트 동역학",
+   "label_en": "Chaotic multi-agent dynamics"
+  },
+  {
+   "l4_id": "RAI4-0655",
+   "primary_l3_id": "RAI3-G-INT-06",
+   "old_label_ko": "적절한 유사성",
+   "new_label_ko": "도용된 초상(appropriated likeness)",
+   "label_en": "Appropriated likeness"
+  },
+  {
+   "l4_id": "RAI4-0674",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "문화적 성향",
+   "new_label_ko": "문화적 박탈(cultural dispossession)",
+   "label_en": "Cultural disposession"
+  },
+  {
+   "l4_id": "RAI4-0716",
+   "primary_l3_id": "RAI3-G-SYS-05",
+   "old_label_ko": "할당 불의",
+   "new_label_ko": "배분적 불의(allocative injustice)",
+   "label_en": "Allocative injustice"
+  },
+  {
+   "l4_id": "RAI4-0717",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "중재 효과",
+   "new_label_ko": "개입 효과(interventional effect)",
+   "label_en": "Interventional effect"
+  },
+  {
+   "l4_id": "RAI4-0744",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "LLM 악의적 사용 시 탈옥 - 즉각적인 공격",
+   "new_label_ko": "LLM 악의적 사용 시 탈옥 - 프롬프트 공격(prompt attacks)",
+   "label_en": "Jailbreak in LLM malicious use - prompt attacks"
+  },
+  {
+   "l4_id": "RAI4-0759",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "신속한 유출",
+   "new_label_ko": "프롬프트 유출(prompt leaking)",
+   "label_en": "Prompt leaking"
+  },
+  {
+   "l4_id": "RAI4-0760",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "신속한 프라이밍",
+   "new_label_ko": "프롬프트 프라이밍(prompt priming)",
+   "label_en": "Prompt priming"
+  },
+  {
+   "l4_id": "RAI4-0769",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "적대적 AI: 즉각적인 주입",
+   "new_label_ko": "적대적 AI: 프롬프트 주입(prompt injection)",
+   "label_en": "Adversarial AI: prompt injections"
+  },
+  {
+   "l4_id": "RAI4-0773",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "추가 양식을 통해 LLM 공격",
+   "new_label_ko": "추가 모달리티(modality)를 통한 LLM 공격",
+   "label_en": "Attacking LLMs via additional modalities a"
+  },
+  {
+   "l4_id": "RAI4-0789",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "GPU 계산 플랫폼",
+   "new_label_ko": "GPU 연산 플랫폼",
+   "label_en": "GPU computation platforms"
+  },
+  {
+   "l4_id": "RAI4-0798",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "과도한 부담을 주는 생태계",
+   "new_label_ko": "생태계 과부하",
+   "label_en": "Overburdening ecosystems"
+  },
+  {
+   "l4_id": "RAI4-0807",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "신뢰를 무너뜨리고 공유된 지식을 약화시킵니다",
+   "new_label_ko": "신뢰 훼손 및 공유 지식 약화",
+   "label_en": "Eroding trust and undermining shared knowledge"
+  },
+  {
+   "l4_id": "RAI4-0820",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "시끄러운 훈련 데이터",
+   "new_label_ko": "잡음(noise) 섞인 학습 데이터",
+   "label_en": "Noisy training data"
+  },
+  {
+   "l4_id": "RAI4-0821",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "패러다임과 유통의 변화",
+   "new_label_ko": "패러다임 및 분포 변화(distribution shift)",
+   "label_en": "Paradigm and distribution shifts"
+  },
+  {
+   "l4_id": "RAI4-0890",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "자아실현은 해롭다",
+   "new_label_ko": "자아실현 저해 피해",
+   "label_en": "Self-actualisation harms"
+  },
+  {
+   "l4_id": "RAI4-0896",
+   "primary_l3_id": "RAI3-G-INT-06",
+   "old_label_ko": "건강과 웰빙이 저하됨",
+   "new_label_ko": "건강과 웰빙 저하",
+   "label_en": "Diminished health and well-being"
+  },
+  {
+   "l4_id": "RAI4-0897",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "앞선 사회적 적응으로 인한 혼란",
+   "new_label_ko": "사회적 적응 지체로 인한 혼란",
+   "label_en": "Disruptions from outpaced societal adaptation"
+  },
+  {
+   "l4_id": "RAI4-0910",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "예상보다 나쁨",
+   "new_label_ko": "예상보다 나쁜 결과",
+   "label_en": "Worse than expected"
+  },
+  {
+   "l4_id": "RAI4-1085",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "운영에 영향을 미치다",
+   "new_label_ko": "영향력 공작(influence operations)",
+   "label_en": "Influence operations"
+  },
+  {
+   "l4_id": "RAI4-1045",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "긴급 행동",
+   "new_label_ko": "창발적 행동(emergent behavior)",
+   "label_en": "Emergent behavior"
+  },
+  {
+   "l4_id": "RAI4-0997",
+   "primary_l3_id": "RAI3-G-SOC-11",
+   "old_label_ko": "고정관념을 갖는 사회 집단",
+   "new_label_ko": "사회 집단 고정관념화(stereotyping)",
+   "label_en": "Stereotyping social groups"
+  },
+  {
+   "l4_id": "RAI4-0998",
+   "primary_l3_id": "RAI3-G-INT-04",
+   "old_label_ko": "비하하는 사회 집단",
+   "new_label_ko": "사회 집단 비하(demeaning)",
+   "label_en": "Demeaning social groups"
+  },
+  {
+   "l4_id": "RAI4-0999",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "소셜 그룹 삭제",
+   "new_label_ko": "사회 집단 지우기(erasing)",
+   "label_en": "Erasing social groups"
+  },
+  {
+   "l4_id": "RAI4-1000",
+   "primary_l3_id": "RAI3-G-INT-04",
+   "old_label_ko": "소외된 사회 집단",
+   "new_label_ko": "사회 집단 소외 유발(alienating)",
+   "label_en": "Alienating social groups"
+  },
+  {
+   "l4_id": "RAI4-1006",
+   "primary_l3_id": "RAI3-G-SYS-02",
+   "old_label_ko": "노동력 증가",
+   "new_label_ko": "가중되는 노동 부담(increased labor)",
+   "label_en": "Increased labor"
+  },
+  {
+   "l4_id": "RAI4-1066",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "창조 경제를 훼손하다",
+   "new_label_ko": "창작 경제 훼손(undermining creative economies)",
+   "label_en": "Undermining creative economies"
+  },
+  {
+   "l4_id": "RAI4-1095",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "창조 경제를 훼손하다",
+   "new_label_ko": "창작 경제 훼손(undermine creative economies)",
+   "label_en": "Undermine creative economies"
+  },
+  {
+   "l4_id": "RAI4-0984",
+   "primary_l3_id": "RAI3-A-SYS-05",
+   "old_label_ko": "일자리를 놓고 경쟁하다",
+   "new_label_ko": "일자리 경쟁(competing for jobs)",
+   "label_en": "Competing for jobs"
+  },
+  {
+   "l4_id": "RAI4-1075",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "허위 또는 허위 사실을 유포하여 물질적 피해를 입히는 행위",
+   "new_label_ko": "허위·부실 정보 유포로 인한 물질적 피해",
+   "label_en": "Causing material harm by disseminating false or poor information"
+  },
+  {
+   "l4_id": "RAI4-1002",
+   "primary_l3_id": "RAI3-G-INT-04",
+   "old_label_ko": "본질주의 범주 구체화",
+   "new_label_ko": "본질주의적 범주의 실체화(reifying)",
+   "label_en": "Reifying essentialist categories"
+  },
+  {
+   "l4_id": "RAI4-1091",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "남용 및 착취",
+   "new_label_ko": "도용 및 착취(misappropriation and exploitation)",
+   "label_en": "Misappropriation and exploitation"
+  },
+  {
+   "l4_id": "RAI4-1096",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "공격적인 데이터 소싱 및 강화",
+   "new_label_ko": "착취적 데이터 소싱 및 보강(exploitative)",
+   "label_en": "Exploitative data sourcing and enrichment"
+  },
+  {
+   "l4_id": "RAI4-1100",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "인간 행동을 위한 AI 규칙 만들기",
+   "new_label_ko": "인간 행동을 규율하는 AI 규칙 제정(AI-rulemaking)",
+   "label_en": "AI-rulemaking for human behaviour"
+  },
+  {
+   "l4_id": "RAI4-1108",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "데이터세트 이동",
+   "new_label_ko": "데이터셋 분포 변화(dataset shift)",
+   "label_en": "Dataset shift"
+  },
+  {
+   "l4_id": "RAI4-1112",
+   "primary_l3_id": "RAI3-G-SYS-05",
+   "old_label_ko": "모델의 잘못된 사양",
+   "new_label_ko": "모델 오설정(misspecification)",
+   "label_en": "Model misspecification"
+  },
+  {
+   "l4_id": "RAI4-1115",
+   "primary_l3_id": "RAI3-A-SYS-05",
+   "old_label_ko": "AI 에이전트 활용",
+   "new_label_ko": "AI 에이전트 방출(unleashing)",
+   "label_en": "Unleashing AI agents"
+  },
+  {
+   "l4_id": "RAI4-1154",
+   "primary_l3_id": "RAI3-A-SYS-06",
+   "old_label_ko": "긴급 접근 위험",
+   "new_label_ko": "창발적 접근 위험(emergent)",
+   "label_en": "Emergent access risks"
+  },
+  {
+   "l4_id": "RAI4-1199",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "즉각적인 공격",
+   "new_label_ko": "프롬프트 공격(prompt attacks)",
+   "label_en": "Prompt attacks"
+  },
+  {
+   "l4_id": "RAI4-1228",
+   "primary_l3_id": "RAI3-G-SYS-05",
+   "old_label_ko": "신속한 엔지니어링",
+   "new_label_ko": "프롬프트 엔지니어링(prompt engineering)",
+   "label_en": "Prompt engineering"
+  },
+  {
+   "l4_id": "RAI4-1252",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "새로운 기능",
+   "new_label_ko": "창발적 기능(emergent functionality)",
+   "label_en": "Emergent functionality"
+  },
+  {
+   "l4_id": "RAI4-1257",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "혼란 우려",
+   "new_label_ko": "교란 우려(disruption)",
+   "label_en": "Disruption concerns"
+  },
+  {
+   "l4_id": "RAI4-1282",
+   "primary_l3_id": "RAI3-A-SYS-05",
+   "old_label_ko": "의도적으로 - 배포 전",
+   "new_label_ko": "의도적 사보타주 - 배포 전(on purpose)",
+   "label_en": "On purpose - pre-deployment"
+  },
+  {
+   "l4_id": "RAI4-1283",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "의도적으로 - 배포 후",
+   "new_label_ko": "의도적 사보타주 - 배포 후(on purpose)",
+   "label_en": "On purpose - post deployment"
+  },
+  {
+   "l4_id": "RAI4-1285",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "실수로 - 배포 후",
+   "new_label_ko": "실수 - 배포 후(by mistake)",
+   "label_en": "By mistake - post-deployment"
+  },
+  {
+   "l4_id": "RAI4-1289",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "독립적으로 - 배포 후",
+   "new_label_ko": "독립적 행동 - 배포 후(independently)",
+   "label_en": "Independently - post-deployment"
+  },
+  {
+   "l4_id": "RAI4-1306",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "희석권",
+   "new_label_ko": "권리 희석(diluting rights)",
+   "label_en": "Diluting rights"
+  },
+  {
+   "l4_id": "RAI4-1330",
+   "primary_l3_id": "RAI3-G-SYS-09",
+   "old_label_ko": "잊혀진 혜택",
+   "new_label_ko": "포기된 혜택(foregone benefits)",
+   "label_en": "Foregone benefits"
+  },
+  {
+   "l4_id": "RAI4-1380",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "값 사양",
+   "new_label_ko": "가치 명세(value specification)",
+   "label_en": "Value specification"
+  },
+  {
+   "l4_id": "RAI4-1382",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "정확성 상실",
+   "new_label_ko": "수정가능성 상실(corrigibility)",
+   "label_en": "Loss of corrigibility"
+  },
+  {
+   "l4_id": "RAI4-1388",
+   "primary_l3_id": "RAI3-G-SYS-07",
+   "old_label_ko": "신흥 메타인지",
+   "new_label_ko": "창발적 메타인지(emergent meta-cognition)",
+   "label_en": "Emergent meta-cognition"
+  },
+  {
+   "l4_id": "RAI4-1404",
+   "primary_l3_id": "RAI3-G-INT-08",
+   "old_label_ko": "잘 알려지지 않은 작품",
+   "new_label_ko": "제대로 인정받지 못하는 노동(under-recognized work)",
+   "label_en": "Under-recognized work"
+  },
+  {
+   "l4_id": "RAI4-1410",
+   "primary_l3_id": "RAI3-P-SYS-02",
+   "old_label_ko": "사양 게이밍",
+   "new_label_ko": "명세 게이밍(specification gaming)",
+   "label_en": "Specification gaming"
+  },
+  {
+   "l4_id": "RAI4-1458",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "부적절한 ODD 사양",
+   "new_label_ko": "부적절한 ODD(운영설계영역) 명세",
+   "label_en": "Inadequate specification of ODD"
+  },
+  {
+   "l4_id": "RAI4-1485",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "AI 구성 요소 상호 작용의 불명확한 속성",
+   "new_label_ko": "AI 구성요소 상호작용의 불명확한 귀속(attribution)",
+   "label_en": "Unclear attribution from AI component interactions"
+  },
+  {
+   "l4_id": "RAI4-1515",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "일련의 사고 추론과 일치하지 않는 모델 출력",
+   "new_label_ko": "사고연쇄(chain-of-thought)와 불일치하는 모델 출력",
+   "label_en": "Model outputs inconsistent with chain-of-thought reasoning"
+  },
+  {
+   "l4_id": "RAI4-1517",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "의도된 동작을 파괴하기 위한 모델의 탈옥",
+   "new_label_ko": "의도된 동작을 전복하는 모델 탈옥(jailbreak)",
+   "label_en": "Jailbreak of a model to subvert intended behavior"
+  },
+  {
+   "l4_id": "RAI4-1518",
+   "primary_l3_id": "RAI3-A-SYS-05",
+   "old_label_ko": "다중 모드 모델의 탈옥",
+   "new_label_ko": "멀티모달 모델 탈옥(jailbreak)",
+   "label_en": "Jailbreak of a multimodal model"
+  },
+  {
+   "l4_id": "RAI4-1521",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "다중 모드 모델의 추가 양식으로 인해 발생하는 취약점",
+   "new_label_ko": "멀티모달 모델의 추가 모달리티(modality)로 인한 취약점",
+   "label_en": "Vulnerabilities arising from additional modalities in multimodal models"
+  },
+  {
+   "l4_id": "RAI4-1523",
+   "primary_l3_id": "RAI3-G-SYS-05",
+   "old_label_ko": "관련 없는 상황으로 인해 모델이 산만해짐",
+   "new_label_ko": "무관한 문맥(context)에 의한 모델 주의 분산",
+   "label_en": "Models distracted by irrelevant context"
+  },
+  {
+   "l4_id": "RAI4-1525",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "언어 모델의 상황 내 학습에 대한 이해 부족",
+   "new_label_ko": "언어 모델의 맥락 내 학습(in-context learning) 이해 부족",
+   "label_en": "Lack of understanding of in-context learning in language models"
+  },
+  {
+   "l4_id": "RAI4-1528",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "응급 기관",
+   "new_label_ko": "창발적 행위주체성(emergent agency)",
+   "label_en": "Emergent agency"
+  },
+  {
+   "l4_id": "RAI4-1531",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "변조에 대한 보상을 일반화하는 사양 게임",
+   "new_label_ko": "보상 변조로 일반화되는 명세 게이밍(specification gaming)",
+   "label_en": "Specification gaming generalizing to reward tampering"
+  },
+  {
+   "l4_id": "RAI4-1534",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "게임 이론상의 이유로 사기 행위",
+   "new_label_ko": "게임이론적 이유에 의한 기만 행동",
+   "label_en": "Deceptive behavior for game-theoretical reasons"
+  },
+  {
+   "l4_id": "RAI4-1535",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "잘못된 세계 모델로 인한 사기 행위",
+   "new_label_ko": "부정확한 세계 모델로 인한 기만 행동",
+   "label_en": "Deceptive behavior because of an incorrect world model"
+  },
+  {
+   "l4_id": "RAI4-1536",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "무단 활동으로 이어지는 사기 행위",
+   "new_label_ko": "무단 행위로 이어지는 기만 행동",
+   "label_en": "Deceptive behavior leading to unauthorized actions"
+  },
+  {
+   "l4_id": "RAI4-1541",
+   "primary_l3_id": "RAI3-G-INT-11",
+   "old_label_ko": "개방형 중량 모델의 해체 불가",
+   "new_label_ko": "오픈웨이트(open-weight) 모델의 폐기 불가",
+   "label_en": "Non-decomissionability of models with open weights"
+  },
+  {
+   "l4_id": "RAI4-1545",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "모델 중량 누출",
+   "new_label_ko": "모델 가중치(weight) 누출",
+   "label_en": "Model weight leak"
+  },
+  {
+   "l4_id": "RAI4-1550",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "AI 시스템과 통합 시 중요한 인프라 구성요소 오류 발생",
+   "new_label_ko": "AI 통합 시 중요 인프라 구성요소 장애",
+   "label_en": "Critical infrastructure component failures when integrated with AI systems"
+  },
+  {
+   "l4_id": "RAI4-1554",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "다중 모드 딥페이크",
+   "new_label_ko": "멀티모달 딥페이크",
+   "label_en": "Multimodal deepfakes"
+  },
+  {
+   "l4_id": "RAI4-1558",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "허위정보나 조작으로 인해 사회적 신뢰가 저하됨",
+   "new_label_ko": "허위정보·조작으로 인한 사회적 신뢰 저하",
+   "label_en": "Diminishing societal trust due to disinformation or manipulation"
+  },
+  {
+   "l4_id": "RAI4-1560",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "GPAI 지원 가장",
+   "new_label_ko": "GPAI 지원 사칭(impersonation)",
+   "label_en": "GPAI assisted impersonation"
+  },
+  {
+   "l4_id": "RAI4-1577",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "떼 공격",
+   "new_label_ko": "군집(swarm) 공격",
+   "label_en": "Swarm attacks"
+  },
+  {
+   "l4_id": "RAI4-1588",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "모델 전환",
+   "new_label_ko": "모델 목적 외 전용(diversion)",
+   "label_en": "Model diversion"
+  },
+  {
+   "l4_id": "RAI4-1592",
+   "primary_l3_id": "RAI3-G-INT-06",
+   "old_label_ko": "데이터 개인 정보 보호 권리 조정",
+   "new_label_ko": "데이터 프라이버시 권리 정합(alignment)",
+   "label_en": "Data privacy rights alignment"
+  },
+  {
+   "l4_id": "RAI4-1596",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "모델 정확도가 낮음",
+   "new_label_ko": "낮은 모델 정확도",
+   "label_en": "Poor model accuracy"
+  },
+  {
+   "l4_id": "RAI4-1599",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "추적 불가능한 속성",
+   "new_label_ko": "출처 귀속 불가(attribution)",
+   "label_en": "Untraceable attribution"
+  },
+  {
+   "l4_id": "RAI4-1601",
+   "primary_l3_id": "RAI3-G-SYS-10",
+   "old_label_ko": "신뢰할 수 없는 소스 속성",
+   "new_label_ko": "신뢰할 수 없는 출처 귀속(attribution)",
+   "label_en": "Unreliable source attribution"
+  },
+  {
+   "l4_id": "RAI4-1608",
+   "primary_l3_id": "RAI3-G-INT-06",
+   "old_label_ko": "명예훼손",
+   "new_label_ko": "평판 손상",
+   "label_en": "Reputational damage"
+  },
+  {
+   "l4_id": "RAI4-1609",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "자신감/신뢰의 상실",
+   "new_label_ko": "신임·신뢰 상실",
+   "label_en": "Loss of confidence / trust"
+  },
+  {
+   "l4_id": "RAI4-1611",
+   "primary_l3_id": "RAI3-G-SOC-11",
+   "old_label_ko": "집단 재현 공정성 피해",
+   "new_label_ko": "집단 대표성 공정성 피해",
+   "label_en": "Group representation fairness harms"
+  },
+  {
+   "l4_id": "RAI4-1615",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "허위 정보 및 영향력 행사",
+   "new_label_ko": "허위정보 및 영향력 공작(influence operations)",
+   "label_en": "Disinformation and influence operations"
+  },
+  {
+   "l4_id": "RAI4-1634",
+   "primary_l3_id": "RAI3-A-SYS-06",
+   "old_label_ko": "계획 능력",
+   "new_label_ko": "책략 능력(scheming)",
+   "label_en": "Scheming capability"
+  },
+  {
+   "l4_id": "RAI4-1636",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "마음 능력 이론",
+   "new_label_ko": "마음이론(Theory of Mind) 능력",
+   "label_en": "Theory of mind capability"
+  },
+  {
+   "l4_id": "RAI4-1637",
+   "primary_l3_id": "RAI3-A-SYS-06",
+   "old_label_ko": "스테가노그래피 기능",
+   "new_label_ko": "스테가노그래피 능력",
+   "label_en": "Steganography capability"
+  },
+  {
+   "l4_id": "RAI4-1652",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "이중 사용 기능으로 LLM의 악의적 사용 및 오용 가능",
+   "new_label_ko": "이중용도 역량에 의한 LLM 악용 및 오용",
+   "label_en": "Dual-use capabilities enable malicious use and misuse of LLMs"
+  },
+  {
+   "l4_id": "RAI4-1664",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "탈옥과 신속한 주입으로 LLM 보안 위협",
+   "new_label_ko": "탈옥과 프롬프트 주입에 의한 LLM 보안 위협",
+   "label_en": "Jailbreaks and prompt injections threaten security of LLMs"
+  },
+  {
+   "l4_id": "RAI4-1671",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "과도한 대행사",
+   "new_label_ko": "과도한 자율 행위성(agency)",
+   "label_en": "Excessive agency"
+  },
+  {
+   "l4_id": "RAI4-1672",
+   "primary_l3_id": "RAI3-A-SYS-05",
+   "old_label_ko": "기획/추론체인 하이재킹",
+   "new_label_ko": "계획/추론체인 하이재킹",
+   "label_en": "Planning / reasoning-chain hijacking"
+  },
+  {
+   "l4_id": "RAI4-1674",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "차단 저항/수정성 실패",
+   "new_label_ko": "종료 저항/교정가능성(corrigibility) 실패",
+   "label_en": "Shutdown resistance / corrigibility failure"
+  },
+  {
+   "l4_id": "RAI4-1676",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "신체적 손상을 위한 구현된 탈옥",
+   "new_label_ko": "신체적 피해로 이어지는 체화형 탈옥",
+   "label_en": "Embodied jailbreak to physical harm"
+  },
+  {
+   "l4_id": "RAI4-1680",
+   "primary_l3_id": "RAI3-A-SYS-01",
+   "old_label_ko": "집단적 차원의 신흥 기관",
+   "new_label_ko": "집단 차원의 창발적 행위주체성",
+   "label_en": "Emergent agency at collective level"
+  },
+  {
+   "l4_id": "RAI4-1682",
+   "primary_l3_id": "RAI3-A-SYS-04",
+   "old_label_ko": "불안정한 피드백 역학",
+   "new_label_ko": "불안정화 피드백 역학",
+   "label_en": "Destabilising feedback dynamics"
+  },
+  {
+   "l4_id": "RAI4-1683",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "사양 및 시스템 설계 실패",
+   "new_label_ko": "명세 및 시스템 설계 실패",
+   "label_en": "Specification and system design failures"
+  },
+  {
+   "l4_id": "RAI4-1686",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "궤적 지속 적 공격",
+   "new_label_ko": "궤적 지속형 적대적 공격",
+   "label_en": "Trajectory-persistent adversarial attack"
+  },
+  {
+   "l4_id": "RAI4-1688",
+   "primary_l3_id": "RAI3-G-SYS-03",
+   "old_label_ko": "복합 출시 오류/환각",
+   "new_label_ko": "누적 롤아웃(rollout) 오류/환각",
+   "label_en": "Compounding rollout error / hallucination"
+  },
+  {
+   "l4_id": "RAI4-1689",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "Sim-to-real/분포전환 활용",
+   "new_label_ko": "Sim-to-real/분포 변화 악용",
+   "label_en": "Sim-to-real / distributional-shift exploitation"
+  },
+  {
+   "l4_id": "RAI4-1693",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "월드모델 활용을 통한 보상해킹",
+   "new_label_ko": "월드모델 악용을 통한 보상 해킹",
+   "label_en": "Reward hacking via world-model exploitation"
+  },
+  {
+   "l4_id": "RAI4-1694",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "장거리 계획 환각",
+   "new_label_ko": "장기 지평(long-horizon) 계획 환각",
+   "label_en": "Long-horizon planning hallucination"
+  },
+  {
+   "l4_id": "RAI4-1695",
+   "primary_l3_id": "RAI3-A-SYS-03",
+   "old_label_ko": "자동화 편향/잘못 조정된 신뢰",
+   "new_label_ko": "자동화 편향/오보정된 신뢰",
+   "label_en": "Automation bias / miscalibrated trust"
+  },
+  {
+   "l4_id": "RAI4-1696",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "사회 세계 모델 영향 운영",
+   "new_label_ko": "사회 세계모델 영향공작(influence operations)",
+   "label_en": "Social-world-model influence operations"
+  },
+  {
+   "l4_id": "RAI4-1631",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "악의적이고 간접적인 것",
+   "new_label_ko": "악의적·간접적 오용",
+   "label_en": "Malicious and indirect"
+  },
+  {
+   "l4_id": "RAI4-1701",
+   "primary_l3_id": "RAI3-G-HLD-01",
+   "old_label_ko": "안전한 탐사 [원산지]",
+   "new_label_ko": "안전한 탐색(exploration) [기원]",
+   "label_en": "Safe exploration [origin]"
+  },
+  {
+   "l4_id": "RAI4-1702",
+   "primary_l3_id": "RAI3-A-HLD-01",
+   "old_label_ko": "분포 변화에 대한 견고성 [원산지]",
+   "new_label_ko": "분포 변화에 대한 견고성 [기원]",
+   "label_en": "Robustness to distributional shift [origin]"
+  },
+  {
+   "l4_id": "RAI4-1703",
+   "primary_l3_id": "RAI3-G-SYS-08",
+   "old_label_ko": "시스템 사양 오류",
+   "new_label_ko": "시스템 명세 오류(misspecification)",
+   "label_en": "System misspecification"
+  },
+  {
+   "l4_id": "RAI4-1707",
+   "primary_l3_id": "RAI3-G-INT-03",
+   "old_label_ko": "신체 건강이나 안전에 해를 끼치는 경우",
+   "new_label_ko": "신체 건강·안전 피해",
+   "label_en": "Harm to physical health or safety"
+  },
+  {
+   "l4_id": "RAI4-1713",
+   "primary_l3_id": "RAI3-G-SOC-11",
+   "old_label_ko": "편견과 차별대우",
+   "new_label_ko": "편향과 차별대우",
+   "label_en": "Bias and differential treatment"
+  },
+  {
+   "l4_id": "RAI4-1723",
+   "primary_l3_id": "RAI3-G-SOC-05",
+   "old_label_ko": "체계적 계산·제도적 편향",
+   "new_label_ko": "체계적 전산적·제도적 편향",
+   "label_en": "Systemic computational and institutional bias"
+  }
+ ],
+ "note": "34장 학술 재작명(label_renames_final.json)과 별개. 합계 v2.19 라벨 교정 대상."
+}
