@@ -61,8 +61,8 @@ Entries are the repository's risk categories and subcategories, embedded with th
  style="width:100%;border:1px solid #e2e2df;border-radius:8px;background:#fff">
 <figcaption style="font-size:12px;color:#666;line-height:1.7;margin-top:6px">
 <b>a</b>, Within-cluster cohesion against the merge threshold. The pooled mean pairwise similarity breaks at
-&tau;<sub>1</sub> = 0.807, where similarity chaining sets in, and the per-cluster minimum collapses at
-&tau;<sub>2</sub> = 0.637. Triangles mark the five crossing boundaries emitted by the flow.
+&tau;<sub>1</sub> = 0.806 &plusmn; 0.004, where similarity chaining sets in, and the per-cluster minimum
+collapses at &tau;<sub>2</sub> = 0.629 &plusmn; 0.009, as means over 100 subsample replicates with 95% bands. Triangles mark the five crossing boundaries emitted by the flow.
 <b>b</b>, The flow itself: each consolidation lowers the crossing boundary &tau;*<sub>t</sub> (green, left axis)
 and the inventory size <i>n<sub>t</sub></i> (purple, right axis), from 1,810 entries down to 727 in five steps.
 </figcaption></figure>
@@ -80,6 +80,71 @@ Every step clears the validity rule, with at least 98.9% of merge groups exceedi
 null by two standard deviations. The domain columns are omitted because the MIT repository uses its own top-level
 scheme rather than the General / Agentic / Physical families. This replication is reported for reference only and
 is not released for human audit.</div>
+</div>
+
+<div class=card><h2>How the boundary is measured</h2>
+<div class=sub>The figure below is the flagship figure of the accompanying manuscript. It carries the whole
+argument in three panels: where the space breaks, where the last defensible merge boundary sits, and how that
+boundary moves once merging begins.</div>
+<figure style="margin:14px 0;text-align:center">
+<img src="fig1_tau_cohesion.png" alt="Two transitions, the cohesion-attraction crossing, and the granularity flow"
+ style="width:100%;max-width:540px;border:1px solid #e2e2df;border-radius:8px;background:#fff">
+</figure>
+
+<h3 style="font-size:14px;margin:16px 0 4px">Concepts<sup>1</sup></h3>
+<div class=sub>
+<b>Threshold graph.</b> Cards are vertices; two cards are joined when the cosine similarity of their embeddings
+is at least &tau;. Connected components are the merge clusters, which makes the construction identical to
+single-linkage clustering read at one cut.<br>
+<b>Cohesion &Phi;<sub>coh</sub>(&tau;).</b> The pooled mean pairwise similarity inside clusters. It answers: how
+alike are the cards we have decided to treat as one?<br>
+<b>Attraction &Phi;<sub>att</sub>(&tau;).</b> The mean over clusters of the single highest similarity to any card
+outside the cluster. It answers: how strongly does the nearest outsider pull? Being an extreme-value statistic,
+it is the demanding half of the comparison.<br>
+<b>Crossing &tau;*.</b> The smallest &tau; at which cohesion still dominates attraction. Below it, the typical
+card inside a cluster is less like its own cluster than the cluster is like its nearest neighbour, so the
+partition has stopped describing the data.<br>
+<b>Granularity flow.</b> Merging at &tau;* changes the density of the space, so the boundary moves. Iterating
+merge, re-derive, merge again yields a trajectory of boundaries and inventories; a <b>tier</b> is one state
+along that trajectory rather than a separately designed release.
+</div>
+
+<h3 style="font-size:14px;margin:16px 0 4px">Measures<sup>2</sup></h3>
+<div class=sub>
+<b>&tau;<sub>1</sub>, chaining onset.</b> The largest drop of &Phi;<sub>coh</sub> over a 0.01 window on a
+10<sup>&minus;4</sup> grid. Below it, clusters grow by transitive chains rather than by mutual similarity.<br>
+<b>&tau;<sub>2</sub>, worst-case collapse.</b> The same changepoint statistic applied to the per-cluster minimum.
+Below it, the worst pair inside a cluster is no longer a merge in any defensible sense.<br>
+<b>Uncertainty.</b> Every curve is the mean of 1,000 subsample replicates at 80% of cards, with bands at two
+standard deviations; the changepoints carry the spread of those replicates.<br>
+<b>Per-step null.</b> Each merge group is compared with size-matched random groups drawn on the same inventory,
+scored as <i>z</i> = (observed minimum &minus; null mean) / null s.d.<br>
+<b>Validity rule.</b> A step is admissible when at least 90% of its merge groups exceed the null by two standard
+deviations. The rule delimits the admissible range by itself, without an externally chosen stopping point.
+</div>
+
+<h3 style="font-size:14px;margin:16px 0 4px">Results<sup>3</sup></h3>
+<div class=sub>
+<b>a</b>, Two transitions bound the usable range: &tau;<sub>1</sub> = 0.818 &plusmn; 0.010 and
+&tau;<sub>2</sub> = 0.690 &plusmn; 0.009. Between them lies a fidelity-oriented regime; below &tau;<sub>2</sub>
+a giant cluster has absorbed the inventory.<br>
+<b>b</b>, The crossing is at &tau;* = 0.828 &plusmn; 0.004 across subsamples and 0.833 on the full inventory. It
+agrees with &tau;<sub>1</sub> although the two are measured from unrelated statistics, which is what makes the
+boundary credible rather than merely convenient.<br>
+<b>c</b>, The flow runs 28 consolidations, carrying 1,612 cards to 32 and the boundary from 0.833 to 0.606. The
+validity rule first fails at step 15, so steps 1 to 14 are the admissible range; F1 to F5 are the first five of
+them. Merging in one pass at a low threshold instead of stepwise does not reach the same place: a single cut at
+&tau; = 0.7753 leaves 632 clusters with a giant cluster of 868 cards, against 901 well-formed cards with a
+largest group of 56 along the flow.
+</div>
+
+<div class=sub style="margin-top:14px;border-top:1px solid #e6e6e2;padding-top:8px;font-size:11.5px">
+<sup>1</sup> Definitions are stated in full in the Methods section of the manuscript.
+<sup>2</sup> Grids, windows, replicate counts and null specifications are fixed before analysis and reported with
+the code in <code>analysis/</code>.
+<sup>3</sup> Values quoted here are the released figures; the manuscript reports them with full derivations and
+the accompanying null tests.
+</div>
 </div>
 
 <div class=card><h2>Highest-similarity pairs in the source inventories</h2>
