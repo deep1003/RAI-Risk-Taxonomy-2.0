@@ -58,6 +58,27 @@ stepwise validity rule fires at step 15 and delimits the admissible range by its
 entirely different embedding model selects essentially the same granularity — granularity is a property
 of the inventory, not of the embedding scale.</p>
 
+
+<h2>Core concepts</h2>
+<table>
+<tr><th style="width:26%">Term</th><th>Definition</th></tr>
+<tr><td><b>Fidelity</b></td><td>The degree to which the distinctions drawn by the source inventory survive
+consolidation: high when no two genuinely different risks end up in one card.</td></tr>
+<tr><td><b>Compression</b></td><td>The degree to which repeated descriptions of one risk are absorbed into a
+single representative card, measured as the reduction in card count.</td></tr>
+<tr><td><b>Within-cluster cohesion</b><br><span style="color:#666">&Phi;<sub>coh</sub></span></td>
+<td>The mean cosine similarity over all card pairs placed in the same cluster: how alike the items we have
+decided to treat as one actually are.</td></tr>
+<tr><td><b>Between-cluster attraction</b><br><span style="color:#666">&Phi;<sub>att</sub></span></td>
+<td>The mean, over clusters, of the highest similarity to any card outside the cluster: how hard the space
+outside the boundary pulls for a further merge.</td></tr>
+</table>
+<p style="font-size:12.5px;color:#666;line-height:1.7">Fidelity and compression are the two ends of one axis:
+lowering &tau; buys compression at the cost of fidelity. The crossing &tau;* is the greatest compression
+available without surrendering fidelity. Attraction is an extreme-value statistic rather than an average
+because merge judgements fail at the nearest neighbour, not the typical one, which makes
+&Phi;<sub>coh</sub> &ge; &Phi;<sub>att</sub> a conservative condition.</p>
+
 <h2>Key figures</h2>
 <figure><img src="figs/fig1_transitions_crossing.png" alt="transitions and crossing">
 <figcaption><b>Two percolation-like transitions and the cohesion–attraction crossing.</b>
@@ -75,6 +96,24 @@ step 15, so the data delimit their own admissible range (steps 1–14).</figcapt
 to F4 (901 cards): 211 merge groups, their size distribution, and merge quality against a size-matched
 random-group null.</figcaption></figure>
 
+
+<h2>The procedure</h2>
+<ol>
+<li>Embed every card and build the threshold graph G(&tau;): an edge whenever cosine similarity reaches &tau;,
+so connected components are the merge clusters.</li>
+<li>Sweep &tau; downward on a 10<sup>&minus;4</sup> grid and record the gap
+&Delta;(&tau;) = &Phi;<sub>coh</sub>(&tau;) &minus; &Phi;<sub>att</sub>(&tau;), averaged over 1,000 subsamples
+at 80% of cards.</li>
+<li>Take &tau;* as the smallest &tau; with &Delta;(&tau;) &ge; 0, the last boundary at which the inside still
+beats the outside.</li>
+<li>Merge the components of G(&tau;*), keeping each cluster's medoid, which is an original card rather than a
+synthesized summary.</li>
+<li>Score every merge group against size-matched random groups on the same inventory. If fewer than 90% of
+groups exceed the null by two standard deviations, stop; this first happens at step 15.</li>
+<li>Otherwise return to step 2 on the merged inventory, whose density, and therefore whose boundary, has
+changed. The emitted states are the tiers.</li>
+</ol>
+
 <h2>Released tiers</h2>
 <table>
 <tr><th>Tier</th><th class="num">&tau;*</th><th class="num">Cards</th><th class="num">Absorbed</th><th>G / A / P</th><th>Role</th></tr>
@@ -88,8 +127,29 @@ random-group null.</figcaption></figure>
 <p style="font-size:12.5px;color:#666;line-height:1.7">Absorbed cards are cumulative from the Master inventory.
 Domain counts follow the EM re-assignment; F2, F3 and F5 inherit theirs from the representative of each merge group. The Societal Safety axis is one concept family applied at three scopes, so its cards are counted under General, Agentic or Physical (RAI3-{G|A|P}-SOC-nn share the same numbering and meaning).</p>
 
+
+<h2>Cross-corpus replication</h2>
+<p>The same pipeline, with nothing retuned, applied to the public MIT AI Risk Repository (database v4,
+74 frameworks). Both transitions, the crossing, and a null-valid five-step flow reproduce, at
+corpus-specific threshold locations.</p>
+<table>
+<tr><th>Tier</th><th class="num">&tau;*</th><th class="num">Entries</th><th class="num">Absorbed</th><th class="num">Median z</th><th>Role</th></tr>
+<tr><td>Source</td><td class="num">&ndash;</td><td class="num">1,810</td><td class="num">&ndash;</td><td class="num">&ndash;</td><td>repository inventory</td></tr>
+<tr><td>M1</td><td class="num">0.8190</td><td class="num">1,423</td><td class="num">387</td><td class="num">4.79</td><td>fidelity tier (the crossing)</td></tr>
+<tr><td>M2</td><td class="num">0.7908</td><td class="num">1,230</td><td class="num">580</td><td class="num">3.68</td><td>second consolidation</td></tr>
+<tr><td>M3</td><td class="num">0.7696</td><td class="num">1,022</td><td class="num">788</td><td class="num">3.53</td><td>third consolidation</td></tr>
+<tr><td>M4</td><td class="num">0.7545</td><td class="num">879</td><td class="num">931</td><td class="num">3.17</td><td>compression tier</td></tr>
+<tr><td>M5</td><td class="num">0.7374</td><td class="num">727</td><td class="num">1,083</td><td class="num">3.00</td><td>extended compression tier</td></tr>
+</table>
+<p style="font-size:12.5px;color:#666;line-height:1.7">Transitions on this corpus sit at
+&tau;<sub>1</sub> = 0.806 &plusmn; 0.004 and &tau;<sub>2</sub> = 0.629 &plusmn; 0.009 over 100 subsample
+replicates. Every step clears the validity rule, with at least 98.9% of merge groups above the null by two
+standard deviations. Four of the ten closest pairs in this repository are verbatim duplicates carried in from
+different source papers, which is the redundancy the crossing removes first.</p>
+
 <h2>Interactive materials</h2>
 <div class="links">
+<a href="../../data/experiments/review/index.html"><b>Review overview</b><small>the problem, the measurement, the algorithm, and the tier tables in one page</small></a>
 <a href="../../data/experiments/review/f1.html"><b>F1 human audit</b><small>1,383 cards · EM-based L3 assignment · three-criteria review</small></a>
 <a href="../../data/experiments/review/f4.html"><b>F4 human audit</b><small>901 cards · consolidated labels and definitions rewritten for representativeness</small></a>
 <a href="../../data/experiments/review/f5.html"><b>F5 human audit</b><small>792 cards · fifth consolidation · L3 propagated from the F4 representatives</small></a>
@@ -102,12 +162,13 @@ Domain counts follow the EM re-assignment; F2, F3 and F5 inherit theirs from the
 merge clusters (equivalent to single-linkage clustering).</li>
 <li><b>Two transitions</b>: event-driven sweep on a 0.0001 grid with 1,000 subsample replicates —
 τ₁ = 0.818 ± 0.010 (chaining onset), τ₂ = 0.690 ± 0.009 (worst-case collapse).</li>
-<li><b>Crossing criterion</b>: the smallest τ with Φ_coh (pooled within-cluster similarity) ≥
-Φ_att (per-cluster maximum external similarity). It reads order relations rather than absolute
-scale, so it transfers across embedding models.</li>
+<li><b>Crossing criterion</b>: the smallest τ at which cohesion still reaches attraction. It reads an order
+relation rather than an absolute scale, which is why the identical line of code returns 0.8329 here and
+0.8190 on the MIT repository.</li>
 <li><b>Flow</b>: merge at the crossing, re-derive, repeat. Every step is scored against a size-matched
-random-group null on its own inventory (median z ≈ 3.0–5.4; step-level binomial p &lt; 10⁻²⁰ within
-the admissible range).</li>
+random-group null on its own inventory (median z ≈ 3.0–5.4 within the admissible range).</li>
+<li><b>Density dependence</b>: τ* ≈ 0.576 + 0.035 ln n, roughly +0.024 per doubling of the inventory, which
+is why the boundary has to be re-measured after every merge.</li>
 </ul>
 
 <p class="note">This is the public project page for a manuscript currently under submission. The full
