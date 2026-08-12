@@ -284,9 +284,20 @@ def fig2_connectivity():
 
 
 # ------------------------------------------------------- figure 3 (F4 anatomy)
-def fig3_before_after():
+def fig3_before_after(tier='f4'):
+    """Anatomy of one consolidation. tier is 'f4' or 'f5'; both are kept."""
+    TIER = {
+        'f4': dict(state='data/experiments/review/flow4_state.json',
+                   name='F4', tau=FLOW[3]['tau'], sub=4,
+                   png='data/experiments/review/fig2_before_after.png',
+                   pdf='paper_tau_percolation/fig2_before_after.pdf'),
+        'f5': dict(state='data/experiments/review/f5_state.json',
+                   name='F5', tau=FLOW[4]['tau'], sub=5,
+                   png='data/experiments/review/fig2_before_after_f5.png',
+                   pdf='paper_tau_percolation/fig2_before_after_f5.pdf'),
+    }[tier]
     master = json.load(open('data/experiments/stage1/out/master.json'))['cards']
-    f4 = json.load(open('data/experiments/review/flow4_state.json'))['cards']
+    f4 = json.load(open(TIER['state']))['cards']
     emb = np.load('data/experiments/stage1/out/emb_78d29c0cbe8d.npy')
     emb = emb / np.linalg.norm(emb, axis=1, keepdims=True)
     XY = np.load('data/experiments/review/fig2_xy.npz')['A']
@@ -350,7 +361,8 @@ def fig3_before_after():
                     zorder=0)
         axb.scatter(XY[r, 0], XY[r, 1], s=3 + 1.8*len(g), color=[col],
                     lw=0.4, edgecolor='white', zorder=3)
-    axb.set_title('Compression tier F4 (901 cards)', fontsize=8.5)
+    axb.set_title(f"Compression tier {TIER['name']} ({len(f4):,} cards)",
+                  fontsize=8.5)
     axb.text(0.5, -0.045, 'merge groups collapsed to medoid representatives',
              transform=axb.transAxes, ha='center', fontsize=ANN, color='0.45')
     for a in (axa, axb):
@@ -400,13 +412,17 @@ def fig3_before_after():
         m = [i for i, fm in enumerate(gfam) if fm == f]
         axd.scatter(sizes[m]*jit[m], gmin[m], s=6, color=FCOL[f], lw=0,
                     alpha=0.85, zorder=3)
-    axd.axhline(F4_TAU, color='0.3', ls=(0, (4, 2.5)), lw=0.9)
-    axd.text(58, F4_TAU + 0.014, r'$\tau^{*}_{4}$ = 0.775', fontsize=ANN,
-             ha='right', color='0.3')
+    axd.axhline(TIER['tau'], color='0.3', ls=(0, (4, 2.5)), lw=0.9)
+    xmax = float(sizes.max())*1.22
+    axd.text(xmax*0.97, TIER['tau'] + 0.014,
+             r'$\tau^{*}_{%d}$ = %.3f' % (TIER['sub'], TIER['tau']),
+             fontsize=ANN, ha='right', color='0.3')
     axd.set_xscale('log')
-    axd.set_xlim(1.8, 62)
-    axd.set_xticks([2, 3, 4, 5, 7, 10, 15, 20, 30, 50])
-    axd.set_xticklabels(['2', '3', '4', '5', '7', '10', '15', '20', '30', '50'])
+    axd.set_xlim(1.8, xmax)
+    ticks = [t for t in (2, 3, 4, 5, 7, 10, 15, 20, 30, 50, 70, 100)
+             if t <= xmax]
+    axd.set_xticks(ticks)
+    axd.set_xticklabels([str(t) for t in ticks])
     axd.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
     axd.set_xlabel('Merge-group size (log scale)')
     axd.set_ylabel('Minimum within-group cosine')
@@ -420,8 +436,10 @@ def fig3_before_after():
                    label='Never merged'))
     fig.legend(handles=handles, loc='lower center', ncol=4, frameon=False,
                fontsize=8, bbox_to_anchor=(0.5, 0.015))
-    fig.savefig('data/experiments/review/fig2_before_after.png')
-    fig.savefig('paper_tau_percolation/fig2_before_after.pdf')
+    fig.savefig(TIER['png'])
+    fig.savefig(TIER['pdf'])
+    print(f"fig3 {TIER['name']}: {len(groups)} groups, "
+          f"{int(sizes.sum())} cards involved, max group {int(sizes.max())}")
     plt.close(fig)
 
 
@@ -560,25 +578,28 @@ def figA_flowquality():
 # ------------------------------------------ appendix A4: MIT v4 replication
 def figA_mit():
     BASE = 'data/experiments/mit_replication'
-    d = np.load(f'{BASE}/mit_sweep.npz')
-    taus, out = d['taus'], d['out']
+    d = np.load(f'{BASE}/mit_boot_agg.npz')
+    taus, mean, sd = d['taus'], d['mean'], d['sd']
     st = json.load(open(f'{BASE}/mit_flow_states.json'))['steps']
     m = (taus <= 0.95) & (taus >= 0.40)
-    t = taus[m]
-    T1, T2 = 0.807, 0.637
+    t, mean, sd = taus[m], mean[m], sd[m]
+    T1, T2 = float(d['t1s'].mean()), float(d['t2s'].mean())
 
     fig = plt.figure(figsize=(183*MM, 78*MM))
     gs = fig.add_gridspec(1, 2, width_ratios=[1.35, 1], wspace=0.40,
                           left=0.075, right=0.90, top=0.895, bottom=0.165)
     axa = fig.add_subplot(gs[0]); axb = fig.add_subplot(gs[1])
 
-    axa.plot(t, out[m, 0], color=GREEN, lw=1.3)
-    axa.plot(t, out[m, 1], color=ORANGE, lw=1.3)
+    for k, c in [(0, GREEN), (1, ORANGE)]:
+        lo = np.clip(mean[:, k] - 2*sd[:, k], 0, 1)
+        hi = np.clip(mean[:, k] + 2*sd[:, k], 0, 1)
+        axa.fill_between(t, lo, hi, color=c, alpha=0.18, lw=0, zorder=2)
+        axa.plot(t, mean[:, k], color=c, lw=1.3, zorder=3)
     axa.axvline(T1, color='0.3', ls=':', lw=1.0)
     axa.axvline(T2, color='0.3', ls=':', lw=1.0)
-    axa.text(T1 - 0.008, 1.055, r'$\tau_1$ = 0.807', ha='left', va='center',
+    axa.text(T1 - 0.008, 1.055, r'$\tau_1$ = %.3f' % T1, ha='left', va='center',
              fontsize=ANN, color='0.2')
-    axa.text(T2 - 0.008, 1.055, r'$\tau_2$ = 0.637', ha='left', va='center',
+    axa.text(T2 - 0.008, 1.055, r'$\tau_2$ = %.3f' % T2, ha='left', va='center',
              fontsize=ANN, color='0.2')
     flow_step_markers(axa, [s['tau'] for s in st[:5]])
     axa.text(0.612, 0.630, 'Pooled mean\npairwise similarity', color=GREEN,
@@ -599,13 +620,12 @@ def figA_mit():
     for x, y in zip(fs, tau_t):
         last = x == fs[-1]
         axb.annotate(f'{y:.4f}', (x, y), textcoords='offset points',
-                     xytext=((7, -1) if last else (2, 8)), fontsize=7.5,
-                     color=GREEN, ha=('left' if last else 'center'))
+                     xytext=(7, 2), fontsize=7.5, color=GREEN, ha='left')
     axb.set_ylabel(r'Crossing boundary $\tau^{*}_{t}$', color=GREEN,
                    fontsize=8)
     axb.tick_params(axis='y', colors=GREEN)
     axb.set_ylim(0.720, 0.848)
-    axb.set_xlim(-0.62, 6.55)
+    axb.set_xlim(-0.75, 6.30)
     axb.set_xticks(range(0, 6))
     axb.set_xlabel(FLOWX)
 
@@ -614,9 +634,10 @@ def figA_mit():
     axbb.plot(np.arange(0, len(st) + 1), n_all, 's-', color=PURPLE,
               ms=4.0, lw=1.3)
     for x, y in zip(np.arange(0, len(st) + 1), n_all):
+        first = x == 0
         axbb.annotate(f'{int(y):,}', (x, y), textcoords='offset points',
-                      xytext=(0, -14), fontsize=7.5, color=PURPLE,
-                      ha='center')
+                      xytext=((8, -3) if first else (-7, -3)), fontsize=7.5,
+                      color=PURPLE, ha=('left' if first else 'right'))
     axbb.set_ylabel(r'Inventory size $n_t$', color=PURPLE, fontsize=8)
     axbb.tick_params(axis='y', colors=PURPLE)
     axbb.spines['top'].set_visible(False)
@@ -711,6 +732,7 @@ if __name__ == '__main__':
     jobs = {'1': fig1, '2': fig2_connectivity, '3': fig3_before_after,
             'A1': figA_density, 'A2': figA_flowquality, 'A3': figA_mit,
             'A4': figA_ours,
+            '3f5': lambda: fig3_before_after('f5'),
             'crossing': figA_crossing}
     for k in which:
         jobs[k](); print(f'fig {k} done', flush=True)
