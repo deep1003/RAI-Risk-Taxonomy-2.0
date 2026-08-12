@@ -57,6 +57,7 @@ nav a.on{background:#2a2a2a;color:#fff;border-color:#2a2a2a}
 .tools{margin-top:8px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 input[type=text]{padding:5px 9px;font-size:13px;border:1px solid #ccc;border-radius:4px;width:300px}
 button{padding:4px 10px;border:1px solid #bbb;border-radius:4px;background:#fff;cursor:pointer;font-size:12.5px}
+button.save{background:#0f6e56;color:#fff;border-color:#0f6e56}
 button.on{background:#2a2a2a;color:#fff}
 main{padding:14px 18px 90px}
 .l1{margin-top:22px;border-top:3px solid #2a2a2a;padding-top:10px}
@@ -109,8 +110,14 @@ table.summary td.n{text-align:right;font-variant-numeric:tabular-nums}
 table.summary tr.cur td{background:#eef4f9;font-weight:600}
 table.summary td.hr{min-width:150px;background:#fff;font-weight:400}
 table.summary td.hr:focus{outline:1px solid #2a5a8a}
+label.imp{padding:4px 10px;border:1px solid #bbb;border-radius:4px;background:#fff;cursor:pointer;font-size:12.5px}
+label.imp:hover{border-color:#2a5a8a}
+button.reset{color:#a33}
+.savemsg{color:#8a8a8a;font-size:12px}
 details.ov{margin:8px 0 2px}details.ov>summary{cursor:pointer;font-size:12.5px;color:#2a5a8a}
+main{padding-bottom:74px}
 #bbar{position:fixed;left:0;right:0;bottom:0;background:#2a2a2a;color:#eee;font-size:12.5px;
+ box-shadow:0 -2px 10px rgba(0,0,0,.18);
  padding:8px 18px;display:flex;gap:14px;align-items:center;z-index:30}
 #bbar button{background:#0f6e56;color:#fff;border:none;padding:5px 12px;border-radius:4px}
 #pbar{flex:0 0 220px;height:8px;background:#555;border-radius:4px;overflow:hidden}
@@ -155,13 +162,78 @@ function prog(){
   document.getElementById('pfill').style.width=(vis.length?100*done/vis.length:0)+'%';
 }
 function val(name){const e=document.querySelector('input[name="'+name+'"]:checked');return e?e.value:null;}
-document.getElementById('exp').addEventListener('click',()=>{
+
+/* ---- persistence: the browser keeps the work, the JSON file carries it out ---- */
+const KEY='rai_audit_'+TIER;
+const notes=()=>[...document.querySelectorAll('[data-note]')];
+function collect(){
   const audit=rows.map(r=>{const id=r.dataset.id;
     return {rep:id, desc_ok:val('d_'+id), l3_ok:val('m_'+id), dup:val('r_'+id),
-      memo:(r.querySelector('input.memo')||{}).value||''};});
-  const blob=new Blob([JSON.stringify({tier:TIER,audit:audit},null,1)],{type:'application/json'});
+      memo:(r.querySelector('input.memo')||{}).value||''};})
+    .filter(x=>x.desc_ok||x.l3_ok||x.dup||x.memo);
+  const note={};
+  notes().forEach(n=>{const t=n.textContent.trim(); if(t) note[n.dataset.note]=t;});
+  return {tier:TIER, saved_at:new Date().toISOString(), audit:audit, notes:note};
+}
+function stamp(m){const e=document.getElementById('save');if(e)e.textContent=m;}
+let timer=null;
+function save(){
+  clearTimeout(timer);
+  timer=setTimeout(()=>{
+    try{
+      const d=collect();
+      localStorage.setItem(KEY,JSON.stringify(d));
+      stamp('Saved '+new Date().toLocaleTimeString()+' \u00b7 '+d.audit.length+' cards judged');
+    }catch(err){stamp('Autosave unavailable here \u2014 export before closing');}
+  },400);
+}
+function restore(d){
+  if(!d||!d.audit) return 0;
+  let n=0;
+  d.audit.forEach(x=>{
+    [['d_','desc_ok'],['m_','l3_ok'],['r_','dup']].forEach(function(pair){
+      if(!x[pair[1]]) return;
+      const el=document.querySelector('input[name="'+pair[0]+x.rep+'"][value="'+x[pair[1]]+'"]');
+      if(el) el.checked=true;
+    });
+    const row=document.querySelector('tr.card[data-id="'+x.rep+'"]');
+    if(row&&x.memo){const m=row.querySelector('input.memo'); if(m) m.value=x.memo;}
+    n++;
+  });
+  if(d.notes) notes().forEach(el=>{const v=d.notes[el.dataset.note]; if(v) el.textContent=v;});
+  return n;
+}
+try{
+  const raw=localStorage.getItem(KEY);
+  if(raw){
+    const d=JSON.parse(raw);
+    const n=restore(d);
+    stamp('Restored '+n+' judgments from '+new Date(d.saved_at).toLocaleString());
+  } else stamp('Autosave on \u2014 this browser keeps your work');
+}catch(err){stamp('Autosave unavailable here \u2014 export before closing');}
+
+document.addEventListener('input',e=>{if(e.target.matches('input'))save();});
+document.addEventListener('change',e=>{if(e.target.matches('input'))save();});
+document.addEventListener('blur',e=>{if(e.target.matches&&e.target.matches('[data-note]'))save();},true);
+
+function exportJSON(){
+  const blob=new Blob([JSON.stringify(collect(),null,1)],{type:'application/json'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);
-  a.download=TIER+'_audit.json';a.click();
+  a.download=TIER+'_audit_'+new Date().toISOString().slice(0,10)+'.json';a.click();
+  stamp('Exported '+new Date().toLocaleTimeString());
+}
+document.getElementById('exp').addEventListener('click',exportJSON);
+document.getElementById('exp2').addEventListener('click',exportJSON);
+document.getElementById('impf').addEventListener('change',e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader();
+  rd.onload=()=>{try{const n=restore(JSON.parse(rd.result));save();prog();
+    stamp('Imported '+n+' judgments');}catch(err){stamp('Could not read that file');}};
+  rd.readAsText(f);
+});
+document.getElementById('reset').addEventListener('click',()=>{
+  if(!confirm('Discard every judgment saved in this browser for '+TIER.toUpperCase()+'?')) return;
+  localStorage.removeItem(KEY); location.reload();
 });
 document.addEventListener('change',e=>{if(e.target.matches('.judge input[type=radio]'))prog();});
 document.getElementById('q').addEventListener('input',apply);
@@ -201,7 +273,7 @@ def tier_summary(cur):
         cls=" class=cur" if name.lower()==cur else ""
         rows.append(f"<tr{cls}><td>{name}</td><td class=n>{tau}</td><td class=n>{n}</td>"
                     f"<td class=n>{grp}</td><td class=n>{absorbed}</td><td class=n>{gap}</td><td>{role}</td>"
-                    f"<td class=hr contenteditable=true></td></tr>")
+                    f"<td class=hr contenteditable=true data-note='tier:{name}'></td></tr>")
     return ("<details class=ov><summary>Tier overview (granularity flow)</summary>"
             "<table class=summary><tr><th>Tier</th><th>\u03c4*</th><th>Cards</th><th>Merge groups</th>"
             "<th>Absorbed</th><th>G / A / P</th><th>Role</th><th>Human audit</th></tr>"+''.join(rows)+"</table>"
@@ -262,7 +334,7 @@ def build(page_id, cards, title, sub_extra):
                 blocks+=(f"<details class=l3><summary><code>{l3id}</code> {esc(n['label_ko'])} "
                          f"<span class=en>{esc(n.get('label_en'))}</span>"
                          f"<span class=cnt>{len(items)} cards</span><span class=shown></span>"
-                         f"<span class=l3hr contenteditable=true "
+                         f"<span class=l3hr contenteditable=true data-note='l3:{l3id}' "
                          f"onclick=\"event.preventDefault();event.stopPropagation()\"></span></summary>"
                          f"<div class=l3def>{esc(n.get('definition_ko') or n.get('definition_en'))}</div>"
                          f"<table class=cards><tr><th>ID</th><th>Card</th>"
@@ -296,10 +368,14 @@ def build(page_id, cards, title, sub_extra):
           f"<button data-f=merged>Merged only</button>"
           ""
           f"<button id=expand>Expand all</button><button id=collapse>Collapse all</button>"
+          f"<button id=exp2 class=save>Save / export JSON</button>"
           f"<span id=cnt class=sub></span></div></header><main>{body}</main>"
           f"<div id=bbar><span id=ptxt>Audit progress 0 / {total}</span><div id=pbar><div id=pfill></div></div>"
           f"<button id=exp>Export judgments (JSON)</button>"
-          f"<span style='color:#bbb'>Export before closing — judgments are not saved automatically.</span></div>"
+          f"<label class=imp for=impf>Import JSON</label>"
+          f"<input id=impf type=file accept='.json' hidden>"
+          f"<button id=reset class=reset>Clear</button>"
+          f"<span id=save class=savemsg></span></div>"
           f"<script>{js}</script></body></html>")
     open(f'{OUT}/{page_id}.html','w').write(page)
     print(page_id, total, 'cards,', nmerged, 'merged,', nhold, 'hold,', len(byl3), 'L3')
