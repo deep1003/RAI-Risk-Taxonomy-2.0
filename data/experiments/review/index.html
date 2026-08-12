@@ -45,6 +45,101 @@ papers, which is the kind of redundancy the crossing boundary removes first; our
 duplicates, so its closest pairs are paraphrases rather than repeats.</div>
 </div>
 
+<div class=card><h2>How consolidation runs</h2>
+<div class=sub>The deduplication pipeline in one view. Green boxes are measurements taken from the data, the orange diamond is the only stopping decision, and it too is decided by a test rather than by judgement. The dashed return path is what makes this a flow rather than a single cut: every merge changes the density of the space, so the boundary is measured again on the inventory that merging produced.</div>
+<figure style="margin:14px 0;text-align:center"><svg viewBox="0 0 880 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:820px;height:auto;font-family:-apple-system,'Segoe UI','Noto Sans',sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#1f6f5c"/></marker>
+</defs>
+<style>
+.box{fill:#fff;stroke:#c9c9c4;stroke-width:1.2;rx:7}
+.mea{fill:#f2f7f5;stroke:#1f6f5c;stroke-width:1.2;rx:7}
+.dec{fill:#fdf5ee;stroke:#c1550c;stroke-width:1.2}
+.out{fill:#f6f2f8;stroke:#7a4b8f;stroke-width:1.4;rx:7}
+.t{font-size:12.5px;fill:#1c1c1c}
+.s{font-size:10.5px;fill:#777}
+.lab{font-size:10.5px;fill:#555}
+.hd{font-size:11px;fill:#777;letter-spacing:.08em}
+line,path.c{stroke:#555;stroke-width:1.2;fill:none;marker-end:url(#ah)}
+path.loop{stroke:#1f6f5c;stroke-width:1.4;fill:none;stroke-dasharray:5 4;marker-end:url(#ahg)}
+</style>
+
+<text class="hd" x="24" y="24">INPUT</text>
+<rect class="box" x="24" y="34" width="210" height="52"/>
+<text class="t" x="36" y="55">Risk card inventory</text>
+<text class="s" x="36" y="72">1,612 cards &#183; bilingual label + definition</text>
+
+<line x1="129" y1="86" x2="129" y2="112"/>
+<rect class="box" x="24" y="112" width="210" height="52"/>
+<text class="t" x="36" y="133">Sentence embedding</text>
+<text class="s" x="36" y="150">BGE-M3 &#183; 1,024-d &#183; normalized</text>
+
+<line x1="129" y1="164" x2="129" y2="190"/>
+<rect class="box" x="24" y="190" width="210" height="60"/>
+<text class="t" x="36" y="211">Threshold graph G(&#964;)</text>
+<text class="s" x="36" y="228">edge when cos &#8805; &#964;;</text>
+<text class="s" x="36" y="243">components are merge clusters</text>
+
+<text class="hd" x="330" y="24">MEASURE</text>
+<line x1="234" y1="220" x2="322" y2="220"/>
+<rect class="mea" x="322" y="176" width="228" height="88"/>
+<text class="t" x="334" y="197">Sweep &#964; on a 10&#8315;&#8308; grid</text>
+<text class="s" x="334" y="215">&#934;_coh: pooled within-cluster mean</text>
+<text class="s" x="334" y="231">&#934;_att: mean of per-cluster nearest</text>
+<text class="s" x="334" y="247">outsider &#183; 1,000 subsample replicates</text>
+
+<line x1="436" y1="264" x2="436" y2="292"/>
+<rect class="mea" x="322" y="292" width="228" height="60"/>
+<text class="t" x="334" y="313">Crossing boundary &#964;*</text>
+<text class="s" x="334" y="331">smallest &#964; with &#934;_coh &#8805; &#934;_att</text>
+<text class="s" x="334" y="346">step 1: &#964;* = 0.8329</text>
+
+<text class="hd" x="640" y="24">CONSOLIDATE</text>
+<line x1="550" y1="322" x2="628" y2="322"/>
+<rect class="box" x="628" y="292" width="226" height="60"/>
+<text class="t" x="640" y="313">Merge at &#964;*</text>
+<text class="s" x="640" y="331">connected components collapse to</text>
+<text class="s" x="640" y="346">their medoid, an original card</text>
+
+<line x1="741" y1="352" x2="741" y2="380"/>
+<rect class="mea" x="628" y="380" width="226" height="62"/>
+<text class="t" x="640" y="401">Per-step null test</text>
+<text class="s" x="640" y="419">size-matched random groups on the</text>
+<text class="s" x="640" y="434">same inventory &#183; z per merge group</text>
+
+<line x1="741" y1="442" x2="741" y2="466"/>
+<path class="dec" d="M741,466 L881,516 L741,566 L601,516 Z" transform="translate(0,0)"/>
+<text class="t" x="741" y="512" text-anchor="middle">Validity rule</text>
+<text class="s" x="741" y="529" text-anchor="middle">&#8805; 90% of groups above 2&#963;?</text>
+
+<text class="lab" x="596" y="508" text-anchor="end">yes</text>
+<path class="loop" d="M601,516 L470,516 L470,600 L129,600 L129,258"/>
+<text class="lab" x="300" y="592">re-derive the boundary on the new inventory (granularity flow)</text>
+
+<text class="lab" x="756" y="588">no</text>
+<line x1="741" y1="566" x2="741" y2="600"/>
+<rect class="box" x="628" y="600" width="226" height="56"/>
+<text class="t" x="640" y="621">Stop</text>
+<text class="s" x="640" y="639">first violated at step 15; steps 1&#8211;14 admissible</text>
+
+<text class="hd" x="24" y="404">RELEASE</text>
+<rect class="out" x="24" y="414" width="330" height="86"/>
+<text class="t" x="36" y="435">Tiers F1 &#8230; F5</text>
+<text class="s" x="36" y="453">each state of the flow is a tier: 1,383 &#8594; 1,154 &#8594; 1,038</text>
+<text class="s" x="36" y="469">&#8594; 901 &#8594; 792 cards, boundary 0.8329 &#8594; 0.7634</text>
+<text class="s" x="36" y="485">L3 re-assigned by the seed-anchored damped EM</text>
+<path class="c" d="M628,516 L520,516 L520,457 L358,457" marker-end="url(#ah)"/>
+
+<line x1="189" y1="500" x2="189" y2="528"/>
+<rect class="box" x="24" y="528" width="330" height="52"/>
+<text class="t" x="36" y="549">Human audit</text>
+<text class="s" x="36" y="566">description adequacy &#183; L3 mapping &#183; redundancy</text>
+</svg></figure>
+</div>
+
 <div class=card><h2>Granularity flow tiers</h2>
 <figure style="margin:12px 0">
 <img src="figA_master_overview.png" alt="Two transitions and the granularity flow of the Master inventory"
