@@ -52,6 +52,21 @@ papers, which is the kind of redundancy the crossing boundary removes first; our
 duplicates, so its closest pairs are paraphrases rather than repeats.</div>
 </div>
 
+<div class=card><h2>Why the threshold cannot be chosen</h2>
+<div class=sub>Connected components take the transitive closure of the edge relation, so one bridging pair is
+enough to place two dissimilar cards in the same cluster. The remedy is not a better constant but a boundary
+re-derived after every consolidation.</div>
+<figure style="margin:12px 0">
+<img src="fig1_schematic.svg" alt="Chaining under a single cut versus the stepwise flow"
+ style="width:100%;border:1px solid #e2e2df;border-radius:8px;background:#fff">
+<figcaption style="font-size:12px;color:#666;line-height:1.7;margin-top:6px">
+Figure&nbsp;1 of the manuscript. <b>a</b>, One threshold for the whole inventory: at &tau; = 0.70 cards
+<i>a</i> and <i>d</i> merge through the bridge <i>b</i>&ndash;<i>c</i> although their own similarity is 0.50.
+<b>b</b>, The stepwise flow contracts each group to its medoid, which removes the bridging cards along with the
+chain they created, so the weak link survives no threshold. Values are illustrative.
+</figcaption></figure>
+</div>
+
 <div class=card><h2>How the boundary is measured</h2>
 <div class=sub>The figure below is the flagship figure of the accompanying manuscript. It carries the whole
 argument in three panels: where the space breaks, where the last defensible merge boundary sits, and how that
