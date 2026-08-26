@@ -94,9 +94,9 @@ class SiteV27Tests(unittest.TestCase):
 
     def test_default_card_order_starts_with_general_purpose_ai(self) -> None:
         script = (ROOT / "assets/site.js").read_text()
-        self.assertIn('"RAI1-G": 0', script)
-        self.assertIn('"RAI1-A": 1', script)
-        self.assertIn('"RAI1-P": 2', script)
+        self.assertIn('"L1_G": 0', script)
+        self.assertIn('"L1_A": 1', script)
+        self.assertIn('"L1_P": 2', script)
         self.assertIn("}).sort(compareCardsByDomain);", script)
 
 

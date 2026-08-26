@@ -92,15 +92,15 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn("전체 AI 리스크 분류 현황", page)
         self.assertNotIn("글로벌 AI 리스크 분류 현황", page)
         self.assertNotIn("coverage-note", page)
-        for level, count in (("l1", "3"), ("l2", "4"), ("l3", "52"), ("l4", "1,711")):
+        for level, count in (("l1", "3"), ("l2", "3"), ("l3", "49"), ("l4", "834")):
             self.assertIn(f'id="stat-{level}">{count}', page)
 
     def test_domain_navigation_uses_links_without_counts(self) -> None:
         page = (ROOT / "index.html").read_text()
-        self.assertIn('href="?domain=RAI1-G"', page)
-        self.assertIn('href="?domain=RAI1-A"', page)
-        self.assertIn('href="?domain=RAI1-P"', page)
-        self.assertIn("General-purpose AI (범용 AI)", page)
+        self.assertIn('href="?domain=L1_G"', page)
+        self.assertIn('href="?domain=L1_A"', page)
+        self.assertIn('href="?domain=L1_P"', page)
+        self.assertIn("General AI (범용 AI)", page)
         self.assertIn("Agentic AI (에이전틱 AI)", page)
         self.assertIn("Physical AI (피지컬 AI)", page)
         nav = page.split('<nav class="domain-nav"', 1)[1].split("</nav>", 1)[0]
@@ -141,9 +141,9 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn("grid-template-columns: 312px minmax(0, 1fr)", css)
         self.assertIn("risk-id--domain", css)
         self.assertIn("domain-badge", css)
-        self.assertIn('"RAI1-G": "#3867d6"', script)
-        self.assertIn('"RAI1-A": "#148f77"', script)
-        self.assertIn('"RAI1-P": "#c0392b"', script)
+        self.assertIn('"L1_G": "#3867d6"', script)
+        self.assertIn('"L1_A": "#148f77"', script)
+        self.assertIn('"L1_P": "#c0392b"', script)
         self.assertIn("DOMAIN_COLORS[path.l1]", script)
         self.assertIn("DOMAIN_LABELS[path.l1]", script)
 
@@ -151,22 +151,22 @@ class SiteV2Tests(unittest.TestCase):
         page = (ROOT / "index.html").read_text()
         css = (ROOT / "assets/site.css").read_text()
         self.assertIn('class="report-pill"', page)
-        self.assertIn("Technical Report <b>DRAFT</b>", page)
-        self.assertIn('href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf"', page)
+        self.assertIn("Technical Report <b>EN</b>", page)
+        self.assertIn('href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_en.pdf"', page)
         self.assertIn(".report-pill", css)
 
     def test_consistent_domain_and_level_icons(self) -> None:
         page = (ROOT / "index.html").read_text()
         script = (ROOT / "assets/site.js").read_text()
-        self.assertIn("🧠</span>General-purpose AI", page)
+        self.assertIn("🧠</span>General AI", page)
         self.assertIn("🧭</span>Agentic AI", page)
         self.assertIn("🤖</span>Physical AI", page)
-        self.assertIn('"RAI1-G": "🧠"', script)
-        self.assertIn('"RAI1-A": "🧭"', script)
-        self.assertIn('"RAI1-P": "🤖"', script)
-        self.assertIn('"RAI2-INT": "↔"', script)
-        self.assertIn('"RAI2-SYS": "⚙"', script)
-        self.assertIn('"RAI2-SOC": "🏛"', script)
+        self.assertIn('"L1_G": "🧠"', script)
+        self.assertIn('"L1_A": "🧭"', script)
+        self.assertIn('"L1_P": "🤖"', script)
+        self.assertIn('"L2_INT": "↔"', script)
+        self.assertIn('"L2_SYS": "⚙"', script)
+        self.assertIn('"L2_SOC": "🏛"', script)
 
 
 if __name__ == "__main__":

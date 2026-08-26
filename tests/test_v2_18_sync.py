@@ -126,9 +126,9 @@ class V218SynchronizationTest(unittest.TestCase):
             ROOT
             / "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex"
         ).read_text(encoding="utf-8")
-        self.assertIn("v2.18.0-rc", index)
-        self.assertIn("614 active HOLD", index)
-        self.assertIn('public/data/releases/v2.18.0-rc', site_js)
+        self.assertIn("REVIEWED MASTER RELEASE", index)
+        self.assertIn("834 final L4 cards", index)
+        self.assertIn('public/data/releases/RAI-Risk-Taxonomy-2.0-master', site_js)
         self.assertIn('public/data/releases/v2.18.0-rc', space_js)
         self.assertIn("release candidate v2.18.0-rc", report)
         self.assertIn("Current hierarchy coverage by L1 domain", report)

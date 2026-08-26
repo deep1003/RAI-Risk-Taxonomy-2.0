@@ -1,5 +1,5 @@
 {
-  "current_release": "v2.18.0-rc",
-  "release_status": "release_candidate",
-  "manifest": "public/data/releases/v2.18.0-rc/manifest.json"
+  "current_release": "RAI-Risk-Taxonomy-2.0-master",
+  "release_status": "master",
+  "manifest": "public/data/releases/RAI-Risk-Taxonomy-2.0-master/manifest.json"
 }

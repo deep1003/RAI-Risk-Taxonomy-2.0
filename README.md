@@ -1,20 +1,21 @@
 # RAI Risk Taxonomy
 
-Versioned data package for RAI Risk Taxonomy 2.0. The current release candidate
-preserves 1,711 registered L4 IDs, displays 1,660 active cards, and maps them
-against 54 semantic L3 families. Of the active cards, 614 remain marked HOLD
-for human review.
+Versioned data package for RAI Risk Taxonomy 2.0. The current reviewed master
+release contains 834 bilingual L4 risk cards mapped to 49 L3 categories. It
+includes 769 EM assignments and 65 HD assignments to domain-specific Others
+categories.
 
-## Current release candidate
+## Current master release
 
-- Release: `v2.18.0-rc`
+- Release: `RAI-Risk-Taxonomy-2.0-master`
 - L1: 3 domains
-- L2: 3 semantic categories
-- L3: 54 semantic families, comprising 33 General, 6 Agentic, and 15 Physical
-- L4: 1,711 registered IDs, 1,660 active cards, and 51 merged records
-- Validation: HOLD included and excluded BGE-M3 sensitivity analysis
-- Website bundle: `public/data/releases/v2.18.0-rc/`
-- Validation bundle: `reports/validation/v2.18.0-rc/`
+- L2: 3 dimensions
+- L3: 49 categories, comprising 46 immutable source categories and 3 derived Others categories
+- L4: 834 final cards, comprising 618 General, 85 Agentic, and 131 Physical
+- Mapping: 769 EM and 65 HD/Others assignments
+- Validation: 18 passed, 0 failed
+- Canonical artifacts: `releases/RAI-Risk-Taxonomy-2.0-master/`
+- Website bundle: `public/data/releases/RAI-Risk-Taxonomy-2.0-master/`
 
 This repository is independent of the two read-only source repositories:
 

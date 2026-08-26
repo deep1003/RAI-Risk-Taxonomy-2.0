@@ -1,0 +1,2 @@
+# Preserve byte-identical canonical release CSV files and their recorded hashes.
+releases/RAI-Risk-Taxonomy-2.0-master/data/*.csv -text

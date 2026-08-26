@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Exactly five primary CSV files",
+      "status": "PASS",
+      "evidence": [
+        "L1_L2_L3_Master.csv",
+        "L1_Master.csv",
+        "L4_Agentic.csv",
+        "L4_General.csv",
+        "L4_Physical.csv"
+      ]
+    },
+    {
+      "check": "Primary row counts",
+      "status": "PASS",
+      "evidence": "3,49,618,85,131"
+    },
+    {
+      "check": "L4 reconciliation",
+      "status": "PASS",
+      "evidence": "834 = 892 - 39 - 20 + 1"
+    },
+    {
+      "check": "Unique final L4 IDs",
+      "status": "PASS",
+      "evidence": 834
+    },
+    {
+      "check": "L4 ID format",
+      "status": "PASS",
+      "evidence": "All IDs expose L3 plus sequence"
+    },
+    {
+      "check": "Required L4 schema",
+      "status": "PASS",
+      "evidence": [
+        "L0_ID",
+        "L1_ID",
+        "L2_ID",
+        "L3_ID",
+        "L4_ID",
+        "L4_Title_ko",
+        "L4_Title_en",
+        "L4_Description_ko",
+        "L4_Description_en",
+        "facet",
+        "act-type",
+        "Mapping_Method",
+        "source_row_id",
+        "Source_L4_ID",
+        "Source_Instruction_Prompt"
+      ]
+    },
+    {
+      "check": "Complete bilingual L4 fields",
+      "status": "PASS",
+      "evidence": "No blanks"
+    },
+    {
+      "check": "No within-domain duplicate titles",
+      "status": "PASS",
+      "evidence": "Korean and English"
+    },
+    {
+      "check": "Mapping totals",
+      "status": "PASS",
+      "evidence": {
+        "EM": 769,
+        "HD": 65
+      }
+    },
+    {
+      "check": "Others restricted to HD",
+      "status": "PASS",
+      "evidence": 65
+    },
+    {
+      "check": "All hierarchy references resolve",
+      "status": "PASS",
+      "evidence": 48
+    },
+    {
+      "check": "Exact L3 source-field preservation",
+      "status": "PASS",
+      "evidence": "46 rows, seven fields"
+    },
+    {
+      "check": "Only derived Others added to hierarchy",
+      "status": "PASS",
+      "evidence": {
+        "IMMUTABLE_SOURCE": 46,
+        "DERIVED_OTHERS_HD": 3
+      }
+    },
+    {
+      "check": "All source rows represented in crosswalk",
+      "status": "PASS",
+      "evidence": 892
+    },
+    {
+      "check": "Archive counts",
+      "status": "PASS",
+      "evidence": {
+        "deleted": 39,
+        "merged_away": 20,
+        "split_children": 2
+      }
+    },
+    {
+      "check": "All old new IDs replaced",
+      "status": "PASS",
+      "evidence": "100 source rows, zero final IDs"
+    },
+    {
+      "check": "Agentic and Physical source attributes remain blank",
+      "status": "PASS",
+      "evidence": "Blank as supplied"
+    },
+    {
+      "check": "Manifest hashes match primary outputs",
+      "status": "PASS",
+      "evidence": {
+        "L1_Master.csv": {
+          "sha256": "b6ae31d34ff46458265ce1ee7383842ad4f2098ffc5194f8e7e80fede96a4f85",
+          "rows": 3
+        },
+        "L1_L2_L3_Master.csv": {
+          "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+          "rows": 49
+        },
+        "L4_General.csv": {
+          "sha256": "f99e7340639342ee23b0350ae29ea33088a895a7db88fe491bac2a84203239ec",
+          "rows": 618
+        },
+        "L4_Agentic.csv": {
+          "sha256": "cebd0384e367726d50132e06e3e618d8e5c54f059b18b6d9b82edecbdfbcdeaa",
+          "rows": 85
+        },
+        "L4_Physical.csv": {
+          "sha256": "9841c208504ee988fa8f7aed8595d9b6e28350ce90d8880c01bf355870cd9209",
+          "rows": 131
+        }
+      }
+    }
+  ]
+}

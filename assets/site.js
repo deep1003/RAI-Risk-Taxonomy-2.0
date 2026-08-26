@@ -1,4 +1,4 @@
-const DATA_ROOT = "public/data/releases/v2.18.0-rc";
+const DATA_ROOT = "public/data/releases/RAI-Risk-Taxonomy-2.0-master";
 const PAGE_SIZE = 36;
 
 const state = {
@@ -21,39 +21,38 @@ const childrenByParent = new Map();
 const cardPath = new Map();
 
 const ASSIGNMENT_META = {
-  decision_required: { label: "HOLD" },
-  retired: { label: "MERGED" },
+  em: { label: "EM" },
+  hd: { label: "HD / Others" },
 };
 
 const DOMAIN_COLORS = {
-  "RAI1-G": "#3867d6",
-  "RAI1-A": "#148f77",
-  "RAI1-P": "#c0392b",
+  "L1_G": "#3867d6",
+  "L1_A": "#148f77",
+  "L1_P": "#c0392b",
 };
 
 const DOMAIN_LABELS = {
-  "RAI1-G": "General-purpose AI",
-  "RAI1-A": "Agentic AI",
-  "RAI1-P": "Physical AI",
+  "L1_G": "General AI",
+  "L1_A": "Agentic AI",
+  "L1_P": "Physical AI",
 };
 
 const DOMAIN_ICONS = {
-  "RAI1-G": "🧠",
-  "RAI1-A": "🧭",
-  "RAI1-P": "🤖",
+  "L1_G": "🧠",
+  "L1_A": "🧭",
+  "L1_P": "🤖",
 };
 
 const DOMAIN_ORDER = {
-  "RAI1-G": 0,
-  "RAI1-A": 1,
-  "RAI1-P": 2,
+  "L1_G": 0,
+  "L1_A": 1,
+  "L1_P": 2,
 };
 
 const L2_ICONS = {
-  "RAI2-INT": "↔",
-  "RAI2-SYS": "⚙",
-  "RAI2-SOC": "🏛",
-  "RAI2-HLD": "⏸",
+  "L2_INT": "↔",
+  "L2_SYS": "⚙",
+  "L2_SOC": "🏛",
 };
 
 document.addEventListener("DOMContentLoaded", init);
@@ -154,9 +153,10 @@ function indexHierarchy() {
       return;
     }
     const l3 = nodeById.get(card.primary_l3_id);
-    const l2 = nodeById.get(l3?.parent_id);
-    const l1 = nodeById.get(l2?.parent_id);
-    cardPath.set(card.l4_id, { l1: l1?.node_id, l2: l2?.node_id, l2Category: l2?.canonical_l2_id, l3: l3?.node_id, nodes: [l1, l2, l3].filter(Boolean) });
+    const parent = nodeById.get(l3?.parent_id);
+    const l2 = parent?.level === 2 ? parent : null;
+    const l1 = parent?.level === 1 ? parent : nodeById.get(l2?.parent_id);
+    cardPath.set(card.l4_id, { l1: l1?.node_id, l2: l2?.node_id || null, l2Category: l2?.canonical_l2_id || null, l3: l3?.node_id, nodes: [l1, l2, l3].filter(Boolean) });
   });
 }
 
@@ -179,7 +179,14 @@ function refreshDependentFilters() {
   const allowedL2 = new Set(l2Nodes
     .filter((node) => state.l2 === "all" || node.canonical_l2_id === state.l2)
     .map((node) => node.node_id));
-  const l3Nodes = state.nodes.filter((node) => node.level === 3 && allowedL2.has(node.parent_id));
+  const directL3 = state.nodes.filter((node) => {
+    const parent = nodeById.get(node.parent_id);
+    return node.level === 3
+      && parent?.level === 1
+      && state.l2 === "all"
+      && (state.l1 === "all" || parent.node_id === state.l1);
+  }).map((node) => ({ ...node, display_icon: DOMAIN_ICONS[node.parent_id] }));
+  const l3Nodes = state.nodes.filter((node) => node.level === 3 && allowedL2.has(node.parent_id)).concat(directL3);
   fillSelect(ui.l3, l3Nodes, "모든 L3", state.l3);
   if (![...ui.l3.options].some((option) => option.value === state.l3)) state.l3 = "all";
   syncControls();
@@ -192,30 +199,31 @@ function fillSelect(select, nodes, allLabel, selected = "all") {
 
 function initializeDomainFromUrl() {
   const requested = new URLSearchParams(window.location.search).get("domain");
-  const validDomains = new Set(["RAI1-G", "RAI1-A", "RAI1-P"]);
+  const validDomains = new Set(["L1_G", "L1_A", "L1_P"]);
   state.l1 = validDomains.has(requested) ? requested : "all";
   clearNavActive();
   document.querySelector(`[data-domain="${state.l1}"]`)?.classList.add("active");
 }
 
 function renderStats() {
-  document.querySelector("#stat-l1").textContent = state.nodes.filter((node) => node.level === 1 && node.status === "active").length.toLocaleString();
-  document.querySelector("#stat-l2").textContent = state.l2Categories.filter((category) => !category.review_overlay).length.toLocaleString();
-  document.querySelector("#stat-l3").textContent = state.nodes.filter((node) => node.level === 3 && node.status === "active").length.toLocaleString();
-  const l4Count = state.manifest.counts?.l4_total_ids_preserved ?? state.manifest.counts?.l4 ?? state.allCards.length ?? state.cards.length;
-  document.querySelector("#stat-l4").textContent = l4Count.toLocaleString();
+  document.querySelector("#stat-l1").textContent = state.manifest.counts.l1.toLocaleString();
+  document.querySelector("#stat-l2").textContent = state.manifest.counts.l2_categories.toLocaleString();
+  document.querySelector("#stat-l3").textContent = state.manifest.counts.l3.toLocaleString();
+  document.querySelector("#stat-l4").textContent = state.manifest.counts.l4.toLocaleString();
 }
 
 function renderTree() {
   const counts = countCardsByNode();
   const domains = state.nodes.filter((node) => node.level === 1);
   const hierarchy = domains.map((domain) => {
-    const l2Nodes = childrenByParent.get(domain.node_id) || [];
+    const l2Nodes = (childrenByParent.get(domain.node_id) || []).filter((node) => node.level === 2);
+    const others = (childrenByParent.get(domain.node_id) || []).filter((node) => node.level === 3);
     return `<details class="tree-domain" open style="--domain-color:${DOMAIN_COLORS[domain.node_id]}">
       <summary><span class="tree-domain-icon" aria-hidden="true">${DOMAIN_ICONS[domain.node_id]}</span>${bilingualLabel(domain.label_en, domain.label_ko)}<span class="tree-count">${counts.get(domain.node_id) || 0}</span></summary>
       <div class="tree-children">
-        ${l2Nodes.map((l2) => `<button class="tree-node" type="button" data-node="${l2.node_id}"><code>${l2.node_id.replace("RAI2-", "")}</code><span>${bilingualLabel(l2.label_en, l2.label_ko)}</span><b>${counts.get(l2.node_id) || 0}</b></button>
+        ${l2Nodes.map((l2) => `<button class="tree-node" type="button" data-node="${l2.node_id}"><code>${l2.node_id}</code><span>${bilingualLabel(l2.label_en, l2.label_ko)}</span><b>${counts.get(l2.node_id) || 0}</b></button>
           <div class="tree-children">${(childrenByParent.get(l2.node_id) || []).map((l3) => `<button class="tree-node" type="button" data-node="${l3.node_id}"><code>${l3.node_id.replace("RAI3-", "")}</code><span>${bilingualLabel(l3.label_en, l3.label_ko)}</span><b>${counts.get(l3.node_id) || 0}</b></button>`).join("")}</div>`).join("")}
+        ${others.map((l3) => `<button class="tree-node tree-node--others" type="button" data-node="${l3.node_id}"><code>${l3.node_id}</code><span>${bilingualLabel(l3.label_en, l3.label_ko)}</span><b>${counts.get(l3.node_id) || 0}</b></button>`).join("")}
       </div>
     </details>`;
   }).join("");
@@ -241,8 +249,8 @@ function selectTreeNode(nodeId) {
     state.l3 = "all";
   } else if (node.level === 3) {
     const parent = nodeById.get(node.parent_id);
-    state.l1 = parent.parent_id;
-    state.l2 = parent.canonical_l2_id;
+    state.l1 = parent.level === 1 ? parent.node_id : parent.parent_id;
+    state.l2 = parent.level === 2 ? parent.canonical_l2_id : "all";
     state.l3 = node.node_id;
   }
   state.status = "all";
@@ -288,7 +296,7 @@ function filteredCards() {
     const matchesQuery = !query || [card.l4_id, card.label_en, card.label_ko, card.definition_en, card.definition_ko]
       .filter(Boolean).join(" ").toLocaleLowerCase().includes(query);
     return matchesQuery
-      && (state.status === "all" || (state.status === "decision_required" && card.decision_required && card.status !== "retired") || (state.status === "retired" && card.status === "retired"))
+      && (state.status === "all" || card.mapping_method.toLocaleLowerCase() === state.status)
       && (state.l1 === "all" || path.l1 === state.l1)
       && (state.l2 === "all" || path.l2Category === state.l2)
       && (state.l3 === "all" || path.l3 === state.l3);
@@ -296,7 +304,7 @@ function filteredCards() {
 }
 
 function activeCards() {
-  return state.cards.filter((card) => card.status !== "retired");
+  return state.cards;
 }
 
 function compareCardsByDomain(left, right) {
@@ -331,19 +339,16 @@ function cardTemplate(card) {
   const pathLabel = path.nodes.length ? path.nodes.map((node) => `${node.label_en} (${node.label_ko})`).join(" › ") : "L3 not assigned";
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
-  const statusBadges = [
-    card.status === "retired" ? `<span class="status-badge status--merged">MERGED</span>` : "",
-    card.decision_required && card.status !== "retired" ? `<span class="status-badge status--decision">HOLD</span>` : "",
-  ].filter(Boolean).join("");
-  const mergedNote = card.status === "retired" && card.merged_into ? `<p class="merged-note">Merged into ${escapeHtml(card.merged_into)}</p>` : "";
-  return `<article class="risk-card ${card.status === "retired" ? "risk-card--retired" : ""}" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
+  const statusBadges = card.mapping_method === "HD"
+    ? `<span class="status-badge status--decision">HD / Others</span>`
+    : `<span class="status-badge status--em">EM</span>`;
+  return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
     <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${statusBadges}</div>
     <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
-    ${mergedNote}
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
-      ${card.severity_1to5 != null ? `<span class="metric"><small>SEVERITY</small><strong>${formatMetric(card.severity_1to5)}</strong></span>` : ""}
+      ${card.em_score != null ? `<span class="metric"><small>EM SCORE</small><strong>${formatMetric(card.em_score)}</strong></span>` : `<span class="metric"><small>DECISION</small><strong>HD</strong></span>`}
     </div>
   </article>`;
 }
@@ -392,28 +397,24 @@ function openCard(l4Id) {
   const card = state.cards.find((item) => item.l4_id === l4Id);
   if (!card) return;
   const path = cardPath.get(card.l4_id);
-  const references = card.references || [];
-  const tags = card.three_h_one_r || [];
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
-  const statusBadges = [
-    card.status === "retired" ? ` <span class="status-badge status--merged">MERGED</span>` : "",
-    card.decision_required && card.status !== "retired" ? ` <span class="status-badge status--decision">HOLD</span>` : "",
-  ].join("");
-  const mergedSection = card.status === "retired" ? `<section class="dialog-section"><h3>Registry status</h3><p>This registered L4 ID is retained for provenance and merged into ${escapeHtml(card.merged_into || "a canonical successor")}.</p></section>` : "";
+  const statusBadges = card.mapping_method === "HD"
+    ? ` <span class="status-badge status--decision">HD / Others</span>`
+    : ` <span class="status-badge status--em">EM</span>`;
+  const attributes = [card.facet ? `Facet: ${card.facet}` : "", card.act_type ? `Act-type: ${card.act_type}` : ""].filter(Boolean);
   ui.dialogContent.innerHTML = `<div class="dialog-body" style="--card-accent:${domainColor}">
     <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span>${statusBadges}</div>
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
-    ${mergedSection}
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>
     <div class="dialog-metrics">
-      <div><span>Severity</span><strong>${formatMetric(card.severity_1to5)}</strong></div>
-      <div><span>Probability</span><strong>${formatMetric(card.probability_0to1)}</strong></div>
-      <div><span>Impact</span><strong>${formatMetric(card.impact_score)}</strong></div>
+      <div><span>EM score</span><strong>${formatMetric(card.em_score)}</strong></div>
+      <div><span>EM margin</span><strong>${formatMetric(card.em_margin)}</strong></div>
+      <div><span>EM stability</span><strong>${formatMetric(card.em_stability)}</strong></div>
     </div>
-    ${tags.length ? `<section class="dialog-section"><h3>3H / Role</h3><div class="tag-row">${tags.map((tag) => `<span class="axis-tag">${escapeHtml(tag.axis_code)} ${escapeHtml(tag.axis_name)} [${escapeHtml(tag.priority_code)}]</span>`).join("")}</div></section>` : ""}
-    <section class="dialog-section"><h3>References · ${references.length}</h3>${references.length ? `<ul class="reference-list">${references.map(referenceTemplate).join("")}</ul>` : `<p>등록된 근거 링크가 없습니다.</p>`}</section>
+    ${attributes.length ? `<section class="dialog-section"><h3>L4 attributes</h3><div class="tag-row">${attributes.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
+    <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)} · ${escapeHtml(card.domain_route_basis)} · ${escapeHtml(card.transformation_action)}</p>${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}</section>
   </div>`;
   ui.dialog.showModal();
 }

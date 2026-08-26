@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RAI Risk Taxonomy 2.0: explore 1,711 registered L4 IDs, including 1,660 active risk cards and 51 merged records.">
-  <title>RAI Risk Taxonomy 2.0 · 1,711 Registered L4 IDs</title>
+  <meta name="description" content="RAI Risk Taxonomy 2.0 master release: explore 834 bilingual L4 risk cards mapped to 49 L3 categories.">
+  <title>RAI Risk Taxonomy 2.0 Master · 834 L4 Risks</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173458'/%3E%3Cpath d='M15 46V18h18c9 0 15 5 15 13 0 6-3 10-9 12l10 3H36l-8-11v11zm13-17h5c3 0 5-1 5-4s-2-4-5-4h-5z' fill='white'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/site.css?v=2.18.0-rc">
+  <link rel="stylesheet" href="assets/site.css?v=master-20260826">
 </head>
 <body>
   <a class="skip-link" href="#risk-results">리스크 목록으로 건너뛰기</a>
@@ -16,7 +16,7 @@
     <div class="hero__inner">
       <div class="hero__eyebrow">
         <span class="release-dot" aria-hidden="true"></span>
-        TECHNICAL REPORT 2.0 POLICY VIEW · v2.18.0-rc
+        REVIEWED MASTER RELEASE · 2026-08-26
       </div>
       <div class="hero__row">
         <div>
@@ -31,11 +31,11 @@
   <nav class="domain-nav" aria-label="상위 리스크 영역">
     <div class="domain-nav__inner">
       <a class="domain-pill active" data-domain="all" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/">전체 보기</a>
-      <a class="domain-pill domain-pill--general" data-domain="RAI1-G" href="?domain=RAI1-G"><span class="domain-icon" aria-hidden="true">🧠</span>General-purpose AI (범용 AI)</a>
-      <a class="domain-pill domain-pill--agentic" data-domain="RAI1-A" href="?domain=RAI1-A"><span class="domain-icon" aria-hidden="true">🧭</span>Agentic AI (에이전틱 AI)</a>
-      <a class="domain-pill domain-pill--physical" data-domain="RAI1-P" href="?domain=RAI1-P"><span class="domain-icon" aria-hidden="true">🤖</span>Physical AI (피지컬 AI)</a>
-      <a class="report-pill" href="projects/granularity/index.html"><span aria-hidden="true">🧪</span>Granularity Project</a>
-      <a class="report-pill" href="reports/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📄</span>Technical Report <b>DRAFT</b></a>
+      <a class="domain-pill domain-pill--general" data-domain="L1_G" href="?domain=L1_G"><span class="domain-icon" aria-hidden="true">🧠</span>General AI (범용 AI)</a>
+      <a class="domain-pill domain-pill--agentic" data-domain="L1_A" href="?domain=L1_A"><span class="domain-icon" aria-hidden="true">🧭</span>Agentic AI (에이전틱 AI)</a>
+      <a class="domain-pill domain-pill--physical" data-domain="L1_P" href="?domain=L1_P"><span class="domain-icon" aria-hidden="true">🤖</span>Physical AI (피지컬 AI)</a>
+      <a class="report-pill" href="#release-files"><span aria-hidden="true">↓</span>Release files</a>
+      <a class="report-pill" href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_en.pdf" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📄</span>Technical Report <b>EN</b></a>
     </div>
   </nav>
 
@@ -50,17 +50,38 @@
 
       <div class="stat-grid">
         <article class="stat-card stat-card--dark">
-          <span><i class="stat-level-icon" aria-hidden="true">◈</i>L1</span><strong id="stat-l1">3</strong><small>🧠 General-purpose AI (범용 AI) · 🧭 Agentic AI (에이전틱 AI) · 🤖 Physical AI (피지컬 AI)</small>
+          <span><i class="stat-level-icon" aria-hidden="true">◈</i>L1</span><strong id="stat-l1">3</strong><small>🧠 General AI · 🧭 Agentic AI · 🤖 Physical AI</small>
         </article>
         <article class="stat-card stat-card--l2">
-          <span><i class="stat-level-icon" aria-hidden="true">▦</i>L2</span><strong id="stat-l2">3</strong><small>↔ Interaction Safety (상호작용 안전성) · ⚙ System Safety (시스템 안전성) · 🏛 Societal Impact (사회적 파급)</small>
+          <span><i class="stat-level-icon" aria-hidden="true">▦</i>L2</span><strong id="stat-l2">3</strong><small>↔ Interaction · ⚙ System · 🏛 Societal Impact</small>
         </article>
         <article class="stat-card stat-card--l3">
-          <span><i class="stat-level-icon" aria-hidden="true">⑂</i>L3</span><strong id="stat-l3">54</strong><small>33 General-purpose AI · 6 Agentic AI · 15 Physical AI</small>
+          <span><i class="stat-level-icon" aria-hidden="true">⑂</i>L3</span><strong id="stat-l3">49</strong><small>46 immutable master categories · 3 derived Others</small>
         </article>
         <article class="stat-card stat-card--l4">
-          <span><i class="stat-level-icon" aria-hidden="true">▣</i>L4</span><strong id="stat-l4">1,711</strong><small>1,711 registered IDs · 1,660 active cards · 51 merged records</small>
+          <span><i class="stat-level-icon" aria-hidden="true">▣</i>L4</span><strong id="stat-l4">834</strong><small>769 EM assignments · 65 HD/Others assignments</small>
         </article>
+      </div>
+    </section>
+
+    <section id="release-files" class="release-files" aria-labelledby="release-files-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">MASTER ARTIFACTS</p>
+          <h2 id="release-files-title">최종 릴리스 파일</h2>
+        </div>
+        <span class="validation-pass">18/18 QA PASS</span>
+      </div>
+      <div class="download-grid">
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L1_Master.csv" download><strong>L1 Master</strong><span>3 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L1_L2_L3_Master.csv" download><strong>L1/L2/L3 Master</strong><span>49 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_General.csv" download><strong>L4 General</strong><span>618 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_Agentic.csv" download><strong>L4 Agentic</strong><span>85 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_Physical.csv" download><strong>L4 Physical</strong><span>131 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_ko.pdf" target="_blank" rel="noopener noreferrer"><strong>Technical Report</strong><span>Korean · PDF</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_en.pdf" target="_blank" rel="noopener noreferrer"><strong>Technical Report</strong><span>English · PDF</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/manifest.json" target="_blank" rel="noopener noreferrer"><strong>Release Manifest</strong><span>Hashes · JSON</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/validation/final_release_qa.json" target="_blank" rel="noopener noreferrer"><strong>Validation Record</strong><span>18/18 PASS · JSON</span></a>
       </div>
     </section>
 
@@ -81,11 +102,11 @@
           <kbd>/</kbd>
         </label>
         <label>
-          <span>검토 표시</span>
+          <span>매핑 방식</span>
           <select id="status-filter">
             <option value="all">전체</option>
-            <option value="decision_required">HOLD</option>
-            <option value="retired">MERGED</option>
+            <option value="em">EM</option>
+            <option value="hd">HD / Others</option>
           </select>
         </label>
         <label>
@@ -110,7 +131,7 @@
               <span>HIERARCHY</span>
               <strong>L0–L3 구조</strong>
             </div>
-            <span class="node-count">54 L3 nodes</span>
+            <span class="node-count">49 L3 nodes</span>
           </div>
           <div id="taxonomy-tree" class="taxonomy-tree"></div>
         </aside>
@@ -129,9 +150,9 @@
   <footer>
     <div>
       <strong>RAI Risk Taxonomy 2.0</strong>
-      <span>1,711 registered IDs · 1,660 active cards · 614 active HOLD · 51 merged records</span>
+      <span>834 final L4 cards · 769 EM · 65 HD/Others · 49 L3 categories</span>
     </div>
-    <p>Algorithmic and forced placements are provisional and are not human-approved ground truth.</p>
+    <p>L3 master fields preserved exactly · post-build validation 18/18 PASS</p>
   </footer>
 
   <dialog id="card-dialog" class="card-dialog">
@@ -139,7 +160,7 @@
     <div id="dialog-content"></div>
   </dialog>
 
-  <noscript>이 페이지에서 L4 registered ID와 active risk card를 탐색하려면 JavaScript를 활성화해 주세요.</noscript>
-  <script src="assets/site.js?v=2.18.0-rc" defer></script>
+  <noscript>이 페이지에서 L4 리스크 카드를 탐색하려면 JavaScript를 활성화해 주세요.</noscript>
+  <script src="assets/site.js?v=master-20260826" defer></script>
 </body>
 </html>
