@@ -1,7 +1,18 @@
 ﻿source_code,reference
 L3_MASTER,Frozen L3 master definitions and bilingual risk-statement style
+ISO_AI_RISK_23894,https://www.iso.org/standard/77304.html
 NIST_AI_RMF,https://www.nist.gov/itl/ai-risk-management-framework
+NIST_GAI_600_1,https://doi.org/10.6028/NIST.AI.600-1
+NIST_AML_100_2,https://doi.org/10.6028/NIST.AI.100-2e2025
 OECD_AI_PRINCIPLES,https://oecd.ai/en/ai-principles
+OECD_AIM_TERMS,https://oecd.ai/en/incidents-methodology
+OECD_AI_WAGE_INEQUALITY,https://doi.org/10.1787/bf98a45c-en
 EU_AI_ACT_2024_1689,https://eur-lex.europa.eu/eli/reg/2024/1689/oj
 UNESCO_AI_ETHICS,https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence
+UNICEF_CHILD_SEXUAL_EXPLOITATION_TERMS,https://www.unicef.org/documents/terminology-guidelines
+WHO_SELF_HARM_TERMS,https://www.who.int/southeastasia/health-topics/mental-health/key-terms-and-definitions-in-mental-health
+UNODC_AI_CRIME_TERMS,https://www.unodc.org/roseap/uploads/documents/Publications/2025/UNODC_Report_Emerging_threats_-_The_intersection_of_criminal_and_technological_innovation_in_the_use_of_automation_and_AI.pdf
+WIPO_IP_ENFORCEMENT,https://www.wipo.int/en/web/ip-enforcement
+UNOCT_AI_TERRORISM,https://www.un.org/counterterrorism/en/algorithms-and-terrorism-malicious-use-artificial-intelligence-terrorist-purposes
+IMF_AI_INEQUALITY,https://www.imf.org/en/Publications/WP/Issues/2025/04/04/AI-Adoption-and-Inequality-566559
 KOREA_AI_BASIC_ACT,https://www.law.go.kr/LSW/lsInfoP.do?efYd=20260122&lsiSeq=282791

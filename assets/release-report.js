@@ -37,7 +37,33 @@ async function renderManifest() {
         ${kpi("Final L4", summary.cleaned_total, "정제·통합·분리 후", "var(--physical)")}
         ${kpi("L3 categories", summary.l3_source_rows + summary.l3_derived_others_rows, `${summary.l3_source_rows} master + ${summary.l3_derived_others_rows} Others`, "var(--agentic)")}
         ${kpi("AI-grounded definitions", summary.cleaned_total, `${summary.definition_ai_grounding_rewrites} rewritten · ${summary.cleaned_total - summary.definition_ai_grounding_rewrites} retained`, "var(--em)")}
+        ${kpi("Title terminology", summary.title_terminology_validated, `${summary.title_terminology_normalisations} retained titles normalised`, "var(--general)")}
+        ${kpi("Semantic deduplication", summary.semantic_near_duplicate_deletions, `${summary.semantic_near_duplicate_candidates} candidate pairs reviewed`, "var(--hd)")}
       </div>
+    </section>
+
+    <section class="section panel-grid" aria-label="Title terminology and semantic deduplication review">
+      <article class="panel">
+        <h3>${formatNumber(summary.title_terminology_validated)}개 최종 명칭에 용어 근거 기록</h3>
+        <p class="panel-subtitle">Formulaic AI involvement modifiers removed while technical-object terms remain</p>
+        <div class="validation-bar" role="img" aria-label="${summary.title_terminology_normalisations} titles normalised and ${summary.title_terminology_validated - summary.title_terminology_normalisations} titles retained">
+          <div class="validation-bar__pass" style="width:${(summary.title_terminology_normalisations / summary.title_terminology_validated) * 100}%">Normalised ${summary.title_terminology_normalisations}</div>
+          <div class="validation-bar__fail" style="width:${((summary.title_terminology_validated - summary.title_terminology_normalisations) / summary.title_terminology_validated) * 100}%">Validated unchanged ${summary.title_terminology_validated - summary.title_terminology_normalisations}</div>
+        </div>
+      </article>
+      <article class="panel">
+        <h3>고유사도 후보 ${formatNumber(summary.semantic_near_duplicate_candidates)}쌍을 범위 기준으로 판정</h3>
+        <p class="panel-subtitle">Similarity generated candidates only; target and mechanism distinctiveness controlled deletion</p>
+        <div class="validation-bar" role="img" aria-label="${summary.semantic_near_duplicate_candidates - summary.semantic_near_duplicate_deletions} distinct pairs retained and ${summary.semantic_near_duplicate_deletions} lower-representativeness cards discarded">
+          <div class="validation-bar__pass" style="width:${((summary.semantic_near_duplicate_candidates - summary.semantic_near_duplicate_deletions) / summary.semantic_near_duplicate_candidates) * 100}%">Retained ${summary.semantic_near_duplicate_candidates - summary.semantic_near_duplicate_deletions}</div>
+          <div class="validation-bar__fail" style="width:${(summary.semantic_near_duplicate_deletions / summary.semantic_near_duplicate_candidates) * 100}%">Discarded ${summary.semantic_near_duplicate_deletions}</div>
+        </div>
+        <div class="table-shell"><table><tbody>
+          <tr><th>Candidate threshold</th><td class="numeric">${data.semantic_deduplication_method?.candidate_similarity_threshold ?? "0.90"}</td></tr>
+          <tr><th>Automatic deletion from similarity</th><td>${data.semantic_deduplication_method?.automatic_deletion_from_similarity_only ? "Enabled" : "Disabled"}</td></tr>
+          <tr><th>Distinct target or mechanism</th><td>Retained</td></tr>
+        </tbody></table></div>
+      </article>
     </section>
 
     <section class="section" aria-labelledby="cleaning-title">
@@ -96,6 +122,8 @@ async function renderManifest() {
           <tr><th>Model</th><td>${escapeHtml(data.model.name)}</td></tr>
           <tr><th>Pooling</th><td>${escapeHtml(data.model.pooling)}</td></tr>
           <tr><th>Definition method</th><td>${escapeHtml(data.definition_method?.name || "Immutable-L3-referenced bilingual AI grounding")}</td></tr>
+          <tr><th>Title method</th><td>${escapeHtml(data.title_terminology_method?.name || "Authoritative term-family normalisation")}</td></tr>
+          <tr><th>Near-duplicate method</th><td>${escapeHtml(data.semantic_deduplication_method?.name || "Bilingual semantic review with distinctiveness gates")}</td></tr>
           <tr><th>Anchor weight</th><td class="numeric">${data.mapping_method?.anchor_weight}</td></tr>
           <tr><th>L4 keywords</th><td class="numeric">${summary.keyword_count_per_language} per language</td></tr>
           <tr><th>Score floor</th><td class="numeric">${summary.thresholds.General.score_floor}</td></tr>

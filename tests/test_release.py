@@ -166,8 +166,8 @@ class ReleaseSmokeTests(unittest.TestCase):
         self.assertTrue(js_path.is_file())
         index = index_path.read_text(encoding="utf-8")
         script = js_path.read_text(encoding="utf-8")
-        self.assertIn('href="assets/site.css?v=master-20260826"', index)
-        self.assertIn('src="assets/site.js?v=master-20260826"', index)
+        self.assertIn('href="assets/site.css?v=master-20260826b"', index)
+        self.assertIn('src="assets/site.js?v=master-20260826b"', index)
         self.assertIn('const DATA_ROOT = "public/data/releases/RAI-Risk-Taxonomy-2.0-master"', script)
         self.assertNotIn("RAI4-1726", script)
 

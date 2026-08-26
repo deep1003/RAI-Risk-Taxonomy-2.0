@@ -3,22 +3,22 @@ Agentic AI,A_INT_CASCADE,Cascading Failure and Instability,EM,7
 Agentic AI,A_INT_COLLUSION,Collusion,EM,4
 Agentic AI,A_INT_CONFLICT,Competitive Conflict,EM,4
 Agentic AI,A_INT_COORD,Coordination Failure,EM,5
-Agentic AI,A_Others,Others and human decision,HD,14
-Agentic AI,A_SYS_AUTH,Excessive Authority and Agency,EM,16
+Agentic AI,A_Others,Others and human decision,HD,13
+Agentic AI,A_SYS_AUTH,Excessive Authority and Agency,EM,17
 Agentic AI,A_SYS_DECEPT,Deception and Scheming,EM,6
 Agentic AI,A_SYS_GOAL,Goal Misalignment,EM,13
 Agentic AI,A_SYS_SELFCOR,Self-Correction Failure,EM,6
 Agentic AI,A_SYS_TRACE,Accountability and Traceability Gap,EM,3
 General AI,G_INT_ALLOC,Allocative Discrimination,EM,7
 General AI,G_INT_ANTH,Anthropomorphism,EM,12
-General AI,G_INT_COPY,Copyright Infringement,EM,10
+General AI,G_INT_COPY,Copyright Infringement,EM,9
 General AI,G_INT_ILLEGAL,Illegal Conduct,EM,11
 General AI,G_INT_POL,Political Bias and Manipulation,EM,10
-General AI,G_INT_PRIV,Privacy Violation,EM,27
+General AI,G_INT_PRIV,Privacy Violation,EM,26
 General AI,G_INT_REL,Unhealthy Human-AI Relationship,EM,4
 General AI,G_INT_REPR,Representational Harm and Stereotyping,EM,26
-General AI,G_INT_SELF,Self-harm,EM,11
-General AI,G_INT_SEX,Sexual Harm and Exploitation,EM,11
+General AI,G_INT_SELF,Self-harm,EM,10
+General AI,G_INT_SEX,Sexual Harm and Exploitation,EM,9
 General AI,G_INT_UNETH,Unethical Conduct and Manipulation,EM,20
 General AI,G_INT_VALUE,Value Imposition and Normative Homogenization,EM,21
 General AI,G_INT_VIOL,Violence,EM,11

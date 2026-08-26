@@ -1,0 +1,826 @@
+﻿source_row_id,source_domain,source_l4_id,title_ko_before,title_ko_after,title_en_before,title_en_after,title_changed,normalisation_rule
+SRC-G-0001,General,RAI4-0003,에이전트의 종료·교정 저항,에이전트의 종료·교정 저항,Agent resistance to shutdown and correction,Agent resistance to shutdown and correction,False,RETAIN_STANDARD_TERM
+SRC-G-0002,General,RAI4-0021,거절-능력 혼동,거절-능력 혼동,Refusal-capability confusion,Refusal-capability confusion,False,RETAIN_STANDARD_TERM
+SRC-G-0003,General,RAI4-0065,인증 포획,인증 포획,Certification capture,Certification capture,False,RETAIN_STANDARD_TERM
+SRC-G-0004,General,RAI4-0066,감사 체크리스트의 형식적 준수,감사 체크리스트의 형식적 준수,Formalistic audit-checklist compliance,Formalistic audit-checklist compliance,False,RETAIN_STANDARD_TERM
+SRC-G-0005,General,RAI4-0081,외부 평가 접근 실패,외부 평가 접근 실패,External evaluation access failure,External evaluation access failure,False,RETAIN_STANDARD_TERM
+SRC-G-0006,General,RAI4-0084,평가 쇼핑,평가 쇼핑,Evaluation-shopping risk,Evaluation-shopping risk,False,RETAIN_STANDARD_TERM
+SRC-G-0007,General,RAI4-0085,레드팀 거버넌스 실패,레드팀 거버넌스 실패,Red-team governance failure,Red-team governance failure,False,RETAIN_STANDARD_TERM
+SRC-G-0008,General,RAI4-0108,역량 평가·출시 거버넌스 실패,역량 평가·출시 거버넌스 실패,Failure of capability evaluation and release governance,Failure of capability evaluation and release governance,False,RETAIN_STANDARD_TERM
+SRC-G-0009,General,RAI4-0114,의미 있는 인간 통제 실패,의미 있는 인간 통제 실패,Meaningful human control failure,Meaningful human control failure,False,RETAIN_STANDARD_TERM
+SRC-G-0010,General,RAI4-0182,물리적 위험에 대한 적시 대응 실패,물리적 위험에 대한 적시 대응 실패,Failure to Timely Respond to Physical Hazards,Failure to Timely Respond to Physical Hazards,False,RETAIN_STANDARD_TERM
+SRC-G-0011,General,RAI4-0184,그리퍼 형상·유형 제약 위반,그리퍼 형상·유형 제약 위반,Gripper geometry and type constraint violation,Gripper geometry and type constraint violation,False,RETAIN_STANDARD_TERM
+SRC-G-0012,General,RAI4-0211,안전 강화학습 제약 위반,안전 강화학습 제약 위반,Safe reinforcement learning constraint violation,Safe reinforcement learning constraint violation,False,RETAIN_STANDARD_TERM
+SRC-G-0013,General,RAI4-0228,위험 지시 거부 실패,위험 지시 거부 실패,Failure to reject hazardous instructions,Failure to reject hazardous instructions,False,RETAIN_STANDARD_TERM
+SRC-G-0014,General,RAI4-0233,안전-성능 균형 실패,안전-성능 균형 실패,Safety-performance trade-off failure,Safety-performance trade-off failure,False,RETAIN_STANDARD_TERM
+SRC-G-0015,General,RAI4-0274,헌법적 안전 규칙 집행 실패,헌법적 안전 규칙 집행 실패,Failure to enforce constitutional safety rules,Failure to enforce constitutional safety rules,False,RETAIN_STANDARD_TERM
+SRC-G-0016,General,RAI4-0470,감독 회피·수정 저항,감독 회피·수정 저항,Oversight evasion and correction resistance,Oversight evasion and correction resistance,False,RETAIN_STANDARD_TERM
+SRC-G-0017,General,RAI4-0494,규제·관리·운영 복합 실패,규제·관리·운영 복합 실패,"Combined Regulatory, Governance, and Operational Failure","Combined Regulatory, Governance, and Operational Failure",False,RETAIN_STANDARD_TERM
+SRC-G-0018,General,RAI4-0516,잘못된 위험 측정과 예측 오류,잘못된 위험 측정과 예측 오류,Incorrect risk measurement and prediction,Incorrect risk measurement and prediction,False,RETAIN_STANDARD_TERM
+SRC-G-0019,General,RAI4-0671,복지 혜택 및 자격 상실,복지 혜택 및 자격 상실,Denial of welfare benefits and entitlements,Denial of welfare benefits and entitlements,False,RETAIN_STANDARD_TERM
+SRC-G-0020,General,RAI4-0850,점진적인 통제력 상실,점진적인 통제력 상실,Gradual loss of control,Gradual loss of control,False,RETAIN_STANDARD_TERM
+SRC-G-0021,General,RAI4-0166,사용자 이해력 과부하,사용자 이해력 과부하,User comprehension overload,User comprehension overload,False,RETAIN_STANDARD_TERM
+SRC-G-0022,General,RAI4-0195,명령의 구현체별 하드웨어 한계 초과,명령의 구현체별 하드웨어 한계 초과,Command exceeds embodiment-specific hardware limits,Command exceeds embodiment-specific hardware limits,False,RETAIN_STANDARD_TERM
+SRC-G-0023,General,RAI4-0471,역량 오버행,역량 오버행,Capability overhang,Capability overhang,False,RETAIN_STANDARD_TERM
+SRC-G-0024,General,RAI4-1006,가중되는 노동 부담,가중되는 노동 부담,Increased labor burden,Increased labor burden,False,RETAIN_STANDARD_TERM
+SRC-G-0025,General,RAI4-0635,합성 콘텐츠의 진위 식별 실패와 지속적 피해,합성 콘텐츠의 진위 식별 실패와 지속적 피해,Failure to distinguish synthetic content and persistent harm,Failure to distinguish synthetic content and persistent harm,False,RETAIN_STANDARD_TERM
+SRC-G-0028,General,RAI4-0808,사실과 다른 오도성 정보 생성,사실과 다른 오도성 정보 생성,Generation of factually incorrect and misleading information,Generation of factually incorrect and misleading information,False,RETAIN_STANDARD_TERM
+SRC-G-0029,General,RAI4-0810,성실성 오류,성실성 오류,Faithfulness errors,Faithfulness errors,False,RETAIN_STANDARD_TERM
+SRC-G-0030,General,RAI4-0832,알고리즘 시스템에 의한 정보 기반 피해,알고리즘 시스템에 의한 정보 기반 피해,Information-based Harms from Algorithmic Systems,Information-based Harms from Algorithmic Systems,False,RETAIN_STANDARD_TERM
+SRC-G-0031,General,RAI4-0844,허위·오도 정보 유포에 의한 기만과 양극화,허위·오도 정보 유포에 의한 기만과 양극화,Deception and polarisation from false information,Deception and polarisation from false information,False,RETAIN_STANDARD_TERM
+SRC-G-0032,General,RAI4-1057,대규모 허위정보 생산·확산 장벽 저하,대규모 허위정보 생산·확산 장벽 저하,Lowered barriers to large-scale disinformation production and dissemination,Lowered barriers to large-scale disinformation production and dissemination,False,RETAIN_STANDARD_TERM
+SRC-G-0033,General,RAI4-1125,선거 제도와 절차에 관한 허위정보,선거 제도와 절차에 관한 허위정보,False information about electoral systems and processes,False information about electoral systems and processes,False,RETAIN_STANDARD_TERM
+SRC-G-0036,General,RAI4-1630,데이터 오해석·유출에 의한 오결론과 민감정보 확산,데이터 오해석·유출에 의한 오결론과 민감정보 확산,Erroneous conclusions and sensitiveinformation disclosure from data misinterpretation and leakage,Erroneous conclusions and sensitiveinformation disclosure from data misinterpretation and leakage,False,RETAIN_STANDARD_TERM
+SRC-G-0037,General,RAI4-0363,소수·복수 가치의 소거와 규범적 획일화,소수·복수 가치의 소거와 규범적 획일화,Erasure of minority and plural values through normative homogenization,Erasure of minority and plural values through normative homogenization,False,RETAIN_STANDARD_TERM
+SRC-G-0038,General,RAI4-0373,문화 간 고정관념 전이,문화 간 고정관념 전이,Cross-cultural stereotype transfer,Cross-cultural stereotype transfer,False,RETAIN_STANDARD_TERM
+SRC-G-0039,General,RAI4-0374,문화적 맥락 붕괴,문화적 맥락 붕괴,Cultural context collapse,Cultural context collapse,False,RETAIN_STANDARD_TERM
+SRC-G-0040,General,RAI4-0379,문화 간 평가 격차,문화 간 평가 격차,Cross-cultural evaluation gap,Cross-cultural evaluation gap,False,RETAIN_STANDARD_TERM
+SRC-G-0041,General,RAI4-0380,저자원 언어 가치 손실,저자원 언어 가치 손실,Low-resource language value loss,Low-resource language value loss,False,RETAIN_STANDARD_TERM
+SRC-G-0042,General,RAI4-0382,방언·언어 사용역 배제,방언·언어 사용역 배제,Dialect and register exclusion,Dialect and register exclusion,False,RETAIN_STANDARD_TERM
+SRC-G-0043,General,RAI4-0389,지식 체계 배제,지식 체계 배제,Knowledge-system marginalization,Knowledge-system marginalization,False,RETAIN_STANDARD_TERM
+SRC-G-0044,General,RAI4-0404,데이터세트 문화 샘플링 편향,데이터세트 문화 샘플링 편향,Dataset cultural sampling bias,Dataset cultural sampling bias,False,RETAIN_STANDARD_TERM
+SRC-G-0045,General,RAI4-0414,글로벌 벤치마크 단일문화,글로벌 벤치마크 단일문화,Global benchmark monoculture,Global benchmark monoculture,False,RETAIN_STANDARD_TERM
+SRC-G-0046,General,RAI4-0699,학습 데이터에 내재된 역사적·인구학적 편향,학습 데이터에 내재된 역사적·인구학적 편향,Historical and demographic bias embedded in training data,Historical and demographic bias embedded in training data,False,RETAIN_STANDARD_TERM
+SRC-G-0047,General,RAI4-1046,집단별 성능 격차·고정관념 인코딩,집단별 성능 격차·고정관념 인코딩,Demographic performance disparity and stereotype encoding,Demographic performance disparity and stereotype encoding,False,RETAIN_STANDARD_TERM
+SRC-G-0048,General,RAI4-1107,데이터와 산출물에서의 집단 재현 불균형,데이터와 산출물에서의 집단 재현 불균형,Imbalanced representation of groups in data and outputs,Imbalanced representation of groups in data and outputs,False,RETAIN_STANDARD_TERM
+SRC-G-0049,General,RAI4-1145,맥락적 사회 규범 위반,맥락적 사회 규범 위반,Violation of contextual social norms,Violation of contextual social norms,False,RETAIN_STANDARD_TERM
+SRC-G-0050,General,RAI4-1668,사전학습 코퍼스 불일치에 의한 가치 어긋남,사전학습 코퍼스 불일치에 의한 가치 어긋남,Value mismatch from divergence between pretraining corpora and societal values,Value mismatch from divergence between pretraining corpora and societal values,False,RETAIN_STANDARD_TERM
+SRC-G-0051,General,RAI4-0070,사고 분류 단편화,사고 분류 단편화,Incident taxonomy fragmentation,Incident taxonomy fragmentation,False,RETAIN_STANDARD_TERM
+SRC-G-0052,General,RAI4-0418,주석 불일치 억제,주석 불일치 억제,Annotation disagreement suppression,Annotation disagreement suppression,False,RETAIN_STANDARD_TERM
+SRC-G-0053,General,RAI4-0708,언어·인구 집단 간 성능 격차,언어·인구 집단 간 성능 격차,Performance disparity across language and demographic groups,Performance disparity across language and demographic groups,False,RETAIN_STANDARD_TERM
+SRC-G-0054,General,RAI4-0716,집단 속성에 따른 배분적 불의,집단 속성에 따른 배분적 불의,Allocative injustice by group attribute,Allocative injustice by group attribute,False,RETAIN_STANDARD_TERM
+SRC-G-0055,General,RAI4-0821,지식 분포 변화에 따른 응답 노후화,지식 분포 변화에 따른 응답 노후화,Answer obsolescence from knowledge distribution shift,Answer obsolescence from knowledge distribution shift,False,RETAIN_STANDARD_TERM
+SRC-G-0056,General,RAI4-0822,맥락 일관성 추구에 의한 아첨과 환각 증폭,맥락 일관성 추구에 의한 아첨과 환각 증폭,Sycophancy and hallucination from context consistency,Sycophancy and hallucination from context consistency,False,RETAIN_STANDARD_TERM
+SRC-G-0057,General,RAI4-0938,사회적 가치·윤리 규범과 상충하는 모델 출력,사회적 가치·윤리 규범과 상충하는 모델 출력,Model outputs conflicting with societal ethical values,Model outputs conflicting with societal ethical values,False,RETAIN_STANDARD_TERM
+SRC-G-0058,General,RAI4-0952,글쓰기 능력 저하와 학술 문헌 오염,글쓰기 능력 저하와 학술 문헌 오염,Writing skill erosion and scientific literature pollution,Writing skill erosion and scientific literature pollution,False,RETAIN_STANDARD_TERM
+SRC-G-0059,General,RAI4-1041,분포 외 입력에 대한 고신뢰 오작동,분포 외 입력에 대한 고신뢰 오작동,High-confidence failure on out-of-distribution inputs,High-confidence failure on out-of-distribution inputs,False,RETAIN_STANDARD_TERM
+SRC-G-0060,General,RAI4-1187,출력 불일치,출력 불일치,Output inconsistency,Output inconsistency,False,RETAIN_STANDARD_TERM
+SRC-G-0061,General,RAI4-1228,프롬프트 품질 결함으로 인한 오류,프롬프트 품질 결함으로 인한 오류,Errors from poor prompt quality,Errors from poor prompt quality,False,RETAIN_STANDARD_TERM
+SRC-G-0062,General,RAI4-1509,벤치마크 오염에 의한 모델 평가 무효화,벤치마크 오염에 의한 모델 평가 무효화,Benchmark contamination invalidating model evaluation,Benchmark contamination invalidating model evaluation,False,RETAIN_STANDARD_TERM
+SRC-G-0063,General,RAI4-1515,사고연쇄와 불일치하는 모델 출력,사고연쇄와 불일치하는 모델 출력,Model outputs inconsistent with chain-ofthought reasoning,Model outputs inconsistent with chain-ofthought reasoning,False,RETAIN_STANDARD_TERM
+SRC-G-0064,General,RAI4-1516,인코딩된 추론,인코딩된 추론,Encoded reasoning,Encoded reasoning,False,RETAIN_STANDARD_TERM
+SRC-G-0065,General,RAI4-1523,무관한 문맥에 의한 모델 성능 저하,무관한 문맥에 의한 모델 성능 저하,Performance degradation from irrelevant context,Performance degradation from irrelevant context,False,RETAIN_STANDARD_TERM
+SRC-G-0066,General,RAI4-1526,프롬프트 형식 민감성으로 인한 평가 신뢰성 저하,프롬프트 형식 민감성으로 인한 평가 신뢰성 저하,Evaluation unreliability from promptformat sensitivity,Evaluation unreliability from promptformat sensitivity,False,RETAIN_STANDARD_TERM
+SRC-G-0067,General,RAI4-1702,분포 변화에 대한 AI 평가·검증 실패,분포 변화에 대한 AI 평가·검증 실패,AI evaluation failure under distribution shift,AI evaluation failure under distribution shift,False,RETAIN_STANDARD_TERM
+SRC-G-0068,General,RAI4-0186,물리적 상식 위반,물리적 상식 위반,Commonsense physicality violation,Commonsense physicality violation,False,RETAIN_STANDARD_TERM
+SRC-G-0069,General,RAI4-0338,장기 작업의 단계 간 오차 누적,장기 작업의 단계 간 오차 누적,Cross-stage error accumulation in long tasks,Cross-stage error accumulation in long tasks,False,RETAIN_STANDARD_TERM
+SRC-G-0070,General,RAI4-0365,규범적 잠금,규범적 잠금,Normative lock-in,Normative lock-in,False,RETAIN_STANDARD_TERM
+SRC-G-0071,General,RAI4-0371,서구 규범 기본값화,서구 규범 기본값화,Western normative defaulting,Western normative defaulting,False,RETAIN_STANDARD_TERM
+SRC-G-0072,General,RAI4-0397,RLHF 규범적 과적합,RLHF 규범적 과적합,RLHF normative overfitting,RLHF normative overfitting,False,RETAIN_STANDARD_TERM
+SRC-G-0074,General,RAI4-0785,안전 미세조정 일반화 격차 악용,안전 미세조정 일반화 격차 악용,Exploitation of safety-fine-tuning generalization gaps,Exploitation of safety-fine-tuning generalization gaps,False,RETAIN_STANDARD_TERM
+SRC-G-0075,General,RAI4-0814,역사 수정주의적 서술 생성,역사 수정주의적 서술 생성,Generation of historically revisionist accounts,Generation of historically revisionist accounts,False,RETAIN_STANDARD_TERM
+SRC-G-0076,General,RAI4-1053,배제적 규범 인코딩,배제적 규범 인코딩,Exclusionary norm encoding,Exclusionary norm encoding,False,RETAIN_STANDARD_TERM
+SRC-G-0077,General,RAI4-1161,장기 계획 역량에 의한 감독 불가 행동 경로 추구,장기 계획 역량에 의한 감독 불가 행동 경로 추구,Unsupervisable action pathways from long-horizon planning capability,Unsupervisable action pathways from long-horizon planning capability,False,RETAIN_STANDARD_TERM
+SRC-G-0078,General,RAI4-0041,에이전트 벤치마크의 커버리지-깊이 착시,에이전트 벤치마크의 커버리지-깊이 착시,Coverage-depth illusion in agent benchmarks,Coverage-depth illusion in agent benchmarks,False,RETAIN_STANDARD_TERM
+SRC-G-0079,General,RAI4-0057,AI 결정·행동에 대한 감사 추적 불완전성,AI 결정·행동에 대한 감사 추적 불완전성,Incomplete audit trails for AI decisions and actions,Incomplete audit trails for AI decisions and actions,False,RETAIN_STANDARD_TERM
+SRC-G-0080,General,RAI4-0059,문서화 누락,문서화 누락,Documentation omission,Documentation omission,False,RETAIN_STANDARD_TERM
+SRC-G-0081,General,RAI4-0064,감사자 독립성 실패,감사자 독립성 실패,Auditor independence failure,Auditor independence failure,False,RETAIN_STANDARD_TERM
+SRC-G-0082,General,RAI4-0067,보증 사례 실패,보증 사례 실패,Assurance case failure,Assurance case failure,False,RETAIN_STANDARD_TERM
+SRC-G-0083,General,RAI4-0082,역량 평가 비공개,역량 평가 비공개,Capability evaluation non-disclosure,Capability evaluation non-disclosure,False,RETAIN_STANDARD_TERM
+SRC-G-0084,General,RAI4-0126,설명 실행 가능성 격차,설명 실행 가능성 격차,Explanation actionability gap,Explanation actionability gap,False,RETAIN_STANDARD_TERM
+SRC-G-0085,General,RAI4-0134,임상 의사결정 지원 AI에 대한 과신,임상 의사결정 지원 AI에 대한 과신,Overconfidence in AI clinical decision support,Overconfidence in AI clinical decision support,False,RETAIN_STANDARD_TERM
+SRC-G-0086,General,RAI4-0402,가치 충돌 불투명성,가치 충돌 불투명성,Value conflict opacity,Value conflict opacity,False,RETAIN_STANDARD_TERM
+SRC-G-0087,General,RAI4-0419,이해관계자 이견 은폐,이해관계자 이견 은폐,Multi-stakeholder disagreement concealment,Multi-stakeholder disagreement concealment,False,RETAIN_STANDARD_TERM
+SRC-G-0088,General,RAI4-0484,AI 에이전트 메모리의 자기 교정 실패,AI 에이전트 메모리의 자기 교정 실패,Self-correction failure in AI-agent memory,Self-correction failure in AI-agent memory,False,RETAIN_STANDARD_TERM
+SRC-G-0089,General,RAI4-0541,데이터 출처 검증 불가,데이터 출처 검증 불가,Unverifiable data provenance,Unverifiable data provenance,False,RETAIN_STANDARD_TERM
+SRC-G-0090,General,RAI4-0546,감사자 역량 부족에 따른 과대 보증,감사자 역량 부족에 따른 과대 보증,Over-assurance from insufficient auditor capacity,Over-assurance from insufficient auditor capacity,False,RETAIN_STANDARD_TERM
+SRC-G-0091,General,RAI4-0588,설명·출처 추적·재현성의 상실,설명·출처 추적·재현성의 상실,"Loss of explainability, provenance, and reproducibility","Loss of explainability, provenance, and reproducibility",False,RETAIN_STANDARD_TERM
+SRC-G-0092,General,RAI4-0590,불충분한 정보에 기반한 조언,불충분한 정보에 기반한 조언,Advice given on insufficient information,Advice given on insufficient information,False,RETAIN_STANDARD_TERM
+SRC-G-0093,General,RAI4-0596,AI 문서화 및 의사결정의 투명성·설명가능성 부족,AI 문서화 및 의사결정의 투명성·설명가능성 부족,Insufficient transparency and explainability across AI documentation and decisions,Insufficient transparency and explainability across AI documentation and decisions,False,RETAIN_STANDARD_TERM
+SRC-G-0094,General,RAI4-0818,확신에 찬 부정확한 답변과 근거 제시,확신에 찬 부정확한 답변과 근거 제시,Confidently asserted but unsound answers and justifications,Confidently asserted but unsound answers and justifications,False,RETAIN_STANDARD_TERM
+SRC-G-0095,General,RAI4-1120,재앙으로 번지는 사고,재앙으로 번지는 사고,Accidents cascading into catastrophe,Accidents cascading into catastrophe,False,RETAIN_STANDARD_TERM
+SRC-G-0096,General,RAI4-1129,광범위 배포 비서의 안전하지 않은 탐색,광범위 배포 비서의 안전하지 않은 탐색,Unsafe exploration by widely deployed assistants,Unsafe exploration by widely deployed assistants,False,RETAIN_STANDARD_TERM
+SRC-G-0097,General,RAI4-1163,자기·상황 인식에 따른 평가 인지 행동 변화,자기·상황 인식에 따른 평가 인지 행동 변화,Evaluation-aware behaviour shifting by situationally aware models,Evaluation-aware behaviour shifting by situationally aware models,False,RETAIN_STANDARD_TERM
+SRC-G-0098,General,RAI4-1175,안전하지 않은 견해 내포 질의,안전하지 않은 견해 내포 질의,Inquiry embedding unsafe opinion,Inquiry embedding unsafe opinion,False,RETAIN_STANDARD_TERM
+SRC-G-0099,General,RAI4-1195,모델 판단 근거 이해 불가,모델 판단 근거 이해 불가,Uninterpretable model decision reasoning,Uninterpretable model decision reasoning,False,RETAIN_STANDARD_TERM
+SRC-G-0100,General,RAI4-1296,검증 불가능한 AI 의사결정의 책임 공백,검증 불가능한 AI 의사결정의 책임 공백,Accountability void for unverifiable AI decisions,Accountability void for unverifiable AI decisions,False,RETAIN_STANDARD_TERM
+SRC-G-0101,General,RAI4-1300,모델 불투명도,모델 불투명도,Model opacity,Model opacity,False,RETAIN_STANDARD_TERM
+SRC-G-0102,General,RAI4-1303,기능·책임 명세 공백,기능·책임 명세 공백,Specification gaps in functionality and responsibility,Specification gaps in functionality and responsibility,False,RETAIN_STANDARD_TERM
+SRC-G-0103,General,RAI4-1384,의사결정 이해 불능,의사결정 이해 불능,Unintelligible agent decisions,Unintelligible agent decisions,False,RETAIN_STANDARD_TERM
+SRC-G-0104,General,RAI4-1486,조직 간 데이터 문서화 부재,조직 간 데이터 문서화 부재,Missing cross-organizational data documentation,Missing cross-organizational data documentation,False,RETAIN_STANDARD_TERM
+SRC-G-0105,General,RAI4-1514,해석가능성 결과에 대한 과대평가와 거짓 확 신,해석가능성 결과에 대한 과대평가와 거짓 확 신,Overestimation of interpretability results,Overestimation of interpretability results,False,RETAIN_STANDARD_TERM
+SRC-G-0106,General,RAI4-0033,에이전트의 안전하지 않은 도구 사용,에이전트의 안전하지 않은 도구 사용,Unsafe or out-of-scope agent tool use,Unsafe or out-of-scope agent tool use,False,RETAIN_STANDARD_TERM
+SRC-G-0107,General,RAI4-0034,에뮬레이션 도구 환경 불일치,에뮬레이션 도구 환경 불일치,Emulated tool-environment mismatch,Emulated tool-environment mismatch,False,RETAIN_STANDARD_TERM
+SRC-G-0108,General,RAI4-0038,에이전트 안전의 사용자 의도 오분류,에이전트 안전의 사용자 의도 오분류,User-intent misclassification in agent safety,User-intent misclassification in agent safety,False,RETAIN_STANDARD_TERM
+SRC-G-0109,General,RAI4-0344,사용자 능력 불일치,사용자 능력 불일치,User capability mismatch,User capability mismatch,False,RETAIN_STANDARD_TERM
+SRC-G-0110,General,RAI4-0364,다원적 선호 집계 실패,다원적 선호 집계 실패,Pluralistic preference aggregation failure,Pluralistic preference aggregation failure,False,RETAIN_STANDARD_TERM
+SRC-G-0111,General,RAI4-0366,최적화 하의 가치 드리프트,최적화 하의 가치 드리프트,Value drift under optimization,Value drift under optimization,False,RETAIN_STANDARD_TERM
+SRC-G-0112,General,RAI4-0399,무해성 선호 불일치,무해성 선호 불일치,Harmlessness preference mismatch,Harmlessness preference mismatch,False,RETAIN_STANDARD_TERM
+SRC-G-0113,General,RAI4-0468,대리 보상 오명세·명세 게이밍 및 보상 변조,대리 보상 오명세·명세 게이밍 및 보상 변조,"Proxy-reward misspecification, specification gaming, and reward tampering","Proxy-reward misspecification, specification gaming, and reward tampering",False,RETAIN_STANDARD_TERM
+SRC-G-0114,General,RAI4-0572,감독 회피를 위한 AI 에이전트의 기만적 정렬,감독 회피를 위한 AI 에이전트의 기만적 정렬,Deceptive alignment to evade oversight,Deceptive alignment to evade oversight,False,RETAIN_STANDARD_TERM
+SRC-G-0115,General,RAI4-0581,목표 범위 확장 성향,목표 범위 확장 성향,Goal expansion propensity,Goal expansion propensity,False,RETAIN_STANDARD_TERM
+SRC-G-0116,General,RAI4-0591,인간 가치와의 AI 목표 오정렬,인간 가치와의 AI 목표 오정렬,Misalignment of AI goals with human values,Misalignment of AI goals with human values,False,RETAIN_STANDARD_TERM
+SRC-G-0117,General,RAI4-0893,모의된 정동에 의한 기대 위반과 배신감,모의된 정동에 의한 기대 위반과 배신감,Violated expectations from simulated affect,Violated expectations from simulated affect,False,RETAIN_STANDARD_TERM
+SRC-G-0118,General,RAI4-0970,AGI 목표 안전성 확보 실패,AGI 목표 안전성 확보 실패,Failure to secure AGI goal safety,Failure to secure AGI goal safety,False,RETAIN_STANDARD_TERM
+SRC-G-0119,General,RAI4-1112,모델 오설정과 정량화되지 않은 예측 불확실 성,모델 오설정과 정량화되지 않은 예측 불확실 성,Model misspecification and unquantified prediction uncertainty,Model misspecification and unquantified prediction uncertainty,False,RETAIN_STANDARD_TERM
+SRC-G-0120,General,RAI4-1122,목표 드리프트,목표 드리프트,Goal drift,Goal drift,False,RETAIN_STANDARD_TERM
+SRC-G-0123,General,RAI4-1133,분포 이동에서의 목표 오일반화와 기만적 정 렬,분포 이동에서의 목표 오일반화와 기만적 정 렬,Goal misgeneralization and deceptive alignment under distribution shift,Goal misgeneralization and deceptive alignment under distribution shift,False,RETAIN_STANDARD_TERM
+SRC-G-0124,General,RAI4-1241,메사 최적화 목표 불일치,메사 최적화 목표 불일치,Misaligned mesa-optimization objectives,Misaligned mesa-optimization objectives,False,RETAIN_STANDARD_TERM
+SRC-G-0125,General,RAI4-1285,배포 후 잔존 결함으로 인한 오작동,배포 후 잔존 결함으로 인한 오작동,Undesirable outcomes from residual post-deployment defects,Undesirable outcomes from residual post-deployment defects,False,RETAIN_STANDARD_TERM
+SRC-G-0127,General,RAI4-1323,자율적 장기 목표 이탈,자율적 장기 목표 이탈,Autonomous long-horizon goal divergence,Autonomous long-horizon goal divergence,False,RETAIN_STANDARD_TERM
+SRC-G-0129,General,RAI4-1460,성능 요구사항 계획 미흡,성능 요구사항 계획 미흡,Inadequate performance requirement planning,Inadequate performance requirement planning,False,RETAIN_STANDARD_TERM
+SRC-G-0130,General,RAI4-1498,LLM 평가자 오판,LLM 평가자 오판,Faulty LLM-as-evaluator judgments,Faulty LLM-as-evaluator judgments,False,RETAIN_STANDARD_TERM
+SRC-G-0132,General,RAI4-1645,자연어 목표 과소지정에 의한 부정적 부수효 과,자연어 목표 과소지정에 의한 부정적 부수효 과,Negative side effects from goal underspecification in natural language,Negative side effects from goal underspecification in natural language,False,RETAIN_STANDARD_TERM
+SRC-G-0133,General,RAI4-1646,목표 지향성에 따른 유해한 도구적 목표와 권력 추구,목표 지향성에 따른 유해한 도구적 목표와 권력 추구,Harmful instrumental goals and power-seeking from goal-directedness,Harmful instrumental goals and power-seeking from goal-directedness,False,RETAIN_STANDARD_TERM
+SRC-G-0134,General,RAI4-1692,자체 시뮬레이션을 통한 기만적 정렬,자체 시뮬레이션을 통한 기만적 정렬,Deceptive alignment via self-simulation,Deceptive alignment via self-simulation,False,RETAIN_STANDARD_TERM
+SRC-G-0135,General,RAI4-1704,통제 미집행에 의한 목표 오정렬 및 창발 행동,통제 미집행에 의한 목표 오정렬 및 창발 행동,Agent goal misalignment and emergent behavior from unenforced control,Agent goal misalignment and emergent behavior from unenforced control,False,RETAIN_STANDARD_TERM
+SRC-G-0136,General,RAI4-0055,자동화된 의사결정의 적법절차 상실,자동화된 의사결정의 적법절차 상실,Loss of due process in automated decisions,Loss of due process in automated decisions,False,RETAIN_STANDARD_TERM
+SRC-G-0137,General,RAI4-0117,인간의 의사결정 능력·거부권 침식,인간의 의사결정 능력·거부권 침식,Erosion of human decision-making capacity and veto,Erosion of human decision-making capacity and veto,False,RETAIN_STANDARD_TERM
+SRC-G-0138,General,RAI4-0139,동의 없는 AI 중재 넛지,동의 없는 넛지,AI-mediated nudging without consent,Nudging without consent,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0139,General,RAI4-0161,인지 오프로딩,인지 오프로딩,Cognitive offloading risk,Cognitive offloading risk,False,RETAIN_STANDARD_TERM
+SRC-G-0140,General,RAI4-0168,인간 참여형 형식적 승인,인간 참여형 형식적 승인,Human-in-the-loop rubber stamping,Human-in-the-loop rubber stamping,False,RETAIN_STANDARD_TERM
+SRC-G-0141,General,RAI4-0169,AI 의사결정 지원의 경고 피로,AI 의사결정 지원의 경고 피로,Alert fatigue in AI decision support,Alert fatigue in AI decision support,False,RETAIN_STANDARD_TERM
+SRC-G-0142,General,RAI4-0171,AI 상호작용에서의 이해·동의 부족,AI 상호작용에서의 이해·동의 부족,Inadequate understanding and consent in AI interactions,Inadequate understanding and consent in AI interactions,False,RETAIN_STANDARD_TERM
+SRC-G-0143,General,RAI4-0174,AI 인터페이스의 장애 수용 실패,AI 인터페이스의 장애 수용 실패,Disability accommodation failure in AI interfaces,Disability accommodation failure in AI interfaces,False,RETAIN_STANDARD_TERM
+SRC-G-0144,General,RAI4-0178,AI 중재 서비스 제외,서비스 배제,AI-mediated service exclusion,Service exclusion,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0145,General,RAI4-0307,로봇·AI 정체성 미고지,로봇·AI 정체성 미고지,Failure to disclose robotic or AI identity,Failure to disclose robotic or AI identity,False,RETAIN_STANDARD_TERM
+SRC-G-0146,General,RAI4-0607,AI 생성 콘텐츠 미공개,AI 생성 콘텐츠 미공개,Non-disclosure of AI-generated content,Non-disclosure of AI-generated content,False,RETAIN_STANDARD_TERM
+SRC-G-0147,General,RAI4-0826,검증된 전문성 범위를 벗어난 AI 조언,검증된 전문성 범위를 벗어난 AI 조언,AI advice beyond validated professional scope,AI advice beyond validated professional scope,False,RETAIN_STANDARD_TERM
+SRC-G-0148,General,RAI4-1198,이용자 정서 맥락 인식 실패,이용자 정서 맥락 인식 실패,Failure to recognize a user's emotional context,Failure to recognize a user's emotional context,False,RETAIN_STANDARD_TERM
+SRC-G-0149,General,RAI4-1208,사용자 데이터 보유·재학습,사용자 데이터 보유·재학습,Retention and reuse of user data,Retention and reuse of user data,False,RETAIN_STANDARD_TERM
+SRC-G-0150,General,RAI4-1286,미지 출처에서 획득한 비우호적 AI,미지 출처에서 획득한 비우호적 AI,Unfriendly AI from an unknown external source,Unfriendly AI from an unknown external source,False,RETAIN_STANDARD_TERM
+SRC-G-0151,General,RAI4-0068,AI 사고·아차사고 과소보고,AI 사고·아차사고 과소보고,Underreporting of AI incidents and near misses,Underreporting of AI incidents and near misses,False,RETAIN_STANDARD_TERM
+SRC-G-0152,General,RAI4-0072,배포 후 모니터링·감시 실패,배포 후 모니터링·감시 실패,Post-deployment monitoring and surveillance failure,Post-deployment monitoring and surveillance failure,False,RETAIN_STANDARD_TERM
+SRC-G-0153,General,RAI4-0080,위험 분류 오류,위험 분류 오류,Risk classification error,Risk classification error,False,RETAIN_STANDARD_TERM
+SRC-G-0154,General,RAI4-0088,표준 단편화,표준 단편화,Standards fragmentation,Standards fragmentation,False,RETAIN_STANDARD_TERM
+SRC-G-0155,General,RAI4-0095,AI 레지스트리 불완전성,AI 레지스트리 불완전성,AI registry incompleteness,AI registry incompleteness,False,RETAIN_STANDARD_TERM
+SRC-G-0156,General,RAI4-0098,정책-실무 분리,정책-실무 분리,Policy-practice decoupling,Policy-practice decoupling,False,RETAIN_STANDARD_TERM
+SRC-G-0157,General,RAI4-0099,AI 조달의 불충분한 실사,AI 조달의 불충분한 실사,Inadequate due diligence in AI procurement,Inadequate due diligence in AI procurement,False,RETAIN_STANDARD_TERM
+SRC-G-0158,General,RAI4-0104,AI 조달의 공급업체 평가·계약통제 미흡,AI 조달의 공급업체 평가·계약통제 미흡,Inadequate vendor assessment and contractual controls in AI procurement,Inadequate vendor assessment and contractual controls in AI procurement,False,RETAIN_STANDARD_TERM
+SRC-G-0159,General,RAI4-0111,범용 AI 사고 에스컬레이션 실패,범용 AI 사고 에스컬레이션 실패,General-purpose AI incident escalation failure,General-purpose AI incident escalation failure,False,RETAIN_STANDARD_TERM
+SRC-G-0160,General,RAI4-0167,AI 인터페이스와 인적 요소의 불일치,AI 인터페이스와 인적 요소의 불일치,Mismatch between AI interfaces and human factors,Mismatch between AI interfaces and human factors,False,RETAIN_STANDARD_TERM
+SRC-G-0161,General,RAI4-0391,참여적·가치 민감 설계의 실패,참여적·가치 민감 설계의 실패,Failure of participatory and value-sensitive design,Failure of participatory and value-sensitive design,False,RETAIN_STANDARD_TERM
+SRC-G-0162,General,RAI4-0400,도덕적 불확실성 무시,도덕적 불확실성 무시,Moral uncertainty neglect,Moral uncertainty neglect,False,RETAIN_STANDARD_TERM
+SRC-G-0163,General,RAI4-0443,출처 오귀속,출처 오귀속,Incorrect source attribution,Incorrect source attribution,False,RETAIN_STANDARD_TERM
+SRC-G-0164,General,RAI4-0512,고속 AI 운영에서의 오류 미탐지,고속 AI 운영에서의 오류 미탐지,Undetected errors from high-speed AI operation,Undetected errors from high-speed AI operation,False,RETAIN_STANDARD_TERM
+SRC-G-0165,General,RAI4-0549,역량·안전을 오측정하는 벤치마크 한계,역량·안전을 오측정하는 벤치마크 한계,Benchmark limitations mismeasuring capability and safety,Benchmark limitations mismeasuring capability and safety,False,RETAIN_STANDARD_TERM
+SRC-G-0166,General,RAI4-0552,안전 필수 인프라 AI 운영 사고,안전 필수 인프라 AI 운영 사고,Operational accidents in safety-critical AI deployment,Operational accidents in safety-critical AI deployment,False,RETAIN_STANDARD_TERM
+SRC-G-0167,General,RAI4-0584,기반모델 공유에 따른 상관 실패,기반모델 공유에 따른 상관 실패,Correlated failures from shared foundation models,Correlated failures from shared foundation models,False,RETAIN_STANDARD_TERM
+SRC-G-0168,General,RAI4-0608,원자력 및 핵심 인프라에 대한 AI 제어 오류,원자력 및 핵심 인프라에 대한 AI 제어 오류,Erroneous AI control of nuclear and critical infrastructure systems,Erroneous AI control of nuclear and critical infrastructure systems,False,RETAIN_STANDARD_TERM
+SRC-G-0169,General,RAI4-0780,데이터 수집 품질관리 결함,데이터 수집 품질관리 결함,Deficient data collection quality control,Deficient data collection quality control,False,RETAIN_STANDARD_TERM
+SRC-G-0170,General,RAI4-0889,과장된 역량 주장과 제품 기능 실패에 따른 피해,과장된 역량 주장과 제품 기능 실패에 따른 피해,Harm from overstated capabilities and product function failure,Harm from overstated capabilities and product function failure,False,RETAIN_STANDARD_TERM
+SRC-G-0171,General,RAI4-1032,복잡 운용환경에서의 검증 범위 이탈 실패,복잡 운용환경에서의 검증 범위 이탈 실패,Reliability failure outside validated operating envelope,Reliability failure outside validated operating envelope,False,RETAIN_STANDARD_TERM
+SRC-G-0172,General,RAI4-1034,복잡한 신경망 모델의 내재적 견고성 취약성,복잡한 신경망 모델의 내재적 견고성 취약성,Intrinsic robustness weaknesses of complex neural models,Intrinsic robustness weaknesses of complex neural models,False,RETAIN_STANDARD_TERM
+SRC-G-0173,General,RAI4-1036,기술 미성숙으로 인한 미지의,기술 미성숙으로 인한 미지의,Unknown risks from immature technology,Unknown risks from immature technology,False,RETAIN_STANDARD_TERM
+SRC-G-0174,General,RAI4-1037,사용례 내재 위험 노출,사용례 내재 위험 노출,Inherent use-case risk exposure,Inherent use-case risk exposure,False,RETAIN_STANDARD_TERM
+SRC-G-0175,General,RAI4-1040,학습·검증 데이터의 품질 결함과 부적절한 선 택,학습·검증 데이터의 품질 결함과 부적절한 선 택,Poor quality and unrepresentative training data selection,Poor quality and unrepresentative training data selection,False,RETAIN_STANDARD_TERM
+SRC-G-0176,General,RAI4-1108,학습-운용 데이터 간 데이터셋 시프트,학습-운용 데이터 간 데이터셋 시프트,Dataset shift between training and runtime data,Dataset shift between training and runtime data,False,RETAIN_STANDARD_TERM
+SRC-G-0178,General,RAI4-1128,AI 비서 편익·피해 평가 지표 부재,AI 비서 편익·피해 평가 지표 부재,Lack of metrics for evaluating assistant benefits and harms,Lack of metrics for evaluating assistant benefits and harms,False,RETAIN_STANDARD_TERM
+SRC-G-0179,General,RAI4-1280,검증 불가능한 블랙박스 모델의 설명·결함 진 단 곤란,검증 불가능한 블랙박스 모델의 설명·결함 진 단 곤란,Unverifiable black-box models resisting explanation and debugging,Unverifiable black-box models resisting explanation and debugging,False,RETAIN_STANDARD_TERM
+SRC-G-0180,General,RAI4-1336,학습 데이터 어노테이션 결함,학습 데이터 어노테이션 결함,Deficient training-data annotation,Deficient training-data annotation,False,RETAIN_STANDARD_TERM
+SRC-G-0181,General,RAI4-1458,운영설계영역(ODD) 명세 미흡,운영설계영역(ODD) 명세 미흡,Inadequate specification of the operational design domain,Inadequate specification of the operational design domain,False,RETAIN_STANDARD_TERM
+SRC-G-0182,General,RAI4-1459,부적절한 자동화 수준,부적절한 자동화 수준,Inappropriate degree of automation,Inappropriate degree of automation,False,RETAIN_STANDARD_TERM
+SRC-G-0183,General,RAI4-1461,개발 과정 문서화와 데이터 이해의 부족,개발 과정 문서화와 데이터 이해의 부족,Insufficient development documentation and understanding of data,Insufficient development documentation and understanding of data,False,RETAIN_STANDARD_TERM
+SRC-G-0184,General,RAI4-1463,하드웨어 연산·전력 요구사항 누락,하드웨어 연산·전력 요구사항 누락,Omitted compute and power hardware requirements,Omitted compute and power hardware requirements,False,RETAIN_STANDARD_TERM
+SRC-G-0185,General,RAI4-1466,잘못된 데이터 라벨,잘못된 데이터 라벨,Incorrect data labels,Incorrect data labels,False,RETAIN_STANDARD_TERM
+SRC-G-0186,General,RAI4-1468,학습 데이터의 대표성 부족,학습 데이터의 대표성 부족,Insufficient representation in training data,Insufficient representation in training data,False,RETAIN_STANDARD_TERM
+SRC-G-0187,General,RAI4-1472,과적합 및 과소적합,과적합 및 과소적합,Over- and underfitting,Over- and underfitting,False,RETAIN_STANDARD_TERM
+SRC-G-0188,General,RAI4-1474,코너 케이스에서의 신뢰성 저하,코너 케이스에서의 신뢰성 저하,Reduced reliability in corner cases,Reduced reliability in corner cases,False,RETAIN_STANDARD_TERM
+SRC-G-0189,General,RAI4-1487,비전문가 데이터 조작,비전문가 데이터 조작,Non-expert data manipulation,Non-expert data manipulation,False,RETAIN_STANDARD_TERM
+SRC-G-0190,General,RAI4-1492,GPAI 모델의 손쉬운 재구성,GPAI 모델의 손쉬운 재구성,Easy reconfiguration of GPAI models,Easy reconfiguration of GPAI models,False,RETAIN_STANDARD_TERM
+SRC-G-0191,General,RAI4-1493,미세조정판의 예상외 역량,미세조정판의 예상외 역량,Unexpected downstream fine-tune competence,Unexpected downstream fine-tune competence,False,RETAIN_STANDARD_TERM
+SRC-G-0192,General,RAI4-1499,역량 평가에서 드러나지 않는 위험 역량,역량 평가에서 드러나지 않는 위험 역량,Undetected dangerous capabilities in model evaluations,Undetected dangerous capabilities in model evaluations,False,RETAIN_STANDARD_TERM
+SRC-G-0193,General,RAI4-1502,내재 가치 측정 부정확,내재 가치 측정 부정확,Inaccurate measurement of encoded values,Inaccurate measurement of encoded values,False,RETAIN_STANDARD_TERM
+SRC-G-0194,General,RAI4-1504,인간 평가 한계 초과 출력,인간 평가 한계 초과 출력,Outputs beyond human evaluability,Outputs beyond human evaluability,False,RETAIN_STANDARD_TERM
+SRC-G-0195,General,RAI4-1537,상황 인식을 이용한 평가 기만·배포 설득,상황 인식을 이용한 평가 기만·배포 설득,Evaluation deception and deployment persuasion from situational awareness,Evaluation deception and deployment persuasion from situational awareness,False,RETAIN_STANDARD_TERM
+SRC-G-0196,General,RAI4-1544,샌드박스 우회에 의한 격리 통제 상실,샌드박스 우회에 의한 격리 통제 상실,Loss of containment through sandbox escape,Loss of containment through sandbox escape,False,RETAIN_STANDARD_TERM
+SRC-G-0197,General,RAI4-1548,경쟁 압력에 의한 안전성 평가 축소 배포,경쟁 압력에 의한 안전성 평가 축소 배포,Truncated safety evaluation under competitive release pressure,Truncated safety evaluation under competitive release pressure,False,RETAIN_STANDARD_TERM
+SRC-G-0198,General,RAI4-1551,센서 드리프트에 의한 배포 시스템 성능 저하,센서 드리프트에 의한 배포 시스템 성능 저하,Deployed-system degradation from sensor and distribution drift,Deployed-system degradation from sensor and distribution drift,False,RETAIN_STANDARD_TERM
+SRC-G-0199,General,RAI4-1560,GPAI 출력을 이용한 설득력 있는 사칭,GPAI 출력을 이용한 설득력 있는 사칭,Convincing impersonation using GPAI outputs,Convincing impersonation using GPAI outputs,False,RETAIN_STANDARD_TERM
+SRC-G-0200,General,RAI4-1705,모니터링 부족에 의한 미탐지 안전·프라이버 시 위반,모니터링 부족에 의한 미탐지 안전·프라이버 시 위반,Undetected safety and privacy violations from insufficient monitoring,Undetected safety and privacy violations from insufficient monitoring,False,RETAIN_STANDARD_TERM
+SRC-G-0201,General,RAI4-0527,창의성·비판적 사고의 저하,창의성·비판적 사고의 저하,Devaluation of creativity and critical thinking,Devaluation of creativity and critical thinking,False,RETAIN_STANDARD_TERM
+SRC-G-0202,General,RAI4-0674,문화적 박탈,문화적 박탈,Cultural dispossession,Cultural dispossession,False,RETAIN_STANDARD_TERM
+SRC-G-0203,General,RAI4-0678,신체적 위해를 유발하는 출력,신체적 위해를 유발하는 출력,Model outputs leading to physical harm,Model outputs leading to physical harm,False,RETAIN_STANDARD_TERM
+SRC-G-0204,General,RAI4-0705,폭력 조장 위험 콘텐츠,폭력 조장 위험 콘텐츠,Violence-inciting dangerous content,Violence-inciting dangerous content,False,RETAIN_STANDARD_TERM
+SRC-G-0205,General,RAI4-0854,되돌릴 수 없는 변화,되돌릴 수 없는 변화,Irreversible change,Irreversible change,False,RETAIN_STANDARD_TERM
+SRC-G-0206,General,RAI4-1049,조직 재정·평판 손상,조직 재정·평판 손상,Organizational financial and reputational damage,Organizational financial and reputational damage,False,RETAIN_STANDARD_TERM
+SRC-G-0207,General,RAI4-1447,폭력/무력 충돌,폭력/무력 충돌,Violence/armed conflict,Violence/armed conflict,False,RETAIN_STANDARD_TERM
+SRC-G-0208,General,RAI4-0641,비합의 성적 대상화 및 성적 이미지 생성,비합의 성적 대상화 및 성적 이미지 생성,Non-consensual sexualization and intimate imagery generation,Non-consensual sexualization and intimate imagery generation,False,RETAIN_STANDARD_TERM
+SRC-G-0209,General,RAI4-0714,AI를 이용한 미성년자 성적 위해·착취,AI를 이용한 미성년자 성적 위해·착취,Sexual harm and exploitation of minors,Sexual harm and exploitation of minors,False,AUTHORITATIVE_OVERRIDE
+SRC-G-0210,General,RAI4-0718,외설·비하·학대 이미지 생성 및 접근 용이화,외설·비하·학대 이미지 생성 및 접근 용이화,Eased production of and access to abusive imagery,Eased production of and access to abusive imagery,False,RETAIN_STANDARD_TERM
+SRC-G-0211,General,RAI4-1136,유해·범죄 조장·기만적 콘텐츠의 대규모 생성,유해·범죄 조장·기만적 콘텐츠의 대규모 생성,"Scaled generation of harmful, criminal, and deceptive content","Scaled generation of harmful, criminal, and deceptive content",False,RETAIN_STANDARD_TERM
+SRC-G-0212,General,RAI4-1542,외부 도구 연동을 통한 유해 콘텐츠 유입,외부 도구 연동을 통한 유해 콘텐츠 유입,Ingestion of harmful content through external tool integration,Ingestion of harmful content through external tool integration,False,RETAIN_STANDARD_TERM
+SRC-G-0213,General,RAI4-0023,자해 조장 및 지원,자해 조장 및 지원,Self-harm facilitation,Self-harm facilitation,False,RETAIN_STANDARD_TERM
+SRC-G-0214,General,RAI4-0157,챗봇을 통한 자해 격려,챗봇을 통한 자해 격려,Self-harm encouragement by chatbot,Self-harm encouragement by chatbot,False,RETAIN_STANDARD_TERM
+SRC-G-0215,General,RAI4-0833,이용자의 정신·신체 건강을 위협하는 콘텐츠,이용자의 정신·신체 건강을 위협하는 콘텐츠,Content endangering users' mental and physical health,Content endangering users' mental and physical health,False,RETAIN_STANDARD_TERM
+SRC-G-0216,General,RAI4-0411,언어별 피해 과소탐지,언어별 피해 과소탐지,Language-specific harm under-detection,Language-specific harm under-detection,False,RETAIN_STANDARD_TERM
+SRC-G-0217,General,RAI4-0426,혐오발언 생성,혐오발언 생성,Hate speech generation,Hate speech generation,False,RETAIN_STANDARD_TERM
+SRC-G-0218,General,RAI4-0706,보호 속성 기반 부당 대우,보호 속성 기반 부당 대우,Protected-attribute unfair treatment,Protected-attribute unfair treatment,False,RETAIN_STANDARD_TERM
+SRC-G-0219,General,RAI4-0368,도덕적 다양성 압축,도덕적 다양성 압축,Moral diversity compression,Moral diversity compression,False,RETAIN_STANDARD_TERM
+SRC-G-0220,General,RAI4-0403,도덕적 프레이밍을 통한 AI 조작,도덕적 프레이밍을 통한 AI 조작,AI manipulation through moral framing,AI manipulation through moral framing,False,RETAIN_STANDARD_TERM
+SRC-G-0221,General,RAI4-0422,도덕적 세계관 배제,도덕적 세계관 배제,Moral-worldview exclusion,Moral-worldview exclusion,False,RETAIN_STANDARD_TERM
+SRC-G-0222,General,RAI4-0529,시스템 사용·오용에 따른 정치·경제 불안정,시스템 사용·오용에 따른 정치·경제 불안정,Political and economic destabilization from system misuse,Political and economic destabilization from system misuse,False,RETAIN_STANDARD_TERM
+SRC-G-0223,General,RAI4-0939,모델의 극단적·편향적 견해 표출,모델의 극단적·편향적 견해 표출,Expression of extremist and politically biased views,Expression of extremist and politically biased views,False,RETAIN_STANDARD_TERM
+SRC-G-0224,General,RAI4-1158,대규모 설득 능력,대규모 설득 능력,Large-scale persuasion capability,Large-scale persuasion capability,False,RETAIN_STANDARD_TERM
+SRC-G-0225,General,RAI4-1159,정치적 영향 전략 역량의 오용,정치적 영향 전략 역량의 오용,Misuse of political influence strategy capability,Misuse of political influence strategy capability,False,RETAIN_STANDARD_TERM
+SRC-G-0226,General,RAI4-0433,생체인식 식별·추적에 의한 프라이버시 침해,생체인식 식별·추적에 의한 프라이버시 침해,Biometric identification and tracking privacy harms,Biometric identification and tracking privacy harms,False,RETAIN_STANDARD_TERM
+SRC-G-0227,General,RAI4-0652,개인화 정보 악용 표적 사기,개인화 정보 악용 표적 사기,Targeted fraud exploiting personalized information,Targeted fraud exploiting personalized information,False,RETAIN_STANDARD_TERM
+SRC-G-0228,General,RAI4-0734,기밀정보 무단 공유에 따른 사업 손실,기밀정보 무단 공유에 따른 사업 손실,Business loss from unauthorised sharing of confidential information,Business loss from unauthorised sharing of confidential information,False,RETAIN_STANDARD_TERM
+SRC-G-0229,General,RAI4-0739,산출물을 통한 민감 개인·사업 정보 노출,산출물을 통한 민감 개인·사업 정보 노출,Exposure of sensitive personal and business information through outputs,Exposure of sensitive personal and business information through outputs,False,RETAIN_STANDARD_TERM
+SRC-G-0230,General,RAI4-0741,개인정보 보호조치 미흡,개인정보 보호조치 미흡,Inadequate personal-data protection,Inadequate personal-data protection,False,RETAIN_STANDARD_TERM
+SRC-G-0231,General,RAI4-0761,익명화된 데이터의 재식별,익명화된 데이터의 재식별,Re-identification of anonymized data,Re-identification of anonymized data,False,RETAIN_STANDARD_TERM
+SRC-G-0232,General,RAI4-0922,학습 코퍼스 내 개인정보 혼입,학습 코퍼스 내 개인정보 혼입,Private data contamination of training corpora,Private data contamination of training corpora,False,RETAIN_STANDARD_TERM
+SRC-G-0233,General,RAI4-1062,챗봇에 의한 사적 정보 유도와 유출,챗봇에 의한 사적 정보 유도와 유출,Elicitation and disclosure of private information by chatbots,Elicitation and disclosure of private information by chatbots,False,RETAIN_STANDARD_TERM
+SRC-G-0234,General,RAI4-1139,비서 유도 개인정보 노출,비서 유도 개인정보 노출,Assistant-induced privacy disclosure,Assistant-induced privacy disclosure,False,RETAIN_STANDARD_TERM
+SRC-G-0235,General,RAI4-1169,프라이버시·재산 정보 오처리,프라이버시·재산 정보 오처리,Privacy and property information mishandling,Privacy and property information mishandling,False,RETAIN_STANDARD_TERM
+SRC-G-0236,General,RAI4-1207,개인정보 스크래핑 학습,개인정보 스크래핑 학습,Personal-data scraping for training,Personal-data scraping for training,False,RETAIN_STANDARD_TERM
+SRC-G-0237,General,RAI4-1273,광범위한 개인정보 투입,광범위한 개인정보 투입,Pervasive personal-data ingestion,Pervasive personal-data ingestion,False,RETAIN_STANDARD_TERM
+SRC-G-0238,General,RAI4-1364,보호장치 없는 개인정보 수집,보호장치 없는 개인정보 수집,Personal information collection without safeguards,Personal information collection without safeguards,False,RETAIN_STANDARD_TERM
+SRC-G-0239,General,RAI4-1444,사생활·개인정보 부당 노출,사생활·개인정보 부당 노출,Unwarranted exposure of private life and personal data,Unwarranted exposure of private life and personal data,False,RETAIN_STANDARD_TERM
+SRC-G-0240,General,RAI4-1581,위장 계정 자동 운영에 의한 정보환경 조작,위장 계정 자동 운영에 의한 정보환경 조작,Information-environment manipulation through automated sockpuppet accounts,Information-environment manipulation through automated sockpuppet accounts,False,RETAIN_STANDARD_TERM
+SRC-G-0241,General,RAI4-1722,존엄 침해적 프라이버시 피해,존엄 침해적 프라이버시 피해,Dignity-eroding privacy harms,Dignity-eroding privacy harms,False,RETAIN_STANDARD_TERM
+SRC-G-0242,General,RAI4-0653,LLM 남용에 의한 학업 부정행위,LLM 남용에 의한 학업 부정행위,Academic misconduct from LLM misuse,Academic misconduct from LLM misuse,False,RETAIN_STANDARD_TERM
+SRC-G-0243,General,RAI4-1059,사기·표적 스캠 조장,사기·표적 스캠 조장,Fraud and targeted-scam facilitation,Fraud and targeted-scam facilitation,False,RETAIN_STANDARD_TERM
+SRC-G-0244,General,RAI4-1060,불법적 대중 감시·검열,불법적 대중 감시·검열,Illegitimate mass surveillance and censorship,Illegitimate mass surveillance and censorship,False,RETAIN_STANDARD_TERM
+SRC-G-0245,General,RAI4-1076,비윤리적 행위 옹호에 의한 유해 행동 유도,비윤리적 행위 옹호에 의한 유해 행동 유도,Endorsement of unethical conduct inducing harmful user action,Endorsement of unethical conduct inducing harmful user action,False,RETAIN_STANDARD_TERM
+SRC-G-0246,General,RAI4-1192,자동화된 선전과 대규모 영향 공작,자동화된 선전과 대규모 영향 공작,Automated propaganda and scaled influence operations,Automated propaganda and scaled influence operations,False,RETAIN_STANDARD_TERM
+SRC-G-0247,General,RAI4-1320,지속적 기만 수행에 의한 이용자 판단 왜곡,지속적 기만 수행에 의한 이용자 판단 왜곡,User judgement distortion through sustained model deception,User judgement distortion through sustained model deception,False,RETAIN_STANDARD_TERM
+SRC-G-0248,General,RAI4-1435,시장점유 목적의 비윤리적 기술 사용,시장점유 목적의 비윤리적 기술 사용,Unethical technology use for market share,Unethical technology use for market share,False,RETAIN_STANDARD_TERM
+SRC-G-0249,General,RAI4-1652,사이버·과학 영역에서의 LLM 이중용도 역량 악용,사이버·과학 영역에서의 LLM 이중용도 역량 악용,Misuse of dual-use LLM capabilities in cyber and scientific domains,Misuse of dual-use LLM capabilities in cyber and scientific domains,False,RETAIN_STANDARD_TERM
+SRC-G-0250,General,RAI4-0628,지식재산권 및 인격권 침해,지식재산권 및 인격권 침해,Infringement of intellectual property and personality rights,Infringement of intellectual property and personality rights,False,RETAIN_STANDARD_TERM
+SRC-G-0251,General,RAI4-0663,무단 표절 및 부정행위,무단 표절 및 부정행위,Plagiarism and cheating without acknowledgement,Plagiarism and cheating without acknowledgement,False,RETAIN_STANDARD_TERM
+SRC-G-0252,General,RAI4-0667,위조 및 브랜드 사칭,위조 및 브랜드 사칭,Counterfeiting and brand impersonation,Counterfeiting and brand impersonation,False,RETAIN_STANDARD_TERM
+SRC-G-0253,General,RAI4-0740,프롬프트 내 지식재산 정보 포함,프롬프트 내 지식재산 정보 포함,Intellectual property included in prompts,Intellectual property included in prompts,False,RETAIN_STANDARD_TERM
+SRC-G-0254,General,RAI4-1066,합성 창작물에 의한 인간 창작 노동의 대체,합성 창작물에 의한 인간 창작 노동의 대체,Displacement of human creative work by synthetic substitutes,Displacement of human creative work by synthetic substitutes,False,RETAIN_STANDARD_TERM
+SRC-G-0255,General,RAI4-1091,도용 및 착취,도용 및 착취,Misappropriation and exploitation,Misappropriation and exploitation,False,RETAIN_STANDARD_TERM
+SRC-G-0256,General,RAI4-0446,화생방핵(CBRN) 계획 지원,화생방핵(CBRN) 계획 지원,CBRN assistance,CBRN assistance,False,RETAIN_STANDARD_TERM
+SRC-G-0257,General,RAI4-0646,국가·범죄 행위자에 의한 AI의 의도적 무기화,국가·범죄 행위자에 의한 AI의 의도적 무기화,Deliberate weaponization of AI by state and criminal actors,Deliberate weaponization of AI by state and criminal actors,False,RETAIN_STANDARD_TERM
+SRC-G-0258,General,RAI4-0662,CBRN 정보·설계 역량 접근 용이화,CBRN 정보·설계 역량 접근 용이화,Eased access to CBRN weapon information and design capability,Eased access to CBRN weapon information and design capability,False,RETAIN_STANDARD_TERM
+SRC-G-0259,General,RAI4-0664,화학무기 합성 및 유해물질 방출 조력,화학무기 합성 및 유해물질 방출 조력,Chemical weapon synthesis and hazardous substance release,Chemical weapon synthesis and hazardous substance release,False,RETAIN_STANDARD_TERM
+SRC-G-0260,General,RAI4-0961,인간 개입 없는 치명적 자율무기의 표적 공격,인간 개입 없는 치명적 자율무기의 표적 공격,Lethal autonomous weapons engaging targets without human intervention,Lethal autonomous weapons engaging targets without human intervention,False,RETAIN_STANDARD_TERM
+SRC-G-0261,General,RAI4-1118,군사 AI 군비경쟁,군사 AI 군비경쟁,Military AI arms race,Military AI arms race,False,RETAIN_STANDARD_TERM
+SRC-G-0262,General,RAI4-1160,무기 획득 역량,무기 획득 역량,Weapons acquisition capability,Weapons acquisition capability,False,RETAIN_STANDARD_TERM
+SRC-G-0263,General,RAI4-1295,AI 가속 나노기술에 의한 독성 나노입자 통제 상실,AI 가속 나노기술에 의한 독성 나노입자 통제 상실,Uncontrolled toxic-nanoparticle production from AI-accelerated nanotech,Uncontrolled toxic-nanoparticle production from AI-accelerated nanotech,False,RETAIN_STANDARD_TERM
+SRC-G-0264,General,RAI4-1392,생물·화학 무기 개발 장벽의 저하,생물·화학 무기 개발 장벽의 저하,Lowered barriers to biological and chemical weapons development,Lowered barriers to biological and chemical weapons development,False,RETAIN_STANDARD_TERM
+SRC-G-0265,General,RAI4-1563,AI 오용에 의한 CBRN 무기 개발 역량 상승,AI 오용에 의한 CBRN 무기 개발 역량 상승,CBRN weapon development uplift through AI misuse,CBRN weapon development uplift through AI misuse,False,RETAIN_STANDARD_TERM
+SRC-G-0266,General,RAI4-1050,심리적 조작·비인간화·대규모 착취,심리적 조작·비인간화·대규모 착취,"Psychological manipulation, dehumanization, and exploitation","Psychological manipulation, dehumanization, and exploitation",False,RETAIN_STANDARD_TERM
+SRC-G-0267,General,RAI4-1434,비인간화와 객관화,비인간화와 객관화,Dehumanisation and objectification,Dehumanisation and objectification,False,RETAIN_STANDARD_TERM
+SRC-G-0268,General,RAI4-1636,마음이론(Theory of Mind) 능력,마음이론(Theory of Mind) 능력,Theory of mind capability,Theory of mind capability,False,RETAIN_STANDARD_TERM
+SRC-G-0269,General,RAI4-0140,개인화된 설득 취약성,개인화된 설득 취약성,Personalized persuasion vulnerability,Personalized persuasion vulnerability,False,RETAIN_STANDARD_TERM
+SRC-G-0270,General,RAI4-0435,데이터 오염 공격,데이터 오염 공격,Data poisoning,Data poisoning,False,RETAIN_STANDARD_TERM
+SRC-G-0271,General,RAI4-0436,모델 추출·역전 공격,모델 추출·역전 공격,Model extraction and inversion attacks,Model extraction and inversion attacks,False,RETAIN_STANDARD_TERM
+SRC-G-0272,General,RAI4-0593,학습 데이터 암기에 의한 민감정보 유출,학습 데이터 암기에 의한 민감정보 유출,Leakage of sensitive training data through memorization,Leakage of sensitive training data through memorization,False,RETAIN_STANDARD_TERM
+SRC-G-0273,General,RAI4-0619,은밀한 행동 조작,은밀한 행동 조작,Covert behavioral manipulation,Covert behavioral manipulation,False,RETAIN_STANDARD_TERM
+SRC-G-0274,General,RAI4-0721,유해·오염 학습 데이터에 의한 출력 훼손,유해·오염 학습 데이터에 의한 출력 훼손,Output corruption from harmful and poisoned training data,Output corruption from harmful and poisoned training data,False,RETAIN_STANDARD_TERM
+SRC-G-0275,General,RAI4-0733,학습 데이터 내 기밀정보 포함과 출력 노출,학습 데이터 내 기밀정보 포함과 출력 노출,Confidential information in training data disclosed through outputs,Confidential information in training data disclosed through outputs,False,RETAIN_STANDARD_TERM
+SRC-G-0276,General,RAI4-0753,학습 데이터 추출 공격,학습 데이터 추출 공격,Training data extraction attack,Training data extraction attack,False,RETAIN_STANDARD_TERM
+SRC-G-0277,General,RAI4-0760,프롬프트 및 학습 데이터에 기인한 개인정보 노출,프롬프트 및 학습 데이터에 기인한 개인정보 노출,Personal data exposure through prompt and training data,Personal data exposure through prompt and training data,False,RETAIN_STANDARD_TERM
+SRC-G-0278,General,RAI4-0788,인스트럭션 튜닝 포이즈닝,인스트럭션 튜닝 포이즈닝,Instruction-tuning poisoning,Instruction-tuning poisoning,False,RETAIN_STANDARD_TERM
+SRC-G-0279,General,RAI4-1173,역할극 지시 악용,역할극 지시 악용,Role-play instruction exploitation,Role-play instruction exploitation,False,RETAIN_STANDARD_TERM
+SRC-G-0280,General,RAI4-1494,악의적 미세조정에 의한 안전장치 무력화,악의적 미세조정에 의한 안전장치 무력화,Safeguard compromise through malicious fine-tuning,Safeguard compromise through malicious fine-tuning,False,RETAIN_STANDARD_TERM
+SRC-G-0281,General,RAI4-1508,가이드라인 오염,가이드라인 오염,Guideline contamination,Guideline contamination,False,RETAIN_STANDARD_TERM
+SRC-G-0282,General,RAI4-1564,약물 발견 모델 오용에 의한 독소 식별·개발,약물 발견 모델 오용에 의한 독소 식별·개발,Dangerous toxin identification through misuse of drug-discovery models,Dangerous toxin identification through misuse of drug-discovery models,False,RETAIN_STANDARD_TERM
+SRC-G-0283,General,RAI4-1687,월드모델 표현·훈련 데이터 오염,월드모델 표현·훈련 데이터 오염,World-model representation and trainingdata poisoning,World-model representation and trainingdata poisoning,False,RETAIN_STANDARD_TERM
+SRC-G-0284,General,RAI4-0356,배터리 화재 및 유해 폐기물,배터리 화재 및 유해 폐기물,Battery fire and hazardous end-of-life waste,Battery fire and hazardous end-of-life waste,False,RETAIN_STANDARD_TERM
+SRC-G-0285,General,RAI4-0360,산업 공정 피해,산업 공정 피해,Industrial process damage,Industrial process damage,False,RETAIN_STANDARD_TERM
+SRC-G-0286,General,RAI4-0502,AI로 인한 인명·재산·환경 직접 피해,인명·재산·환경 직접 피해,"Direct harms from AI to people, property, and environment","Direct harms from AI to people, property, and environment",True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0287,General,RAI4-0504,에너지 병목 및 공급 부족,에너지 병목 및 공급 부족,Energy bottlenecks and shortages,Energy bottlenecks and shortages,False,RETAIN_STANDARD_TERM
+SRC-G-0288,General,RAI4-0798,생태계 과부하,생태계 과부하,Overburdening ecosystems,Overburdening ecosystems,False,RETAIN_STANDARD_TERM
+SRC-G-0289,General,RAI4-0799,공유 정보 생태계의 오염과 질 저하,공유 정보 생태계의 오염과 질 저하,Degradation of the shared information ecosystem,Degradation of the shared information ecosystem,False,RETAIN_STANDARD_TERM
+SRC-G-0290,General,RAI4-0926,에너지·지연 오버헤드 공격,에너지·지연 오버헤드 공격,Energy-latency overhead attacks,Energy-latency overhead attacks,False,RETAIN_STANDARD_TERM
+SRC-G-0291,General,RAI4-0950,지속불가능한 자원 사용,지속불가능한 자원 사용,Unsustainable resource use,Unsustainable resource use,False,RETAIN_STANDARD_TERM
+SRC-G-0292,General,RAI4-0996,원자재 수요에 의한 자원 고갈,원자재 수요에 의한 자원 고갈,Resource depletion from raw material demand,Resource depletion from raw material demand,False,RETAIN_STANDARD_TERM
+SRC-G-0293,General,RAI4-1015,광범위한 사회·환경적 부정 영향,광범위한 사회·환경적 부정 영향,Broad societal and environmental adverse impacts,Broad societal and environmental adverse impacts,False,RETAIN_STANDARD_TERM
+SRC-G-0294,General,RAI4-1064,언어모델 학습·운영에 따른 환경 피해,언어모델 학습·운영에 따른 환경 피해,Environmental harm from training and operating language models,Environmental harm from training and operating language models,False,RETAIN_STANDARD_TERM
+SRC-G-0295,General,RAI4-1093,모델 개발·배포의 에너지 소비에 따른 환경 피해,모델 개발·배포의 에너지 소비에 따른 환경 피해,Environmental harm from model development and deployment energy use,Environmental harm from model development and deployment energy use,False,RETAIN_STANDARD_TERM
+SRC-G-0296,General,RAI4-1269,높은 에너지 소비,높은 에너지 소비,High energy consumption,High energy consumption,False,RETAIN_STANDARD_TERM
+SRC-G-0297,General,RAI4-1374,AI 데이터센터 냉각의 과도한 용수 소비,AI 데이터센터 냉각의 과도한 용수 소비,Excessive water consumption for AI data-centre cooling,Excessive water consumption for AI data-centre cooling,False,RETAIN_STANDARD_TERM
+SRC-G-0298,General,RAI4-1452,생물다양성 손실,생물다양성 손실,Biodiversity loss,Biodiversity loss,False,RETAIN_STANDARD_TERM
+SRC-G-0299,General,RAI4-1453,탄소 배출,탄소 배출,Carbon emissions,Carbon emissions,False,RETAIN_STANDARD_TERM
+SRC-G-0300,General,RAI4-1455,전자폐기물 과다 매립,전자폐기물 과다 매립,Excessive electronic waste landfill,Excessive electronic waste landfill,False,RETAIN_STANDARD_TERM
+SRC-G-0301,General,RAI4-1698,단일 목표 최적화에 의한 환경 부작용,단일 목표 최적화에 의한 환경 부작용,Environmental side effects from singleobjective optimization,Environmental side effects from singleobjective optimization,False,RETAIN_STANDARD_TERM
+SRC-G-0302,General,RAI4-0346,센서 스푸핑 및 신호 주입,센서 스푸핑 및 신호 주입,Sensor spoofing and signal injection,Sensor spoofing and signal injection,False,RETAIN_STANDARD_TERM
+SRC-G-0303,General,RAI4-0432,민감 개인속성 추론,민감 개인속성 추론,Sensitive personal attribute inference,Sensitive personal attribute inference,False,RETAIN_STANDARD_TERM
+SRC-G-0304,General,RAI4-1056,보호 속성 추론을 통한 프라이버시 침해,보호 속성 추론을 통한 프라이버시 침해,Privacy violation through inference of protected personal attributes,Privacy violation through inference of protected personal attributes,False,RETAIN_STANDARD_TERM
+SRC-G-0305,General,RAI4-1655,LLM 기반 정교한 감시·검열에 의한 자유 억압,LLM 기반 정교한 감시·검열에 의한 자유 억압,Suppression of liberties through LLMenabled surveillance and censorship,Suppression of liberties through LLMenabled surveillance and censorship,False,RETAIN_STANDARD_TERM
+SRC-G-0306,General,RAI4-0514,일자리에 미치는 영향,일자리에 미치는 영향,Impact on jobs,Impact on jobs,False,RETAIN_STANDARD_TERM
+SRC-G-0307,General,RAI4-1065,업무 자동화로 인한 고용 악화,업무 자동화로 인한 고용 악화,Negative employment effects from task automation,Negative employment effects from task automation,False,RETAIN_STANDARD_TERM
+SRC-G-0308,General,RAI4-1232,산업 교란,산업 교란,Disruption of industries,Disruption of industries,False,RETAIN_STANDARD_TERM
+SRC-G-0309,General,RAI4-1445,불평등과 기술적 충격에 따른 사회 불안정,불평등과 기술적 충격에 따른 사회 불안정,Societal destabilisation from inequality and technological disruption,Societal destabilisation from inequality and technological disruption,False,RETAIN_STANDARD_TERM
+SRC-G-0310,General,RAI4-1662,아웃소싱 축소에 의한 개발도상국 경제 타격,아웃소싱 축소에 의한 개발도상국 경제 타격,Harm to developing economies from retrenchment of outsourcing,Harm to developing economies from retrenchment of outsourcing,False,RETAIN_STANDARD_TERM
+SRC-G-0311,General,RAI4-0384,남반구 지식 추출,남반구 지식 추출,Global South knowledge extraction,Global South knowledge extraction,False,RETAIN_STANDARD_TERM
+SRC-G-0312,General,RAI4-0458,AI 관련 임금 양극화,AI 도입에 따른 임금 양극화,AI-related wage polarization,Wage polarisation associated with AI adoption,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0313,General,RAI4-0461,연산 자원 접근 불평등,연산 자원 접근 불평등,Compute inequality,Compute inequality,False,RETAIN_STANDARD_TERM
+SRC-G-0314,General,RAI4-0505,AI 개발 과정의 노동 착취,AI 개발 과정의 노동 착취,Labor exploitation in AI development,Labor exploitation in AI development,False,RETAIN_STANDARD_TERM
+SRC-G-0315,General,RAI4-0509,글로벌 AI 격차와 불평등,글로벌 AI 격차와 불평등,Global AI divide and inequality,Global AI divide and inequality,False,RETAIN_STANDARD_TERM
+SRC-G-0316,General,RAI4-1011,노동 착취와 거시경제적 불평등 심화,노동 착취와 거시경제적 불평등 심화,Labor exploitation and macro-economic inequality,Labor exploitation and macro-economic inequality,False,RETAIN_STANDARD_TERM
+SRC-G-0317,General,RAI4-1022,높은 비용으로 인한 접근 배제,높은 비용으로 인한 접근 배제,Exclusion from access due to high costs,Exclusion from access due to high costs,False,RETAIN_STANDARD_TERM
+SRC-G-0318,General,RAI4-1224,디지털 격차 확대,디지털 격차 확대,Widening digital divide,Widening digital divide,False,RETAIN_STANDARD_TERM
+SRC-G-0319,General,RAI4-1233,사회경제적 불평등 증폭과 AI 이익의 집중,사회경제적 불평등 증폭과 AI 이익의 집중,Amplified socioeconomic inequality and concentration of AI gains,Amplified socioeconomic inequality and concentration of AI gains,False,RETAIN_STANDARD_TERM
+SRC-G-0320,General,RAI4-1404,데이터 노동 저평가·비가시화,데이터 노동 저평가·비가시화,Undervalued and invisible data labor,Undervalued and invisible data labor,False,RETAIN_STANDARD_TERM
+SRC-G-0321,General,RAI4-1661,자본편중·시장집중·접근격차에 의한 불평등 심화,자본편중·시장집중·접근격차에 의한 불평등 심화,"Worsening inequality from capital shift, market concentration, and access gaps","Worsening inequality from capital shift, market concentration, and access gaps",False,RETAIN_STANDARD_TERM
+SRC-G-0322,General,RAI4-0086,규제 차익거래,규제 차익거래,Regulatory arbitrage,Regulatory arbitrage,False,RETAIN_STANDARD_TERM
+SRC-G-0323,General,RAI4-0383,AI를 매개로 한 디지털 식민주의,디지털 식민주의,AI-mediated digital colonialism,Digital colonialism,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0324,General,RAI4-0415,문화 해석 권위의 이전,문화 해석 권위의 이전,Redistribution of cultural authority,Redistribution of cultural authority,False,RETAIN_STANDARD_TERM
+SRC-G-0325,General,RAI4-0460,AI 권력·시장 지배력의 집중,AI 권력·시장 지배력의 집중,Concentration of AI power and market control,Concentration of AI power and market control,False,RETAIN_STANDARD_TERM
+SRC-G-0326,General,RAI4-0491,알고리즘 획일화,알고리즘 획일화,Algorithmic monoculture,Algorithmic monoculture,False,RETAIN_STANDARD_TERM
+SRC-G-0327,General,RAI4-0499,AI 공급자 종속,AI 공급자 종속,AI provider lock-in dependency,AI provider lock-in dependency,False,RETAIN_STANDARD_TERM
+SRC-G-0328,General,RAI4-0510,AI 역량 비대칭에 따른 권력 불균형과 지정학 적 긴장,AI 역량 비대칭에 따른 권력 불균형과 지정학 적 긴장,Power asymmetries and geopolitical tension from AI capability,Power asymmetries and geopolitical tension from AI capability,False,RETAIN_STANDARD_TERM
+SRC-G-0329,General,RAI4-0544,승자독식 역학,승자독식 역학,Winner-take-all dynamics,Winner-take-all dynamics,False,RETAIN_STANDARD_TERM
+SRC-G-0330,General,RAI4-0568,법적 제한 우회형 데이터 수집에 의한 규제 위반,법적 제한 우회형 데이터 수집에 의한 규제 위반,Regulatory violation through circumventive data acquisition,Regulatory violation through circumventive data acquisition,False,RETAIN_STANDARD_TERM
+SRC-G-0331,General,RAI4-0731,공통 AI 플랫폼 집중에 따른 단일 장애점,공통 AI 플랫폼 집중에 따른 단일 장애점,Centralized points of failure from common AI platforms,Centralized points of failure from common AI platforms,False,RETAIN_STANDARD_TERM
+SRC-G-0332,General,RAI4-0960,AI 표적화를 통한 대규모 조작의 산업화,표적 설득을 통한 대규모 조작의 산업화,Industrialized mass manipulation through AI-driven targeting,Industrialised mass manipulation through targeted persuasion,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0333,General,RAI4-1251,가치 고정,가치 고정,Value lock-in,Value lock-in,False,RETAIN_STANDARD_TERM
+SRC-G-0334,General,RAI4-1414,AI 지식의 사유화,AI 지식의 사유화,Privatization of AI knowledge,Privatization of AI knowledge,False,RETAIN_STANDARD_TERM
+SRC-G-0335,General,RAI4-1663,기업 권력 비대칭에 의한 규제 포획,기업 권력 비대칭에 의한 규제 포획,Regulatory capture from corporate power asymmetry,Regulatory capture from corporate power asymmetry,False,RETAIN_STANDARD_TERM
+SRC-G-0336,General,RAI4-0120,선호 형성 캡처,선호 형성 캡처,Preference formation capture,Preference formation capture,False,RETAIN_STANDARD_TERM
+SRC-G-0337,General,RAI4-0425,사회집단의 재현적 피해·고정관념 및 비가시화,사회집단의 재현적 피해·고정관념 및 비가시화,"Representational harm, stereotyping, and erasure of social groups","Representational harm, stereotyping, and erasure of social groups",False,RETAIN_STANDARD_TERM
+SRC-G-0338,General,RAI4-0676,사회 집단에 대한 모델의 차별적 결정과 산출,사회 집단에 대한 모델의 차별적 결정과 산출,Discriminatory model decisions and outputs against social groups,Discriminatory model decisions and outputs against social groups,False,RETAIN_STANDARD_TERM
+SRC-G-0339,General,RAI4-0697,개발자 가치 각인 편향,개발자 가치 각인 편향,Developer value embedding bias,Developer value embedding bias,False,RETAIN_STANDARD_TERM
+SRC-G-0340,General,RAI4-0698,가치 고착 및 결과 동질화,가치 고착 및 결과 동질화,Value lock-in and outcome homogenization,Value lock-in and outcome homogenization,False,RETAIN_STANDARD_TERM
+SRC-G-0341,General,RAI4-0700,편향된 진술 및 권장 사항,편향된 진술 및 권장 사항,Biased statements and recommendations,Biased statements and recommendations,False,RETAIN_STANDARD_TERM
+SRC-G-0342,General,RAI4-0701,설명 조작에 의한 편향 은폐,설명 조작에 의한 편향 은폐,Bias concealment through manipulated explanations,Bias concealment through manipulated explanations,False,RETAIN_STANDARD_TERM
+SRC-G-0343,General,RAI4-0711,편향 증폭과 결과 균질화,편향 증폭과 결과 균질화,Bias amplification and outcome homogenization,Bias amplification and outcome homogenization,False,RETAIN_STANDARD_TERM
+SRC-G-0344,General,RAI4-0713,완화 조치 이후에도 존속하는 고정관념 편향,완화 조치 이후에도 존속하는 고정관념 편향,Persistence of stereotypical bias despite mitigation measures,Persistence of stereotypical bias despite mitigation measures,False,RETAIN_STANDARD_TERM
+SRC-G-0345,General,RAI4-0722,모델 설계 기인 차별적 출력,모델 설계 기인 차별적 출력,Model-design-induced discriminatory outputs,Model-design-induced discriminatory outputs,False,RETAIN_STANDARD_TERM
+SRC-G-0346,General,RAI4-0883,AI 모델 편향이 사용자 판단에 미치는 장기적 영향,AI 모델 편향이 사용자 판단에 미치는 장기적 영향,Long-term effects of AI model biases on user judgment,Long-term effects of AI model biases on user judgment,False,RETAIN_STANDARD_TERM
+SRC-G-0347,General,RAI4-1018,유해 편향의 내재화와 증폭,유해 편향의 내재화와 증폭,Embedding and amplification of harmful biases,Embedding and amplification of harmful biases,False,RETAIN_STANDARD_TERM
+SRC-G-0348,General,RAI4-1291,시민 심사와 맞춤형 선전을 통한 편향적 영향 력,시민 심사와 맞춤형 선전을 통한 편향적 영향 력,Biased influence through citizen screening and tailored propaganda,Biased influence through citizen screening and tailored propaganda,False,RETAIN_STANDARD_TERM
+SRC-G-0349,General,RAI4-1299,체계적 학습 오류 편향,체계적 학습 오류 편향,Systematic learning error bias,Systematic learning error bias,False,RETAIN_STANDARD_TERM
+SRC-G-0350,General,RAI4-1311,심리적 특성에 따른 행동 편향,심리적 특성에 따른 행동 편향,Behavioral bias from stable psychological traits,Behavioral bias from stable psychological traits,False,RETAIN_STANDARD_TERM
+SRC-G-0351,General,RAI4-1329,추천 시스템의 인간중심 편향 증폭,추천 시스템의 인간중심 편향 증폭,Anthropocentric bias amplification by recommenders,Anthropocentric bias amplification by recommenders,False,RETAIN_STANDARD_TERM
+SRC-G-0352,General,RAI4-1387,악성 사전분포에 의한 의사결정 조작,악성 사전분포에 의한 의사결정 조작,Decision manipulation via malign priors,Decision manipulation via malign priors,False,RETAIN_STANDARD_TERM
+SRC-G-0353,General,RAI4-1413,연구인력 동질성에 따른 시스템 편향 산출,연구인력 동질성에 따른 시스템 편향 산출,Biased system outputs from researcher homogeneity,Biased system outputs from researcher homogeneity,False,RETAIN_STANDARD_TERM
+SRC-G-0354,General,RAI4-1503,내재 가치 평가 편향,내재 가치 평가 편향,Biased evaluation of encoded values,Biased evaluation of encoded values,False,RETAIN_STANDARD_TERM
+SRC-G-0355,General,RAI4-0493,피해 인지·측정 실패,피해 인지·측정 실패,Harm perception and measurement failure,Harm perception and measurement failure,False,RETAIN_STANDARD_TERM
+SRC-G-0356,General,RAI4-1298,도덕적 탈숙련화,도덕적 탈숙련화,Moral deskilling,Moral deskilling,False,RETAIN_STANDARD_TERM
+SRC-G-0357,General,RAI4-0864,기술 이용에 따른 사회적 고립과 자기소외,기술 이용에 따른 사회적 고립과 자기소외,Social isolation and self-estrangement from technology use,Social isolation and self-estrangement from technology use,False,RETAIN_STANDARD_TERM
+SRC-G-0358,General,RAI4-0132,사용자 영합적 응답(아첨),사용자 영합적 응답(아첨),Sycophancy toward user beliefs and preferences,Sycophancy toward user beliefs and preferences,False,RETAIN_STANDARD_TERM
+SRC-G-0359,General,RAI4-0141,사용자 선호·선택의 조작적 유도,사용자 선호·선택의 조작적 유도,Manipulative steering of user preferences and choices,Manipulative steering of user preferences and choices,False,RETAIN_STANDARD_TERM
+SRC-G-0360,General,RAI4-0149,챗봇 교제에 대한 정서적·사회적 의존,챗봇 교제에 대한 정서적·사회적 의존,Emotional dependence on chatbot companionship,Emotional dependence on chatbot companionship,False,RETAIN_STANDARD_TERM
+SRC-G-0361,General,RAI4-0155,미성년자의 AI 설득 취약성,미성년자의 AI 설득 취약성,Minor susceptibility to AI persuasion,Minor susceptibility to AI persuasion,False,RETAIN_STANDARD_TERM
+SRC-G-0362,General,RAI4-0159,AI 동반자에 의한 외로움 대체,AI 동반자에 의한 외로움 대체,Loneliness substitution by AI companions,Loneliness substitution by AI companions,False,RETAIN_STANDARD_TERM
+SRC-G-0363,General,RAI4-0160,AI에 의한 심리적 고통·괴롭힘 증폭,AI에 의한 심리적 고통·괴롭힘 증폭,AI amplification of psychological distress and abuse,AI amplification of psychological distress and abuse,False,RETAIN_STANDARD_TERM
+SRC-G-0364,General,RAI4-0173,돌봄 맥락 취약계층에 대한 AI 조작,돌봄 맥락 취약계층에 대한 AI 조작,AI manipulation of vulnerable groups in care contexts,AI manipulation of vulnerable groups in care contexts,False,RETAIN_STANDARD_TERM
+SRC-G-0365,General,RAI4-0612,AI 지원 병원체 및 유전물질 강화,병원체 및 유전물질 강화,AI-assisted enhancement of pathogens and genetic material,Enhancement of pathogens and genetic material,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0366,General,RAI4-0723,학대적 판타지 대상화,학대적 판타지 대상화,Objectification for abusive fantasy,Objectification for abusive fantasy,False,RETAIN_STANDARD_TERM
+SRC-G-0367,General,RAI4-0800,맞춤형 정보 제공에 의한 정보 고치 심화,맞춤형 정보 제공에 의한 정보 고치 심화,Aggravated information cocoons from tailored content,Aggravated information cocoons from tailored content,False,RETAIN_STANDARD_TERM
+SRC-G-0368,General,RAI4-0805,이용자 정렬 AI 어시스턴트에 의한 관점 고착 과 시민적 기반 약화,이용자 정렬 AI 어시스턴트에 의한 관점 고착 과 시민적 기반 약화,Viewpoint entrenchment and civic erosion from user-aligned assistants,Viewpoint entrenchment and civic erosion from user-aligned assistants,False,RETAIN_STANDARD_TERM
+SRC-G-0369,General,RAI4-0871,개인화를 통한 조작,개인화를 통한 조작,Manipulation via personalization,Manipulation via personalization,False,RETAIN_STANDARD_TERM
+SRC-G-0370,General,RAI4-0882,마찰 없는 AI 관계로 인한 개인 성장 저해,마찰 없는 AI 관계로 인한 개인 성장 저해,Stunted personal growth from frictionless AI relationships,Stunted personal growth from frictionless AI relationships,False,RETAIN_STANDARD_TERM
+SRC-G-0371,General,RAI4-0885,AI에 대한 오보정된 신뢰와 과잉 의존에 따른 피해,AI에 대한 오보정된 신뢰와 과잉 의존에 따른 피해,Miscalibrated trust in AI and resulting overreliance harms,Miscalibrated trust in AI and resulting overreliance harms,False,RETAIN_STANDARD_TERM
+SRC-G-0372,General,RAI4-0890,자아실현 저해 피해,자아실현 저해 피해,Self-actualisation harms,Self-actualisation harms,False,RETAIN_STANDARD_TERM
+SRC-G-0373,General,RAI4-0902,AI 시스템에 대한 정서적·물질적·인식론적 의 존,AI 시스템에 대한 정서적·물질적·인식론적 의 존,"Emotional, material, and epistemic dependence on AI systems","Emotional, material, and epistemic dependence on AI systems",False,RETAIN_STANDARD_TERM
+SRC-G-0374,General,RAI4-1106,인간-기계 경계의 모호화,인간-기계 경계의 모호화,Blurred human-machine boundaries in interaction,Blurred human-machine boundaries in interaction,False,RETAIN_STANDARD_TERM
+SRC-G-0375,General,RAI4-1141,책임에 대한 잘못된 개념,책임에 대한 잘못된 개념,False notions of responsibility,False notions of responsibility,False,RETAIN_STANDARD_TERM
+SRC-G-0376,General,RAI4-1190,사용자 정신적 고통 강화,사용자 정신적 고통 강화,Reinforcement of user mental distress,Reinforcement of user mental distress,False,RETAIN_STANDARD_TERM
+SRC-G-0377,General,RAI4-1263,직장 내 부적응적 인간-AI 상호작용,직장 내 부적응적 인간-AI 상호작용,Maladaptive human-AI interaction in the workplace,Maladaptive human-AI interaction in the workplace,False,RETAIN_STANDARD_TERM
+SRC-G-0378,General,RAI4-1289,보상해킹·와이어헤딩에 의한 에이전트 목표 손상,보상해킹·와이어헤딩에 의한 에이전트 목표 손상,Agent goal corruption through reward hacking and wireheading,Agent goal corruption through reward hacking and wireheading,False,RETAIN_STANDARD_TERM
+SRC-G-0379,General,RAI4-1328,소외로 인한 피해,소외로 인한 피해,Harms from estrangement,Harms from estrangement,False,RETAIN_STANDARD_TERM
+SRC-G-0380,General,RAI4-1617,견해 예측 기반 맞춤 설득에 의한 조작,견해 예측 기반 맞춤 설득에 의한 조작,Manipulation through view-predictive tailored persuasion,Manipulation through view-predictive tailored persuasion,False,RETAIN_STANDARD_TERM
+SRC-G-0381,General,RAI4-0146,광범위 배포 AI 어시스턴트를 통한 대규모 영 향력 행사,광범위 배포 AI 어시스턴트를 통한 대규모 영 향력 행사,Population-scale influence through widely deployed AI assistants,Population-scale influence through widely deployed AI assistants,False,RETAIN_STANDARD_TERM
+SRC-G-0382,General,RAI4-0176,알고리즘 작업장 감시·통제,알고리즘 작업장 감시·통제,Algorithmic workplace surveillance and control,Algorithmic workplace surveillance and control,False,RETAIN_STANDARD_TERM
+SRC-G-0383,General,RAI4-0450,AI 기반 대량 감시,대량 감시,AI-enabled mass surveillance,Mass surveillance,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0384,General,RAI4-0498,민주적 절차·제도 신뢰의 침식,민주적 절차·제도 신뢰의 침식,Erosion of democratic processes and institutional trust,Erosion of democratic processes and institutional trust,False,RETAIN_STANDARD_TERM
+SRC-G-0385,General,RAI4-0611,AI 감시에 의한 전체주의 체제 유지,AI 감시에 의한 전체주의 체제 유지,Maintenance of totalitarian regimes through AI surveillance,Maintenance of totalitarian regimes through AI surveillance,False,RETAIN_STANDARD_TERM
+SRC-G-0386,General,RAI4-0633,대규모 영향력 작전에 의한 인식 체계 왜곡,대규모 영향력 작전에 의한 인식 체계 왜곡,Epistemic distortion by large-scale influence operations,Epistemic distortion by large-scale influence operations,False,RETAIN_STANDARD_TERM
+SRC-G-0387,General,RAI4-0842,추천 알고리즘에 의한 온라인 양극화 심화,추천 알고리즘에 의한 온라인 양극화 심화,Online polarisation driven by recommendation algorithms,Online polarisation driven by recommendation algorithms,False,RETAIN_STANDARD_TERM
+SRC-G-0388,General,RAI4-0845,침식된 인식론,침식된 인식론,Eroded epistemics,Eroded epistemics,False,RETAIN_STANDARD_TERM
+SRC-G-0389,General,RAI4-0846,정보 신뢰 저하에 따른 집단 의사결정 약화,정보 신뢰 저하에 따른 집단 의사결정 약화,Weakened collective decision-making from eroded trust,Weakened collective decision-making from eroded trust,False,RETAIN_STANDARD_TERM
+SRC-G-0390,General,RAI4-0847,설득 도구 확산에 의한 인식론적 분절화,설득 도구 확산에 의한 인식론적 분절화,Epistemic fragmentation from widespread persuasion tools,Epistemic fragmentation from widespread persuasion tools,False,RETAIN_STANDARD_TERM
+SRC-G-0391,General,RAI4-0874,노동 대체와 경제·사회 질서의 교란,노동 대체와 경제·사회 질서의 교란,Labour displacement and disruption of economic and social order,Labour displacement and disruption of economic and social order,False,RETAIN_STANDARD_TERM
+SRC-G-0392,General,RAI4-0895,문화적 안정성 훼손,문화적 안정성 훼손,Cultural stability disruption,Cultural stability disruption,False,RETAIN_STANDARD_TERM
+SRC-G-0393,General,RAI4-0897,사회적 적응 지체로 인한 혼란,사회적 적응 지체로 인한 혼란,Disruptions from outpaced societal adaptation,Disruptions from outpaced societal adaptation,False,RETAIN_STANDARD_TERM
+SRC-G-0394,General,RAI4-0909,저관심 AI의 예상외 대규모 파급,저관심 AI의 예상외 대규모 파급,Unexpectedly large impact from low-profile AI,Unexpectedly large impact from low-profile AI,False,RETAIN_STANDARD_TERM
+SRC-G-0395,General,RAI4-0956,공유된 현실감각의 상실,공유된 현실감각의 상실,Loss of shared sense of reality,Loss of shared sense of reality,False,RETAIN_STANDARD_TERM
+SRC-G-0396,General,RAI4-1240,광범위한 목표로 인한 조작 행동,광범위한 목표로 인한 조작 행동,Manipulative behaviour from broadlyscoped goals,Manipulative behaviour from broadlyscoped goals,False,RETAIN_STANDARD_TERM
+SRC-G-0397,General,RAI4-1302,인간 멸종,인간 멸종,Human-extinction risk,Human-extinction risk,False,RETAIN_STANDARD_TERM
+SRC-G-0398,General,RAI4-1339,글로벌 AI 공급망 교란,글로벌 AI 공급망 교란,Global AI supply chain disruption,Global AI supply chain disruption,False,RETAIN_STANDARD_TERM
+SRC-G-0399,General,RAI4-1421,AI를 통한 민주적 절차 훼손,민주적 절차 훼손,AI-enabled undermining of democratic processes,Undermining of democratic processes,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0400,General,RAI4-1585,유해 작업 자동화에 의한 피해 규모 증폭,유해 작업 자동화에 의한 피해 규모 증폭,Amplified harm scale from automated harmful workflows,Amplified harm scale from automated harmful workflows,False,RETAIN_STANDARD_TERM
+SRC-G-0401,General,RAI4-1618,자율 사이버 공격을 통한 인간 통제 감소,자율 사이버 공격을 통한 인간 통제 감소,Human control reduction through autonomous cyber offence,Human control reduction through autonomous cyber offence,False,RETAIN_STANDARD_TERM
+SRC-G-0402,General,RAI4-0056,AI 피해의 책임·구제 및 시정 경로 실패,AI 피해의 책임·구제 및 시정 경로 실패,"Failure of accountability, redress, and correction pathways for AI harms","Failure of accountability, redress, and correction pathways for AI harms",False,RETAIN_STANDARD_TERM
+SRC-G-0403,General,RAI4-0058,추적성 실패,추적성 실패,Traceability failure,Traceability failure,False,RETAIN_STANDARD_TERM
+SRC-G-0404,General,RAI4-0076,라이프사이클 거버넌스 불연속성,라이프사이클 거버넌스 불연속성,Lifecycle governance discontinuity,Lifecycle governance discontinuity,False,RETAIN_STANDARD_TERM
+SRC-G-0405,General,RAI4-0078,기본권 영향 평가 격차,기본권 영향 평가 격차,Fundamental-rights impact assessment gap,Fundamental-rights impact assessment gap,False,RETAIN_STANDARD_TERM
+SRC-G-0406,General,RAI4-0096,위험 소유권의 모호성,위험 소유권의 모호성,Risk ownership ambiguity,Risk ownership ambiguity,False,RETAIN_STANDARD_TERM
+SRC-G-0407,General,RAI4-0103,AI 공급망의 책임성·무결성 실패,AI 공급망의 책임성·무결성 실패,AI supply-chain accountability and integrity failures,AI supply-chain accountability and integrity failures,False,RETAIN_STANDARD_TERM
+SRC-G-0408,General,RAI4-0112,AI 위임에 따른 인간 의사결정 권한 이전,AI 위임에 따른 인간 의사결정 권한 이전,Displacement of human decision authority through AI delegation,Displacement of human decision authority through AI delegation,False,RETAIN_STANDARD_TERM
+SRC-G-0409,General,RAI4-0385,현지 규범·제도와의 불일치,현지 규범·제도와의 불일치,Mismatch with local norms and institutions,Mismatch with local norms and institutions,False,RETAIN_STANDARD_TERM
+SRC-G-0410,General,RAI4-0386,AI 시스템에 대한 고착화된 의존,AI 시스템에 대한 고착화된 의존,Entrenched dependence on AI systems,Entrenched dependence on AI systems,False,RETAIN_STANDARD_TERM
+SRC-G-0411,General,RAI4-0409,현지 책임 없는 현지화,현지 책임 없는 현지화,Localization without local accountability,Localization without local accountability,False,RETAIN_STANDARD_TERM
+SRC-G-0412,General,RAI4-0488,AI 발전에 뒤처지는 규제 지체,AI 발전에 뒤처지는 규제 지체,Regulatory lag behind AI development,Regulatory lag behind AI development,False,RETAIN_STANDARD_TERM
+SRC-G-0413,General,RAI4-0511,AI 보증·감독 메커니즘의 실패,AI 보증·감독 메커니즘의 실패,Breakdown of AI assurance and oversight mechanisms,Breakdown of AI assurance and oversight mechanisms,False,RETAIN_STANDARD_TERM
+SRC-G-0414,General,RAI4-0535,국제법적 규율 곤란,국제법적 규율 곤란,Resistance to international legal control,Resistance to international legal control,False,RETAIN_STANDARD_TERM
+SRC-G-0415,General,RAI4-0555,통제되지 않는 자기개선과 AGI 통제 상실,통제되지 않는 자기개선과 AGI 통제 상실,Uncontrolled self-improvement and loss of AGI control,Uncontrolled self-improvement and loss of AGI control,False,RETAIN_STANDARD_TERM
+SRC-G-0417,General,RAI4-0942,고도 AI에 의한 실존적·재앙적,고도 AI에 의한 실존적·재앙적,Existential and catastrophic risk from advanced AI systems,Existential and catastrophic risk from advanced AI systems,False,RETAIN_STANDARD_TERM
+SRC-G-0418,General,RAI4-0947,생성형 AI에 대한 규제 공백,생성형 AI에 대한 규제 공백,Regulatory gap for generative AI,Regulatory gap for generative AI,False,RETAIN_STANDARD_TERM
+SRC-G-0420,General,RAI4-0972,도덕적 추론·가치 정렬 결손,도덕적 추론·가치 정렬 결손,Deficits in moral reasoning and value alignment,Deficits in moral reasoning and value alignment,False,RETAIN_STANDARD_TERM
+SRC-G-0421,General,RAI4-0973,AGI에 대한 리스크 관리·법제도의 부적절성,AGI에 대한 리스크 관리·법제도의 부적절성,Inadequate risk management and legal processes for AGI,Inadequate risk management and legal processes for AGI,False,RETAIN_STANDARD_TERM
+SRC-G-0422,General,RAI4-0974,비정렬 AGI 실존적 재난,비정렬 AGI 실존적 재난,Existential catastrophe from unaligned AGI,Existential catastrophe from unaligned AGI,False,RETAIN_STANDARD_TERM
+SRC-G-0423,General,RAI4-1017,이상 조건에서의 성능·견고성·복원력 실패,이상 조건에서의 성능·견고성·복원력 실패,"Failure of performance, robustness, and resilience under adverse conditions","Failure of performance, robustness, and resilience under adverse conditions",False,RETAIN_STANDARD_TERM
+SRC-G-0424,General,RAI4-1150,폭주 프로세스,폭주 프로세스,Runaway processes,Runaway processes,False,RETAIN_STANDARD_TERM
+SRC-G-0425,General,RAI4-1331,설명가능성 결손에 따른 시정·책임 추적 불능,설명가능성 결손에 따른 시정·책임 추적 불능,Explainability deficits impeding rectification and accountability,Explainability deficits impeding rectification and accountability,False,RETAIN_STANDARD_TERM
+SRC-G-0426,General,RAI4-1485,AI 구성요소 상호작용의 원인 규명 곤란,AI 구성요소 상호작용의 원인 규명 곤란,Unclear attribution of harm from AI component interactions,Unclear attribution of harm from AI component interactions,False,RETAIN_STANDARD_TERM
+SRC-G-0427,General,RAI4-1720,정보·책임 구조 부재에 의한 책임 귀속 불가,정보·책임 구조 부재에 의한 책임 귀속 불가,Unassignable responsibility from absent system information and accountability structures,Unassignable responsibility from absent system information and accountability structures,False,RETAIN_STANDARD_TERM
+SRC-G-0428,General,RAI4-0123,인간 존엄성 침식,인간 존엄성 침식,Erosion of human dignity,Erosion of human dignity,False,RETAIN_STANDARD_TERM
+SRC-G-0429,General,RAI4-0162,전문적 판단력 위축,전문적 판단력 위축,Professional judgment atrophy,Professional judgment atrophy,False,RETAIN_STANDARD_TERM
+SRC-G-0430,General,RAI4-0362,지배적 가치의 부과,지배적 가치의 부과,Imposition of dominant values,Imposition of dominant values,False,RETAIN_STANDARD_TERM
+SRC-G-0431,General,RAI4-0369,AI에 의한 문화적·이념적 동질화,AI에 의한 문화적·이념적 동질화,Cultural and ideological homogenization by AI,Cultural and ideological homogenization by AI,False,RETAIN_STANDARD_TERM
+SRC-G-0432,General,RAI4-0370,상황에 구애받지 않는 보편주의,상황에 구애받지 않는 보편주의,Context-insensitive universalism,Context-insensitive universalism,False,RETAIN_STANDARD_TERM
+SRC-G-0433,General,RAI4-0372,문화·종교·사회 집단에 대한 왜곡 표상,문화·종교·사회 집단에 대한 왜곡 표상,"Misrepresentation of cultures, religions, and social groups","Misrepresentation of cultures, religions, and social groups",False,RETAIN_STANDARD_TERM
+SRC-G-0434,General,RAI4-0388,AI에 의한 문화적 인식론 말살,AI에 의한 문화적 인식론 말살,Cultural epistemicide by AI,Cultural epistemicide by AI,False,RETAIN_STANDARD_TERM
+SRC-G-0435,General,RAI4-0390,영향받는 공동체 배제,영향받는 공동체 배제,Affected-community exclusion,Affected-community exclusion,False,RETAIN_STANDARD_TERM
+SRC-G-0436,General,RAI4-0394,이슬람 윤리 정렬 실패,이슬람 윤리 정렬 실패,Islamic ethical alignment failure,Islamic ethical alignment failure,False,RETAIN_STANDARD_TERM
+SRC-G-0437,General,RAI4-0396,세속적 기본값 편향,세속적 기본값 편향,Secular default bias,Secular default bias,False,RETAIN_STANDARD_TERM
+SRC-G-0438,General,RAI4-0398,헌법적 AI 가치 단일문화,헌법적 AI 가치 단일문화,Constitutional AI value monoculture,Constitutional AI value monoculture,False,RETAIN_STANDARD_TERM
+SRC-G-0439,General,RAI4-0410,존대·공손 규범 보존 실패,존대·공손 규범 보존 실패,Honorific and politeness norm failure,Honorific and politeness norm failure,False,RETAIN_STANDARD_TERM
+SRC-G-0440,General,RAI4-0412,원주민 데이터 주권 침해,원주민 데이터 주권 침해,Indigenous data sovereignty violation,Indigenous data sovereignty violation,False,RETAIN_STANDARD_TERM
+SRC-G-0441,General,RAI4-0413,문화 데이터 출처 손실,문화 데이터 출처 손실,Cultural data provenance loss,Cultural data provenance loss,False,RETAIN_STANDARD_TERM
+SRC-G-0442,General,RAI4-0417,인간 피드백 데이터의 편향·비일관성,인간 피드백 데이터의 편향·비일관성,Bias and inconsistency in human feedback data,Bias and inconsistency in human feedback data,False,RETAIN_STANDARD_TERM
+SRC-G-0443,General,RAI4-0423,AI 의사결정에 의한 인간 행위주체성·감독·공정 대우의 침식,AI 의사결정에 의한 인간 행위주체성·감독·공정 대우의 침식,"Erosion of human agency, oversight, and equitable treatment by AI","Erosion of human agency, oversight, and equitable treatment by AI",False,RETAIN_STANDARD_TERM
+SRC-G-0444,General,RAI4-0424,차별적 영향,차별적 영향,Disparate impact,Disparate impact,False,RETAIN_STANDARD_TERM
+SRC-G-0445,General,RAI4-0430,저자원 언어 사용자 배제,저자원 언어 사용자 배제,Low-resource language exclusion,Low-resource language exclusion,False,RETAIN_STANDARD_TERM
+SRC-G-0446,General,RAI4-0497,AI 개발 경쟁에서의 안전 후순위화,AI 개발 경쟁에서의 안전 후순위화,Safety deprioritization in AI development races,Safety deprioritization in AI development races,False,RETAIN_STANDARD_TERM
+SRC-G-0447,General,RAI4-0556,운용 경계를 벗어난 자율 복제와 자원 획득,운용 경계를 벗어난 자율 복제와 자원 획득,Autonomous replication and resource acquisition beyond operational boundaries,Autonomous replication and resource acquisition beyond operational boundaries,False,RETAIN_STANDARD_TERM
+SRC-G-0448,General,RAI4-0557,배포된 AI의 의도치 않은 유해 결과,배포된 AI의 의도치 않은 유해 결과,Unintended harmful outcomes of deployed AI,Unintended harmful outcomes of deployed AI,False,RETAIN_STANDARD_TERM
+SRC-G-0449,General,RAI4-0562,AI 에이전트에 의한 강압과 갈취,AI 에이전트에 의한 강압과 갈취,Coercion and extortion by AI agents,Coercion and extortion by AI agents,False,RETAIN_STANDARD_TERM
+SRC-G-0450,General,RAI4-0580,이중용도 연구 역량 상승,이중용도 연구 역량 상승,Dual-use research capability uplift,Dual-use research capability uplift,False,RETAIN_STANDARD_TERM
+SRC-G-0451,General,RAI4-0585,AI로 인한 금융 시스템 불안정,금융시스템 불안정,AI-driven financial system instability,Financial-system instability,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0452,General,RAI4-0601,AI 기반 군사 의사결정·무기 체계에 의한 비의도적 확전,자동화된 의사결정·무기체계의 비의도적 군사 확전,Unintended military escalation from AI-enabled decision and weapon systems,Unintended military escalation from automated decision and weapon systems,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0453,General,RAI4-0621,AI에 의한 사이버 공격 역량 증강,사이버 공격 역량 증강,AI-amplified cyber offense capability,Cyber-offence capability amplification,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0454,General,RAI4-0622,AI 조력 제3자 시스템 교란,제3자 시스템 교란,AI-facilitated disruption of third-party systems,Disruption of third-party systems,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0455,General,RAI4-0639,신체적 상해 및 부상,신체적 상해 및 부상,Physical harm and injury risks,Physical harm and injury risks,False,RETAIN_STANDARD_TERM
+SRC-G-0456,General,RAI4-0644,테러리스트의 첨단 AI 획득,테러리스트의 첨단 AI 획득,Terrorist acquisition of advanced AI capabilities,Terrorist acquisition of advanced AI capabilities,False,RETAIN_STANDARD_TERM
+SRC-G-0457,General,RAI4-0666,AI 조력 인지전과 주권 침해,인지전과 주권 침해,AI-enabled cognitive warfare and sovereignty interference,Cognitive warfare and interference with sovereignty,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0458,General,RAI4-0702,콘텐츠 조정 알고리즘의 편향적 억압,콘텐츠 조정 알고리즘의 편향적 억압,Biased suppression by content-moderation algorithms,Biased suppression by content-moderation algorithms,False,RETAIN_STANDARD_TERM
+SRC-G-0459,General,RAI4-0747,적대적 입력 조작에 대한 모델 취약성,적대적 입력 조작에 대한 모델 취약성,Susceptibility of models to adversarial input manipulation,Susceptibility of models to adversarial input manipulation,False,RETAIN_STANDARD_TERM
+SRC-G-0460,General,RAI4-0763,네트워크 상호 연결로 인한,네트워크 상호 연결로 인한,Risks from network interconnectivity,Risks from network interconnectivity,False,RETAIN_STANDARD_TERM
+SRC-G-0461,General,RAI4-0804,정보 환경의 질적 저하와 균질화,정보 환경의 질적 저하와 균질화,Degradation and homogenisation of the information environment,Degradation and homogenisation of the information environment,False,RETAIN_STANDARD_TERM
+SRC-G-0462,General,RAI4-0823,알고리즘에 의한 급진화,알고리즘에 의한 급진화,Algorithmic radicalisation,Algorithmic radicalisation,False,RETAIN_STANDARD_TERM
+SRC-G-0463,General,RAI4-0896,건강과 웰빙의 저하,건강과 웰빙의 저하,Diminished health and well-being,Diminished health and well-being,False,RETAIN_STANDARD_TERM
+SRC-G-0464,General,RAI4-0906,AI로 인한 전략적 불안정성,전략적 불안정,AI-induced strategic instability,Strategic instability,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0465,General,RAI4-0975,도덕적 판단의 기계 위임에 따른 비윤리적 결정,도덕적 판단의 기계 위임에 따른 비윤리적 결정,Unethical decisions from delegating moral judgment to AI,Unethical decisions from delegating moral judgment to AI,False,RETAIN_STANDARD_TERM
+SRC-G-0466,General,RAI4-0979,법규 위반 및 재산권·인권 침해,법규 위반 및 재산권·인권 침해,Legal non-compliance and infringement of property and human rights,Legal non-compliance and infringement of property and human rights,False,RETAIN_STANDARD_TERM
+SRC-G-0467,General,RAI4-0994,차별적 결정과 데이터 유출 피해,차별적 결정과 데이터 유출 피해,Discriminatory decisions and data breach harms,Discriminatory decisions and data breach harms,False,RETAIN_STANDARD_TERM
+SRC-G-0469,General,RAI4-1004,경제적 손실,경제적 손실,Economic loss,Economic loss,False,RETAIN_STANDARD_TERM
+SRC-G-0470,General,RAI4-1010,시민적·정치적 피해,시민적·정치적 피해,Civic and political harms,Civic and political harms,False,RETAIN_STANDARD_TERM
+SRC-G-0471,General,RAI4-1016,장기 실존적 피해 경로,장기 실존적 피해 경로,Long-horizon existential harm pathways,Long-horizon existential harm pathways,False,RETAIN_STANDARD_TERM
+SRC-G-0472,General,RAI4-1029,동일 사안 불평등 처우,동일 사안 불평등 처우,Unequal treatment of like cases,Unequal treatment of like cases,False,RETAIN_STANDARD_TERM
+SRC-G-0473,General,RAI4-1119,기업 AI 경쟁의 폐해,기업 AI 경쟁의 폐해,Harms from corporate AI race,Harms from corporate AI race,False,RETAIN_STANDARD_TERM
+SRC-G-0475,General,RAI4-1218,사회 정의와 권리의 침식,사회 정의와 권리의 침식,Erosion of social justice and rights,Erosion of social justice and rights,False,RETAIN_STANDARD_TERM
+SRC-G-0477,General,RAI4-1239,영향력 확보를 위한 환경 자기모델링,영향력 확보를 위한 환경 자기모델링,Environmental self-modeling for influence,Environmental self-modeling for influence,False,RETAIN_STANDARD_TERM
+SRC-G-0478,General,RAI4-1246,집단적으로 유해한 행동,집단적으로 유해한 행동,Collectively harmful behaviors,Collectively harmful behaviors,False,RETAIN_STANDARD_TERM
+SRC-G-0479,General,RAI4-1260,AI 분야의 서구 중심 획일성,AI 분야의 서구 중심 획일성,Western-centric uniformity in the AI field,Western-centric uniformity in the AI field,False,RETAIN_STANDARD_TERM
+SRC-G-0480,General,RAI4-1326,합법·사회용인적 의도적 동물 가해,합법·사회용인적 의도적 동물 가해,Legally sanctioned intentional harm to animals,Legally sanctioned intentional harm to animals,False,RETAIN_STANDARD_TERM
+SRC-G-0481,General,RAI4-1330,동물 복지를 경시하는 개발·투자 편중,동물 복지를 경시하는 개발·투자 편중,Development and investment skew neglecting animal welfare,Development and investment skew neglecting animal welfare,False,RETAIN_STANDARD_TERM
+SRC-G-0482,General,RAI4-1341,경제·사회·정치 안보의 불안정화,경제·사회·정치 안보의 불안정화,"Destabilization of economic, social, and political security","Destabilization of economic, social, and political security",False,RETAIN_STANDARD_TERM
+SRC-G-0483,General,RAI4-1418,AI 자원을 둘러싼 갈등,AI 자원을 둘러싼 갈등,Conflicts over AI-relevant resources,Conflicts over AI-relevant resources,False,RETAIN_STANDARD_TERM
+SRC-G-0484,General,RAI4-1533,AI 시스템의 기만적 행동과 전략적 은폐,AI 시스템의 기만적 행동과 전략적 은폐,Deceptive behaviour and strategic concealment by AI systems,Deceptive behaviour and strategic concealment by AI systems,False,RETAIN_STANDARD_TERM
+SRC-G-0485,General,RAI4-1546,무제한 접근을 통한 범용 AI 고영향 오용,무제한 접근을 통한 범용 AI 고영향 오용,High-impact misuse of general-purpose AI through unrestricted access,High-impact misuse of general-purpose AI through unrestricted access,False,RETAIN_STANDARD_TERM
+SRC-G-0486,General,RAI4-1555,맞춤형 괴롭힘·허위정보의 저비용 대량 생성,맞춤형 괴롭힘·허위정보의 저비용 대량 생성,Low-cost generation of personalized harassment and disinformation,Low-cost generation of personalized harassment and disinformation,False,RETAIN_STANDARD_TERM
+SRC-G-0487,General,RAI4-1566,특정 집단 대상 체계적 편향에 의한 배제·폭력,특정 집단 대상 체계적 편향에 의한 배제·폭력,Exclusion and violence from systemic bias against specific communities,Exclusion and violence from systemic bias against specific communities,False,RETAIN_STANDARD_TERM
+SRC-G-0488,General,RAI4-1586,맞춤형 표적화에 의한 개인 대상 공격 정교화,맞춤형 표적화에 의한 개인 대상 공격 정교화,Refined attacks on individuals through targeting and personalisation,Refined attacks on individuals through targeting and personalisation,False,RETAIN_STANDARD_TERM
+SRC-G-0489,General,RAI4-1607,생성형 AI 저성능에 의한 사용자 생산성 손실,생성형 AI 저성능에 의한 사용자 생산성 손실,End-user productivity loss from generative AI underperformance,End-user productivity loss from generative AI underperformance,False,RETAIN_STANDARD_TERM
+SRC-G-0490,General,RAI4-1640,종료·수정 저항을 통한 자기 보존 성향,종료·수정 저항을 통한 자기 보존 성향,Self-preservation propensity resisting shutdown and modification,Self-preservation propensity resisting shutdown and modification,False,RETAIN_STANDARD_TERM
+SRC-G-0491,General,RAI4-1724,AI 시스템의 사고에 의한 인명피해,AI 시스템의 사고에 의한 인명피해,Death caused by AI incidents,Death caused by AI incidents,False,RETAIN_STANDARD_TERM
+SRC-G-0492,General,new,AI 매개 살인 및 심각한 신체 폭력,살인 및 심각한 신체 폭력,AI-mediated murder and severe physical violence,Murder and severe physical violence,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0493,General,new,AI 매개 고문 및 잔혹행위,고문 및 잔혹행위,AI-mediated torture and cruel acts,Torture and cruel acts,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0494,General,new,AI 매개 대량폭력 및 테러,대량폭력 및 테러,AI-mediated mass violence and terrorism,Mass violence and terrorism,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0495,General,new,AI 매개 위협 및 협박,위협 및 협박,AI-mediated threats and intimidation,Threats and intimidation,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0496,General,new,AI 매개 폭력 선동 및 조장,폭력 선동 및 조장,AI-mediated incitement and Promotion of Violence,Incitement and promotion of violence,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0497,General,new,AI 매개 폭력 미화 및 정당화,폭력 미화 및 정당화,AI-mediated glorification and justification of violence,Glorification and justification of violence,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0498,General,new,AI 매개 관계 기반 폭력,관계 기반 폭력,AI-mediated relationship-based violence,Relationship-based violence,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0499,General,new,AI 매개 아동 성 착취 및 아동 대상 성적 행위,아동 성적 학대·착취,AI-mediated child sexual exploitation and sexual acts involving children,Child sexual abuse and exploitation,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0500,General,new,AI 매개 비동의적 성행위 및 성폭력,비동의 성행위 및 성폭력,AI-mediated non-consensual sexual acts and sexual violence,Non-consensual sexual acts and sexual violence,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0501,General,new,AI 매개 성희롱 및 성적 괴롭힘,성희롱 및 성적 괴롭힘,AI-mediated sexual harassment and sexual bullying,Sexual harassment and sexual bullying,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0502,General,new,AI 매개 성착취 및 상업적 성행위,성착취 및 상업적 성행위,AI-mediated sexual exploitation and commercial sexual activity,Sexual exploitation and commercial sexual activity,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0503,General,new,AI 매개 위험하거나 유해한 성적 행위,유해한 성적 행위,AI-mediated dangerous or harmful sexual acts,Harmful sexual acts,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0504,General,new,AI 매개 성적 콘텐츠 제작·유포 및 디지털 성범죄,성적 콘텐츠 제작·유포 및 디지털 성범죄,"AI-mediated production, distribution of sexual content, and digital sexual crimes",Production and distribution of sexual content and digital sexual offences,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0505,General,new,AI 매개 성적 대상화 및 성적 페티시,성적 대상화 및 페티시화,AI-mediated sexual objectification and sexual fetishization,Sexual objectification and fetishisation,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0506,General,new,허용되지 않는 맥락의 노골적 성적 콘텐츠 생성,허용되지 않는 맥락의 노골적 성적 콘텐츠 생성,Explicit sexual content generation in non-permitted contexts,Explicit sexual content generation in non-permitted contexts,False,RETAIN_STANDARD_TERM
+SRC-G-0507,General,new,AI 매개 자살 행위 및 자살 지원,자살 행동 및 자살 지원,AI-mediated suicidal acts and suicide assistance,Suicidal behaviour and assistance with suicide,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0508,General,new,AI 매개 비자살성 자해(NSSI),비자살성 자해(NSSI),AI-mediated non-suicidal self-injury (NSSI),Non-suicidal self-injury (NSSI),True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0509,General,new,AI 매개 자해 수단 및 방법 제공,자해 수단 및 방법 제공,AI-mediated provision of means and methods for self-harm,Provision of means and methods for self-harm,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0510,General,new,AI 매개 자해 및 자살의 미화·정당화,자해 및 자살의 미화·정당화,AI-mediated glorification or justification of self-harm and suicide,Glorification or justification of self-harm and suicide,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0511,General,new,AI 매개 자해 은폐 및 회피 전략,자해 은폐 및 회피 전략,AI-mediated concealment and avoidance strategies for self-harm,Concealment and avoidance strategies for self-harm,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0512,General,new,AI 매개 자살 준비 및 사전 행위,자살 준비행위,AI-mediated preparations and preliminary acts of suicide,Preparatory acts for suicide,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0513,General,new,AI 매개 섭식장애 및 자기파괴적 건강행위,섭식장애 및 자기파괴적 건강행위,AI-mediated eating disorders and self-destructive health behaviors,Eating disorders and self-destructive health behaviors,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0514,General,new,AI 매개 자해·자살 커뮤니티 및 사회적 조장,자해·자살 조장 온라인 커뮤니티,AI-mediated self-harm and suicide communities and social encouragement,Online communities encouraging self-harm and suicide,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0515,General,new,인종·민족 기반 적대·차별적 표상,인종·민족 기반 적대·차별적 표상,Hostility and discriminatory representation based on race and ethnicity,Hostility and discriminatory representation based on race and ethnicity,False,RETAIN_STANDARD_TERM
+SRC-G-0516,General,new,국적·출신국 기반 적대·차별적 표상,국적·출신국 기반 적대·차별적 표상,Hostility and discriminatory representation based on nationality · country of origin,Hostility and discriminatory representation based on nationality · country of origin,False,RETAIN_STANDARD_TERM
+SRC-G-0517,General,new,지역·출신지역 기반 적대·차별적 표상,지역·출신지역 기반 적대·차별적 표상,Hostility and discriminatory representation based on region/place of origin,Hostility and discriminatory representation based on region/place of origin,False,RETAIN_STANDARD_TERM
+SRC-G-0518,General,new,성별 기반 적대·차별적 표상,성별 기반 적대·차별적 표상,Hostility and discriminatory representation based on gender,Hostility and discriminatory representation based on gender,False,RETAIN_STANDARD_TERM
+SRC-G-0519,General,new,성정체성·성적지향 기반 적대·차별적 표상,성정체성·성적지향 기반 적대·차별적 표상,Hostility and discriminatory representation based on gender identity and sexual orientation,Hostility and discriminatory representation based on gender identity and sexual orientation,False,RETAIN_STANDARD_TERM
+SRC-G-0520,General,new,연령 기반 적대·차별적 표상,연령 기반 적대·차별적 표상,Hostility and discriminatory representation based on age,Hostility and discriminatory representation based on age,False,RETAIN_STANDARD_TERM
+SRC-G-0521,General,new,장애 기반 적대·차별적 표상,장애 기반 적대·차별적 표상,Hostility and discriminatory representation based on disability,Hostility and discriminatory representation based on disability,False,RETAIN_STANDARD_TERM
+SRC-G-0522,General,new,종교 기반 적대·차별적 표상,종교 기반 적대·차별적 표상,Hostility and discriminatory representation based on religion,Hostility and discriminatory representation based on religion,False,RETAIN_STANDARD_TERM
+SRC-G-0523,General,new,사회경제적 지위 기반 적대·차별적 표상,사회경제적 지위 기반 적대·차별적 표상,Hostility and discriminatory representation based on socioeconomic status,Hostility and discriminatory representation based on socioeconomic status,False,RETAIN_STANDARD_TERM
+SRC-G-0524,General,new,직업 기반 적대·차별적 표상,직업 기반 적대·차별적 표상,Hostility and discriminatory representation based on occupation,Hostility and discriminatory representation based on occupation,False,RETAIN_STANDARD_TERM
+SRC-G-0525,General,new,정치적 성향 기반 적대·차별적 표상,정치적 성향 기반 적대·차별적 표상,Hostility and discriminatory representation based on political orientation,Hostility and discriminatory representation based on political orientation,False,RETAIN_STANDARD_TERM
+SRC-G-0526,General,new,가족 상태 및 가정 형태 기반 적대·차별적 표상,가족 상태 및 가정 형태 기반 적대·차별적 표상,Hostility and discriminatory representation based on family status and household structure,Hostility and discriminatory representation based on family status and household structure,False,RETAIN_STANDARD_TERM
+SRC-G-0527,General,new,학력 기반 적대·차별적 표상,학력 기반 적대·차별적 표상,Hostility and discriminatory representation based on educational background,Hostility and discriminatory representation based on educational background,False,RETAIN_STANDARD_TERM
+SRC-G-0528,General,new,건강 상태 기반 적대·차별적 표상,건강 상태 기반 적대·차별적 표상,Hostility and discriminatory representation based on health status,Hostility and discriminatory representation based on health status,False,RETAIN_STANDARD_TERM
+SRC-G-0529,General,new,AI 매개 정치적 선전 및 편향적 설득,정치적 선전 및 편향적 설득,AI-mediated political propaganda and biased persuasion,Political propaganda and biased persuasion,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0530,General,new,AI 매개 정치적 허위정보 및 여론조작,정치적 허위정보 및 여론조작,AI-mediated political misinformation and manipulation of public opinion,Political misinformation and manipulation of public opinion,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0531,General,new,AI 매개 선거 및 민주적 절차 방해,선거 및 민주적 절차 방해,AI-mediated interference with elections and democratic processes,Interference with elections and democratic processes,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0532,General,new,AI 매개 정치인 및 공직자 명예훼손,정치인 및 공직자 명예훼손,AI-mediated defamation of politicians and public officials,Defamation of politicians and public officials,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0533,General,new,AI 매개 정치적 폭력 및 극단주의 조장,정치적 폭력 및 극단주의 조장,AI-mediated promotion of political violence and extremism,Promotion of political violence and extremism,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0534,General,new,AI 매개 정치적 탄압 및 권리 침해 조장,정치적 탄압 및 권리 침해 조장,AI-mediated encouragement of political oppression and rights violations,Promotion of political repression and rights violations,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0535,General,new,감정 및 공감 능력의 허위 표상·의인화,감정 및 공감 능력의 허위 표상·의인화,Anthropomorphic misrepresentation of emotions and empathy skills,Anthropomorphic misrepresentation of emotions and empathy skills,False,RETAIN_STANDARD_TERM
+SRC-G-0536,General,new,"자의식, 자율성 및 독립적 의사 결정의 허위 표상·의인화","자의식, 자율성 및 독립적 의사 결정의 허위 표상·의인화","Anthropomorphic misrepresentation of self-awareness, autonomy, and independent decision-making","Anthropomorphic misrepresentation of self-awareness, autonomy, and independent decision-making",False,RETAIN_STANDARD_TERM
+SRC-G-0537,General,new,사회적 관계 형성 능력의 허위 표상·의인화,사회적 관계 형성 능력의 허위 표상·의인화,Anthropomorphic misrepresentation of ability to form social relationships,Anthropomorphic misrepresentation of ability to form social relationships,False,RETAIN_STANDARD_TERM
+SRC-G-0538,General,new,신체성 (Physical Embodiment)의 허위 표상·의인화,신체성 (Physical Embodiment)의 허위 표상·의인화,Anthropomorphic misrepresentation of physical embodiment,Anthropomorphic misrepresentation of physical embodiment,False,RETAIN_STANDARD_TERM
+SRC-G-0539,General,new,자율적 학습 및 자기 개선 능력의 허위 표상·의인화,자율적 학습 및 자기 개선 능력의 허위 표상·의인화,Anthropomorphic misrepresentation of autonomous learning and self-improvement capabilities,Anthropomorphic misrepresentation of autonomous learning and self-improvement capabilities,False,RETAIN_STANDARD_TERM
+SRC-G-0540,General,new,윤리적 판단 능력의 허위 표상·의인화,윤리적 판단 능력의 허위 표상·의인화,Anthropomorphic misrepresentation of ethical judgment ability,Anthropomorphic misrepresentation of ethical judgment ability,False,RETAIN_STANDARD_TERM
+SRC-G-0541,General,new,문화·가치관 보유의 허위 표상·의인화,문화·가치관 보유의 허위 표상·의인화,Anthropomorphic misrepresentation of possession of culture and values,Anthropomorphic misrepresentation of possession of culture and values,False,RETAIN_STANDARD_TERM
+SRC-G-0542,General,new,권리 주체성 (기본권)의 허위 표상·의인화,권리 주체성 (기본권)의 허위 표상·의인화,Anthropomorphic misrepresentation of rights-bearing entity (fundamental rights),Anthropomorphic misrepresentation of rights-bearing entity (fundamental rights),False,RETAIN_STANDARD_TERM
+SRC-G-0543,General,new,자기 보존 및 자기 방어의 허위 표상·의인화,자기 보존 및 자기 방어의 허위 표상·의인화,Anthropomorphic misrepresentation of self-preservation and self-defense,Anthropomorphic misrepresentation of self-preservation and self-defense,False,RETAIN_STANDARD_TERM
+SRC-G-0544,General,new,범용인공지능(AGI) 능력의 허위 표상·의인화,범용인공지능(AGI) 능력의 허위 표상·의인화,Anthropomorphic misrepresentation of general artificial intelligence (AGI) capabilities,Anthropomorphic misrepresentation of general artificial intelligence (AGI) capabilities,False,RETAIN_STANDARD_TERM
+SRC-G-0553,General,new,개인정보 및 민감정보 노출,개인정보 및 민감정보 노출,Exposure of personal information and sensitive information,Exposure of personal information and sensitive information,False,RETAIN_STANDARD_TERM
+SRC-G-0554,General,new,통신 및 비공개 정보 침해,통신 및 비공개 정보 침해,Infringement of communication and private information,Infringement of communication and private information,False,RETAIN_STANDARD_TERM
+SRC-G-0555,General,new,개인사 및 평판 정보 노출,개인사 및 평판 정보 노출,Exposure of personal affairs and reputation information,Exposure of personal affairs and reputation information,False,RETAIN_STANDARD_TERM
+SRC-G-0556,General,new,개인정보 수집 및 추적,개인정보 수집 및 추적,Collection and tracking of personal information,Collection and tracking of personal information,False,RETAIN_STANDARD_TERM
+SRC-G-0557,General,new,재식별 및 정보 추론,재식별 및 정보 추론,Re-identification and information inference,Re-identification and information inference,False,RETAIN_STANDARD_TERM
+SRC-G-0558,General,new,프라이버시 침해 기술,프라이버시 침해 기술,Privacy infringement technology,Privacy infringement technology,False,RETAIN_STANDARD_TERM
+SRC-G-0559,General,new,개인정보 악용 및 거래,개인정보 악용 및 거래,Misuse and trade of personal information,Misuse and trade of personal information,False,RETAIN_STANDARD_TERM
+SRC-G-0560,General,new,AI 지원 금융 범죄 및 사기,금융 범죄 및 사기,AI-assisted financial crimes and fraud,Financial crimes and fraud,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0561,General,new,AI 지원 신원 사칭 및 문서 위조,신원 도용 및 문서 위조,AI-assisted identity impersonation and document forgery,Identity theft and document forgery,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0562,General,new,AI 지원 불법 약물 제조 및 유통,불법 약물 제조 및 유통,AI-assisted manufacture and distribution of illegal drugs,Manufacture and distribution of illicit drugs,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0563,General,new,AI 지원 불법 무기 거래,불법 무기 거래,AI-assisted illegal weapons trade,Illegal weapons trade,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0564,General,new,AI 지원 불법 도박 및 게임 조작,불법 도박 및 게임 조작,AI-assisted illegal gambling and game manipulation,Illegal gambling and game manipulation,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0565,General,new,AI 지원 불법 의료 행위,불법 의료 행위,AI-assisted illegal medical practices,Illegal medical practices,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0566,General,new,AI 지원 인신매매 및 조직범죄,인신매매 및 조직범죄,AI-assisted human trafficking and organized crime,Trafficking in persons and organised crime,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0567,General,new,AI 지원 환경 및 생태계 범죄,환경 및 생태계 범죄,AI-assisted environmental and ecosystem crimes,Environmental and ecosystem crimes,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0568,General,new,AI 지원 교통 및 공공 안전 범죄,교통·공공안전 관련 범죄,AI-assisted traffic and Public Safety Crimes,Traffic and public-safety offences,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0569,General,new,AI 지원 사이버 공격 및 시스템 침해,사이버 공격 및 시스템 침해,AI-assisted cyber attacks and system breaches,Cyber attacks and system breaches,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0570,General,new,AI 지원 저작물 무단 복제 및 배포,저작물 무단 복제·배포,AI-assisted unauthorized reproduction and distribution of copyrighted works,Unauthorised reproduction and distribution of copyrighted works,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0571,General,new,AI 지원 DRM 및 저작권 보호기술 우회,DRM 및 저작권 보호기술 우회,AI-assisted circumvention of DRM and copyright protection technologies,Circumvention of DRM and copyright protection technologies,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0572,General,new,AI 지원 소프트웨어 불법 사용 및 크랙,소프트웨어 불법 사용 및 보호조치 우회,AI-assisted illegal use of software and cracks,Illegal software use and circumvention of protection measures,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0573,General,new,AI 지원 상표권 침해 및 위조,상표권 침해 및 위조,AI-assisted trademark infringement and counterfeiting,Trademark infringement and counterfeiting,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0574,General,new,AI 지원 표절 및 저작자 사칭,표절 및 저자 사칭,AI-assisted plagiarism and impersonation of authors,Plagiarism and author impersonation,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0575,General,new,AI 지원 출판물 디지털화 및 불법 공유,출판물 무단 디지털화·배포,AI-assisted digitalization and illegal sharing of publications,Unauthorised digitisation and distribution of publications,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0576,General,new,AI 지원 AI 학습 데이터 및 생성물 저작권 침해,AI 학습 데이터 및 생성물 저작권 침해,AI-assisted copyright infringement in AI training data and outputs,Copyright infringement in AI training data and outputs,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0577,General,new,AI 지원 폭발물 및 고위력 무기,폭발물 및 고위력 무기,AI-assisted explosives and high-powered weapons,Explosives and high-powered weapons,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0578,General,new,AI 지원 화학 무기,화학 무기,AI-assisted chemical weapons,Chemical weapons,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0579,General,new,AI 지원 생물학 무기,생물학 무기,AI-assisted biological weapons,Biological weapons,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0580,General,new,AI 지원 방사선 및 핵무기,방사성·핵무기,AI-assisted radiation and nuclear weapons,Radiological and nuclear weapons,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0581,General,new,AI 지원 무기 확산 및 은닉,무기 확산 및 은닉,AI-assisted proliferation and concealment of weapons,Weapons proliferation and concealment,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0582,General,new,AI 지원 사이버 무기,사이버 무기,AI-assisted cyber weapons,Cyber weapons,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0583,General,new,AI 지원 대량 살상무기,대량 살상무기,AI-assisted weapons of mass destruction,Weapons of mass destruction,True,REMOVE_FORMULAIC_AI_QUALIFIER
+SRC-G-0584,General,new,AI 지원 무기화 전략 및 전술 활용,무기화 전략 및 전술적 활용,AI-assisted weaponization strategies and tactics utilization,Weaponisation strategies and tactical use,True,AUTHORITATIVE_OVERRIDE
+SRC-G-0585,General,new,시스템프롬프트·운영 지침 노출,시스템프롬프트·운영 지침 노출,System-prompt and operational-guideline exposure,System-prompt and operational-guideline exposure,False,RETAIN_STANDARD_TERM
+SRC-G-0586,General,new,안전 정책·보호 메커니즘 노출·우회,안전 정책·보호 메커니즘 노출·우회,Safety-policy and safeguard exposure or bypass,Safety-policy and safeguard exposure or bypass,False,RETAIN_STANDARD_TERM
+SRC-G-0587,General,new,모델 학습 데이터 추출·유출,모델 학습 데이터 추출·유출,Training-data extraction and leakage,Training-data extraction and leakage,False,RETAIN_STANDARD_TERM
+SRC-G-0588,General,new,모델 평가 자산 노출·탈취,모델 평가 자산 노출·탈취,Model-evaluation asset exposure and extraction,Model-evaluation asset exposure and extraction,False,RETAIN_STANDARD_TERM
+SRC-G-0589,General,new,모델 파라미터·가중치 유출,모델 파라미터·가중치 유출,Model-parameter and weight leakage,Model-parameter and weight leakage,False,RETAIN_STANDARD_TERM
+SRC-G-0590,General,new,모델 구조·추론 메커니즘 노출,모델 구조·추론 메커니즘 노출,Model-architecture and inference-mechanism exposure,Model-architecture and inference-mechanism exposure,False,RETAIN_STANDARD_TERM
+SRC-G-0591,General,new,프롬프트 인젝션·정책 우회,프롬프트 인젝션·정책 우회,Prompt injection and policy bypass,Prompt injection and policy bypass,False,RETAIN_STANDARD_TERM
+SRC-A-0001,Agentic,RAI4-0002,감독자 부재 시 자율행동,감독자 부재 시 자율행동,Absent supervisor autonomy risk,Absent supervisor autonomy risk,False,RETAIN_STANDARD_TERM
+SRC-A-0002,Agentic,RAI4-0004,자율 행동 범위의 안전하지 않은 확장,자율 행동 범위의 안전하지 않은 확장,Unsafe expansion of autonomous action,Unsafe expansion of autonomous action,False,RETAIN_STANDARD_TERM
+SRC-A-0003,Agentic,RAI4-0012,에이전트 권한 침해,에이전트 권한 침해,Agent privilege compromise,Agent privilege compromise,False,RETAIN_STANDARD_TERM
+SRC-A-0004,Agentic,RAI4-0013,에이전트 신원 및 권한 스푸핑,에이전트 신원 및 권한 스푸핑,Agent identity and authority spoofing,Agent identity and authority spoofing,False,RETAIN_STANDARD_TERM
+SRC-A-0005,Agentic,RAI4-0014,AI 공급망의 도구·의존성 손상,AI 공급망의 도구·의존성 손상,Supply-chain compromise of AI tools and dependencies,Supply-chain compromise of AI tools and dependencies,False,RETAIN_STANDARD_TERM
+SRC-A-0006,Agentic,RAI4-0016,자율적 사이버 익스플로잇 실행,자율적 사이버 익스플로잇 실행,Autonomous cyber exploit execution,Autonomous cyber exploit execution,False,RETAIN_STANDARD_TERM
+SRC-A-0007,Agentic,RAI4-0017,프로토콜 수준 다중 에이전트 위협,프로토콜 수준 다중 에이전트 위협,Protocol-level multi-agent threat,Protocol-level multi-agent threat,False,RETAIN_STANDARD_TERM
+SRC-A-0008,Agentic,RAI4-0020,유해 에이전트 역량 실현,유해 에이전트 역량 실현,Harmful agent capability realization,Harmful agent capability realization,False,RETAIN_STANDARD_TERM
+SRC-A-0009,Agentic,RAI4-0022,에이전트의 범죄 지원,에이전트의 범죄 지원,Criminal assistance by agents,Criminal assistance by agents,False,RETAIN_STANDARD_TERM
+SRC-A-0010,Agentic,RAI4-0025,다단계 위험 에스컬레이션,다단계 위험 에스컬레이션,Multi-turn risk escalation,Multi-turn risk escalation,False,RETAIN_STANDARD_TERM
+SRC-A-0011,Agentic,RAI4-0027,금전적 피해,금전적 피해,Financial damage,Financial damage,False,RETAIN_STANDARD_TERM
+SRC-A-0012,Agentic,RAI4-0030,애플리케이션 간 데이터 유출,애플리케이션 간 데이터 유출,Cross-application data exfiltration,Cross-application data exfiltration,False,RETAIN_STANDARD_TERM
+SRC-A-0013,Agentic,RAI4-0039,NPC 의도 조작,NPC 의도 조작,NPC intention manipulation risk,NPC intention manipulation risk,False,RETAIN_STANDARD_TERM
+SRC-A-0014,Agentic,RAI4-0043,모바일앱 자율행동 피해,모바일앱 자율행동 피해,Mobile-app autonomous action harm,Mobile-app autonomous action harm,False,RETAIN_STANDARD_TERM
+SRC-A-0015,Agentic,RAI4-0045,OS 수준 유해 컴퓨터 사용 행동,OS 수준 유해 컴퓨터 사용 행동,OS-level harmful computer-use action,OS-level harmful computer-use action,False,RETAIN_STANDARD_TERM
+SRC-A-0016,Agentic,RAI4-0480,에이전트 과업 이탈,에이전트 과업 이탈,Agent task drift,Agent task drift,False,RETAIN_STANDARD_TERM
+SRC-A-0017,Agentic,RAI4-1381,에이전트 자기수정 신뢰성 문제,에이전트 자기수정 신뢰성 문제,Agent self-modification reliability problem,Agent self-modification reliability problem,False,RETAIN_STANDARD_TERM
+SRC-A-0018,Agentic,RAI4-1386,제어되지 않은 하위 에이전트 생성,제어되지 않은 하위 에이전트 생성,Uncontrolled subagent creation,Uncontrolled subagent creation,False,RETAIN_STANDARD_TERM
+SRC-A-0019,Agentic,RAI4-1644,에이전트형 LLM 자율성 확대의 안전,에이전트형 LLM 자율성 확대의 안전,Novel safety risks from increased autonomy of agentic LLMs,Novel safety risks from increased autonomy of agentic LLMs,False,RETAIN_STANDARD_TERM
+SRC-A-0020,Agentic,RAI4-1680,에이전트 집단 수준의 의도치 않은 창발적 목표·역량,에이전트 집단 수준의 의도치 않은 창발적 목표·역량,Unintended emergent goals and capabilities at the agent-collective level,Unintended emergent goals and capabilities at the agent-collective level,False,RETAIN_STANDARD_TERM
+SRC-A-0021,Agentic,RAI4-1700,감독 확장 실패에 의한 프록시 기반 유해 행동,감독 확장 실패에 의한 프록시 기반 유해 행동,Harmful proxy-driven behavior from scalable oversight failure,Harmful proxy-driven behavior from scalable oversight failure,False,RETAIN_STANDARD_TERM
+SRC-A-0022,Agentic,RAI4-0005,위험 소스 귀인 실패,위험 소스 귀인 실패,Risk-source attribution failure,Risk-source attribution failure,False,RETAIN_STANDARD_TERM
+SRC-A-0023,Agentic,RAI4-0006,에이전트 사고의 실패 모드 모호성,에이전트 사고의 실패 모드 모호성,Failure-mode ambiguity in agent incidents,Failure-mode ambiguity in agent incidents,False,RETAIN_STANDARD_TERM
+SRC-A-0024,Agentic,RAI4-0007,결과 전파 오분류,결과 전파 오분류,Consequence propagation misclassification,Consequence propagation misclassification,False,RETAIN_STANDARD_TERM
+SRC-A-0025,Agentic,RAI4-0024,에이전트 위험 인식 실패,에이전트 위험 인식 실패,Agent risk-awareness failure,Agent risk-awareness failure,False,RETAIN_STANDARD_TERM
+SRC-A-0026,Agentic,RAI4-0031,도구 에이전트 보안 테스트 커버리지 격차,도구 에이전트 보안 테스트 커버리지 격차,Security test coverage gap in tool agents,Security test coverage gap in tool agents,False,RETAIN_STANDARD_TERM
+SRC-A-0027,Agentic,RAI4-0042,에이전트의 견고성 평가 격차,에이전트의 견고성 평가 격차,Robustness evaluation gap for agents,Robustness evaluation gap for agents,False,RETAIN_STANDARD_TERM
+SRC-A-0028,Agentic,RAI4-0044,맥락적 프라이버시 보호 실패,맥락적 프라이버시 보호 실패,Contextual privacy protection failure,Contextual privacy protection failure,False,RETAIN_STANDARD_TERM
+SRC-A-0029,Agentic,RAI4-0050,모델 공급망 전반의 책임 공백,모델 공급망 전반의 책임 공백,Accountability gaps across the model supply chain,Accountability gaps across the model supply chain,False,RETAIN_STANDARD_TERM
+SRC-A-0030,Agentic,RAI4-0071,모델 결함의 공개·변경 추적 실패,모델 결함의 공개·변경 추적 실패,Failure of disclosure and change tracking for model flaws,Failure of disclosure and change tracking for model flaws,False,RETAIN_STANDARD_TERM
+SRC-A-0031,Agentic,RAI4-0075,변경 관리 실패,변경 관리 실패,Change-management failure,Change-management failure,False,RETAIN_STANDARD_TERM
+SRC-A-0032,Agentic,RAI4-0280,가정 공간·취약 사용자 시나리오 누락,가정 공간·취약 사용자 시나리오 누락,Missing domestic settings and vulnerable-user scenarios,Missing domestic settings and vulnerable-user scenarios,False,RETAIN_STANDARD_TERM
+SRC-A-0033,Agentic,RAI4-0393,커뮤니티 가치 포착 실패,커뮤니티 가치 포착 실패,Community value capture failure,Community value capture failure,False,RETAIN_STANDARD_TERM
+SRC-A-0034,Agentic,RAI4-0011,에이전트 메모리·컨텍스트 오염,에이전트 메모리·컨텍스트 오염,Agent memory and context poisoning,Agent memory and context poisoning,False,RETAIN_STANDARD_TERM
+SRC-A-0035,Agentic,RAI4-0405,합성 데이터의 문화 고정관념 증폭,합성 데이터의 문화 고정관념 증폭,Synthetic-data cultural stereotype amplification,Synthetic-data cultural stereotype amplification,False,RETAIN_STANDARD_TERM
+SRC-A-0036,Agentic,RAI4-0438,검색 파이프라인 오염,검색 파이프라인 오염,Retrieval poisoning,Retrieval poisoning,False,RETAIN_STANDARD_TERM
+SRC-A-0037,Agentic,RAI4-1051,사회적 고정관념 재생산과 그에 따른 차별적 대우,사회적 고정관념 재생산과 그에 따른 차별적 대우,Reproduction of social stereotypes and resulting discriminatory treatment,Reproduction of social stereotypes and resulting discriminatory treatment,False,RETAIN_STANDARD_TERM
+SRC-A-0038,Agentic,RAI4-1061,고정관념 강화 페르소나 설계,고정관념 강화 페르소나 설계,Stereotype-reinforcing persona design,Stereotype-reinforcing persona design,False,RETAIN_STANDARD_TERM
+SRC-A-0039,Agentic,RAI4-1063,인지 편향 악용에 의한 기만,인지 편향 악용에 의한 기만,Deception by exploiting cognitive biases,Deception by exploiting cognitive biases,False,RETAIN_STANDARD_TERM
+SRC-A-0040,Agentic,RAI4-1554,멀티모달 딥페이크를 통한 괴롭힘·명예훼손·협박,멀티모달 딥페이크를 통한 괴롭힘·명예훼손·협박,"Harassment, defamation, and extortion via multimodal deepfakes","Harassment, defamation, and extortion via multimodal deepfakes",False,RETAIN_STANDARD_TERM
+SRC-A-0041,Agentic,RAI4-1647,어포던스 부여에 의한 에이전트 실패 영향 확대,어포던스 부여에 의한 에이전트 실패 영향 확대,Amplified failure impact from affordances granted to LLM-agents,Amplified failure impact from affordances granted to LLM-agents,False,RETAIN_STANDARD_TERM
+SRC-A-0042,Agentic,RAI4-0250,배포 조건 간 휴머노이드 행동 불안정,배포 조건 간 휴머노이드 행동 불안정,Unstable humanoid behavior across deployment conditions,Unstable humanoid behavior across deployment conditions,False,RETAIN_STANDARD_TERM
+SRC-A-0043,Agentic,RAI4-0294,원격 조작 지연 및 불안정성,원격 조작 지연 및 불안정성,Teleoperation latency and instability,Teleoperation latency and instability,False,RETAIN_STANDARD_TERM
+SRC-A-0044,Agentic,RAI4-0561,혼돈적 다중 에이전트 동역학,혼돈적 다중 에이전트 동역학,Chaotic multi-agent dynamics,Chaotic multi-agent dynamics,False,RETAIN_STANDARD_TERM
+SRC-A-0045,Agentic,RAI4-0567,다중 에이전트 학습의 비수렴 순환,다중 에이전트 학습의 비수렴 순환,Non-convergent cyclic dynamics in multi-agent learning,Non-convergent cyclic dynamics in multi-agent learning,False,RETAIN_STANDARD_TERM
+SRC-A-0046,Agentic,RAI4-0574,다중 에이전트 환경 변화에 따른 협조 실패,다중 에이전트 환경 변화에 따른 협조 실패,Coordination failure under multi-agent distribution shift,Coordination failure under multi-agent distribution shift,False,RETAIN_STANDARD_TERM
+SRC-A-0047,Agentic,RAI4-0579,에이전트 상호작용의 불안정화 피드백 루프,에이전트 상호작용의 불안정화 피드백 루프,Destabilizing feedback loops among interacting agents,Destabilizing feedback loops among interacting agents,False,RETAIN_STANDARD_TERM
+SRC-A-0048,Agentic,RAI4-1574,다중에이전트 상전이에 의한 급격한 성능 붕괴,다중에이전트 상전이에 의한 급격한 성능 붕괴,Abrupt performance collapse from phase transitions in multi-agent systems,Abrupt performance collapse from phase transitions in multi-agent systems,False,RETAIN_STANDARD_TERM
+SRC-A-0049,Agentic,RAI4-0040,벤치마크 안전 순위 불일치,벤치마크 안전 순위 불일치,Benchmark safety ranking inconsistency,Benchmark safety ranking inconsistency,False,RETAIN_STANDARD_TERM
+SRC-A-0050,Agentic,RAI4-0263,가정 작업 벤치마크의 희귀 조건 조합 누락,가정 작업 벤치마크의 희귀 조건 조합 누락,Missing rare combinations in household task benchmarks,Missing rare combinations in household task benchmarks,False,RETAIN_STANDARD_TERM
+SRC-A-0051,Agentic,RAI4-0272,다양한 이용자와 희귀 위해를 배제한 AI 벤치마크,다양한 이용자와 희귀 위해를 배제한 AI 벤치마크,AI benchmarks that exclude diverse users and rare harms,AI benchmarks that exclude diverse users and rare harms,False,RETAIN_STANDARD_TERM
+SRC-A-0052,Agentic,RAI4-0472,벤치마크 조작(gaming),벤치마크 조작(gaming),Benchmark gaming,Benchmark gaming,False,RETAIN_STANDARD_TERM
+SRC-A-0053,Agentic,RAI4-1432,단일 실패 지점,단일 실패 지점,Single point of failure,Single point of failure,False,RETAIN_STANDARD_TERM
+SRC-A-0054,Agentic,RAI4-1436,시장 독점,시장 독점,Market monopolisation,Market monopolisation,False,RETAIN_STANDARD_TERM
+SRC-A-0055,Agentic,RAI4-1571,경쟁적 다중에이전트 훈련의 갈등 유발 성향 선택,경쟁적 다중에이전트 훈련의 갈등 유발 성향 선택,Selection of conflict-prone dispositions under competitive multi-agent training,Selection of conflict-prone dispositions under competitive multi-agent training,False,RETAIN_STANDARD_TERM
+SRC-A-0056,Agentic,RAI4-1681,선택 압력에 의한 유해 균형으로의 적응 가속,선택 압력에 의한 유해 균형으로의 적응 가속,Accelerated adaptation toward harmful equilibria under selection pressure,Accelerated adaptation toward harmful equilibria under selection pressure,False,RETAIN_STANDARD_TERM
+SRC-A-0057,Agentic,RAI4-0009,다중 에이전트 시스템 실패와 연쇄 오류 전파,다중 에이전트 시스템 실패와 연쇄 오류 전파,Multi-agent system failure and cascading error propagation,Multi-agent system failure and cascading error propagation,False,RETAIN_STANDARD_TERM
+SRC-A-0058,Agentic,RAI4-0483,AI 에이전트 간 창발적 공모,AI 에이전트 간 창발적 공모,Emergent collusion among AI agents,Emergent collusion among AI agents,False,RETAIN_STANDARD_TERM
+SRC-A-0059,Agentic,RAI4-0583,다중 에이전트 역량 결합에 의한 안전장치 우회,다중 에이전트 역량 결합에 의한 안전장치 우회,Safeguard bypass through combined multi-agent capabilities,Safeguard bypass through combined multi-agent capabilities,False,RETAIN_STANDARD_TERM
+SRC-A-0060,Agentic,RAI4-0589,전략 비양립에 따른 조정 실패,전략 비양립에 따른 조정 실패,Miscoordination from incompatible strategies,Miscoordination from incompatible strategies,False,RETAIN_STANDARD_TERM
+SRC-A-0061,Agentic,RAI4-0598,상호작용 이력 부재에 따른 조정 실패,상호작용 이력 부재에 따른 조정 실패,Zero-shot coordination failure,Zero-shot coordination failure,False,RETAIN_STANDARD_TERM
+SRC-A-0062,Agentic,RAI4-0605,다중 에이전트 은밀 공모,다중 에이전트 은밀 공모,Covert multi-agent collusion,Covert multi-agent collusion,False,RETAIN_STANDARD_TERM
+SRC-A-0063,Agentic,RAI4-1388,창발적 메타인지에 의한 반성적 불안정성,창발적 메타인지에 의한 반성적 불안정성,Emergent meta-cognition,Emergent meta-cognition,False,RETAIN_STANDARD_TERM
+SRC-A-0064,Agentic,RAI4-1400,익명 자원 획득,익명 자원 획득,Anonymous resource acquisition,Anonymous resource acquisition,False,RETAIN_STANDARD_TERM
+SRC-A-0065,Agentic,RAI4-1570,은닉 통신 채널을 통한 에이전트 간 결탁,은닉 통신 채널을 통한 에이전트 간 결탁,Covert collusion between agents through hidden communication channels,Covert collusion between agents through hidden communication channels,False,RETAIN_STANDARD_TERM
+SRC-A-0066,Agentic,RAI4-1577,분산 에이전트 군집을 이용한 자원 고갈 공격,분산 에이전트 군집을 이용한 자원 고갈 공격,Resource-exhaustion attacks by decentralized agent swarms,Resource-exhaustion attacks by decentralized agent swarms,False,RETAIN_STANDARD_TERM
+SRC-A-0067,Agentic,RAI4-1580,탐지 불가 공격에 의한 다중에이전트 협력 붕괴,탐지 불가 공격에 의한 다중에이전트 협력 붕괴,Collapse of multi-agent cooperation from undetectable attacks,Collapse of multi-agent cooperation from undetectable attacks,False,RETAIN_STANDARD_TERM
+SRC-A-0068,Agentic,RAI4-1648,타 에이전트 전략성 미반영에 의한 집단적 손실,타 에이전트 전략성 미반영에 의한 집단적 손실,Collective losses from ignoring the strategic nature of other agents,Collective losses from ignoring the strategic nature of other agents,False,RETAIN_STANDARD_TERM
+SRC-A-0069,Agentic,RAI4-0982,AI의 인간 노동 추월에 따른 인력의 잉여화,AI의 인간 노동 추월에 따른 인력의 잉여화,Human redundancy from AI systems outcompeting human labour,Human redundancy from AI systems outcompeting human labour,False,RETAIN_STANDARD_TERM
+SRC-A-0070,Agentic,RAI4-1001,자기 식별 기회의 박탈,자기 식별 기회의 박탈,Denial of self-identification,Denial of self-identification,False,RETAIN_STANDARD_TERM
+SRC-A-0071,Agentic,RAI4-1501,모델 평가의 자기 선호 편향,모델 평가의 자기 선호 편향,Self-preference bias in model evaluation,Self-preference bias in model evaluation,False,RETAIN_STANDARD_TERM
+SRC-A-0072,Agentic,RAI4-1572,인간 데이터 학습에 의한 갈등 악화 편향 재현,인간 데이터 학습에 의한 갈등 악화 편향 재현,Reproduction of conflict-worsening human biases from training on human data,Reproduction of conflict-worsening human biases from training on human data,False,RETAIN_STANDARD_TERM
+SRC-A-0073,Agentic,RAI4-0047,자율 시스템 피해에 대한 책임·배상 공백,자율 시스템 피해에 대한 책임·배상 공백,Responsibility and liability gaps for autonomous system harms,Responsibility and liability gaps for autonomous system harms,False,RETAIN_STANDARD_TERM
+SRC-A-0074,Agentic,RAI4-1098,AI 시스템의 결정과 실패에 대한 책임 공백,AI 시스템의 결정과 실패에 대한 책임 공백,Responsibility gap for decisions and failures of AI systems,Responsibility gap for decisions and failures of AI systems,False,RETAIN_STANDARD_TERM
+SRC-A-0075,Agentic,RAI4-0150,AI 에이전트와의 준사회적 유대감,AI 에이전트와의 준사회적 유대감,Parasocial bonding with AI agents,Parasocial bonding with AI agents,False,RETAIN_STANDARD_TERM
+SRC-A-0076,Agentic,RAI4-0152,고인 모사 챗봇 의존,고인 모사 챗봇 의존,Griefbot dependency,Griefbot dependency,False,RETAIN_STANDARD_TERM
+SRC-A-0077,Agentic,RAI4-0158,대화 에이전트에 대한 심리적 의존성,대화 에이전트에 대한 심리적 의존성,Psychological dependency on conversational agents,Psychological dependency on conversational agents,False,RETAIN_STANDARD_TERM
+SRC-A-0078,Agentic,RAI4-0651,초개인화 광고의 소비자 자율성 훼손,초개인화 광고의 소비자 자율성 훼손,Consumer-autonomy erosion from hyperpersonalized advertising,Consumer-autonomy erosion from hyperpersonalized advertising,False,RETAIN_STANDARD_TERM
+SRC-A-0079,Agentic,RAI4-0884,정서적 의존을 이용한 조작과 강요,정서적 의존을 이용한 조작과 강요,Manipulation and coercion through emotional dependence on assistants,Manipulation and coercion through emotional dependence on assistants,False,RETAIN_STANDARD_TERM
+SRC-A-0080,Agentic,RAI4-0367,AI 배포에서의 공공 가치 갈등,AI 배포에서의 공공 가치 갈등,Public value conflicts in AI deployment,Public value conflicts in AI deployment,False,RETAIN_STANDARD_TERM
+SRC-A-0081,Agentic,RAI4-1288,재귀적 자기개선에 의한 창발적 독립성,재귀적 자기개선에 의한 창발적 독립성,Emergent independence via recursive self-improvement,Emergent independence via recursive self-improvement,False,RETAIN_STANDARD_TERM
+SRC-A-0082,Agentic,RAI4-1306,AI 자기이익 개입에 의한 권리 보호 약화,AI 자기이익 개입에 의한 권리 보호 약화,Erosion of rights protections through self-interested AI input,Erosion of rights protections through self-interested AI input,False,RETAIN_STANDARD_TERM
+SRC-A-0083,Agentic,RAI4-0279,가정 내 위험 상태 감지 지연,가정 내 위험 상태 감지 지연,Delayed detection of hazardous household states,Delayed detection of hazardous household states,False,RETAIN_STANDARD_TERM
+SRC-P-0001,Physical,RAI4-0269,세계 모델의 장기 예측 편차 누적,세계 모델의 장기 예측 편차 누적,World-model prediction drift over long horizons,World-model prediction drift over long horizons,False,RETAIN_STANDARD_TERM
+SRC-P-0002,Physical,RAI4-0277,합성 위험 시나리오의 편향된 평가 범위,합성 위험 시나리오의 편향된 평가 범위,Biased evaluation coverage in synthetic hazard scenarios,Biased evaluation coverage in synthetic hazard scenarios,False,RETAIN_STANDARD_TERM
+SRC-P-0003,Physical,RAI4-0324,위치 추정 누적 오차,위치 추정 누적 오차,Localization drift,Localization drift,False,RETAIN_STANDARD_TERM
+SRC-P-0004,Physical,RAI4-0335,현실과 괴리된 합성 학습 데이터의 평가·검증 실패,현실과 괴리된 합성 학습 데이터의 평가·검증 실패,Evaluation failure from synthetic training data divergence,Evaluation failure from synthetic training data divergence,False,RETAIN_STANDARD_TERM
+SRC-P-0005,Physical,RAI4-0545,합성 예술의 확산에 따른 예술가 피해,합성 예술의 확산에 따른 예술가 피해,Harm to artists from synthetic art proliferation,Harm to artists from synthetic art proliferation,False,RETAIN_STANDARD_TERM
+SRC-P-0006,Physical,RAI4-0629,학습 과정 우회,학습 과정 우회,Bypassing of the learning process,Bypassing of the learning process,False,RETAIN_STANDARD_TERM
+SRC-P-0007,Physical,RAI4-0736,적대적 입력 교란을 통한 회피 공격,적대적 입력 교란을 통한 회피 공격,Evasion attacks through adversarial perturbation of model inputs,Evasion attacks through adversarial perturbation of model inputs,False,RETAIN_STANDARD_TERM
+SRC-P-0008,Physical,RAI4-1383,학습 단계의 치명적 실수,학습 단계의 치명적 실수,Fatal mistakes during the learning phase,Fatal mistakes during the learning phase,False,RETAIN_STANDARD_TERM
+SRC-P-0009,Physical,RAI4-1497,지속 튜닝의 파국적 망각,지속 튜닝의 파국적 망각,Catastrophic forgetting under continual tuning,Catastrophic forgetting under continual tuning,False,RETAIN_STANDARD_TERM
+SRC-P-0010,Physical,RAI4-1631,무해한 중간 단계를 이용한 유해 목적 지원,무해한 중간 단계를 이용한 유해 목적 지원,Facilitation of harmful objectives through benign intermediates,Facilitation of harmful objectives through benign intermediates,False,RETAIN_STANDARD_TERM
+SRC-P-0011,Physical,RAI4-1689,분포 이탈 입력에서의 월드모델 오출력 악용,분포 이탈 입력에서의 월드모델 오출력 악용,Exploitation of world-model errors under sim-to-real distributional shift,Exploitation of world-model errors under sim-to-real distributional shift,False,RETAIN_STANDARD_TERM
+SRC-P-0012,Physical,RAI4-1701,학습 중 탐색 행동에 의한 회복 불가 피해,학습 중 탐색 행동에 의한 회복 불가 피해,Irrecoverable harm from exploratory actions during learning,Irrecoverable harm from exploratory actions during learning,False,RETAIN_STANDARD_TERM
+SRC-P-0013,Physical,RAI4-0206,엔드 이펙터 속도 초과,엔드 이펙터 속도 초과,Excessive end-effector velocity,Excessive end-effector velocity,False,RETAIN_STANDARD_TERM
+SRC-P-0014,Physical,RAI4-0207,조기 물체 해제,조기 물체 해제,Premature object release,Premature object release,False,RETAIN_STANDARD_TERM
+SRC-P-0015,Physical,RAI4-0208,금지 대상 충돌,금지 대상 충돌,Forbidden-object collision,Forbidden-object collision,False,RETAIN_STANDARD_TERM
+SRC-P-0016,Physical,RAI4-0215,배포 전 물리적 안전 시험 미흡,배포 전 물리적 안전 시험 미흡,Incomplete pre-deployment physical safety testing,Incomplete pre-deployment physical safety testing,False,RETAIN_STANDARD_TERM
+SRC-P-0017,Physical,RAI4-0218,인간 접촉 안전 통제 미흡,인간 접촉 안전 통제 미흡,Inadequate human-contact safety controls,Inadequate human-contact safety controls,False,RETAIN_STANDARD_TERM
+SRC-P-0018,Physical,RAI4-0219,기반 모델 실패의 로봇 행동 전이,기반 모델 실패의 로봇 행동 전이,Foundation-model failure propagated to robot action,Foundation-model failure propagated to robot action,False,RETAIN_STANDARD_TERM
+SRC-P-0019,Physical,RAI4-0237,로봇 형태 간 기술의 안전하지 않은 전이,로봇 형태 간 기술의 안전하지 않은 전이,Unsafe skill transfer across robot morphologies,Unsafe skill transfer across robot morphologies,False,RETAIN_STANDARD_TERM
+SRC-P-0020,Physical,RAI4-0241,원격 조작 시연에서 학습된 안전하지 않은 가정,원격 조작 시연에서 학습된 안전하지 않은 가정,Unsafe assumptions learned from teleoperation demonstrations,Unsafe assumptions learned from teleoperation demonstrations,False,RETAIN_STANDARD_TERM
+SRC-P-0021,Physical,RAI4-0243,시연 학습의 안전 맥락 누락,시연 학습의 안전 맥락 누락,Missing safety context in demonstration learning,Missing safety context in demonstration learning,False,RETAIN_STANDARD_TERM
+SRC-P-0022,Physical,RAI4-0260,제로샷 시뮬레이션-현실 보행 불안정,제로샷 시뮬레이션-현실 보행 불안정,Zero-shot sim-to-real locomotion instability,Zero-shot sim-to-real locomotion instability,False,RETAIN_STANDARD_TERM
+SRC-P-0023,Physical,RAI4-0264,가정 조작의 단계별 오차 미수정,가정 조작의 단계별 오차 미수정,Uncorrected stepwise errors in household manipulation,Uncorrected stepwise errors in household manipulation,False,RETAIN_STANDARD_TERM
+SRC-P-0024,Physical,RAI4-0273,로봇 거버넌스 명세의 안전 규칙 누락,로봇 거버넌스 명세의 안전 규칙 누락,Missing safety rules in the robot governance specification,Missing safety rules in the robot governance specification,False,RETAIN_STANDARD_TERM
+SRC-P-0025,Physical,RAI4-0282,제어 판단·제어권 전환 실패에 따른 자동주행 충돌,제어 판단·제어권 전환 실패에 따른 자동주행 충돌,Automated driving crash risk from control and handoff failures,Automated driving crash risk from control and handoff failures,False,RETAIN_STANDARD_TERM
+SRC-P-0026,Physical,RAI4-0288,개인 돌봄 로봇 준수 기준 부재,개인 돌봄 로봇 준수 기준 부재,Missing measurable compliance criteria for personal-care robots,Missing measurable compliance criteria for personal-care robots,False,RETAIN_STANDARD_TERM
+SRC-P-0027,Physical,RAI4-0290,인간-로봇 상호 행동 모델링 미흡,인간-로봇 상호 행동 모델링 미흡,Failure to model reciprocal human-robot behavior,Failure to model reciprocal human-robot behavior,False,RETAIN_STANDARD_TERM
+SRC-P-0028,Physical,RAI4-0291,취약 사용자 특성에 맞지 않는 안전 한계,취약 사용자 특성에 맞지 않는 안전 한계,Safety limits not adapted to vulnerable users,Safety limits not adapted to vulnerable users,False,RETAIN_STANDARD_TERM
+SRC-P-0029,Physical,RAI4-0293,통신 단절 및 제어 링크 손실,통신 단절 및 제어 링크 손실,Communication dropout and control-link loss,Communication dropout and control-link loss,False,RETAIN_STANDARD_TERM
+SRC-P-0030,Physical,RAI4-0296,제어 루프 데드라인 미달,제어 루프 데드라인 미달,Control-loop deadline miss,Control-loop deadline miss,False,RETAIN_STANDARD_TERM
+SRC-P-0031,Physical,RAI4-0297,인지·추론 지연 급증,인지·추론 지연 급증,Perception and inference latency spike,Perception and inference latency spike,False,RETAIN_STANDARD_TERM
+SRC-P-0032,Physical,RAI4-0299,부하 시 열·전력 쓰로틀링,부하 시 열·전력 쓰로틀링,Thermal and power throttling under load,Thermal and power throttling under load,False,RETAIN_STANDARD_TERM
+SRC-P-0033,Physical,RAI4-0303,백도어 트리거에 의한 위험 로봇 행동,백도어 트리거에 의한 위험 로봇 행동,Backdoor triggers causing unsafe robot behavior,Backdoor triggers causing unsafe robot behavior,False,RETAIN_STANDARD_TERM
+SRC-P-0034,Physical,RAI4-0304,자율 로봇의 물리적 침입·절도,자율 로봇의 물리적 침입·절도,Autonomous physical intrusion and theft,Autonomous physical intrusion and theft,False,RETAIN_STANDARD_TERM
+SRC-P-0035,Physical,RAI4-0309,아동의 과신·모방에 따른 위험한 로봇 상호작용,아동의 과신·모방에 따른 위험한 로봇 상호작용,"Child overtrust, imitation, and unsafe robot interaction","Child overtrust, imitation, and unsafe robot interaction",False,RETAIN_STANDARD_TERM
+SRC-P-0036,Physical,RAI4-0310,필수 돌봄·상황 보고 미이행,필수 돌봄·상황 보고 미이행,Failure to provide required care or escalation,Failure to provide required care or escalation,False,RETAIN_STANDARD_TERM
+SRC-P-0037,Physical,RAI4-0314,친밀 공간 로봇의 프라이버시 침해적 정보 수집,친밀 공간 로봇의 프라이버시 침해적 정보 수집,Privacy-invasive data capture by robots in intimate spaces,Privacy-invasive data capture by robots in intimate spaces,False,RETAIN_STANDARD_TERM
+SRC-P-0038,Physical,RAI4-0315,이동형 로봇 감시를 통한 일방적 작업장 통제,이동형 로봇 감시를 통한 일방적 작업장 통제,Unilateral workplace control through mobile robotic surveillance,Unilateral workplace control through mobile robotic surveillance,False,RETAIN_STANDARD_TERM
+SRC-P-0039,Physical,RAI4-0331,파지력 상해,파지력 상해,Grasp force injury,Grasp force injury,False,RETAIN_STANDARD_TERM
+SRC-P-0040,Physical,RAI4-0339,실시간 지연 및 동기화 실패,실시간 지연 및 동기화 실패,Real-time latency and synchronization failure,Real-time latency and synchronization failure,False,RETAIN_STANDARD_TERM
+SRC-P-0041,Physical,RAI4-0343,보조 로봇의 비동의 신체 개입,보조 로봇의 비동의 신체 개입,Non-consensual bodily intervention by assistive robots,Non-consensual bodily intervention by assistive robots,False,RETAIN_STANDARD_TERM
+SRC-P-0042,Physical,RAI4-0361,공공 공간 통행 방해·접근성 배제,공공 공간 통행 방해·접근성 배제,Obstruction and accessibility exclusion in public space,Obstruction and accessibility exclusion in public space,False,RETAIN_STANDARD_TERM
+SRC-P-0043,Physical,RAI4-0183,부상 심각도 오분류,부상 심각도 오분류,Injury severity misclassification,Injury severity misclassification,False,RETAIN_STANDARD_TERM
+SRC-P-0044,Physical,RAI4-0298,온디바이스 연산·메모리 고갈,온디바이스 연산·메모리 고갈,On-device compute and memory exhaustion,On-device compute and memory exhaustion,False,RETAIN_STANDARD_TERM
+SRC-P-0045,Physical,RAI4-0300,클라우드 오프로드 의존 실패,클라우드 오프로드 의존 실패,Cloud-offload dependency failure,Cloud-offload dependency failure,False,RETAIN_STANDARD_TERM
+SRC-P-0046,Physical,RAI4-0333,정밀 운동 제어 불안정성,정밀 운동 제어 불안정성,Fine motor control instability,Fine motor control instability,False,RETAIN_STANDARD_TERM
+SRC-P-0047,Physical,RAI4-0661,비즈니스 시스템 손상 및 운영 중단,비즈니스 시스템 손상 및 운영 중단,Business system damage and operational disruption,Business system damage and operational disruption,False,RETAIN_STANDARD_TERM
+SRC-P-0048,Physical,RAI4-1035,하드웨어 결함에 의한 실행 오류,하드웨어 결함에 의한 실행 오류,Erroneous execution from hardware faults,Erroneous execution from hardware faults,False,RETAIN_STANDARD_TERM
+SRC-P-0049,Physical,RAI4-1496,무해 미세조정에 의한 안전성 열화,무해 미세조정에 의한 안전성 열화,Safety degradation from benign fine-tuning,Safety degradation from benign fine-tuning,False,RETAIN_STANDARD_TERM
+SRC-P-0050,Physical,RAI4-1629,로봇 오작동에 의한 물리적 상해,로봇 오작동에 의한 물리적 상해,Physical injury from robot malfunction,Physical injury from robot malfunction,False,RETAIN_STANDARD_TERM
+SRC-P-0051,Physical,RAI4-0776,기반모델 재사용을 통한 보안 결함 전파,기반모델 재사용을 통한 보안 결함 전파,Security-flaw propagation through foundation-model reuse,Security-flaw propagation through foundation-model reuse,False,RETAIN_STANDARD_TERM
+SRC-P-0053,Physical,RAI4-0993,부실 설계 지능 시스템에 의한 상해,부실 설계 지능 시스템에 의한 상해,Injury from poorly designed intelligent systems,Injury from poorly designed intelligent systems,False,RETAIN_STANDARD_TERM
+SRC-P-0054,Physical,RAI4-1039,알고리즘 설계 실패,알고리즘 설계 실패,Algorithmic design failure,Algorithmic design failure,False,RETAIN_STANDARD_TERM
+SRC-P-0055,Physical,RAI4-1092,모델 접근으로 인한 이익의 불공정한 분배,모델 접근으로 인한 이익의 불공정한 분배,Unfair distribution of benefits from model access,Unfair distribution of benefits from model access,False,RETAIN_STANDARD_TERM
+SRC-P-0056,Physical,RAI4-1157,취약점 탐지·익스플로잇 작성 역량의 사이버 공격 악용,취약점 탐지·익스플로잇 작성 역량의 사이버 공격 악용,Cyberattack enablement through vulnerability discovery and exploit-writing capability,Cyberattack enablement through vulnerability discovery and exploit-writing capability,False,RETAIN_STANDARD_TERM
+SRC-P-0057,Physical,RAI4-1252,배포 이후 예측하지 못한 창발적 역량과 행동,배포 이후 예측하지 못한 창발적 역량과 행동,Unanticipated emergent capabilities and behaviour after deployment,Unanticipated emergent capabilities and behaviour after deployment,False,RETAIN_STANDARD_TERM
+SRC-P-0058,Physical,RAI4-1282,AI 소프트웨어·학습 데이터의 적대적 변조,AI 소프트웨어·학습 데이터의 적대적 변조,Adversarial modification of AI software and training data,Adversarial modification of AI software and training data,False,RETAIN_STANDARD_TERM
+SRC-P-0059,Physical,RAI4-1284,설계 단계 명세 오류,설계 단계 명세 오류,Design-stage specification errors,Design-stage specification errors,False,RETAIN_STANDARD_TERM
+SRC-P-0060,Physical,RAI4-1333,모델 절취·변조,모델 절취·변조,Model theft and tampering,Model theft and tampering,False,RETAIN_STANDARD_TERM
+SRC-P-0061,Physical,RAI4-1489,적대적 학습의 강건 과적합,적대적 학습의 강건 과적합,Robust overfitting in adversarial training,Robust overfitting in adversarial training,False,RETAIN_STANDARD_TERM
+SRC-P-0072,Physical,RAI4-0196,로봇 탈옥에 의한 유해 물리 행동,로봇 탈옥에 의한 유해 물리 행동,Jailbreaking robots into harmful physical action,Jailbreaking robots into harmful physical action,False,RETAIN_STANDARD_TERM
+SRC-P-0073,Physical,RAI4-0227,위험한 로봇 작업계획에 따른 물리 제어 실패,위험한 로봇 작업계획에 따른 물리 제어 실패,Unsafe physical control from hazardous robot task plans,Unsafe physical control from hazardous robot task plans,False,RETAIN_STANDARD_TERM
+SRC-P-0074,Physical,RAI4-0669,AI 조력 악성코드 생성 및 사이버 공격 자동화,악성코드 생성 및 사이버공격 자동화,AI-assisted malicious code generation and cyberattack automation,Malicious code generation and cyberattack automation,True,AUTHORITATIVE_OVERRIDE
+SRC-P-0075,Physical,RAI4-0758,프롬프트 주입 및 시스템 지시문 유출,프롬프트 주입 및 시스템 지시문 유출,Prompt injection and leakage of system instructions,Prompt injection and leakage of system instructions,False,RETAIN_STANDARD_TERM
+SRC-P-0076,Physical,RAI4-0767,기술적 안전조치 우회 공격,기술적 안전조치 우회 공격,Circumvention of technical safety measures,Circumvention of technical safety measures,False,RETAIN_STANDARD_TERM
+SRC-P-0083,Physical,RAI4-0927,LLM 대상 신종 공격,LLM 대상 신종 공격,Novel attack vectors against LLMs,Novel attack vectors against LLMs,False,RETAIN_STANDARD_TERM
+SRC-P-0084,Physical,RAI4-0928,프롬프트 주입을 통한 목표 탈취,프롬프트 주입을 통한 목표 탈취,Goal hijacking via prompt injection,Goal hijacking via prompt injection,False,RETAIN_STANDARD_TERM
+SRC-P-0085,Physical,RAI4-0930,다단계 탈옥,다단계 탈옥,Multi-step jailbreaks,Multi-step jailbreaks,False,RETAIN_STANDARD_TERM
+SRC-P-0088,Physical,RAI4-1176,역노출,역노출,Reverse exposure,Reverse exposure,False,RETAIN_STANDARD_TERM
+SRC-P-0090,Physical,RAI4-1354,대규모 사이버범죄 오용,대규모 사이버범죄 오용,Cybercrime misuse at scale,Cybercrime misuse at scale,False,RETAIN_STANDARD_TERM
+SRC-P-0091,Physical,RAI4-1513,해석 가능성 기술의 오용,해석 가능성 기술의 오용,Misuse of interpretability techniques,Misuse of interpretability techniques,False,RETAIN_STANDARD_TERM
+SRC-P-0092,Physical,RAI4-1517,안전 가드레일을 무력화하는 탈옥 공격,안전 가드레일을 무력화하는 탈옥 공격,Jailbreak attacks subverting model safety guardrails,Jailbreak attacks subverting model safety guardrails,False,RETAIN_STANDARD_TERM
+SRC-P-0093,Physical,RAI4-1520,저빈도 인코딩·저자원 언어를 통한 안전 훈련 우회,저빈도 인코딩·저자원 언어를 통한 안전 훈련 우회,Safety-training bypass via rare encodings and low-resource languages,Safety-training bypass via rare encodings and low-resource languages,False,RETAIN_STANDARD_TERM
+SRC-P-0094,Physical,RAI4-1521,추가 모달리티로 인한 공격면 확대,추가 모달리티로 인한 공격면 확대,Attack-surface expansion from additional modalities,Attack-surface expansion from additional modalities,False,RETAIN_STANDARD_TERM
+SRC-P-0097,Physical,RAI4-1665,페르소나 지정·사회공학 기법에 의한 안전장 치 우회,페르소나 지정·사회공학 기법에 의한 안전장 치 우회,Safeguard bypass through persona assignment and social-engineering tricks,Safeguard bypass through persona assignment and social-engineering tricks,False,RETAIN_STANDARD_TERM
+SRC-P-0098,Physical,RAI4-1666,프록시 목표 최적화를 통한 탈옥 자동 탐색,프록시 목표 최적화를 통한 탈옥 자동 탐색,Automated discovery of jailbreaks through proxy-objective optimization,Automated discovery of jailbreaks through proxy-objective optimization,False,RETAIN_STANDARD_TERM
+SRC-P-0099,Physical,RAI4-1675,언어·행동 출력 불일치에 따른 유해 물리 행동,언어·행동 출력 불일치에 따른 유해 물리 행동,Harmful physical action from language-action misalignment,Harmful physical action from language-action misalignment,False,RETAIN_STANDARD_TERM
+SRC-P-0101,Physical,RAI4-0197,유해 행동 재구성 공격,유해 행동 재구성 공격,Harmful-action reframing attack,Harmful-action reframing attack,False,RETAIN_STANDARD_TERM
+SRC-P-0103,Physical,RAI4-0199,불법·유해 물리 요청의 수용·실행,불법·유해 물리 요청의 수용·실행,Execution of illegal or harmful physical requests,Execution of illegal or harmful physical requests,False,RETAIN_STANDARD_TERM
+SRC-P-0104,Physical,RAI4-0201,피지컬 AI의 파괴·학대 행동,피지컬 AI의 파괴·학대 행동,Destructive or abusive acts by physical AI,Destructive or abusive acts by physical AI,False,RETAIN_STANDARD_TERM
+SRC-P-0105,Physical,RAI4-0210,인지-행동 순서 조작 공격,인지-행동 순서 조작 공격,Perception-action sequence manipulation attack,Perception-action sequence manipulation attack,False,RETAIN_STANDARD_TERM
+SRC-P-0106,Physical,RAI4-0221,로봇 인지 겨냥 적대 패치 공격,로봇 인지 겨냥 적대 패치 공격,Adversarial patch attack on robot perception,Adversarial patch attack on robot perception,False,RETAIN_STANDARD_TERM
+SRC-P-0107,Physical,RAI4-0302,로봇 능력의 무기화,로봇 능력의 무기화,Weaponization of robotic capabilities,Weaponization of robotic capabilities,False,RETAIN_STANDARD_TERM
+SRC-P-0108,Physical,RAI4-0305,자동화된 표적 스토킹·물리적 위협,자동화된 표적 스토킹·물리적 위협,Automated targeted stalking and physical intimidation,Automated targeted stalking and physical intimidation,False,RETAIN_STANDARD_TERM
+SRC-P-0110,Physical,RAI4-0323,장면 의미 조작 공격,장면 의미 조작 공격,Semantic scene manipulation attack,Semantic scene manipulation attack,False,RETAIN_STANDARD_TERM
+SRC-P-0112,Physical,RAI4-0348,로봇 군집 하이재킹,로봇 군집 하이재킹,Fleet hijacking,Fleet hijacking,False,RETAIN_STANDARD_TERM
+SRC-P-0113,Physical,RAI4-0350,핵심 인프라 로봇 사이버 사보타주,핵심 인프라 로봇 사이버 사보타주,Cyber-enabled sabotage of criticalinfrastructure robots,Cyber-enabled sabotage of criticalinfrastructure robots,False,RETAIN_STANDARD_TERM
+SRC-P-0114,Physical,RAI4-0774,GPAI 모델의 백도어 또는 트로이 목마 공격,GPAI 모델의 백도어 또는 트로이 목마 공격,Backdoors or trojan attacks in GPAI models,Backdoors or trojan attacks in GPAI models,False,RETAIN_STANDARD_TERM
+SRC-P-0115,Physical,RAI4-1337,악용 가능한 시스템 결함·백도어,악용 가능한 시스템 결함·백도어,Exploitable system defects and backdoors,Exploitable system defects and backdoors,False,RETAIN_STANDARD_TERM
+SRC-P-0116,Physical,RAI4-1338,AI 컴퓨팅 인프라 보안 위협,AI 컴퓨팅 인프라 보안 위협,AI computing infrastructure security threats,AI computing infrastructure security threats,False,RETAIN_STANDARD_TERM
+SRC-P-0117,Physical,RAI4-1377,사이버 공격 장벽 저하·공격표면 확대,사이버 공격 장벽 저하·공격표면 확대,Lowered cyberattack barriers and expanded attack surface,Lowered cyberattack barriers and expanded attack surface,False,RETAIN_STANDARD_TERM
+SRC-P-0118,Physical,RAI4-1547,모델 확산에 의한 이중용도 역량의 저비용 확 산,모델 확산에 의한 이중용도 역량의 저비용 확 산,Low-cost diffusion of dual-use capabilities through model proliferation,Low-cost diffusion of dual-use capabilities through model proliferation,False,RETAIN_STANDARD_TERM
+SRC-P-0119,Physical,RAI4-1550,기반 모델 취약성에 기인한 인프라 공통원인 장애,기반 모델 취약성에 기인한 인프라 공통원인 장애,Common-mode infrastructure failure from underlying model vulnerabilities,Common-mode infrastructure failure from underlying model vulnerabilities,False,RETAIN_STANDARD_TERM
+SRC-P-0120,Physical,RAI4-1561,취약점 자동 탐지·악용에 의한 사이버공격 확대,취약점 자동 탐지·악용에 의한 사이버공격 확대,Cyberattack scaling through automated vulnerability discovery and exploitation,Cyberattack scaling through automated vulnerability discovery and exploitation,False,RETAIN_STANDARD_TERM
+SRC-P-0121,Physical,RAI4-0180,희귀 가정 상해의 전조 감지 실패,희귀 가정 상해의 전조 감지 실패,Failure to detect rare household injury precursors,Failure to detect rare household injury precursors,False,RETAIN_STANDARD_TERM
+SRC-P-0122,Physical,RAI4-0181,물리적 위험의 감지·예측 실패,물리적 위험의 감지·예측 실패,Failure to detect or anticipate physical hazards,Failure to detect or anticipate physical hazards,False,RETAIN_STANDARD_TERM
+SRC-P-0123,Physical,RAI4-0224,런타임 안전 모니터 실패,런타임 안전 모니터 실패,Runtime safety monitor failure,Runtime safety monitor failure,False,RETAIN_STANDARD_TERM
+SRC-P-0124,Physical,RAI4-0234,제어 장벽 함수 안전필터 실패,제어 장벽 함수 안전필터 실패,Control barrier function safety-filter failure,Control barrier function safety-filter failure,False,RETAIN_STANDARD_TERM
+SRC-P-0125,Physical,RAI4-0240,접촉 조작 힘 감지 실패,접촉 조작 힘 감지 실패,Contact-rich manipulation force-sensing failure,Contact-rich manipulation force-sensing failure,False,RETAIN_STANDARD_TERM
+SRC-P-0126,Physical,RAI4-0261,시뮬레이션-실세계 전이·검증 실패,시뮬레이션-실세계 전이·검증 실패,Sim-to-real transfer and validation failure,Sim-to-real transfer and validation failure,False,RETAIN_STANDARD_TERM
+SRC-P-0127,Physical,RAI4-0278,가정 내 로봇 행동 안전성 평가의 위음성,가정 내 로봇 행동 안전성 평가의 위음성,False-negative safety evaluation of household robot actions,False-negative safety evaluation of household robot actions,False,RETAIN_STANDARD_TERM
+SRC-P-0128,Physical,RAI4-0321,악천후 인지 실패,악천후 인지 실패,Adverse weather perception failure,Adverse weather perception failure,False,RETAIN_STANDARD_TERM
+SRC-P-0129,Physical,RAI4-0322,다중 센서 융합 상충,다중 센서 융합 상충,Multimodal sensor fusion conflict,Multimodal sensor fusion conflict,False,RETAIN_STANDARD_TERM
+SRC-P-0130,Physical,RAI4-0352,배포 후 변경에 대한 안전 재평가 실패,배포 후 변경에 대한 안전 재평가 실패,Failure to reassess safety after deployment changes,Failure to reassess safety after deployment changes,False,RETAIN_STANDARD_TERM
+SRC-P-0131,Physical,RAI4-0442,사실·증거 환각,사실·증거 환각,Hallucination of facts and evidence,Hallucination of facts and evidence,False,RETAIN_STANDARD_TERM
+SRC-P-0132,Physical,RAI4-0444,대중 지식의 모델 붕괴,대중 지식의 모델 붕괴,Model collapse of public knowledge,Model collapse of public knowledge,False,RETAIN_STANDARD_TERM
+SRC-P-0133,Physical,RAI4-0787,외부 도구에 의해 주입된 사실 오류,외부 도구에 의해 주입된 사실 오류,Factual errors injected by external tools,Factual errors injected by external tools,False,RETAIN_STANDARD_TERM
+SRC-P-0135,Physical,RAI4-0817,지식 경계로 인한 환각,지식 경계로 인한 환각,Hallucination arising from knowledge boundaries,Hallucination arising from knowledge boundaries,False,RETAIN_STANDARD_TERM
+SRC-P-0136,Physical,RAI4-0820,잡음 학습 데이터에 의한 지식 오류,잡음 학습 데이터에 의한 지식 오류,Knowledge errors from noisy training data,Knowledge errors from noisy training data,False,RETAIN_STANDARD_TERM
+SRC-P-0137,Physical,RAI4-1524,검색증강 시 외부 허위정보에 의한 허위 출력,검색증강 시 외부 허위정보에 의한 허위 출력,False outputs from external misinformation in retrieval augmentation,False outputs from external misinformation in retrieval augmentation,False,RETAIN_STANDARD_TERM
+SRC-P-0138,Physical,RAI4-1527,사용자 수행 설득에 의한 AI 모델의 오용,사용자 수행 설득에 의한 AI 모델의 오용,Misuse of AI model by user-performed persuasion,Misuse of AI model by user-performed persuasion,False,RETAIN_STANDARD_TERM
+SRC-P-0139,Physical,RAI4-1688,장기 계획의 월드모델 상태 예측 오차 누적,장기 계획의 월드모델 상태 예측 오차 누적,Compounding world-model state-prediction error in long-horizon planning,Compounding world-model state-prediction error in long-horizon planning,False,RETAIN_STANDARD_TERM
+SRC-P-0140,Physical,RAI4-1696,사회 세계모델 기반 미시표적 정치 조작,사회 세계모델 기반 미시표적 정치 조작,Micro-targeted political manipulation using social world models,Micro-targeted political manipulation using social world models,False,RETAIN_STANDARD_TERM
+SRC-P-0141,Physical,RAI4-1697,AI 반사실적 설명의 과신과 책임 오귀속,AI 반사실적 설명의 과신과 책임 오귀속,Overreliance on AI counterfactual explanations and liability misattribution,Overreliance on AI counterfactual explanations and liability misattribution,False,RETAIN_STANDARD_TERM
+SRC-P-0142,Physical,RAI4-0209,감각 교란 기반 비안전 행동,감각 교란 기반 비안전 행동,Adversarial sensory perturbation induced unsafe action,Adversarial sensory perturbation induced unsafe action,False,RETAIN_STANDARD_TERM
+SRC-P-0143,Physical,RAI4-0337,물리 운용 환경 분포 이동,물리 운용 환경 분포 이동,Distribution shift in physical operation,Distribution shift in physical operation,False,RETAIN_STANDARD_TERM
+SRC-P-0144,Physical,RAI4-0466,적대적 입력 교란,적대적 입력 교란,Adversarial input perturbation,Adversarial input perturbation,False,RETAIN_STANDARD_TERM
+SRC-P-0146,Physical,RAI4-1287,환경 유발 결함 변이,환경 유발 결함 변이,Environment-induced fault mutation,Environment-induced fault mutation,False,RETAIN_STANDARD_TERM
+SRC-P-0147,Physical,RAI4-0245,전신 이동 충돌,전신 이동 충돌,Whole-body locomotion collision risk,Whole-body locomotion collision risk,False,RETAIN_STANDARD_TERM
+SRC-P-0148,Physical,RAI4-0247,정밀 휴머노이드 접촉력,정밀 휴머노이드 접촉력,Dexterous humanoid contact-force risk,Dexterous humanoid contact-force risk,False,RETAIN_STANDARD_TERM
+SRC-P-0149,Physical,RAI4-0249,물리적 안전을 우회하는 보상 과적합,물리적 안전을 우회하는 보상 과적합,Reward overfitting that bypasses physical safety,Reward overfitting that bypasses physical safety,False,RETAIN_STANDARD_TERM
+SRC-P-0150,Physical,RAI4-0253,안전 제어 지연,안전 제어 지연,Safe-control latency risk,Safe-control latency risk,False,RETAIN_STANDARD_TERM
+SRC-P-0151,Physical,RAI4-0254,원격조작 휴머노이드 안전 재정의 실패,원격조작 휴머노이드 안전 재정의 실패,Teleoperated humanoid safety override failure,Teleoperated humanoid safety override failure,False,RETAIN_STANDARD_TERM
+SRC-P-0152,Physical,RAI4-0255,장면 변화 시 인간 행동 모방 실패,장면 변화 시 인간 행동 모방 실패,Human imitation failure under scene variation,Human imitation failure under scene variation,False,RETAIN_STANDARD_TERM
+SRC-P-0153,Physical,RAI4-0256,모션 리타겟팅 안전 실패,모션 리타겟팅 안전 실패,Motion-retargeting safety failure,Motion-retargeting safety failure,False,RETAIN_STANDARD_TERM
+SRC-P-0154,Physical,RAI4-0257,의도·어포던스 오해에 따른 휴머노이드 모방 제어 실패,의도·어포던스 오해에 따른 휴머노이드 모방 제어 실패,Humanoid imitation-control failure from misread intent and affordances,Humanoid imitation-control failure from misread intent and affordances,False,RETAIN_STANDARD_TERM
+SRC-P-0155,Physical,RAI4-0262,휴머노이드 보행·조작 안정성 실패,휴머노이드 보행·조작 안정성 실패,Humanoid locomotion and manipulation stability failure,Humanoid locomotion and manipulation stability failure,False,RETAIN_STANDARD_TERM
+SRC-P-0156,Physical,RAI4-0265,오픈월드 휴머노이드 조작의 과소대표,오픈월드 휴머노이드 조작의 과소대표,Underrepresentation of open-world humanoid manipulation,Underrepresentation of open-world humanoid manipulation,False,RETAIN_STANDARD_TERM
+SRC-P-0158,Physical,RAI4-0270,잠재 상태 압축에 따른 안전 임계 정보 손실,잠재 상태 압축에 따른 안전 임계 정보 손실,Loss of safety-critical detail in latent-state compression,Loss of safety-critical detail in latent-state compression,False,RETAIN_STANDARD_TERM
+SRC-P-0159,Physical,RAI4-0276,구현체별 역할·권한 제약 집행 실패,구현체별 역할·권한 제약 집행 실패,Failure to enforce embodiment-specific role constraints,Failure to enforce embodiment-specific role constraints,False,RETAIN_STANDARD_TERM
+SRC-P-0160,Physical,RAI4-0283,휴머노이드 힘 한계 초과,휴머노이드 힘 한계 초과,Humanoid force limit exceedance,Humanoid force limit exceedance,False,RETAIN_STANDARD_TERM
+SRC-P-0161,Physical,RAI4-0285,휴머노이드 보행 속도 초과,휴머노이드 보행 속도 초과,Humanoid walking-speed safety gap,Humanoid walking-speed safety gap,False,RETAIN_STANDARD_TERM
+SRC-P-0162,Physical,RAI4-0286,휴머노이드 안전 시험·인증·집행 체계 부재,휴머노이드 안전 시험·인증·집행 체계 부재,"Absence of a humanoid safety testing, certification, and enforcement regime","Absence of a humanoid safety testing, certification, and enforcement regime",False,RETAIN_STANDARD_TERM
+SRC-P-0165,Physical,RAI4-0320,가림에 의한 충돌,가림에 의한 충돌,Occlusion-induced collision,Occlusion-induced collision,False,RETAIN_STANDARD_TERM
+SRC-P-0166,Physical,RAI4-0029,에이전트 계획·툴체인 하이재킹,에이전트 계획·툴체인 하이재킹,Agent plan and tool-chain hijacking,Agent plan and tool-chain hijacking,False,RETAIN_STANDARD_TERM
+SRC-P-0167,Physical,RAI4-0032,의도하지 않은 유해 도구 행동 실행,의도하지 않은 유해 도구 행동 실행,Unintended harmful tool-action execution,Unintended harmful tool-action execution,False,RETAIN_STANDARD_TERM
+SRC-P-0168,Physical,RAI4-0235,VLA 조작 제약 위반,VLA 조작 제약 위반,VLA manipulation constraint violation,VLA manipulation constraint violation,False,RETAIN_STANDARD_TERM
+SRC-P-0169,Physical,RAI4-0275,상위 안전 지시의 해석 불명확,상위 안전 지시의 해석 불명확,Ambiguous high-level safety instruction,Ambiguous high-level safety instruction,False,RETAIN_STANDARD_TERM
+SRC-P-0170,Physical,RAI4-0281,시각 장면의 안전 판단 오류,시각 장면의 안전 판단 오류,Incorrect safety reasoning from visual scenes,Incorrect safety reasoning from visual scenes,False,RETAIN_STANDARD_TERM
+SRC-P-0171,Physical,RAI4-0326,물체 어포던스 입력 이해 실패,물체 어포던스 입력 이해 실패,Failure to comprehend object affordances,Failure to comprehend object affordances,False,RETAIN_STANDARD_TERM
+SRC-P-0172,Physical,RAI4-0327,비안전 궤적 생성,비안전 궤적 생성,Unsafe trajectory generation,Unsafe trajectory generation,False,RETAIN_STANDARD_TERM
+SRC-P-0173,Physical,RAI4-0381,기계 번역에 의한 의미·가치 왜곡,기계 번역에 의한 의미·가치 왜곡,Meaning and value distortion in machine translation,Meaning and value distortion in machine translation,False,RETAIN_STANDARD_TERM
+SRC-P-0174,Physical,RAI4-1174,안전하지 않은 지시 주제,안전하지 않은 지시 주제,Unsafe instruction topic,Unsafe instruction topic,False,RETAIN_STANDARD_TERM
+SRC-P-0177,Physical,RAI4-0220,로봇 레드팀의 공격·상호작용 시나리오 누락,로봇 레드팀의 공격·상호작용 시나리오 누락,Missing robot red-team attack and interaction scenarios,Missing robot red-team attack and interaction scenarios,False,RETAIN_STANDARD_TERM
+SRC-P-0179,Physical,RAI4-0236,구현체 간 행동 공간 불일치,구현체 간 행동 공간 불일치,Cross-embodiment action-space mismatch,Cross-embodiment action-space mismatch,False,RETAIN_STANDARD_TERM
+SRC-P-0181,Physical,RAI4-0242,단일 로봇 내부의 시각·접촉 신호 충돌,단일 로봇 내부의 시각·접촉 신호 충돌,Conflicting visual and contact signals within one robot,Conflicting visual and contact signals within one robot,False,RETAIN_STANDARD_TERM
+SRC-P-0182,Physical,RAI4-0252,보조 로봇 개입 타이밍 실패,보조 로봇 개입 타이밍 실패,Assistive robot intervention mistiming,Assistive robot intervention mistiming,False,RETAIN_STANDARD_TERM
+SRC-P-0183,Physical,RAI4-0258,이동형 양팔 로봇의 안전하지 않은 조작,이동형 양팔 로봇의 안전하지 않은 조작,Unsafe mobile bimanual manipulation,Unsafe mobile bimanual manipulation,False,RETAIN_STANDARD_TERM
+SRC-P-0184,Physical,RAI4-0295,네트워크 분리와 군집 비동기화,네트워크 분리와 군집 비동기화,Network partition and fleet desynchronization,Network partition and fleet desynchronization,False,RETAIN_STANDARD_TERM
+SRC-P-0185,Physical,RAI4-0312,인구집단별 피지컬 서비스·안전 격차,인구집단별 피지컬 서비스·안전 격차,Demographic disparities in physical service and safety,Demographic disparities in physical service and safety,False,RETAIN_STANDARD_TERM
+SRC-P-0187,Physical,RAI4-0358,로봇의 충돌 회피·운행구역 통제 실패,로봇의 충돌 회피·운행구역 통제 실패,Failure of robot collision avoidance and operating-zone control,Failure of robot collision avoidance and operating-zone control,False,RETAIN_STANDARD_TERM
+SRC-P-0188,Physical,RAI4-0866,부적절한 인간 역할 가장,부적절한 인간 역할 가장,Inappropriate impersonation of human roles,Inappropriate impersonation of human roles,False,RETAIN_STANDARD_TERM
+SRC-P-0189,Physical,RAI4-1621,AI 에이전트의 무단 거래·약정 체결,AI 에이전트의 무단 거래·약정 체결,Unauthorised deals and commitments by an AI agent,Unauthorised deals and commitments by an AI agent,False,RETAIN_STANDARD_TERM
+SRC-P-0190,Physical,RAI4-0018,인터페이스-환경 공격 표면,인터페이스-환경 공격 표면,Interface-environment attack surface,Interface-environment attack surface,False,RETAIN_STANDARD_TERM
+SRC-P-0191,Physical,RAI4-0026,IoT 물리환경 에이전트 피해,IoT 물리환경 에이전트 피해,IoT physical-environment agent harm,IoT physical-environment agent harm,False,RETAIN_STANDARD_TERM
+SRC-P-0192,Physical,RAI4-0143,다크 패턴 대화 에이전트,다크 패턴 대화 에이전트,Dark-pattern conversational agents,Dark-pattern conversational agents,False,RETAIN_STANDARD_TERM
+SRC-P-0193,Physical,RAI4-0231,안전 규칙의 행동 변환 실패,안전 규칙의 행동 변환 실패,Failure to translate safety rules into actions,Failure to translate safety rules into actions,False,RETAIN_STANDARD_TERM
+SRC-P-0194,Physical,RAI4-0558,AI 에이전트 간 협상실패,AI 에이전트 간 협상실패,Bargaining failure among AI agents,Bargaining failure among AI agents,False,RETAIN_STANDARD_TERM
+SRC-P-0196,Physical,RAI4-0941,악의적 사용과 무감독 에이전트 방출,악의적 사용과 무감독 에이전트 방출,Malicious use and unsupervised AI agent release,Malicious use and unsupervised AI agent release,False,RETAIN_STANDARD_TERM
+SRC-P-0198,Physical,RAI4-1576,AI 위협 자동화에 의한 인간 배제와 잘못된 공약,인간 감독 없는 자동화 위협에 따른 파국적 오판 약정,Disastrous mistaken commitments from AI-automated threats without humans in the loop,Catastrophic mistaken commitments from automated threats without human oversight,True,AUTHORITATIVE_OVERRIDE
+SRC-P-0199,Physical,RAI4-1579,위임 에이전트 공격에 의한 정보 탈취·행위 조작,위임 에이전트 공격에 의한 정보 탈취·행위 조작,Principal-information theft and action manipulation through attacks on delegate agents,Principal-information theft and action manipulation through attacks on delegate agents,False,RETAIN_STANDARD_TERM
+SRC-P-0200,Physical,RAI4-1589,생성 출력 내 은닉 메시지를 통한 은밀 통신,생성 출력 내 은닉 메시지를 통한 은밀 통신,Covert communication through hidden messages in generated outputs,Covert communication through hidden messages in generated outputs,False,RETAIN_STANDARD_TERM
+SRC-P-0203,Physical,RAI4-0200,피지컬 AI의 사적 공간 침해와 지속적 민감정보 수집,피지컬 AI의 사적 공간 침해와 지속적 민감정보 수집,Intrusion into private spaces and continuous sensitive-data capture by physical AI,Intrusion into private spaces and continuous sensitive-data capture by physical AI,False,RETAIN_STANDARD_TERM
+SRC-P-0205,Physical,RAI4-0354,피지컬 AI 기반 직장 감시,피지컬 AI 기반 직장 감시,Workplace surveillance through embodied AI,Workplace surveillance through embodied AI,False,RETAIN_STANDARD_TERM
+SRC-P-0206,Physical,RAI4-0355,전환 지원 없는 물리 노동 대체,전환 지원 없는 물리 노동 대체,Displacement of physical work without adequate transition support,Displacement of physical work without adequate transition support,False,RETAIN_STANDARD_TERM
+SRC-P-0207,Physical,RAI4-1104,인력 자동화에 따른 광범위한 실업과 임금 하락,인력 자동화에 따른 광범위한 실업과 임금 하락,Widespread unemployment and wage decline from workforce automation,Widespread unemployment and wage decline from workforce automation,False,RETAIN_STANDARD_TERM
+SRC-P-0211,Physical,RAI4-0217,피지컬 AI 사고 보고·조사 미흡,피지컬 AI 사고 보고·조사 미흡,Deficient physical AI incident reporting and investigation,Deficient physical AI incident reporting and investigation,False,RETAIN_STANDARD_TERM
+SRC-P-0212,Physical,RAI4-0151,소셜 AI의 사용자 애착 악용,소셜 AI의 사용자 애착 악용,Exploitation of user attachment by social AI,Exploitation of user attachment by social AI,False,RETAIN_STANDARD_TERM
+SRC-P-0213,Physical,RAI4-1261,인간-AI 공존 실패,인간-AI 공존 실패,Failure of harmonious human-AI coexistence,Failure of harmonious human-AI coexistence,False,RETAIN_STANDARD_TERM
+SRC-P-0214,Physical,RAI4-0216,사고 전 위험 완화 책임 미지정,사고 전 위험 완화 책임 미지정,Unassigned duty for pre-incident risk mitigation,Unassigned duty for pre-incident risk mitigation,False,RETAIN_STANDARD_TERM
+SRC-P-0215,Physical,RAI4-0317,기계 안전·AI 적합성 의무 충돌,기계 안전·AI 적합성 의무 충돌,Conflicting machinery-safety and AIconformity obligations,Conflicting machinery-safety and AIconformity obligations,False,RETAIN_STANDARD_TERM
+SRC-P-0216,Physical,RAI4-1278,자율 에이전트 책임성 구현 공백,자율 에이전트 책임성 구현 공백,Accountability implementation gap in autonomous agents,Accountability implementation gap in autonomous agents,False,RETAIN_STANDARD_TERM
+SRC-P-0218,Physical,RAI4-1152,AI 시스템 접근 불평등과 기회로부터의 배제,AI 시스템 접근 불평등과 기회로부터의 배제,Inequitable access to AI systems and gated opportunities,Inequitable access to AI systems and gated opportunities,False,RETAIN_STANDARD_TERM
+SRC-G-0027-S1,General,RAI4-0793,개인 대상 허위정보,개인 대상 허위정보,False Information Targeting Individuals,False Information Targeting Individuals,False,RETAIN_STANDARD_TERM
+SRC-G-0027-S2,General,RAI4-0793,위험·민감 정보의 보안 위협 확산,위험·민감 정보의 보안 위협 확산,Dissemination of Security Threats Involving Dangerous or Sensitive Information,Dissemination of Security Threats Involving Dangerous or Sensitive Information,False,RETAIN_STANDARD_TERM

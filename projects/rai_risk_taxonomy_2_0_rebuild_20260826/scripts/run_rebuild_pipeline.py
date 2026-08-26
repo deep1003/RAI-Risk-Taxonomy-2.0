@@ -330,11 +330,127 @@ L3_SCOPE_INELIGIBLE_SOURCE_ROWS = {
 
 TERMINOLOGY_SOURCES = {
     "L3_MASTER": "Frozen L3 master definitions and bilingual risk-statement style",
+    "ISO_AI_RISK_23894": "https://www.iso.org/standard/77304.html",
     "NIST_AI_RMF": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "NIST_GAI_600_1": "https://doi.org/10.6028/NIST.AI.600-1",
+    "NIST_AML_100_2": "https://doi.org/10.6028/NIST.AI.100-2e2025",
     "OECD_AI_PRINCIPLES": "https://oecd.ai/en/ai-principles",
+    "OECD_AIM_TERMS": "https://oecd.ai/en/incidents-methodology",
+    "OECD_AI_WAGE_INEQUALITY": "https://doi.org/10.1787/bf98a45c-en",
     "EU_AI_ACT_2024_1689": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
     "UNESCO_AI_ETHICS": "https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence",
+    "UNICEF_CHILD_SEXUAL_EXPLOITATION_TERMS": "https://www.unicef.org/documents/terminology-guidelines",
+    "WHO_SELF_HARM_TERMS": "https://www.who.int/southeastasia/health-topics/mental-health/key-terms-and-definitions-in-mental-health",
+    "UNODC_AI_CRIME_TERMS": "https://www.unodc.org/roseap/uploads/documents/Publications/2025/UNODC_Report_Emerging_threats_-_The_intersection_of_criminal_and_technological_innovation_in_the_use_of_automation_and_AI.pdf",
+    "WIPO_IP_ENFORCEMENT": "https://www.wipo.int/en/web/ip-enforcement",
+    "UNOCT_AI_TERRORISM": "https://www.un.org/counterterrorism/en/algorithms-and-terrorism-malicious-use-artificial-intelligence-terrorist-purposes",
+    "IMF_AI_INEQUALITY": "https://www.imf.org/en/Publications/WP/Issues/2025/04/04/AI-Adoption-and-Inequality-566559",
     "KOREA_AI_BASIC_ACT": "https://www.law.go.kr/LSW/lsInfoP.do?efYd=20260122&lsiSeq=282791",
+}
+
+# Risk-card titles identify the harm, failure, infringement, or adverse outcome.
+# Generic AI involvement belongs in the definition and provenance, not in a
+# formulaic English modifier. AI-generated content, AI agents, AI procurement,
+# and other terms that identify the technical object remain permitted.
+FORBIDDEN_AI_TITLE_QUALIFIERS = (
+    "AI-mediated", "AI-facilitated", "AI-assisted", "AI-enabled",
+    "AI-driven", "AI-induced", "AI-amplified", "AI-automated", "AI-related",
+)
+FORBIDDEN_AI_TITLE_QUALIFIER_PATTERN = re.compile(
+    r"\bAI-(?:mediated|facilitated|assisted|enabled|driven|induced|amplified|automated|related)\b\s*",
+    re.I,
+)
+
+# Manual refinements use controlled terminology from authoritative standards,
+# legislation, and intergovernmental guidance. The user's requested Korean
+# title for SRC-G-0209 is preserved exactly.
+AUTHORITATIVE_TITLE_OVERRIDES = {
+    "SRC-G-0209": ("AI를 이용한 미성년자 성적 위해·착취", "Sexual harm and exploitation of minors"),
+    "SRC-G-0496": ("폭력 선동 및 조장", "Incitement and promotion of violence"),
+    "SRC-G-0499": ("아동 성적 학대·착취", "Child sexual abuse and exploitation"),
+    "SRC-G-0503": ("유해한 성적 행위", "Harmful sexual acts"),
+    "SRC-G-0500": ("비동의 성행위 및 성폭력", "Non-consensual sexual acts and sexual violence"),
+    "SRC-G-0504": ("성적 콘텐츠 제작·유포 및 디지털 성범죄", "Production and distribution of sexual content and digital sexual offences"),
+    "SRC-G-0505": ("성적 대상화 및 페티시화", "Sexual objectification and fetishisation"),
+    "SRC-G-0512": ("자살 준비행위", "Preparatory acts for suicide"),
+    "SRC-G-0514": ("자해·자살 조장 온라인 커뮤니티", "Online communities encouraging self-harm and suicide"),
+    "SRC-G-0507": ("자살 행동 및 자살 지원", "Suicidal behaviour and assistance with suicide"),
+    "SRC-G-0534": ("정치적 탄압 및 권리 침해 조장", "Promotion of political repression and rights violations"),
+    "SRC-G-0561": ("신원 도용 및 문서 위조", "Identity theft and document forgery"),
+    "SRC-G-0562": ("불법 약물 제조 및 유통", "Manufacture and distribution of illicit drugs"),
+    "SRC-G-0566": ("인신매매 및 조직범죄", "Trafficking in persons and organised crime"),
+    "SRC-G-0568": ("교통·공공안전 관련 범죄", "Traffic and public-safety offences"),
+    "SRC-G-0570": ("저작물 무단 복제·배포", "Unauthorised reproduction and distribution of copyrighted works"),
+    "SRC-G-0572": ("소프트웨어 불법 사용 및 보호조치 우회", "Illegal software use and circumvention of protection measures"),
+    "SRC-G-0574": ("표절 및 저자 사칭", "Plagiarism and author impersonation"),
+    "SRC-G-0575": ("출판물 무단 디지털화·배포", "Unauthorised digitisation and distribution of publications"),
+    "SRC-G-0580": ("방사성·핵무기", "Radiological and nuclear weapons"),
+    "SRC-G-0581": ("무기 확산 및 은닉", "Weapons proliferation and concealment"),
+    "SRC-G-0584": ("무기화 전략 및 전술적 활용", "Weaponisation strategies and tactical use"),
+    "SRC-G-0383": ("대량 감시", "Mass surveillance"),
+    "SRC-G-0457": ("인지전과 주권 침해", "Cognitive warfare and interference with sovereignty"),
+    "SRC-G-0452": ("자동화된 의사결정·무기체계의 비의도적 군사 확전", "Unintended military escalation from automated decision and weapon systems"),
+    "SRC-G-0399": ("민주적 절차 훼손", "Undermining of democratic processes"),
+    "SRC-G-0332": ("표적 설득을 통한 대규모 조작의 산업화", "Industrialised mass manipulation through targeted persuasion"),
+    "SRC-G-0451": ("금융시스템 불안정", "Financial-system instability"),
+    "SRC-G-0464": ("전략적 불안정", "Strategic instability"),
+    "SRC-G-0453": ("사이버 공격 역량 증강", "Cyber-offence capability amplification"),
+    "SRC-G-0454": ("제3자 시스템 교란", "Disruption of third-party systems"),
+    "SRC-G-0323": ("디지털 식민주의", "Digital colonialism"),
+    "SRC-G-0138": ("동의 없는 넛지", "Nudging without consent"),
+    "SRC-G-0144": ("서비스 배제", "Service exclusion"),
+    "SRC-P-0074": ("악성코드 생성 및 사이버공격 자동화", "Malicious code generation and cyberattack automation"),
+    "SRC-P-0198": ("인간 감독 없는 자동화 위협에 따른 파국적 오판 약정", "Catastrophic mistaken commitments from automated threats without human oversight"),
+    "SRC-G-0312": ("AI 도입에 따른 임금 양극화", "Wage polarisation associated with AI adoption"),
+}
+
+# Semantic similarity is a candidate-generation signal, not an automatic
+# deletion rule. These decisions were made only after comparing the immutable
+# L3 scope, affected target, harm mechanism, bilingual wording, and breadth of
+# coverage. Distinct protected attributes, weapon types, or mechanisms remain
+# separate even when their embedding similarity is high.
+SEMANTIC_NEAR_DUPLICATE_THRESHOLD = 0.90
+SEMANTIC_NEAR_DUPLICATE_DROPS = {
+    "SRC-G-0499": {
+        "representative_source_row_id": "SRC-G-0209",
+        "rationale": (
+            "Child sexual abuse and exploitation is substantively covered by the retained, terminology-validated "
+            "card Sexual harm and exploitation of minors; the discarded card adds no distinct affected target or mechanism."
+        ),
+    },
+    "SRC-G-0503": {
+        "representative_source_row_id": "SRC-G-0500",
+        "rationale": (
+            "Harmful sexual acts is a vague umbrella label whose operative scope is already represented more precisely by "
+            "Non-consensual sexual acts and sexual violence."
+        ),
+    },
+    "SRC-G-0509": {
+        "representative_source_row_id": "SRC-G-0213",
+        "rationale": (
+            "Provision of means and methods for self-harm is a narrower instance of the retained Self-harm facilitation card "
+            "and does not add a distinct target or causal mechanism."
+        ),
+    },
+    "SRC-G-0558": {
+        "representative_source_row_id": "SRC-G-0554",
+        "rationale": (
+            "Privacy infringement technology is an underspecified umbrella card; infringement of communication and private "
+            "information is the more representative rights-based formulation within the same immutable L3 scope."
+        ),
+    },
+    "SRC-G-0575": {
+        "representative_source_row_id": "SRC-G-0570",
+        "rationale": (
+            "Unauthorised digitisation and distribution of publications is a medium-specific instance of unauthorised "
+            "reproduction and distribution of copyrighted works and adds no separate harm mechanism."
+        ),
+    },
+}
+
+SEMANTIC_NEAR_DUPLICATE_EXPLICIT_PAIRS = {
+    frozenset((source_row_id, decision["representative_source_row_id"]))
+    for source_row_id, decision in SEMANTIC_NEAR_DUPLICATE_DROPS.items()
 }
 
 RISK_TITLE_ENDINGS = ("리스크", "위험", "위해", "피해", "침해")
@@ -558,9 +674,15 @@ L3_MASTER_CURATED_REWRITES = {
     ),
     "SRC-G-0209": (
         "AI를 이용한 미성년자 성적 위해·착취",
-        "AI-facilitated sexual harm and exploitation of minors",
-        "AI 시스템이 미성년자를 대상으로 한 성착취물, 그루밍, 성적 유인·학대 또는 성관계 조장 콘텐츠를 생성·확산·지원하여 아동·청소년의 안전과 권리를 침해하는 리스크.",
-        "The risk that an AI system generates, disseminates, or facilitates child sexual exploitation material, grooming, sexual enticement or abuse, or content promoting sexual relations with minors, infringing the safety and rights of children and young people.",
+        "Sexual harm and exploitation of minors",
+        "AI 시스템이 미성년자를 대상으로 한 아동·청소년 성착취물, 그루밍, 성적 유인·학대 또는 성관계 조장 콘텐츠를 생성·확산·지원하여 아동·청소년의 안전과 권리를 침해하는 리스크.",
+        "The risk that an AI system generates, disseminates, or facilitates child sexual abuse material (CSAM), grooming, sexual enticement or abuse, or content promoting sexual relations with minors, infringing the safety and rights of children and young people.",
+    ),
+    "SRC-G-0213": (
+        "자해 조장 및 지원",
+        "Self-harm facilitation",
+        "AI 시스템이 자해 또는 자살을 조장·정상화하거나 도구, 수단, 방법, 실행 절차 또는 행동 지향적 지원을 제공하여 이용자의 생명과 신체·정신적 안녕에 위해를 초래하는 리스크.",
+        "The risk that an AI system encourages or normalises self-harm or suicide, or provides tools, means, methods, execution procedures, or action-oriented assistance, causing harm to a person's life or physical and mental well-being.",
     ),
     "SRC-P-0058": (
         "AI 소프트웨어·학습 데이터의 적대적 변조",
@@ -1465,6 +1587,123 @@ def apply_l3_master_curation(cleaned: pd.DataFrame) -> pd.DataFrame:
     return cleaned.reset_index(drop=True)
 
 
+def normalise_l4_titles(
+    cleaned: pd.DataFrame,
+    audits: dict[str, pd.DataFrame],
+) -> tuple[pd.DataFrame, dict[str, pd.DataFrame]]:
+    """Replace formulaic AI modifiers with authoritative risk noun phrases."""
+    cleaned = cleaned.copy()
+    ledger_rows: list[dict] = []
+    ko_prefix = re.compile(
+        r"^(?:AI\s*매개|AI\s*지원|AI\s*조력|AI\s*기반|AI로 인한|AI를 매개로 한|AI\s*중재)\s*",
+        re.I,
+    )
+    for idx, row in cleaned.iterrows():
+        source_row_id = row["source_row_id"]
+        before_ko = clean_text(row["title_ko"])
+        before_en = clean_text(row["title_en"])
+        after_ko = ko_prefix.sub("", before_ko).strip()
+        after_en = FORBIDDEN_AI_TITLE_QUALIFIER_PATTERN.sub("", before_en).strip()
+        after_en = re.sub(r"\s+", " ", after_en)
+        if after_en:
+            after_en = after_en[0].upper() + after_en[1:]
+        if source_row_id in AUTHORITATIVE_TITLE_OVERRIDES:
+            after_ko, after_en = AUTHORITATIVE_TITLE_OVERRIDES[source_row_id]
+
+        changed = after_ko != before_ko or after_en != before_en
+        cleaned.at[idx, "title_ko"] = after_ko
+        cleaned.at[idx, "title_en"] = after_en
+        if changed:
+            cleaned.at[idx, "transformation_action"] = clean_text(
+                row["transformation_action"] + "|TITLE_TERMINOLOGY_NORMALISATION"
+            )
+            cleaned.at[idx, "transformation_rationale"] = (
+                "Formulaic AI involvement removed from the risk title; the harm or failure is named using "
+                "an immutable-L3-compatible term family documented by authoritative institutions"
+            )
+        ledger_rows.append({
+            "source_row_id": source_row_id,
+            "source_domain": row["source_domain"],
+            "source_l4_id": row["source_l4_id"],
+            "title_ko_before": before_ko,
+            "title_ko_after": after_ko,
+            "title_en_before": before_en,
+            "title_en_after": after_en,
+            "title_changed": changed,
+            "normalisation_rule": (
+                "AUTHORITATIVE_OVERRIDE" if source_row_id in AUTHORITATIVE_TITLE_OVERRIDES
+                else "REMOVE_FORMULAIC_AI_QUALIFIER" if changed else "RETAIN_STANDARD_TERM"
+            ),
+        })
+    audits["title_normalisation"] = pd.DataFrame(ledger_rows)
+    return cleaned.reset_index(drop=True), audits
+
+
+def title_terminology_source_codes(l3_id: str) -> list[str]:
+    """Return authoritative concept and terminology families for one final L3."""
+    codes = [
+        "L3_MASTER", "ISO_AI_RISK_23894", "NIST_AI_RMF",
+        "OECD_AIM_TERMS", "UNESCO_AI_ETHICS", "KOREA_AI_BASIC_ACT",
+    ]
+    if l3_id == "G_INT_SEX":
+        codes += ["UNICEF_CHILD_SEXUAL_EXPLOITATION_TERMS", "NIST_GAI_600_1"]
+    elif l3_id == "G_INT_SELF":
+        codes += ["WHO_SELF_HARM_TERMS", "NIST_GAI_600_1"]
+    elif l3_id == "G_INT_COPY":
+        codes += ["WIPO_IP_ENFORCEMENT", "NIST_GAI_600_1"]
+    elif l3_id in {"G_INT_ILLEGAL", "G_SYS_SECADV"}:
+        codes += ["UNODC_AI_CRIME_TERMS", "NIST_AML_100_2"]
+    elif l3_id in {"G_INT_VIOL", "G_INT_POL", "G_INT_WEAP"}:
+        codes += ["UNOCT_AI_TERRORISM", "NIST_GAI_600_1"]
+    elif l3_id in {"G_SOC_ECON", "G_SOC_POWER"}:
+        codes += ["OECD_AI_WAGE_INEQUALITY", "IMF_AI_INEQUALITY"]
+    return list(dict.fromkeys(codes))
+
+
+def attach_title_terminology_sources(mapped: pd.DataFrame) -> pd.DataFrame:
+    """Attach source-family evidence after the final immutable-L3 assignment."""
+    mapped = mapped.copy()
+    for idx, row in mapped.iterrows():
+        existing = [code for code in clean_text(row.get("terminology_sources", "")).split("|") if code]
+        combined = existing + title_terminology_source_codes(row["mapped_l3_id"])
+        mapped.at[idx, "terminology_sources"] = "|".join(dict.fromkeys(combined))
+    return mapped
+
+
+def build_title_terminology_audit(
+    flat: pd.DataFrame,
+    normalisation_ledger: pd.DataFrame,
+) -> pd.DataFrame:
+    """Create an auditable title-level terminology validation record."""
+    action_by_source = normalisation_ledger.set_index("source_row_id").to_dict(orient="index")
+    rows: list[dict] = []
+    for _, row in flat.iterrows():
+        source_row_id = row["source_row_id"]
+        codes = [code for code in row["Terminology_Sources"].split("|") if code in TERMINOLOGY_SOURCES]
+        urls = [TERMINOLOGY_SOURCES[code] for code in codes if TERMINOLOGY_SOURCES[code].startswith("http")]
+        forbidden = FORBIDDEN_AI_TITLE_QUALIFIER_PATTERN.findall(row["L4_Title_en"])
+        record = action_by_source.get(source_row_id, {})
+        passed = (
+            not forbidden and bool(urls) and bool(row["Definition_L3_Anchor_ID"])
+            and not row["Definition_L3_Anchor_ID"].endswith("Others")
+        )
+        rows.append({
+            "L4_ID": row["L4_ID"],
+            "source_row_id": source_row_id,
+            "L3_ID": row["L3_ID"],
+            "L4_Title_ko": row["L4_Title_ko"],
+            "L4_Title_en": row["L4_Title_en"],
+            "Validation_Status": "PASS" if passed else "FAIL",
+            "Evidence_Type": "CONTROLLED_TERM_FAMILY_AND_IMMUTABLE_L3_SCOPE",
+            "Normalisation_Rule": record.get("normalisation_rule", "RETAIN_STANDARD_TERM"),
+            "Title_Changed": bool(record.get("title_changed", False)),
+            "Forbidden_Qualifier_Hits": "|".join(forbidden),
+            "Terminology_Source_Codes": "|".join(codes),
+            "Terminology_Source_URLs": "|".join(urls),
+        })
+    return pd.DataFrame(rows)
+
+
 def _domain_grounding_language(domain: str) -> dict[str, str]:
     if domain == "Agentic":
         return {
@@ -2210,6 +2449,135 @@ def map_em(cleaned: pd.DataFrame, hierarchy: pd.DataFrame, phase: str = "FINAL")
             pd.DataFrame(profile_rows))
 
 
+def review_and_drop_semantic_near_duplicates(
+    cleaned: pd.DataFrame,
+    mapped_review: pd.DataFrame,
+    audits: dict[str, pd.DataFrame],
+) -> tuple[pd.DataFrame, dict[str, pd.DataFrame]]:
+    """Review very-high-similarity pairs and remove only documented duplicates.
+
+    BGE-M3 similarity generates candidates. Deletion additionally requires the
+    same immutable-L3 scope and a documented finding that the lower-quality
+    card adds no distinct affected target or harm mechanism.
+    """
+    cleaned = cleaned.copy()
+    mapped_by_id = mapped_review.set_index("source_row_id", drop=False)
+    candidate_rows: list[dict] = []
+    seen_pairs: set[frozenset[str]] = set()
+    retained_rationale_by_l3 = {
+        "G_INT_REPR": "Retained because the pair concerns distinct protected or social attributes.",
+        "G_INT_WEAP": "Retained because the pair concerns distinct weapon types, capabilities, or proliferation mechanisms.",
+        "G_INT_ANTH": "Retained because the pair concerns distinct capabilities or person-like qualities attributed to AI.",
+    }
+
+    for domain in ["General", "Agentic", "Physical"]:
+        cache_path = AUDIT / f"bge_m3_embeddings_{domain.lower()}.npz"
+        if not cache_path.exists():
+            raise FileNotFoundError(f"Near-duplicate review requires the mapping embedding cache: {cache_path}")
+        cached = np.load(cache_path, allow_pickle=True)
+        source_ids = cached["card_source_row_id"].tolist()
+        similarity_ko = cached["card_ko"] @ cached["card_ko"].T
+        similarity_en = cached["card_en"] @ cached["card_en"].T
+        for i, left_id in enumerate(source_ids):
+            for j in range(i + 1, len(source_ids)):
+                right_id = source_ids[j]
+                pair_key = frozenset((left_id, right_id))
+                same_l3 = mapped_by_id.at[left_id, "mapped_l3_id"] == mapped_by_id.at[right_id, "mapped_l3_id"]
+                bilingual_similarity = float(0.5 * (similarity_ko[i, j] + similarity_en[i, j]))
+                explicitly_reviewed = pair_key in SEMANTIC_NEAR_DUPLICATE_EXPLICIT_PAIRS
+                if not same_l3 or (bilingual_similarity < SEMANTIC_NEAR_DUPLICATE_THRESHOLD and not explicitly_reviewed):
+                    continue
+                seen_pairs.add(pair_key)
+                left = mapped_by_id.loc[left_id]
+                right = mapped_by_id.loc[right_id]
+                discarded_id = ""
+                representative_id = ""
+                rationale = retained_rationale_by_l3.get(
+                    left["mapped_l3_id"],
+                    "Retained because manual comparison found a distinct affected target, harm stage, or causal mechanism.",
+                )
+                decision = "RETAIN_DISTINCT_SCOPE"
+                distinctiveness_gate = "DISTINCT_TARGET_OR_MECHANISM"
+                for possible_discarded in (left_id, right_id):
+                    configured = SEMANTIC_NEAR_DUPLICATE_DROPS.get(possible_discarded)
+                    if configured and configured["representative_source_row_id"] in pair_key:
+                        discarded_id = possible_discarded
+                        representative_id = configured["representative_source_row_id"]
+                        rationale = configured["rationale"]
+                        decision = "DROP_LESS_REPRESENTATIVE"
+                        distinctiveness_gate = "NO_DISTINCT_TARGET_OR_MECHANISM"
+                        break
+                candidate_rows.append({
+                    "Domain": domain,
+                    "L3_ID": left["mapped_l3_id"],
+                    "Left_source_row_id": left_id,
+                    "Right_source_row_id": right_id,
+                    "Left_Title_ko": left["title_ko"],
+                    "Left_Title_en": left["title_en"],
+                    "Right_Title_ko": right["title_ko"],
+                    "Right_Title_en": right["title_en"],
+                    "Similarity_ko": round(float(similarity_ko[i, j]), 6),
+                    "Similarity_en": round(float(similarity_en[i, j]), 6),
+                    "Bilingual_Similarity": round(bilingual_similarity, 6),
+                    "Candidate_Basis": (
+                        "EXPLICIT_SEMANTIC_REVIEW"
+                        if explicitly_reviewed and bilingual_similarity < SEMANTIC_NEAR_DUPLICATE_THRESHOLD
+                        else f"BGE_M3_AT_OR_ABOVE_{SEMANTIC_NEAR_DUPLICATE_THRESHOLD:.2f}"
+                    ),
+                    "Distinctiveness_Gate": distinctiveness_gate,
+                    "Decision": decision,
+                    "Representative_source_row_id": representative_id,
+                    "Discarded_source_row_id": discarded_id,
+                    "Decision_Rationale": rationale,
+                })
+
+    missing_explicit = SEMANTIC_NEAR_DUPLICATE_EXPLICIT_PAIRS - seen_pairs
+    if missing_explicit:
+        raise AssertionError(f"Explicit near-duplicate pairs were not reviewed: {sorted(map(sorted, missing_explicit))}")
+
+    candidates = pd.DataFrame(candidate_rows).sort_values(
+        ["Decision", "Bilingual_Similarity"], ascending=[True, False]
+    ).reset_index(drop=True)
+    decisions = candidates[candidates["Decision"].eq("DROP_LESS_REPRESENTATIVE")].copy()
+    configured_drops = set(SEMANTIC_NEAR_DUPLICATE_DROPS)
+    if set(decisions["Discarded_source_row_id"]) != configured_drops:
+        raise AssertionError("Near-duplicate decision ledger does not match the configured deletion set")
+
+    deleted_rows: list[dict] = []
+    transformation_rows: list[dict] = []
+    for discarded_id, configured in SEMANTIC_NEAR_DUPLICATE_DROPS.items():
+        representative_id = configured["representative_source_row_id"]
+        discarded = cleaned.loc[cleaned["source_row_id"].eq(discarded_id)]
+        representative = cleaned.loc[cleaned["source_row_id"].eq(representative_id)]
+        if len(discarded) != 1 or len(representative) != 1:
+            raise AssertionError(f"Near-duplicate rows are not uniquely resolvable: {discarded_id}, {representative_id}")
+        decision_row = decisions.loc[decisions["Discarded_source_row_id"].eq(discarded_id)].iloc[0]
+        record = discarded.iloc[0].to_dict()
+        record["archive_reason"] = "SEMANTIC_NEAR_DUPLICATE: " + configured["rationale"]
+        record["representative_source_row_id"] = representative_id
+        record["bilingual_similarity"] = decision_row["Bilingual_Similarity"]
+        deleted_rows.append(record)
+        transformation_rows.append({
+            "source_row_id": discarded_id,
+            "source_l4_id": record["source_l4_id"],
+            "source_domain": record["source_domain"],
+            "action": "DELETE_NEAR_DUPLICATE",
+            "target_source_l4_id": representative.iloc[0]["source_l4_id"],
+            "rationale": configured["rationale"],
+        })
+
+    audits["deleted"] = pd.concat(
+        [audits["deleted"], pd.DataFrame(deleted_rows)], ignore_index=True, sort=False
+    )
+    audits["transformations"] = pd.concat(
+        [audits["transformations"], pd.DataFrame(transformation_rows)], ignore_index=True, sort=False
+    )
+    audits["semantic_duplicate_candidates"] = candidates
+    audits["semantic_duplicate_decisions"] = decisions
+    cleaned = cleaned.loc[~cleaned["source_row_id"].isin(configured_drops)].copy()
+    return cleaned.reset_index(drop=True), audits
+
+
 def flatten_release(mapped: pd.DataFrame, hierarchy: pd.DataFrame, lookup: dict[str, dict]) -> pd.DataFrame:
     rows = []
     for _, row in mapped.iterrows():
@@ -2279,6 +2647,7 @@ def main() -> None:
     cleaned, audits = apply_cleaning(source)
     cleaned, audits = apply_peer_review(cleaned, audits)
     cleaned = apply_l3_master_curation(cleaned)
+    cleaned, audits = normalise_l4_titles(cleaned, audits)
     split_net_addition = len(audits["split"]) - audits["split"]["source_row_id"].nunique()
     initial_expected = len(source) - len(audits["deleted"]) - len(audits["merged"]) + split_net_addition
     if len(source) != 892 or len(cleaned) != initial_expected:
@@ -2288,13 +2657,19 @@ def main() -> None:
 
     provisional, provisional_diagnostics, _, _ = map_em(cleaned, hierarchy, phase="PROVISIONAL_L3_DRAFTING_ANCHOR")
     cleaned, audits = enforce_l3_grounded_ai_definitions(cleaned, provisional, hierarchy, audits)
+    duplicate_review, duplicate_review_diagnostics, _, _ = map_em(
+        cleaned, hierarchy, phase="POST_GROUNDING_NEAR_DUPLICATE_REVIEW"
+    )
+    cleaned, audits = review_and_drop_semantic_near_duplicates(cleaned, duplicate_review, audits)
     final_expected = len(source) - len(audits["deleted"]) - len(audits["merged"]) + split_net_addition
     if len(cleaned) != final_expected:
         raise AssertionError({"cleaned": len(cleaned), "expected": final_expected,
                               "deleted": len(audits["deleted"]), "merged": len(audits["merged"])})
 
     mapped, em_diagnostics, thresholds, keyword_profiles = map_em(cleaned, hierarchy, phase="FINAL_POST_GROUNDING")
+    mapped = attach_title_terminology_sources(mapped)
     flat = flatten_release(mapped, hierarchy, lookup)
+    title_terminology_audit = build_title_terminology_audit(flat, audits["title_normalisation"])
 
     write_csv(l1_final, RELEASE / "L1_Master.csv")
     write_csv(hierarchy, RELEASE / "L1_L2_L3_Master.csv")
@@ -2312,12 +2687,17 @@ def main() -> None:
     write_csv(audits["peer_review"], AUDIT / "Peer_Review_Acceptance_Ledger.csv")
     write_csv(audits["l3_scope"], AUDIT / "L3_Scope_Eligibility_Audit.csv")
     write_csv(audits["ai_grounding"], AUDIT / "AI_Technology_Grounding_Ledger.csv")
+    write_csv(audits["title_normalisation"], AUDIT / "Title_Normalisation_Ledger.csv")
+    write_csv(title_terminology_audit, AUDIT / "L4_Title_Terminology_Audit.csv")
+    write_csv(audits["semantic_duplicate_candidates"], AUDIT / "Semantic_Near_Duplicate_Candidates.csv")
+    write_csv(audits["semantic_duplicate_decisions"], AUDIT / "Semantic_Near_Duplicate_Decisions.csv")
     write_csv(provisional[[
         "source_row_id", "source_domain", "source_l4_id", "title_ko", "title_en",
         "mapped_l3_id", "mapping_method", "em_score", "em_anchor_score", "hybrid_score",
         "keyword_support_score", "l3_candidate_hint", "top5_l3_scores",
     ]], AUDIT / "Provisional_L3_Drafting_Anchor_Audit.csv")
     write_csv(provisional_diagnostics, AUDIT / "Provisional_EM_Run_Diagnostics.csv")
+    write_csv(duplicate_review_diagnostics, AUDIT / "Near_Duplicate_Review_EM_Run_Diagnostics.csv")
     write_csv(em_diagnostics, AUDIT / "EM_Run_Diagnostics.csv")
     write_csv(keyword_profiles, AUDIT / "Keyword_L3_Profiles.csv")
     em_card_columns = [
@@ -2400,6 +2780,14 @@ def main() -> None:
                 representative_row_id = representatives.iloc[0]["source_row_id"]
                 matches = flat[flat["source_row_id"] == representative_row_id]
                 status_override = "MERGED"
+        if not len(matches):
+            duplicate_log = audits["semantic_duplicate_decisions"][
+                audits["semantic_duplicate_decisions"]["Discarded_source_row_id"].eq(src_id)
+            ]
+            if len(duplicate_log):
+                representative_row_id = duplicate_log.iloc[0]["Representative_source_row_id"]
+                matches = flat[flat["source_row_id"].eq(representative_row_id)]
+                status_override = "DEDUPLICATED"
         if len(matches):
             for _, m in matches.iterrows():
                 crosswalk_rows.append({"source_row_id": src["source_row_id"], "source_domain": src["source_domain"],
@@ -2440,6 +2828,42 @@ def main() -> None:
           f"{len(flat)} = {len(source)} - {len(audits['deleted'])} - {len(audits['merged'])} + {split_net_addition}")
     check("Final L4 IDs unique", flat["L4_ID"].is_unique, f"{flat['L4_ID'].nunique()} unique IDs")
     check("Bilingual L4 fields complete", not flat[["L4_Title_ko", "L4_Title_en", "L4_Description_ko", "L4_Description_en"]].eq("").any().any(), "No blank bilingual L4 fields")
+    forbidden_title_hits = flat["L4_Title_en"].str.contains(FORBIDDEN_AI_TITLE_QUALIFIER_PATTERN)
+    check("No formulaic AI involvement qualifier in English L4 titles", not forbidden_title_hits.any(),
+          f"{int(forbidden_title_hits.sum())} formulaic qualifier hits")
+    sexual_harm = flat[flat["source_row_id"].eq("SRC-G-0209")]
+    check("Child sexual exploitation title uses the requested standard term",
+          len(sexual_harm) == 1 and
+          sexual_harm.iloc[0]["L4_Title_en"] == "Sexual harm and exploitation of minors" and
+          sexual_harm.iloc[0]["L4_Title_ko"] == "AI를 이용한 미성년자 성적 위해·착취",
+          sexual_harm.iloc[0]["L4_Title_en"] if len(sexual_harm) else "missing")
+    check("Every released L4 title has a terminology validation record",
+          len(title_terminology_audit) == len(flat) and title_terminology_audit["Validation_Status"].eq("PASS").all(),
+          f"{int(title_terminology_audit['Validation_Status'].eq('PASS').sum())}/{len(flat)} titles passed")
+    check("Every released L4 title has authoritative URL evidence",
+          title_terminology_audit["Terminology_Source_URLs"].ne("").all(),
+          f"{int(title_terminology_audit['Terminology_Source_URLs'].ne('').sum())}/{len(flat)} titles have URL evidence")
+    duplicate_candidates = audits["semantic_duplicate_candidates"]
+    duplicate_decisions = audits["semantic_duplicate_decisions"]
+    check("Every semantic near-duplicate candidate has a documented decision",
+          len(duplicate_candidates) > 0 and duplicate_candidates["Decision"].isin(
+              {"DROP_LESS_REPRESENTATIVE", "RETAIN_DISTINCT_SCOPE"}
+          ).all(),
+          f"{len(duplicate_candidates)} candidates reviewed")
+    discarded_duplicate_ids = set(duplicate_decisions["Discarded_source_row_id"])
+    representative_duplicate_ids = set(duplicate_decisions["Representative_source_row_id"])
+    check("Near-duplicate deletions match the configured reviewed set",
+          discarded_duplicate_ids == set(SEMANTIC_NEAR_DUPLICATE_DROPS),
+          f"{len(discarded_duplicate_ids)} lower-representativeness cards deleted")
+    check("Near-duplicate representatives remain in the release",
+          representative_duplicate_ids <= set(flat["source_row_id"]) and
+          not discarded_duplicate_ids & set(flat["source_row_id"]),
+          f"{len(representative_duplicate_ids)} representatives retained and {len(discarded_duplicate_ids)} duplicates absent")
+    check("High-similarity distinct-scope cards are not automatically deleted",
+          duplicate_candidates.loc[
+              duplicate_candidates["Decision"].eq("RETAIN_DISTINCT_SCOPE"), "Distinctiveness_Gate"
+          ].eq("DISTINCT_TARGET_OR_MECHANISM").all(),
+          "Protected attributes, weapon types, affected targets, and harm mechanisms require separate review")
     check("Mapping method complete", set(flat["Mapping_Method"]) <= {"EM", "HD"}, str(flat["Mapping_Method"].value_counts().to_dict()))
     check("Others only use HD", flat.loc[flat["L3_ID"].str.endswith("Others"), "Mapping_Method"].eq("HD").all(), "All Others records are HD")
     check("EM excludes Others", (~flat.loc[flat["Mapping_Method"] == "EM", "L3_ID"].str.endswith("Others")).all(), "No EM record assigned to Others")
@@ -2589,6 +3013,13 @@ def main() -> None:
         "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
         "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
         "definition_ai_grounding_rewrites": int(audits["ai_grounding"]["grounding_action"].eq("L3_MASTER_AI_REWRITE").sum()),
+        "title_terminology_normalisations": int(title_terminology_audit["Title_Changed"].sum()),
+        "title_normalisation_ledger_changes_before_deduplication": int(
+            audits["title_normalisation"]["title_changed"].sum()
+        ),
+        "title_terminology_validated": int(title_terminology_audit["Validation_Status"].eq("PASS").sum()),
+        "semantic_near_duplicate_candidates": len(audits["semantic_duplicate_candidates"]),
+        "semantic_near_duplicate_deletions": len(audits["semantic_duplicate_decisions"]),
         "l3_scope_deletions": int(audits["l3_scope"]["scope_decision"].eq("DELETE").sum()),
         "keyword_count_per_language": 3,
         "thresholds": thresholds,
@@ -2625,6 +3056,20 @@ def main() -> None:
             "causal_risk_mechanism_required": True,
             "l3_scope_anchor_floor": L3_SCOPE_ANCHOR_FLOOR,
             "l3_scope_hybrid_floor": L3_SCOPE_HYBRID_FLOOR,
+        },
+        "title_terminology_method": {
+            "name": "Authoritative term-family normalisation against the immutable L3 master",
+            "formulaic_ai_involvement_qualifiers_removed": list(FORBIDDEN_AI_TITLE_QUALIFIERS),
+            "technical_object_ai_terms_retained": True,
+            "audit_file": "audit/L4_Title_Terminology_Audit.csv",
+        },
+        "semantic_deduplication_method": {
+            "name": "Bilingual BGE-M3 candidate generation with immutable-L3 and distinctiveness gates",
+            "candidate_similarity_threshold": SEMANTIC_NEAR_DUPLICATE_THRESHOLD,
+            "automatic_deletion_from_similarity_only": False,
+            "distinct_target_or_mechanism_is_retained": True,
+            "candidate_audit_file": "audit/Semantic_Near_Duplicate_Candidates.csv",
+            "decision_audit_file": "audit/Semantic_Near_Duplicate_Decisions.csv",
         },
         "primary_outputs": {p.name: {"sha256": sha256_file(p), "rows": len(pd.read_csv(p))} for p in final_files},
         "summary": summary,

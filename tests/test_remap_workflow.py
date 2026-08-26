@@ -18,6 +18,10 @@ def load(path: Path):
 
 class RemapWorkflowIntegrationTest(unittest.TestCase):
     def test_successor_write_validate_and_stable_decision_ids(self) -> None:
+        snapshot = Path(load(ROOT / "data/releases/v1.0.0/algorithm_config.json")["snapshot_path"])
+        broken_links = [path for path in snapshot.rglob("*") if path.is_symlink() and not path.exists()]
+        if broken_links:
+            self.skipTest(f"Pinned v1.0.0 model snapshot has {len(broken_links)} unavailable cache blobs")
         with tempfile.TemporaryDirectory(prefix="rai-remap-smoke-") as temp_dir:
             clone = Path(temp_dir) / "repo"
             shutil.copytree(

@@ -7,13 +7,15 @@ This master release contains five canonical CSV artifacts, bilingual technical r
 - L1 domains: 3
 - L2 dimensions: 3
 - L3 categories: 49, comprising 46 immutable master categories and 3 derived Others categories
-- L4 risk cards: 813
-- General / Agentic / Physical: 623 / 78 / 112
-- EM assignments: 617
-- HD/Others assignments: 196
-- L3-referenced AI-technology definition rewrites: 261
-- Cleaning reconciliation: 892 source rows minus 60 deletions minus 20 absorbed merge rows plus 1 net split addition equals 813 final rows
-- Post-build validation: 39 passed, 0 failed
+- L4 risk cards: 808
+- L4 title terminology normalisations: 66
+- Semantic near-duplicate review: 66 candidate pairs, 5 lower-representativeness cards discarded
+- General / Agentic / Physical: 618 / 78 / 112
+- EM assignments: 613
+- HD/Others assignments: 195
+- L3-referenced AI-technology definition rewrites: 260
+- Cleaning reconciliation: 892 source rows minus 65 deletions minus 20 absorbed merge rows plus 1 net split addition equals 808 final rows
+- Post-build validation: 47 passed, 0 failed
 
 ## Canonical CSV files
 

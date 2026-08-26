@@ -108,11 +108,13 @@ def build_tables(cards: pd.DataFrame) -> None:
     eligibility = int(actions.get("DELETE_NON_RISK", 0))
     peer = int(actions.get("DELETE_PEER_REVIEW", 0))
     scope = int(actions.get("DELETE_L3_SCOPE_MISMATCH", 0))
+    semantic_dedup = int(actions.get("DELETE_NEAR_DUPLICATE", 0))
     after_explicit = source_total - explicit
     after_merge = after_explicit - merged
     after_split = after_merge + split
     after_eligibility = after_split - eligibility
     after_peer = after_eligibility - peer
+    after_scope = after_peer - scope
     transformation = pd.DataFrame([
         {"Stage": "Source L4", "Count": source_total, "Change": 0},
         {"Stage": "After explicit deletion", "Count": after_explicit, "Change": -explicit},
@@ -120,8 +122,9 @@ def build_tables(cards: pd.DataFrame) -> None:
         {"Stage": "After split", "Count": after_split, "Change": split},
         {"Stage": "After risk-eligibility deletion", "Count": after_eligibility, "Change": -eligibility},
         {"Stage": "After peer-review deletion", "Count": after_peer, "Change": -peer},
-        {"Stage": "After immutable-L3 scope gate", "Count": summary["cleaned_total"],
-         "Change": -scope},
+        {"Stage": "After immutable-L3 scope gate", "Count": after_scope, "Change": -scope},
+        {"Stage": "After semantic deduplication", "Count": summary["cleaned_total"],
+         "Change": -semantic_dedup},
     ])
     transformation.to_csv(TABLES / "transformation_summary.csv", index=False, encoding="utf-8-sig")
 
@@ -155,6 +158,14 @@ def build_tables(cards: pd.DataFrame) -> None:
     cards.groupby(["L1_Title_en", "L3_ID", "L3_Title_en", "Mapping_Method"], as_index=False).size().rename(
         columns={"size": "Count"}
     ).to_csv(TABLES / "l3_distribution.csv", index=False, encoding="utf-8-sig")
+    pd.read_csv(AUDIT / "Semantic_Near_Duplicate_Decisions.csv").to_csv(
+        TABLES / "semantic_near_duplicate_decisions.csv", index=False, encoding="utf-8-sig"
+    )
+    pd.read_csv(AUDIT / "Title_Normalisation_Ledger.csv").groupby(
+        ["normalisation_rule", "title_changed"], as_index=False
+    ).size().rename(columns={"size": "Count"}).to_csv(
+        TABLES / "title_normalisation_summary.csv", index=False, encoding="utf-8-sig"
+    )
 
 
 def build_figures(cards: pd.DataFrame) -> None:
@@ -173,10 +184,12 @@ def build_figures(cards: pd.DataFrame) -> None:
     fig.savefig(FIGURES / "domain_counts_before_after.png", dpi=300, bbox_inches="tight"); plt.close(fig)
 
     transformation = pd.read_csv(TABLES / "transformation_summary.csv")
-    stages = ["Source", "Explicit\ndeletions", "Merges", "Split", "Eligibility\ngate", "Peer review", "L3 scope\ngate"]
+    stages = ["Source", "Explicit\ndeletions", "Merges", "Split", "Eligibility\ngate", "Peer review",
+              "L3 scope\ngate", "Semantic\ndeduplication"]
     counts = transformation["Count"].astype(int).tolist()
     fig, ax = plt.subplots(figsize=(8.2, 4.4))
-    bars = ax.bar(range(len(counts)), counts, color=["#596780", "#C65D4B", "#C65D4B", "#2A9D6F", "#C65D4B", "#C65D4B", "#C65D4B"])
+    bars = ax.bar(range(len(counts)), counts, color=["#596780", "#C65D4B", "#C65D4B", "#2A9D6F",
+                                                   "#C65D4B", "#C65D4B", "#C65D4B", "#C65D4B"])
     ax.bar_label(bars, padding=3, fontsize=9)
     ax.set(xticks=range(len(counts)), xticklabels=stages, ylabel="Number of L4 risks", title="L4 cleaning and immutable-L3 scope reconciliation", ylim=(0, 980))
     sns.despine(ax=ax); fig.tight_layout()
@@ -225,6 +238,18 @@ def build_figures(cards: pd.DataFrame) -> None:
     ax.legend(frameon=False, fontsize=8); sns.despine(ax=ax); fig.tight_layout()
     fig.savefig(FIGURES / "definition_grounding_by_domain.png", dpi=300, bbox_inches="tight"); plt.close(fig)
 
+    duplicate_candidates = pd.read_csv(AUDIT / "Semantic_Near_Duplicate_Candidates.csv")
+    duplicate_counts = duplicate_candidates["Decision"].value_counts().reindex(
+        ["RETAIN_DISTINCT_SCOPE", "DROP_LESS_REPRESENTATIVE"], fill_value=0
+    )
+    fig, ax = plt.subplots(figsize=(6.8, 4.3))
+    bars = ax.bar(["Retained as distinct", "Discarded as redundant"], duplicate_counts.values,
+                  color=["#3366CC", "#C65D4B"])
+    ax.bar_label(bars, padding=3)
+    ax.set(ylabel="Candidate pairs", title="Bilingual semantic near-duplicate review")
+    sns.despine(ax=ax); fig.tight_layout()
+    fig.savefig(FIGURES / "semantic_near_duplicate_review.png", dpi=300, bbox_inches="tight"); plt.close(fig)
+
     baseline_root = PROJECT / "04_baseline_pre_keyword/release"
     baseline_cards = pd.concat([
         pd.read_csv(baseline_root / f"L4_{domain}.csv", dtype=str, keep_default_na=False)
@@ -258,6 +283,8 @@ This master release contains five canonical CSV artifacts, bilingual technical r
 - L2 dimensions: 3
 - L3 categories: 49, comprising 46 immutable master categories and 3 derived Others categories
 - L4 risk cards: {summary['cleaned_total']}
+- L4 title terminology normalisations: {summary['title_terminology_normalisations']}
+- Semantic near-duplicate review: {summary['semantic_near_duplicate_candidates']} candidate pairs, {summary['semantic_near_duplicate_deletions']} lower-representativeness cards discarded
 - General / Agentic / Physical: {summary['final_domain_counts']['General AI']} / {summary['final_domain_counts']['Agentic AI']} / {summary['final_domain_counts']['Physical AI']}
 - EM assignments: {summary['em_total']}
 - HD/Others assignments: {summary['others_total']}

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "passed": 39,
+  "passed": 47,
   "failed": 0,
   "checks": [
     {
@@ -22,12 +22,12 @@
     {
       "check": "Final L4 reconciliation",
       "status": "PASS",
-      "evidence": "813 = 892 - 60 - 20 + 1"
+      "evidence": "808 = 892 - 65 - 20 + 1"
     },
     {
       "check": "Final L4 IDs unique",
       "status": "PASS",
-      "evidence": "813 unique IDs"
+      "evidence": "808 unique IDs"
     },
     {
       "check": "Bilingual L4 fields complete",
@@ -35,11 +35,51 @@
       "evidence": "No blank bilingual L4 fields"
     },
     {
+      "check": "No formulaic AI involvement qualifier in English L4 titles",
+      "status": "PASS",
+      "evidence": "0 formulaic qualifier hits"
+    },
+    {
+      "check": "Child sexual exploitation title uses the requested standard term",
+      "status": "PASS",
+      "evidence": "Sexual harm and exploitation of minors"
+    },
+    {
+      "check": "Every released L4 title has a terminology validation record",
+      "status": "PASS",
+      "evidence": "808/808 titles passed"
+    },
+    {
+      "check": "Every released L4 title has authoritative URL evidence",
+      "status": "PASS",
+      "evidence": "808/808 titles have URL evidence"
+    },
+    {
+      "check": "Every semantic near-duplicate candidate has a documented decision",
+      "status": "PASS",
+      "evidence": "66 candidates reviewed"
+    },
+    {
+      "check": "Near-duplicate deletions match the configured reviewed set",
+      "status": "PASS",
+      "evidence": "5 lower-representativeness cards deleted"
+    },
+    {
+      "check": "Near-duplicate representatives remain in the release",
+      "status": "PASS",
+      "evidence": "5 representatives retained and 5 duplicates absent"
+    },
+    {
+      "check": "High-similarity distinct-scope cards are not automatically deleted",
+      "status": "PASS",
+      "evidence": "Protected attributes, weapon types, affected targets, and harm mechanisms require separate review"
+    },
+    {
       "check": "Mapping method complete",
       "status": "PASS",
       "evidence": {
-        "EM": 617,
-        "HD": 196
+        "EM": 613,
+        "HD": 195
       }
     },
     {
@@ -70,7 +110,7 @@
     {
       "check": "Korean L4 risk-definition endings",
       "status": "PASS",
-      "evidence": "813/813 definitions end in a risk term"
+      "evidence": "808/808 definitions end in a risk term"
     },
     {
       "check": "English L4 risk-definition structure",
@@ -80,22 +120,22 @@
     {
       "check": "Korean L4 definitions name an AI technology",
       "status": "PASS",
-      "evidence": "813/813 explicitly name AI, an algorithm, an agent, a robot, a learning technology, or a model"
+      "evidence": "808/808 explicitly name AI, an algorithm, an agent, a robot, a learning technology, or a model"
     },
     {
       "check": "English L4 definitions name an AI technology",
       "status": "PASS",
-      "evidence": "813/813 explicitly name an AI technology"
+      "evidence": "808/808 explicitly name an AI technology"
     },
     {
       "check": "Korean L4 definitions connect AI to an L3-style risk statement",
       "status": "PASS",
-      "evidence": "813/813 contain a causal mechanism or an explicit risk-statement ending"
+      "evidence": "808/808 contain a causal mechanism or an explicit risk-statement ending"
     },
     {
       "check": "English L4 definitions connect AI to an L3-style risk statement",
       "status": "PASS",
-      "evidence": "813/813 contain a causal mechanism or the L3-style 'The risk that' structure"
+      "evidence": "808/808 contain a causal mechanism or the L3-style 'The risk that' structure"
     },
     {
       "check": "No editorial or generation residue in L4 text",
@@ -115,7 +155,7 @@
     {
       "check": "Every EM-mapped L4 was drafted against its final immutable L3",
       "status": "PASS",
-      "evidence": "617/617 EM cards use their final L3 as the drafting anchor"
+      "evidence": "613/613 EM cards use their final L3 as the drafting anchor"
     },
     {
       "check": "No known English grammar or token-joining defects",
@@ -170,7 +210,7 @@
     {
       "check": "Exactly three bilingual L4 keywords",
       "status": "PASS",
-      "evidence": "Three Korean and three English representative concepts for all 813 cards"
+      "evidence": "Three Korean and three English representative concepts for all 808 cards"
     },
     {
       "check": "Keyword profiles cover immutable L3",

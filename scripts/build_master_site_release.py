@@ -225,6 +225,9 @@ def main() -> None:
             "deleted": source_summary["deleted"],
             "merged_away": source_summary["merged_away"],
             "split_net_addition": source_summary["split_net_addition"],
+            "title_terminology_normalisations": source_summary["title_terminology_normalisations"],
+            "semantic_near_duplicate_candidates": source_summary["semantic_near_duplicate_candidates"],
+            "semantic_near_duplicate_deletions": source_summary["semantic_near_duplicate_deletions"],
             "final_total": source_summary["cleaned_total"],
         },
         "method": {
@@ -232,6 +235,8 @@ def main() -> None:
             "boundary_policy": "HD assignment to domain-specific Others",
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
+            "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
+            "semantic_deduplication_policy": "Bilingual similarity generates candidates only; deletion requires same L3 scope and no distinct target or harm mechanism",
             "representative_keywords_per_language": source_summary["keyword_count_per_language"],
         },
         "human_review": {

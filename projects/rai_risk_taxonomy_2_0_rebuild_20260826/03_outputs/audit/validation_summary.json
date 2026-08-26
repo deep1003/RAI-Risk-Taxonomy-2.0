@@ -6,22 +6,22 @@
     "Physical": 218
   },
   "source_total": 892,
-  "deleted": 60,
+  "deleted": 65,
   "merged_away": 20,
   "split_net_addition": 1,
-  "cleaned_total": 813,
+  "cleaned_total": 808,
   "final_domain_counts": {
     "Agentic AI": 78,
-    "General AI": 623,
+    "General AI": 618,
     "Physical AI": 112
   },
   "mapping_method_counts": {
     "Agentic AI": {
-      "EM": 64,
-      "HD": 14
+      "EM": 65,
+      "HD": 13
     },
     "General AI": {
-      "EM": 462,
+      "EM": 457,
       "HD": 161
     },
     "Physical AI": {
@@ -29,11 +29,16 @@
       "HD": 21
     }
   },
-  "others_total": 196,
-  "em_total": 617,
+  "others_total": 195,
+  "em_total": 613,
   "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
   "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
-  "definition_ai_grounding_rewrites": 261,
+  "definition_ai_grounding_rewrites": 260,
+  "title_terminology_normalisations": 66,
+  "title_normalisation_ledger_changes_before_deduplication": 70,
+  "title_terminology_validated": 808,
+  "semantic_near_duplicate_candidates": 66,
+  "semantic_near_duplicate_deletions": 5,
   "l3_scope_deletions": 12,
   "keyword_count_per_language": 3,
   "thresholds": {
@@ -73,6 +78,6 @@
   },
   "l3_source_rows": 46,
   "l3_derived_others_rows": 3,
-  "validation_passed": 39,
+  "validation_passed": 47,
   "validation_failed": 0
 }

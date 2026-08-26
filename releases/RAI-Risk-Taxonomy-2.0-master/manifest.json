@@ -35,6 +35,30 @@
     "l3_scope_anchor_floor": 0.6,
     "l3_scope_hybrid_floor": 0.65
   },
+  "title_terminology_method": {
+    "name": "Authoritative term-family normalisation against the immutable L3 master",
+    "formulaic_ai_involvement_qualifiers_removed": [
+      "AI-mediated",
+      "AI-facilitated",
+      "AI-assisted",
+      "AI-enabled",
+      "AI-driven",
+      "AI-induced",
+      "AI-amplified",
+      "AI-automated",
+      "AI-related"
+    ],
+    "technical_object_ai_terms_retained": true,
+    "audit_file": "audit/L4_Title_Terminology_Audit.csv"
+  },
+  "semantic_deduplication_method": {
+    "name": "Bilingual BGE-M3 candidate generation with immutable-L3 and distinctiveness gates",
+    "candidate_similarity_threshold": 0.9,
+    "automatic_deletion_from_similarity_only": false,
+    "distinct_target_or_mechanism_is_retained": true,
+    "candidate_audit_file": "audit/Semantic_Near_Duplicate_Candidates.csv",
+    "decision_audit_file": "audit/Semantic_Near_Duplicate_Decisions.csv"
+  },
   "primary_outputs": {
     "L1_Master.csv": {
       "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
@@ -45,15 +69,15 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "26977583b50a2dc34fb4ab174ecafa1551ca31eeaa07cf5b4a54aa31fe84de84",
-      "rows": 623
+      "sha256": "cf109800d034f7937690013d1e4fff47f33f71120304dab35fea0d9737600107",
+      "rows": 618
     },
     "L4_Agentic.csv": {
-      "sha256": "959b97b3eae40c442764371ff4f04d96ec663f313d52b5c43491d5ddb47db402",
+      "sha256": "cd8f39466033e2efad25131afb140c3ba3dce6553a9ee4b748469db528b71a0b",
       "rows": 78
     },
     "L4_Physical.csv": {
-      "sha256": "79e0990908ee9fd695f7d1ac483b2bbac03587b8e6588f89ca9b7ec3df1bdfa1",
+      "sha256": "349466b48f26f7bbe66cf1124285a409db7361e2ec79df8ff3c98e6796037c0d",
       "rows": 112
     }
   },
@@ -65,22 +89,22 @@
       "Physical": 218
     },
     "source_total": 892,
-    "deleted": 60,
+    "deleted": 65,
     "merged_away": 20,
     "split_net_addition": 1,
-    "cleaned_total": 813,
+    "cleaned_total": 808,
     "final_domain_counts": {
       "Agentic AI": 78,
-      "General AI": 623,
+      "General AI": 618,
       "Physical AI": 112
     },
     "mapping_method_counts": {
       "Agentic AI": {
-        "EM": 64,
-        "HD": 14
+        "EM": 65,
+        "HD": 13
       },
       "General AI": {
-        "EM": 462,
+        "EM": 457,
         "HD": 161
       },
       "Physical AI": {
@@ -88,11 +112,16 @@
         "HD": 21
       }
     },
-    "others_total": 196,
-    "em_total": 617,
+    "others_total": 195,
+    "em_total": 613,
     "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
     "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
-    "definition_ai_grounding_rewrites": 261,
+    "definition_ai_grounding_rewrites": 260,
+    "title_terminology_normalisations": 66,
+    "title_normalisation_ledger_changes_before_deduplication": 70,
+    "title_terminology_validated": 808,
+    "semantic_near_duplicate_candidates": 66,
+    "semantic_near_duplicate_deletions": 5,
     "l3_scope_deletions": 12,
     "keyword_count_per_language": 3,
     "thresholds": {
@@ -132,7 +161,7 @@
     },
     "l3_source_rows": 46,
     "l3_derived_others_rows": 3,
-    "validation_passed": 39,
+    "validation_passed": 47,
     "validation_failed": 0
   },
   "human_review": {
