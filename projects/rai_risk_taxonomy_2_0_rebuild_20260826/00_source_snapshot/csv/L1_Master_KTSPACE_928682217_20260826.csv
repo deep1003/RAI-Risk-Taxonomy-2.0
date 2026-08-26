@@ -1,0 +1,8 @@
+﻿"L1 도메인 이름","한글정의","영문정의"
+"General AI","텍스트, 이미지, 오디오, 비디오, 코드 등 디지털 콘텐츠를 주된 입력과 출력으로 처리하는 범용 AI 모델. 이 분류체계에서 General AI는 범용 모델 도메인을 가리키는 약칭이며, 인공일반지능(Artificial General Intelligence, AGI)을 의미하지 않는다.","General-purpose AI models whose primary inputs and outputs are digital content, including
+text, image, audio, video, and code. The label General AI is used in this report as shorthand
+for this general-purpose model domain, not as a claim about artificial general intelligence."
+"Agentic AI","도구를 사용하고, 여러 단계에 걸쳐 목표를 추구하며, 위임된 의사결정을 수행하고, 상태를 유지하거나 다른 에이전트와 협력하는 AI 시스템.","Systems that use tools, pursue goals over multiple steps, make delegated decisions, maintain
+state, or coordinate with other agents."
+"Physical AI","로봇과 자율주행차를 포함하여 물리 세계를 인식하고 물리적 행동을 수행하는 체화형 또는 사이버물리 AI 시스템.","Embodied or cyber-physical systems, including robots and autonomous vehicles, that perceive
+and act in the physical world."

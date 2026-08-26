@@ -1,0 +1,58 @@
+{
+  "date": "2026-08-26",
+  "source_counts": {
+    "Agentic": 83,
+    "General": 591,
+    "Physical": 218
+  },
+  "source_total": 892,
+  "deleted": 48,
+  "merged_away": 20,
+  "split_net_addition": 1,
+  "cleaned_total": 825,
+  "final_domain_counts": {
+    "Agentic AI": 85,
+    "General AI": 611,
+    "Physical AI": 129
+  },
+  "mapping_method_counts": {
+    "Agentic AI": {
+      "EM": 70,
+      "HD": 15
+    },
+    "General AI": {
+      "EM": 408,
+      "HD": 203
+    },
+    "Physical AI": {
+      "EM": 81,
+      "HD": 48
+    }
+  },
+  "others_total": 266,
+  "em_total": 559,
+  "thresholds": {
+    "General": {
+      "score_floor": 0.58,
+      "margin_floor": 0.015,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.5
+    },
+    "Agentic": {
+      "score_floor": 0.58,
+      "margin_floor": 0.015,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.5
+    },
+    "Physical": {
+      "score_floor": 0.58,
+      "margin_floor": 0.015,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.5
+    }
+  },
+  "l3_source_rows": 46,
+  "l3_derived_others_rows": 3,
+  "validation_passed": 18,
+  "validation_failed": 0
+}

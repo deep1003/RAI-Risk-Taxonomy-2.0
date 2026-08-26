@@ -26,21 +26,23 @@ async function renderManifest() {
   const colors = { "General AI": "var(--general)", "Agentic AI": "var(--agentic)", "Physical AI": "var(--physical)" };
   const maxDomain = Math.max(...domains.map((domain) => summary.final_domain_counts[domain]));
   const maxMapping = Math.max(...domains.map((domain) => summary.mapping_method_counts[domain].EM + summary.mapping_method_counts[domain].HD));
+  const emShare = summary.cleaned_total ? (summary.em_total / summary.cleaned_total) * 100 : 0;
+  const generalShare = summary.cleaned_total ? (summary.final_domain_counts["General AI"] / summary.cleaned_total) * 100 : 0;
 
   document.querySelector("#report-root").innerHTML = `
     <section class="section" aria-labelledby="overview-title">
-      <div class="section-heading"><div><p class="section-kicker">RELEASE OVERVIEW</p><h2 id="overview-title">892개 원천 레코드가 834개 최종 카드로 정제됨</h2></div><p class="section-note">Release date · ${escapeHtml(data.release_date)}</p></div>
+      <div class="section-heading"><div><p class="section-kicker">RELEASE OVERVIEW</p><h2 id="overview-title">${formatNumber(summary.source_total)}개 원천 레코드가 ${formatNumber(summary.cleaned_total)}개 최종 카드로 정제됨</h2></div><p class="section-note">Release date · ${escapeHtml(data.release_date)}</p></div>
       <div class="kpi-grid">
         ${kpi("Source L4", summary.source_total, "정제 전 원천 레코드", "var(--navy)")}
         ${kpi("Final L4", summary.cleaned_total, "정제·통합·분리 후", "var(--physical)")}
         ${kpi("L3 categories", summary.l3_source_rows + summary.l3_derived_others_rows, `${summary.l3_source_rows} master + ${summary.l3_derived_others_rows} Others`, "var(--agentic)")}
-        ${kpi("Mapping", summary.em_total, `EM · HD ${summary.others_total}`, "var(--em)")}
+        ${kpi("AI-grounded definitions", summary.cleaned_total, `${summary.definition_ai_grounding_rewrites} rewritten · ${summary.cleaned_total - summary.definition_ai_grounding_rewrites} retained`, "var(--em)")}
       </div>
     </section>
 
     <section class="section" aria-labelledby="cleaning-title">
       <div class="section-heading"><div><p class="section-kicker">CLEANING RECONCILIATION</p><h2 id="cleaning-title">삭제·통합·분리 내역이 최종 합계와 일치</h2></div></div>
-      <div class="flow" role="img" aria-label="892 source records minus 39 deletions minus 20 merged records plus 1 split addition equals 834 final records">
+      <div class="flow" role="img" aria-label="${summary.source_total} source records minus ${summary.deleted} deletions minus ${summary.merged_away} merged records plus ${summary.split_net_addition} split addition equals ${summary.cleaned_total} final records">
         ${flowStep("Source", summary.source_total, "input", "")}
         ${flowStep("Deleted", `−${summary.deleted}`, "explicit deletion", "negative")}
         ${flowStep("Merged away", `−${summary.merged_away}`, "absorbed records", "negative")}
@@ -51,16 +53,16 @@ async function renderManifest() {
 
     <section class="section panel-grid" aria-label="Release charts">
       <article class="panel">
-        <h3>General AI가 최종 L4의 74.1%를 차지</h3>
+        <h3>General AI가 최종 L4의 ${generalShare.toFixed(1)}%를 차지</h3>
         <p class="panel-subtitle">Final L4 cards by domain · bars start at zero</p>
-        <div class="bar-chart" role="img" aria-label="General AI 618, Physical AI 131, Agentic AI 85">
+        <div class="bar-chart" role="img" aria-label="Final L4 counts by domain">
           ${domains.map((domain) => barRow(domain, summary.final_domain_counts[domain], maxDomain, colors[domain])).join("")}
         </div>
       </article>
       <article class="panel">
-        <h3>전체 매핑의 92.2%가 EM으로 확정</h3>
+        <h3>전체 매핑의 ${emShare.toFixed(1)}%가 EM으로 확정</h3>
         <p class="panel-subtitle">EM and HD/Others assignments by domain · common zero baseline</p>
-        <div class="stack-chart" role="img" aria-label="General AI 568 EM and 50 HD, Physical AI 118 EM and 13 HD, Agentic AI 83 EM and 2 HD">
+        <div class="stack-chart" role="img" aria-label="EM and HD assignments by domain">
           ${domains.map((domain) => stackRow(domain, summary.mapping_method_counts[domain], maxMapping)).join("")}
         </div>
         <div class="legend" aria-hidden="true"><span style="--legend:var(--em)">EM</span><span style="--legend:var(--hd)">HD / Others</span></div>
@@ -93,6 +95,9 @@ async function renderManifest() {
         <div class="table-shell"><table><tbody>
           <tr><th>Model</th><td>${escapeHtml(data.model.name)}</td></tr>
           <tr><th>Pooling</th><td>${escapeHtml(data.model.pooling)}</td></tr>
+          <tr><th>Definition method</th><td>${escapeHtml(data.definition_method?.name || "Immutable-L3-referenced bilingual AI grounding")}</td></tr>
+          <tr><th>Anchor weight</th><td class="numeric">${data.mapping_method?.anchor_weight}</td></tr>
+          <tr><th>L4 keywords</th><td class="numeric">${summary.keyword_count_per_language} per language</td></tr>
           <tr><th>Score floor</th><td class="numeric">${summary.thresholds.General.score_floor}</td></tr>
           <tr><th>Margin floor</th><td class="numeric">${summary.thresholds.General.margin_floor}</td></tr>
           <tr><th>Stability floor</th><td class="numeric">${summary.thresholds.General.stability_floor}</td></tr>
@@ -100,6 +105,21 @@ async function renderManifest() {
         </tbody></table></div>
       </article>
     </section>`;
+
+  if (data.human_review) {
+    document.querySelector("#report-root").insertAdjacentHTML("beforeend", `
+      <section class="section" aria-labelledby="human-review-title">
+        <div class="section-heading"><div><p class="section-kicker">HUMAN REVIEW LOG</p><h2 id="human-review-title">Top-2 L3 candidate voting without automatic reassignment</h2></div></div>
+        <div class="table-shell"><table><tbody>
+          <tr><th>Candidates per L4</th><td>${data.human_review.candidate_count}</td></tr>
+          <tr><th>Displayed scores</th><td>${data.human_review.score_fields.map(escapeHtml).join(" · ")}</td></tr>
+          <tr><th>Vote log</th><td>${escapeHtml(data.human_review.vote_log)}</td></tr>
+          <tr><th>Majority eligibility</th><td>${data.human_review.minimum_unique_reviewers}+ unique reviewers and a strict majority</td></tr>
+          <tr><th>Automatic reassignment</th><td>${data.human_review.automatic_reassignment ? "Enabled" : "Disabled"}</td></tr>
+          <tr><th>Application policy</th><td>${escapeHtml(data.human_review.application_policy)}</td></tr>
+        </tbody></table></div>
+      </section>`);
+  }
 }
 
 async function renderValidation() {
@@ -110,20 +130,20 @@ async function renderValidation() {
 
   document.querySelector("#report-root").innerHTML = `
     <section class="section" aria-labelledby="validation-overview-title">
-      <div class="section-heading"><div><p class="section-kicker">VALIDATION OVERVIEW</p><h2 id="validation-overview-title">18개 최종 검증이 모두 통과</h2></div><span class="status-pass">${escapeHtml(data.status)}</span></div>
+      <div class="section-heading"><div><p class="section-kicker">VALIDATION OVERVIEW</p><h2 id="validation-overview-title">${total}개 최종 검증이 모두 통과</h2></div><span class="status-pass">${escapeHtml(data.status)}</span></div>
       <div class="kpi-grid">
         ${kpi("Checks", total, "post-build QA", "var(--navy)")}
         ${kpi("Passed", data.passed, "all required checks", "var(--pass)")}
         ${kpi("Failed", data.failed, "no unresolved failures", "var(--physical)")}
-        ${kpi("Pass rate", `${passRate.toFixed(1)}%`, "18 of 18", "var(--agentic)")}
+        ${kpi("Pass rate", `${passRate.toFixed(1)}%`, `${data.passed} of ${total}`, "var(--agentic)")}
       </div>
     </section>
 
     <section class="section panel-grid" aria-label="Validation charts">
       <article class="panel">
-        <h3>검증 결과는 18 PASS, 0 FAIL</h3>
+        <h3>검증 결과는 ${data.passed} PASS, ${data.failed} FAIL</h3>
         <p class="panel-subtitle">Overall validation outcome</p>
-        <div class="validation-bar" role="img" aria-label="18 passed checks and 0 failed checks">
+        <div class="validation-bar" role="img" aria-label="${data.passed} passed checks and ${data.failed} failed checks">
           <div class="validation-bar__pass" style="width:${passRate}%">PASS ${data.passed}</div>
           ${data.failed ? `<div class="validation-bar__fail" style="width:${100 - passRate}%">FAIL ${data.failed}</div>` : ""}
         </div>
@@ -149,11 +169,11 @@ function countValidationCategories(checks) {
   const categories = { Structure: 0, Content: 0, Mapping: 0, Hierarchy: 0, Lineage: 0, Integrity: 0 };
   checks.forEach((row) => {
     const name = row.check;
-    if (/Manifest hashes/.test(name)) categories.Integrity += 1;
-    else if (/hierarchy|L3 source|derived Others/.test(name)) categories.Hierarchy += 1;
-    else if (/crosswalk|Archive|old new IDs/.test(name)) categories.Lineage += 1;
-    else if (/Mapping|Others restricted/.test(name)) categories.Mapping += 1;
-    else if (/bilingual|duplicate titles|source attributes/.test(name)) categories.Content += 1;
+    if (/hash/i.test(name)) categories.Integrity += 1;
+    else if (/hierarchy|L3|scope gate/i.test(name)) categories.Hierarchy += 1;
+    else if (/crosswalk|Archive|lineage|new IDs|reconciliation/i.test(name)) categories.Lineage += 1;
+    else if (/Mapping|Others|EM|candidate|overconfidence|polarization|cybercrime|Anthropocentric/i.test(name)) categories.Mapping += 1;
+    else if (/bilingual|definition|AI technology|keyword|fields/i.test(name)) categories.Content += 1;
     else categories.Structure += 1;
   });
   return categories;

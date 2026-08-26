@@ -16,6 +16,13 @@ output/jupyter-notebook/.virtual_documents/
 *.xdv
 output/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf
 
+# Rebuild-only caches and rendered QA intermediates
+projects/rai_risk_taxonomy_2_0_rebuild_20260826/.artifact_csv_verify/
+projects/rai_risk_taxonomy_2_0_rebuild_20260826/tmp/
+projects/rai_risk_taxonomy_2_0_rebuild_20260826/03_outputs/audit/bge_m3_embeddings_*.npz
+projects/rai_risk_taxonomy_2_0_rebuild_20260826/node_modules
+projects/rai_risk_taxonomy_2_0_rebuild_20260826/output/pdf/*.toc
+
 # paper under submission (do not publish)
 paper_tau_percolation/
 # large intermediate chunks

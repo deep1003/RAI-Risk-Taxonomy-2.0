@@ -1,0 +1,78 @@
+{
+  "date": "2026-08-26",
+  "source_counts": {
+    "Agentic": 83,
+    "General": 591,
+    "Physical": 218
+  },
+  "source_total": 892,
+  "deleted": 60,
+  "merged_away": 20,
+  "split_net_addition": 1,
+  "cleaned_total": 813,
+  "final_domain_counts": {
+    "Agentic AI": 78,
+    "General AI": 623,
+    "Physical AI": 112
+  },
+  "mapping_method_counts": {
+    "Agentic AI": {
+      "EM": 64,
+      "HD": 14
+    },
+    "General AI": {
+      "EM": 462,
+      "HD": 161
+    },
+    "Physical AI": {
+      "EM": 91,
+      "HD": 21
+    }
+  },
+  "others_total": 196,
+  "em_total": 617,
+  "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
+  "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
+  "definition_ai_grounding_rewrites": 261,
+  "l3_scope_deletions": 12,
+  "keyword_count_per_language": 3,
+  "thresholds": {
+    "General": {
+      "score_floor": 0.56,
+      "margin_floor": 0.012,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.48,
+      "anchor_weight": 4.0,
+      "semantic_keyword_weight": 0.025,
+      "lexical_keyword_weight": 0.06,
+      "exclusion_penalty": 0.08,
+      "curated_l3_prior_weight": 0.3
+    },
+    "Agentic": {
+      "score_floor": 0.56,
+      "margin_floor": 0.012,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.48,
+      "anchor_weight": 4.0,
+      "semantic_keyword_weight": 0.025,
+      "lexical_keyword_weight": 0.06,
+      "exclusion_penalty": 0.08,
+      "curated_l3_prior_weight": 0.3
+    },
+    "Physical": {
+      "score_floor": 0.56,
+      "margin_floor": 0.012,
+      "stability_floor": 0.8,
+      "anchor_score_floor": 0.48,
+      "anchor_weight": 4.0,
+      "semantic_keyword_weight": 0.025,
+      "lexical_keyword_weight": 0.06,
+      "exclusion_penalty": 0.08,
+      "curated_l3_prior_weight": 0.3
+    }
+  },
+  "l3_source_rows": 46,
+  "l3_derived_others_rows": 3,
+  "validation_passed": 39,
+  "validation_failed": 0
+}

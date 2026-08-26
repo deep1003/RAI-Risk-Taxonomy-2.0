@@ -1,0 +1,8 @@
+﻿Stage,Count,Change
+Source L4,892,0
+After explicit deletion,853,-39
+After merge consolidation,833,-20
+After split,834,1
+After risk-eligibility deletion,826,-8
+After peer-review deletion,825,-1
+After immutable-L3 scope gate,813,-12

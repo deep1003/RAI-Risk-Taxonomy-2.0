@@ -1,0 +1,18 @@
+{
+  "snapshot_date": "2026-08-26",
+  "source_policy": "immutable-copy",
+  "files": {
+    "csv/L1_Master_KTSPACE_928682217_20260826.csv": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
+    "csv/L1_Master_KTSPACE_928682217_20260826_raw.csv": "861d5440e075462664248413f8119c061ced497a95e87896e5b5c143a901be15",
+    "csv/L3_Master_KTSPACE_928877000_20260826.csv": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
+    "csv/L4-Agentic_KTSPACE_928782574_20260826.csv": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
+    "csv/L4-General_KTSPACE_929564766_20260826.csv": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
+    "csv/L4-Physical_KTSPACE_929694418_20260826.csv": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c",
+    "pdf/AI2X-L4-Agentic-260826-080553.pdf": "8775552559c64f1c6fa135cad82a9f940b4bbe7ef961de2292e827bd9f6c3232",
+    "pdf/AI2X-L4-General-260826-080330.pdf": "5ef16072faa38d0a1c4d7861cccb9bc98c5c588fcef03c17221dc46a10a3dfad",
+    "pdf/AI2X-L4-Physical-260826-080904.pdf": "adf79b07a93d4d7d92a11c89510bc1d9b1861dfcb5fb2ef31567c60a73722761",
+    "pdf/AI2X-Rubric-260826-081836.pdf": "bb3e37816a92d60a9947fa21755e050439f71c19bba66cac22a38fecfa506e56",
+    "pdf/AI2X-리스크 재분류(L1)-260826-081800.pdf": "c090ac2a74f7bcf59cccd954df831ec1c7a75ea37cfc4c6525a87b2a3810dff6",
+    "pdf/AI2X-리스크 재분류(L3)-260826-075626.pdf": "462da9ddafc31d097bf0047d13aea59a1a78762721236ffc4a8e06500e4a79df"
+  }
+}

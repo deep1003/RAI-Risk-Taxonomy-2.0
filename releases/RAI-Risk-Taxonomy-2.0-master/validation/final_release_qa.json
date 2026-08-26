@@ -1,150 +1,211 @@
 {
   "status": "PASS",
-  "passed": 18,
+  "passed": 39,
   "failed": 0,
   "checks": [
     {
+      "check": "Source hashes unchanged",
+      "status": "PASS",
+      "evidence": {
+        "L1": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
+        "L3": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
+        "General": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
+        "Agentic": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
+        "Physical": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c"
+      }
+    },
+    {
+      "check": "Immutable L3 exact-field preservation",
+      "status": "PASS",
+      "evidence": "46 source L3 rows and all seven source fields preserved exactly"
+    },
+    {
+      "check": "Final L4 reconciliation",
+      "status": "PASS",
+      "evidence": "813 = 892 - 60 - 20 + 1"
+    },
+    {
+      "check": "Final L4 IDs unique",
+      "status": "PASS",
+      "evidence": "813 unique IDs"
+    },
+    {
+      "check": "Bilingual L4 fields complete",
+      "status": "PASS",
+      "evidence": "No blank bilingual L4 fields"
+    },
+    {
+      "check": "Mapping method complete",
+      "status": "PASS",
+      "evidence": {
+        "EM": 617,
+        "HD": 196
+      }
+    },
+    {
+      "check": "Others only use HD",
+      "status": "PASS",
+      "evidence": "All Others records are HD"
+    },
+    {
+      "check": "EM excludes Others",
+      "status": "PASS",
+      "evidence": "No EM record assigned to Others"
+    },
+    {
+      "check": "L3 references valid",
+      "status": "PASS",
+      "evidence": "All L3 IDs resolve"
+    },
+    {
+      "check": "Crosswalk has no join explosion",
+      "status": "PASS",
+      "evidence": "893 rows for 892 sources plus one split child"
+    },
+    {
+      "check": "Crosswalk source coverage",
+      "status": "PASS",
+      "evidence": "Every source_row_id appears in the crosswalk"
+    },
+    {
+      "check": "Korean L4 risk-definition endings",
+      "status": "PASS",
+      "evidence": "813/813 definitions end in a risk term"
+    },
+    {
+      "check": "English L4 risk-definition structure",
+      "status": "PASS",
+      "evidence": "All English definitions use the L3-style 'The risk that' structure"
+    },
+    {
+      "check": "Korean L4 definitions name an AI technology",
+      "status": "PASS",
+      "evidence": "813/813 explicitly name AI, an algorithm, an agent, a robot, a learning technology, or a model"
+    },
+    {
+      "check": "English L4 definitions name an AI technology",
+      "status": "PASS",
+      "evidence": "813/813 explicitly name an AI technology"
+    },
+    {
+      "check": "Korean L4 definitions connect AI to an L3-style risk statement",
+      "status": "PASS",
+      "evidence": "813/813 contain a causal mechanism or an explicit risk-statement ending"
+    },
+    {
+      "check": "English L4 definitions connect AI to an L3-style risk statement",
+      "status": "PASS",
+      "evidence": "813/813 contain a causal mechanism or the L3-style 'The risk that' structure"
+    },
+    {
+      "check": "No editorial or generation residue in L4 text",
+      "status": "PASS",
+      "evidence": "0 residual drafting markers"
+    },
+    {
+      "check": "No deprecated generic definition wrapper",
+      "status": "PASS",
+      "evidence": "0 generic wrapper sentences"
+    },
+    {
+      "check": "Every retained L4 was reviewed against an immutable L3 definition",
+      "status": "PASS",
+      "evidence": "46 immutable L3 drafting anchors recorded"
+    },
+    {
+      "check": "Every EM-mapped L4 was drafted against its final immutable L3",
+      "status": "PASS",
+      "evidence": "617/617 EM cards use their final L3 as the drafting anchor"
+    },
+    {
+      "check": "No known English grammar or token-joining defects",
+      "status": "PASS",
+      "evidence": "0 malformed English definitions"
+    },
+    {
+      "check": "No source-note residue in published L4 text",
+      "status": "PASS",
+      "evidence": "0 source-note fragments"
+    },
+    {
+      "check": "L3 scope gate precedes final EM",
+      "status": "PASS",
+      "evidence": "Every released L4 passed the semantic, lexical, or curated L3 scope gate"
+    },
+    {
+      "check": "L3 scope gate performs substantive rejection",
+      "status": "PASS",
+      "evidence": "12 cards rejected before final EM"
+    },
+    {
+      "check": "No L3-scope-ineligible card released",
+      "status": "PASS",
+      "evidence": "12 identified out-of-scope cards archived"
+    },
+    {
+      "check": "Non-risk application contexts removed",
+      "status": "PASS",
+      "evidence": "Eight context-only General source rows are absent from the final L4 release"
+    },
+    {
+      "check": "Risk eligibility precedes EM",
+      "status": "PASS",
+      "evidence": "Every mapped card passed the cleaned eligibility stage"
+    },
+    {
+      "check": "L4 ID prefix matches L3",
+      "status": "PASS",
+      "evidence": "All final L4 IDs inherit the assigned L3 prefix"
+    },
+    {
+      "check": "No final new IDs",
+      "status": "PASS",
+      "evidence": "No generated L4 ID is blank or 'new'"
+    },
+    {
       "check": "Exactly five primary CSV files",
       "status": "PASS",
-      "evidence": [
-        "L1_L2_L3_Master.csv",
-        "L1_Master.csv",
-        "L4_Agentic.csv",
-        "L4_General.csv",
-        "L4_Physical.csv"
-      ]
+      "evidence": "L1_Master.csv, L1_L2_L3_Master.csv, L4_General.csv, L4_Agentic.csv, L4_Physical.csv"
     },
     {
-      "check": "Primary row counts",
+      "check": "Exactly three bilingual L4 keywords",
       "status": "PASS",
-      "evidence": "3,49,618,85,131"
+      "evidence": "Three Korean and three English representative concepts for all 813 cards"
     },
     {
-      "check": "L4 reconciliation",
+      "check": "Keyword profiles cover immutable L3",
       "status": "PASS",
-      "evidence": "834 = 892 - 39 - 20 + 1"
+      "evidence": "46 auditable L3 lexical profiles"
     },
     {
-      "check": "Unique final L4 IDs",
+      "check": "Wage polarization maps to economic disruption",
       "status": "PASS",
-      "evidence": 834
+      "evidence": "G_SOC_ECON"
     },
     {
-      "check": "L4 ID format",
+      "check": "Cybercrime jailbreak maps to security robustness",
       "status": "PASS",
-      "evidence": "All IDs expose L3 plus sequence"
+      "evidence": "G_SYS_SECADV"
     },
     {
-      "check": "Required L4 schema",
+      "check": "Independent-review L3 corrections resolved",
       "status": "PASS",
-      "evidence": [
-        "L0_ID",
-        "L1_ID",
-        "L2_ID",
-        "L3_ID",
-        "L4_ID",
-        "L4_Title_ko",
-        "L4_Title_en",
-        "L4_Description_ko",
-        "L4_Description_en",
-        "facet",
-        "act-type",
-        "Mapping_Method",
-        "source_row_id",
-        "Source_L4_ID",
-        "Source_Instruction_Prompt"
-      ]
+      "evidence": "12/12 audited cases"
     },
     {
-      "check": "Complete bilingual L4 fields",
+      "check": "Overconfidence requires mechanism evidence",
       "status": "PASS",
-      "evidence": "No blanks"
+      "evidence": "4/4 G_SYS_OVERCONF cards contain uncertainty, certainty, calibration, verification, or error evidence"
     },
     {
-      "check": "No within-domain duplicate titles",
+      "check": "Anthropocentric card not forced to overconfidence",
       "status": "PASS",
-      "evidence": "Korean and English"
+      "evidence": "G_Others"
     },
     {
-      "check": "Mapping totals",
+      "check": "Two reviewable L3 candidates per L4",
       "status": "PASS",
-      "evidence": {
-        "EM": 769,
-        "HD": 65
-      }
-    },
-    {
-      "check": "Others restricted to HD",
-      "status": "PASS",
-      "evidence": 65
-    },
-    {
-      "check": "All hierarchy references resolve",
-      "status": "PASS",
-      "evidence": 48
-    },
-    {
-      "check": "Exact L3 source-field preservation",
-      "status": "PASS",
-      "evidence": "46 rows, seven fields"
-    },
-    {
-      "check": "Only derived Others added to hierarchy",
-      "status": "PASS",
-      "evidence": {
-        "IMMUTABLE_SOURCE": 46,
-        "DERIVED_OTHERS_HD": 3
-      }
-    },
-    {
-      "check": "All source rows represented in crosswalk",
-      "status": "PASS",
-      "evidence": 892
-    },
-    {
-      "check": "Archive counts",
-      "status": "PASS",
-      "evidence": {
-        "deleted": 39,
-        "merged_away": 20,
-        "split_children": 2
-      }
-    },
-    {
-      "check": "All old new IDs replaced",
-      "status": "PASS",
-      "evidence": "100 source rows, zero final IDs"
-    },
-    {
-      "check": "Agentic and Physical source attributes remain blank",
-      "status": "PASS",
-      "evidence": "Blank as supplied"
-    },
-    {
-      "check": "Manifest hashes match primary outputs",
-      "status": "PASS",
-      "evidence": {
-        "L1_Master.csv": {
-          "sha256": "b6ae31d34ff46458265ce1ee7383842ad4f2098ffc5194f8e7e80fede96a4f85",
-          "rows": 3
-        },
-        "L1_L2_L3_Master.csv": {
-          "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
-          "rows": 49
-        },
-        "L4_General.csv": {
-          "sha256": "f99e7340639342ee23b0350ae29ea33088a895a7db88fe491bac2a84203239ec",
-          "rows": 618
-        },
-        "L4_Agentic.csv": {
-          "sha256": "cebd0384e367726d50132e06e3e618d8e5c54f059b18b6d9b82edecbdfbcdeaa",
-          "rows": 85
-        },
-        "L4_Physical.csv": {
-          "sha256": "9841c208504ee988fa8f7aed8595d9b6e28350ce90d8880c01bf355870cd9209",
-          "rows": 131
-        }
-      }
+      "evidence": "Every L4 exposes two distinct non-Others L3 candidates with EM and hybrid scores"
     }
   ]
 }

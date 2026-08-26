@@ -1,0 +1,8 @@
+﻿"L1 도메인 이름","한글정의","영문정의"
+"General AI","","General-purpose AI models whose primary inputs and outputs are digital content, including
+text, image, audio, video, and code. The label General AI is used in this report as shorthand
+for this general-purpose model domain, not as a claim about artificial general intelligence."
+"Agentic AI","","Systems that use tools, pursue goals over multiple steps, make delegated decisions, maintain
+state, or coordinate with other agents."
+"Physical AI","","Embodied or cyber-physical systems, including robots and autonomous vehicles, that perceive
+and act in the physical world."

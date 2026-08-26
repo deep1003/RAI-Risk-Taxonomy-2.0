@@ -1,18 +1,19 @@
 # RAI Risk Taxonomy 2.0 master release
 
-This reviewed master release contains the five canonical CSV artifacts, two
-bilingual technical reports, five result figures, and the final QA record.
+This master release contains five canonical CSV artifacts, bilingual technical reports, result figures, and the final QA record.
 
 ## Release summary
 
 - L1 domains: 3
 - L2 dimensions: 3
 - L3 categories: 49, comprising 46 immutable master categories and 3 derived Others categories
-- L4 risk cards: 834
-- EM assignments: 769
-- HD/Others assignments: 65
-- Cleaning reconciliation: 892 source rows minus 39 deletions minus 20 absorbed merge rows plus 1 net split addition equals 834 final rows
-- Post-build validation: 18 passed, 0 failed
+- L4 risk cards: 813
+- General / Agentic / Physical: 623 / 78 / 112
+- EM assignments: 617
+- HD/Others assignments: 196
+- L3-referenced AI-technology definition rewrites: 261
+- Cleaning reconciliation: 892 source rows minus 60 deletions minus 20 absorbed merge rows plus 1 net split addition equals 813 final rows
+- Post-build validation: 39 passed, 0 failed
 
 ## Canonical CSV files
 
@@ -22,9 +23,8 @@ bilingual technical reports, five result figures, and the final QA record.
 - `data/L4_Agentic.csv`
 - `data/L4_Physical.csv`
 
-The source-defined fields of all 46 L3 master rows are preserved exactly. The
-three domain-specific Others categories are derived routing categories for
-records requiring human decision and do not modify the L3 master source.
+All 46 source-defined L3 rows are preserved exactly. The three domain-specific Others categories are derived human-decision queues and do not modify the source L3 master.
+Every Korean and English L4 definition explicitly names an AI technology and follows an L3-style risk-statement structure. Each L4 also contains three representative concepts per language and two reviewable non-Others L3 candidates with base and hybrid EM scores.
 
 ## Reports and validation
 
@@ -32,5 +32,3 @@ records requiring human decision and do not modify the L3 master source.
 - `reports/technical_report_en.pdf`
 - `validation/final_release_qa.json`
 - `manifest.json`
-
-The release manifest records source, model, and primary-output SHA-256 hashes.

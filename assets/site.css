@@ -146,6 +146,12 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .merged-note { margin: -2px 0 8px; color: #667085; font-size: 10px; font-weight: 700; }
 .risk-card__definition { display: -webkit-box; overflow: hidden; margin: 0; color: #667085; font-size: 11px; line-height: 1.55; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
 .risk-card__definition span { color: #475467; }
+.card-candidates { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; }
+.card-candidates > span { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 5px; padding: 6px 7px; border: 1px solid #e4e7ec; border-radius: 7px; background: #f9fafb; min-width: 0; }
+.card-candidates b { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: #eaf0ff; color: #3538cd; font-size: 8px; }
+.card-candidates code { overflow: hidden; color: #475467; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.card-candidates strong { color: #101828; font-size: 10px; }
+.card-candidates small { grid-column: 2 / -1; color: #98a2b3; font-size: 7px; }
 .risk-card__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 12px; }
 .breadcrumb { display: -webkit-box; overflow: hidden; color: #667085; font-size: 9px; line-height: 1.45; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .metric { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; color: #98a2b3; font-size: 8px; }
@@ -176,6 +182,16 @@ main { max-width: 1480px; margin: auto; padding: 28px 36px 48px; }
 .dialog-metrics div { padding: 10px; border: 1px solid var(--line); border-radius: 8px; }
 .dialog-metrics span { display: block; color: #98a2b3; font-size: 9px; }
 .dialog-metrics strong { display: block; margin-top: 4px; font-size: 14px; }
+.review-section > p { margin-bottom: 10px; font-size: 11px; }
+.review-candidates { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.review-candidate { display: flex; flex-direction: column; gap: 7px; padding: 12px; border: 1px solid #d0d5dd; border-radius: 10px; background: #fff; color: #344054; text-decoration: none; transition: border-color .14s ease, box-shadow .14s ease, transform .14s ease; }
+.review-candidate:hover { transform: translateY(-1px); border-color: var(--card-accent); box-shadow: 0 6px 16px rgba(16,24,40,.08); }
+.review-rank { display: flex; align-items: center; justify-content: space-between; color: #667085; font-size: 9px; font-weight: 750; text-transform: uppercase; letter-spacing: .06em; }
+.review-current { padding: 3px 6px; border-radius: 999px; background: #ecfdf3; color: #027a48; font-size: 8px; letter-spacing: 0; }
+.review-candidate > strong { font-size: 12px; line-height: 1.45; }
+.review-scores { display: flex; gap: 7px; }
+.review-scores b { padding: 4px 6px; border-radius: 5px; background: #f2f4f7; color: #344054; font-size: 9px; }
+.review-candidate > small { margin-top: auto; color: #175cd3; font-size: 9px; font-weight: 700; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
 .axis-tag { padding: 5px 8px; border-radius: 6px; background: #eef4ff; color: #3538cd; font-size: 10px; font-weight: 700; }
 .reference-list { list-style: none; margin: 0; padding: 0; }
@@ -216,6 +232,7 @@ footer p { margin: 0; }
   .search-box { grid-column: auto; }
   .dialog-body { padding: 22px 18px; }
   .dialog-metrics { grid-template-columns: repeat(2, 1fr); }
+  .review-candidates { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

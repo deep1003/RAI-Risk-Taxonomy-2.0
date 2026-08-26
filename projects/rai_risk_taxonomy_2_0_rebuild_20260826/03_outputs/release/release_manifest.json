@@ -1,0 +1,138 @@
+{
+  "release_date": "2026-08-26",
+  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/run_rebuild_pipeline.py",
+  "source_hashes": {
+    "L1": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
+    "L3": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
+    "General": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
+    "Agentic": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
+    "Physical": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c"
+  },
+  "model": {
+    "name": "BAAI/bge-m3",
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "pooling": "CLS",
+    "config_sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
+    "tokenizer_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
+    "weights_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
+  },
+  "mapping_method": {
+    "name": "Anchor-regularised keyword-augmented constrained EM",
+    "anchor_weight": 4.0,
+    "semantic_keyword_weight": 0.025,
+    "lexical_keyword_weight": 0.06,
+    "exclusion_penalty": 0.08,
+    "curated_l3_prior_weight": 0.3,
+    "representative_keywords_per_language": 3
+  },
+  "definition_method": {
+    "name": "Immutable-L3-referenced bilingual AI-technology grounding",
+    "provisional_mapping_used_only_as_drafting_anchor": true,
+    "final_mapping_refitted_after_definition_revision": true,
+    "korean_ai_technology_required": true,
+    "english_ai_technology_required": true,
+    "causal_risk_mechanism_required": true,
+    "l3_scope_anchor_floor": 0.6,
+    "l3_scope_hybrid_floor": 0.65
+  },
+  "primary_outputs": {
+    "L1_Master.csv": {
+      "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
+      "rows": 3
+    },
+    "L1_L2_L3_Master.csv": {
+      "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+      "rows": 49
+    },
+    "L4_General.csv": {
+      "sha256": "26977583b50a2dc34fb4ab174ecafa1551ca31eeaa07cf5b4a54aa31fe84de84",
+      "rows": 623
+    },
+    "L4_Agentic.csv": {
+      "sha256": "959b97b3eae40c442764371ff4f04d96ec663f313d52b5c43491d5ddb47db402",
+      "rows": 78
+    },
+    "L4_Physical.csv": {
+      "sha256": "79e0990908ee9fd695f7d1ac483b2bbac03587b8e6588f89ca9b7ec3df1bdfa1",
+      "rows": 112
+    }
+  },
+  "summary": {
+    "date": "2026-08-26",
+    "source_counts": {
+      "Agentic": 83,
+      "General": 591,
+      "Physical": 218
+    },
+    "source_total": 892,
+    "deleted": 60,
+    "merged_away": 20,
+    "split_net_addition": 1,
+    "cleaned_total": 813,
+    "final_domain_counts": {
+      "Agentic AI": 78,
+      "General AI": 623,
+      "Physical AI": 112
+    },
+    "mapping_method_counts": {
+      "Agentic AI": {
+        "EM": 64,
+        "HD": 14
+      },
+      "General AI": {
+        "EM": 462,
+        "HD": 161
+      },
+      "Physical AI": {
+        "EM": 91,
+        "HD": 21
+      }
+    },
+    "others_total": 196,
+    "em_total": 617,
+    "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
+    "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
+    "definition_ai_grounding_rewrites": 261,
+    "l3_scope_deletions": 12,
+    "keyword_count_per_language": 3,
+    "thresholds": {
+      "General": {
+        "score_floor": 0.56,
+        "margin_floor": 0.012,
+        "stability_floor": 0.8,
+        "anchor_score_floor": 0.48,
+        "anchor_weight": 4.0,
+        "semantic_keyword_weight": 0.025,
+        "lexical_keyword_weight": 0.06,
+        "exclusion_penalty": 0.08,
+        "curated_l3_prior_weight": 0.3
+      },
+      "Agentic": {
+        "score_floor": 0.56,
+        "margin_floor": 0.012,
+        "stability_floor": 0.8,
+        "anchor_score_floor": 0.48,
+        "anchor_weight": 4.0,
+        "semantic_keyword_weight": 0.025,
+        "lexical_keyword_weight": 0.06,
+        "exclusion_penalty": 0.08,
+        "curated_l3_prior_weight": 0.3
+      },
+      "Physical": {
+        "score_floor": 0.56,
+        "margin_floor": 0.012,
+        "stability_floor": 0.8,
+        "anchor_score_floor": 0.48,
+        "anchor_weight": 4.0,
+        "semantic_keyword_weight": 0.025,
+        "lexical_keyword_weight": 0.06,
+        "exclusion_penalty": 0.08,
+        "curated_l3_prior_weight": 0.3
+      }
+    },
+    "l3_source_rows": 46,
+    "l3_derived_others_rows": 3,
+    "validation_passed": 39,
+    "validation_failed": 0
+  }
+}

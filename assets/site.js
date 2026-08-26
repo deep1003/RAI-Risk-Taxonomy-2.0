@@ -1,5 +1,7 @@
 const DATA_ROOT = "public/data/releases/RAI-Risk-Taxonomy-2.0-master";
 const PAGE_SIZE = 36;
+const REVIEW_REPOSITORY = "deep1003/RAI-Risk-Taxonomy-2.0";
+const REVIEW_SCHEMA = "rai-taxonomy-human-review-v1";
 
 const state = {
   query: "",
@@ -342,15 +344,21 @@ function cardTemplate(card) {
   const statusBadges = card.mapping_method === "HD"
     ? `<span class="status-badge status--decision">HD / Others</span>`
     : `<span class="status-badge status--em">EM</span>`;
+  const candidates = (card.review_candidates || []).slice(0, 2);
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
     <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${statusBadges}</div>
     <h3>${bilingualLabel(card.label_en, card.label_ko)}</h3>
     <p class="risk-card__definition">${escapeHtml(card.definition_en || "정의 정보 없음")} ${card.definition_ko ? `<span>(${escapeHtml(card.definition_ko)})</span>` : ""}</p>
+    ${candidates.length === 2 ? `<div class="card-candidates" aria-label="상위 L3 후보 점수">${candidates.map((candidate) => candidateScoreCompact(candidate)).join("")}</div>` : ""}
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
-      ${card.em_score != null ? `<span class="metric"><small>EM SCORE</small><strong>${formatMetric(card.em_score)}</strong></span>` : `<span class="metric"><small>DECISION</small><strong>HD</strong></span>`}
+      ${card.hybrid_em_score != null ? `<span class="metric"><small>HYBRID EM</small><strong>${formatMetric(card.hybrid_em_score)}</strong></span>` : `<span class="metric"><small>DECISION</small><strong>HD</strong></span>`}
     </div>
   </article>`;
+}
+
+function candidateScoreCompact(candidate) {
+  return `<span><b>${candidate.rank}</b><code>${escapeHtml(candidate.l3_id)}</code><strong>${formatMetric(candidate.em_score)}</strong><small>Hybrid ${formatMetric(candidate.hybrid_em_score)}</small></span>`;
 }
 
 function renderPagination(pageCount) {
@@ -403,20 +411,59 @@ function openCard(l4Id) {
     ? ` <span class="status-badge status--decision">HD / Others</span>`
     : ` <span class="status-badge status--em">EM</span>`;
   const attributes = [card.facet ? `Facet: ${card.facet}` : "", card.act_type ? `Act-type: ${card.act_type}` : ""].filter(Boolean);
+  const keywords = [...(card.keywords_ko || []), ...(card.keywords_en || [])].filter(Boolean);
+  const reviewCandidates = (card.review_candidates || []).slice(0, 2);
   ui.dialogContent.innerHTML = `<div class="dialog-body" style="--card-accent:${domainColor}">
     <div class="dialog-identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span>${statusBadges}</div>
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>
     <div class="dialog-metrics">
-      <div><span>EM score</span><strong>${formatMetric(card.em_score)}</strong></div>
-      <div><span>EM margin</span><strong>${formatMetric(card.em_margin)}</strong></div>
+      <div><span>Assigned EM score</span><strong>${formatMetric(card.em_score)}</strong></div>
+      <div><span>Hybrid EM score</span><strong>${formatMetric(card.hybrid_em_score)}</strong></div>
+      <div><span>Hybrid margin</span><strong>${formatMetric(card.hybrid_em_margin)}</strong></div>
       <div><span>EM stability</span><strong>${formatMetric(card.em_stability)}</strong></div>
     </div>
+    ${reviewCandidates.length === 2 ? `<section class="dialog-section review-section"><h3>Human L3 review</h3><p>두 후보의 기본 EM 점수와 Hybrid EM 점수를 비교해 더 적합한 L3를 선택하세요. 선택 시 GitHub 검수 로그 작성 화면이 열리며, 실제 재배치는 자동 실행되지 않습니다.</p><div class="review-candidates">${reviewCandidates.map((candidate) => reviewCandidateTemplate(card, candidate)).join("")}</div></section>` : ""}
+    ${keywords.length ? `<section class="dialog-section"><h3>Representative concepts</h3><div class="tag-row">${keywords.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
     ${attributes.length ? `<section class="dialog-section"><h3>L4 attributes</h3><div class="tag-row">${attributes.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
-    <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)} · ${escapeHtml(card.domain_route_basis)} · ${escapeHtml(card.transformation_action)}</p>${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}</section>
+    <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)} · ${escapeHtml(card.domain_route_basis)} · ${escapeHtml(card.transformation_action)}</p>${card.definition_l3_anchor_id ? `<p class="definition-ko">Definition anchor: ${escapeHtml(card.definition_l3_anchor_id)} · ${escapeHtml(card.definition_grounding_action || "validated")} · ${formatMetric(card.definition_l3_anchor_score)}</p>` : ""}${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}</section>
   </div>`;
   ui.dialog.showModal();
+}
+
+function reviewCandidateTemplate(card, candidate) {
+  const node = nodeById.get(candidate.l3_id);
+  const current = candidate.l3_id === card.primary_l3_id ? `<span class="review-current">현재 배정</span>` : "";
+  return `<a class="review-candidate" href="${escapeAttribute(reviewIssueUrl(card, candidate))}" target="_blank" rel="noopener noreferrer">
+    <span class="review-rank">후보 ${candidate.rank}${current}</span>
+    <strong>${escapeHtml(candidate.l3_id)} · ${bilingualLabel(node?.label_en || "Unknown L3", node?.label_ko || "")}</strong>
+    <span class="review-scores"><b>EM ${formatMetric(candidate.em_score)}</b><b>Hybrid ${formatMetric(candidate.hybrid_em_score)}</b></span>
+    <small>이 후보를 선택하고 GitHub에 기록 ↗</small>
+  </a>`;
+}
+
+function reviewIssueUrl(card, selected) {
+  const candidates = (card.review_candidates || []).slice(0, 2);
+  const payload = {
+    schema: REVIEW_SCHEMA,
+    release_id: card.release_id,
+    review_snapshot_id: card.review_snapshot_id,
+    l4_id: card.l4_id,
+    source_row_id: card.source_row_id,
+    current_l3_id: card.primary_l3_id,
+    selected_l3_id: selected.l3_id,
+    selected_rank: selected.rank,
+    candidate_1: candidates[0] || null,
+    candidate_2: candidates[1] || null,
+    mapping_method: card.mapping_method,
+    page_url: window.location.href.split("#")[0],
+    client_created_at: new Date().toISOString(),
+    automatic_reassignment_authorised: false,
+  };
+  const title = `[L3 review] ${card.source_row_id} -> ${selected.l3_id}`;
+  const body = `<!-- ${REVIEW_SCHEMA} -->\n검수자는 아래 기록을 확인한 뒤 이슈를 제출해 주세요. 실제 재배치는 별도 명시 지시가 있을 때만 수행됩니다.\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\``;
+  return `https://github.com/${REVIEW_REPOSITORY}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
 function referenceTemplate(reference) {

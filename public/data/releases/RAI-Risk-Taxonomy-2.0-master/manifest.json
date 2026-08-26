@@ -10,33 +10,43 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 834,
-    "em": 769,
-    "hd": 65,
-    "general": 618,
-    "agentic": 85,
-    "physical": 131
+    "l4": 813,
+    "em": 617,
+    "hd": 196,
+    "general": 623,
+    "agentic": 78,
+    "physical": 112
   },
   "cleaning": {
     "source_total": 892,
-    "deleted": 39,
+    "deleted": 60,
     "merged_away": 20,
     "split_net_addition": 1,
-    "final_total": 834
+    "final_total": 813
   },
   "method": {
-    "algorithm": "Expectation Maximization with BGE-M3 semantic representations",
+    "algorithm": "Anchor-regularised keyword-augmented constrained EM with BGE-M3 semantic representations",
     "boundary_policy": "HD assignment to domain-specific Others",
-    "l3_master_precedence": true
+    "l3_master_precedence": true,
+    "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
+    "representative_keywords_per_language": 3
+  },
+  "human_review": {
+    "review_snapshot_id": "f27eeafd8e148535",
+    "candidate_count": 2,
+    "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
+    "daily_aggregation": true,
+    "automatic_reassignment": false,
+    "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
   },
   "validation": {
     "status": "PASS",
-    "passed": 18,
+    "passed": 39,
     "failed": 0
   },
   "artifacts": {
     "L1_Master.csv": {
-      "sha256": "b6ae31d34ff46458265ce1ee7383842ad4f2098ffc5194f8e7e80fede96a4f85",
+      "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
       "rows": 3
     },
     "L1_L2_L3_Master.csv": {
@@ -44,16 +54,16 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "f99e7340639342ee23b0350ae29ea33088a895a7db88fe491bac2a84203239ec",
-      "rows": 618
+      "sha256": "26977583b50a2dc34fb4ab174ecafa1551ca31eeaa07cf5b4a54aa31fe84de84",
+      "rows": 623
     },
     "L4_Agentic.csv": {
-      "sha256": "cebd0384e367726d50132e06e3e618d8e5c54f059b18b6d9b82edecbdfbcdeaa",
-      "rows": 85
+      "sha256": "959b97b3eae40c442764371ff4f04d96ec663f313d52b5c43491d5ddb47db402",
+      "rows": 78
     },
     "L4_Physical.csv": {
-      "sha256": "9841c208504ee988fa8f7aed8595d9b6e28350ce90d8880c01bf355870cd9209",
-      "rows": 131
+      "sha256": "79e0990908ee9fd695f7d1ac483b2bbac03587b8e6588f89ca9b7ec3df1bdfa1",
+      "rows": 112
     }
   }
 }
