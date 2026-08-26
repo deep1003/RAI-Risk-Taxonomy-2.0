@@ -1,0 +1,15 @@
+{
+  "schema": "rai-taxonomy-human-review-v1",
+  "generated_at": null,
+  "source": "GitHub Issues",
+  "automatic_reassignment": false,
+  "application_policy": "Explicit user instruction is required before any taxonomy reassignment",
+  "issue_records_with_marker": 0,
+  "valid_vote_issues": 0,
+  "rejected_vote_issues": 0,
+  "effective_unique_reviewer_card_votes": 0,
+  "cards_reviewed": 0,
+  "majority_eligible_cards": 0,
+  "proposed_changes": 0,
+  "daily": []
+}
