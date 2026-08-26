@@ -77,6 +77,23 @@ class MasterSiteReleaseTests(unittest.TestCase):
         self.assertIn("18/18 QA PASS", page)
         for name in ("L1_Master.csv", "L1_L2_L3_Master.csv", "L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv"):
             self.assertIn(f"releases/{RELEASE_ID}/data/{name}", page)
+        self.assertIn(f"releases/{RELEASE_ID}/manifest.html", page)
+        self.assertIn(f"releases/{RELEASE_ID}/validation.html", page)
+
+    def test_manifest_and_validation_have_html_tables_and_charts(self) -> None:
+        manifest_page = (SOURCE / "manifest.html").read_text(encoding="utf-8")
+        validation_page = (SOURCE / "validation.html").read_text(encoding="utf-8")
+        report_script = (ROOT / "assets" / "release-report.js").read_text(encoding="utf-8")
+        report_style = (ROOT / "assets" / "release-report.css").read_text(encoding="utf-8")
+        self.assertIn('data-report="manifest"', manifest_page)
+        self.assertIn('data-report="validation"', validation_page)
+        self.assertIn('href="manifest.json" download', manifest_page)
+        self.assertIn('href="validation/final_release_qa.json" download', validation_page)
+        self.assertIn('<table>', report_script)
+        self.assertIn('class="bar-chart"', report_script)
+        self.assertIn('class="stack-chart"', report_script)
+        self.assertIn('class="validation-bar"', report_script)
+        self.assertIn(".table-shell", report_style)
 
     def test_manifest_hashes_match_distribution_manifest(self) -> None:
         source_manifest = json.loads((SOURCE / "manifest.json").read_text(encoding="utf-8"))
