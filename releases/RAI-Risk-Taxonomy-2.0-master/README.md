@@ -10,12 +10,13 @@ This master release contains five canonical CSV artifacts, bilingual technical r
 - L4 risk cards: 808
 - L4 title terminology normalisations: 66
 - Semantic near-duplicate review: 66 candidate pairs, 5 lower-representativeness cards discarded
-- General / Agentic / Physical: 618 / 78 / 112
-- EM assignments: 613
-- HD/Others assignments: 195
+- General / Agentic / Physical: 599 / 90 / 119
+- EM assignments: 612
+- HD/Others assignments: 196
+- L1-first cross-domain reviews: 30, including 14 retained in the confirmed L1's Others queue because no exact current L3 exists
 - L3-referenced AI-technology definition rewrites: 260
 - Cleaning reconciliation: 892 source rows minus 65 deletions minus 20 absorbed merge rows plus 1 net split addition equals 808 final rows
-- Post-build validation: 47 passed, 0 failed
+- Post-build validation: 50 passed, 0 failed
 
 ## Canonical CSV files
 
@@ -33,4 +34,5 @@ Every Korean and English L4 definition explicitly names an AI technology and fol
 - `reports/technical_report_ko.pdf`
 - `reports/technical_report_en.pdf`
 - `validation/final_release_qa.json`
+- `validation/L1_Cross_Domain_Routing_Audit.csv`
 - `manifest.json`

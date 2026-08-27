@@ -1,6 +1,9 @@
 ﻿Check,Status,Detail
 Source hashes unchanged,PASS,"{""L1"": ""a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd"", ""L3"": ""b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4"", ""General"": ""97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8"", ""Agentic"": ""d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf"", ""Physical"": ""d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c""}"
 Immutable L3 exact-field preservation,PASS,46 source L3 rows and all seven source fields preserved exactly
+Reviewed L1 routing decisions applied before L3 mapping,PASS,30/30 reviewed L1 decisions applied
+Reviewed cards without a matching current L3 are held in domain Others,PASS,14/14 reviewed no-match cards held for human decision
+Reviewed exact L3 decisions resolved,PASS,17/17 reviewed exact L3 decisions resolved
 Final L4 reconciliation,PASS,808 = 892 - 65 - 20 + 1
 Final L4 IDs unique,PASS,808 unique IDs
 Bilingual L4 fields complete,PASS,No blank bilingual L4 fields
@@ -12,7 +15,7 @@ Every semantic near-duplicate candidate has a documented decision,PASS,66 candid
 Near-duplicate deletions match the configured reviewed set,PASS,5 lower-representativeness cards deleted
 Near-duplicate representatives remain in the release,PASS,5 representatives retained and 5 duplicates absent
 High-similarity distinct-scope cards are not automatically deleted,PASS,"Protected attributes, weapon types, affected targets, and harm mechanisms require separate review"
-Mapping method complete,PASS,"{'EM': 613, 'HD': 195}"
+Mapping method complete,PASS,"{'EM': 612, 'HD': 196}"
 Others only use HD,PASS,All Others records are HD
 EM excludes Others,PASS,No EM record assigned to Others
 L3 references valid,PASS,All L3 IDs resolve
@@ -27,7 +30,7 @@ English L4 definitions connect AI to an L3-style risk statement,PASS,808/808 con
 No editorial or generation residue in L4 text,PASS,0 residual drafting markers
 No deprecated generic definition wrapper,PASS,0 generic wrapper sentences
 Every retained L4 was reviewed against an immutable L3 definition,PASS,46 immutable L3 drafting anchors recorded
-Every EM-mapped L4 was drafted against its final immutable L3,PASS,613/613 EM cards use their final L3 as the drafting anchor
+Every EM-mapped L4 was drafted against its final immutable L3,PASS,612/612 EM cards use their final L3 as the drafting anchor
 No known English grammar or token-joining defects,PASS,0 malformed English definitions
 No source-note residue in published L4 text,PASS,0 source-note fragments
 L3 scope gate precedes final EM,PASS,"Every released L4 passed the semantic, lexical, or curated L3 scope gate"
@@ -42,7 +45,7 @@ Exactly three bilingual L4 keywords,PASS,Three Korean and three English represen
 Keyword profiles cover immutable L3,PASS,46 auditable L3 lexical profiles
 Wage polarization maps to economic disruption,PASS,G_SOC_ECON
 Cybercrime jailbreak maps to security robustness,PASS,G_SYS_SECADV
-Independent-review L3 corrections resolved,PASS,12/12 audited cases
+Independent-review L3 corrections resolved,PASS,10/10 audited cases
 Overconfidence requires mechanism evidence,PASS,"4/4 G_SYS_OVERCONF cards contain uncertainty, certainty, calibration, verification, or error evidence"
 Anthropocentric card not forced to overconfidence,PASS,G_Others
 Two reviewable L3 candidates per L4,PASS,Every L4 exposes two distinct non-Others L3 candidates with EM and hybrid scores

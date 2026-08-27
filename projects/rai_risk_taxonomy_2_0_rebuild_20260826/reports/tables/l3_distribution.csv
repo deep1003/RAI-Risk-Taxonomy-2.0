@@ -1,50 +1,50 @@
 ﻿L1_Title_en,L3_ID,L3_Title_en,Mapping_Method,Count
-Agentic AI,A_INT_CASCADE,Cascading Failure and Instability,EM,7
+Agentic AI,A_INT_CASCADE,Cascading Failure and Instability,EM,8
 Agentic AI,A_INT_COLLUSION,Collusion,EM,4
-Agentic AI,A_INT_CONFLICT,Competitive Conflict,EM,4
+Agentic AI,A_INT_CONFLICT,Competitive Conflict,EM,3
 Agentic AI,A_INT_COORD,Coordination Failure,EM,5
-Agentic AI,A_Others,Others and human decision,HD,13
-Agentic AI,A_SYS_AUTH,Excessive Authority and Agency,EM,17
+Agentic AI,A_Others,Others and human decision,HD,19
+Agentic AI,A_SYS_AUTH,Excessive Authority and Agency,EM,16
 Agentic AI,A_SYS_DECEPT,Deception and Scheming,EM,6
-Agentic AI,A_SYS_GOAL,Goal Misalignment,EM,13
+Agentic AI,A_SYS_GOAL,Goal Misalignment,EM,19
 Agentic AI,A_SYS_SELFCOR,Self-Correction Failure,EM,6
-Agentic AI,A_SYS_TRACE,Accountability and Traceability Gap,EM,3
+Agentic AI,A_SYS_TRACE,Accountability and Traceability Gap,EM,4
 General AI,G_INT_ALLOC,Allocative Discrimination,EM,7
-General AI,G_INT_ANTH,Anthropomorphism,EM,12
+General AI,G_INT_ANTH,Anthropomorphism,EM,14
 General AI,G_INT_COPY,Copyright Infringement,EM,9
 General AI,G_INT_ILLEGAL,Illegal Conduct,EM,11
 General AI,G_INT_POL,Political Bias and Manipulation,EM,10
-General AI,G_INT_PRIV,Privacy Violation,EM,26
-General AI,G_INT_REL,Unhealthy Human-AI Relationship,EM,4
+General AI,G_INT_PRIV,Privacy Violation,EM,25
+General AI,G_INT_REL,Unhealthy Human-AI Relationship,EM,5
 General AI,G_INT_REPR,Representational Harm and Stereotyping,EM,26
 General AI,G_INT_SELF,Self-harm,EM,10
 General AI,G_INT_SEX,Sexual Harm and Exploitation,EM,9
-General AI,G_INT_UNETH,Unethical Conduct and Manipulation,EM,20
-General AI,G_INT_VALUE,Value Imposition and Normative Homogenization,EM,21
+General AI,G_INT_UNETH,Unethical Conduct and Manipulation,EM,22
+General AI,G_INT_VALUE,Value Imposition and Normative Homogenization,EM,20
 General AI,G_INT_VIOL,Violence,EM,11
 General AI,G_INT_WEAP,Weaponization,EM,20
-General AI,G_Others,Others and human decision,HD,161
+General AI,G_Others,Others and human decision,HD,148
 General AI,G_SOC_CULT,Cultural and Epistemic Erosion,EM,13
 General AI,G_SOC_DEMOC,Erosion of Democracy and Civic Order,EM,6
 General AI,G_SOC_ECON,Economic and Employment Disruption,EM,11
-General AI,G_SOC_ENV,Environmental and Sustainability Impact,EM,19
+General AI,G_SOC_ENV,Environmental and Sustainability Impact,EM,18
 General AI,G_SOC_GOV,Governance and Accountability Void,EM,18
-General AI,G_SOC_POWER,Inequality and Power Concentration,EM,19
-General AI,G_SYS_CONTEST,Non-Contestability,EM,5
+General AI,G_SOC_POWER,Inequality and Power Concentration,EM,20
+General AI,G_SYS_CONTEST,Non-Contestability,EM,4
 General AI,G_SYS_CONTEXT,Context-Awareness Failure,EM,8
-General AI,G_SYS_EVAL,Evaluation and Assurance Failure,EM,42
+General AI,G_SYS_EVAL,Evaluation and Assurance Failure,EM,37
 General AI,G_SYS_INCONS,Inconsistency,EM,7
-General AI,G_SYS_INPUT,Input Comprehension Failure,EM,8
-General AI,G_SYS_MISINFO,Misinformation,EM,26
-General AI,G_SYS_OEXT,Over-Extension,EM,18
+General AI,G_SYS_INPUT,Input Comprehension Failure,EM,9
+General AI,G_SYS_MISINFO,Misinformation,EM,25
+General AI,G_SYS_OEXT,Over-Extension,EM,17
 General AI,G_SYS_OREF,Over-Refusal,EM,2
 General AI,G_SYS_OVERCONF,Overconfidence,EM,4
 General AI,G_SYS_POLICY,System Policy Exposure,EM,8
-General AI,G_SYS_SECADV,Security and Adversarial Robustness Failure,EM,37
+General AI,G_SYS_SECADV,Security and Adversarial Robustness Failure,EM,35
 General AI,G_SYS_TRANS,Lack of Transparency,EM,10
 Physical AI,P_INT_SAFETY,Human-Robot Physical Safety Failure,EM,17
 Physical AI,P_INT_TAMPER,Physical Tampering and Sabotage,EM,11
-Physical AI,P_Others,Others and human decision,HD,21
-Physical AI,P_SYS_CONTROL,Unsafe Physical Control and Actuation,EM,45
+Physical AI,P_Others,Others and human decision,HD,29
+Physical AI,P_SYS_CONTROL,Unsafe Physical Control and Actuation,EM,44
 Physical AI,P_SYS_HARDWARE,Hardware and Mechanical Integrity Failure,EM,5
 Physical AI,P_SYS_STATE,Physical State Estimation and Sensor-Fusion Failure,EM,13

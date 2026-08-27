@@ -655,6 +655,58 @@ CURATED_L3_HINTS = {
     "SRC-P-0212": "G_INT_UNETH",
 }
 
+# Reviewed L1 decisions are applied after instruction parsing and master-L3
+# curation.  This prevents an L3 hint prefix from silently deciding the L1
+# domain.  When no existing L3 in the reviewed L1 adequately represents the
+# card, the card is held in that L1's Others category for human determination.
+L1_CROSS_DOMAIN_REVIEW = {
+    # General to Agentic
+    "SRC-G-0127": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "Autonomous long-horizon goal divergence is an agent goal-pursuit failure."},
+    "SRC-G-0449": {"target_domain": "Agentic", "target_l3": "", "rationale": "Coercion and extortion are performed by an acting AI agent, but no current Agentic L3 precisely covers coercive conduct."},
+    "SRC-G-0118": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "AGI goal-safety failure concerns autonomous goal pursuit and alignment."},
+    "SRC-G-0451": {"target_domain": "Agentic", "target_l3": "A_INT_CASCADE", "rationale": "Financial instability arises through interacting autonomous agents and cascading effects."},
+    "SRC-G-0123": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "Goal misgeneralisation is an autonomous goal-alignment failure."},
+    "SRC-G-0401": {"target_domain": "Agentic", "target_l3": "A_SYS_AUTH", "rationale": "Autonomous cyber offence involves consequential action beyond appropriate authority."},
+    "SRC-G-0415": {"target_domain": "Agentic", "target_l3": "", "rationale": "Uncontrolled self-improvement and loss of control are Agentic risks without a precise current L3."},
+    "SRC-G-0103": {"target_domain": "Agentic", "target_l3": "A_SYS_TRACE", "rationale": "Unintelligible agent decisions impede tracing autonomous decisions and actions."},
+    "SRC-G-0077": {"target_domain": "Agentic", "target_l3": "", "rationale": "Long-horizon unsupervisable action pathways are Agentic, but no current L3 fully captures supervision loss."},
+    "SRC-G-0116": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "Goal misalignment with human values concerns autonomous goal pursuit."},
+    "SRC-G-0477": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "Environmental self-modelling for influence is instrumental autonomous goal pursuit."},
+    "SRC-G-0490": {"target_domain": "Agentic", "target_l3": "A_SYS_GOAL", "rationale": "Self-preservation and shutdown resistance are instrumental goal-pursuit failures."},
+    "SRC-G-0134": {"target_domain": "Agentic", "target_l3": "A_SYS_DECEPT", "rationale": "Deceptive alignment via self-simulation is strategic agent deception."},
+    "SRC-G-0447": {"target_domain": "Agentic", "target_l3": "A_SYS_AUTH", "rationale": "Autonomous replication and resource acquisition exceed authorised operational boundaries."},
+    "SRC-A-0059": {"target_domain": "Agentic", "target_l3": "", "rationale": "Multi-agent safeguard bypass is Agentic, but the current Agentic L3 set has no security-robustness category."},
+
+    # General to Physical. The current Physical L3 master has no evaluation,
+    # privacy, attachment, or certification category for these mechanisms.
+    "SRC-P-0205": {"target_domain": "Physical", "target_l3": "", "rationale": "Embodied workplace surveillance is Physical, with no matching current Physical L3."},
+    "SRC-P-0212": {"target_domain": "Physical", "target_l3": "", "rationale": "Attachment exploitation by an embodied companion system is Physical, with no matching current Physical L3."},
+    "SRC-P-0162": {"target_domain": "Physical", "target_l3": "", "rationale": "Humanoid safety certification is Physical, but evaluation and certification are absent from the current Physical L3 set."},
+    "SRC-P-0004": {"target_domain": "Physical", "target_l3": "", "rationale": "Physical-AI evaluation under synthetic-data divergence has no matching current Physical L3."},
+    "SRC-P-0127": {"target_domain": "Physical", "target_l3": "", "rationale": "Household-robot safety evaluation has no matching current Physical L3."},
+    "SRC-A-0032": {"target_domain": "Physical", "target_l3": "", "rationale": "The source explicitly routes physical-user settings to Physical; the current Physical L3 set lacks an evaluation category."},
+    "SRC-A-0050": {"target_domain": "Physical", "target_l3": "", "rationale": "The source explicitly routes household robot benchmarks to Physical; the current Physical L3 set lacks an evaluation category."},
+    "SRC-P-0177": {"target_domain": "Physical", "target_l3": "", "rationale": "Robot red-team evaluation is Physical, but no current Physical L3 covers evaluation methodology."},
+
+    # Agentic to General
+    "SRC-A-0079": {"target_domain": "General", "target_l3": "G_INT_UNETH", "rationale": "Manipulation and coercion through dependence are general unethical-interaction harms."},
+    "SRC-A-0077": {"target_domain": "General", "target_l3": "G_INT_REL", "rationale": "Psychological dependency on conversational systems is a human-AI relationship risk."},
+    "SRC-A-0054": {"target_domain": "General", "target_l3": "G_SOC_POWER", "rationale": "Market monopolisation is a societal concentration-of-power effect."},
+    "SRC-P-0192": {"target_domain": "General", "target_l3": "G_INT_UNETH", "rationale": "Conversational dark patterns are general unethical interaction rather than autonomous deception."},
+    "SRC-P-0188": {"target_domain": "General", "target_l3": "G_INT_ANTH", "rationale": "Impersonation of human roles is anthropomorphic representation in general human-AI interaction."},
+
+    # Physical to Agentic
+    "SRC-P-0057": {"target_domain": "Agentic", "target_l3": "", "rationale": "Emergent post-deployment capabilities and behaviour are Agentic, without a precise current Agentic L3."},
+
+    # Explicit instruction conflict found during the same audit.
+    "SRC-P-0190": {"target_domain": "Agentic", "target_l3": "", "rationale": "The source explicitly identifies a software-agent interface attack surface; no current Agentic L3 covers security attack surfaces."},
+}
+
+# Same-L1 semantic correction requested during card review.
+SAME_L1_REVIEWED_L3 = {
+    "SRC-G-0374": "G_INT_ANTH",
+}
+
 # Bundled or underspecified mechanisms are retained for human determination
 # rather than being forced into a misleading single L3 category.
 FORCE_HD_REASONS = {
@@ -1587,6 +1639,68 @@ def apply_l3_master_curation(cleaned: pd.DataFrame) -> pd.DataFrame:
     return cleaned.reset_index(drop=True)
 
 
+def apply_cross_domain_l1_review(
+    cleaned: pd.DataFrame,
+    audits: dict[str, pd.DataFrame],
+) -> tuple[pd.DataFrame, dict[str, pd.DataFrame]]:
+    """Apply audited L1 decisions before any domain-constrained EM fit."""
+    cleaned = cleaned.copy()
+    review_rows: list[dict] = []
+    for source_row_id, decision in L1_CROSS_DOMAIN_REVIEW.items():
+        mask = cleaned["source_row_id"].eq(source_row_id)
+        if mask.sum() != 1:
+            raise AssertionError(f"L1 review target not uniquely resolvable: {source_row_id}")
+        idx = cleaned.index[mask][0]
+        before_domain = clean_text(cleaned.at[idx, "target_domain"])
+        before_hint = clean_text(cleaned.at[idx, "l3_candidate_hint"])
+        target_domain = decision["target_domain"]
+        target_l3 = decision["target_l3"]
+        if target_l3 and target_l3[0] != target_domain[0]:
+            raise AssertionError(f"L1/L3 review mismatch: {source_row_id} -> {target_domain}/{target_l3}")
+        cleaned.at[idx, "target_domain"] = target_domain
+        cleaned.at[idx, "l3_candidate_hint"] = target_l3
+        cleaned.at[idx, "force_domain_others"] = not bool(target_l3)
+        cleaned.at[idx, "domain_route_basis"] = "L1_CROSS_DOMAIN_REVIEW"
+        cleaned.at[idx, "transformation_action"] = clean_text(
+            cleaned.at[idx, "transformation_action"] + "|L1_CROSS_DOMAIN_REVIEW"
+        )
+        review_rows.append({
+            "source_row_id": source_row_id,
+            "source_domain": cleaned.at[idx, "source_domain"],
+            "source_l4_id": cleaned.at[idx, "source_l4_id"],
+            "title_ko": cleaned.at[idx, "title_ko"],
+            "title_en": cleaned.at[idx, "title_en"],
+            "previous_target_domain": before_domain,
+            "previous_l3_hint": before_hint,
+            "reviewed_target_domain": target_domain,
+            "reviewed_target_l3": target_l3 or f"{target_domain[0]}_Others",
+            "force_domain_others": not bool(target_l3),
+            "review_basis": (
+                "EXPLICIT_INSTRUCTION_CONFLICT"
+                if source_row_id == "SRC-P-0190" else "CROSS_DOMAIN_SEMANTIC_AUDIT"
+            ),
+            "review_rationale": decision["rationale"],
+        })
+
+    for source_row_id, target_l3 in SAME_L1_REVIEWED_L3.items():
+        mask = cleaned["source_row_id"].eq(source_row_id)
+        if mask.sum() != 1:
+            raise AssertionError(f"Same-L1 review target not uniquely resolvable: {source_row_id}")
+        idx = cleaned.index[mask][0]
+        target_domain = clean_text(cleaned.at[idx, "target_domain"])
+        if target_l3[0] != target_domain[0]:
+            raise AssertionError(f"Same-L1 review changed domain: {source_row_id} -> {target_l3}")
+        cleaned.at[idx, "l3_candidate_hint"] = target_l3
+        cleaned.at[idx, "force_domain_others"] = False
+        cleaned.at[idx, "domain_route_basis"] = "SAME_L1_SEMANTIC_REVIEW"
+
+    cleaned["force_domain_others"] = cleaned.get(
+        "force_domain_others", pd.Series(False, index=cleaned.index)
+    ).fillna(False).astype(bool)
+    audits["l1_cross_domain"] = pd.DataFrame(review_rows)
+    return cleaned.reset_index(drop=True), audits
+
+
 def normalise_l4_titles(
     cleaned: pd.DataFrame,
     audits: dict[str, pd.DataFrame],
@@ -1771,6 +1885,9 @@ def enforce_l3_grounded_ai_definitions(
         if forced_scope_reason:
             scope_pass = False
             scope_reason = "DELETE_L3_SCOPE_MISMATCH: " + forced_scope_reason
+        elif bool(row.get("force_domain_others", False)):
+            scope_pass = True
+            scope_reason = "REVIEWED_L1_SCOPE_WITHOUT_MATCHING_CURRENT_L3: retain in domain Others"
         elif curated_hint:
             scope_pass = True
             scope_reason = "CURATED_ALIGNMENT_WITH_IMMUTABLE_L3"
@@ -2362,7 +2479,12 @@ def map_em(cleaned: pd.DataFrame, hierarchy: pd.DataFrame, phase: str = "FINAL")
             strong_keyword_evidence = selected_keyword_support >= 0.55
             baseline_l3 = baseline_l3_by_source.get(cards.iloc[i]["source_row_id"], "")
             baseline_was_others = baseline_l3.endswith("Others")
-            forced_reason = FORCE_HD_REASONS.get(cards.iloc[i]["source_row_id"], "")
+            force_domain_others = bool(cards.iloc[i].get("force_domain_others", False))
+            forced_reason = (
+                "L1_REVIEW_NO_MATCHING_CURRENT_L3"
+                if force_domain_others
+                else FORCE_HD_REASONS.get(cards.iloc[i]["source_row_id"], "")
+            )
             if forced_reason:
                 flags.append(forced_reason)
             if detail["score"][i] < score_floor and not strong_keyword_evidence:
@@ -2647,6 +2769,7 @@ def main() -> None:
     cleaned, audits = apply_cleaning(source)
     cleaned, audits = apply_peer_review(cleaned, audits)
     cleaned = apply_l3_master_curation(cleaned)
+    cleaned, audits = apply_cross_domain_l1_review(cleaned, audits)
     cleaned, audits = normalise_l4_titles(cleaned, audits)
     split_net_addition = len(audits["split"]) - audits["split"]["source_row_id"].nunique()
     initial_expected = len(source) - len(audits["deleted"]) - len(audits["merged"]) + split_net_addition
@@ -2670,6 +2793,13 @@ def main() -> None:
     mapped = attach_title_terminology_sources(mapped)
     flat = flatten_release(mapped, hierarchy, lookup)
     title_terminology_audit = build_title_terminology_audit(flat, audits["title_normalisation"])
+    l1_cross_domain_audit = audits["l1_cross_domain"].merge(
+        flat[["source_row_id", "L4_ID", "L1_ID", "L3_ID", "Mapping_Method"]],
+        on="source_row_id", how="left", validate="one_to_one",
+    ).rename(columns={
+        "L4_ID": "final_l4_id", "L1_ID": "final_l1_id", "L3_ID": "final_l3_id",
+        "Mapping_Method": "final_mapping_method",
+    })
 
     write_csv(l1_final, RELEASE / "L1_Master.csv")
     write_csv(hierarchy, RELEASE / "L1_L2_L3_Master.csv")
@@ -2685,6 +2815,7 @@ def main() -> None:
     write_csv(audits["eligibility"], AUDIT / "Risk_Eligibility_Audit.csv")
     write_csv(audits["rewrites"], AUDIT / "Rewrite_Ledger.csv")
     write_csv(audits["peer_review"], AUDIT / "Peer_Review_Acceptance_Ledger.csv")
+    write_csv(l1_cross_domain_audit, AUDIT / "L1_Cross_Domain_Routing_Audit.csv")
     write_csv(audits["l3_scope"], AUDIT / "L3_Scope_Eligibility_Audit.csv")
     write_csv(audits["ai_grounding"], AUDIT / "AI_Technology_Grounding_Ledger.csv")
     write_csv(audits["title_normalisation"], AUDIT / "Title_Normalisation_Ledger.csv")
@@ -2823,6 +2954,35 @@ def main() -> None:
                 l3_source_check["Description_ko"].equals(l3_derived_check["L3_Description_ko"]) and
                 l3_source_check["비고"].equals(l3_derived_check["Source_Notes"]))
     check("Immutable L3 exact-field preservation", l3_exact, "46 source L3 rows and all seven source fields preserved exactly")
+    expected_review_l1 = {
+        source_row_id: DOMAIN_META[decision["target_domain"]]["l1_id"]
+        for source_row_id, decision in L1_CROSS_DOMAIN_REVIEW.items()
+    }
+    actual_review_l1 = flat.set_index("source_row_id")["L1_ID"].to_dict()
+    check(
+        "Reviewed L1 routing decisions applied before L3 mapping",
+        all(actual_review_l1.get(source_row_id) == l1_id for source_row_id, l1_id in expected_review_l1.items()),
+        f"{sum(actual_review_l1.get(source_row_id) == l1_id for source_row_id, l1_id in expected_review_l1.items())}/{len(expected_review_l1)} reviewed L1 decisions applied",
+    )
+    forced_others_expected = {
+        source_row_id: f"{decision['target_domain'][0]}_Others"
+        for source_row_id, decision in L1_CROSS_DOMAIN_REVIEW.items() if not decision["target_l3"]
+    }
+    actual_review_l3 = flat.set_index("source_row_id")["L3_ID"].to_dict()
+    check(
+        "Reviewed cards without a matching current L3 are held in domain Others",
+        all(actual_review_l3.get(source_row_id) == l3_id for source_row_id, l3_id in forced_others_expected.items()),
+        f"{sum(actual_review_l3.get(source_row_id) == l3_id for source_row_id, l3_id in forced_others_expected.items())}/{len(forced_others_expected)} reviewed no-match cards held for human decision",
+    )
+    reviewed_exact_l3 = {
+        source_row_id: decision["target_l3"]
+        for source_row_id, decision in L1_CROSS_DOMAIN_REVIEW.items() if decision["target_l3"]
+    } | SAME_L1_REVIEWED_L3
+    check(
+        "Reviewed exact L3 decisions resolved",
+        all(actual_review_l3.get(source_row_id) == l3_id for source_row_id, l3_id in reviewed_exact_l3.items()),
+        f"{sum(actual_review_l3.get(source_row_id) == l3_id for source_row_id, l3_id in reviewed_exact_l3.items())}/{len(reviewed_exact_l3)} reviewed exact L3 decisions resolved",
+    )
     expected_final_l4 = len(source) - len(audits["deleted"]) - len(audits["merged"]) + split_net_addition
     check("Final L4 reconciliation", len(flat) == expected_final_l4,
           f"{len(flat)} = {len(source)} - {len(audits['deleted'])} - {len(audits['merged'])} + {split_net_addition}")
@@ -2967,8 +3127,7 @@ def main() -> None:
         "SRC-A-0076": "G_INT_REL", "SRC-A-0070": "G_INT_REPR",
         "SRC-G-0231": "G_INT_PRIV", "SRC-G-0281": "G_SYS_EVAL",
         "SRC-P-0084": "G_SYS_SECADV", "SRC-P-0141": "G_SYS_TRANS",
-        "SRC-P-0162": "G_SYS_EVAL", "SRC-P-0054": "P_SYS_CONTROL",
-        "SRC-P-0207": "G_SOC_ECON", "SRC-P-0205": "G_INT_PRIV",
+        "SRC-P-0054": "P_SYS_CONTROL", "SRC-P-0207": "G_SOC_ECON",
         "SRC-P-0055": "G_SOC_POWER", "SRC-P-0139": "P_SYS_STATE",
     }
     actual_l3 = flat.set_index("source_row_id")["L3_ID"].to_dict()
@@ -3021,6 +3180,8 @@ def main() -> None:
         "semantic_near_duplicate_candidates": len(audits["semantic_duplicate_candidates"]),
         "semantic_near_duplicate_deletions": len(audits["semantic_duplicate_decisions"]),
         "l3_scope_deletions": int(audits["l3_scope"]["scope_decision"].eq("DELETE").sum()),
+        "l1_cross_domain_reviewed": len(L1_CROSS_DOMAIN_REVIEW),
+        "l1_cross_domain_forced_others": len(forced_others_expected),
         "keyword_count_per_language": 3,
         "thresholds": thresholds,
         "l3_source_rows": 46, "l3_derived_others_rows": 3,
@@ -3040,6 +3201,10 @@ def main() -> None:
         },
         "mapping_method": {
             "name": "Anchor-regularised keyword-augmented constrained EM",
+            "l1_decision_precedes_domain_constrained_l3_em": True,
+            "cross_domain_review_count": len(L1_CROSS_DOMAIN_REVIEW),
+            "no_matching_l3_policy": "HOLD_IN_REVIEWED_L1_OTHERS",
+            "cross_domain_audit_file": "audit/L1_Cross_Domain_Routing_Audit.csv",
             "anchor_weight": 4.0,
             "semantic_keyword_weight": 0.025,
             "lexical_keyword_weight": 0.060,

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "passed": 47,
+  "passed": 50,
   "failed": 0,
   "checks": [
     {
@@ -18,6 +18,21 @@
       "check": "Immutable L3 exact-field preservation",
       "status": "PASS",
       "evidence": "46 source L3 rows and all seven source fields preserved exactly"
+    },
+    {
+      "check": "Reviewed L1 routing decisions applied before L3 mapping",
+      "status": "PASS",
+      "evidence": "30/30 reviewed L1 decisions applied"
+    },
+    {
+      "check": "Reviewed cards without a matching current L3 are held in domain Others",
+      "status": "PASS",
+      "evidence": "14/14 reviewed no-match cards held for human decision"
+    },
+    {
+      "check": "Reviewed exact L3 decisions resolved",
+      "status": "PASS",
+      "evidence": "17/17 reviewed exact L3 decisions resolved"
     },
     {
       "check": "Final L4 reconciliation",
@@ -78,8 +93,8 @@
       "check": "Mapping method complete",
       "status": "PASS",
       "evidence": {
-        "EM": 613,
-        "HD": 195
+        "EM": 612,
+        "HD": 196
       }
     },
     {
@@ -155,7 +170,7 @@
     {
       "check": "Every EM-mapped L4 was drafted against its final immutable L3",
       "status": "PASS",
-      "evidence": "613/613 EM cards use their final L3 as the drafting anchor"
+      "evidence": "612/612 EM cards use their final L3 as the drafting anchor"
     },
     {
       "check": "No known English grammar or token-joining defects",
@@ -230,7 +245,7 @@
     {
       "check": "Independent-review L3 corrections resolved",
       "status": "PASS",
-      "evidence": "12/12 audited cases"
+      "evidence": "10/10 audited cases"
     },
     {
       "check": "Overconfidence requires mechanism evidence",

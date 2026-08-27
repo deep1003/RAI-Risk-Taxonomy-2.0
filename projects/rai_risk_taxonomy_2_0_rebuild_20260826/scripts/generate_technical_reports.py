@@ -66,6 +66,8 @@ def data() -> dict[str, str]:
         "baseline_em": str(int(baseline_cards["Mapping_Method"].eq("EM").sum())),
         "baseline_hd": str(int(baseline_cards["Mapping_Method"].eq("HD").sum())),
         "em_delta": str(summary["em_total"] - int(baseline_cards["Mapping_Method"].eq("EM").sum())),
+        "l1_reviewed": str(summary["l1_cross_domain_reviewed"]),
+        "l1_forced_others": str(summary["l1_cross_domain_forced_others"]),
     }
     for domain, prefix in (("General AI", "gm"), ("Agentic AI", "am"), ("Physical AI", "pm")):
         subset = cards[cards["L1_Title_en"].eq(domain)]
@@ -131,7 +133,7 @@ KO = Template(PREAMBLE_KO + r"""
 \item 명칭에서 AI-mediated, AI-facilitated, AI-assisted와 같은 관용적 개입 수식어를 제거하고, L3 마스터 및 공신력 있는 기관의 통제 용어군으로 명칭을 검증한다. 기술적 대상을 구분하는 AI model, AI agent, AI-generated content 등은 유지한다.
 \item 수정된 명칭·정의를 대상으로 한영 BGE-M3 유사도 후보를 만들고, 같은 L3 범위, 피해 대상, 위해 메커니즘, 용어 대표성을 대조해 실질적 중복만 폐기한다.
 \item 중복 제거 후 한·영 각 3개의 대표 개념을 추출하고, L3 어휘 프로파일을 보완 신호로 결합해 최종 EM을 새로 적합한다.
-\item 현행 L3 어디에도 맞지 않거나 단일 L3로 표현할 수 없는 카드는 삭제 보관하고, 현행 L3 범위 안에서 후보 간 판단이 모호한 카드만 Others에 배치하여 HD 사유와 상위 2개 L3 후보를 기록한다.
+\item 리스크가 아니거나 분류체계 전체 범위 밖인 카드는 삭제 보관한다. 적격한 리스크가 확정된 L1에 속하지만 정확한 현행 L3가 없거나 후보 간 판단이 모호하면 해당 L1의 Others에 배치하여 HD 사유와 상위 2개 L3 후보를 기록한다.
 \end{enumerate}
 
 \section{원천 데이터와 무결성}
@@ -151,7 +153,7 @@ L3 원본 46행의 L1, L2, L3 한영 명칭·정의와 비고는 셀 단위로 �
 
 Claude 보조 검토는 713건의 한글 표기 복원, 8건의 실질적 재정의, 1건의 폐기 권고를 제시하였다. 표기 복원과 재정의는 원천 의미를 보존하는지 검토한 뒤 수용하였다. RAI4-0568은 AI 개발자의 관여와 정보주체 권리를 더 명시적으로 수정하였다. RAI4-1157은 재정의 후 사이버 공격 메커니즘이 명확해져 Physical에서 General로 이동하고 G\_SYS\_SECADV에 강한 작성 사전정보를 제공하였다. 모든 명칭에 `리스크'를 붙이는 규칙은 폐기했으며, 의미상 필요할 때만 피해·침해·위험 표현을 유지하였다.
 
-이후 $pre_scope개 카드를 L3 마스터의 명칭·정의와 전수 대조했다. $ai_validated건은 이미 AI 기술 주체와 위험 구조가 완결되어 유지했고, $ai_rewrites건은 원래 의미를 보존하면서 한·영 정의에 AI 시스템·알고리즘·에이전트·로봇·학습 기술 또는 모델을 명시하도록 보완했다. 현행 L3 중 어느 범위에도 들어가지 않거나 단일 L3로 표현할 수 없는 $l3_scope_deletions건은 삭제 보관하였다. Others는 하나 이상의 현행 L3 범위에는 들어가지만 후보 간 경계가 모호한 경우에만 사용하였다.
+이후 $pre_scope개 카드를 L3 마스터의 명칭·정의와 전수 대조했다. $ai_validated건은 이미 AI 기술 주체와 위험 구조가 완결되어 유지했고, $ai_rewrites건은 원래 의미를 보존하면서 한·영 정의에 AI 시스템·알고리즘·에이전트·로봇·학습 기술 또는 모델을 명시하도록 보완했다. 리스크가 아니거나 분류체계 전체 범위 밖인 $l3_scope_deletions건은 삭제 보관하였다. 확정된 L1에 속하지만 정확한 현행 L3가 없는 $l1_forced_others건과 후보 간 경계가 모호한 카드는 해당 L1의 Others에 보류하였다.
 
 최종 명칭 중 $title_normalisations건은 관용적 AI 개입 수식어를 제거하거나 표준 용어로 정규화했다. 유지된 $title_validated건 모두에 L3 마스터와 ISO, NIST, OECD, UNESCO, UNICEF, WHO, UNODC, WIPO, IMF 또는 국내 AI 기본법의 용어군 근거를 기록했다. 단, 기관 문구를 카드명에 기계적으로 복사하지 않고 해당 L3의 위해·실패·침해 개념과 일치하는 명사구로 검증했다.
 
@@ -166,7 +168,7 @@ $post_scope개 수정 카드를 대상으로 같은 L3 안의 한영 의미 유�
 \begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{definition_grounding_by_domain.png}\caption{L3 마스터 대조 후 AI 기술 정의 유지·보완 결과}\end{figure}
 
 \section{L1 라우팅과 ID}
-Instruction Prompt가 명시한 L1 이동 103건과 별도 해결 지시 1건을 반영하였다. 동료 검토로 메커니즘이 변경된 RAI4-1157 한 건은 의미 기준으로 General에 추가 이동하였다. \texttt{facet}과 \texttt{act-type}은 L4 속성으로 유지했지만 의미 매핑 입력에서는 제외했다. 모든 L4 ID는 \texttt{L3\_ID + 순번} 형식으로 다시 발급하였다.
+Instruction Prompt가 명시한 L1 이동 103건과 별도 해결 지시 1건을 반영하였다. 여기에 L1을 먼저 확정하고 그 안에서 L3를 배정하는 교차 도메인 검토 단계를 추가해 $l1_reviewed건을 재검토했다. 이 가운데 현행 L3와 정확히 맞지 않는 $l1_forced_others건은 다른 L1의 유사한 L3로 밀어 넣지 않고, 검토된 L1의 Others로 보류하였다. 동료 검토로 메커니즘이 변경된 RAI4-1157 한 건은 의미 기준으로 General에 추가 이동하였다. \texttt{facet}과 \texttt{act-type}은 L4 속성으로 유지했지만 의미 매핑 입력에서는 제외했다. 모든 L4 ID는 \texttt{L3\_ID + 순번} 형식으로 다시 발급하였다.
 
 \begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{domain_counts_before_after.png}\caption{재구축 전후 도메인별 L4 수}\end{figure}
 
@@ -175,7 +177,7 @@ BAAI/BGE-M3의 동일 로컬 스냅샷에서 한국어와 영어를 별도로 �
 \begin{equation}s_{ik}=0.5\cos(\mathbf{x}^{ko}_i,\boldsymbol{\mu}^{ko}_k)+0.5\cos(\mathbf{x}^{en}_i,\boldsymbol{\mu}^{en}_k)\end{equation}
 이다. E-step은 L1 내부에서 최고 점수를 선택하고, M-step은 L3 마스터 anchor 가중치 $anchor_weight와 배정 L4 평균을 결합해 중심을 갱신한다. 20260826부터 20260830까지 5개 초기값으로 반복하였다.
 
-각 L4에서 한·영 각 $keyword_count개 대표 개념을 추출하고, 46개 L3 정의에서 구성한 어휘 프로파일과 제외어를 E-step의 보완 사전정보로 사용했다. 선택된 후보의 키워드 지지도가 강하면 보수적 거절 조건을 일부 보완했지만, L3 정의 대신으로 사용하지 않았다. 민감 범주는 필수 개념어가 없는 카드의 후보에서 제외했다. 작성 힌트는 후보를 하나로 제한하지 않고 강한 사전정보로만 적용했다. 단일 현행 L3로 표현할 수 없는 복합 메커니즘이나 현행 L3와 의미적으로 양립할 수 없는 카드는 EM 입력에서 제외했다. 최고 점수 $score_floor 미만, 하이브리드 마진 $margin_floor 미만, 안정성 $stability_floor 미만, 원본 anchor 점수 $anchor_floor 미만, 낮은 마진에서의 한영 Top-1 불일치 등을 HD 신호로 사용했다.
+각 L4에서 한·영 각 $keyword_count개 대표 개념을 추출하고, 46개 L3 정의에서 구성한 어휘 프로파일과 제외어를 E-step의 보완 사전정보로 사용했다. 선택된 후보의 키워드 지지도가 강하면 보수적 거절 조건을 일부 보완했지만, L3 정의 대신으로 사용하지 않았다. 민감 범주는 필수 개념어가 없는 카드의 후보에서 제외했다. 작성 힌트는 후보를 하나로 제한하지 않고 강한 사전정보로만 적용했다. 리스크 자체가 현행 분류체계와 의미적으로 양립하지 않으면 삭제하지만, 적격한 리스크가 검토된 L1에는 속하면서 정확히 맞는 L3가 없으면 해당 L1의 Others로 보류했다. 최고 점수 $score_floor 미만, 하이브리드 마진 $margin_floor 미만, 안정성 $stability_floor 미만, 원본 anchor 점수 $anchor_floor 미만, 낮은 마진에서의 한영 Top-1 불일치 등을 HD 신호로 사용했다.
 
 \section{매핑 결과}
 \begin{table}[htbp]\centering\caption{도메인별 EM 및 HD 결과}
@@ -235,7 +237,7 @@ EM assigned $em cards ($em_share\%) to existing L3 categories. The remaining $hd
 \section{Failure analysis and redesign}
 The earlier procedure assumed that every input was a risk. Terms such as life, safety, emergency, CPR, first aid, and actions increased similarity to Violence even though the card described a normal application context rather than an AI interaction risk. The failure demonstrates that semantic proximity cannot establish risk eligibility and that lexical proximity does not identify the causal harm mechanism.
 
-The revised sequence is: freeze sources and L3; test AI involvement, mechanism, adverse outcome, and affected party; execute explicit deletion, merge, and split instructions; write bilingual L4-level titles and definitions; route L1; compute a provisional L3 drafting anchor; compare each card with the current L3 names and definitions; discard cards that fit no current L3 or cannot be represented by one L3; require each retained Korean and English definition to name an AI technology; remove formulaic AI involvement modifiers from titles while retaining terms that identify a technical object; review bilingual high-similarity pairs against target and mechanism distinctiveness; extract three representative concepts in each language after deduplication; refit the final constrained EM; and place only within-scope but uncertain records in Others with an HD reason and two review candidates. Titles follow the nominal style of the L3 master. Risk or hazard suffixes are retained only where they are semantically necessary.
+The revised sequence is: freeze sources and L3; test AI involvement, mechanism, adverse outcome, and affected party; execute explicit deletion, merge, and split instructions; write bilingual L4-level titles and definitions; confirm L1 before L3; compute a provisional L3 drafting anchor; compare each card with the current L3 names and definitions; discard non-risks and cards outside the taxonomy's scope; retain eligible risks without an exact L3 in the confirmed L1's Others queue; require each retained Korean and English definition to name an AI technology; remove formulaic AI involvement modifiers from titles while retaining terms that identify a technical object; review bilingual high-similarity pairs against target and mechanism distinctiveness; extract three representative concepts in each language after deduplication; refit the final constrained EM; and preserve uncertain records in Others with an HD reason and two review candidates. Titles follow the nominal style of the L3 master. Risk or hazard suffixes are retained only where they are semantically necessary.
 
 \section{Data integrity baseline}
 \begin{table}[htbp]\centering\caption{Source and final L4 counts}
@@ -254,7 +256,7 @@ The archive contains 39 explicit deletions, eight application-context records re
 
 Claude-assisted review proposed 713 Korean spacing restorations, eight substantive redefinitions, and one drop. The changes were adopted only after comparison with source meaning. RAI4-0568 was further refined to identify developer conduct, data-subject rights, and organisational liability. The revised RAI4-1157 describes cyberattack enablement, so it was routed from Physical to General and given a strong G\_SYS\_SECADV drafting prior without suppressing the second candidate. Mechanical addition of a risk suffix to every Korean title was discontinued. Harm, infringement, hazard, or risk wording remains only where semantically needed.
 
-All $pre_scope records remaining before the L3 scope gate were compared with the immutable L3 names and definitions. The existing definitions of $ai_validated records already named an AI technology and used a complete risk-statement structure. The other $ai_rewrites records were amended, without replacing their source meaning, to name an AI system, algorithm, agent, robot, humanoid, learning technology, or model in both languages. The gate archived $l3_scope_deletions records that did not fit any current L3 or could not be represented by one L3 without inventing or suppressing meaning. Others was reserved for cases inside at least one current L3 scope but ambiguous between eligible candidates.
+All $pre_scope records remaining before the L3 scope gate were compared with the immutable L3 names and definitions. The existing definitions of $ai_validated records already named an AI technology and used a complete risk-statement structure. The other $ai_rewrites records were amended, without replacing their source meaning, to name an AI system, algorithm, agent, robot, humanoid, learning technology, or model in both languages. The gate archived $l3_scope_deletions non-risks or records outside the taxonomy's overall scope. It retained $l1_forced_others eligible risks that belonged to a confirmed L1 but lacked an exact current L3, together with other boundary cases, in that L1's Others queue.
 
 The terminology review normalised $title_normalisations titles by removing formulaic AI involvement modifiers or replacing them with a standard risk noun phrase. All $title_validated retained titles have an audit trail to the immutable L3 master and terminology families used by ISO, NIST, OECD, UNESCO, UNICEF, WHO, UNODC, WIPO, IMF, or the Korean AI Basic Act. Institutional wording was not copied mechanically. Each title was checked for consistency with the harm, failure, or infringement concept of its L3.
 
@@ -269,7 +271,7 @@ Retained as distinct scope & $duplicate_retained & 0\\ Less representative dupli
 \begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{definition_grounding_by_domain.png}\caption{Definitions retained or amended after immutable-L3 and AI-technology review}\end{figure}
 
 \section{Routing and identifiers}
-The pipeline applied 103 explicit L1 movement instructions, one separately resolved instruction, and one peer-review semantic route. \texttt{facet} and \texttt{act-type} remain L4 attributes but do not enter the embedding. All L4 identifiers were regenerated as \texttt{L3\_ID + sequence}.
+The pipeline applied 103 explicit L1 movement instructions, one separately resolved instruction, and one peer-review semantic route. A separate L1-first cross-domain review then checked $l1_reviewed records before domain-constrained L3 mapping. For $l1_forced_others records with no exact L3 in the confirmed L1, the pipeline retained them in that L1's Others queue rather than borrowing a superficially similar L3 from another L1. \texttt{facet} and \texttt{act-type} remain L4 attributes but do not enter the embedding. All L4 identifiers were regenerated as \texttt{L3\_ID + sequence}.
 
 \begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{domain_counts_before_after.png}\caption{L4 counts before and after rebuilding and routing}\end{figure}
 
@@ -278,7 +280,7 @@ Korean and English texts were embedded separately using one coherent local BAAI/
 \begin{equation}s_{ik}=0.5\cos(\mathbf{x}^{ko}_i,\boldsymbol{\mu}^{ko}_k)+0.5\cos(\mathbf{x}^{en}_i,\boldsymbol{\mu}^{en}_k).\end{equation}
 The E-step selects the highest eligible L3 within the confirmed L1. The M-step combines the fixed L3 master anchor with the mean of assigned L4 vectors, using anchor weight $anchor_weight. Five initialisations used seeds 20260826 to 20260830.
 
-Each L4 contributes $keyword_count representative concepts in Korean and English. Auditable lexical profiles and exclusion terms derived from the 46 L3 definitions provide a complementary E-step prior. They do not replace the L3 definitions. Sensitive categories require mechanism-specific terms. Curated drafting hints act as strong priors rather than one-candidate constraints, preserving two reviewable candidates. Cards semantically incompatible with every current L3 are excluded before EM. HD/Others is limited to cards that remain inside current L3 scope but are ambiguous between eligible candidates. The rejection signals include a joint score below $score_floor, a hybrid top-two margin below $margin_floor, stability below $stability_floor, raw-anchor score below $anchor_floor, and bilingual Top-1 disagreement at a low margin.
+Each L4 contributes $keyword_count representative concepts in Korean and English. Auditable lexical profiles and exclusion terms derived from the 46 L3 definitions provide a complementary E-step prior. They do not replace the L3 definitions. Sensitive categories require mechanism-specific terms. Curated drafting hints act as strong priors rather than one-candidate constraints, preserving two reviewable candidates. Non-risks and cards semantically outside the taxonomy are excluded before EM. An eligible risk confirmed at L1 but lacking an exact current L3 is retained in that L1's Others queue. Other HD/Others records preserve ambiguity between eligible candidates. The rejection signals include a joint score below $score_floor, a hybrid top-two margin below $margin_floor, stability below $stability_floor, raw-anchor score below $anchor_floor, and bilingual Top-1 disagreement at a low margin.
 
 \section{Results}
 \begin{table}[htbp]\centering\caption{EM and HD results by domain}

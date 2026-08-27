@@ -11,11 +11,11 @@
     "l3_immutable": 46,
     "l3_others": 3,
     "l4": 808,
-    "em": 613,
-    "hd": 195,
-    "general": 618,
-    "agentic": 78,
-    "physical": 112
+    "em": 612,
+    "hd": 196,
+    "general": 599,
+    "agentic": 90,
+    "physical": 119
   },
   "cleaning": {
     "source_total": 892,
@@ -25,11 +25,14 @@
     "title_terminology_normalisations": 66,
     "semantic_near_duplicate_candidates": 66,
     "semantic_near_duplicate_deletions": 5,
+    "l1_cross_domain_reviewed": 30,
+    "l1_cross_domain_forced_others": 14,
     "final_total": 808
   },
   "method": {
     "algorithm": "Anchor-regularised keyword-augmented constrained EM with BGE-M3 semantic representations",
     "boundary_policy": "HD assignment to domain-specific Others",
+    "l1_routing_policy": "Confirm L1 before domain-constrained L3 EM; keep eligible no-match risks in the confirmed L1's Others queue",
     "l3_master_precedence": true,
     "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
     "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
@@ -37,7 +40,7 @@
     "representative_keywords_per_language": 3
   },
   "human_review": {
-    "review_snapshot_id": "c59ccf089ef21ba8",
+    "review_snapshot_id": "8664c8c74e6b95ad",
     "candidate_count": 2,
     "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
     "daily_aggregation": true,
@@ -46,7 +49,7 @@
   },
   "validation": {
     "status": "PASS",
-    "passed": 47,
+    "passed": 50,
     "failed": 0
   },
   "artifacts": {
@@ -59,16 +62,16 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "cf109800d034f7937690013d1e4fff47f33f71120304dab35fea0d9737600107",
-      "rows": 618
+      "sha256": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
+      "rows": 599
     },
     "L4_Agentic.csv": {
-      "sha256": "cd8f39466033e2efad25131afb140c3ba3dce6553a9ee4b748469db528b71a0b",
-      "rows": 78
+      "sha256": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
+      "rows": 90
     },
     "L4_Physical.csv": {
-      "sha256": "349466b48f26f7bbe66cf1124285a409db7361e2ec79df8ff3c98e6796037c0d",
-      "rows": 112
+      "sha256": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949",
+      "rows": 119
     }
   }
 }

@@ -44,6 +44,7 @@ def main() -> None:
 
     manifest = json.loads((SOURCE_RELEASE / "release_manifest.json").read_text(encoding="utf-8"))
     manifest["pipeline_script"] = "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/run_rebuild_pipeline.py"
+    manifest["mapping_method"]["cross_domain_audit_file"] = "validation/L1_Cross_Domain_Routing_Audit.csv"
     manifest["primary_outputs"] = {
         name: {"sha256": sha256(MASTER_DATA / name), "rows": len(pd.read_csv(MASTER_DATA / name))}
         for name in CSV_FILES
@@ -76,6 +77,10 @@ def main() -> None:
         "checks": checks,
     }
     (MASTER / "validation/final_release_qa.json").write_text(json.dumps(qa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    shutil.copy2(
+        AUDIT / "L1_Cross_Domain_Routing_Audit.csv",
+        MASTER / "validation/L1_Cross_Domain_Routing_Audit.csv",
+    )
 
     cards = pd.concat(
         [pd.read_csv(MASTER_DATA / f"L4_{domain}.csv") for domain in ("General", "Agentic", "Physical")],
@@ -288,6 +293,7 @@ This master release contains five canonical CSV artifacts, bilingual technical r
 - General / Agentic / Physical: {summary['final_domain_counts']['General AI']} / {summary['final_domain_counts']['Agentic AI']} / {summary['final_domain_counts']['Physical AI']}
 - EM assignments: {summary['em_total']}
 - HD/Others assignments: {summary['others_total']}
+- L1-first cross-domain reviews: {summary['l1_cross_domain_reviewed']}, including {summary['l1_cross_domain_forced_others']} retained in the confirmed L1's Others queue because no exact current L3 exists
 - L3-referenced AI-technology definition rewrites: {summary['definition_ai_grounding_rewrites']}
 - Cleaning reconciliation: {summary['source_total']} source rows minus {summary['deleted']} deletions minus {summary['merged_away']} absorbed merge rows plus {summary['split_net_addition']} net split addition equals {summary['cleaned_total']} final rows
 - Post-build validation: {qa['passed']} passed, {qa['failed']} failed
@@ -308,6 +314,7 @@ Every Korean and English L4 definition explicitly names an AI technology and fol
 - `reports/technical_report_ko.pdf`
 - `reports/technical_report_en.pdf`
 - `validation/final_release_qa.json`
+- `validation/L1_Cross_Domain_Routing_Audit.csv`
 - `manifest.json`
 """
     (MASTER / "README.md").write_text(text, encoding="utf-8")

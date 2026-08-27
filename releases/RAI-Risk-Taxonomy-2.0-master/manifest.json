@@ -18,6 +18,10 @@
   },
   "mapping_method": {
     "name": "Anchor-regularised keyword-augmented constrained EM",
+    "l1_decision_precedes_domain_constrained_l3_em": true,
+    "cross_domain_review_count": 30,
+    "no_matching_l3_policy": "HOLD_IN_REVIEWED_L1_OTHERS",
+    "cross_domain_audit_file": "validation/L1_Cross_Domain_Routing_Audit.csv",
     "anchor_weight": 4.0,
     "semantic_keyword_weight": 0.025,
     "lexical_keyword_weight": 0.06,
@@ -69,16 +73,16 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "cf109800d034f7937690013d1e4fff47f33f71120304dab35fea0d9737600107",
-      "rows": 618
+      "sha256": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
+      "rows": 599
     },
     "L4_Agentic.csv": {
-      "sha256": "cd8f39466033e2efad25131afb140c3ba3dce6553a9ee4b748469db528b71a0b",
-      "rows": 78
+      "sha256": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
+      "rows": 90
     },
     "L4_Physical.csv": {
-      "sha256": "349466b48f26f7bbe66cf1124285a409db7361e2ec79df8ff3c98e6796037c0d",
-      "rows": 112
+      "sha256": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949",
+      "rows": 119
     }
   },
   "summary": {
@@ -94,26 +98,26 @@
     "split_net_addition": 1,
     "cleaned_total": 808,
     "final_domain_counts": {
-      "Agentic AI": 78,
-      "General AI": 618,
-      "Physical AI": 112
+      "Agentic AI": 90,
+      "General AI": 599,
+      "Physical AI": 119
     },
     "mapping_method_counts": {
       "Agentic AI": {
-        "EM": 65,
-        "HD": 13
+        "EM": 71,
+        "HD": 19
       },
       "General AI": {
-        "EM": 457,
-        "HD": 161
+        "EM": 451,
+        "HD": 148
       },
       "Physical AI": {
-        "EM": 91,
-        "HD": 21
+        "EM": 90,
+        "HD": 29
       }
     },
-    "others_total": 195,
-    "em_total": 613,
+    "others_total": 196,
+    "em_total": 612,
     "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
     "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
     "definition_ai_grounding_rewrites": 260,
@@ -123,6 +127,8 @@
     "semantic_near_duplicate_candidates": 66,
     "semantic_near_duplicate_deletions": 5,
     "l3_scope_deletions": 12,
+    "l1_cross_domain_reviewed": 30,
+    "l1_cross_domain_forced_others": 14,
     "keyword_count_per_language": 3,
     "thresholds": {
       "General": {
@@ -161,7 +167,7 @@
     },
     "l3_source_rows": 46,
     "l3_derived_others_rows": 3,
-    "validation_passed": 47,
+    "validation_passed": 50,
     "validation_failed": 0
   },
   "human_review": {
