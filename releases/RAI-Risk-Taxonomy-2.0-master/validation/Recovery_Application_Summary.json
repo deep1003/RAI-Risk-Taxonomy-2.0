@@ -1,11 +1,11 @@
 {
   "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
   "input_cards": 798,
-  "output_cards": 778,
+  "output_cards": 720,
   "output_by_domain": {
-    "General": 608,
+    "General": 564,
     "Agentic": 77,
-    "Physical": 93
+    "Physical": 79
   },
   "actions": {
     "SPLIT": 19,
@@ -55,5 +55,12 @@
     "detail": "자살 준비·실행 분리 원칙 복원: G_INT_SELF_007 신설, G_INT_SELF_004 정의 축소",
     "cards": "777->778",
     "log": "Audit_Correction_Log.csv"
+  },
+  "audit_correction_20260829_ac02": {
+    "correction_id": "AC-02",
+    "absorbed": 58,
+    "cards": "778->720",
+    "log": "Audit_Correction_Log.csv",
+    "consensus": "L3_Redundancy_Consensus.csv"
   }
 }

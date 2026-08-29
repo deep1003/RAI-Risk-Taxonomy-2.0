@@ -173,5 +173,6 @@
       "reviewed_cards": 8
     }
   },
-  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv"
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv",
+  "audit_correction_20260829_ac02": "AC-02: 58 redundant cards absorbed across 8 L3s (two-reviewer consensus); IDs retired permanently, no renumbering"
 }

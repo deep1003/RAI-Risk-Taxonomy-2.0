@@ -10,23 +10,23 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 778,
-    "em": 425,
-    "hd": 353,
-    "general": 608,
+    "l4": 720,
+    "em": 391,
+    "hd": 329,
+    "general": 564,
     "agentic": 77,
-    "physical": 93
+    "physical": 79
   },
   "cleaning": {
     "source_total": 798,
     "deleted": 13,
-    "merged_away": 22,
+    "merged_away": 80,
     "split_net_addition": 15,
     "user_directed_operations": 184,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "net_reduction": 20,
-    "final_total": 778
+    "net_reduction": 78,
+    "final_total": 720
   },
   "method": {
     "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
@@ -83,5 +83,6 @@
       "rows": 93
     }
   },
-  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv"
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv",
+  "audit_correction_20260829_ac02": "AC-02: 58 redundant cards absorbed across 8 L3s (two-reviewer consensus); IDs retired permanently, no renumbering"
 }
