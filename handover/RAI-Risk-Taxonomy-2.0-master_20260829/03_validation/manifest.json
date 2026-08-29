@@ -172,5 +172,6 @@
       "user_approved": true,
       "reviewed_cards": 8
     }
-  }
+  },
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv"
 }

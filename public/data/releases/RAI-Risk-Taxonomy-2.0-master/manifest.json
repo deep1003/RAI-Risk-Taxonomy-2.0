@@ -10,10 +10,10 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 777,
+    "l4": 778,
     "em": 425,
-    "hd": 352,
-    "general": 607,
+    "hd": 353,
+    "general": 608,
     "agentic": 77,
     "physical": 93
   },
@@ -21,12 +21,12 @@
     "source_total": 798,
     "deleted": 13,
     "merged_away": 22,
-    "split_net_addition": 14,
+    "split_net_addition": 15,
     "user_directed_operations": 184,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "net_reduction": 21,
-    "final_total": 777
+    "net_reduction": 20,
+    "final_total": 778
   },
   "method": {
     "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
@@ -82,5 +82,6 @@
       "sha256": "3a5bd0628881d45ee2646d4d52de2a863d65e747bf795837c738cd268ba5f706",
       "rows": 93
     }
-  }
+  },
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv"
 }

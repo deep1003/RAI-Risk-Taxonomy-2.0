@@ -8,8 +8,8 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 
 - L1: 3 domains
 - L3: 49 categories
-- L4: 777 cards
-- General AI: 607 cards
+- L4: 778 cards
+- General AI: 608 cards
 - Agentic AI: 77 cards
 - Physical AI: 93 cards
 - Others assignments: 0
@@ -24,3 +24,7 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 - `SHA256SUMS.txt`: integrity checksums for the delivered files
 
 The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public card data. Further remapping or application of human-review votes requires a separate explicit instruction.
+
+## Audit correction (2026-08-29)
+
+- AC-01: Restored the standalone card `G_INT_SELF_007` (Promotion of and concrete assistance for preparatory conduct for suicide) and narrowed `G_INT_SELF_004`, per the hard rule separating suicide preparation from execution (line-by-line audit FAIL-F1, two-reviewer consensus). Card total 777 -> 778. See `03_validation/Audit_Correction_Log.csv`.

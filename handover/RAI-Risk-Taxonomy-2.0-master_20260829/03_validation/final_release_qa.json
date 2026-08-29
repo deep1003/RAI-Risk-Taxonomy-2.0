@@ -29,5 +29,6 @@
       "status": "PASS",
       "evidence": "0 final L4 cards assigned to Others."
     }
-  ]
+  ],
+  "audit_correction_20260829": "AC-01 applied after QA snapshot; totals now 778 (General 608). Re-verified by post-correction validation."
 }
