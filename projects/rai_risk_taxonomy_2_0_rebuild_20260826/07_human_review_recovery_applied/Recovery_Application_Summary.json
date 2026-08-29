@@ -1,9 +1,9 @@
 {
   "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
   "input_cards": 798,
-  "output_cards": 783,
+  "output_cards": 777,
   "output_by_domain": {
-    "General": 613,
+    "General": 607,
     "Agentic": 77,
     "Physical": 93
   },
@@ -37,5 +37,16 @@
     "output_cards": 783,
     "approval": "USER_APPROVED_20260829",
     "log": "Semantic_Split_Application_Log.csv"
+  },
+  "scope_granularity_curation": {
+    "reviewed_cards": 8,
+    "retired_cards": 7,
+    "new_cards": 1,
+    "rewritten_cards": 4,
+    "net_change": -6,
+    "input_cards": 783,
+    "output_cards": 777,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Scope_Granularity_Curation_Log.csv"
   }
 }

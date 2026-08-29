@@ -3,8 +3,8 @@
 Current master: second-round human-review recovery, 2026-08-29.
 
 - L3 master: 46 immutable source categories plus 3 derived Others queues
-- L4: 783 cards
-- General / Agentic / Physical: 613 / 77 / 93
+- L4: 777 cards
+- General / Agentic / Physical: 607 / 77 / 93
 - Approved row-level decisions: 166
 - Delete / merge / split decisions: 14 / 14 / 19
 - Remap / rewrite-and-retain decisions: 80 / 39

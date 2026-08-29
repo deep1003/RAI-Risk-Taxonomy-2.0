@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "cards": 783,
+  "cards": 777,
   "by_domain": {
-    "General": 613,
+    "General": 607,
     "Agentic": 77,
     "Physical": 93
   },

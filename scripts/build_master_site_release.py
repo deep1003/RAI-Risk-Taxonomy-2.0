@@ -228,6 +228,7 @@ def main() -> None:
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
             "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
             "semantic_deduplication_policy": "Ten user-approved consolidation clusters retired 13 non-representative cards; a subsequent mechanism-level review split ten compound cards, retired two umbrella cards, and created seven distinct cards while preserving source lineage",
+            "scope_granularity_policy": "Eight user-approved scope and granularity cases retired seven overbroad or example-specific cards, created one independently measurable reproducibility card, and narrowed one physical-safety card",
         },
         "human_review": {
             "review_snapshot_id": review_snapshot_id,

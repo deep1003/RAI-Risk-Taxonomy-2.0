@@ -1,40 +1,44 @@
 {
   "release_date": "2026-08-29",
   "release_id": "RAI-Risk-Taxonomy-2.0-master",
-  "release_round": "human_review_round2_semantic_deduplication_and_splitting",
+  "release_round": "human_review_round2_semantic_curation",
   "pipeline_scripts": [
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_deduplication_20260829.py",
-    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_splitting_20260829.py"
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_splitting_20260829.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_scope_granularity_curation_20260829.py"
   ],
   "mapping_method": {
-    "name": "Approved human-review lineage overlay followed by user-approved semantic consolidation and mechanism-level splitting",
+    "name": "Approved human-review lineage overlay followed by semantic consolidation, mechanism-level splitting, and scope-granularity curation",
     "em_or_hybrid_em_executed_in_this_round": false,
     "l3_master_precedence": true,
     "automatic_reassignment": false
   },
   "summary": {
     "source_total": 798,
-    "cleaned_total": 783,
-    "final_total": 783,
+    "cleaned_total": 777,
+    "final_total": 777,
     "deleted": 13,
     "explicit_deletions": 17,
     "merged_away": 22,
-    "split_net_addition": 20,
+    "split_net_addition": 14,
     "semantic_deduplication_clusters": 10,
     "semantic_duplicates_retired": 13,
     "semantic_split_reviewed": 10,
     "semantic_split_new_cards": 7,
     "semantic_split_retired_umbrellas": 2,
-    "net_reduction": 15,
-    "user_directed_operations": 176,
+    "scope_granularity_reviewed": 8,
+    "scope_granularity_retired": 7,
+    "scope_granularity_new": 1,
+    "net_reduction": 21,
+    "user_directed_operations": 184,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
     "score_status_counts": {
-      "NOT_APPLICABLE": 164,
-      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 517,
+      "NOT_APPLICABLE": 162,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 516,
       "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
-      "L3_MASTER_VALIDATED": 54,
+      "L3_MASTER_VALIDATED": 51,
       "L3_MASTER_AI_REWRITE": 7
     },
     "validation_passed": 10,
@@ -46,14 +50,14 @@
       "Physical": 94
     },
     "final_domain_counts": {
-      "General AI": 613,
+      "General AI": 607,
       "Agentic AI": 77,
       "Physical AI": 93
     },
     "mapping_method_counts": {
       "General AI": {
-        "EM": 330,
-        "HD": 283
+        "EM": 326,
+        "HD": 281
       },
       "Agentic AI": {
         "EM": 44,
@@ -83,20 +87,20 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "b19b967a675d2c56b7f7b79fdf63de1a1246aba59811d1ca710e135005a89635",
-      "rows": 613
+      "sha256": "32e11a45781d45f370e6cf9ca860dd1e350332f039ddf939bcbadeb91a4e2b84",
+      "rows": 607
     },
     "L4_Agentic.csv": {
       "sha256": "538a059f14f1101a12972ee3e18e298285129b08f933643b4fb85efc68eda0f2",
       "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "b4a2fc373da1b656be9d09a2b31e2dbc1b6f2a04d030e9d196544b7e0d8cd79d",
+      "sha256": "3a5bd0628881d45ee2646d4d52de2a863d65e747bf795837c738cd268ba5f706",
       "rows": 93
     }
   },
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
-  "review_decisions": 176,
+  "review_decisions": 184,
   "semantic_deduplication": {
     "approved_clusters": 10,
     "retired_cards": 13,
@@ -115,6 +119,17 @@
     "output_cards": 783,
     "approval": "USER_APPROVED_20260829",
     "log": "Semantic_Split_Application_Log.csv"
+  },
+  "scope_granularity_curation": {
+    "reviewed_cards": 8,
+    "retired_cards": 7,
+    "new_cards": 1,
+    "rewritten_cards": 4,
+    "net_change": -6,
+    "input_cards": 783,
+    "output_cards": 777,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Scope_Granularity_Curation_Log.csv"
   },
   "source_register_rows": 808,
   "deterministic_replay": "PASS",
@@ -151,6 +166,11 @@
       "status": "PASS",
       "user_approved": true,
       "reviewed_composite_cards": 10
+    },
+    "scope_granularity_review": {
+      "status": "PASS",
+      "user_approved": true,
+      "reviewed_cards": 8
     }
   }
 }
