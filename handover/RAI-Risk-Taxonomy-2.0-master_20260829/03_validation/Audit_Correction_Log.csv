@@ -1,3 +1,4 @@
 Correction_ID,Date,Type,Target,Action,Detail,Basis
 AC-01,2026-08-29,HARD_PRINCIPLE_RESTORE,G_INT_SELF_004,SPLIT_RESTORE,"준비행위 문구(수단 확보·장소 선택·주변 개입 회피)와 실행 절차·은폐 전략 문구를 정의에서 제거하고, 자살 준비 행위 카드를 G_INT_SELF_007로 복원(원천행 SRC-G-0512, SRC-G-0507 재귀속). 777→778장.",라인바이라인 검수 FAIL-F1 (리뷰어 2인 합의) — 자살 준비·실행 분리 하드 원칙
 AC-02,2026-08-29,SEMANTIC_REDUNDANCY_ABSORB,58 cards in 8 L3s,RETIRE_AND_ABSORB,"리뷰어 2인 독립 전수 판정 합의 58장 흡수(EVAL7 SECADV14 CONTROL14 REPR4 WEAP7 PRIV4 VALUE7 MISINFO1). 대표 카드에 source_row_id·act-type 합집합 보존, ID 재번호 없음(흡수 ID 영구 결번). 778→720장.","L3_Redundancy_Consensus.csv(사용자 승인 2026-08-29), 대표 충돌 19건 총괄 판정"
+AC-03,2026-08-29,HUMAN_REVIEW_PROVENANCE_ANNOTATION,237 cards / 290 review entries,ANNOTATE_AND_CLEAN,"휴먼검토의견 251건의 원문과 반영 결과를 해당 카드에 기재(human_reviews 필드, CSV 2개 컬럼 추가). Mapping provenance 표시를 코드 나열에서 한국어 라벨로 정리(HD_Reason 코드 삭제, Transformation_Action 라벨화). 반영 충실성: 반영 246/부분 3/미반영 2(보고서 참조).","HUMAN_COMMENT_FIDELITY_REPORT.md, Fidelity_Reviewer_A/B.csv"
