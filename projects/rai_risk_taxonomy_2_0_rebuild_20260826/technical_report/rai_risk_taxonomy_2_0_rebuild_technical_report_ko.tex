@@ -1,10 +1,10 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}
+\usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}\usepackage{titling}\setlength{\droptitle}{8mm}
 \setmainfont{Apple SD Gothic Neo}\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}\pagestyle{fancy}\fancyhf{}\rhead{RAI Risk Taxonomy 2.0}\lhead{Human Review Recovery}\cfoot{\thepage}\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
 \title{RAI Risk Taxonomy 2.0\\2차 휴먼 검수 복구 기술보고서}\author{Human-review recovery release}\date{2026년 8월 29일}\maketitle
 \par\section*{요약}
-본 보고서는 798개 기준선 L4 카드에 2차 휴먼 검수 지시를 행 단위로 다시 적용하고, 이어서 사용자가 승인한 의미 중복 제거를 수행한 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 고정된 L3 마스터와 808행 검수 등록부를 기준으로 166건의 결정을 적용한 뒤, 전문 리뷰어 2명이 독립 검토한 10개 의미 중복 통합군에서 13개 비대표 카드를 폐기했다. 최종 결과는 L4 카드 778건이며 General 608건, Agentic 77건, Physical 93건이다. Others 배정은 0건이다.
+본 보고서는 798개 기준선 L4 카드에 2차 휴먼 검수 지시를 행 단위로 다시 적용하고, 이어서 사용자가 승인한 의미 중복 제거와 복합 카드 분리를 수행한 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 10개 의미 중복 통합군에서 13개 비대표 카드를 폐기한 뒤, 10개 복합 카드를 재검토하여 포괄 카드 2개를 폐기하고 독립된 위험 기제 7개를 신설했다. 최종 결과는 L4 카드 783건이며 General 613건, Agentic 77건, Physical 93건이다. Others 배정은 0건이다.
 \par\section{복구 원칙}
 기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. Instruction Prompt와 L3 마스터가 충돌할 때는 L3 마스터를 우선했다. L3는 신설하거나 수정하지 않았으며 SHA-256 해시를 고정했다.
 \par\section{적용 결과}
@@ -12,7 +12,7 @@
 \begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{도메인별 최종 L4 카드 수}\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{휴먼 검수 조치 분포}\end{figure}
 \par\section{복합 카드 분리}
-기존에 이미 올바르게 분리된 6건은 보존했다. 단일 출력으로 남아 있던 12건은 각 L3의 피해 기제에 맞춰 별도 카드로 작성했다. 각 한영 정의는 AI 시스템, AI 알고리즘, AI 에이전트 또는 이에 준하는 기술 주체, 인과 기제, 불리한 결과를 명시한다. 명칭은 L3 마스터의 명사구 문체를 따르며 한국어에 리스크 또는 위험을 기계적으로 덧붙이지 않았다.
+기존 휴먼 검수에서 분리한 계보를 보존한 상태에서 추가 복합 카드 10건을 검토했다. 기존 카드가 이미 해당 의미를 충분히 나타내면 source\_row\_id 계보와 고유 의미를 흡수했고, 독립적인 피해 기제 7건만 새 카드로 분리했다. 내용이 지나치게 포괄적이었던 2건은 구체 카드에 흡수한 뒤 폐기했다. 각 한영 정의는 AI 기술 주체, 인과 기제와 불리한 결과를 명시한다.
 \par\section{의미 중복 제거}
 위험행위, 피해대상, 작동기제와 실질적 통제목표가 동일하고 차이가 채널, 사례, 배포환경 또는 좁은 재진술에 한정된 카드만 통합했다. 자해·자살 조장, 대량 감시, 맥락적 개인정보 노출, 저작물 무단 이용, 역할 지시 기반 안전장치 우회, 평가 기만, 정서적 의존, 사회경제적 불평등, 책임 공백, 가정환경 인간-로봇 안전 실패의 10개 통합군에서 13개 카드를 폐기했다. 통합 카드에는 폐기 카드의 고유한 의미와 source\_row\_id 계보를 보존했다. 보호특성별 차별적 표상과 서로 다른 피해 기제는 분리 유지했다.
 \par\section{데이터 무결성 및 검증}

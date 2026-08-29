@@ -7,7 +7,7 @@ const release = path.join(root, "03_outputs", "release");
 const expected = {
   "L1_Master.csv": 3,
   "L1_L2_L3_Master.csv": 49,
-  "L4_General.csv": 608,
+  "L4_General.csv": 613,
   "L4_Agentic.csv": 77,
   "L4_Physical.csv": 93,
 };

@@ -1,9 +1,9 @@
 {
   "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
   "input_cards": 798,
-  "output_cards": 778,
+  "output_cards": 783,
   "output_by_domain": {
-    "General": 608,
+    "General": 613,
     "Agentic": 77,
     "Physical": 93
   },
@@ -27,5 +27,15 @@
     "reviewers": 2,
     "approval": "USER_APPROVED_20260829",
     "log": "Semantic_Deduplication_Log.csv"
+  },
+  "semantic_splitting": {
+    "reviewed_composite_cards": 10,
+    "retired_umbrella_cards": 2,
+    "new_distinct_cards": 7,
+    "net_addition": 5,
+    "input_cards": 778,
+    "output_cards": 783,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Split_Application_Log.csv"
   }
 }
