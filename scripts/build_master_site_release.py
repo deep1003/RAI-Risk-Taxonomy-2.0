@@ -227,7 +227,7 @@ def main() -> None:
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
             "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
-            "semantic_deduplication_policy": "Bilingual similarity generates review candidates only and does not trigger automatic deletion or reassignment",
+            "semantic_deduplication_policy": "Ten user-approved consolidation clusters were applied after two independent specialist reviews; 13 non-representative cards were retired while preserving source lineage",
         },
         "human_review": {
             "review_snapshot_id": review_snapshot_id,
@@ -235,7 +235,7 @@ def main() -> None:
             "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
             "daily_aggregation": True,
             "automatic_reassignment": False,
-            "score_warning": "Candidate scores may be stale after text or hierarchy edits; unavailable scores are displayed as unavailable",
+            "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
             "application_policy": "Only after an explicit user instruction to analyse and apply review logs",
         },
         "score_status_counts": source_summary["score_status_counts"],

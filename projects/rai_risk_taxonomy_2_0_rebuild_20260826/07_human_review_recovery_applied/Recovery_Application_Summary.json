@@ -1,11 +1,11 @@
 {
   "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
   "input_cards": 798,
-  "output_cards": 791,
+  "output_cards": 778,
   "output_by_domain": {
-    "General": 620,
+    "General": 608,
     "Agentic": 77,
-    "Physical": 94
+    "Physical": 93
   },
   "actions": {
     "SPLIT": 19,
@@ -18,5 +18,14 @@
   "master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
   "decision_rows": 166,
   "register_rows": 808,
-  "tombstones": 17
+  "tombstones": 17,
+  "semantic_deduplication": {
+    "approved_clusters": 10,
+    "retired_cards": 13,
+    "input_cards": 791,
+    "output_cards": 778,
+    "reviewers": 2,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Deduplication_Log.csv"
+  }
 }

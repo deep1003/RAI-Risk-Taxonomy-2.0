@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "cards": 791,
+  "cards": 778,
   "by_domain": {
-    "General": 620,
+    "General": 608,
     "Agentic": 77,
-    "Physical": 94
+    "Physical": 93
   },
   "others": 0,
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",

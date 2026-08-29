@@ -3,8 +3,8 @@
 Current master: second-round human-review recovery, 2026-08-29.
 
 - L3 master: 46 immutable source categories plus 3 derived Others queues
-- L4: 791 cards
-- General / Agentic / Physical: 620 / 77 / 94
+- L4: 778 cards
+- General / Agentic / Physical: 608 / 77 / 93
 - Approved row-level decisions: 166
 - Delete / merge / split decisions: 14 / 14 / 19
 - Remap / rewrite-and-retain decisions: 80 / 39
@@ -14,4 +14,4 @@ Current master: second-round human-review recovery, 2026-08-29.
 
 Prior-run mapping scores are retained only as historical evidence. Cards edited in this round are explicitly marked as stale, and cards whose hierarchy or cardinality changed expose no inherited score.
 
-Canonical CSVs are under `data/`. The 808-row instruction register, 166 approved decisions, lineage edges, deletion tombstones, application log, and validation record are under `validation/`.
+Canonical CSVs are under `data/`. The 808-row instruction register, 166 approved decisions, lineage edges, deletion tombstones, application log, semantic-deduplication log, and validation record are under `validation/`. Ten user-approved semantic consolidation clusters retired 13 non-representative cards after two independent specialist reviews.

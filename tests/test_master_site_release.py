@@ -39,14 +39,14 @@ class MasterSiteReleaseTests(unittest.TestCase):
         )
 
     def test_public_counts_match_reviewed_release(self) -> None:
-        self.assertEqual(len(self.cards), 791)
+        self.assertEqual(len(self.cards), 778)
         self.assertEqual(self.manifest["counts"]["l3"], 49)
         self.assertEqual(self.manifest["counts"]["l3_immutable"], 46)
         self.assertEqual(self.manifest["counts"]["l3_others"], 3)
-        self.assertEqual(Counter(card["mapping_method"] for card in self.cards), Counter({"EM": 436, "HD": 355}))
+        self.assertEqual(Counter(card["mapping_method"] for card in self.cards), Counter({"EM": 430, "HD": 348}))
         self.assertEqual(
             Counter(card["primary_l3_id"].split("_")[0] for card in self.cards),
-            Counter({"G": 620, "P": 94, "A": 77}),
+            Counter({"G": 608, "P": 93, "A": 77}),
         )
 
     def test_every_card_resolves_to_a_bilingual_l3_node(self) -> None:
@@ -67,9 +67,9 @@ class MasterSiteReleaseTests(unittest.TestCase):
         self.assertEqual(cleaning["source_total"] - cleaning["deleted"] - cleaning["merged_away"] + cleaning["split_net_addition"], cleaning["final_total"])
         self.assertEqual(cleaning["source_total"], 798)
         self.assertEqual(cleaning["deleted"], 13)
-        self.assertEqual(cleaning["merged_away"], 9)
+        self.assertEqual(cleaning["merged_away"], 22)
         self.assertEqual(cleaning["split_net_addition"], 15)
-        self.assertEqual(cleaning["final_total"], 791)
+        self.assertEqual(cleaning["final_total"], 778)
         self.assertEqual(cleaning["user_directed_operations"], 166)
         self.assertEqual(self.manifest["validation"], {"status": "PASS", "passed": 10, "failed": 0})
 
@@ -81,7 +81,7 @@ class MasterSiteReleaseTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8")
         self.assertIn(f'public/data/releases/{RELEASE_ID}', script)
-        self.assertIn("791 final L4 cards", page)
+        self.assertIn("778 final L4 cards", page)
         self.assertIn("10/10 QA PASS", page)
         self.assertIn("현재 웹 리스크 카드에는 EM, Hybrid EM 또는 관련 점수를 표시하지 않습니다.", page)
         for name in ("L1_Master.csv", "L1_L2_L3_Master.csv", "L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv"):

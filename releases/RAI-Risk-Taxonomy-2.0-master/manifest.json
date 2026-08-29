@@ -1,30 +1,35 @@
 {
   "release_date": "2026-08-29",
   "release_id": "RAI-Risk-Taxonomy-2.0-master",
-  "release_round": "human_review_round2",
-  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
+  "release_round": "human_review_round2_semantic_deduplication",
+  "pipeline_scripts": [
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_deduplication_20260829.py"
+  ],
   "mapping_method": {
-    "name": "Approved human-review lineage overlay",
+    "name": "Approved human-review lineage overlay followed by user-approved semantic consolidation",
     "em_or_hybrid_em_executed_in_this_round": false,
     "l3_master_precedence": true,
     "automatic_reassignment": false
   },
   "summary": {
     "source_total": 798,
-    "cleaned_total": 791,
-    "final_total": 791,
+    "cleaned_total": 778,
+    "final_total": 778,
     "deleted": 13,
     "explicit_deletions": 17,
-    "merged_away": 9,
+    "merged_away": 22,
     "split_net_addition": 15,
-    "net_reduction": 7,
+    "semantic_deduplication_clusters": 10,
+    "semantic_duplicates_retired": 13,
+    "net_reduction": 20,
     "user_directed_operations": 166,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
     "score_status_counts": {
-      "NOT_APPLICABLE": 167,
-      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 520,
-      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 43,
+      "NOT_APPLICABLE": 165,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 511,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
       "L3_MASTER_VALIDATED": 54,
       "L3_MASTER_AI_REWRITE": 7
     },
@@ -37,14 +42,14 @@
       "Physical": 94
     },
     "final_domain_counts": {
-      "General AI": 620,
+      "General AI": 608,
       "Agentic AI": 77,
-      "Physical AI": 94
+      "Physical AI": 93
     },
     "mapping_method_counts": {
       "General AI": {
-        "EM": 337,
-        "HD": 283
+        "EM": 331,
+        "HD": 277
       },
       "Agentic AI": {
         "EM": 44,
@@ -52,7 +57,7 @@
       },
       "Physical AI": {
         "EM": 55,
-        "HD": 39
+        "HD": 38
       }
     },
     "similarity_top_pairs_published": 20,
@@ -74,20 +79,29 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "0b0d837a150e26245f3380ac7d7c3319cdbebc4404c1e482899b9417982a8b75",
-      "rows": 620
+      "sha256": "bccbfb3d17ce5df9abb6fdf5ab38c6c746ce5289ee82fc591e5e2e043d0ad875",
+      "rows": 608
     },
     "L4_Agentic.csv": {
-      "sha256": "3ad138629ebb96bee18e54d35fb37f8263ac7bb07c4d503fca987ac7b3969b6e",
+      "sha256": "538a059f14f1101a12972ee3e18e298285129b08f933643b4fb85efc68eda0f2",
       "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "7a518b58d7bfde4ca3982a03976be45caa2d1adc08f4c4101c4f4040681b9d6e",
-      "rows": 94
+      "sha256": "b4a2fc373da1b656be9d09a2b31e2dbc1b6f2a04d030e9d196544b7e0d8cd79d",
+      "rows": 93
     }
   },
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
   "review_decisions": 166,
+  "semantic_deduplication": {
+    "approved_clusters": 10,
+    "retired_cards": 13,
+    "input_cards": 791,
+    "output_cards": 778,
+    "reviewers": 2,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Deduplication_Log.csv"
+  },
   "source_register_rows": 808,
   "deterministic_replay": "PASS",
   "source_hashes": {
@@ -97,7 +111,7 @@
   },
   "human_review": {
     "vote_log": "Not used in this recovery round",
-    "application_policy": "Applied only under the explicit user instruction dated 2026-08-29",
+    "application_policy": "Applied only under explicit user instructions dated 2026-08-29",
     "automatic_reassignment": false
   },
   "human_review_round2": {
@@ -113,6 +127,11 @@
           "status": "PASS"
         }
       ]
+    },
+    "semantic_deduplication_review": {
+      "status": "PASS",
+      "reviewers": 2,
+      "user_approved": true
     }
   }
 }
