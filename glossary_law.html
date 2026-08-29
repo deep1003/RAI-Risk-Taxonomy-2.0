@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="RAI Risk Taxonomy 2.0 인공지능·리스크 용어사전: EU AI Act, 인공지능기본법, NIST, OWASP, MITRE ATLAS 출처 기반 한·영 정의.">
+<title>법·제도·거버넌스 용어 · Law, Policy & Governance Terms · AI 리스크 용어사전 · RAI Risk Taxonomy 2.0</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173458'/%3E%3Cpath d='M15 46V18h18c9 0 15 5 15 13 0 6-3 10-9 12l10 3H36l-8-11v11zm13-17h5c3 0 5-1 5-4s-2-4-5-4h-5z' fill='white'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--surface:#fff;--canvas:#f5f7fa;--navy:#173458;--general:#3867d6;--agentic:#148f77;--decision:#b54708;--radius:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6}
+a{color:inherit}
+.hero{background:var(--navy);color:#fff;padding:28px 20px 22px}
+.hero__inner{max-width:1080px;margin:0 auto}
+.hero__eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fb3d1;margin-bottom:6px}
+.hero a.home{color:#9fb3d1;text-decoration:none;font-size:13px}
+.hero h1{margin:6px 0 4px;font-size:26px}
+.hero p{margin:0;color:#c7d5e8;font-size:14px}
+.tabs{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tab{background:rgba(255,255,255,.1);color:#e8eef7;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:600}
+.tab.active{background:#fff;color:var(--navy)}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:14px}
+.letterbar{position:sticky;top:0;background:var(--canvas);padding:10px 0;display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);z-index:5}
+.letterbar a{text-decoration:none;color:var(--general);font-weight:700;font-size:13px;padding:2px 7px;border-radius:6px}
+.letterbar a:hover{background:#e7edfb}
+.letter{font-size:20px;color:var(--general);border-bottom:2px solid var(--line);padding-bottom:4px;margin:26px 0 12px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:12px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.term__head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.term__head h3{margin:0;font-size:16.5px}
+.term__head .ko{color:var(--navy);font-weight:600;font-size:14.5px}
+.tag{margin-left:auto;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700}
+.tag--en{background:#e7edfb;color:#26428f}
+.tag--ko{background:#e3f4ee;color:#0d6b4f}
+.tag--ad{background:#f2eafc;color:#6941c6}
+.def{margin:8px 0 0;font-size:14px}
+.def--en{color:#1f2a44}
+.def--ko{color:#374151}
+.src{margin:8px 0 0;font-size:12.5px}
+.src a{color:var(--decision);text-decoration:none}
+.src a:hover{text-decoration:underline}
+.sources{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:30px}
+.sources h2{margin:0 0 12px;font-size:17px}
+.sources ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sources li{font-size:12.5px;color:var(--muted)}
+.sources li a{color:var(--general);text-decoration:none}
+.note{font-size:12px;color:var(--muted);margin-top:18px;padding:12px 14px;background:#fffaf0;border:1px solid #f4e2c0;border-radius:10px}
+@media(max-width:640px){.sources ul{grid-template-columns:1fr}.term__head .ko{width:100%}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero__inner">
+    <div class="hero__eyebrow">AI RISK GLOSSARY · 한·영 용어사전</div>
+    <a class="home" href="index.html">← RAI Risk Taxonomy 2.0 메인으로</a>
+    <h1>법·제도·거버넌스 용어 · Law, Policy & Governance Terms</h1>
+    <p>EU 인공지능법·인공지능기본법·NIST 프레임워크의 규제·거버넌스 용어</p>
+  </div>
+  <nav class="tabs"><a class="tab" href="glossary_general.html">일반 용어 · General AI Terms</a><a class="tab" href="glossary_risk.html">리스크·보안 용어 · Risk &amp; Security Terms</a><a class="tab active" href="glossary_law.html">법·제도·거버넌스 용어 · Law, Policy &amp; Governance Terms</a></nav>
+</header>
+<main class="wrap">
+  <div class="meta">
+    <span>이 페이지 39개 용어</span>
+    <span>전체 150개 용어 (3개 분류)</span>
+    <span>모든 정의에 1차 출처 링크 명시</span>
+  </div>
+  <div class="letterbar"><a href="#LA">A</a><a href="#LC">C</a><a href="#LD">D</a><a href="#LF">F</a><a href="#LH">H</a><a href="#LI">I</a><a href="#LM">M</a><a href="#LN">N</a><a href="#LO">O</a><a href="#LP">P</a><a href="#LR">R</a><a href="#LS">S</a><a href="#LT">T</a><a href="#LU">U</a><a href="#LW">W</a></div>
+  <h2 class="letter" id="LA">A</h2><article class="term" id="accountability">
+  <div class="term__head"><h3>Accountability</h3><span class="ko">책임성</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The obligation and capacity of AI actors to answer for the outcomes of AI systems and to allocate responsibility across the life cycle; paired with transparency in NIST&#x27;s &#x27;accountable and transparent&#x27; characteristic.</p>
+    <p class="def def--ko">AI 행위자가 AI 시스템의 결과에 대해 응답하고 수명주기 전반에 책임을 배분해야 하는 의무와 능력. NIST의 &#x27;책임성·투명성&#x27; 특성으로 투명성과 짝을 이룬다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.4</a></p>
+  </div>
+</article><article class="term" id="affected-person">
+  <div class="term__head"><h3>Affected person</h3><span class="ko">영향받는 자</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person whose life, bodily safety, or fundamental rights are significantly affected by an AI product or service; the Korean Framework Act grants them a right to a meaningful explanation of key criteria behind AI outputs. (unofficial translation)</p>
+    <p class="def def--ko">인공지능제품 또는 인공지능서비스에 의하여 자신의 생명, 신체의 안전 및 기본권에 중대한 영향을 받는 자. 인공지능기본법은 이들에게 AI 결과 도출 주요 기준에 대한 의미 있는 설명을 받을 권리를 부여한다.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제9호, 제3조</a></p>
+  </div>
+</article><article class="term" id="ai-audit-/-algorithmic-audit">
+  <div class="term__head"><h3>AI audit / algorithmic audit</h3><span class="ko">인공지능 감사(알고리즘 감사)</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Independent examination of an AI system&#x27;s data, model, processes, and controls against defined criteria to assess conformity, risk, and impact; a core assurance mechanism in AI governance.</p>
+    <p class="def def--ko">정의된 기준에 비추어 AI 시스템의 데이터·모델·프로세스·통제를 독립적으로 점검하여 적합성·리스크·영향을 평가하는 활동. AI 거버넌스의 핵심 보증 메커니즘.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §5 (Measure/Manage)</a></p>
+  </div>
+</article><article class="term" id="ai-business-operator">
+  <div class="term__head"><h3>AI business operator</h3><span class="ko">인공지능사업자</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person conducting AI-industry business, comprising AI development operators (who develop and provide AI) and AI utilization operators (who provide AI products or services using AI provided by the former). (unofficial translation)</p>
+    <p class="def def--ko">인공지능산업과 관련된 사업을 하는 자로, 인공지능을 개발·제공하는 &#x27;인공지능개발사업자&#x27;와 그 인공지능을 이용하여 제품·서비스를 제공하는 &#x27;인공지능이용사업자&#x27;로 구성된다.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제7호</a></p>
+  </div>
+</article><article class="term" id="ai-ethics-(korean-framework-act)">
+  <div class="term__head"><h3>AI ethics (Korean Framework Act)</h3><span class="ko">인공지능윤리</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Ethical standards that all members of society should observe across the development, provision, and use of AI to realize a safe and trustworthy AI society grounded in respect for human dignity. (unofficial translation)</p>
+    <p class="def def--ko">인간의 존엄성에 대한 존중을 기초로 안전하고 신뢰할 수 있는 인공지능사회를 구현하기 위하여 인공지능의 개발·제공·이용 등 모든 영역에서 사회구성원이 지켜야 할 윤리적 기준.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제11호</a></p>
+  </div>
+</article><article class="term" id="ai-governance">
+  <div class="term__head"><h3>AI governance</h3><span class="ko">인공지능 거버넌스</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The structures, policies, roles, and processes by which an organization or jurisdiction directs and controls the development and use of AI to manage risk and ensure accountability; the GOVERN function is the foundation of the NIST AI RMF.</p>
+    <p class="def def--ko">리스크 관리와 책임 확보를 위해 조직·관할이 AI의 개발·이용을 지휘·통제하는 구조·정책·역할·절차. GOVERN 기능은 NIST AI RMF의 토대이다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §5 (Govern)</a></p>
+  </div>
+</article><article class="term" id="ai-regulatory-sandbox">
+  <div class="term__head"><h3>AI regulatory sandbox</h3><span class="ko">AI 규제 샌드박스</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A controlled framework set up by a competent authority which offers providers the possibility to develop, train, validate and test an innovative AI system, where appropriate in real-world conditions, under regulatory supervision for a limited time.</p>
+    <p class="def def--ko">권한당국이 마련한 통제된 체계로, 제공자가 규제 감독 하에 한정된 기간 동안 혁신적 AI 시스템을 (적절한 경우 실제 조건에서) 개발·학습·검증·시험할 수 있게 한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(55)</a></p>
+  </div>
+</article><article class="term" id="authorised-representative">
+  <div class="term__head"><h3>Authorised representative</h3><span class="ko">국내대리인/권한대리인</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person who has received a written mandate from a provider to perform the provider&#x27;s obligations under the regulation on its behalf; the Korean Framework Act&#x27;s Article 36 imposes a parallel domestic-representative duty.</p>
+    <p class="def def--ko">제공자로부터 규정상 의무를 대행하도록 서면 위임을 받은 자연인·법인. 인공지능기본법 제36조도 국내대리인 지정 의무를 둔다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(5); 인공지능기본법 제36조</a></p>
+  </div>
+</article><h2 class="letter" id="LC">C</h2><article class="term" id="ce-marking">
+  <div class="term__head"><h3>CE marking</h3><span class="ko">CE 마킹</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A marking by which a provider indicates that an AI system is in conformity with the requirements set out in Chapter III, Section 2 and other applicable Union harmonisation legislation providing for its affixing.</p>
+    <p class="def def--ko">제공자가 AI 시스템이 EU 인공지능법 제3장 제2절 및 부착을 규정한 그 밖의 관련 EU 조화법의 요구사항에 적합함을 표시하는 마킹.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(24)</a></p>
+  </div>
+</article><article class="term" id="conformity-assessment">
+  <div class="term__head"><h3>Conformity assessment</h3><span class="ko">적합성 평가</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The process of demonstrating whether the requirements for a high-risk AI system have been fulfilled, carried out internally or by a notified body before market placement.</p>
+    <p class="def def--ko">고위험 AI 시스템에 대한 요구사항 충족 여부를 시장 출시 전에 내부 또는 통보기관을 통해 입증하는 절차.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(20), Art. 43</a></p>
+  </div>
+</article><h2 class="letter" id="LD">D</h2><article class="term" id="data-governance">
+  <div class="term__head"><h3>Data governance</h3><span class="ko">데이터 거버넌스</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Requirements that training, validation, and testing datasets be subject to appropriate data-management practices, including relevance, representativeness, and examination for bias (EU AI Act Article 10).</p>
+    <p class="def def--ko">학습·검증·시험 데이터셋이 관련성·대표성 확보와 편향 검토 등 적절한 데이터 관리 관행의 대상이 되어야 한다는 요구사항(EU 인공지능법 제10조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 10</a></p>
+  </div>
+</article><article class="term" id="deployer">
+  <div class="term__head"><h3>Deployer</h3><span class="ko">배포자(이용주체)</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person, public authority, agency or other body using an AI system under its authority, except where the AI system is used in the course of a personal non-professional activity.</p>
+    <p class="def def--ko">자신의 권한 하에 AI 시스템을 이용하는 자연인·법인·공공기관 등. 다만 개인적 비직업적 활동 과정에서의 이용은 제외한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(4)</a></p>
+  </div>
+</article><article class="term" id="distributor">
+  <div class="term__head"><h3>Distributor</h3><span class="ko">유통자</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the market.</p>
+    <p class="def def--ko">제공자나 수입자가 아니면서 공급망에서 AI 시스템을 시장에 유통시키는 자연인·법인.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(7)</a></p>
+  </div>
+</article><article class="term" id="downstream-provider">
+  <div class="term__head"><h3>Downstream provider</h3><span class="ko">하류 제공자</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A provider of an AI system, including a general-purpose AI system, which integrates an AI model, whether self-provided and vertically integrated or provided by another entity under contract.</p>
+    <p class="def def--ko">AI 모델을 통합하는 AI 시스템(범용 AI 시스템 포함)의 제공자로, 모델을 자체 수직통합하였든 계약으로 타 주체에게서 제공받았든 무관하다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(68)</a></p>
+  </div>
+</article><h2 class="letter" id="LF">F</h2><article class="term" id="fundamental-rights-impact-assessment-(fria)">
+  <div class="term__head"><h3>Fundamental rights impact assessment (FRIA)</h3><span class="ko">기본권 영향평가</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An assessment that deployers of certain high-risk AI systems must perform to identify impacts on fundamental rights and mitigation measures before deployment (EU AI Act Article 27).</p>
+    <p class="def def--ko">특정 고위험 AI 시스템의 배포자가 배포 전 기본권에 대한 영향과 완화 조치를 식별하기 위해 수행해야 하는 평가(EU 인공지능법 제27조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 27</a></p>
+  </div>
+</article><h2 class="letter" id="LH">H</h2><article class="term" id="high-impact-ai">
+  <div class="term__head"><h3>High-impact AI</h3><span class="ko">고영향 인공지능</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system that may have a significant effect on, or pose a risk to, human life, bodily safety, and fundamental rights, and that is used in designated domains such as energy, healthcare, medical devices, nuclear safety, biometric analysis for criminal investigation, recruitment and loan screening, transport operation, public-service decisions, and student assessment. (unofficial translation)</p>
+    <p class="def def--ko">사람의 생명, 신체의 안전 및 기본권에 중대한 영향을 미치거나 위험을 초래할 우려가 있는 인공지능시스템으로서, 에너지, 보건의료, 의료기기, 원자력 안전, 범죄수사용 생체인식정보 분석, 채용·대출 심사, 교통 운영, 공공서비스 의사결정, 학생 평가 등 지정 영역에서 활용되는 것.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제4호</a></p>
+  </div>
+</article><article class="term" id="high-risk-ai-system">
+  <div class="term__head"><h3>High-risk AI system</h3><span class="ko">고위험 AI 시스템</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Under the EU AI Act, an AI system that is either a safety component of a regulated product or falls within the use cases listed in Annex III (e.g., biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice), triggering the strongest obligations short of prohibition.</p>
+    <p class="def def--ko">EU 인공지능법상 규제 제품의 안전 구성요소이거나 부속서 III의 활용사례(생체인식, 핵심 인프라, 교육, 고용, 필수 서비스, 법집행, 이주, 사법 등)에 해당하는 AI 시스템으로, 금지 다음으로 강한 의무가 부과된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 6, Annex III</a></p>
+  </div>
+</article><h2 class="letter" id="LI">I</h2><article class="term" id="importer">
+  <div class="term__head"><h3>Importer</h3><span class="ko">수입자</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person located or established in the Union that places on the market an AI system bearing the name or trademark of a person established in a third country.</p>
+    <p class="def def--ko">제3국에 설립된 자의 이름·상표를 부착한 AI 시스템을 역내 시장에 출시하는, 역내에 소재·설립된 자연인·법인.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(6)</a></p>
+  </div>
+</article><article class="term" id="informed-consent">
+  <div class="term__head"><h3>Informed consent</h3><span class="ko">고지된 동의</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A subject&#x27;s freely given, specific, unambiguous and voluntary expression of willingness to participate in a particular testing in real-world conditions, after being informed of all aspects relevant to the decision to participate.</p>
+    <p class="def def--ko">실제 조건 시험 참여 결정에 관련된 모든 사항을 고지받은 후, 특정 시험에 참여하겠다는 피험자의 자유롭고 구체적이며 명확하고 자발적인 의사표시.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(59)</a></p>
+  </div>
+</article><article class="term" id="intended-purpose">
+  <div class="term__head"><h3>Intended purpose</h3><span class="ko">의도된 목적</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in instructions, promotional materials, and technical documentation.</p>
+    <p class="def def--ko">지침·판촉 자료·기술문서에 명시된 구체적 이용 맥락·조건을 포함하여, 제공자가 AI 시스템에 대해 의도한 용도.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(12)</a></p>
+  </div>
+</article><h2 class="letter" id="LM">M</h2><article class="term" id="model-evaluation">
+  <div class="term__head"><h3>Model evaluation</h3><span class="ko">모델 평가</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Systematic testing of a model&#x27;s capabilities, safety properties, and risks (including dangerous-capability and red-team evaluations) to inform release and oversight decisions; required for GPAI models with systemic risk.</p>
+    <p class="def def--ko">출시·감독 결정을 위해 모델의 역량·안전 속성·리스크(위험역량 평가, 레드팀 평가 포함)를 체계적으로 시험하는 것. 시스템적 리스크 GPAI 모델에 요구된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 55</a></p>
+  </div>
+</article><h2 class="letter" id="LN">N</h2><article class="term" id="national-ai-ethics-standards-(korea)">
+  <div class="term__head"><h3>National AI ethics standards (Korea)</h3><span class="ko">국가 인공지능 윤리기준</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Korea&#x27;s 2020 ethics framework built on three basic principles—respect for human dignity, service to the common good of society, and technical purposiveness—and ten core requirements for realizing trustworthy AI.</p>
+    <p class="def def--ko">인간 존엄성 존중, 사회의 공공선 지향, 기술의 합목적성이라는 3대 기본원칙과 신뢰할 수 있는 AI 구현을 위한 10대 핵심요건으로 구성된 2020년 대한민국 윤리 프레임워크.</p>
+    <p class="src"><a href="https://ai.kisdi.re.kr/aieth/main/contents.do?menuNo=400028" target="_blank" rel="noopener noreferrer">국가 인공지능 윤리기준 (과학기술정보통신부·정보통신정책연구원(KISDI), 2020) · 3대 원칙·10대 요건</a></p>
+  </div>
+</article><article class="term" id="notified-body">
+  <div class="term__head"><h3>Notified body</h3><span class="ko">통보기관(제3자 인증기관)</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A conformity assessment body notified in accordance with the EU AI Act and other relevant Union harmonisation legislation, which performs third-party conformity assessment of high-risk AI systems.</p>
+    <p class="def def--ko">EU 인공지능법 및 관련 EU 조화법에 따라 통보된 적합성 평가기관으로, 고위험 AI 시스템에 대한 제3자 적합성 평가를 수행한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(22)</a></p>
+  </div>
+</article><h2 class="letter" id="LO">O</h2><article class="term" id="operator">
+  <div class="term__head"><h3>Operator</h3><span class="ko">운영자(사업주체)</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">In the EU AI Act, an umbrella term covering a provider, product manufacturer, deployer, authorised representative, importer or distributor.</p>
+    <p class="def def--ko">EU 인공지능법에서 제공자, 제품 제조자, 배포자, 권한대리인, 수입자, 유통자를 포괄하는 상위 용어.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(8)</a></p>
+  </div>
+</article><h2 class="letter" id="LP">P</h2><article class="term" id="placing-on-the-market">
+  <div class="term__head"><h3>Placing on the market</h3><span class="ko">시장 출시</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The first making available of an AI system or a general-purpose AI model on the Union market.</p>
+    <p class="def def--ko">AI 시스템 또는 범용 AI 모델을 역내 시장에 처음 이용 가능하게 하는 행위.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(9)</a></p>
+  </div>
+</article><article class="term" id="post-market-monitoring">
+  <div class="term__head"><h3>Post-market monitoring</h3><span class="ko">시판 후 모니터링</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">All activities carried out by providers to collect and review experience from the use of AI systems they place on the market, to identify any need for corrective or preventive action.</p>
+    <p class="def def--ko">제공자가 시장에 출시한 AI 시스템의 사용 경험을 수집·검토하여 시정·예방 조치의 필요성을 식별하기 위해 수행하는 모든 활동.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(25), Art. 72</a></p>
+  </div>
+</article><article class="term" id="prohibited-ai-practice">
+  <div class="term__head"><h3>Prohibited AI practice</h3><span class="ko">금지된 AI 관행</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI uses banned under EU AI Act Article 5 as posing unacceptable risk, such as harmful manipulation, exploitation of vulnerabilities, social scoring, and certain biometric practices.</p>
+    <p class="def def--ko">허용 불가능한 리스크를 초래한다고 보아 EU 인공지능법 제5조가 금지하는 AI 이용. 유해한 조작, 취약성 악용, 사회적 점수화, 특정 생체인식 관행 등이 포함된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 5</a></p>
+  </div>
+</article><article class="term" id="provider">
+  <div class="term__head"><h3>Provider</h3><span class="ko">제공자</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person, public authority, agency or other body that develops an AI system or general-purpose AI model, or has one developed, and places it on the market or puts it into service under its own name or trademark, whether for payment or free of charge.</p>
+    <p class="def def--ko">AI 시스템 또는 범용 AI 모델을 개발하거나 개발하게 하여, 유상·무상을 불문하고 자신의 이름·상표로 시장에 출시하거나 서비스를 개시하는 자연인·법인·공공기관 등.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(3)</a></p>
+  </div>
+</article><article class="term" id="putting-into-service">
+  <div class="term__head"><h3>Putting into service</h3><span class="ko">서비스 개시</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose.</p>
+    <p class="def def--ko">AI 시스템을 의도된 목적을 위해 배포자에게 직접 최초 이용하도록 공급하거나 역내에서 자체 이용하도록 하는 행위.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(11)</a></p>
+  </div>
+</article><h2 class="letter" id="LR">R</h2><article class="term" id="recall-of-an-ai-system">
+  <div class="term__head"><h3>Recall of an AI system</h3><span class="ko">AI 시스템 회수(리콜)</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any measure aiming to achieve the return to the provider, or the taking out of service or disabling, of an AI system already made available to deployers.</p>
+    <p class="def def--ko">이미 배포자에게 제공된 AI 시스템을 제공자에게 반환시키거나 서비스 중단·비활성화하려는 모든 조치.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(16)</a></p>
+  </div>
+</article><article class="term" id="record-keeping-/-logging">
+  <div class="term__head"><h3>Record-keeping / logging</h3><span class="ko">기록 보관(로깅)</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The obligation that high-risk AI systems technically allow automatic recording of events (logs) over their lifetime to ensure traceability of functioning (EU AI Act Article 12).</p>
+    <p class="def def--ko">고위험 AI 시스템이 작동의 추적가능성 확보를 위해 수명주기 동안 이벤트(로그)를 자동 기록할 수 있도록 기술적으로 보장해야 한다는 의무(EU 인공지능법 제12조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 12</a></p>
+  </div>
+</article><article class="term" id="right-to-explanation">
+  <div class="term__head"><h3>Right to explanation</h3><span class="ko">설명을 요구할 권리</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The right of an affected person to obtain a clear and meaningful explanation of the main criteria and logic used to reach an AI-based decision; recognized in EU AI Act Article 86 and Korean Framework Act Article 3.</p>
+    <p class="def def--ko">영향받는 자가 AI 기반 결정에 사용된 주요 기준과 원리에 대해 명확하고 의미 있는 설명을 받을 권리. EU 인공지능법 제86조와 인공지능기본법 제3조가 인정한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 86; 인공지능기본법 제3조</a></p>
+  </div>
+</article><article class="term" id="risk-management-system">
+  <div class="term__head"><h3>Risk management system</h3><span class="ko">위험관리체계</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A continuous, iterative process run across the life cycle of a high-risk AI system to identify, estimate, evaluate, and mitigate risks (EU AI Act Article 9); the NIST AI RMF operationalizes this through Govern, Map, Measure, and Manage functions.</p>
+    <p class="def def--ko">고위험 AI 시스템의 수명주기 전반에서 리스크를 식별·추정·평가·완화하기 위해 지속·반복 수행하는 과정(EU 인공지능법 제9조). NIST AI RMF는 이를 Govern·Map·Measure·Manage 기능으로 구현한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 9; NIST AI 100-1 §5</a></p>
+  </div>
+</article><h2 class="letter" id="LS">S</h2><article class="term" id="substantial-modification">
+  <div class="term__head"><h3>Substantial modification</h3><span class="ko">실질적 변경</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A change to an AI system after market placement or service that was not foreseen in the initial conformity assessment and that affects compliance with high-risk requirements or modifies the intended purpose.</p>
+    <p class="def def--ko">시장 출시·서비스 개시 후 AI 시스템에 가해진, 최초 적합성 평가에서 예견되지 않았고 고위험 요구사항 준수에 영향을 주거나 의도된 목적을 변경하는 변경.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(23)</a></p>
+  </div>
+</article><h2 class="letter" id="LT">T</h2><article class="term" id="technical-documentation">
+  <div class="term__head"><h3>Technical documentation</h3><span class="ko">기술문서</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The documentation that providers of high-risk AI systems must draw up before market placement, demonstrating compliance and enabling authorities to assess conformity (EU AI Act Article 11 and Annex IV).</p>
+    <p class="def def--ko">고위험 AI 시스템 제공자가 시장 출시 전 작성하여 적합성 입증과 당국의 평가를 가능하게 해야 하는 문서(EU 인공지능법 제11조 및 부속서 IV).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 11, Annex IV</a></p>
+  </div>
+</article><article class="term" id="testing-in-real-world-conditions">
+  <div class="term__head"><h3>Testing in real-world conditions</h3><span class="ko">실제 조건 시험</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Temporary testing of an AI system for its intended purpose in real-world conditions outside a laboratory, to gather reliable data and assess conformity, without qualifying as placing on the market or putting into service (subject to Articles 57 or 60).</p>
+    <p class="def def--ko">신뢰할 수 있는 데이터 확보와 적합성 평가를 위해, 실험실 밖 실제 조건에서 의도된 목적으로 AI 시스템을 임시로 시험하는 것. 제57조·제60조 조건 충족 시 시장 출시·서비스 개시로 보지 않는다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(57)</a></p>
+  </div>
+</article><article class="term" id="transparency-obligation-(disclosure)">
+  <div class="term__head"><h3>Transparency obligation (disclosure)</h3><span class="ko">투명성 의무(고지)</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The duty that providers and deployers disclose AI interaction and AI-generated content in specified cases, e.g., informing users they are interacting with an AI system or labelling synthetic media (EU AI Act Article 50).</p>
+    <p class="def def--ko">특정 경우 제공자·배포자가 AI 상호작용과 AI 생성 콘텐츠를 고지해야 하는 의무. 예를 들어 이용자에게 AI 시스템과 상호작용 중임을 알리거나 합성 미디어를 표시하는 것(EU 인공지능법 제50조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 50</a></p>
+  </div>
+</article><h2 class="letter" id="LU">U</h2><article class="term" id="user-(korean-framework-act)">
+  <div class="term__head"><h3>User (Korean Framework Act)</h3><span class="ko">이용자</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person who is provided with an AI product or AI service. (unofficial translation)</p>
+    <p class="def def--ko">인공지능제품 또는 인공지능서비스를 제공받는 자.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제8호</a></p>
+  </div>
+</article><h2 class="letter" id="LW">W</h2><article class="term" id="withdrawal-of-an-ai-system">
+  <div class="term__head"><h3>Withdrawal of an AI system</h3><span class="ko">AI 시스템 철회</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any measure aiming to prevent an AI system in the supply chain from being made available on the market.</p>
+    <p class="def def--ko">공급망 내 AI 시스템이 시장에 유통되는 것을 막으려는 모든 조치.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(17)</a></p>
+  </div>
+</article>
+  <section class="sources">
+    <h2>출처 (Sources)</h2>
+    <ul><li><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer"><b>EU 인공지능법 제3조</b></a><br><span>EU AI Act (Regulation (EU) 2024/1689), Article 3 · 확인 2026-08-29<br>영어 정의는 규정 원문 그대로 인용, 한국어는 비공식 번역</span></li><li><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer"><b>인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21)</b></a><br><span>Korea AI Framework Act, Article 2 (Act No. 21311, in force 21 Jul 2026) · 확인 2026-08-29<br>한국어 정의는 법률 원문 그대로 인용, 영어는 비공식 번역</span></li><li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer"><b>NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1)</b></a><br><span>NIST AI Risk Management Framework 1.0 (NIST AI 100-1) · 확인 2026-07-22<br>영어 정의는 원문 인용 또는 요약, 한국어는 비공식 번역</span></li><li><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer"><b>NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025)</b></a><br><span>NIST Adversarial Machine Learning: A Taxonomy and Terminology (NIST AI 100-2 E2025) · 확인 2026-08-29<br>보고서 분류·용어집 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer"><b>NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary)</b></a><br><span>NIST, The Language of Trustworthy AI (NIST AI 100-3 / AIRC Glossary) · 확인 2026-08-29<br>용어집 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer"><b>MITRE ATLAS (AI 시스템 적대적 위협 지형)</b></a><br><span>MITRE ATLAS (Adversarial Threat Landscape for AI Systems) · 확인 2026-08-29<br>전술·기법 지식베이스 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer"><b>OWASP LLM 애플리케이션 10대 리스크 2025</b></a><br><span>OWASP Top 10 for LLM Applications 2025 · 확인 2026-08-29<br>리스크 항목 정의 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://ai.kisdi.re.kr/aieth/main/contents.do?menuNo=400028" target="_blank" rel="noopener noreferrer"><b>국가 인공지능 윤리기준 (과학기술정보통신부·정보통신정책연구원(KISDI), 2020)</b></a><br><span>National AI Ethics Standards (MSIT &amp; KISDI, 2020) · 확인 2026-08-29<br>3대 기본원칙·10대 핵심요건 기반, 한국어 원문 준용</span></li><li><a href="https://www.sw.or.kr/AI_act_helpdesk/main.jsp" target="_blank" rel="noopener noreferrer"><b>고영향 인공지능 영향평가 가이드라인 등 (과기정통부, 인공지능기본법 지원데스크)</b></a><br><span>High-Impact AI Impact Assessment Guideline (MSIT, AI Framework Act Help Desk) · 확인 2026-08-29(포털)<br>지원데스크 게시 가이드라인 기준, 요약</span></li><li><a href="https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449" target="_blank" rel="noopener noreferrer"><b>OECD 인공지능 권고 (OECD/LEGAL-0449, 2024 개정)</b></a><br><span>OECD Recommendation on Artificial Intelligence (OECD/LEGAL-0449, as amended 2024) · 확인 2026-08-29(페이지)<br>NIST AI 100-1이 준용한 정의 기준</span></li><li><a href="https://www.iso.org/standard/74296.html" target="_blank" rel="noopener noreferrer"><b>ISO/IEC 표준 (22989 용어, 23894 위험관리, 42001 AI경영시스템)</b></a><br><span>ISO/IEC Standards (22989 Terminology; 23894 Risk Management; 42001 AI Management System) · 확인 표기만<br>표준 명칭 인용(원문 유료), 정의는 요약</span></li></ul>
+  </section>
+  <p class="note">표기 규칙: <b>원문 EN</b>은 영어 정의가 출처 원문(또는 준원문)이고 한국어는 비공식 번역, <b>원문 KO</b>는 한국어 정의가 법령·표준 원문이고 영어는 비공식 번역, <b>요약</b>은 양 언어 모두 출처를 간결히 정리한 것입니다. EU 인공지능법 한국어역과 인공지능기본법 영어역은 공식 번역이 아니며, 법적 효력은 각 원문에 있습니다. 확인일 기준 2026-08-29.</p>
+</main>
+</body>
+</html>
