@@ -159,25 +159,8 @@ def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]
         "status": "active",
         "mapping_method": mapping_method,
         "decision_required": mapping_method == "HD",
-        "em_score": optional_float(row["EM_Score"]),
-        "em_margin": optional_float(row["EM_Margin"]),
-        "hybrid_em_score": optional_float(row.get("Hybrid_EM_Score", "")),
-        "hybrid_em_margin": optional_float(row.get("Hybrid_EM_Margin", "")),
-        "em_stability": optional_float(row["EM_Stability"]),
         "keywords_ko": [row.get(f"L4_Keyword_{index}_ko", "") for index in range(1, 4)],
         "keywords_en": [row.get(f"L4_Keyword_{index}_en", "") for index in range(1, 4)],
-        "review_candidates": [
-            {
-                "rank": rank,
-                "l3_id": row[f"Candidate_{rank}_L3_ID"],
-                "em_score": optional_float(row[f"Candidate_{rank}_EM_Score"]),
-                "hybrid_em_score": optional_float(row[f"Candidate_{rank}_Hybrid_Score"]),
-            }
-            for rank in (1, 2)
-            if row[f"Candidate_{rank}_L3_ID"].strip()
-        ],
-        "ko_top_l3_id": row["KO_Top_L3_ID"] or None,
-        "en_top_l3_id": row["EN_Top_L3_ID"] or None,
         "hd_reason": row["HD_Reason"] or None,
         "facet": row["facet"] or None,
         "act_type": row["act-type"] or None,
@@ -189,9 +172,6 @@ def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]
         "domain_route_basis": row["Domain_Route_Basis"],
         "transformation_action": row["Transformation_Action"],
         "transformation_rationale": row["Transformation_Rationale"],
-        "definition_l3_anchor_id": row.get("Definition_L3_Anchor_ID") or None,
-        "definition_l3_anchor_score": optional_float(row.get("Definition_L3_Anchor_Score", "")),
-        "definition_grounding_action": row.get("Definition_Grounding_Action") or None,
     }
 
 

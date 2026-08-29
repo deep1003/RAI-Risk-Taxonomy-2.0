@@ -1,156 +1,22 @@
-% !TEX program = xelatex
-\documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=21mm,headheight=15pt]{geometry}
-\usepackage{fontspec,microtype}
-\usepackage{booktabs,longtable,tabularx,array,enumitem,xcolor,hyperref,fancyhdr,lastpage}
-\usepackage{graphicx,titlesec,seqsplit}
-\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Latin Modern Roman}}
-\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{\setsansfont{Arial}}
-\definecolor{navy}{HTML}{173458}\definecolor{blue}{HTML}{3366CC}\definecolor{darkgray}{HTML}{44546A}
-\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=blue,pdfauthor={RAI Risk Taxonomy 2.0 Project},pdftitle={RAI Risk Taxonomy 2.0 Human Review Round 2 Technical Report}}
-\pagestyle{fancy}\fancyhf{}\lhead{\small RAI Risk Taxonomy 2.0 Master}\rhead{\small Human Review Round 2}\cfoot{\small \thepage\ / \pageref{LastPage}}
-\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{0.7em}{}
-\titleformat{\subsection}{\large\bfseries\color{darkgray}}{\thesubsection}{0.7em}{}
-\setlist[itemize]{leftmargin=1.5em,itemsep=2pt}\setlist[enumerate]{leftmargin=1.7em,itemsep=3pt}
-\renewcommand{\arraystretch}{1.2}
-\newcommand{\hashval}[1]{\texttt{\small\seqsplit{#1}}}
-\graphicspath{{../output/figures/}}
-
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}
+\setmainfont{Apple SD Gothic Neo}\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}\pagestyle{fancy}\fancyhf{}\rhead{RAI Risk Taxonomy 2.0}\lhead{Human Review Recovery}\cfoot{\thepage}\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
-\begin{titlepage}\pagecolor{navy}\color{white}\vspace*{28mm}
-{\sffamily\bfseries\fontsize{27}{33}\selectfont RAI Risk Taxonomy 2.0\par}\vspace{5mm}
-{\sffamily\fontsize{21}{27}\selectfont Human Review Round 2 Technical Report\par}\vspace{12mm}
-{\Large Row-level instruction application, terminology review, and data-integrity validation\par}\vfill
-{\large Reference date: 29 August 2026\par}\vspace{3mm}{\normalsize English edition\par}\vspace{18mm}
-\end{titlepage}\nopagecolor\color{black}
-\tableofcontents\newpage
-
-\section{Executive summary}
-This report documents the row-level application of second-round human review to the preceding 808-card master. The purpose of this stage was not to produce a new semantic mapping. It was to reconcile each reviewed row with the preceding release and apply explicit instructions to retain, delete, consolidate, split, transfer, rename, or redefine a card. Neither EM nor Hybrid EM was rerun.
-
-The result contains 798 L4 cards: 630 General, 74 Agentic, and 94 Physical. Ten user-directed consolidation operations and four explicit deletion instructions from the source review were applied. After accounting for every split and consolidation, the net reduction is ten records. The pipeline applied 518 Korean copy-edit operations, 319 English copy-edit operations, and 279 final terminology and L3-alignment decisions. All 46 source L3 rows remained unchanged, while the existing three derived Others routes remained available for human decision. All 30 deterministic checks passed. Independent specialist agents reviewed language quality and semantic boundaries as a final acceptance condition.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.76\textwidth]{round2_domain_counts.png}
-\caption{L4 counts before and after second-round human review}
-\end{figure}
-
-\section{Scope and governing rules}
-\subsection{Work performed in this round}
-\begin{enumerate}
-\item Freeze the KTSPACE L3 and domain-specific L4 review exports and record their hashes.
-\item Align the reviewed rows with the preceding 808-card master by order, title, and lineage identifiers.
-\item Read each instruction and review note, then encode only determinate decisions in an explicit operation table.
-\item Apply approved deletion and consolidation decisions while preserving all source-row lineage, \texttt{facet}, and \texttt{act-type} values.
-\item Revise Korean and English titles and definitions against the L3 drafting style and the project glossary.
-\item Give the immutable L3 master precedence over conflicting notes, using Others and HD where no current L3 can reliably contain the card.
-\item Reissue continuous L4 identifiers within each final L3 and record every before-and-after link in the decision ledger.
-\end{enumerate}
-
-\subsection{Work not performed in this round}
-This round did not run EM, Hybrid EM, keyword-augmented mapping, or automatic L1 reassignment. Previous scores remain historical evidence only. Cards altered in text or hierarchy have their scores removed or explicitly marked as stale. BGE-M3 similarity was recomputed solely to retrieve near-duplicate candidates, not to reassign L3 categories.
-
-\section{Data integrity and lineage}
-The hierarchy contains 46 immutable source L3 categories and three derived Others routes. The bilingual names, definitions, and L1 and L2 relationships of the source L3 rows were fixed cell by cell. Every retained L4 links to at least one \texttt{source\_row\_id} and \texttt{Source\_L4\_IDs} value. Deleted records remain represented in the decision ledger.
-
-\begin{table}[htbp]\centering
-\caption{Second-round count reconciliation}
-\begin{tabular}{lrrrr}\toprule
-Domain & Previous master & Final & Net change & Others\\\midrule
-General AI & 599 & 630 & +31 & 117\\
-Agentic AI & 90 & 74 & -16 & 4\\
-Physical AI & 119 & 94 & -25 & 8\\\midrule
-Total & 808 & 798 & -10 & 129\\\bottomrule
-\end{tabular}
-\end{table}
-
-The count identity is
-\[
-808 - 4 (explicit deletions) + 31 (net split additions) - 37 (net consolidation reductions) = 798.
-\]
-
-\begin{longtable}{p{0.32\textwidth}p{0.60\textwidth}}
-\caption{Core integrity hashes}\\\toprule
-Object & SHA-256\\\midrule\endfirsthead
-\toprule Object & SHA-256\\\midrule\endhead
-L3 master & \hashval{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df}\\
-Round-two source manifest & \hashval{171eff64979cf27c6821a28cca5bf7338d36ab50c2b5cc869f26dea2a2e587d6}\\
-User-directed operations & \hashval{24a49b20c1ef892fdee2835c19966110b36c1128f5fd77620af71426844d8cbe}\\
-Korean copy-edit manifest & \hashval{469d1ed03f6cd7ca36fecb9872f09b4c205c4631de9c1555e183d5f3d63e1340}\\
-English copy-edit manifest & \hashval{ba2bb0a614112086f2cccfc0ad97efc95fee649c6da13f245912dccabfaf1c5d}\\
-Final terminology and L3 QA manifest & \hashval{790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738}\\\bottomrule
-\end{longtable}
-
-\section{Application of human-review instructions}
-Each instruction was read in its source row and linked to the actual card in the preceding master before it was applied. Free-text notes were not converted into assignments through keyword inference. Where a note allowed more than one interpretation, the procedure compared the immutable L3 definition, source English, source Korean, and human-edited definition in that order. Deletion and consolidation were limited to approved targets. Political orientation, race and ethnicity, disability, and gender, gender identity, and sexual orientation remain separate protected-characteristic cards.
-
-The ten user-approved consolidations preserve the distinctive meaning of every absorbed source row in the bilingual representative definition. Weapon-related cards distinguish biological and chemical, radiological and nuclear, explosive, strategic weaponisation, tactical use, and proliferation or concealment mechanisms. Representation risks retain separate protected characteristics while using a common drafting structure.
-
-The final L3 comparison re-examined the boundaries around evaluation failure, security compromise, economic effects, agent authority and autonomy, physical control, and human-robot safety against the immutable L3 definitions. Cards for which the review instruction directly matched a current L3 were transferred to that L3. Cards that could not be assigned reliably to one current L3 were retained in the relevant domain-specific \texttt{Others} route with HD rather than creating a new L3. These are explicit master-precedence QA decisions, not EM reassignments.
-
-\section{Language and terminology review}
-\subsection{Korean}
-Korean titles do not receive a mechanical risk suffix. Terms corresponding to risk, hazard, harm, damage, or infringement are used only when semantically warranted. Each definition names an AI technology, specifies a causal mechanism and adverse outcome, and ends in the risk-statement style of the L3 master. The project glossary and policy terminology were used to standardise the Korean forms for dual use, lifecycle, generative AI, explainability, dataset, and safeguards. Colloquial or translation-like expressions were replaced by direct policy and technical wording.
-
-\subsection{English}
-English definitions use the L3 master's \textit{The risk that} structure. Heavy introductory constructions of the form \textit{The risk that, ...} were replaced by direct subject-verb clauses. British spelling was retained, and the actor, mechanism, and harm were aligned across the two languages. Formulaic \textit{AI-mediated}, \textit{AI-facilitated}, and \textit{AI-assisted} modifiers were removed from titles. Terms that identify a technical object, such as AI model, AI agent, and machine learning, were retained.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.68\textwidth]{round2_language_edits.png}
-\caption{Approved bilingual language operations}
-\end{figure}
-
-\section{Mapping state and score handling}
-The \texttt{Mapping\_Method} field preserves the state label produced in the preceding stage for lineage. The current records contain 440 EM labels and 358 HD labels, but these are not newly computed EM results. The 129 Others records are a subset of HD. Other HD records remain in a current L3 following human transfer, retention, or review decisions.
-
-\begin{table}[htbp]\centering
-\caption{Preserved mapping state by domain}
-\begin{tabular}{lrrrr}\toprule
-Domain & Final L4 & EM label & HD label & Others\\\midrule
-General AI & 630 & 338 & 292 & 117\\
-Agentic AI & 74 & 47 & 27 & 4\\
-Physical AI & 94 & 55 & 39 & 8\\\midrule
-Total & 798 & 440 & 358 & 129\\\bottomrule
-\end{tabular}
-\end{table}
-
-Previous-score fields remain populated for 326 cards and are not retained for 472 cards after human or structural review. In the separate score-status field, 662 cards are marked as not recomputed after text revision and 61 as unavailable after human review. The remaining 75 cards retain text following L3-master validation or an earlier AI-subject rewrite. No previous score should be interpreted as measuring current fit or as the basis of the final reviewed placement.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.90\textwidth]{round2_mapping_score_status.png}
-\caption{Score status after human review without an EM rerun}
-\end{figure}
-
-\section{Similarity review for duplicate candidates}
-The Korean and English titles and definitions of the 798 final cards were embedded separately with BAAI/BGE-M3, and the two cosine similarities were averaged. The complete cross-card space contains 318,003 non-self pairs. The pipeline records the top 200 overall pairs and the top 1,000 among 15,362 same-L3 pairs. Similarity is a retrieval rank for possible duplication, not an automatic consolidation or L3 decision. Separate protected characteristics, affected targets, causal mechanisms, or lifecycle stages remain distinct even at high similarity.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.96\textwidth]{round2_similarity_top10.png}
-\caption{Ten highest bilingual similarities after final language review}
-\end{figure}
-
-\section{Three validation methods}
-\subsection{Source reconciliation and immutability}
-The pipeline compared the source manifest, preceding master, and L3 master hashes and verified every hierarchy field cell by cell. The L3 master hash is unchanged.
-
-\subsection{Instruction fidelity and lineage}
-Each review instruction must resolve to exactly one source row and its final card or cards. The validator checks deletion, consolidation, and transfer decisions against the ledger, and verifies preservation or union of \texttt{facet}, \texttt{act-type}, and source identifiers.
-
-\subsection{Language and semantic review}
-The checks cover bilingual completeness, explicit AI-technology subjects, Korean risk-statement endings, the English L3 drafting structure, prohibited formulaic title modifiers, glossary forms, and L3 semantic boundaries. All 30 deterministic checks passed, and independent specialist reviews are recorded in a separate JSON file.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.62\textwidth]{round2_validation.png}
-\caption{Deterministic validation result}
-\end{figure}
-
-\section{Reproducibility and release structure}
-The pipeline is rerun from the same frozen inputs and approved specifications into a temporary output directory. Its core files are then compared byte for byte with the canonical output. The final distribution contains one L1 CSV, one combined L1/L2/L3 CSV, and one L4 CSV for each of General, Agentic, and Physical. Each L4 CSV contains the L1 to L4 identifiers, bilingual titles and definitions, Others records, L4 attributes, decision lineage, and score status. The same files generate the website cards, Release Manifest, Validation Record, tables, figures, and bilingual reports.
-
-\section{Limitations and next step}
-Inherited scores do not measure the current similarity of rewritten definitions. EM or Hybrid EM may be rerun only after a separate explicit instruction from the user. Until then, the site must present candidate scores as historical or unavailable. High similarity likewise indicates a review candidate, not sufficient evidence for automatic consolidation.
-
+\title{RAI Risk Taxonomy 2.0\\Second Human-Review Recovery Technical Report}\author{Human-review recovery release}\date{29 August 2026}\maketitle
+\section*{Executive summary}
+This report documents a recovery that preserved 798 baseline L4 cards while reinterpreting and applying the second-round human-review instructions row by row. Neither EM nor Hybrid EM was rerun. Two specialist agents independently reviewed and cross-reviewed 166 decisions against the frozen L3 master and an 808-row instruction register. The final release contains 791 L4 cards: 620 General, 77 Agentic, and 94 Physical. No card remains assigned to Others.
+\section{Recovery principles}
+Valid edits and user-approved consolidations in the baseline commit were retained. Only explicit second-round instructions to delete, merge, split, remap, or rewrite were applied through source\_row\_id lineage. The L3 master prevailed over conflicting prompts. No L3 was created or modified, and its SHA-256 digest was frozen.
+\section{Applied decisions}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule Action & Reviewed rows\\\midrule Remap & 80\\Rewrite and retain & 39\\Split & 19\\Merge & 14\\Delete & 14\\\bottomrule\end{tabular}\caption{The 166 approved human-review decisions}\end{table}
+\begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{Final L4 cards by domain}\end{figure}
+\begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{Distribution of approved human-review actions}\end{figure}
+\section{Splitting compound cards}
+Six records that had already been split correctly were retained. Twelve compound records that still had a single output were rewritten as distinct children aligned with their respective L3 mechanisms. Every bilingual definition identifies an AI system, algorithm, agent, or equivalent technical subject, a causal mechanism, and an adverse outcome. Titles follow the nominal tone of the L3 master and do not receive a mechanical risk suffix.
+\section{Integrity and validation}
+The L3 master SHA-256 remained \texttt{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df}. L4 identifiers were reissued continuously within each final L3. Duplicate identifiers, exact duplicate cards, unknown L3 assignments, hierarchy mismatches, blank bilingual fields, and definitions without an AI technical subject all returned zero failures. Two independent executions produced identical SHA-256 hashes for the three L4 CSV files.
+\section{Deliverables}
+The release contains one L1 CSV, one combined L1/L2/L3 CSV, and separate General, Agentic, and Physical L4 CSVs. The validation directory preserves the 808-row instruction register, the 165 approved decisions, lineage edges from source\_row\_id to final L4, deletion tombstones, the application log, and the validation record.
 \section{Conclusion}
-Second-round human review transformed the preceding 808 cards into a 798-card master while preserving the immutable L3 hierarchy. Reviewed instructions, approved consolidations, bilingual language revisions, glossary alignment, and lineage are synchronised in one reproducible release. The result is a faithful application of human review rather than a new EM output, and subsequent mapping will occur only on explicit instruction.
-
+This recovery implements human-review intent rather than a new similarity-based classification. No Others assignments remain and the L3 master is unchanged. Any future remapping must be run only after a separate explicit user instruction.
 \end{document}

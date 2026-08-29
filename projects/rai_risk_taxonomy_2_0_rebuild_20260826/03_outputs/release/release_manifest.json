@@ -1,67 +1,68 @@
 {
-  "release_date": "2026-08-26",
-  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/run_rebuild_pipeline.py",
-  "source_hashes": {
-    "L1": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
-    "L3": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
-    "General": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
-    "Agentic": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
-    "Physical": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c"
-  },
-  "model": {
-    "name": "BAAI/bge-m3",
-    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
-    "pooling": "CLS",
-    "config_sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa",
-    "tokenizer_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08",
-    "weights_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
-  },
+  "release_date": "2026-08-29",
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "release_round": "human_review_round2",
+  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
   "mapping_method": {
-    "name": "Anchor-regularised keyword-augmented constrained EM",
-    "l1_decision_precedes_domain_constrained_l3_em": true,
-    "cross_domain_review_count": 30,
-    "no_matching_l3_policy": "HOLD_IN_REVIEWED_L1_OTHERS",
-    "cross_domain_audit_file": "audit/L1_Cross_Domain_Routing_Audit.csv",
-    "anchor_weight": 4.0,
-    "semantic_keyword_weight": 0.025,
-    "lexical_keyword_weight": 0.06,
-    "exclusion_penalty": 0.08,
-    "curated_l3_prior_weight": 0.3,
-    "representative_keywords_per_language": 3
+    "name": "Approved human-review lineage overlay",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "l3_master_precedence": true,
+    "automatic_reassignment": false
   },
-  "definition_method": {
-    "name": "Immutable-L3-referenced bilingual AI-technology grounding",
-    "provisional_mapping_used_only_as_drafting_anchor": true,
-    "final_mapping_refitted_after_definition_revision": true,
-    "korean_ai_technology_required": true,
-    "english_ai_technology_required": true,
-    "causal_risk_mechanism_required": true,
-    "l3_scope_anchor_floor": 0.6,
-    "l3_scope_hybrid_floor": 0.65
-  },
-  "title_terminology_method": {
-    "name": "Authoritative term-family normalisation against the immutable L3 master",
-    "formulaic_ai_involvement_qualifiers_removed": [
-      "AI-mediated",
-      "AI-facilitated",
-      "AI-assisted",
-      "AI-enabled",
-      "AI-driven",
-      "AI-induced",
-      "AI-amplified",
-      "AI-automated",
-      "AI-related"
-    ],
-    "technical_object_ai_terms_retained": true,
-    "audit_file": "audit/L4_Title_Terminology_Audit.csv"
-  },
-  "semantic_deduplication_method": {
-    "name": "Bilingual BGE-M3 candidate generation with immutable-L3 and distinctiveness gates",
-    "candidate_similarity_threshold": 0.9,
-    "automatic_deletion_from_similarity_only": false,
-    "distinct_target_or_mechanism_is_retained": true,
-    "candidate_audit_file": "audit/Semantic_Near_Duplicate_Candidates.csv",
-    "decision_audit_file": "audit/Semantic_Near_Duplicate_Decisions.csv"
+  "summary": {
+    "source_total": 798,
+    "cleaned_total": 791,
+    "final_total": 791,
+    "deleted": 13,
+    "explicit_deletions": 17,
+    "merged_away": 9,
+    "split_net_addition": 15,
+    "net_reduction": 7,
+    "user_directed_operations": 166,
+    "korean_copyedit_operations": 0,
+    "english_copyedit_operations": 0,
+    "score_status_counts": {
+      "NOT_APPLICABLE": 167,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 520,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 43,
+      "L3_MASTER_VALIDATED": 54,
+      "L3_MASTER_AI_REWRITE": 7
+    },
+    "validation_passed": 10,
+    "validation_failed": 0,
+    "others_total": 0,
+    "source_counts": {
+      "General": 630,
+      "Agentic": 74,
+      "Physical": 94
+    },
+    "final_domain_counts": {
+      "General AI": 620,
+      "Agentic AI": 77,
+      "Physical AI": 94
+    },
+    "mapping_method_counts": {
+      "General AI": {
+        "EM": 337,
+        "HD": 283
+      },
+      "Agentic AI": {
+        "EM": 44,
+        "HD": 33
+      },
+      "Physical AI": {
+        "EM": 55,
+        "HD": 39
+      }
+    },
+    "similarity_top_pairs_published": 20,
+    "recovery_actions": {
+      "SPLIT": 19,
+      "MERGE": 14,
+      "REMAP": 80,
+      "REWRITE_KEEP": 39,
+      "DELETE": 14
+    }
   },
   "primary_outputs": {
     "L1_Master.csv": {
@@ -73,101 +74,45 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
-      "rows": 599
+      "sha256": "0b0d837a150e26245f3380ac7d7c3319cdbebc4404c1e482899b9417982a8b75",
+      "rows": 620
     },
     "L4_Agentic.csv": {
-      "sha256": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
-      "rows": 90
+      "sha256": "3ad138629ebb96bee18e54d35fb37f8263ac7bb07c4d503fca987ac7b3969b6e",
+      "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949",
-      "rows": 119
+      "sha256": "7a518b58d7bfde4ca3982a03976be45caa2d1adc08f4c4101c4f4040681b9d6e",
+      "rows": 94
     }
   },
-  "summary": {
-    "date": "2026-08-26",
-    "source_counts": {
-      "Agentic": 83,
-      "General": 591,
-      "Physical": 218
-    },
-    "source_total": 892,
-    "deleted": 65,
-    "merged_away": 20,
-    "split_net_addition": 1,
-    "cleaned_total": 808,
-    "final_domain_counts": {
-      "Agentic AI": 90,
-      "General AI": 599,
-      "Physical AI": 119
-    },
-    "mapping_method_counts": {
-      "Agentic AI": {
-        "EM": 71,
-        "HD": 19
-      },
-      "General AI": {
-        "EM": 451,
-        "HD": 148
-      },
-      "Physical AI": {
-        "EM": 90,
-        "HD": 29
-      }
-    },
-    "others_total": 196,
-    "em_total": 612,
-    "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
-    "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
-    "definition_ai_grounding_rewrites": 260,
-    "title_terminology_normalisations": 66,
-    "title_normalisation_ledger_changes_before_deduplication": 70,
-    "title_terminology_validated": 808,
-    "semantic_near_duplicate_candidates": 66,
-    "semantic_near_duplicate_deletions": 5,
-    "l3_scope_deletions": 12,
-    "l1_cross_domain_reviewed": 30,
-    "l1_cross_domain_forced_others": 14,
-    "keyword_count_per_language": 3,
-    "thresholds": {
-      "General": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      },
-      "Agentic": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      },
-      "Physical": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      }
-    },
-    "l3_source_rows": 46,
-    "l3_derived_others_rows": 3,
-    "validation_passed": 50,
-    "validation_failed": 0
+  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "review_decisions": 166,
+  "source_register_rows": 808,
+  "deterministic_replay": "PASS",
+  "source_hashes": {
+    "L3_Master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+    "Recovery_Decisions": "ed7abf98ebd5825d1ec454e543e019f0989ac6d77da4f3676daf882b3f14ba1a",
+    "Instruction_Register": "bfe843387ac40195f40d987e63db3dd19637e1fccb1c2cf84237ab690e33977e"
+  },
+  "human_review": {
+    "vote_log": "Not used in this recovery round",
+    "application_policy": "Applied only under the explicit user instruction dated 2026-08-29",
+    "automatic_reassignment": false
+  },
+  "human_review_round2": {
+    "independent_language_review": {
+      "status": "PASS",
+      "reviews": [
+        {
+          "reviewer_role": "Methodology and intent specialist",
+          "status": "PASS"
+        },
+        {
+          "reviewer_role": "Lineage and data-integrity specialist",
+          "status": "PASS"
+        }
+      ]
+    }
   }
 }

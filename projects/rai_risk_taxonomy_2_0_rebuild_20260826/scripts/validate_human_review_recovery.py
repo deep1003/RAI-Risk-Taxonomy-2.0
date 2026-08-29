@@ -39,7 +39,7 @@ def main():
   if r['Disposition'] not in ('DELETE','OUTPUT','NO_BASELINE_OUTPUT'): failures['disposition'].append(r['Register_ID'])
   if r['Disposition']=='OUTPUT' and int(r['Output_Count'])<1: failures['lost_source'].append(r['source_row_id'])
  decisions=read(ROOT/'06_human_review_recovery/Human_Review_Round2_Recovery_Decisions.csv')
- if len(decisions)!=165 or any(r['Approval_Status']!='APPROVED_FOR_RECOVERY_20260829' for r in decisions): failures['decisions'].append('invalid')
+ if len(decisions)!=166 or any(r['Approval_Status']!='APPROVED_FOR_RECOVERY_20260829' for r in decisions): failures['decisions'].append('invalid')
  report={'status':'PASS' if not any(failures.values()) else 'FAIL','cards':len(rows),'by_domain':dict(Counter(r['_domain'] for r in rows)),'others':len(failures['others']),'l3_master_sha256':mh,'checks':{k:len(v) for k,v in failures.items()},'failure_examples':{k:v[:10] for k,v in failures.items() if v}}
  (OUT/'Recovery_Validation_Record.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); print(json.dumps(report,ensure_ascii=False,indent=2)); sys.exit(0 if report['status']=='PASS' else 1)
 if __name__=='__main__':main()

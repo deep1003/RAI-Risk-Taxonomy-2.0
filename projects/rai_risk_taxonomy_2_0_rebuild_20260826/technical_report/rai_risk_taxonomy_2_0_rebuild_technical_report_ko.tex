@@ -1,163 +1,22 @@
-% !TEX program = xelatex
-\documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=21mm,headheight=15pt]{geometry}
-\usepackage{fontspec,kotex,microtype}
-\usepackage{booktabs,longtable,tabularx,array,enumitem,xcolor,hyperref,fancyhdr,lastpage}
-\usepackage{graphicx,titlesec,seqsplit}
-\IfFontExistsTF{Apple SD Gothic Neo}{\setmainhangulfont{Apple SD Gothic Neo}}{\setmainhangulfont{Noto Sans CJK KR}}
-\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Latin Modern Roman}}
-\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{\setsansfont{Arial}}
-\definecolor{navy}{HTML}{173458}\definecolor{blue}{HTML}{3366CC}\definecolor{darkgray}{HTML}{44546A}
-\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=blue,pdfauthor={RAI Risk Taxonomy 2.0 Project},pdftitle={RAI Risk Taxonomy 2.0 Human Review Round 2 Technical Report}}
-\pagestyle{fancy}\fancyhf{}\lhead{\small RAI Risk Taxonomy 2.0 Master}\rhead{\small 2차 휴먼검수 기술보고서}\cfoot{\small \thepage\ / \pageref{LastPage}}
-\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{0.7em}{}
-\titleformat{\subsection}{\large\bfseries\color{darkgray}}{\thesubsection}{0.7em}{}
-\setlist[itemize]{leftmargin=1.5em,itemsep=2pt}\setlist[enumerate]{leftmargin=1.7em,itemsep=3pt}
-\renewcommand{\arraystretch}{1.2}
-\newcommand{\hashval}[1]{\texttt{\small\seqsplit{#1}}}
-\graphicspath{{../output/figures/}}
-
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}
+\setmainfont{Apple SD Gothic Neo}\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}\pagestyle{fancy}\fancyhf{}\rhead{RAI Risk Taxonomy 2.0}\lhead{Human Review Recovery}\cfoot{\thepage}\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
-\begin{titlepage}\pagecolor{navy}\color{white}\vspace*{28mm}
-{\sffamily\bfseries\fontsize{27}{33}\selectfont RAI Risk Taxonomy 2.0\par}\vspace{5mm}
-{\sffamily\fontsize{21}{27}\selectfont 2차 휴먼검수 적용 기술보고서\par}\vspace{12mm}
-{\Large 행별 검수 지시 반영, 언어·용어 정밀 교정, 데이터 무결성 검증\par}\vfill
-{\large 기준일: 2026년 8월 29일\par}\vspace{3mm}{\normalsize 한국어판\par}\vspace{18mm}
-\end{titlepage}\nopagecolor\color{black}
-\tableofcontents\newpage
-
-\section{요약}
-본 보고서는 808개 L4 카드로 구성된 직전 마스터에 2차 인간 검수 결과를 행별로 적용한 과정을 기록한다. 이번 단계의 목적은 새로운 의미 매핑이 아니라 검수자가 작성한 유지, 삭제, 통합, 분리, 이관, 명칭 수정, 정의 수정 지시를 원천 행과 대조하여 반영하는 것이었다. 따라서 EM과 Hybrid EM은 재실행하지 않았다.
-
-최종 L4는 798개이며 General 630개, Agentic 74개, Physical 94개이다. 사용자 지정 통합 연산 10건과 원천의 명시적 삭제 지시 4건을 적용했으며, 모든 분리와 통합을 함께 계산한 전체 순감소는 10개이다. 한국어 교정 518건, 영어 교정 319건, 최종 용어·L3 정합성 교정 279건을 적용했다. L3 마스터 46개 행은 변경하지 않았고 기존 파생 Others 3개 행은 라우팅 용도로만 유지했다. 결정적 검증 30개가 모두 통과했으며 독립 전문 에이전트의 언어·의미 경계 검토를 최종 승인 조건으로 사용했다.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.76\textwidth]{round2_domain_counts.png}
-\caption{2차 휴먼검수 전후 L4 도메인별 수량}
-\end{figure}
-
-\section{범위와 적용 원칙}
-\subsection{이번 단계에서 수행한 작업}
-\begin{enumerate}
-\item KTSPACE에서 받은 L3 및 도메인별 L4 2차 검수 CSV를 동결하고 해시를 기록했다.
-\item 직전 808개 마스터와 검수본을 행 순서, 제목, 계보 식별자로 대조했다.
-\item 각 Instruction Prompt와 검수 메모를 읽고 결정 가능한 지시만 명시적 연산표로 변환했다.
-\item 사용자 승인 통합안과 삭제안을 적용하고 대표 카드에 모든 원천 행 계보, \texttt{facet}, \texttt{act-type}을 합집합으로 보존했다.
-\item 한국어와 영어 명칭·정의를 L3 문체와 용어집에 맞추어 교정했다.
-\item L3 마스터와 충돌하는 지시는 L3 마스터를 우선하여 Others와 HD로 격리하거나 검수자가 명시한 L3 범위 안에서 의미를 좁혔다.
-\item 모든 L4 ID를 최종 L3별 연속 순번으로 다시 부여하고 결정 원장으로 전후 관계를 남겼다.
-\end{enumerate}
-
-\subsection{이번 단계에서 수행하지 않은 작업}
-이번 단계에서는 EM, Hybrid EM, 키워드 보강 매핑, 자동 L1 이동을 수행하지 않았다. 기존 점수는 비교를 위한 과거 증거일 뿐이다. 텍스트나 계층이 바뀐 카드는 점수를 삭제하거나 명시적으로 오래된 값으로 표시했다. BGE-M3 유사도는 중복 후보 검토용으로만 다시 계산했고 L3 재배치에는 사용하지 않았다.
-
-\section{데이터 무결성과 계보}
-L3 마스터는 46개 원천 L3와 3개 파생 Others로 구성된다. 원천 L3의 한영 명칭, 정의, L1·L2 연결 필드는 셀 단위로 고정했다. 모든 최종 L4는 하나 이상의 원천 \texttt{source\_row\_id}와 \texttt{Source\_L4\_IDs}를 가지며 삭제된 카드도 결정 원장에 남는다.
-
-\begin{table}[htbp]\centering
-\caption{2차 검수 수량 대조}
-\begin{tabular}{lrrrr}\toprule
-도메인 & 직전 마스터 & 최종 & 순변화 & Others\\\midrule
-General AI & 599 & 630 & +31 & 117\\
-Agentic AI & 90 & 74 & -16 & 4\\
-Physical AI & 119 & 94 & -25 & 8\\\midrule
-합계 & 808 & 798 & -10 & 129\\\bottomrule
-\end{tabular}
-\end{table}
-
-전체 보존식은 다음과 같다.
-\[
-808 - 4 (명시적 삭제) + 31 (분리 순증가) - 37 (통합 순감소) = 798.
-\]
-
-\begin{longtable}{p{0.32\textwidth}p{0.60\textwidth}}
-\caption{핵심 무결성 해시}\\\toprule
-대상 & SHA-256\\\midrule\endfirsthead
-\toprule 대상 & SHA-256\\\midrule\endhead
-L3 마스터 & \hashval{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df}\\
-2차 검수 원천 manifest & \hashval{171eff64979cf27c6821a28cca5bf7338d36ab50c2b5cc869f26dea2a2e587d6}\\
-사용자 지정 연산표 & \hashval{24a49b20c1ef892fdee2835c19966110b36c1128f5fd77620af71426844d8cbe}\\
-한국어 교정 manifest & \hashval{469d1ed03f6cd7ca36fecb9872f09b4c205c4631de9c1555e183d5f3d63e1340}\\
-영어 교정 manifest & \hashval{ba2bb0a614112086f2cccfc0ad97efc95fee649c6da13f245912dccabfaf1c5d}\\
-최종 용어·L3 QA manifest & \hashval{790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738}\\\bottomrule
-\end{longtable}
-
-\section{인간 검수 지시 적용}
-검수 지시는 먼저 원천 행에서 읽고 직전 마스터의 실제 카드와 연결한 뒤 적용했다. 자유서술 메모를 키워드로 추정하여 자동 배정하지 않았다. 같은 지시에 여러 해석이 가능한 경우 L3 마스터의 정의, 원천 영문, 원천 한국어, 인간 수정 정의의 순서로 의미를 대조했다. 삭제와 통합은 승인된 대상에만 수행했으며 정치적 성향, 인종·민족, 장애, 성별·성정체성·성적 지향처럼 별도 보호 특성을 나타내는 카드는 통합하지 않았다.
-
-사용자가 승인한 열 개 통합은 대표 카드가 흡수 카드의 고유 의미를 보존하도록 한영 정의를 다시 작성했다. 무기 관련 통합은 생물학·화학·방사성·핵·폭발물, 무기화 전략, 전술적 운용, 확산·은닉을 서로 다른 위해 기제로 구분했다. 표현 리스크는 보호 특성별 범위를 유지하면서 동일한 문장 구조로 정규화했다.
-
-최종 L3 대조에서는 평가 실패, 보안 침해, 경제적 영향, 에이전트 권한·자율성, 물리 제어 및 인간과 로봇 간 안전의 경계를 L3 마스터 정의와 다시 대조했다. 검수 지시와 현행 L3 정의가 직접 일치한 카드는 해당 L3로 이관했고, 단일 현행 L3로 신뢰성 있게 구분하기 어려운 카드는 새 L3를 만들지 않고 도메인별 \texttt{Others}와 HD로 보존했다. 이 결정은 EM 결과가 아니라 L3 마스터 우선 원칙을 적용한 명시적 QA 결정이다.
-
-\section{언어와 용어 정밀 교정}
-\subsection{한국어}
-한국어 명칭은 모두 기계적으로 `리스크'로 끝내지 않았다. 의미상 필요한 경우에만 리스크, 위험, 위해, 피해, 침해를 사용했다. 정의는 AI 기술 주체, 위험 발생 기제, 부정적 결과가 드러나도록 작성하고 최종 문장을 위험 계열 명사로 종결했다. 프로젝트 용어집과 정책 문서의 표기를 기준으로 \textit{이중용도}, \textit{수명주기}, \textit{생성형 AI}, \textit{설명가능성}, \textit{데이터셋}, \textit{보호조치}를 통일했다. 구어체와 번역투는 이전·획득, 인간의 생사를 좌우하는 결정, LLM 기반 에이전트 팀과 같은 직접적인 정책·기술 표현으로 교정했다.
-
-\subsection{영어}
-영문 정의는 L3 마스터와 같은 \textit{The risk that} 구조를 사용했다. 문법상 무거운 \textit{The risk that, ...} 삽입절은 직접적인 주어·동사 구조로 바꾸었다. 영국식 표기를 유지하고 한영 정의의 행위자, 기제, 피해 결과가 일치하도록 검토했다. 명칭의 장식적 \textit{AI-mediated}, \textit{AI-facilitated}, \textit{AI-assisted}는 제거했지만 AI model, AI agent, machine learning처럼 기술 대상을 구분하는 용어는 유지했다.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.68\textwidth]{round2_language_edits.png}
-\caption{승인된 한영 언어 교정 연산 수}
-\end{figure}
-
-\section{매핑 상태와 점수 처리}
-최종 CSV의 \texttt{Mapping\_Method}는 직전 단계에서 생성된 상태 라벨을 계보 목적으로 유지한다. 현재 분포는 EM 440개, HD 358개지만 이는 이번 단계에서 새로 산출한 EM 결과가 아니다. Others는 129개이며 나머지 HD는 인간 이관·보류 또는 검수 결정으로 현행 L3에 남은 카드다.
-
-\begin{table}[htbp]\centering
-\caption{도메인별 보존된 매핑 상태}
-\begin{tabular}{lrrrr}\toprule
-도메인 & 최종 L4 & EM 라벨 & HD 라벨 & Others\\\midrule
-General AI & 630 & 338 & 292 & 117\\
-Agentic AI & 74 & 47 & 27 & 4\\
-Physical AI & 94 & 55 & 39 & 8\\\midrule
-합계 & 798 & 440 & 358 & 129\\\bottomrule
-\end{tabular}
-\end{table}
-
-과거 점수 필드가 남아 있는 카드는 326개이고 인간 검수나 텍스트·계층 변경으로 점수 필드를 보존하지 않은 카드는 472개이다. 별도의 점수 상태 라벨에서는 662개를 텍스트 수정 후 재산출되지 않은 값으로, 61개를 인간 검수 후 사용할 수 없는 값으로 표시했다. 나머지 75개는 L3 마스터 검증 또는 이전 AI 주체 보강 이후 텍스트가 유지된 카드다. 어떤 과거 점수도 현재 정의의 적합도나 최종 매핑 근거로 해석해서는 안 된다.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.90\textwidth]{round2_mapping_score_status.png}
-\caption{EM 재실행 없이 보존된 점수 상태}
-\end{figure}
-
-\section{유사도 기반 중복 후보 검토}
-최종 798개 카드의 한국어와 영어 명칭·정의를 BAAI/BGE-M3로 각각 임베딩하고 두 코사인 유사도의 평균을 계산했다. 전체 318,003개 비자기 쌍에서 상위 200개를 기록했으며 같은 L3에 속한 15,362개 쌍에서는 상위 1,000개를 별도로 기록했다. 이 값은 의미 중복 후보를 찾기 위한 검색 순위이며 통합 또는 L3 이동을 자동 결정하지 않는다. 보호 특성, 피해 대상, 위해 기제, 적용 단계가 다르면 높은 유사도에도 별도 카드를 유지한다.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.96\textwidth]{round2_similarity_top10.png}
-\caption{최종 언어 교정 후 한영 결합 유사도 상위 10개 쌍}
-\end{figure}
-
-\section{세 가지 검증과 결과}
-\subsection{원본 대조 및 불변성 검증}
-원천 manifest, 직전 마스터, L3 마스터의 해시를 대조하고 L3 계층 필드를 셀 단위로 확인했다. L3 마스터 해시는 작업 전후 동일하다.
-
-\subsection{지시 이행 및 계보 검증}
-각 검수 지시가 정확히 하나의 원천 행과 최종 카드에 연결되는지, 삭제·통합·이관 결과가 결정 원장과 일치하는지, \texttt{facet}, \texttt{act-type}, 원천 ID가 보존되는지 검사했다.
-
-\subsection{언어·의미 검증}
-한영 필드 완전성, AI 기술 주체, 한국어 위험 종결형, 영문 L3 문장 구조, 금지된 관용 수식어, 용어집 표기, L3 의미 경계를 검사했다. 결정적 검증 30개가 모두 PASS였고 독립 전문 에이전트 검토 결과를 별도 JSON에 기록했다.
-
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.62\textwidth]{round2_validation.png}
-\caption{결정적 검증 결과}
-\end{figure}
-
-\section{재현성과 릴리스 구조}
-동일한 동결 입력과 승인 명세를 임시 출력 디렉터리에서 다시 실행한 뒤 정본과 바이트 단위로 비교한다. 최종 릴리스는 다음 다섯 CSV를 정본으로 제공한다.
-\begin{itemize}
-\item L1 마스터 CSV 1개
-\item L1/L2/L3 통합 마스터 CSV 1개
-\item General, Agentic, Physical L4 CSV 각 1개
-\end{itemize}
-각 L4 CSV에는 L1부터 L4까지의 ID, 한영 명칭·정의, Others 행, L4 속성, 결정·계보·점수 상태가 포함된다. 같은 자료에서 웹 카드, Release Manifest, Validation Record, 표, 그래프, 한영 보고서를 생성한다.
-
-\section{한계와 다음 단계}
-이번 릴리스의 점수는 직전 매핑 실행에서 상속된 값이므로 수정된 정의에 대한 현재 유사도를 나타내지 않는다. EM이나 Hybrid EM을 다시 실행하려면 사용자의 별도 지시가 필요하다. 그 전까지 사이트의 후보 점수는 과거 증거 또는 사용 불가로 명확히 표시해야 한다. 유사도 상위 쌍도 중복 가능성을 뜻할 뿐 자동 통합 근거가 아니다.
-
+\title{RAI Risk Taxonomy 2.0\\2차 휴먼 검수 복구 기술보고서}\author{Human-review recovery release}\date{2026년 8월 29일}\maketitle
+\section*{요약}
+본 보고서는 798개 기준선 L4 카드를 보존하면서 2차 휴먼 검수 지시를 행 단위로 다시 해석하고 적용한 복구 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 고정된 L3 마스터와 808행 검수 등록부를 기준으로 전문 에이전트 2명이 독립 검토하고 교차 검토한 166건의 결정을 적용했다. 최종 결과는 L4 카드 791건이며 General 620건, Agentic 77건, Physical 94건이다. Others 배정은 0건이다.
+\section{복구 원칙}
+기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. Instruction Prompt와 L3 마스터가 충돌할 때는 L3 마스터를 우선했다. L3는 신설하거나 수정하지 않았으며 SHA-256 해시를 고정했다.
+\section{적용 결과}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule 조치 & 검수행 수\\\midrule 재배정 & 80\\정의 수정 후 유지 & 39\\분리 & 19\\통합 & 14\\삭제 & 14\\\bottomrule\end{tabular}\caption{승인된 166건의 휴먼 검수 조치}\end{table}
+\begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{도메인별 최종 L4 카드 수}\end{figure}
+\begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{휴먼 검수 조치 분포}\end{figure}
+\section{복합 카드 분리}
+기존에 이미 올바르게 분리된 6건은 보존했다. 단일 출력으로 남아 있던 12건은 각 L3의 피해 기제에 맞춰 별도 카드로 작성했다. 각 한영 정의는 AI 시스템, AI 알고리즘, AI 에이전트 또는 이에 준하는 기술 주체, 인과 기제, 불리한 결과를 명시한다. 명칭은 L3 마스터의 명사구 문체를 따르며 한국어에 리스크 또는 위험을 기계적으로 덧붙이지 않았다.
+\section{데이터 무결성 및 검증}
+L3 마스터 SHA-256은 \texttt{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df}로 입력과 출력에서 동일하다. L4 ID는 최종 L3별로 연속 재발급했다. 중복 ID, 정확 중복 카드, 알 수 없는 L3, 계층 불일치, 빈 한영 필드, AI 기술 주체가 없는 정의는 모두 0건이다. 두 번의 독립 실행에서 세 L4 CSV의 SHA-256이 동일했다.
+\section{산출물}
+최종 배포는 L1 CSV 1개, L1/L2/L3 CSV 1개, General, Agentic, Physical L4 CSV 3개로 구성한다. 검증 폴더에는 808행 지시 등록부, 165건 승인 결정표, source\_row\_id와 최종 L4의 계보 간선, 삭제 기록, 적용 로그, 검증 기록을 보존한다.
 \section{결론}
-2차 인간 검수는 원천 808개 카드에서 798개 최종 카드를 만들었고 L3 마스터를 변경하지 않은 채 검수 지시, 사용자 승인 통합, 한영 언어 교정, 용어집 정합성, 계보를 하나의 재현 가능한 산출물로 동기화했다. 결과는 새로운 EM 결과가 아니라 검수 내용을 충실히 적용한 마스터이며 후속 매핑은 명시적 지시가 있을 때만 수행한다.
-
+이번 복구는 의미 유사도 재분류가 아니라 휴먼 검수 의도의 충실한 이행이다. 최종 데이터에는 Others가 남지 않았고, L3 마스터는 변경되지 않았다. 이후 재매핑은 별도의 명시적 사용자 지시가 있을 때만 수행해야 한다.
 \end{document}

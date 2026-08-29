@@ -8,11 +8,11 @@ COMMON=r'''\documentclass[11pt,a4paper]{article}
 '''
 KO=COMMON+r'''\title{RAI Risk Taxonomy 2.0\\2차 휴먼 검수 복구 기술보고서}\author{Human-review recovery release}\date{2026년 8월 29일}\maketitle
 \section*{요약}
-본 보고서는 798개 기준선 L4 카드를 보존하면서 2차 휴먼 검수 지시를 행 단위로 다시 해석하고 적용한 복구 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 고정된 L3 마스터와 808행 검수 등록부를 기준으로 전문 에이전트 2명이 독립 검토하고 교차 검토한 165건의 결정을 적용했다. 최종 결과는 L4 카드 789건이며 General 618건, Agentic 77건, Physical 94건이다. Others 배정은 0건이다.
+본 보고서는 798개 기준선 L4 카드를 보존하면서 2차 휴먼 검수 지시를 행 단위로 다시 해석하고 적용한 복구 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 고정된 L3 마스터와 808행 검수 등록부를 기준으로 전문 에이전트 2명이 독립 검토하고 교차 검토한 166건의 결정을 적용했다. 최종 결과는 L4 카드 791건이며 General 620건, Agentic 77건, Physical 94건이다. Others 배정은 0건이다.
 \section{복구 원칙}
 기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. Instruction Prompt와 L3 마스터가 충돌할 때는 L3 마스터를 우선했다. L3는 신설하거나 수정하지 않았으며 SHA-256 해시를 고정했다.
 \section{적용 결과}
-\begin{table}[h]\centering\begin{tabular}{lr}\toprule 조치 & 검수행 수\\\midrule 재배정 & 80\\정의 수정 후 유지 & 39\\분리 & 18\\통합 & 14\\삭제 & 14\\\bottomrule\end{tabular}\caption{승인된 165건의 휴먼 검수 조치}\end{table}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule 조치 & 검수행 수\\\midrule 재배정 & 80\\정의 수정 후 유지 & 39\\분리 & 19\\통합 & 14\\삭제 & 14\\\bottomrule\end{tabular}\caption{승인된 166건의 휴먼 검수 조치}\end{table}
 \begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{도메인별 최종 L4 카드 수}\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{휴먼 검수 조치 분포}\end{figure}
 \section{복합 카드 분리}
@@ -26,11 +26,11 @@ L3 마스터 SHA-256은 \texttt{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c97
 \end{document}'''
 EN=COMMON+r'''\title{RAI Risk Taxonomy 2.0\\Second Human-Review Recovery Technical Report}\author{Human-review recovery release}\date{29 August 2026}\maketitle
 \section*{Executive summary}
-This report documents a recovery that preserved 798 baseline L4 cards while reinterpreting and applying the second-round human-review instructions row by row. Neither EM nor Hybrid EM was rerun. Two specialist agents independently reviewed and cross-reviewed 165 decisions against the frozen L3 master and an 808-row instruction register. The final release contains 789 L4 cards: 618 General, 77 Agentic, and 94 Physical. No card remains assigned to Others.
+This report documents a recovery that preserved 798 baseline L4 cards while reinterpreting and applying the second-round human-review instructions row by row. Neither EM nor Hybrid EM was rerun. Two specialist agents independently reviewed and cross-reviewed 166 decisions against the frozen L3 master and an 808-row instruction register. The final release contains 791 L4 cards: 620 General, 77 Agentic, and 94 Physical. No card remains assigned to Others.
 \section{Recovery principles}
 Valid edits and user-approved consolidations in the baseline commit were retained. Only explicit second-round instructions to delete, merge, split, remap, or rewrite were applied through source\_row\_id lineage. The L3 master prevailed over conflicting prompts. No L3 was created or modified, and its SHA-256 digest was frozen.
 \section{Applied decisions}
-\begin{table}[h]\centering\begin{tabular}{lr}\toprule Action & Reviewed rows\\\midrule Remap & 80\\Rewrite and retain & 39\\Split & 18\\Merge & 14\\Delete & 14\\\bottomrule\end{tabular}\caption{The 165 approved human-review decisions}\end{table}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule Action & Reviewed rows\\\midrule Remap & 80\\Rewrite and retain & 39\\Split & 19\\Merge & 14\\Delete & 14\\\bottomrule\end{tabular}\caption{The 166 approved human-review decisions}\end{table}
 \begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{Final L4 cards by domain}\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{Distribution of approved human-review actions}\end{figure}
 \section{Splitting compound cards}

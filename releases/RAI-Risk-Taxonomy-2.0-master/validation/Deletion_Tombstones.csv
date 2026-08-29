@@ -12,3 +12,7 @@ HR2-0340,SRC-G-0125,G_Others_107,배포 후 잔존 결함으로 인한 오작동
 HR2-0342,SRC-G-0448,G_Others_088,배포된 AI의 의도치 않은 유해 결과,의도치 않은 유해 결과라는 포괄 결과로 독립 기제 없음
 HR2-0380,SRC-G-0293,G_Others_090,복합적 사회·환경 피해,사회·환경 피해를 함께 묶은 포괄 결과로 L3보다 구체적이지 않음
 HR2-0382,SRC-G-0286,G_Others_091,인명·재산·환경 직접 피해,인명·재산·환경 피해의 열거로 독립 발생 기제 없음
+HR2-0128,SRC-G-0220,G_INT_UNETH_002,도덕적 프레이밍을 통한 AI 조작,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
+HR2-0305,SRC-G-0221,G_Others_106,도덕적 세계관 배제,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
+HR2-0668,SRC-G-0120,A_SYS_GOAL_008,목표 드리프트,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
+HR2-0796,SRC-P-0128,P_SYS_STATE_001,악천후 인지 실패,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW

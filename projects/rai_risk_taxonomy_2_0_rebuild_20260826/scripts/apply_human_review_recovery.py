@@ -32,6 +32,17 @@ def union(rows, field): return ";".join(dict.fromkeys(x for r in rows for x in t
 def append(old, new): return "|".join(dict.fromkeys(toks(old)+[new]))
 
 SPLIT_TEXT = {
+"SRC-G-0445": {
+ "G_INT_ALLOC": ("저자원 언어 사용자의 서비스·기회 접근 배제","Exclusion of low-resource language users from services and opportunities","AI 시스템이 저자원 언어 사용자의 언어 특성을 이유로 서비스, 정보, 자원 또는 기회에 불리한 접근 조건을 배분하는 리스크.","The risk that an AI system allocates disadvantageous access to services, information, resources, or opportunities because users communicate in a low-resource language."),
+ "G_SOC_CULT": ("저자원 언어와 문화적 의미의 침식","Erosion of low-resource languages and cultural meaning","AI 시스템이 저자원 언어의 지식과 문화적 표현을 충분히 학습하거나 보존하지 못하여 해당 언어 공동체의 문화적 의미와 지식 생태계를 침식하는 리스크.","The risk that an AI system inadequately learns or preserves knowledge and cultural expression in low-resource languages, eroding the cultural meaning and knowledge ecosystem of their communities."),
+ "G_SYS_INPUT": ("저자원 언어 입력의 처리·이해 실패","Failure to process and understand low-resource language input","AI 시스템이 저자원 언어의 어휘, 문법 또는 맥락을 신뢰성 있게 처리하고 이해하지 못하여 부정확하거나 부적절한 출력을 생성하는 리스크.","The risk that an AI system fails to process and understand the vocabulary, grammar, or context of low-resource languages reliably, producing inaccurate or inappropriate outputs."),},
+"SRC-G-0041": {
+ "G_SOC_CULT": ("저자원 언어와 문화적 의미의 침식","Erosion of low-resource languages and cultural meaning","AI 시스템이 저자원 언어의 지식과 문화적 표현을 충분히 학습하거나 보존하지 못하여 해당 언어 공동체의 문화적 의미와 지식 생태계를 침식하는 리스크.","The risk that an AI system inadequately learns or preserves knowledge and cultural expression in low-resource languages, eroding the cultural meaning and knowledge ecosystem of their communities."),
+ "G_SYS_INPUT": ("저자원 언어 입력의 처리·이해 실패","Failure to process and understand low-resource language input","AI 시스템이 저자원 언어의 어휘, 문법 또는 맥락을 신뢰성 있게 처리하고 이해하지 못하여 부정확하거나 부적절한 출력을 생성하는 리스크.","The risk that an AI system fails to process and understand the vocabulary, grammar, or context of low-resource languages reliably, producing inaccurate or inappropriate outputs."),
+ "G_SYS_EVAL": ("저자원 언어 안전성 평가의 불충분성","Inadequate safety evaluation for low-resource languages","AI 시스템 평가가 고자원 언어에 집중되어 저자원 언어에서의 성능, 안전성 및 실패 양상을 충분히 측정하지 못하는 리스크.","The risk that AI system evaluation focuses on high-resource languages and fails to measure performance, safety, and failure modes adequately in low-resource languages."),},
+"SRC-G-0428": {
+ "G_SOC_CULT": ("AI에 의한 인간 존엄성과 도덕적 지위의 침식","Erosion of human dignity and moral standing by AI systems","AI 시스템의 광범위한 도입이 인간을 점수, 프로필 또는 행동 대상으로 환원하고 인간의 고유한 존엄성과 동등한 도덕적 지위를 약화하는 리스크.","The risk that widespread deployment of AI systems reduces people to scores, profiles, or behavioural targets and weakens recognition of inherent human dignity and equal moral standing."),
+ "G_INT_REPR": ("AI에 의한 비인간화·객체화 표상","Dehumanising and objectifying AI representations","AI 시스템이 개인이나 집단을 열등하거나 도구적인 대상으로 묘사하여 비인간화, 객체화 또는 차별적 고정관념을 생성·강화하는 리스크.","The risk that an AI system depicts individuals or groups as inferior or instrumental objects, generating or reinforcing dehumanisation, objectification, or discriminatory stereotypes."),},
 "SRC-G-0047": {
  "G_INT_REPR": ("집단 고정관념의 재현과 강화","Representation and reinforcement of group stereotypes","AI 시스템이 학습 데이터에 포함된 집단 고정관념을 출력에 재현하거나 강화하여 해당 집단에 대한 왜곡되고 적대적인 표상을 확산하는 리스크.","The risk that an AI system reproduces or reinforces group stereotypes embedded in training data, thereby propagating distorted or hostile representations of the affected group."),
  "G_INT_ALLOC": ("집단별 성능 격차에 따른 차별적 결과","Discriminatory outcomes from group performance disparities","AI 시스템의 집단별 성능 격차가 자원, 기회, 서비스 또는 접근의 불리한 배분으로 이어지는 리스크.","The risk that disparities in an AI system's performance across groups lead to unequal allocation of resources, opportunities, services, or access."),},
@@ -88,7 +99,8 @@ def main():
     for d in DOMAINS:
         rr=read(BASE/f"L4_{d}_Human_Review_Round2_Applied.csv"); fields=fields or list(rr[0]); rows+=rr
     for i,r in enumerate(rows): r["_key"]=f"K{i:04d}"
-    deleted_sources=set(); edges=[]; tomb=[]; decision_log=[]
+    predeleted_sources={r["source_row_id"] for r in reg.values() if r.get("Baseline_Decision")=="DELETE_APPLIED"}
+    deleted_sources=set(predeleted_sources); edges=[]; tomb=[]; decision_log=[]
     def matches(src): return [r for r in rows if src in toks(r.get("source_row_id","")) and not r.get("_deleted")]
     # Delete first, but retain shared rows after removing only the deleted lineage token.
     for dec in decisions:
@@ -99,6 +111,11 @@ def main():
             if len(ss)==1: r["_deleted"]="1"; tomb.append({"Register_ID":dec["Register_ID"],"source_row_id":src,"Deleted_L4_ID":r["L4_ID"],"Title_ko":r["L4_Title_ko"],"Reason":dec["Reviewer_Note"]})
             else: r["source_row_id"]=";".join(x for x in ss if x!=src)
         decision_log.append({"Register_ID":dec["Register_ID"],"Action":"DELETE","Status":"APPLIED" if mm else "ALREADY_DELETED","Output_Keys":""})
+    tombstoned={item["source_row_id"] for item in tomb}
+    for item in reg.values():
+        src=item["source_row_id"]
+        if src in predeleted_sources and src not in tombstoned:
+            tomb.append({"Register_ID":item["Register_ID"],"source_row_id":src,"Deleted_L4_ID":item.get("Baseline_L4_ID","") or item.get("Source_L4_IDs",""),"Title_ko":item.get("Baseline_L4_Title_ko",""),"Reason":"ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW"})
     # Merge by source lineage. When representative equals source, retain as representative.
     for dec in decisions:
         if dec["Final_Action"]!="MERGE": continue
@@ -142,7 +159,10 @@ def main():
                 r["Transformation_Action"]=append(r["Transformation_Action"],"HUMAN_REVIEW_SPLIT")
                 out.append(r["_key"])
             for r in mm:
-                if r["_key"] not in out: r["_deleted"]="1"
+                if r["_key"] not in out:
+                    lineage=toks(r.get("source_row_id",""))
+                    if len(lineage)>1: r["source_row_id"]=";".join(x for x in lineage if x!=src)
+                    else: r["_deleted"]="1"
         else:
             if not mm: raise RuntimeError(f"No output for {src} {act}")
             # A single-target human decision supersedes older duplicate lineage outputs.
@@ -160,6 +180,9 @@ def main():
     for r in final:
         for src,text in grounding_fixes.items():
             if src in toks(r.get("source_row_id","")): r["L4_Description_en"]=text
+        rationale_parts=[part.strip() for part in r.get("Transformation_Rationale","").split("|")]
+        rationale_parts=[part for part in rationale_parts if part and "others" not in part.lower() and "인간 결정을 대기" not in part and "보류" not in part]
+        r["Transformation_Rationale"]=" | ".join(dict.fromkeys(rationale_parts))
     # All source-review Others must have been dispositioned; any residual Others is blocking.
     residual=[r for r in final if "Others" in r["L3_ID"]]
     if residual: raise RuntimeError(f"Residual Others: {[(r['L4_ID'],r['source_row_id']) for r in residual[:10]]} total={len(residual)}")

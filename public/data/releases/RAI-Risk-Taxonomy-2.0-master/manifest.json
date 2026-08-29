@@ -10,10 +10,10 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 789,
+    "l4": 791,
     "em": 436,
-    "hd": 353,
-    "general": 618,
+    "hd": 355,
+    "general": 620,
     "agentic": 77,
     "physical": 94
   },
@@ -21,12 +21,12 @@
     "source_total": 798,
     "deleted": 13,
     "merged_away": 9,
-    "split_net_addition": 13,
-    "user_directed_operations": 165,
+    "split_net_addition": 15,
+    "user_directed_operations": 166,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "net_reduction": 9,
-    "final_total": 789
+    "net_reduction": 7,
+    "final_total": 791
   },
   "method": {
     "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
@@ -40,7 +40,7 @@
     "semantic_deduplication_policy": "Bilingual similarity generates review candidates only and does not trigger automatic deletion or reassignment"
   },
   "human_review": {
-    "review_snapshot_id": "58869713ed7f88f5",
+    "review_snapshot_id": "cfaff2b6f44489e5",
     "candidate_count": 2,
     "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
     "daily_aggregation": true,
@@ -49,9 +49,9 @@
     "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
   },
   "score_status_counts": {
-    "NOT_APPLICABLE": 164,
+    "NOT_APPLICABLE": 167,
     "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 520,
-    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 44,
+    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 43,
     "L3_MASTER_VALIDATED": 54,
     "L3_MASTER_AI_REWRITE": 7
   },
@@ -70,15 +70,15 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "00d0c66a7c7495fe99367bf1a9d81e271050f1212f221e27c85d51f506a0887a",
-      "rows": 618
+      "sha256": "0b0d837a150e26245f3380ac7d7c3319cdbebc4404c1e482899b9417982a8b75",
+      "rows": 620
     },
     "L4_Agentic.csv": {
-      "sha256": "10f6a9b9e4ebd16f77b4a0521b744244440c9ce348896cf0ea8ec6df22f8aebc",
+      "sha256": "3ad138629ebb96bee18e54d35fb37f8263ac7bb07c4d503fca987ac7b3969b6e",
       "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "5f203cd212438bbdc84c98614592d3c4520835cbb30971d4a781b0cf94b5d378",
+      "sha256": "7a518b58d7bfde4ca3982a03976be45caa2d1adc08f4c4101c4f4040681b9d6e",
       "rows": 94
     }
   }

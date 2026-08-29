@@ -11,20 +11,20 @@
   },
   "summary": {
     "source_total": 798,
-    "cleaned_total": 789,
-    "final_total": 789,
+    "cleaned_total": 791,
+    "final_total": 791,
     "deleted": 13,
-    "explicit_deletions": 14,
+    "explicit_deletions": 17,
     "merged_away": 9,
-    "split_net_addition": 13,
-    "net_reduction": 9,
-    "user_directed_operations": 165,
+    "split_net_addition": 15,
+    "net_reduction": 7,
+    "user_directed_operations": 166,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
     "score_status_counts": {
-      "NOT_APPLICABLE": 164,
+      "NOT_APPLICABLE": 167,
       "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 520,
-      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 44,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 43,
       "L3_MASTER_VALIDATED": 54,
       "L3_MASTER_AI_REWRITE": 7
     },
@@ -37,14 +37,14 @@
       "Physical": 94
     },
     "final_domain_counts": {
-      "General AI": 618,
+      "General AI": 620,
       "Agentic AI": 77,
       "Physical AI": 94
     },
     "mapping_method_counts": {
       "General AI": {
         "EM": 337,
-        "HD": 281
+        "HD": 283
       },
       "Agentic AI": {
         "EM": 44,
@@ -57,7 +57,7 @@
     },
     "similarity_top_pairs_published": 20,
     "recovery_actions": {
-      "SPLIT": 18,
+      "SPLIT": 19,
       "MERGE": 14,
       "REMAP": 80,
       "REWRITE_KEEP": 39,
@@ -74,25 +74,25 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "00d0c66a7c7495fe99367bf1a9d81e271050f1212f221e27c85d51f506a0887a",
-      "rows": 618
+      "sha256": "0b0d837a150e26245f3380ac7d7c3319cdbebc4404c1e482899b9417982a8b75",
+      "rows": 620
     },
     "L4_Agentic.csv": {
-      "sha256": "10f6a9b9e4ebd16f77b4a0521b744244440c9ce348896cf0ea8ec6df22f8aebc",
+      "sha256": "3ad138629ebb96bee18e54d35fb37f8263ac7bb07c4d503fca987ac7b3969b6e",
       "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "5f203cd212438bbdc84c98614592d3c4520835cbb30971d4a781b0cf94b5d378",
+      "sha256": "7a518b58d7bfde4ca3982a03976be45caa2d1adc08f4c4101c4f4040681b9d6e",
       "rows": 94
     }
   },
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
-  "review_decisions": 165,
+  "review_decisions": 166,
   "source_register_rows": 808,
   "deterministic_replay": "PASS",
   "source_hashes": {
     "L3_Master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
-    "Recovery_Decisions": "c278e46045a76ed934247ce86d05439a9c8522f5b993295977a20205109ed57f",
+    "Recovery_Decisions": "ed7abf98ebd5825d1ec454e543e019f0989ac6d77da4f3676daf882b3f14ba1a",
     "Instruction_Register": "bfe843387ac40195f40d987e63db3dd19637e1fccb1c2cf84237ab690e33977e"
   },
   "human_review": {

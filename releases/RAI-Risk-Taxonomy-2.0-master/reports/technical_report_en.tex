@@ -4,11 +4,11 @@
 \begin{document}
 \title{RAI Risk Taxonomy 2.0\\Second Human-Review Recovery Technical Report}\author{Human-review recovery release}\date{29 August 2026}\maketitle
 \section*{Executive summary}
-This report documents a recovery that preserved 798 baseline L4 cards while reinterpreting and applying the second-round human-review instructions row by row. Neither EM nor Hybrid EM was rerun. Two specialist agents independently reviewed and cross-reviewed 165 decisions against the frozen L3 master and an 808-row instruction register. The final release contains 789 L4 cards: 618 General, 77 Agentic, and 94 Physical. No card remains assigned to Others.
+This report documents a recovery that preserved 798 baseline L4 cards while reinterpreting and applying the second-round human-review instructions row by row. Neither EM nor Hybrid EM was rerun. Two specialist agents independently reviewed and cross-reviewed 166 decisions against the frozen L3 master and an 808-row instruction register. The final release contains 791 L4 cards: 620 General, 77 Agentic, and 94 Physical. No card remains assigned to Others.
 \section{Recovery principles}
 Valid edits and user-approved consolidations in the baseline commit were retained. Only explicit second-round instructions to delete, merge, split, remap, or rewrite were applied through source\_row\_id lineage. The L3 master prevailed over conflicting prompts. No L3 was created or modified, and its SHA-256 digest was frozen.
 \section{Applied decisions}
-\begin{table}[h]\centering\begin{tabular}{lr}\toprule Action & Reviewed rows\\\midrule Remap & 80\\Rewrite and retain & 39\\Split & 18\\Merge & 14\\Delete & 14\\\bottomrule\end{tabular}\caption{The 165 approved human-review decisions}\end{table}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule Action & Reviewed rows\\\midrule Remap & 80\\Rewrite and retain & 39\\Split & 19\\Merge & 14\\Delete & 14\\\bottomrule\end{tabular}\caption{The 166 approved human-review decisions}\end{table}
 \begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{Final L4 cards by domain}\end{figure}
 \begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{Distribution of approved human-review actions}\end{figure}
 \section{Splitting compound cards}
