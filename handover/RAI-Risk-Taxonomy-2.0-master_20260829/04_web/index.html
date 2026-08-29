@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RAI Risk Taxonomy 2.0 master release: explore 777 bilingual L4 risk cards mapped to 49 L3 categories.">
+  <title>RAI Risk Taxonomy 2.0 Master · 777 L4 Risks</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173458'/%3E%3Cpath d='M15 46V18h18c9 0 15 5 15 13 0 6-3 10-9 12l10 3H36l-8-11v11zm13-17h5c3 0 5-1 5-4s-2-4-5-4h-5z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css?v=master-20260829-round2">
+</head>
+<body>
+  <a class="skip-link" href="#risk-results">리스크 목록으로 건너뛰기</a>
+
+  <header class="hero">
+    <a class="hero__home" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/" aria-label="RAI Risk Taxonomy 2.0 기본 페이지로 이동">
+    <div class="hero__inner">
+      <div class="hero__eyebrow">
+        <span class="release-dot" aria-hidden="true"></span>
+        REVIEWED MASTER RELEASE · 2026-08-29
+      </div>
+      <div class="hero__row">
+        <div>
+          <h1>RAI Risk Taxonomy 2.0</h1>
+          <p>L0–L4 responsible AI risk taxonomy</p>
+        </div>
+      </div>
+    </div>
+    </a>
+    <a class="hero__glossary" href="glossary.html"><span aria-hidden="true">📖</span>AI 리스크 용어사전 · Glossary</a>
+  </header>
+
+  <nav class="domain-nav" aria-label="상위 리스크 영역">
+    <div class="domain-nav__inner">
+      <a class="domain-pill active" data-domain="all" href="https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/">전체 보기</a>
+      <a class="domain-pill domain-pill--general" data-domain="L1_G" href="?domain=L1_G"><span class="domain-icon" aria-hidden="true">🧠</span>General AI (범용 AI)</a>
+      <a class="domain-pill domain-pill--agentic" data-domain="L1_A" href="?domain=L1_A"><span class="domain-icon" aria-hidden="true">🧭</span>Agentic AI (에이전틱 AI)</a>
+      <a class="domain-pill domain-pill--physical" data-domain="L1_P" href="?domain=L1_P"><span class="domain-icon" aria-hidden="true">🤖</span>Physical AI (피지컬 AI)</a>
+      <a class="report-pill" href="#release-files"><span aria-hidden="true">↓</span>Release files</a>
+      <a class="report-pill" href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_en.pdf" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📄</span>Technical Report <b>EN</b></a>
+      <a class="report-pill" href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_ko.pdf" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📄</span>Technical Report <b>KO</b></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">TAXONOMY STATUS</p>
+          <h2 id="overview-title">전체 AI 리스크 분류 현황</h2>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <article class="stat-card stat-card--dark">
+          <span><i class="stat-level-icon" aria-hidden="true">◈</i>L1</span><strong id="stat-l1">3</strong><small>🧠 General AI · 🧭 Agentic AI · 🤖 Physical AI</small>
+        </article>
+        <article class="stat-card stat-card--l2">
+          <span><i class="stat-level-icon" aria-hidden="true">▦</i>L2</span><strong id="stat-l2">3</strong><small>↔ Interaction · ⚙ System · 🏛 Societal Impact</small>
+        </article>
+        <article class="stat-card stat-card--l3">
+          <span><i class="stat-level-icon" aria-hidden="true">⑂</i>L3</span><strong id="stat-l3">49</strong><small>46 immutable master categories · 3 derived Others</small>
+        </article>
+        <article class="stat-card stat-card--l4">
+          <span><i class="stat-level-icon" aria-hidden="true">▣</i>L4</span><strong id="stat-l4">777</strong><small>425 retained EM labels · 352 retained HD decisions</small>
+        </article>
+      </div>
+      <div class="review-round-note" role="note">
+        <strong>2차 휴먼검수 라운드</strong>
+        <span>현재 웹 리스크 카드에는 EM, Hybrid EM 또는 관련 점수를 표시하지 않습니다.</span>
+      </div>
+    </section>
+
+    <section id="release-files" class="release-files" aria-labelledby="release-files-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">MASTER ARTIFACTS</p>
+          <h2 id="release-files-title">최종 릴리스 파일</h2>
+        </div>
+        <span class="validation-pass">10/10 QA PASS</span>
+      </div>
+      <div class="download-grid">
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L1_Master.csv" download><strong>L1 Master</strong><span>3 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L1_L2_L3_Master.csv" download><strong>L1/L2/L3 Master</strong><span>49 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_General.csv" download><strong>L4 General</strong><span>607 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_Agentic.csv" download><strong>L4 Agentic</strong><span>77 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/data/L4_Physical.csv" download><strong>L4 Physical</strong><span>93 rows · CSV</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_ko.pdf" target="_blank" rel="noopener noreferrer"><strong>Technical Report</strong><span>Korean · PDF</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/reports/technical_report_en.pdf" target="_blank" rel="noopener noreferrer"><strong>Technical Report</strong><span>English · PDF</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/manifest.html"><strong>Release Manifest</strong><span>Tables · Charts · HTML</span></a>
+        <a href="releases/RAI-Risk-Taxonomy-2.0-master/validation.html"><strong>Validation Record</strong><span>10/10 PASS · HTML</span></a>
+        <a href="glossary.html"><strong>AI 리스크 용어사전</strong><span>323 terms · 한·영 · A–Z · HTML</span></a>
+      </div>
+    </section>
+
+    <section class="explorer" aria-labelledby="explorer-title">
+      <div class="section-heading explorer__heading">
+        <div>
+          <p class="section-kicker">RISK EXPLORER</p>
+          <h2 id="explorer-title">L4 리스크 카드 탐색</h2>
+        </div>
+        <p class="result-summary" aria-live="polite"><strong id="result-count">0</strong>개 결과</p>
+      </div>
+
+      <div class="filter-shell">
+        <label class="search-box">
+          <span class="sr-only">리스크 검색</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="ID, 위험명, 정의 검색" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <label>
+          <span>매핑 방식</span>
+          <select id="status-filter">
+            <option value="all">전체</option>
+            <option value="em">EM</option>
+            <option value="hd">HD / Others</option>
+          </select>
+        </label>
+        <label>
+          <span>L1</span>
+          <select id="l1-filter"><option value="all">모든 L1</option></select>
+        </label>
+        <label>
+          <span>L2</span>
+          <select id="l2-filter"><option value="all">모든 L2</option></select>
+        </label>
+        <label>
+          <span>L3</span>
+          <select id="l3-filter"><option value="all">모든 L3</option></select>
+        </label>
+        <button id="clear-filters" class="clear-button" type="button">초기화</button>
+      </div>
+
+      <div class="explorer-layout">
+        <aside class="taxonomy-panel" aria-label="L0에서 L3까지 계층 탐색">
+          <div class="taxonomy-panel__head">
+            <div>
+              <span>HIERARCHY</span>
+              <strong>L0–L3 구조</strong>
+            </div>
+            <span class="node-count">49 L3 nodes</span>
+          </div>
+          <div id="taxonomy-tree" class="taxonomy-tree"></div>
+        </aside>
+
+        <div id="risk-results" class="results" tabindex="-1">
+          <div id="active-filter" class="active-filter" hidden></div>
+          <div id="cards-grid" class="cards-grid" aria-busy="true">
+            <div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div>
+          </div>
+          <div class="pagination" id="pagination" aria-label="결과 페이지 이동"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>RAI Risk Taxonomy 2.0</strong>
+      <span>777 final L4 cards · 425 retained EM labels · 352 retained HD decisions · 49 L3 categories</span>
+    </div>
+    <p>L3 master fields preserved exactly · no EM rerun · post-build validation 10/10 PASS</p>
+  </footer>
+
+  <dialog id="card-dialog" class="card-dialog">
+    <button class="dialog-close" type="button" aria-label="상세 창 닫기">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <noscript>이 페이지에서 L4 리스크 카드를 탐색하려면 JavaScript를 활성화해 주세요.</noscript>
+  <script src="assets/site.js?v=master-20260829-round2" defer></script>
+</body>
+</html>

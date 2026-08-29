@@ -1,0 +1,52 @@
+{
+  "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
+  "input_cards": 798,
+  "output_cards": 777,
+  "output_by_domain": {
+    "General": 607,
+    "Agentic": 77,
+    "Physical": 93
+  },
+  "actions": {
+    "SPLIT": 19,
+    "MERGE": 14,
+    "REMAP": 80,
+    "REWRITE_KEEP": 39,
+    "DELETE": 14
+  },
+  "others": 0,
+  "master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "decision_rows": 166,
+  "register_rows": 808,
+  "tombstones": 17,
+  "semantic_deduplication": {
+    "approved_clusters": 10,
+    "retired_cards": 13,
+    "input_cards": 791,
+    "output_cards": 778,
+    "reviewers": 2,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Deduplication_Log.csv"
+  },
+  "semantic_splitting": {
+    "reviewed_composite_cards": 10,
+    "retired_umbrella_cards": 2,
+    "new_distinct_cards": 7,
+    "net_addition": 5,
+    "input_cards": 778,
+    "output_cards": 783,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Split_Application_Log.csv"
+  },
+  "scope_granularity_curation": {
+    "reviewed_cards": 8,
+    "retired_cards": 7,
+    "new_cards": 1,
+    "rewritten_cards": 4,
+    "net_change": -6,
+    "input_cards": 783,
+    "output_cards": 777,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Scope_Granularity_Curation_Log.csv"
+  }
+}

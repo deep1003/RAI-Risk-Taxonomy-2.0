@@ -1,0 +1,86 @@
+{
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "release_status": "master",
+  "created_at": "2026-08-29T00:00:00+09:00",
+  "counts": {
+    "l0": 1,
+    "l1": 3,
+    "l2_categories": 3,
+    "l2_domain_paths": 7,
+    "l3": 49,
+    "l3_immutable": 46,
+    "l3_others": 3,
+    "l4": 777,
+    "em": 425,
+    "hd": 352,
+    "general": 607,
+    "agentic": 77,
+    "physical": 93
+  },
+  "cleaning": {
+    "source_total": 798,
+    "deleted": 13,
+    "merged_away": 22,
+    "split_net_addition": 14,
+    "user_directed_operations": 184,
+    "korean_copyedit_operations": 0,
+    "english_copyedit_operations": 0,
+    "net_reduction": 21,
+    "final_total": 777
+  },
+  "method": {
+    "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
+    "boundary_policy": "Apply approved human-review dispositions and require zero final Others assignments",
+    "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
+    "l3_master_precedence": true,
+    "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
+    "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
+    "semantic_deduplication_policy": "Ten user-approved consolidation clusters retired 13 non-representative cards; a subsequent mechanism-level review split ten compound cards, retired two umbrella cards, and created seven distinct cards while preserving source lineage",
+    "scope_granularity_policy": "Eight user-approved scope and granularity cases retired seven overbroad or example-specific cards, created one independently measurable reproducibility card, and narrowed one physical-safety card"
+  },
+  "human_review": {
+    "review_snapshot_id": "a19667d5a8a65236",
+    "candidate_count": 2,
+    "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
+    "daily_aggregation": true,
+    "automatic_reassignment": false,
+    "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
+    "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
+  },
+  "score_status_counts": {
+    "NOT_APPLICABLE": 162,
+    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 516,
+    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
+    "L3_MASTER_VALIDATED": 51,
+    "L3_MASTER_AI_REWRITE": 7
+  },
+  "validation": {
+    "status": "PASS",
+    "passed": 10,
+    "failed": 0
+  },
+  "artifacts": {
+    "L1_Master.csv": {
+      "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
+      "rows": 3
+    },
+    "L1_L2_L3_Master.csv": {
+      "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+      "rows": 49
+    },
+    "L4_General.csv": {
+      "sha256": "32e11a45781d45f370e6cf9ca860dd1e350332f039ddf939bcbadeb91a4e2b84",
+      "rows": 607
+    },
+    "L4_Agentic.csv": {
+      "sha256": "538a059f14f1101a12972ee3e18e298285129b08f933643b4fb85efc68eda0f2",
+      "rows": 77
+    },
+    "L4_Physical.csv": {
+      "sha256": "3a5bd0628881d45ee2646d4d52de2a863d65e747bf795837c738cd268ba5f706",
+      "rows": 93
+    }
+  }
+}

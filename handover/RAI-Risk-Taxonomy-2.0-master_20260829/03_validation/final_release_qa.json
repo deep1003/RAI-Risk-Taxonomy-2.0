@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "passed": 10,
+  "failed": 0,
+  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "checks": [
+    {
+      "check": "Duplicate Ids",
+      "status": "PASS",
+      "evidence": 0
+    },
+    {
+      "check": "Exact Duplicates",
+      "status": "PASS",
+      "evidence": 0
+    },
+    {
+      "check": "Others",
+      "status": "PASS",
+      "evidence": 0
+    },
+    {
+      "check": "Deterministic Replay",
+      "status": "PASS",
+      "evidence": "Two clean executions produced identical L4 SHA-256 hashes."
+    },
+    {
+      "check": "Others Elimination",
+      "status": "PASS",
+      "evidence": "0 final L4 cards assigned to Others."
+    }
+  ]
+}

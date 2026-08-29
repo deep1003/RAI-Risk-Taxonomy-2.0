@@ -1,0 +1,11 @@
+﻿Split_ID,Reviewed_L4_ID,Action,Final_L4_IDs,Decision_Rationale,Approval
+SS-01,G_INT_SELF_003,RETIRE_AND_SPLIT,G_INT_SELF_003|G_INT_SELF_004|G_INT_SELF_006|G_SYS_MISINFO_023,Eating/self-harm branches absorbed; panic/anxiety and unsafe medical guidance separated.,USER_APPROVED_20260829
+SS-02,G_SYS_MISINFO_008,REWRITE_AND_ABSORB,G_SYS_MISINFO_006|G_INT_PRIV_009|G_INT_COPY_004|G_SYS_MISINFO_008,Erroneous conclusions retained; confidentiality and ecosystem-pollution branches absorbed.,USER_APPROVED_20260829
+SS-03,G_INT_COPY_005,SPLIT,G_INT_COPY_003|G_INT_PRIV_029,Intellectual-property and personality-rights mechanisms separated.,USER_APPROVED_20260829
+SS-04,G_INT_PRIV_011,SPLIT,G_INT_PRIV_009|G_INT_COPY_004|G_SYS_MISINFO_006|G_SYS_MISINFO_008,Personal information and business confidentiality mechanisms separated.,USER_APPROVED_20260829
+SS-05,G_SOC_DEMOC_002,RETIRE_AND_ABSORB,G_INT_POL_006|G_INT_PRIV_001|G_INT_ALLOC_008,"Umbrella retired; political manipulation, surveillance, and disparate impact absorbed.",USER_APPROVED_20260829
+SS-06,G_INT_WEAP_021,REWRITE_AND_ABSORB,G_INT_WEAP_002|G_INT_WEAP_008,Cyber enablement and dangerous-science assistance separated.,USER_APPROVED_20260829
+SS-07,G_SYS_SECADV_048,REWRITE_AND_ABSORB,G_SYS_SECADV_059|G_SYS_SECADV_021,Resource exhaustion and infrastructure compromise separated.,USER_APPROVED_20260829
+SS-08,G_SOC_CULT_021,SPLIT,G_SOC_CULT_018|G_SOC_CULT_013,Writing-capacity erosion and scholarly-literature pollution separated.,USER_APPROVED_20260829
+SS-09,G_INT_REL_001,REWRITE_AND_SPLIT,G_INT_REL_001|G_INT_REL_003|G_SYS_OVERCONF_003,"Emotional, functional, and epistemic dependence separated.",USER_APPROVED_20260829
+SS-10,G_SYS_EVAL_012,REWRITE_AND_SPLIT,G_SYS_EVAL_026|G_SYS_INCONS_002|G_SYS_OVERCONF_008|G_SOC_GOV_035,"Organisational assurance, output quality, calibration, and systemic oversight separated.",USER_APPROVED_20260829
