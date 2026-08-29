@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "cards": 789,
+  "by_domain": {
+    "General": 618,
+    "Agentic": 77,
+    "Physical": 94
+  },
+  "others": 0,
+  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "checks": {
+    "duplicate_ids": 0,
+    "exact_duplicates": 0,
+    "others": 0
+  },
+  "failure_examples": {}
+}

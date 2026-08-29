@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "6220567cacc93346d5c340eebfdbbcdef660482f",
+  "source_rows": 808,
+  "by_domain": {
+    "General": 599,
+    "Agentic": 90,
+    "Physical": 119
+  },
+  "rows_with_round2_comments": 251,
+  "rows_with_direct_table_edits": 3,
+  "outputs_in_others": 130,
+  "recovery_review_required": 165,
+  "explicit_instruction_conflicts": 3,
+  "agent_action_agreements": 118,
+  "agent_target_agreements": 122,
+  "user_approval_rows": 82,
+  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
+}

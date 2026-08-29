@@ -1,0 +1,14 @@
+Register_ID,source_row_id,Deleted_L4_ID,Title_ko,Reason
+HR2-0226,SRC-G-0491,G_Others_016,AI 시스템 사고로 인한 사망,사망은 독립 위해 기제가 아닌 포괄적 결과이므로 삭제
+HR2-0230,SRC-G-0482,G_Others_018,경제·사회·정치 안보의 불안정화,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0232,SRC-G-0481,G_Others_019,동물 복지를 경시하는 개발·투자 편중,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0235,SRC-G-0463,G_Others_021,건강과 웰빙의 저하,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0246,SRC-G-0475,G_Others_029,사회 정의와 권리의 침식,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0280,SRC-G-0174,G_Others_053,사용 사례에 내재된 위해 가능성,사용 사례의 위해 가능성만 말한 맥락 진술로 독립 기제 없음
+HR2-0286,SRC-G-0205,G_Others_055,되돌릴 수 없는 변화,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0310,SRC-G-0206,G_Others_068,조직 재정·평판 손상,재정·평판 손상은 독립 AI 위해 기제가 아닌 일반 결과
+HR2-0329,SRC-G-0211,G_Others_078,유해·범죄 조장·기만적 콘텐츠의 대규모 생성,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0340,SRC-G-0125,G_Others_107,배포 후 잔존 결함으로 인한 오작동,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
+HR2-0342,SRC-G-0448,G_Others_088,배포된 AI의 의도치 않은 유해 결과,의도치 않은 유해 결과라는 포괄 결과로 독립 기제 없음
+HR2-0380,SRC-G-0293,G_Others_090,복합적 사회·환경 피해,사회·환경 피해를 함께 묶은 포괄 결과로 L3보다 구체적이지 않음
+HR2-0382,SRC-G-0286,G_Others_091,인명·재산·환경 직접 피해,인명·재산·환경 피해의 열거로 독립 발생 기제 없음

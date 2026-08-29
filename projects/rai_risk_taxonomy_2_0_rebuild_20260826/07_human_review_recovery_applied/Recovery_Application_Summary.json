@@ -1,0 +1,22 @@
+{
+  "method": "HUMAN_REVIEW_LINEAGE_OVERLAY_NO_EM",
+  "input_cards": 798,
+  "output_cards": 789,
+  "output_by_domain": {
+    "General": 618,
+    "Agentic": 77,
+    "Physical": 94
+  },
+  "actions": {
+    "SPLIT": 18,
+    "MERGE": 14,
+    "REMAP": 80,
+    "REWRITE_KEEP": 39,
+    "DELETE": 14
+  },
+  "others": 0,
+  "master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "decision_rows": 165,
+  "register_rows": 808,
+  "tombstones": 13
+}

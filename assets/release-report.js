@@ -202,7 +202,7 @@ function renderRound2Manifest(data) {
     </section>
 
     <section class="section" aria-labelledby="cleaning-title">
-      <div class="section-heading"><div><p class="section-kicker">CARD RECONCILIATION</p><h2 id="cleaning-title">삭제·통합 결과가 최종 800건과 일치</h2></div></div>
+      <div class="section-heading"><div><p class="section-kicker">CARD RECONCILIATION</p><h2 id="cleaning-title">삭제·통합·분리 결과가 최종 ${formatNumber(summary.cleaned_total)}건과 일치</h2></div></div>
       <div class="flow" role="img" aria-label="${summary.source_total} input records minus ${summary.deleted} deletions minus ${summary.merged_away} merged-away records equals ${summary.cleaned_total} final records">
         ${flowStep("Input", summary.source_total, "reviewed baseline", "")}
         ${flowStep("Deleted", `−${summary.deleted}`, "explicit reviewer decisions", "negative")}

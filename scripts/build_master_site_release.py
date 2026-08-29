@@ -242,7 +242,7 @@ def main() -> None:
             "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
             "em_or_hybrid_em_executed_in_this_round": False,
             "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
-            "boundary_policy": "Retain reviewed HD decisions and domain-specific Others assignments without automatic reassignment",
+            "boundary_policy": "Apply approved human-review dispositions and require zero final Others assignments",
             "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",

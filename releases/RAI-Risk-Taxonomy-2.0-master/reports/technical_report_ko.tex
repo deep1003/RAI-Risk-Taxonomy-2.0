@@ -1,131 +1,22 @@
-% !TEX program = xelatex
-\documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=22mm,headheight=15pt]{geometry}
-\usepackage{fontspec,kotex,microtype}
-\usepackage{booktabs,longtable,tabularx,array,enumitem,xcolor,hyperref,fancyhdr,lastpage}
-\usepackage{amsmath,amssymb,graphicx,titlesec,seqsplit}
-\IfFontExistsTF{Apple SD Gothic Neo}{\setmainhangulfont{Apple SD Gothic Neo}}{\setmainhangulfont{Noto Sans CJK KR}}
-\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Latin Modern Roman}}
-\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{\setsansfont{Arial}}
-\definecolor{navy}{HTML}{173458}\definecolor{blue}{HTML}{3366CC}\definecolor{darkgray}{HTML}{44546A}
-\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=blue,pdfauthor={RAI Risk Taxonomy 2.0 Project},pdftitle={RAI Risk Taxonomy 2.0 Rebuild Technical Report}}
-\pagestyle{fancy}\fancyhf{}\lhead{\small RAI Risk Taxonomy 2.0 Master}\rhead{\small Technical Report, Korean}\cfoot{\small \thepage\ / \pageref{LastPage}}
-\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{0.7em}{}\titleformat{\subsection}{\large\bfseries\color{darkgray}}{\thesubsection}{0.7em}{}
-\setlist[itemize]{leftmargin=1.5em,itemsep=2pt}\setlist[enumerate]{leftmargin=1.7em,itemsep=3pt}\renewcommand{\arraystretch}{1.22}
-\newcommand{\hashval}[1]{\texttt{\small\seqsplit{#1}}}\graphicspath{{../output/figures/}}
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}
+\setmainfont{Apple SD Gothic Neo}\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}\pagestyle{fancy}\fancyhf{}\rhead{RAI Risk Taxonomy 2.0}\lhead{Human Review Recovery}\cfoot{\thepage}\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
-
-\begin{titlepage}\pagecolor{navy}\color{white}\vspace*{25mm}
-{\sffamily\bfseries\fontsize{27}{33}\selectfont RAI Risk Taxonomy 2.0\par}\vspace{5mm}
-{\sffamily\fontsize{21}{27}\selectfont Rebuild Technical Report\par}\vspace{12mm}
-{\Large 리스크 적격성 정제, EM 기반 L3 매핑 및 마스터 릴리스\par}\vfill
-{\large 기준일: 2026년 8월 26일\par}\vspace{3mm}{\normalsize 한국어판\par}\vspace{18mm}
-\end{titlepage}\nopagecolor\color{black}\tableofcontents\newpage
-
-\section{요약}
-본 작업은 초기 의미 유사도 파이프라인이 응급·재난 대응과 같은 적용 맥락을 폭력 리스크로 오분류한 문제를 계기로 RAI Risk Taxonomy 2.0을 원천 데이터부터 다시 구축한 결과이다. 원천 L4 892건을 동결하고, 의미적 매핑 전에 리스크 적격성 심사, 삭제, 통합, 분리, 한영 명칭·정의 재작성, 동료 검토를 수행하였다. 최종 L4는 808건이며 보존식은 \(892-65-20+1=808\)이다.
-
-최종 카드 중 612건(75.7\%)은 기존 L3에 EM으로 배정했고, 196건(24.3\%)은 기존 L3 후보 사이의 경계성, 낮은 확신, 불안정성 또는 한영 불일치 때문에 도메인별 Others와 인간 결정(HD) 대기열로 분리하였다. 최종 분포는 General 599건, Agentic 90건, Physical 119건이다. 원본 L3 46행은 변경하지 않았고, 도메인별 Others 3행만 파생 구조로 추가하였다. 내부 자동 검증 50개는 모두 통과하였다.
-
-\section{문제 진단과 재설계 원칙}
-\subsection{확인된 실패}
-초기 방식은 모든 입력 행을 리스크로 가정하고 곧바로 의미 공간에 투입하였다. 이 때문에 생명, 안전, 응급, CPR, 응급처치와 같은 어휘가 폭력 L3 임베딩을 끌어올려, 정상적인 응급·재난 대응 맥락이 폭력으로 배정되는 오류가 발생했다. 이는 유사도가 리스크 성립 여부를 판정할 수 없고, 가까운 어휘가 곧 올바른 위험 메커니즘을 의미하지 않음을 보여준다.
-
-\subsection{재설계된 순서}
-\begin{enumerate}
-\item 원천 CSV·PDF와 L3 마스터를 SHA-256으로 동결한다.
-\item AI 관여 원인, 발생 메커니즘, 부정적 결과, 영향 대상을 기준으로 리스크 적격성을 심사한다.
-\item Instruction Prompt에 따른 삭제·통합·분리를 적용하고 원본 계보를 별도 보존한다.
-\item 유효한 인간 수정 정의를 우선해 L4 수준의 구체적 한영 명칭과 정의를 작성한다.
-\item L3 마스터와 같은 자연스러운 명사구를 명칭에 사용한다. `리스크'나 `위험'은 의미상 필요할 때만 사용한다.
-\item 원문 기반 임시 EM으로 L3 작성 기준점을 산출하고, 현재 L3 명칭·정의와 의미적으로 연결되는지 심사한다.
-\item 한국어와 영어 정의 각각에 AI 시스템·알고리즘·에이전트·로봇·학습 기술 또는 모델을 명시하고 L3식 위험 문장으로 통일한다.
-\item 명칭에서 AI-mediated, AI-facilitated, AI-assisted와 같은 관용적 개입 수식어를 제거하고, L3 마스터 및 공신력 있는 기관의 통제 용어군으로 명칭을 검증한다. 기술적 대상을 구분하는 AI model, AI agent, AI-generated content 등은 유지한다.
-\item 수정된 명칭·정의를 대상으로 한영 BGE-M3 유사도 후보를 만들고, 같은 L3 범위, 피해 대상, 위해 메커니즘, 용어 대표성을 대조해 실질적 중복만 폐기한다.
-\item 중복 제거 후 한·영 각 3개의 대표 개념을 추출하고, L3 어휘 프로파일을 보완 신호로 결합해 최종 EM을 새로 적합한다.
-\item 리스크가 아니거나 분류체계 전체 범위 밖인 카드는 삭제 보관한다. 적격한 리스크가 확정된 L1에 속하지만 정확한 현행 L3가 없거나 후보 간 판단이 모호하면 해당 L1의 Others에 배치하여 HD 사유와 상위 2개 L3 후보를 기록한다.
-\end{enumerate}
-
-\section{원천 데이터와 무결성}
-\begin{table}[htbp]\centering\caption{도메인별 원천 및 최종 L4 수}
-\begin{tabular}{lrrr}\toprule 도메인 & 원천 & 최종 & 순변화\\\midrule
-General AI & 591 & 599 & +8\\ Agentic AI & 83 & 90 & +7\\ Physical AI & 218 & 119 & -99\\\midrule 합계 & 892 & 808 & -84\\\bottomrule\end{tabular}\end{table}
-
-\begin{longtable}{p{0.28\textwidth}p{0.64\textwidth}}\caption{핵심 원천 해시}\\\toprule 자료 & SHA-256\\\midrule\endfirsthead\toprule 자료 & SHA-256\\\midrule\endhead
-L3 마스터 CSV & \hashval{b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4}\\ General L4 CSV & \hashval{97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8}\\ Agentic L4 CSV & \hashval{d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf}\\ Physical L4 CSV & \hashval{d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c}\\\bottomrule\end{longtable}
-
-L3 원본 46행의 L1, L2, L3 한영 명칭·정의와 비고는 셀 단위로 대조하였다. 최종 계층의 추가 3행은 정식 L3가 아니라 HD 라우팅을 위한 G\_Others, A\_Others, P\_Others이다.
-
-\section{L4 정제와 동료 검토}
-명시적 삭제 39건, 비리스크 적용 맥락 8건, 동료 검토 폐기 1건을 삭제 보관본으로 이동하였다. 14개 통합 그룹에서 20건을 대표 카드로 흡수했고, 다중 의미 카드 1건을 두 카드로 분리하여 순증 1건을 만들었다. 원천에서 `new'로 표시된 100건 가운데 비리스크 맥락 8건을 제거하고 87건을 재정의·재발급하였다.
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.96\textwidth]{cleaning_reconciliation.png}\caption{리스크 적격성 게이트를 포함한 L4 수량 대조}\end{figure}
-
-Claude 보조 검토는 713건의 한글 표기 복원, 8건의 실질적 재정의, 1건의 폐기 권고를 제시하였다. 표기 복원과 재정의는 원천 의미를 보존하는지 검토한 뒤 수용하였다. RAI4-0568은 AI 개발자의 관여와 정보주체 권리를 더 명시적으로 수정하였다. RAI4-1157은 재정의 후 사이버 공격 메커니즘이 명확해져 Physical에서 General로 이동하고 G\_SYS\_SECADV에 강한 작성 사전정보를 제공하였다. 모든 명칭에 `리스크'를 붙이는 규칙은 폐기했으며, 의미상 필요할 때만 피해·침해·위험 표현을 유지하였다.
-
-이후 825개 카드를 L3 마스터의 명칭·정의와 전수 대조했다. 548건은 이미 AI 기술 주체와 위험 구조가 완결되어 유지했고, 260건은 원래 의미를 보존하면서 한·영 정의에 AI 시스템·알고리즘·에이전트·로봇·학습 기술 또는 모델을 명시하도록 보완했다. 리스크가 아니거나 분류체계 전체 범위 밖인 12건은 삭제 보관하였다. 확정된 L1에 속하지만 정확한 현행 L3가 없는 14건과 후보 간 경계가 모호한 카드는 해당 L1의 Others에 보류하였다.
-
-최종 명칭 중 66건은 관용적 AI 개입 수식어를 제거하거나 표준 용어로 정규화했다. 유지된 808건 모두에 L3 마스터와 ISO, NIST, OECD, UNESCO, UNICEF, WHO, UNODC, WIPO, IMF 또는 국내 AI 기본법의 용어군 근거를 기록했다. 단, 기관 문구를 카드명에 기계적으로 복사하지 않고 해당 L3의 위해·실패·침해 개념과 일치하는 명사구로 검증했다.
-
-813개 수정 카드를 대상으로 같은 L3 안의 한영 의미 유사도 후보 66쌍을 검토했다. 유사도는 후보 생성에만 사용했고, 보호 특성, 무기 유형, 피해 대상 또는 위해 메커니즘이 다르면 61쌍을 유지했다. 별도 의미를 추가하지 않는 하위·포괄 중복 5건만 대표 카드에 연결하여 삭제 보관했다.
-
-\begin{table}[htbp]\centering\caption{고유사도 L4 중복 검토 결과}
-\begin{tabular}{lrr}\toprule 판정 & 후보 쌍 & 카드 삭제 수\\\midrule
-구별되는 범위로 유지 & 61 & 0\\ 대표성이 낮은 중복 폐기 & 5 & 5\\\midrule 합계 & 66 & 5\\\bottomrule\end{tabular}\end{table}
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.72\textwidth]{semantic_near_duplicate_review.png}\caption{한영 의미 고유사도 후보의 유지·폐기 판정}\end{figure}
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{definition_grounding_by_domain.png}\caption{L3 마스터 대조 후 AI 기술 정의 유지·보완 결과}\end{figure}
-
-\section{L1 라우팅과 ID}
-Instruction Prompt가 명시한 L1 이동 103건과 별도 해결 지시 1건을 반영하였다. 여기에 L1을 먼저 확정하고 그 안에서 L3를 배정하는 교차 도메인 검토 단계를 추가해 30건을 재검토했다. 이 가운데 현행 L3와 정확히 맞지 않는 14건은 다른 L1의 유사한 L3로 밀어 넣지 않고, 검토된 L1의 Others로 보류하였다. 동료 검토로 메커니즘이 변경된 RAI4-1157 한 건은 의미 기준으로 General에 추가 이동하였다. \texttt{facet}과 \texttt{act-type}은 L4 속성으로 유지했지만 의미 매핑 입력에서는 제외했다. 모든 L4 ID는 \texttt{L3\_ID + 순번} 형식으로 다시 발급하였다.
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{domain_counts_before_after.png}\caption{재구축 전후 도메인별 L4 수}\end{figure}
-
-\section{EM 매핑 방법}
-BAAI/BGE-M3의 동일 로컬 스냅샷에서 한국어와 영어를 별도로 임베딩하고 CLS 벡터를 L2 정규화하였다. L4 카드 \(i\)와 L3 후보 \(k\)의 결합 점수는
-\begin{equation}s_{ik}=0.5\cos(\mathbf{x}^{ko}_i,\boldsymbol{\mu}^{ko}_k)+0.5\cos(\mathbf{x}^{en}_i,\boldsymbol{\mu}^{en}_k)\end{equation}
-이다. E-step은 L1 내부에서 최고 점수를 선택하고, M-step은 L3 마스터 anchor 가중치 4.0와 배정 L4 평균을 결합해 중심을 갱신한다. 20260826부터 20260830까지 5개 초기값으로 반복하였다.
-
-각 L4에서 한·영 각 3개 대표 개념을 추출하고, 46개 L3 정의에서 구성한 어휘 프로파일과 제외어를 E-step의 보완 사전정보로 사용했다. 선택된 후보의 키워드 지지도가 강하면 보수적 거절 조건을 일부 보완했지만, L3 정의 대신으로 사용하지 않았다. 민감 범주는 필수 개념어가 없는 카드의 후보에서 제외했다. 작성 힌트는 후보를 하나로 제한하지 않고 강한 사전정보로만 적용했다. 리스크 자체가 현행 분류체계와 의미적으로 양립하지 않으면 삭제하지만, 적격한 리스크가 검토된 L1에는 속하면서 정확히 맞는 L3가 없으면 해당 L1의 Others로 보류했다. 최고 점수 0.560 미만, 하이브리드 마진 0.012 미만, 안정성 0.80 미만, 원본 anchor 점수 0.48 미만, 낮은 마진에서의 한영 Top-1 불일치 등을 HD 신호로 사용했다.
-
-\section{매핑 결과}
-\begin{table}[htbp]\centering\caption{도메인별 EM 및 HD 결과}
-\begin{tabular}{lrrrr}\toprule 도메인 & 최종 L4 & EM & HD/Others & HD 비율\\\midrule
-General AI & 599 & 451 & 148 & 24.7\%\\ Agentic AI & 90 & 71 & 19 & 21.1\%\\ Physical AI & 119 & 90 & 29 & 24.4\%\\\midrule 합계 & 808 & 612 & 196 & 24.3\%\\\bottomrule\end{tabular}\end{table}
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.90\textwidth]{mapping_method_by_domain.png}\caption{도메인별 EM 확정과 HD/Others 대기열}\end{figure}
-
-\begin{table}[htbp]\centering\caption{EM 품질 진단}
-\begin{tabular}{lrrrr}\toprule 도메인 & 평균 최고점수 & 중앙 마진 & 평균 안정성 & 한영 Top-1 일치\\\midrule
-General AI & 0.7605 & 0.0304 & 0.9850 & 62.4\%\\ Agentic AI & 0.7564 & 0.0360 & 0.9911 & 67.8\%\\ Physical AI & 0.7297 & 0.0241 & 0.9966 & 62.2\%\\\bottomrule\end{tabular}\end{table}
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.98\textwidth]{em_quality_diagnostics.png}\caption{도메인별 최고 유사도, 마진, 반복 안정성 분포}\end{figure}
-\begin{figure}[htbp]\centering\includegraphics[width=0.99\textwidth]{largest_l3_categories.png}\caption{도메인별 EM 배정 상위 L3}\end{figure}
-
-기준 키워드를 사용하지 않은 배정선에서는 EM 559건, HD 266건이었다. 키워드 보강과 L3 기반 정의 검토 후 EM은 612건으로 53건 늘었으며, 임금 양극화는 G\_SOC\_ECON, 대규모 사이버범죄 오용은 G\_SYS\_SECADV로 회수했다. 단, HD 196건은 매핑 실패가 아니라 경계 사례를 명시적으로 격리한 결과이며 자동 확정된 L3로 해석해서는 안 된다.
-
-\begin{figure}[htbp]\centering\includegraphics[width=0.78\textwidth]{em_baseline_comparison.png}\caption{키워드 보강 전·후 EM과 HD 건수 비교}\end{figure}
-
-\section{세 가지 내부 검증}
-\subsection{원본 대조 및 계보 검증}
-처리 전후 원천 해시, L3 46행의 셀 값, 삭제·통합·분리 보존식, 892개 원천의 crosswalk 포함 여부를 확인했다. 이는 데이터 유실, 중복, L3 변조를 검출한다.
-\subsection{반복 수렴 및 안정성 검증}
-도메인별 5개 초기화의 목적함수, 반복 수, 카드별 배정 합의율을 기록했다. 낮은 합의는 HD 신호로 처리하였다.
-\subsection{한영 교차검증 및 의미 전제 검증}
-한국어와 영어 Top-1을 별도로 기록하고, 민감 L3의 개념 전제와 원본 anchor 점수를 함께 검사했다. 정상 활동이나 적용 맥락은 EM 이전의 리스크 적격성 게이트에서 제거하였다.
-
-자동 검증은 원천 해시, L3 불변성, 수량 보존, ID 유일성, 한영 필드, AI 기술 명시, L3식 정의문 구조, 명칭 용어 근거, 관용적 AI 수식어 제거, 중복 후보 판정과 대표 카드 계보, L3 범위 게이트, Others의 HD 전용성, crosswalk, 3개 대표 키워드, 상위 2개 후보, 5개 CSV 구성을 포함한 50개 항목에서 모두 PASS였다.
-
-\section{웹 기반 인간 검수 로그}
-모든 L4 카드는 현재 배정과 무관하게 상위 2개 비-Others L3 후보의 기본 EM 점수와 하이브리드 점수를 표시한다. 검수자가 후보를 선택하면 릴리스 해시와 검수 스냅샷을 포함한 GitHub Issue가 작성된다. 일일 자동화는 스냅샷이 일치하는 표만 유효화하고, 검수자·카드별 최신 표를 유지하며, 최소 3명의 검수자와 50\% 초과 다수를 충족한 비구속적 권고안을 생성한다. 재배치는 사용자가 로그 분석과 반영을 명시적으로 지시할 때만 수행한다.
-
-\section{마스터 릴리스와 동기화}
-최종 정본은 L1 CSV 1개, L1/L2/L3 CSV 1개, General·Agentic·Physical L4 CSV 3개이다. 동일 CSV에서 웹 탐색용 \texttt{cards.json}, \texttt{hierarchy.json}, 공개 manifest, Validation Record, 한영 보고서와 그림을 생성하였다. 웹사이트의 행 수, 다운로드 링크, current release 포인터와 해시도 같은 릴리스에 맞췄다.
-
-\section{한계와 후속 검토}
-EM은 확률 혼합모형의 완전한 EM이 아니라 L3 anchor를 둔 제약 구면 hard EM이다. 점수 임계값은 내부 운영 기준이며 전문가 라벨로 외부 보정되지 않았다. Others 196건은 삭제 대상이 아니라 인간 결정 대기열이다. 향후 독립 검증은 도메인·L3·점수 구간을 층화한 표본을 사용해 자동 배정의 정확도와 HD 회수율을 평가해야 한다.
-
+\title{RAI Risk Taxonomy 2.0\\2차 휴먼 검수 복구 기술보고서}\author{Human-review recovery release}\date{2026년 8월 29일}\maketitle
+\section*{요약}
+본 보고서는 798개 기준선 L4 카드를 보존하면서 2차 휴먼 검수 지시를 행 단위로 다시 해석하고 적용한 복구 작업을 기록한다. 이번 단계에서는 EM 또는 Hybrid EM을 다시 실행하지 않았다. 고정된 L3 마스터와 808행 검수 등록부를 기준으로 전문 에이전트 2명이 독립 검토하고 교차 검토한 165건의 결정을 적용했다. 최종 결과는 L4 카드 789건이며 General 618건, Agentic 77건, Physical 94건이다. Others 배정은 0건이다.
+\section{복구 원칙}
+기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. Instruction Prompt와 L3 마스터가 충돌할 때는 L3 마스터를 우선했다. L3는 신설하거나 수정하지 않았으며 SHA-256 해시를 고정했다.
+\section{적용 결과}
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule 조치 & 검수행 수\\\midrule 재배정 & 80\\정의 수정 후 유지 & 39\\분리 & 18\\통합 & 14\\삭제 & 14\\\bottomrule\end{tabular}\caption{승인된 165건의 휴먼 검수 조치}\end{table}
+\begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{도메인별 최종 L4 카드 수}\end{figure}
+\begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/human_review_recovery_actions.png}\caption{휴먼 검수 조치 분포}\end{figure}
+\section{복합 카드 분리}
+기존에 이미 올바르게 분리된 6건은 보존했다. 단일 출력으로 남아 있던 12건은 각 L3의 피해 기제에 맞춰 별도 카드로 작성했다. 각 한영 정의는 AI 시스템, AI 알고리즘, AI 에이전트 또는 이에 준하는 기술 주체, 인과 기제, 불리한 결과를 명시한다. 명칭은 L3 마스터의 명사구 문체를 따르며 한국어에 리스크 또는 위험을 기계적으로 덧붙이지 않았다.
+\section{데이터 무결성 및 검증}
+L3 마스터 SHA-256은 \texttt{e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df}로 입력과 출력에서 동일하다. L4 ID는 최종 L3별로 연속 재발급했다. 중복 ID, 정확 중복 카드, 알 수 없는 L3, 계층 불일치, 빈 한영 필드, AI 기술 주체가 없는 정의는 모두 0건이다. 두 번의 독립 실행에서 세 L4 CSV의 SHA-256이 동일했다.
+\section{산출물}
+최종 배포는 L1 CSV 1개, L1/L2/L3 CSV 1개, General, Agentic, Physical L4 CSV 3개로 구성한다. 검증 폴더에는 808행 지시 등록부, 165건 승인 결정표, source\_row\_id와 최종 L4의 계보 간선, 삭제 기록, 적용 로그, 검증 기록을 보존한다.
 \section{결론}
-재구축은 어휘 유사도가 정상 응급 대응을 폭력으로 오인한 오류를 리스크 적격성 문제로 재정의하였다. 적격성 게이트, L3 불변성, 한영 정의 재작성, 보수적 EM과 HD 격리를 결합함으로써 808개 L4와 완전한 계보를 가진 RAI Risk Taxonomy 2.0 master를 생성하였다.
+이번 복구는 의미 유사도 재분류가 아니라 휴먼 검수 의도의 충실한 이행이다. 최종 데이터에는 Others가 남지 않았고, L3 마스터는 변경되지 않았다. 이후 재매핑은 별도의 명시적 사용자 지시가 있을 때만 수행해야 한다.
 \end{document}

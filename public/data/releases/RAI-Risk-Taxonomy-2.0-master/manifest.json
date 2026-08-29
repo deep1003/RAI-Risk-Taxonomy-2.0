@@ -10,29 +10,29 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 798,
-    "em": 440,
-    "hd": 358,
-    "general": 630,
-    "agentic": 74,
+    "l4": 789,
+    "em": 436,
+    "hd": 353,
+    "general": 618,
+    "agentic": 77,
     "physical": 94
   },
   "cleaning": {
-    "source_total": 808,
-    "deleted": 4,
-    "merged_away": 37,
-    "split_net_addition": 31,
-    "user_directed_operations": 10,
-    "korean_copyedit_operations": 518,
-    "english_copyedit_operations": 319,
-    "net_reduction": 10,
-    "final_total": 798
+    "source_total": 798,
+    "deleted": 13,
+    "merged_away": 9,
+    "split_net_addition": 13,
+    "user_directed_operations": 165,
+    "korean_copyedit_operations": 0,
+    "english_copyedit_operations": 0,
+    "net_reduction": 9,
+    "final_total": 789
   },
   "method": {
     "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
     "em_or_hybrid_em_executed_in_this_round": false,
     "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
-    "boundary_policy": "Retain reviewed HD decisions and domain-specific Others assignments without automatic reassignment",
+    "boundary_policy": "Apply approved human-review dispositions and require zero final Others assignments",
     "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
     "l3_master_precedence": true,
     "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
@@ -40,7 +40,7 @@
     "semantic_deduplication_policy": "Bilingual similarity generates review candidates only and does not trigger automatic deletion or reassignment"
   },
   "human_review": {
-    "review_snapshot_id": "5f38a704b912f89d",
+    "review_snapshot_id": "58869713ed7f88f5",
     "candidate_count": 2,
     "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
     "daily_aggregation": true,
@@ -49,14 +49,15 @@
     "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
   },
   "score_status_counts": {
-    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 662,
-    "L3_MASTER_VALIDATED": 67,
-    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 61,
-    "L3_MASTER_AI_REWRITE": 8
+    "NOT_APPLICABLE": 164,
+    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 520,
+    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 44,
+    "L3_MASTER_VALIDATED": 54,
+    "L3_MASTER_AI_REWRITE": 7
   },
   "validation": {
     "status": "PASS",
-    "passed": 30,
+    "passed": 10,
     "failed": 0
   },
   "artifacts": {
@@ -69,15 +70,15 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
-      "rows": 630
+      "sha256": "00d0c66a7c7495fe99367bf1a9d81e271050f1212f221e27c85d51f506a0887a",
+      "rows": 618
     },
     "L4_Agentic.csv": {
-      "sha256": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
-      "rows": 74
+      "sha256": "10f6a9b9e4ebd16f77b4a0521b744244440c9ce348896cf0ea8ec6df22f8aebc",
+      "rows": 77
     },
     "L4_Physical.csv": {
-      "sha256": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+      "sha256": "5f203cd212438bbdc84c98614592d3c4520835cbb30971d4a781b0cf94b5d378",
       "rows": 94
     }
   }
