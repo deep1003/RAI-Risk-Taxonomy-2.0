@@ -238,3 +238,11 @@ footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+.hero { position: relative; }
+.hero__glossary { position: absolute; top: 18px; right: 36px; display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,.12); color: #fff; text-decoration: none; font-size: 13px; font-weight: 700;
+  padding: 8px 15px; border-radius: 999px; border: 1px solid rgba(255,255,255,.28); z-index: 3; }
+.hero__glossary:hover { background: #fff; color: #111827; border-color: #fff; }
+.hero__glossary:focus-visible { outline: 3px solid #f79009; outline-offset: 2px; }
+@media (max-width: 640px){ .hero__glossary { position: static; display: inline-flex; margin: 12px 18px 0; } }

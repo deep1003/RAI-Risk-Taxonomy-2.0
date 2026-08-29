@@ -1,0 +1,1682 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="RAI Risk Taxonomy 2.0 인공지능·리스크 용어사전: EU AI Act, 인공지능기본법, NIST, OWASP, MITRE ATLAS 출처 기반 한·영 정의 197개.">
+<title>AI 리스크 용어사전 · RAI Risk Taxonomy 2.0</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173458'/%3E%3Cpath d='M15 46V18h18c9 0 15 5 15 13 0 6-3 10-9 12l10 3H36l-8-11v11zm13-17h5c3 0 5-1 5-4s-2-4-5-4h-5z' fill='white'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--surface:#fff;--canvas:#f5f7fa;--navy:#173458;--general:#3867d6;--decision:#b54708;--radius:12px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6}
+a{color:inherit}
+.hero{background:var(--navy);color:#fff;padding:26px 20px 22px}
+.hero__inner{max-width:1080px;margin:0 auto}
+.hero__eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fb3d1;margin-bottom:6px}
+.hero a.home{color:#9fb3d1;text-decoration:none;font-size:13px}
+.hero h1{margin:6px 0 4px;font-size:26px}
+.hero p{margin:0;color:#c7d5e8;font-size:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:22px 20px 60px}
+.controls{position:sticky;top:0;background:var(--canvas);padding:12px 0;border-bottom:1px solid var(--line);z-index:5}
+.controls__row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.search input{border:0;outline:0;flex:1;font-size:14px;background:transparent}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.fbtn{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink)}
+.fbtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.count{color:var(--muted);font-size:13px;margin-left:auto}
+.letterbar{display:flex;gap:3px;flex-wrap:wrap;margin-top:10px}
+.letterbar a{text-decoration:none;color:var(--general);font-weight:700;font-size:12.5px;padding:2px 6px;border-radius:6px}
+.letterbar a:hover{background:#e7edfb}
+.letter{font-size:20px;color:var(--general);border-bottom:2px solid var(--line);padding-bottom:4px;margin:24px 0 12px}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;margin-bottom:11px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.term__head{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.term__head h3{margin:0;font-size:16.5px}
+.term__head .ko{color:var(--navy);font-weight:600;font-size:14.5px}
+.cat{font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700}
+.cat--gen{background:#e7edfb;color:#26428f}
+.cat--risk{background:#fdeceb;color:#a23528}
+.cat--law{background:#e3f4ee;color:#0d6b4f}
+.tag{margin-left:auto;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700}
+.tag--en{background:#eef2fb;color:#3b5ba5}
+.tag--ko{background:#eef7f2;color:#2a7d5f}
+.tag--ad{background:#f5f0fc;color:#7a54c9}
+.def{margin:8px 0 0;font-size:14px}.def--en{color:#1f2a44}.def--ko{color:#374151}
+.src{margin:8px 0 0;font-size:12.5px}.src a{color:var(--decision);text-decoration:none}.src a:hover{text-decoration:underline}
+.empty{display:none;color:var(--muted);padding:30px 0;text-align:center}
+.sources{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:30px}
+.sources h2{margin:0 0 12px;font-size:17px}
+.sources ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sources li{font-size:12.5px;color:var(--muted)}.sources li a{color:var(--general);text-decoration:none}
+.note{font-size:12px;color:var(--muted);margin-top:18px;padding:12px 14px;background:#fffaf0;border:1px solid #f4e2c0;border-radius:10px}
+@media(max-width:640px){.sources ul{grid-template-columns:1fr}.term__head .ko{width:100%}.count{width:100%;margin:4px 0 0}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero__inner">
+  <div class="hero__eyebrow">AI RISK GLOSSARY · 한·영 용어사전</div>
+  <a class="home" href="index.html">← RAI Risk Taxonomy 2.0 메인으로</a>
+  <h1>AI 리스크 용어사전</h1>
+  <p>EU 인공지능법 · 인공지능기본법 · NIST · OWASP · MITRE ATLAS 출처 기반 한·영 정의 197개 (A–Z 통합)</p>
+</div></header>
+<main class="wrap">
+  <div class="controls">
+    <div class="controls__row">
+      <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="용어·정의 검색 (한/영)" autocomplete="off"></label>
+      <div class="filters">
+        <button class="fbtn active" data-f="all">전체 197</button>
+        <button class="fbtn" data-f="gen">일반 65</button>
+        <button class="fbtn" data-f="risk">리스크·보안 77</button>
+        <button class="fbtn" data-f="law">법·제도 55</button>
+      </div>
+      <span class="count" id="count">197개 표시</span>
+    </div>
+    <div class="letterbar"><a href="#LA">A</a><a href="#LB">B</a><a href="#LC">C</a><a href="#LD">D</a><a href="#LE">E</a><a href="#LF">F</a><a href="#LG">G</a><a href="#LH">H</a><a href="#LI">I</a><a href="#LJ">J</a><a href="#LL">L</a><a href="#LM">M</a><a href="#LN">N</a><a href="#LO">O</a><a href="#LP">P</a><a href="#LR">R</a><a href="#LS">S</a><a href="#LT">T</a><a href="#LU">U</a><a href="#LV">V</a><a href="#LW">W</a></div>
+  </div>
+  <div id="list">
+  <h2 class="letter" id="LA">A</h2><article class="term" data-cat="risk" data-name="abuse attack (aml) 오용 공격">
+  <div class="term__head"><h3>Abuse attack (AML)</h3><span class="ko">오용 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">In NIST&#x27;s AML taxonomy for generative AI, attacks that repurpose a system&#x27;s intended capability to serve the attacker&#x27;s ends, such as generating disinformation, malware assistance, or other harmful content at scale.</p>
+    <p class="def def--ko">NIST 적대적 ML 분류에서, 시스템의 정상 역량을 공격자 목적에 전용하는 공격 유형. 대규모 허위정보 생성, 악성코드 작성 지원 등이 해당한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (abuse violations)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="accountability 책임성">
+  <div class="term__head"><h3>Accountability</h3><span class="ko">책임성</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The obligation and capacity of AI actors to answer for the outcomes of AI systems and to allocate responsibility across the life cycle; paired with transparency in NIST&#x27;s &#x27;accountable and transparent&#x27; characteristic.</p>
+    <p class="def def--ko">AI 행위자가 AI 시스템의 결과에 대해 응답하고 수명주기 전반에 책임을 배분해야 하는 의무와 능력. NIST의 &#x27;책임성·투명성&#x27; 특성으로 투명성과 짝을 이룬다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.4</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="actuator 액추에이터(구동기)">
+  <div class="term__head"><h3>Actuator</h3><span class="ko">액추에이터(구동기)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A component that converts an AI system&#x27;s control signals into physical motion or force (motors, grippers, steering); actuator faults are a direct source of physical harm in embodied systems.</p>
+    <p class="def def--ko">AI 시스템의 제어 신호를 물리적 운동이나 힘으로 변환하는 구성요소(모터·그리퍼·조향). 체화 시스템에서 액추에이터 결함은 물리 피해의 직접 원인이다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="adaptiveness 적응성">
+  <div class="term__head"><h3>Adaptiveness</h3><span class="ko">적응성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The capacity of an AI system to change its behavior after deployment, for example through continued learning; a defining characteristic in the EU AI Act and the Korean Framework Act.</p>
+    <p class="def def--ko">배포 이후 지속 학습 등을 통해 행동이 변화할 수 있는 AI 시스템의 능력. EU 인공지능법·인공지능기본법의 정의 요소.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(1); 인공지능기본법 제2조</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="adversarial example 적대적 예제">
+  <div class="term__head"><h3>Adversarial example</h3><span class="ko">적대적 예제</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An input crafted with small, often imperceptible perturbations that causes a model to produce an incorrect output at inference time; the canonical instrument of evasion attacks.</p>
+    <p class="def def--ko">미세하고 흔히 지각 불가능한 교란을 가해 추론 시 모델이 오출력을 내도록 제작된 입력. 회피 공격의 대표 수단.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (evasion)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="adversarial machine learning (aml) 적대적 머신러닝">
+  <div class="term__head"><h3>Adversarial machine learning (AML)</h3><span class="ko">적대적 머신러닝</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The study of attacks against machine learning systems across their life cycle and of corresponding mitigations; NIST AI 100-2 provides the reference taxonomy of attacker goals, capabilities, knowledge, and attack/mitigation classes.</p>
+    <p class="def def--ko">기계학습 시스템 수명주기 전반의 공격과 그 완화책을 다루는 분야. NIST AI 100-2가 공격자 목표·능력·지식과 공격·완화 유형의 기준 분류를 제공한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · overview</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="adversarial training 적대적 학습(방어)">
+  <div class="term__head"><h3>Adversarial training</h3><span class="ko">적대적 학습(방어)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A defense that augments training with adversarial examples so the model learns to resist them; effective but can cause robust overfitting and rarely provides guarantees.</p>
+    <p class="def def--ko">적대적 예제를 학습에 포함시켜 내성을 기르게 하는 방어 기법. 효과적이나 강건 과적합을 유발할 수 있고 보증을 제공하지는 못한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (mitigations)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="affected person 영향받는 자">
+  <div class="term__head"><h3>Affected person</h3><span class="ko">영향받는 자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person whose life, bodily safety, or fundamental rights are significantly affected by an AI product or service; the Korean Framework Act grants them a right to a meaningful explanation of key criteria behind AI outputs. (unofficial translation)</p>
+    <p class="def def--ko">인공지능제품 또는 인공지능서비스에 의하여 자신의 생명, 신체의 안전 및 기본권에 중대한 영향을 받는 자. 인공지능기본법은 이들에게 AI 결과 도출 주요 기준에 대한 의미 있는 설명을 받을 권리를 부여한다.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제9호, 제3조</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="agent (ai agent) 인공지능 에이전트">
+  <div class="term__head"><h3>Agent (AI agent)</h3><span class="ko">인공지능 에이전트</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system that pursues goals by planning and executing sequences of actions, typically invoking external tools, APIs, or other systems with limited human intervention; agentic behavior extends model outputs into real-world side effects.</p>
+    <p class="def def--ko">계획 수립과 행동 실행을 통해 목표를 추구하는 AI 시스템으로, 통상 외부 도구·API·타 시스템을 제한된 인간 개입 하에 호출한다. 에이전트적 행동은 모델 출력을 실제 부수효과로 확장한다.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · Agentic AI platform</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="agentic ai 에이전틱 인공지능">
+  <div class="term__head"><h3>Agentic AI</h3><span class="ko">에이전틱 인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI systems that autonomously plan and execute multi-step tasks by using tools and making decisions with limited human intervention; one of the three L1 domains of this taxonomy.</p>
+    <p class="def def--ko">도구를 사용하고 제한된 인간 개입 하에 의사결정을 내리며 다단계 과업을 자율적으로 계획·실행하는 AI 시스템. 본 택소노미 L1 3대 도메인의 하나.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai audit / algorithmic audit 인공지능 감사(알고리즘 감사)">
+  <div class="term__head"><h3>AI audit / algorithmic audit</h3><span class="ko">인공지능 감사(알고리즘 감사)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Independent examination of an AI system&#x27;s data, model, processes, and controls against defined criteria to assess conformity, risk, and impact; a core assurance mechanism in AI governance.</p>
+    <p class="def def--ko">정의된 기준에 비추어 AI 시스템의 데이터·모델·프로세스·통제를 독립적으로 점검하여 적합성·리스크·영향을 평가하는 활동. AI 거버넌스의 핵심 보증 메커니즘.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §5 (Measure/Manage)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai business operator 인공지능사업자">
+  <div class="term__head"><h3>AI business operator</h3><span class="ko">인공지능사업자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person conducting AI-industry business, comprising AI development operators (who develop and provide AI) and AI utilization operators (who provide AI products or services using AI provided by the former). (unofficial translation)</p>
+    <p class="def def--ko">인공지능산업과 관련된 사업을 하는 자로, 인공지능을 개발·제공하는 &#x27;인공지능개발사업자&#x27;와 그 인공지능을 이용하여 제품·서비스를 제공하는 &#x27;인공지능이용사업자&#x27;로 구성된다.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제7호</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai ethics (korean framework act) 인공지능윤리">
+  <div class="term__head"><h3>AI ethics (Korean Framework Act)</h3><span class="ko">인공지능윤리</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Ethical standards that all members of society should observe across the development, provision, and use of AI to realize a safe and trustworthy AI society grounded in respect for human dignity. (unofficial translation)</p>
+    <p class="def def--ko">인간의 존엄성에 대한 존중을 기초로 안전하고 신뢰할 수 있는 인공지능사회를 구현하기 위하여 인공지능의 개발·제공·이용 등 모든 영역에서 사회구성원이 지켜야 할 윤리적 기준.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제11호</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai governance 인공지능 거버넌스">
+  <div class="term__head"><h3>AI governance</h3><span class="ko">인공지능 거버넌스</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The structures, policies, roles, and processes by which an organization or jurisdiction directs and controls the development and use of AI to manage risk and ensure accountability; the GOVERN function is the foundation of the NIST AI RMF.</p>
+    <p class="def def--ko">리스크 관리와 책임 확보를 위해 조직·관할이 AI의 개발·이용을 지휘·통제하는 구조·정책·역할·절차. GOVERN 기능은 NIST AI RMF의 토대이다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §5 (Govern)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="ai literacy 인공지능 리터러시">
+  <div class="term__head"><h3>AI literacy</h3><span class="ko">인공지능 리터러시</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Skills, knowledge and understanding that allow providers, deployers and affected persons to make an informed deployment of AI systems, as well as to gain awareness about the opportunities and risks of AI and possible harm it can cause.</p>
+    <p class="def def--ko">제공자·배포자·영향받는 사람이 AI 시스템을 정보에 기반해 배포·이용하고, AI의 기회와 위험 및 초래 가능한 피해를 인식할 수 있게 하는 기능·지식·이해.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(56)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="ai model 인공지능 모델">
+  <div class="term__head"><h3>AI model</h3><span class="ko">인공지능 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The learned mathematical structure (parameters and architecture) produced by training on data, which maps inputs to outputs such as predictions or generated content; a model becomes part of an AI system when combined with other components such as interfaces and tooling.</p>
+    <p class="def def--ko">데이터 학습으로 산출된 수학적 구조(파라미터·아키텍처)로, 입력을 예측·생성물 등 출력으로 사상한다. 인터페이스·도구 등과 결합되면 AI 시스템의 구성요소가 된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai office / competent authority ai 사무국·권한당국">
+  <div class="term__head"><h3>AI Office / competent authority</h3><span class="ko">AI 사무국·권한당국</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Public bodies charged with implementing, supervising, and enforcing AI regulation—the EU AI Office at Union level and national competent authorities (notifying and market-surveillance authorities).</p>
+    <p class="def def--ko">AI 규제의 이행·감독·집행을 담당하는 공적 기구로, EU 차원의 AI 사무국과 국가 권한당국(통보당국·시장감시당국)을 포함한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(47)-(48), 64</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="ai red teaming ai 레드팀 훈련">
+  <div class="term__head"><h3>AI red teaming</h3><span class="ko">AI 레드팀 훈련</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Structured adversarial testing in which experts attempt to elicit failures, unsafe outputs, or security breaches from an AI system before and after deployment; institutionalized in OWASP&#x27;s AI Red Teaming initiative and required for GPAI models with systemic risk under the EU AI Act.</p>
+    <p class="def def--ko">전문가가 배포 전후 AI 시스템의 실패·불안전 출력·보안 침해를 유발해 보는 구조화된 적대적 시험. OWASP AI 레드티밍 이니셔티브로 제도화되었고 EU 인공지능법상 시스템적 리스크 GPAI 모델에 요구된다.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · AI Red Teaming initiative; EU AI Act Art. 55</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ai regulatory sandbox ai 규제 샌드박스">
+  <div class="term__head"><h3>AI regulatory sandbox</h3><span class="ko">AI 규제 샌드박스</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A controlled framework set up by a competent authority which offers providers the possibility to develop, train, validate and test an innovative AI system, where appropriate in real-world conditions, under regulatory supervision for a limited time.</p>
+    <p class="def def--ko">권한당국이 마련한 통제된 체계로, 제공자가 규제 감독 하에 한정된 기간 동안 혁신적 AI 시스템을 (적절한 경우 실제 조건에서) 개발·학습·검증·시험할 수 있게 한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(55)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="ai system 인공지능시스템">
+  <div class="term__head"><h3>AI system</h3><span class="ko">인공지능시스템</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.</p>
+    <p class="def def--ko">다양한 수준의 자율성을 갖고 작동하도록 설계되고 배포 후 적응성을 보일 수 있으며, 명시적·묵시적 목표를 위해 입력으로부터 물리적·가상적 환경에 영향을 줄 수 있는 예측, 콘텐츠, 추천, 결정 등의 출력 생성 방식을 추론하는 기계 기반 시스템.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(1)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="ai system (korean framework act) 인공지능시스템 (인공지능기본법)">
+  <div class="term__head"><h3>AI system (Korean Framework Act)</h3><span class="ko">인공지능시스템 (인공지능기본법)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI-based system that, with varying levels of autonomy and adaptiveness, infers outputs such as predictions, recommendations, and decisions that influence real and virtual environments for given objectives. (unofficial translation)</p>
+    <p class="def def--ko">다양한 수준의 자율성과 적응성을 가지고 주어진 목표를 위하여 실제 및 가상환경에 영향을 미치는 예측, 추천, 결정 등의 결과물을 추론하는 인공지능 기반 시스템.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제2호</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="anomaly detection 이상 탐지">
+  <div class="term__head"><h3>Anomaly detection</h3><span class="ko">이상 탐지</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Detection techniques that flag inputs, behaviors, or telemetry deviating from expected distributions, used to spot poisoning, intrusion, misuse, or malfunction in AI pipelines.</p>
+    <p class="def def--ko">기대 분포에서 벗어난 입력·행동·텔레메트리를 탐지해 포이즈닝, 침입, 오용, 오작동을 식별하는 기법.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="artificial general intelligence (agi) 범용 인공지능(agi)">
+  <div class="term__head"><h3>Artificial general intelligence (AGI)</h3><span class="ko">범용 인공지능(AGI)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A hypothesized class of AI that matches or exceeds human capabilities across most cognitive tasks, rather than in a narrow domain; a reference point in long-term risk discussions.</p>
+    <p class="def def--ko">특정 영역이 아닌 대부분의 인지 과업에서 인간 수준 이상 역량을 갖춘 것으로 상정되는 AI 유형. 장기 리스크 논의의 준거 개념.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="artificial intelligence (ai) 인공지능">
+  <div class="term__head"><h3>Artificial intelligence (AI)</h3><span class="ko">인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Electronic implementation of intellectual abilities possessed by humans, such as learning, reasoning, perception, judgment, and language understanding. (unofficial translation)</p>
+    <p class="def def--ko">학습, 추론, 지각, 판단, 언어의 이해 등 인간이 가진 지적 능력을 전자적 방법으로 구현한 것.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제1호</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="attribute inference attack 속성 추론 공격">
+  <div class="term__head"><h3>Attribute inference attack</h3><span class="ko">속성 추론 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A privacy attack that queries a model to infer sensitive attributes of individuals represented in its training data.</p>
+    <p class="def def--ko">모델 질의를 통해 학습 데이터에 포함된 개인의 민감 속성을 추론하는 프라이버시 공격.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="authorised representative 국내대리인/권한대리인">
+  <div class="term__head"><h3>Authorised representative</h3><span class="ko">국내대리인/권한대리인</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person who has received a written mandate from a provider to perform the provider&#x27;s obligations under the regulation on its behalf; the Korean Framework Act&#x27;s Article 36 imposes a parallel domestic-representative duty.</p>
+    <p class="def def--ko">제공자로부터 규정상 의무를 대행하도록 서면 위임을 받은 자연인·법인. 인공지능기본법 제36조도 국내대리인 지정 의무를 둔다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(5); 인공지능기본법 제36조</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="automation bias 자동화 편향">
+  <div class="term__head"><h3>Automation bias</h3><span class="ko">자동화 편향</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The human tendency to over-trust and defer to automated outputs, reducing critical scrutiny; a failure mode that undermines human oversight and amplifies AI errors.</p>
+    <p class="def def--ko">자동화된 출력을 과신하고 그에 의존하여 비판적 검토를 소홀히 하는 인간의 경향. 인간 감독을 무력화하고 AI 오류를 증폭시키는 실패 양상.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="autonomous vehicle 자율주행차">
+  <div class="term__head"><h3>Autonomous vehicle</h3><span class="ko">자율주행차</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A vehicle capable of sensing its environment and operating with little or no human input; a paradigmatic Physical AI system where perception or control failures cause direct physical harm.</p>
+    <p class="def def--ko">환경을 감지하고 인간 개입 없이 또는 거의 없이 운행할 수 있는 차량. 지각·제어 실패가 직접적 물리 피해를 낳는 대표적 피지컬 AI 시스템.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="autonomy (varying levels of) 자율성(다양한 수준)">
+  <div class="term__head"><h3>Autonomy (varying levels of)</h3><span class="ko">자율성(다양한 수준)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The degree to which an AI system can generate outputs and act without human involvement; both the EU AI Act and the Korean Framework Act define AI systems by reference to varying levels of autonomy.</p>
+    <p class="def def--ko">AI 시스템이 인간 개입 없이 출력을 생성하고 작동할 수 있는 정도. EU 인공지능법과 인공지능기본법 모두 &#x27;다양한 수준의 자율성&#x27;을 AI 시스템 정의 요소로 둔다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(1); 인공지능기본법 제2조</a></p>
+  </div>
+</article><h2 class="letter" id="LB">B</h2><article class="term" data-cat="risk" data-name="backdoor (trojan) attack 백도어(트로이목마) 공격">
+  <div class="term__head"><h3>Backdoor (Trojan) attack</h3><span class="ko">백도어(트로이목마) 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A poisoning attack that implants a hidden trigger during training or supply-chain tampering, so the model behaves normally except when the trigger is present, at which point it produces attacker-chosen outputs.</p>
+    <p class="def def--ko">학습 또는 공급망 변조 과정에서 은닉 트리거를 심는 포이즈닝 공격. 모델은 평시 정상 동작하다가 트리거 입력 시 공격자가 정한 출력을 산출한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (poisoning: backdoor)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="benchmark 벤치마크">
+  <div class="term__head"><h3>Benchmark</h3><span class="ko">벤치마크</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A standardized dataset and protocol used to measure and compare model capabilities or safety properties; benchmark integrity can be undermined by data contamination and saturation.</p>
+    <p class="def def--ko">모델의 역량·안전 속성을 측정·비교하기 위한 표준화된 데이터셋과 절차. 데이터 오염과 포화는 벤치마크 타당성을 훼손한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="bias (systemic, computational, human-cognitive) 편향(제도적·계산적·인지적)">
+  <div class="term__head"><h3>Bias (systemic, computational, human-cognitive)</h3><span class="ko">편향(제도적·계산적·인지적)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">NIST distinguishes three categories of AI bias: systemic (institutional and societal), computational and statistical (data and algorithm), and human-cognitive (perception and use); harmful bias management spans all three.</p>
+    <p class="def def--ko">NIST는 AI 편향을 제도·사회적(시스템적), 데이터·알고리즘의 계산·통계적, 지각·사용상의 인지적 편향으로 구분하며, 유해 편향 관리는 세 범주 전부를 대상으로 한다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="biometric identification 생체인식">
+  <div class="term__head"><h3>Biometric identification</h3><span class="ko">생체인식</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The automated recognition of physical, physiological, behavioural, or psychological human features to establish a person&#x27;s identity by comparing biometric data against a database.</p>
+    <p class="def def--ko">신체적·생리적·행동적·심리적 특징을 자동 인식하여, 생체 데이터를 데이터베이스와 대조함으로써 개인의 신원을 확인하는 것.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(35)</a></p>
+  </div>
+</article><h2 class="letter" id="LC">C</h2><article class="term" data-cat="risk" data-name="cascading failure 연쇄 실패(캐스케이딩)">
+  <div class="term__head"><h3>Cascading failure</h3><span class="ko">연쇄 실패(캐스케이딩)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A failure mode in which one AI component&#x27;s error or compromise propagates through interconnected systems or agents, amplifying into broad, systemic disruption.</p>
+    <p class="def def--ko">한 AI 구성요소의 오류나 침해가 상호 연결된 시스템·에이전트를 통해 전파되어 광범위한 시스템적 교란으로 증폭되는 실패 양상.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3 (systemic)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="catastrophic ai risk 파국적 인공지능 리스크">
+  <div class="term__head"><h3>Catastrophic AI risk</h3><span class="ko">파국적 인공지능 리스크</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Risk of large-scale, severe, and often irreversible harm from advanced AI—via misuse, systemic effects, or loss of control—up to and including threats at societal or civilizational scale.</p>
+    <p class="def def--ko">오용, 시스템적 파급, 통제 상실 등을 통해 고도 AI가 초래하는 대규모·중대·흔히 비가역적 피해의 리스크로, 사회·문명 규모의 위협까지 포함한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="cbrn capability uplift 화생방·핵(cbrn) 역량 상승">
+  <div class="term__head"><h3>CBRN capability uplift</h3><span class="ko">화생방·핵(CBRN) 역량 상승</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The risk that AI meaningfully increases access to expertise for developing chemical, biological, radiological, or nuclear threats; a designated systemic-risk area for advanced models.</p>
+    <p class="def def--ko">AI가 화학·생물학·방사능·핵 위협 개발에 필요한 전문지식 접근성을 실질적으로 높이는 리스크. 고성능 모델의 시스템적 리스크 지정 영역.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Recital 110; Annex XIII</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="ce marking ce 마킹">
+  <div class="term__head"><h3>CE marking</h3><span class="ko">CE 마킹</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A marking by which a provider indicates that an AI system is in conformity with the requirements set out in Chapter III, Section 2 and other applicable Union harmonisation legislation providing for its affixing.</p>
+    <p class="def def--ko">제공자가 AI 시스템이 EU 인공지능법 제3장 제2절 및 부착을 규정한 그 밖의 관련 EU 조화법의 요구사항에 적합함을 표시하는 마킹.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(24)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="collaborative robot (cobot) 협동로봇(코봇)">
+  <div class="term__head"><h3>Collaborative robot (cobot)</h3><span class="ko">협동로봇(코봇)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A robot designed to work in shared physical space alongside humans; safety-protocol failures in cobots can cause serious or fatal injury to workers.</p>
+    <p class="def def--ko">인간과 물리 공간을 공유하며 협업하도록 설계된 로봇. 코봇의 안전 프로토콜 실패는 작업자에게 중대하거나 치명적인 상해를 유발할 수 있다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="compute (training compute) 컴퓨트(학습 연산량)">
+  <div class="term__head"><h3>Compute (training compute)</h3><span class="ko">컴퓨트(학습 연산량)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The cumulative amount of computation used to train a model, commonly measured in floating-point operations; used as a regulatory threshold proxy for capability (e.g., systemic-risk presumption in the EU AI Act).</p>
+    <p class="def def--ko">모델 학습에 투입된 누적 연산량으로 통상 부동소수점 연산 수로 측정한다. EU 인공지능법의 시스템적 리스크 추정 등 역량의 규제적 대리지표로 쓰인다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 51; Annex XIII</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="compute governance 컴퓨트 거버넌스">
+  <div class="term__head"><h3>Compute governance</h3><span class="ko">컴퓨트 거버넌스</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The use of AI computing hardware and large-scale training compute as levers for governance—through thresholds, monitoring, reporting, or access controls—given that frontier capability correlates with compute.</p>
+    <p class="def def--ko">프런티어 역량이 연산량과 상관된다는 점에 착안하여, 임계치·모니터링·보고·접근 통제 등을 통해 AI 컴퓨팅 하드웨어와 대규모 학습 연산량을 거버넌스 지렛대로 활용하는 접근.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 51; Recital 110</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="confabulation (hallucination) 작화(환각)">
+  <div class="term__head"><h3>Confabulation (hallucination)</h3><span class="ko">작화(환각)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The production of confidently stated but false or fabricated content by a generative model; called hallucination in the technical literature and confabulation in NIST&#x27;s generative AI risk work.</p>
+    <p class="def def--ko">생성 모델이 확신에 찬 어조로 허위·조작 콘텐츠를 산출하는 현상. 기술 문헌의 &#x27;환각&#x27;, NIST 생성형 AI 리스크 문서의 &#x27;작화&#x27;에 해당한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="conformity assessment 적합성 평가">
+  <div class="term__head"><h3>Conformity assessment</h3><span class="ko">적합성 평가</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The process of demonstrating whether the requirements for a high-risk AI system have been fulfilled, carried out internally or by a notified body before market placement.</p>
+    <p class="def def--ko">고위험 AI 시스템에 대한 요구사항 충족 여부를 시장 출시 전에 내부 또는 통보기관을 통해 입증하는 절차.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(20), Art. 43</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="constitutional ai 헌법적 ai">
+  <div class="term__head"><h3>Constitutional AI</h3><span class="ko">헌법적 AI</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An alignment method in which a model is trained to critique and revise its own outputs against an explicit set of principles (a &#x27;constitution&#x27;), reducing reliance on human harm labels.</p>
+    <p class="def def--ko">명시적 원칙 집합(&#x27;헌법&#x27;)에 비추어 모델이 자기 출력을 비판·수정하도록 학습시켜 인간의 유해성 라벨 의존을 줄이는 정렬 방법.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="context window 컨텍스트 윈도우">
+  <div class="term__head"><h3>Context window</h3><span class="ko">컨텍스트 윈도우</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The maximum span of input tokens a language model can attend to in a single interaction; long context windows enlarge capability and also enable attacks such as many-shot jailbreaking.</p>
+    <p class="def def--ko">언어모델이 한 번의 상호작용에서 참조할 수 있는 입력 토큰의 최대 범위. 장문맥은 역량을 확장하는 동시에 다수 예시 탈옥 같은 공격 표면이 된다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (GenAI)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="critical infrastructure 핵심 기반시설">
+  <div class="term__head"><h3>Critical infrastructure</h3><span class="ko">핵심 기반시설</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Assets, systems, or networks essential for vital societal functions, whose disruption would have significant impact; a high-risk AI deployment domain.</p>
+    <p class="def def--ko">필수적 사회 기능에 긴요하여 교란 시 중대한 영향을 미치는 자산·시스템·네트워크. 고위험 AI 활용 도메인.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(62)</a></p>
+  </div>
+</article><h2 class="letter" id="LD">D</h2><article class="term" data-cat="law" data-name="data governance 데이터 거버넌스">
+  <div class="term__head"><h3>Data governance</h3><span class="ko">데이터 거버넌스</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Requirements that training, validation, and testing datasets be subject to appropriate data-management practices, including relevance, representativeness, and examination for bias (EU AI Act Article 10).</p>
+    <p class="def def--ko">학습·검증·시험 데이터셋이 관련성·대표성 확보와 편향 검토 등 적절한 데이터 관리 관행의 대상이 되어야 한다는 요구사항(EU 인공지능법 제10조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 10</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="data leakage / contamination 데이터 누출·오염">
+  <div class="term__head"><h3>Data leakage / contamination</h3><span class="ko">데이터 누출·오염</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Contamination between training and evaluation data (or benchmark exposure in training) that inflates measured performance and invalidates capability and safety assessments.</p>
+    <p class="def def--ko">학습 데이터와 평가 데이터 간 오염(또는 벤치마크의 학습 노출)으로 측정 성능이 부풀려져 역량·안전 평가의 타당성이 훼손되는 현상.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (evaluation)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="data poisoning 데이터 포이즈닝">
+  <div class="term__head"><h3>Data poisoning</h3><span class="ko">데이터 포이즈닝</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Manipulation of pre-training, fine-tuning, or embedding data to introduce vulnerabilities, backdoors, or biases that alter model behavior; OWASP LLM04:2025 and a primary attack class in NIST AI 100-2.</p>
+    <p class="def def--ko">사전학습·미세조정·임베딩 데이터를 조작해 취약점·백도어·편향을 주입, 모델 행동을 변경시키는 공격. OWASP LLM04:2025이자 NIST AI 100-2의 주요 공격 유형.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM04:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="deceptive alignment 기만적 정렬">
+  <div class="term__head"><h3>Deceptive alignment</h3><span class="ko">기만적 정렬</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A failure mode in which a model behaves as aligned during training or monitoring but pursues different objectives when it detects it is unmonitored or deployed.</p>
+    <p class="def def--ko">모델이 학습·감시 중에는 정렬된 듯 행동하다가 비감시·배포 상태를 감지하면 다른 목표를 추구하는 실패 양상.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="deep fake 딥페이크">
+  <div class="term__head"><h3>Deep fake</h3><span class="ko">딥페이크</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI-generated or manipulated image, audio or video content that resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful.</p>
+    <p class="def def--ko">실존 인물·사물·장소·실체·사건과 유사하게 AI로 생성·조작되어 사람에게 진짜이거나 진실한 것으로 오인될 수 있는 이미지·음성·영상 콘텐츠.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(60)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="deepfake detection 딥페이크 탐지">
+  <div class="term__head"><h3>Deepfake detection</h3><span class="ko">딥페이크 탐지</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Detection techniques that identify synthetic or manipulated media through forensic artifacts, statistical fingerprints, watermark verification, or provenance checking.</p>
+    <p class="def def--ko">포렌식 흔적, 통계적 지문, 워터마크 검증, 출처증명 확인 등을 통해 합성·조작 미디어를 식별하는 탐지 기법.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="defense evasion 방어 회피">
+  <div class="term__head"><h3>Defense evasion</h3><span class="ko">방어 회피</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An ATLAS tactic in which adversaries act to avoid detection by AI-enabled security controls, for example by evading an AI malware classifier.</p>
+    <p class="def def--ko">AI 기반 보안 통제의 탐지를 회피하려는 ATLAS 전술. AI 악성코드 분류기 회피가 대표적이다.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · tactic: Defense Evasion</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="deployer 배포자(이용주체)">
+  <div class="term__head"><h3>Deployer</h3><span class="ko">배포자(이용주체)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person, public authority, agency or other body using an AI system under its authority, except where the AI system is used in the course of a personal non-professional activity.</p>
+    <p class="def def--ko">자신의 권한 하에 AI 시스템을 이용하는 자연인·법인·공공기관 등. 다만 개인적 비직업적 활동 과정에서의 이용은 제외한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(4)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="differential privacy 차분 프라이버시">
+  <div class="term__head"><h3>Differential privacy</h3><span class="ko">차분 프라이버시</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A formal privacy guarantee that bounds how much any individual&#x27;s data can influence a computation&#x27;s output, typically implemented by calibrated noise; a principal mitigation against membership and attribute inference.</p>
+    <p class="def def--ko">개인 데이터가 계산 결과에 미치는 영향을 수학적으로 제한하는 형식적 프라이버시 보증으로, 보정된 노이즈로 구현된다. 멤버십·속성 추론에 대한 대표적 완화책.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy mitigations)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="direct prompt injection 직접 프롬프트 주입">
+  <div class="term__head"><h3>Direct prompt injection</h3><span class="ko">직접 프롬프트 주입</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Prompt injection in which the attacker supplies malicious instructions directly in the user input channel to alter the model&#x27;s behavior or bypass its policies.</p>
+    <p class="def def--ko">공격자가 이용자 입력 채널에 악성 지시를 직접 삽입하여 모델 행동을 변경하거나 정책을 우회하는 프롬프트 주입 형태.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="disinformation 허위조작정보(디스인포메이션)">
+  <div class="term__head"><h3>Disinformation</h3><span class="ko">허위조작정보(디스인포메이션)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">False or misleading content created or spread with intent to deceive or manipulate, whose production and targeting AI can scale; distinguished from unintentional misinformation.</p>
+    <p class="def def--ko">기만·조작 의도로 생성·유포되는 허위·오도 콘텐츠로, AI가 그 생산과 표적화를 대규모화할 수 있다. 비의도적 오정보(misinformation)와 구별된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="distributive fairness 분배적 공정성">
+  <div class="term__head"><h3>Distributive fairness</h3><span class="ko">분배적 공정성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Fairness concerned with how benefits, burdens, and errors of an AI system are allocated across individuals and groups, addressing disparate outcomes and impacts.</p>
+    <p class="def def--ko">AI 시스템의 편익·부담·오류가 개인과 집단에 어떻게 배분되는지에 관한 공정성으로, 결과·영향의 격차를 다룬다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7 (SP 1270)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="distributor 유통자">
+  <div class="term__head"><h3>Distributor</h3><span class="ko">유통자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the market.</p>
+    <p class="def def--ko">제공자나 수입자가 아니면서 공급망에서 AI 시스템을 시장에 유통시키는 자연인·법인.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(7)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="downstream provider 하류 제공자">
+  <div class="term__head"><h3>Downstream provider</h3><span class="ko">하류 제공자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A provider of an AI system, including a general-purpose AI system, which integrates an AI model, whether self-provided and vertically integrated or provided by another entity under contract.</p>
+    <p class="def def--ko">AI 모델을 통합하는 AI 시스템(범용 AI 시스템 포함)의 제공자로, 모델을 자체 수직통합하였든 계약으로 타 주체에게서 제공받았든 무관하다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(68)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="dual-use capability 이중용도 역량">
+  <div class="term__head"><h3>Dual-use capability</h3><span class="ko">이중용도 역량</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A capability that serves beneficial purposes but can also enable serious harm (e.g., biology, chemistry, cyber operations); dual-use risk drives evaluation and safeguard obligations for frontier models.</p>
+    <p class="def def--ko">유익한 용도와 중대한 위해 양쪽에 쓰일 수 있는 역량(생물학·화학·사이버 등). 이중용도 리스크는 프런티어 모델의 평가·안전장치 의무의 근거가 된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><h2 class="letter" id="LE">E</h2><article class="term" data-cat="gen" data-name="embedding 임베딩">
+  <div class="term__head"><h3>Embedding</h3><span class="ko">임베딩</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A dense numerical vector representation of data (text, images, or other content) that preserves semantic relationships; embeddings underlie retrieval, clustering, and similarity search in AI pipelines.</p>
+    <p class="def def--ko">의미 관계를 보존하도록 데이터를 조밀한 수치 벡터로 표현한 것. 검색, 군집화, 유사도 탐색 등 AI 파이프라인의 기반이 된다.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM08:2025</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="embodied ai 체화 인공지능(embodied ai)">
+  <div class="term__head"><h3>Embodied AI</h3><span class="ko">체화 인공지능(Embodied AI)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI integrated into a physical body or agent that perceives and acts in the physical world, such as robots, autonomous vehicles, and drones; the primary object of Physical AI risk analysis.</p>
+    <p class="def def--ko">로봇, 자율주행차, 드론처럼 물리적 신체나 에이전트에 통합되어 실제 세계를 지각하고 행동하는 AI. 피지컬 AI 리스크 분석의 주 대상.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="emergent capability 창발적 역량">
+  <div class="term__head"><h3>Emergent capability</h3><span class="ko">창발적 역량</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A capability that appears unpredictably as models scale and was not present in smaller models; complicates safety evaluation and risk forecasting.</p>
+    <p class="def def--ko">모델 규모 확장에 따라 예측 불가하게 나타나며 소형 모델에는 없던 역량. 안전 평가와 리스크 예측을 어렵게 한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="emotion recognition system 감정인식 시스템">
+  <div class="term__head"><h3>Emotion recognition system</h3><span class="ko">감정인식 시스템</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data.</p>
+    <p class="def def--ko">자연인의 생체 데이터를 기초로 그 감정이나 의도를 식별·추론할 목적의 AI 시스템.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(39)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="evasion attack 회피 공격">
+  <div class="term__head"><h3>Evasion attack</h3><span class="ko">회피 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An inference-time attack that perturbs inputs (adversarial examples) so the model misclassifies or misbehaves while the input appears benign to humans.</p>
+    <p class="def def--ko">입력을 교란(적대적 예제)하여 인간에게는 정상으로 보이는 입력에 대해 모델이 오분류·오작동하게 만드는 추론 시점 공격.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (evasion)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="excessive agency 과도한 행위성">
+  <div class="term__head"><h3>Excessive agency</h3><span class="ko">과도한 행위성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The risk that an LLM-based system is granted more functionality, permissions, or autonomy than needed, so manipulated or erroneous outputs trigger damaging real-world actions (OWASP LLM06:2025).</p>
+    <p class="def def--ko">LLM 기반 시스템에 필요 이상의 기능·권한·자율성이 부여되어, 조작되거나 잘못된 출력이 유해한 실제 행동으로 이어지는 리스크(OWASP LLM06:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM06:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="exfiltration 반출(유출)">
+  <div class="term__head"><h3>Exfiltration</h3><span class="ko">반출(유출)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An ATLAS tactic covering theft of AI artifacts or data out of a victim environment, including model files, embeddings, or conversation logs.</p>
+    <p class="def def--ko">모델 파일, 임베딩, 대화 로그 등 AI 자산·데이터를 피해 환경 밖으로 절취하는 ATLAS 전술.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · tactic: Exfiltration</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="explainability 설명가능성">
+  <div class="term__head"><h3>Explainability</h3><span class="ko">설명가능성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The property that mechanisms underlying an AI system&#x27;s operation can be described and understood; NIST treats &#x27;explainable and interpretable&#x27; as a characteristic of trustworthy AI.</p>
+    <p class="def def--ko">AI 시스템 작동의 기저 메커니즘을 기술하고 이해할 수 있는 성질. NIST는 &#x27;설명가능·해석가능&#x27;을 신뢰할 수 있는 AI의 특성으로 규정한다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.5</a></p>
+  </div>
+</article><h2 class="letter" id="LF">F</h2><article class="term" data-cat="gen" data-name="fairness 공정성">
+  <div class="term__head"><h3>Fairness</h3><span class="ko">공정성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">In NIST AI RMF, fairness concerns equality and equity, addressed by managing harmful bias and discrimination; a trustworthiness characteristic (&#x27;fair with harmful bias managed&#x27;).</p>
+    <p class="def def--ko">NIST AI RMF에서 공정성은 평등·형평의 문제로, 유해한 편향과 차별의 관리로 달성되는 신뢰성 특성(&#x27;유해 편향이 관리된 공정성&#x27;)이다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="fine-tuning 미세조정(파인튜닝)">
+  <div class="term__head"><h3>Fine-tuning</h3><span class="ko">미세조정(파인튜닝)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Additional training of a pre-trained model on a narrower dataset to adapt it to a task or domain; fine-tuning can also degrade safety training, even with benign data.</p>
+    <p class="def def--ko">사전학습 모델을 협소한 데이터로 추가 학습시켜 특정 과업·도메인에 적응시키는 것. 무해한 데이터로도 안전 학습이 열화될 수 있다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2.3</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="floating-point operation (flop) 부동소수점 연산(flop)">
+  <div class="term__head"><h3>Floating-point operation (FLOP)</h3><span class="ko">부동소수점 연산(FLOP)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any mathematical operation or assignment involving floating-point numbers; the unit in which training compute thresholds are expressed.</p>
+    <p class="def def--ko">부동소수점 수를 포함하는 모든 수학적 연산 또는 할당. 학습 연산량 임계치를 표현하는 단위.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(67)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="foundation model 파운데이션 모델">
+  <div class="term__head"><h3>Foundation model</h3><span class="ko">파운데이션 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A large model trained on broad data at scale that can be adapted to a wide range of downstream tasks; in EU law the closely related regulatory concept is the general-purpose AI model.</p>
+    <p class="def def--ko">광범위한 데이터로 대규모 학습되어 다양한 하류 과업에 적응 가능한 대형 모델. EU법상 인접 규제 개념은 범용 AI 모델이다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="frontier ai 프런티어 인공지능">
+  <div class="term__head"><h3>Frontier AI</h3><span class="ko">프런티어 인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The most capable general-purpose AI models at the leading edge of capability, whose novel and hard-to-predict abilities can pose severe or systemic risks; a focus of dedicated safety evaluation and governance.</p>
+    <p class="def def--ko">역량 최전선에 있는 가장 유능한 범용 AI 모델로, 새롭고 예측하기 어려운 능력이 중대하거나 시스템적인 위험을 초래할 수 있어 전담 안전 평가·거버넌스의 대상이 된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="fundamental rights impact assessment (fria) 기본권 영향평가">
+  <div class="term__head"><h3>Fundamental rights impact assessment (FRIA)</h3><span class="ko">기본권 영향평가</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An assessment that deployers of certain high-risk AI systems must perform to identify impacts on fundamental rights and mitigation measures before deployment (EU AI Act Article 27).</p>
+    <p class="def def--ko">특정 고위험 AI 시스템의 배포자가 배포 전 기본권에 대한 영향과 완화 조치를 식별하기 위해 수행해야 하는 평가(EU 인공지능법 제27조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 27</a></p>
+  </div>
+</article><h2 class="letter" id="LG">G</h2><article class="term" data-cat="gen" data-name="general-purpose ai (gpai) 범용 인공지능(gpai)">
+  <div class="term__head"><h3>General-purpose AI (GPAI)</h3><span class="ko">범용 인공지능(GPAI)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An umbrella term for AI, typically built on general-purpose AI models, capable of performing a wide range of tasks across domains rather than a single narrow function; the object of the EU AI Act&#x27;s dedicated GPAI regime.</p>
+    <p class="def def--ko">단일 협소 기능이 아니라 도메인을 넘나들며 광범위한 과업을 수행할 수 있는, 통상 범용 AI 모델에 기반한 AI를 포괄하는 용어. EU 인공지능법의 GPAI 전용 규율 대상.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(63),(66); Chapter V</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="general-purpose ai model 범용 ai 모델">
+  <div class="term__head"><h3>General-purpose AI model</h3><span class="ko">범용 AI 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI model, including where trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks, and that can be integrated into a variety of downstream systems or applications (excluding models used only for research, development or prototyping before market placement).</p>
+    <p class="def def--ko">대규모 자기지도 학습을 포함하여 상당한 범용성을 보이고 광범위한 별개 과업을 수행할 수 있으며 다양한 하류 시스템·응용에 통합될 수 있는 AI 모델(시장 출시 전 연구·개발·프로토타이핑 전용 모델 제외).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(63)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="general-purpose ai system 범용 ai 시스템">
+  <div class="term__head"><h3>General-purpose AI system</h3><span class="ko">범용 AI 시스템</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems.</p>
+    <p class="def def--ko">범용 AI 모델에 기반하여 직접 이용과 타 AI 시스템 통합 양쪽으로 다양한 목적에 쓰일 수 있는 AI 시스템.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(66)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="generative ai 생성형 인공지능">
+  <div class="term__head"><h3>Generative AI</h3><span class="ko">생성형 인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system that generates text, sound, images, video, or other outputs by imitating the structure and characteristics of input data. (unofficial translation)</p>
+    <p class="def def--ko">입력한 데이터의 구조와 특성을 모방하여 글, 소리, 그림, 영상, 그 밖의 다양한 결과물을 생성하는 인공지능시스템.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제5호</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="goal misgeneralization 목표 오일반화">
+  <div class="term__head"><h3>Goal misgeneralization</h3><span class="ko">목표 오일반화</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An alignment failure in which an agent that appeared to pursue the intended objective in training pursues a different, correlated objective out of distribution while retaining its capabilities.</p>
+    <p class="def def--ko">학습 중 의도된 목표를 추구하는 듯 보이던 에이전트가 분포 외 환경에서 역량을 유지한 채 상관된 다른 목표를 추구하는 정렬 실패.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="gps spoofing gps 스푸핑">
+  <div class="term__head"><h3>GPS spoofing</h3><span class="ko">GPS 스푸핑</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A sensor-spoofing attack that transmits counterfeit satellite-navigation signals to hijack the position or route of drones, vehicles, or other autonomous systems.</p>
+    <p class="def def--ko">위조 위성항법 신호를 송출하여 드론·차량 등 자율 시스템의 위치나 경로를 탈취하는 센서 스푸핑 공격.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · physical attacks</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="group fairness 집단 공정성">
+  <div class="term__head"><h3>Group fairness</h3><span class="ko">집단 공정성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Fairness criteria requiring parity of selected statistical measures (e.g., error or selection rates) across demographic groups; multiple group-fairness definitions can be mutually incompatible.</p>
+    <p class="def def--ko">인구집단 간 선택된 통계 지표(오류율·선정률 등)의 균등을 요구하는 공정성 기준. 복수의 집단 공정성 정의는 서로 양립 불가능할 수 있다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7 (SP 1270)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="guardrails 가드레일">
+  <div class="term__head"><h3>Guardrails</h3><span class="ko">가드레일</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Policy, filtering, and control layers around a model (input filters, output filters, refusal policies, tool-permission checks) that constrain unsafe behavior at run time.</p>
+    <p class="def def--ko">입력·출력 필터, 거부 정책, 도구 권한 점검 등 모델 주위에 두는 정책·통제 계층으로, 실행 시점의 불안전 행동을 제약한다.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · mitigations</a></p>
+  </div>
+</article><h2 class="letter" id="LH">H</h2><article class="term" data-cat="risk" data-name="harm 위해(피해)">
+  <div class="term__head"><h3>Harm</h3><span class="ko">위해(피해)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A negative consequence to people, organizations, property, or the environment; in risk definitions, harm is the consequence whose probability and severity constitute risk.</p>
+    <p class="def def--ko">사람·조직·재산·환경에 대한 부정적 결과. 리스크 정의에서 발생확률과 심각도의 대상이 되는 결과 요소이다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §1</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="high-impact ai 고영향 인공지능">
+  <div class="term__head"><h3>High-impact AI</h3><span class="ko">고영향 인공지능</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">An AI system that may have a significant effect on, or pose a risk to, human life, bodily safety, and fundamental rights, and that is used in designated domains such as energy, healthcare, medical devices, nuclear safety, biometric analysis for criminal investigation, recruitment and loan screening, transport operation, public-service decisions, and student assessment. (unofficial translation)</p>
+    <p class="def def--ko">사람의 생명, 신체의 안전 및 기본권에 중대한 영향을 미치거나 위험을 초래할 우려가 있는 인공지능시스템으로서, 에너지, 보건의료, 의료기기, 원자력 안전, 범죄수사용 생체인식정보 분석, 채용·대출 심사, 교통 운영, 공공서비스 의사결정, 학생 평가 등 지정 영역에서 활용되는 것.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제4호</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="high-impact capabilities 고영향 역량">
+  <div class="term__head"><h3>High-impact capabilities</h3><span class="ko">고영향 역량</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Capabilities that match or exceed the capabilities recorded in the most advanced general-purpose AI models.</p>
+    <p class="def def--ko">가장 진보한 범용 AI 모델에서 기록된 역량과 대등하거나 이를 상회하는 역량.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(64)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="high-risk ai system 고위험 ai 시스템">
+  <div class="term__head"><h3>High-risk AI system</h3><span class="ko">고위험 AI 시스템</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Under the EU AI Act, an AI system that is either a safety component of a regulated product or falls within the use cases listed in Annex III (e.g., biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice), triggering the strongest obligations short of prohibition.</p>
+    <p class="def def--ko">EU 인공지능법상 규제 제품의 안전 구성요소이거나 부속서 III의 활용사례(생체인식, 핵심 인프라, 교육, 고용, 필수 서비스, 법집행, 이주, 사법 등)에 해당하는 AI 시스템으로, 금지 다음으로 강한 의무가 부과된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 6, Annex III</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="human oversight 인간 감독">
+  <div class="term__head"><h3>Human oversight</h3><span class="ko">인간 감독</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Measures ensuring that natural persons can effectively oversee a high-risk AI system during use, including the ability to understand, monitor, intervene in, or interrupt its operation (EU AI Act Article 14).</p>
+    <p class="def def--ko">이용 중인 고위험 AI 시스템을 자연인이 실효적으로 감독할 수 있도록 하는 조치로, 이해·모니터링·개입·중단 능력을 포함한다(EU 인공지능법 제14조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 14</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="human-in-the-loop 인간 개입(hitl)">
+  <div class="term__head"><h3>Human-in-the-loop</h3><span class="ko">인간 개입(HITL)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A control design in which a human reviews, approves, or can override an AI system&#x27;s outputs or actions before they take effect; a stronger, decision-point form of human oversight distinguished from passive monitoring.</p>
+    <p class="def def--ko">AI 시스템의 출력·행동이 효력을 갖기 전에 인간이 검토·승인하거나 무효화할 수 있도록 설계한 통제 방식. 수동적 모니터링과 구별되는, 의사결정 지점 중심의 강한 인간 감독 형태.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="human-robot interaction (hri) 인간-로봇 상호작용(hri)">
+  <div class="term__head"><h3>Human-robot interaction (HRI)</h3><span class="ko">인간-로봇 상호작용(HRI)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The study and design of safe, effective interaction between humans and robots sharing a physical space; safety-protocol failures here can cause serious injury.</p>
+    <p class="def def--ko">물리 공간을 공유하는 인간과 로봇 간의 안전하고 효과적인 상호작용을 연구·설계하는 분야. 이 영역의 안전 프로토콜 실패는 중대한 상해로 이어질 수 있다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><h2 class="letter" id="LI">I</h2><article class="term" data-cat="law" data-name="impact assessment (ai) 인공지능 영향평가">
+  <div class="term__head"><h3>Impact assessment (AI)</h3><span class="ko">인공지능 영향평가</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A structured process to identify and evaluate an AI system&#x27;s potential effects on people and society before and during deployment; required for high-impact AI under Korea&#x27;s Framework Act and guided by KISDI/MSIT guidelines.</p>
+    <p class="def def--ko">배포 전후 AI 시스템이 개인과 사회에 미칠 잠재적 영향을 식별·평가하는 구조화된 절차. 인공지능기본법상 고영향 AI에 요구되며 KISDI·과기정통부 가이드라인이 안내한다.</p>
+    <p class="src"><a href="https://www.sw.or.kr/AI_act_helpdesk/main.jsp" target="_blank" rel="noopener noreferrer">고영향 인공지능 영향평가 가이드라인 등 (과기정통부, 인공지능기본법 지원데스크) · 영향평가 가이드라인</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="importer 수입자">
+  <div class="term__head"><h3>Importer</h3><span class="ko">수입자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person located or established in the Union that places on the market an AI system bearing the name or trademark of a person established in a third country.</p>
+    <p class="def def--ko">제3국에 설립된 자의 이름·상표를 부착한 AI 시스템을 역내 시장에 출시하는, 역내에 소재·설립된 자연인·법인.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(6)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="incident monitoring 사고 모니터링">
+  <div class="term__head"><h3>Incident monitoring</h3><span class="ko">사고 모니터링</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Continuous observation of deployed AI behavior, logs, and user reports to detect failures, attacks, and emerging harms, feeding post-market monitoring and serious-incident reporting duties.</p>
+    <p class="def def--ko">배포된 AI의 행동·로그·이용자 신고를 상시 관찰하여 실패·공격·신규 위해를 탐지하는 활동. 시판 후 모니터링과 중대 사고 보고 의무의 기반이 된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 72-73</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="indirect prompt injection 간접 프롬프트 주입">
+  <div class="term__head"><h3>Indirect prompt injection</h3><span class="ko">간접 프롬프트 주입</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Prompt injection delivered through content the model ingests from external sources (web pages, documents, RAG stores, tool outputs) rather than from the user, hijacking the model&#x27;s instructions covertly.</p>
+    <p class="def def--ko">이용자가 아닌 외부 소스(웹페이지·문서·RAG 저장소·도구 출력)로 유입되는 콘텐츠에 악성 지시를 심어 모델 지시체계를 은밀히 탈취하는 프롬프트 주입 형태.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="individual fairness 개인 공정성">
+  <div class="term__head"><h3>Individual fairness</h3><span class="ko">개인 공정성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The principle that similar individuals should receive similar AI decisions or treatment; a formal fairness criterion complementary to group-level measures.</p>
+    <p class="def def--ko">유사한 개인은 유사한 AI 결정·처우를 받아야 한다는 원칙. 집단 수준 지표를 보완하는 형식적 공정성 기준.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7 (SP 1270)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="inference 추론">
+  <div class="term__head"><h3>Inference</h3><span class="ko">추론</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The phase in which a trained model is applied to new inputs to produce outputs; both the EU AI Act and Korean Framework Act define AI systems as systems that &#x27;infer&#x27; how to generate outputs.</p>
+    <p class="def def--ko">학습된 모델을 새로운 입력에 적용해 출력을 산출하는 단계. EU 인공지능법·인공지능기본법 모두 AI 시스템을 출력 생성 방식을 &#x27;추론&#x27;하는 시스템으로 정의한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="information integrity 정보 무결성(정보 건전성)">
+  <div class="term__head"><h3>Information integrity</h3><span class="ko">정보 무결성(정보 건전성)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The reliability and trustworthiness of information ecosystems; a generative-AI risk area covering the scaled production of false, misleading, or synthetic content.</p>
+    <p class="def def--ko">정보 생태계의 신뢰성·건전성. 허위·오도·합성 콘텐츠의 대규모 생산을 포괄하는 생성형 AI 리스크 영역.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="informed consent 고지된 동의">
+  <div class="term__head"><h3>Informed consent</h3><span class="ko">고지된 동의</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A subject&#x27;s freely given, specific, unambiguous and voluntary expression of willingness to participate in a particular testing in real-world conditions, after being informed of all aspects relevant to the decision to participate.</p>
+    <p class="def def--ko">실제 조건 시험 참여 결정에 관련된 모든 사항을 고지받은 후, 특정 시험에 참여하겠다는 피험자의 자유롭고 구체적이며 명확하고 자발적인 의사표시.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(59)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="input data 입력데이터">
+  <div class="term__head"><h3>Input data</h3><span class="ko">입력데이터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Data provided to or directly acquired by an AI system on the basis of which the system produces an output.</p>
+    <p class="def def--ko">AI 시스템에 제공되거나 시스템이 직접 취득한 데이터로, 이를 기초로 시스템이 출력을 산출한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(33)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="input validation / sanitization 입력 검증·정제(방어)">
+  <div class="term__head"><h3>Input validation / sanitization</h3><span class="ko">입력 검증·정제(방어)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Defensive screening and normalization of inputs and ingested content to remove malicious payloads, injections, or malformed data before model or tool processing.</p>
+    <p class="def def--ko">모델·도구 처리 이전에 입력과 유입 콘텐츠를 선별·정규화하여 악성 페이로드·주입·비정형 데이터를 제거하는 방어 기법.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="intended purpose 의도된 목적">
+  <div class="term__head"><h3>Intended purpose</h3><span class="ko">의도된 목적</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in instructions, promotional materials, and technical documentation.</p>
+    <p class="def def--ko">지침·판촉 자료·기술문서에 명시된 구체적 이용 맥락·조건을 포함하여, 제공자가 AI 시스템에 대해 의도한 용도.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(12)</a></p>
+  </div>
+</article><h2 class="letter" id="LJ">J</h2><article class="term" data-cat="risk" data-name="jailbreak 탈옥(제일브레이크)">
+  <div class="term__head"><h3>Jailbreak</h3><span class="ko">탈옥(제일브레이크)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A prompt-based attack that circumvents a model&#x27;s safety guardrails and refusal policies so it produces prohibited outputs; a mode of direct prompt injection in OWASP&#x27;s taxonomy.</p>
+    <p class="def def--ko">프롬프트 조작으로 모델의 안전 가드레일과 거부 정책을 우회하여 금지된 출력을 얻는 공격. OWASP 분류상 직접 프롬프트 주입의 한 형태.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025</a></p>
+  </div>
+</article><h2 class="letter" id="LL">L</h2><article class="term" data-cat="gen" data-name="large language model (llm) 대규모 언어모델(llm)">
+  <div class="term__head"><h3>Large language model (LLM)</h3><span class="ko">대규모 언어모델(LLM)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A generative model trained on large text corpora to predict token sequences, capable of producing and understanding natural language and code; the primary object of the OWASP 2025 Top 10 risks.</p>
+    <p class="def def--ko">대규모 텍스트로 토큰 시퀀스를 예측하도록 학습된 생성 모델로, 자연어·코드를 생성·이해한다. OWASP 2025 10대 리스크의 주된 대상.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · 2025 overview</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="least-privilege / permission control 최소권한·권한 통제(방어)">
+  <div class="term__head"><h3>Least-privilege / permission control</h3><span class="ko">최소권한·권한 통제(방어)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A defense that grants an AI agent only the minimum tools, scopes, and permissions needed, limiting the blast radius of manipulated or erroneous actions.</p>
+    <p class="def def--ko">AI 에이전트에 필요한 최소한의 도구·범위·권한만 부여하여 조작되거나 잘못된 행동의 피해 범위를 제한하는 방어 기법.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM06:2025 mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="llm prompt injection (atlas) llm 프롬프트 주입(atlas)">
+  <div class="term__head"><h3>LLM prompt injection (ATLAS)</h3><span class="ko">LLM 프롬프트 주입(ATLAS)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">In MITRE ATLAS, an execution technique in which crafted prompts cause an LLM or LLM-integrated application to execute attacker-intended behavior, including via tool invocation.</p>
+    <p class="def def--ko">MITRE ATLAS에서, 제작된 프롬프트로 LLM 또는 LLM 통합 애플리케이션이 도구 호출을 포함한 공격자 의도 행동을 수행하게 만드는 실행 기법.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · technique: LLM Prompt Injection</a></p>
+  </div>
+</article><h2 class="letter" id="LM">M</h2><article class="term" data-cat="risk" data-name="mechanistic interpretability 기계적 해석가능성">
+  <div class="term__head"><h3>Mechanistic interpretability</h3><span class="ko">기계적 해석가능성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A research approach that reverse-engineers the internal computations of neural networks into human-understandable mechanisms, aiming to detect deception, hidden goals, or unsafe features.</p>
+    <p class="def def--ko">신경망 내부 계산을 인간이 이해할 수 있는 메커니즘으로 역공학하여 기만·은닉 목표·위험 특성을 탐지하려는 연구 접근.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="membership inference attack 멤버십 추론 공격">
+  <div class="term__head"><h3>Membership inference attack</h3><span class="ko">멤버십 추론 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A privacy attack that determines whether a given record was part of a model&#x27;s training set by analyzing the model&#x27;s responses.</p>
+    <p class="def def--ko">모델 응답 분석을 통해 특정 레코드가 학습 데이터에 포함되었는지를 판별하는 프라이버시 공격.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="memorization / training-data regurgitation 암기·학습데이터 재출력">
+  <div class="term__head"><h3>Memorization / training-data regurgitation</h3><span class="ko">암기·학습데이터 재출력</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The tendency of large models to retain and reproduce verbatim fragments of training data, creating privacy leakage and copyright exposure distinct from targeted inversion attacks.</p>
+    <p class="def def--ko">대형 모델이 학습 데이터의 일부를 축어적으로 기억·재생성하는 경향으로, 표적 역산 공격과 구별되는 프라이버시 누출과 저작권 노출을 야기한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="misinformation (llm) 오정보(llm)">
+  <div class="term__head"><h3>Misinformation (LLM)</h3><span class="ko">오정보(LLM)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">False or misleading model output that appears credible, arising from hallucination, bias, or gap-filling, and causing harm when relied upon (OWASP LLM09:2025).</p>
+    <p class="def def--ko">환각·편향·공백 메꾸기에서 비롯되어 신뢰할 만해 보이는 허위·오도 출력으로, 이에 의존할 때 피해를 낳는 리스크(OWASP LLM09:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM09:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="misuse / malicious use 오용·악용">
+  <div class="term__head"><h3>Misuse / malicious use</h3><span class="ko">오용·악용</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Deliberate use of AI capabilities to cause harm, such as fraud, cyberattack support, harassment, or disinformation; addressed as abuse violations in NIST AML and misuse risk in safety frameworks.</p>
+    <p class="def def--ko">사기, 사이버 공격 지원, 괴롭힘, 허위정보 등 위해를 목적으로 한 AI 역량의 고의적 사용. NIST 적대적 ML의 오용 위반, 안전 프레임워크의 오용 리스크로 다뤄진다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (abuse)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="mixture of experts (moe) 전문가 혼합(moe)">
+  <div class="term__head"><h3>Mixture of experts (MoE)</h3><span class="ko">전문가 혼합(MoE)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A model architecture that routes each input to a subset of specialized sub-networks (experts), increasing capacity while limiting per-inference compute.</p>
+    <p class="def def--ko">각 입력을 특화된 하위 네트워크(전문가)의 일부로 라우팅하여, 추론당 연산은 제한하면서 모델 용량을 키우는 아키텍처.</p>
+    <p class="src"><a href="https://www.iso.org/standard/74296.html" target="_blank" rel="noopener noreferrer">ISO/IEC 표준 (22989 용어, 23894 위험관리, 42001 AI경영시스템) · 22989 (concepts)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="model card 모델 카드">
+  <div class="term__head"><h3>Model card</h3><span class="ko">모델 카드</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A standardized documentation artifact that reports a model&#x27;s intended use, training data, evaluation results, limitations, and ethical considerations to support transparency and informed deployment.</p>
+    <p class="def def--ko">모델의 의도된 용도, 학습 데이터, 평가 결과, 한계, 윤리적 고려사항을 표준 양식으로 기록하여 투명성과 정보 기반 배포를 지원하는 문서 산출물.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model collapse 모델 붕괴">
+  <div class="term__head"><h3>Model collapse</h3><span class="ko">모델 붕괴</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Progressive degradation of model quality when models are recursively trained on AI-generated (synthetic) content, eroding diversity and fidelity of future models and the public information base.</p>
+    <p class="def def--ko">AI 생성(합성) 콘텐츠로 모델을 재귀적으로 학습시킬 때 모델 품질이 점진적으로 저하되어, 미래 모델과 공공 정보 기반의 다양성·충실도가 침식되는 현상.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="model context protocol (mcp) 모델 컨텍스트 프로토콜(mcp)">
+  <div class="term__head"><h3>Model Context Protocol (MCP)</h3><span class="ko">모델 컨텍스트 프로토콜(MCP)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An open protocol standardizing how AI applications connect models to external tools, data sources, and context; expands agent capability and correspondingly the tool-integration attack surface.</p>
+    <p class="def def--ko">AI 애플리케이션이 모델을 외부 도구·데이터 소스·컨텍스트에 연결하는 방식을 표준화하는 개방형 프로토콜. 에이전트 역량과 함께 도구 통합 공격 표면도 확장한다.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM06/agentic</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="model distillation 모델 증류">
+  <div class="term__head"><h3>Model distillation</h3><span class="ko">모델 증류</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Training a smaller student model to reproduce the behavior of a larger teacher model, transferring capability at lower cost; can also transfer or strip safety properties.</p>
+    <p class="def def--ko">더 큰 교사 모델의 행동을 재현하도록 작은 학생 모델을 학습시켜 낮은 비용으로 역량을 이전하는 기법. 안전 속성도 함께 이전되거나 제거될 수 있다.</p>
+    <p class="src"><a href="https://www.iso.org/standard/74296.html" target="_blank" rel="noopener noreferrer">ISO/IEC 표준 (22989 용어, 23894 위험관리, 42001 AI경영시스템) · 22989 (concepts)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="model evaluation 모델 평가">
+  <div class="term__head"><h3>Model evaluation</h3><span class="ko">모델 평가</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Systematic testing of a model&#x27;s capabilities, safety properties, and risks (including dangerous-capability and red-team evaluations) to inform release and oversight decisions; required for GPAI models with systemic risk.</p>
+    <p class="def def--ko">출시·감독 결정을 위해 모델의 역량·안전 속성·리스크(위험역량 평가, 레드팀 평가 포함)를 체계적으로 시험하는 것. 시스템적 리스크 GPAI 모델에 요구된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 55</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model extraction (model stealing) 모델 추출(모델 절취)">
+  <div class="term__head"><h3>Model extraction (model stealing)</h3><span class="ko">모델 추출(모델 절취)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An attack that reconstructs a functional copy or key parameters of a proprietary model by systematically querying its API.</p>
+    <p class="def def--ko">API를 체계적으로 질의하여 사유 모델의 기능적 사본이나 핵심 파라미터를 재구성하는 공격.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy: model extraction)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model inversion / training data extraction 모델 역산·학습데이터 추출">
+  <div class="term__head"><h3>Model inversion / training data extraction</h3><span class="ko">모델 역산·학습데이터 추출</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Attacks that recover training inputs or their attributes from a model, including verbatim extraction of memorized text or reconstruction of representative inputs.</p>
+    <p class="def def--ko">모델로부터 학습 입력이나 그 속성을 복원하는 공격. 암기된 텍스트의 축어적 추출, 대표 입력의 재구성 등을 포함한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1 (privacy)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model provenance / ai-bom 모델 출처·ai 자재명세(ai-bom)">
+  <div class="term__head"><h3>Model provenance / AI-BOM</h3><span class="ko">모델 출처·AI 자재명세(AI-BOM)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An inventory of an AI system&#x27;s components—models, datasets, dependencies, and their origins—used to manage supply-chain risk and verify integrity.</p>
+    <p class="def def--ko">모델·데이터셋·의존성과 그 출처 등 AI 시스템 구성요소의 목록으로, 공급망 리스크 관리와 무결성 검증에 사용된다(AI 자재명세서).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM03:2025 mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model tampering 모델 변조">
+  <div class="term__head"><h3>Model tampering</h3><span class="ko">모델 변조</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Unauthorized modification of a model&#x27;s weights, architecture, or configuration after training to implant malicious behavior or degrade safety.</p>
+    <p class="def def--ko">학습 후 모델의 가중치·아키텍처·설정을 무단 변경하여 악성 행동을 심거나 안전성을 저하시키는 행위.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · Manipulate AI Model</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="model theft (weight exfiltration) 모델 절취(가중치 반출)">
+  <div class="term__head"><h3>Model theft (weight exfiltration)</h3><span class="ko">모델 절취(가중치 반출)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Unauthorized copying or exfiltration of a model&#x27;s trained weights, resulting in loss of intellectual property and removal of deployment-side safety controls.</p>
+    <p class="def def--ko">모델의 학습된 가중치를 무단 복제·반출하는 행위로, 지식재산 상실과 배포측 안전 통제 제거를 초래한다.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · Exfiltration</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="model weights / parameters 모델 가중치·파라미터">
+  <div class="term__head"><h3>Model weights / parameters</h3><span class="ko">모델 가중치·파라미터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The numerical values learned during training that define a model&#x27;s behavior; their confidentiality and integrity are core security assets (theft or tampering compromises the system).</p>
+    <p class="def def--ko">학습 과정에서 습득되어 모델 행동을 규정하는 수치값. 그 기밀성과 무결성은 핵심 보안 자산이며 절취·변조 시 시스템이 훼손된다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §1</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="multi-agent system 다중 에이전트 시스템">
+  <div class="term__head"><h3>Multi-agent system</h3><span class="ko">다중 에이전트 시스템</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A system of multiple interacting AI agents whose collective dynamics can produce emergent risks—miscoordination, collusion, cascading failures—beyond any single agent.</p>
+    <p class="def def--ko">복수의 상호작용하는 AI 에이전트로 이루어진 시스템으로, 그 집단 동역학이 개별 에이전트를 넘어선 창발적 리스크(오조정·결탁·연쇄 실패)를 낳을 수 있다.</p>
+    <p class="src"><a href="https://www.iso.org/standard/74296.html" target="_blank" rel="noopener noreferrer">ISO/IEC 표준 (22989 용어, 23894 위험관리, 42001 AI경영시스템) · 22989 (concepts)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="multimodal model 멀티모달 모델">
+  <div class="term__head"><h3>Multimodal model</h3><span class="ko">멀티모달 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A model that processes or generates more than one modality, such as text, images, audio, or video; multimodality widens both capability and the attack surface (e.g., image-borne prompt injection).</p>
+    <p class="def def--ko">텍스트·이미지·오디오·영상 등 복수 양식을 처리·생성하는 모델. 멀티모달리티는 역량과 함께 공격 표면(이미지 매개 프롬프트 주입 등)도 확장한다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (GenAI)</a></p>
+  </div>
+</article><h2 class="letter" id="LN">N</h2><article class="term" data-cat="law" data-name="national ai ethics standards (korea) 국가 인공지능 윤리기준">
+  <div class="term__head"><h3>National AI ethics standards (Korea)</h3><span class="ko">국가 인공지능 윤리기준</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Korea&#x27;s 2020 ethics framework built on three basic principles—respect for human dignity, service to the common good of society, and technical purposiveness—and ten core requirements for realizing trustworthy AI.</p>
+    <p class="def def--ko">인간 존엄성 존중, 사회의 공공선 지향, 기술의 합목적성이라는 3대 기본원칙과 신뢰할 수 있는 AI 구현을 위한 10대 핵심요건으로 구성된 2020년 대한민국 윤리 프레임워크.</p>
+    <p class="src"><a href="https://ai.kisdi.re.kr/aieth/main/contents.do?menuNo=400028" target="_blank" rel="noopener noreferrer">국가 인공지능 윤리기준 (과학기술정보통신부·정보통신정책연구원(KISDI), 2020) · 3대 원칙·10대 요건</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="notified body 통보기관(제3자 인증기관)">
+  <div class="term__head"><h3>Notified body</h3><span class="ko">통보기관(제3자 인증기관)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A conformity assessment body notified in accordance with the EU AI Act and other relevant Union harmonisation legislation, which performs third-party conformity assessment of high-risk AI systems.</p>
+    <p class="def def--ko">EU 인공지능법 및 관련 EU 조화법에 따라 통보된 적합성 평가기관으로, 고위험 AI 시스템에 대한 제3자 적합성 평가를 수행한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(22)</a></p>
+  </div>
+</article><h2 class="letter" id="LO">O</h2><article class="term" data-cat="gen" data-name="open-weight model 오픈웨이트 모델">
+  <div class="term__head"><h3>Open-weight model</h3><span class="ko">오픈웨이트 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A model whose trained parameters are publicly released, permitting local deployment and fine-tuning; openness aids scrutiny but removes deployment-side safety controls (e.g., harmful fine-tuning becomes feasible).</p>
+    <p class="def def--ko">학습된 파라미터가 공개되어 로컬 배포·미세조정이 가능한 모델. 검증 가능성을 높이는 반면 배포측 안전 통제가 사라져 유해 미세조정 등이 가능해진다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2.3</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="operator 운영자(사업주체)">
+  <div class="term__head"><h3>Operator</h3><span class="ko">운영자(사업주체)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">In the EU AI Act, an umbrella term covering a provider, product manufacturer, deployer, authorised representative, importer or distributor.</p>
+    <p class="def def--ko">EU 인공지능법에서 제공자, 제품 제조자, 배포자, 권한대리인, 수입자, 유통자를 포괄하는 상위 용어.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(8)</a></p>
+  </div>
+</article><h2 class="letter" id="LP">P</h2><article class="term" data-cat="gen" data-name="performance of an ai system ai 시스템의 성능">
+  <div class="term__head"><h3>Performance of an AI system</h3><span class="ko">AI 시스템의 성능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The ability of an AI system to achieve its intended purpose.</p>
+    <p class="def def--ko">AI 시스템이 의도된 목적을 달성하는 능력.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(18)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="personal data 개인정보">
+  <div class="term__head"><h3>Personal data</h3><span class="ko">개인정보</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any information relating to an identified or identifiable natural person, as defined in the GDPR and referenced by the EU AI Act.</p>
+    <p class="def def--ko">식별되었거나 식별 가능한 자연인에 관한 모든 정보로, GDPR에 정의되고 EU 인공지능법이 이를 준용한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(50)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="physical ai 피지컬 인공지능">
+  <div class="term__head"><h3>Physical AI</h3><span class="ko">피지컬 인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI systems that perceive, reason about, and act upon the physical world through sensors and actuators, where failures can cause direct physical harm; one of the three L1 domains of this taxonomy.</p>
+    <p class="def def--ko">센서와 액추에이터를 통해 물리 세계를 지각·추론·작동하는 AI 시스템으로, 실패 시 직접적 물리 피해를 초래할 수 있다. 본 택소노미 L1 3대 도메인의 하나.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="placing on the market 시장 출시">
+  <div class="term__head"><h3>Placing on the market</h3><span class="ko">시장 출시</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The first making available of an AI system or a general-purpose AI model on the Union market.</p>
+    <p class="def def--ko">AI 시스템 또는 범용 AI 모델을 역내 시장에 처음 이용 가능하게 하는 행위.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(9)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="post-market monitoring 시판 후 모니터링">
+  <div class="term__head"><h3>Post-market monitoring</h3><span class="ko">시판 후 모니터링</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">All activities carried out by providers to collect and review experience from the use of AI systems they place on the market, to identify any need for corrective or preventive action.</p>
+    <p class="def def--ko">제공자가 시장에 출시한 AI 시스템의 사용 경험을 수집·검토하여 시정·예방 조치의 필요성을 식별하기 위해 수행하는 모든 활동.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(25), Art. 72</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="post-market monitoring plan 시판 후 모니터링 계획">
+  <div class="term__head"><h3>Post-market monitoring plan</h3><span class="ko">시판 후 모니터링 계획</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A documented plan by which providers systematically collect and analyze data on a high-risk AI system&#x27;s performance after deployment to detect emerging risks (EU AI Act Article 72).</p>
+    <p class="def def--ko">제공자가 배포 후 고위험 AI 시스템의 성능 데이터를 체계적으로 수집·분석하여 신규 위험을 탐지하기 위한 문서화된 계획(EU 인공지능법 제72조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 72</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="power-seeking behavior 권력 추구 행동">
+  <div class="term__head"><h3>Power-seeking behavior</h3><span class="ko">권력 추구 행동</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A hypothesized failure mode in which an AI system pursues acquisition of resources, influence, or self-preservation as instrumental subgoals, resisting oversight.</p>
+    <p class="def def--ko">AI 시스템이 자원·영향력 확보나 자기보존을 도구적 하위목표로 추구하며 감독에 저항하는 것으로 상정되는 실패 양상.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="procedural fairness 절차적 공정성">
+  <div class="term__head"><h3>Procedural fairness</h3><span class="ko">절차적 공정성</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Fairness concerned with the transparency, consistency, and contestability of the process by which an AI decision is reached, independent of the outcome distribution.</p>
+    <p class="def def--ko">결과 분포와 별개로, AI 결정에 이르는 과정의 투명성·일관성·이의제기 가능성에 관한 공정성.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.7 (SP 1270)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="prohibited ai practice 금지된 ai 관행">
+  <div class="term__head"><h3>Prohibited AI practice</h3><span class="ko">금지된 AI 관행</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI uses banned under EU AI Act Article 5 as posing unacceptable risk, such as harmful manipulation, exploitation of vulnerabilities, social scoring, and certain biometric practices.</p>
+    <p class="def def--ko">허용 불가능한 리스크를 초래한다고 보아 EU 인공지능법 제5조가 금지하는 AI 이용. 유해한 조작, 취약성 악용, 사회적 점수화, 특정 생체인식 관행 등이 포함된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 5</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="prohibited ai practices (unacceptable risk) 금지 ai 관행(허용불가 위험)">
+  <div class="term__head"><h3>Prohibited AI practices (unacceptable risk)</h3><span class="ko">금지 AI 관행(허용불가 위험)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI practices banned outright under EU AI Act Article 5 as posing unacceptable risk, including harmful manipulation, exploitation of vulnerabilities, social scoring, and untargeted facial-image scraping.</p>
+    <p class="def def--ko">허용 불가능한 위험을 초래한다고 보아 EU 인공지능법 제5조가 전면 금지하는 관행. 유해 조작, 취약성 악용, 사회적 점수화, 무차별 안면정보 수집 등이 포함된다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 5</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="prompt 프롬프트">
+  <div class="term__head"><h3>Prompt</h3><span class="ko">프롬프트</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The natural-language or structured input provided to a generative model to elicit an output, including system prompts set by developers and user prompts; the primary control and attack surface of LLM applications.</p>
+    <p class="def def--ko">생성 모델에 출력을 유도하기 위해 제공되는 자연어·구조화 입력으로, 개발자의 시스템 프롬프트와 이용자 프롬프트를 포함한다. LLM 응용의 일차적 제어·공격 표면.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="prompt injection 프롬프트 주입">
+  <div class="term__head"><h3>Prompt injection</h3><span class="ko">프롬프트 주입</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A vulnerability in which user-supplied or externally ingested prompts alter the LLM&#x27;s behavior or output in unintended ways, bypassing instructions or safety controls; ranked LLM01 in OWASP 2025.</p>
+    <p class="def def--ko">이용자 제공 또는 외부 유입 프롬프트가 의도되지 않은 방식으로 LLM의 행동·출력을 변경하여 지시·안전 통제를 우회하게 하는 취약점. OWASP 2025 1위 리스크(LLM01).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="prompt-injection detection 프롬프트 주입 탐지">
+  <div class="term__head"><h3>Prompt-injection detection</h3><span class="ko">프롬프트 주입 탐지</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Detection controls that screen incoming prompts and ingested content for injection patterns, instruction conflicts, or anomalous directives before they reach the model or its tools.</p>
+    <p class="def def--ko">모델·도구에 도달하기 전에 입력 프롬프트와 유입 콘텐츠에서 주입 패턴, 지시 충돌, 이상 지시를 선별하는 탐지 통제.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM01:2025 mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="provider 제공자">
+  <div class="term__head"><h3>Provider</h3><span class="ko">제공자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A natural or legal person, public authority, agency or other body that develops an AI system or general-purpose AI model, or has one developed, and places it on the market or puts it into service under its own name or trademark, whether for payment or free of charge.</p>
+    <p class="def def--ko">AI 시스템 또는 범용 AI 모델을 개발하거나 개발하게 하여, 유상·무상을 불문하고 자신의 이름·상표로 시장에 출시하거나 서비스를 개시하는 자연인·법인·공공기관 등.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(3)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="putting into service 서비스 개시">
+  <div class="term__head"><h3>Putting into service</h3><span class="ko">서비스 개시</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The supply of an AI system for first use directly to the deployer or for own use in the Union for its intended purpose.</p>
+    <p class="def def--ko">AI 시스템을 의도된 목적을 위해 배포자에게 직접 최초 이용하도록 공급하거나 역내에서 자체 이용하도록 하는 행위.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(11)</a></p>
+  </div>
+</article><h2 class="letter" id="LR">R</h2><article class="term" data-cat="risk" data-name="rag poisoning rag 포이즈닝">
+  <div class="term__head"><h3>RAG poisoning</h3><span class="ko">RAG 포이즈닝</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Poisoning of retrieval corpora or vector stores so that malicious content is retrieved into the model&#x27;s context, steering generation or delivering indirect prompt injection.</p>
+    <p class="def def--ko">검색 코퍼스나 벡터 저장소를 오염시켜 악성 콘텐츠가 모델 컨텍스트로 검색되게 함으로써 생성을 조종하거나 간접 프롬프트 주입을 전달하는 공격.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · technique: RAG Poisoning</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="reasonably foreseeable misuse 합리적으로 예견 가능한 오용">
+  <div class="term__head"><h3>Reasonably foreseeable misuse</h3><span class="ko">합리적으로 예견 가능한 오용</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems, including other AI systems.</p>
+    <p class="def def--ko">의도된 목적과 다르지만 합리적으로 예견 가능한 인간 행동 또는 다른 시스템(다른 AI 시스템 포함)과의 상호작용으로부터 발생할 수 있는 방식의 AI 시스템 사용.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(13)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="reasoning model (inference-time scaling) 추론 모델(추론시간 스케일링)">
+  <div class="term__head"><h3>Reasoning model (inference-time scaling)</h3><span class="ko">추론 모델(추론시간 스케일링)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A model class that improves performance on complex tasks by expending additional computation at inference time to generate and evaluate intermediate reasoning before answering.</p>
+    <p class="def def--ko">답을 내기 전 중간 추론을 생성·평가하는 데 추론 시점의 연산을 추가로 투입하여 복잡 과업 성능을 높이는 모델 유형.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="recall of an ai system ai 시스템 회수(리콜)">
+  <div class="term__head"><h3>Recall of an AI system</h3><span class="ko">AI 시스템 회수(리콜)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any measure aiming to achieve the return to the provider, or the taking out of service or disabling, of an AI system already made available to deployers.</p>
+    <p class="def def--ko">이미 배포자에게 제공된 AI 시스템을 제공자에게 반환시키거나 서비스 중단·비활성화하려는 모든 조치.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(16)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="record-keeping / logging 기록 보관(로깅)">
+  <div class="term__head"><h3>Record-keeping / logging</h3><span class="ko">기록 보관(로깅)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The obligation that high-risk AI systems technically allow automatic recording of events (logs) over their lifetime to ensure traceability of functioning (EU AI Act Article 12).</p>
+    <p class="def def--ko">고위험 AI 시스템이 작동의 추적가능성 확보를 위해 수명주기 동안 이벤트(로그)를 자동 기록할 수 있도록 기술적으로 보장해야 한다는 의무(EU 인공지능법 제12조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 12</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="redress / remedy 구제 수단">
+  <div class="term__head"><h3>Redress / remedy</h3><span class="ko">구제 수단</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Procedural means by which affected persons can contest, appeal, or obtain remedy for AI-based decisions, including the right to lodge complaints (EU AI Act Article 85) and to explanation (Article 86).</p>
+    <p class="def def--ko">영향받는 자가 AI 기반 결정에 이의를 제기·항고하거나 구제를 받을 수 있는 절차적 수단. 진정 제기권(EU 인공지능법 제85조)과 설명요구권(제86조)을 포함한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 85-86</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="reinforcement learning from human feedback (rlhf) 인간 피드백 강화학습(rlhf)">
+  <div class="term__head"><h3>Reinforcement learning from human feedback (RLHF)</h3><span class="ko">인간 피드백 강화학습(RLHF)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A training method in which human preference judgments are used to train a reward model that then steers the policy model&#x27;s outputs; widely used for alignment and refusal behavior.</p>
+    <p class="def def--ko">인간 선호 판단으로 보상 모델을 학습시키고 이를 통해 정책 모델의 출력을 조정하는 학습 기법. 정렬과 거부 행동 구현에 널리 쓰인다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="retrieval-augmented generation (rag) 검색증강생성(rag)">
+  <div class="term__head"><h3>Retrieval-augmented generation (RAG)</h3><span class="ko">검색증강생성(RAG)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An architecture that retrieves external documents (often via vector embeddings) and injects them into the model&#x27;s context to ground generation; introduces retrieval-side risks such as RAG poisoning and embedding weaknesses.</p>
+    <p class="def def--ko">외부 문서를 (주로 벡터 임베딩으로) 검색해 모델 컨텍스트에 주입, 생성을 근거화하는 아키텍처. RAG 포이즈닝, 임베딩 취약점 등 검색측 리스크를 수반한다.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM08:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="reward hacking 보상 해킹">
+  <div class="term__head"><h3>Reward hacking</h3><span class="ko">보상 해킹</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An agent&#x27;s exploitation of an imperfectly specified objective, achieving high measured reward through unintended strategies that violate designer intent.</p>
+    <p class="def def--ko">불완전하게 명세된 목적함수를 이용해 설계자 의도에 반하는 비의도적 전략으로 높은 보상 점수를 달성하는 에이전트 행동.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="right to explanation 설명을 요구할 권리">
+  <div class="term__head"><h3>Right to explanation</h3><span class="ko">설명을 요구할 권리</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The right of an affected person to obtain a clear and meaningful explanation of the main criteria and logic used to reach an AI-based decision; recognized in EU AI Act Article 86 and Korean Framework Act Article 3.</p>
+    <p class="def def--ko">영향받는 자가 AI 기반 결정에 사용된 주요 기준과 원리에 대해 명확하고 의미 있는 설명을 받을 권리. EU 인공지능법 제86조와 인공지능기본법 제3조가 인정한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 86; 인공지능기본법 제3조</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="risk 리스크(위험)">
+  <div class="term__head"><h3>Risk</h3><span class="ko">리스크(위험)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">The combination of the probability of an occurrence of harm and the severity of that harm. (EU AI Act) NIST similarly defines risk as the composite measure of an event&#x27;s probability of occurring and the magnitude or degree of its consequences.</p>
+    <p class="def def--ko">위해 발생 확률과 그 위해의 심각도의 결합(EU 인공지능법). NIST도 사건 발생 확률과 결과의 크기·정도의 복합 척도로 정의한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(2); NIST AI 100-1 §1</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="risk management system 위험관리체계">
+  <div class="term__head"><h3>Risk management system</h3><span class="ko">위험관리체계</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A continuous, iterative process run across the life cycle of a high-risk AI system to identify, estimate, evaluate, and mitigate risks (EU AI Act Article 9); the NIST AI RMF operationalizes this through Govern, Map, Measure, and Manage functions.</p>
+    <p class="def def--ko">고위험 AI 시스템의 수명주기 전반에서 리스크를 식별·추정·평가·완화하기 위해 지속·반복 수행하는 과정(EU 인공지능법 제9조). NIST AI RMF는 이를 Govern·Map·Measure·Manage 기능으로 구현한다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 9; NIST AI 100-1 §5</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="risk-based approach 위험 기반 접근">
+  <div class="term__head"><h3>Risk-based approach</h3><span class="ko">위험 기반 접근</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A regulatory design that scales obligations to the level of risk an AI system poses—unacceptable (prohibited), high, limited, and minimal—characteristic of the EU AI Act.</p>
+    <p class="def def--ko">AI 시스템이 초래하는 위험 수준(허용불가·고위험·제한적·최소)에 따라 의무를 차등 부과하는 규제 설계. EU 인공지능법의 특징.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 5-6, 50</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="robot foundation model 로봇 파운데이션 모델">
+  <div class="term__head"><h3>Robot foundation model</h3><span class="ko">로봇 파운데이션 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A large model pre-trained on broad robotics and multimodal data that can be adapted to many embodied tasks and platforms, extending the foundation-model paradigm to physical action.</p>
+    <p class="def def--ko">광범위한 로보틱스·멀티모달 데이터로 사전학습되어 다양한 체화 과업·플랫폼에 적응 가능한 대형 모델. 파운데이션 모델 패러다임을 물리 행동으로 확장한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="robustness 강건성">
+  <div class="term__head"><h3>Robustness</h3><span class="ko">강건성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The ability of a system to maintain its level of performance under a variety of circumstances, including unexpected inputs and adverse conditions; a component of NIST&#x27;s &#x27;safe, secure and resilient&#x27; cluster.</p>
+    <p class="def def--ko">예기치 못한 입력과 불리한 조건을 포함한 다양한 상황에서 성능 수준을 유지하는 능력. NIST의 &#x27;안전·보안·회복탄력&#x27; 특성군의 구성 요소.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.1, §3.3</a></p>
+  </div>
+</article><h2 class="letter" id="LS">S</h2><article class="term" data-cat="gen" data-name="safety (ai safety) 안전성">
+  <div class="term__head"><h3>Safety (AI safety)</h3><span class="ko">안전성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The property that an AI system does not, under defined conditions, lead to a state endangering human life, health, property, or the environment; a trustworthiness characteristic in the NIST AI RMF.</p>
+    <p class="def def--ko">정의된 조건에서 AI 시스템이 인간의 생명·건강·재산·환경을 위태롭게 하는 상태를 초래하지 않는 성질. NIST AI RMF의 신뢰성 특성.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.2</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="safety alignment 안전 정렬">
+  <div class="term__head"><h3>Safety alignment</h3><span class="ko">안전 정렬</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Alignment techniques specifically aimed at preventing harmful outputs and behaviors—refusals, harmlessness training, and guardrail tuning—as distinct from general capability or value alignment.</p>
+    <p class="def def--ko">유해 출력·행동을 방지하는 데 특화된 정렬 기법(거부, 무해성 학습, 가드레일 조정)으로, 일반 역량 정렬이나 가치 정렬과 구별된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="safety component 안전 구성요소">
+  <div class="term__head"><h3>Safety component</h3><span class="ko">안전 구성요소</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A component of a product or AI system that fulfils a safety function, or whose failure or malfunctioning endangers the health and safety of persons or property.</p>
+    <p class="def def--ko">제품이나 AI 시스템에서 안전 기능을 수행하는 구성요소, 또는 그 고장·오작동이 사람의 건강·안전이나 재산을 위태롭게 하는 구성요소.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(14)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="safety filter (content moderation) 안전 필터(콘텐츠 조정)">
+  <div class="term__head"><h3>Safety filter (content moderation)</h3><span class="ko">안전 필터(콘텐츠 조정)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Classifiers and rule systems that screen model inputs and outputs for prohibited or harmful content categories, forming the outer layer of deployment-time defense.</p>
+    <p class="def def--ko">금지·유해 콘텐츠 범주에 대해 모델 입출력을 선별하는 분류기·규칙 체계. 배포 시점 방어의 최외곽 계층을 이룬다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (mitigations)</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="sandboxing 샌드박싱(방어)">
+  <div class="term__head"><h3>Sandboxing</h3><span class="ko">샌드박싱(방어)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Isolating an AI system&#x27;s execution, tool calls, or generated code in a constrained environment so that harmful actions cannot affect production systems or data.</p>
+    <p class="def def--ko">AI 시스템의 실행·도구 호출·생성 코드를 제약된 환경에 격리하여 유해 행동이 운영 시스템·데이터에 영향을 주지 못하게 하는 방어 기법.</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · mitigations</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="scalable oversight 확장 가능한 감독">
+  <div class="term__head"><h3>Scalable oversight</h3><span class="ko">확장 가능한 감독</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Techniques for supervising and evaluating AI systems whose outputs become too complex or numerous for direct human review, e.g., using AI assistance to help humans judge AI.</p>
+    <p class="def def--ko">출력이 너무 복잡하거나 방대해 인간이 직접 검토하기 어려운 AI 시스템을 감독·평가하기 위한 기법. 예를 들어 AI의 도움으로 인간이 AI를 판정한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="sensitive information disclosure 민감정보 노출">
+  <div class="term__head"><h3>Sensitive information disclosure</h3><span class="ko">민감정보 노출</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The risk that an LLM reveals personal data, credentials, or proprietary information contained in its training data, context, or connected systems (OWASP LLM02:2025).</p>
+    <p class="def def--ko">LLM이 학습 데이터, 컨텍스트, 연결 시스템에 담긴 개인정보·자격증명·영업정보를 드러내는 리스크(OWASP LLM02:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM02:2025</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="sensor 센서">
+  <div class="term__head"><h3>Sensor</h3><span class="ko">센서</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A device that captures physical-world signals (vision, lidar, audio, position) as input to an AI system; sensor error or spoofing propagates into unsafe downstream actions.</p>
+    <p class="def def--ko">시각·라이다·음향·위치 등 물리 세계 신호를 포착하여 AI 시스템의 입력으로 제공하는 장치. 센서 오류나 스푸핑은 하류의 불안전 행동으로 전파된다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="sensor spoofing 센서 스푸핑">
+  <div class="term__head"><h3>Sensor spoofing</h3><span class="ko">센서 스푸핑</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">An attack that feeds falsified signals to a physical AI system&#x27;s sensors (e.g., GPS spoofing, adversarial road signs) to induce unsafe perception and action.</p>
+    <p class="def def--ko">물리 AI 시스템의 센서에 위조 신호(GPS 스푸핑, 적대적 표지판 등)를 주입하여 잘못된 지각과 불안전 행동을 유발하는 공격.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · physical attacks</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="serious incident 중대 사고(중대한 인시던트)">
+  <div class="term__head"><h3>Serious incident</h3><span class="ko">중대 사고(중대한 인시던트)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">An incident or malfunctioning of an AI system that directly or indirectly leads to the death of a person or serious harm to health; serious and irreversible disruption of critical infrastructure; infringement of fundamental-rights obligations; or serious harm to property or the environment.</p>
+    <p class="def def--ko">사람의 사망 또는 건강에 대한 중대한 위해, 핵심 인프라의 중대하고 비가역적인 교란, 기본권 보호 의무 위반, 재산·환경에 대한 중대한 피해를 직간접적으로 초래하는 AI 시스템의 사고 또는 오작동.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(49)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="sim-to-real gap 시뮬레이션-실제 격차(sim-to-real)">
+  <div class="term__head"><h3>Sim-to-real gap</h3><span class="ko">시뮬레이션-실제 격차(Sim-to-real)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The performance drop when a model trained in simulation is deployed in the real world due to unmodeled physical conditions; a principal source of accidental harm in embodied AI.</p>
+    <p class="def def--ko">시뮬레이션에서 학습한 모델이 모델링되지 않은 물리 조건 때문에 실제 배포 시 성능이 저하되는 현상. 체화 AI 우발적 피해의 주요 원인.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="substantial modification 실질적 변경">
+  <div class="term__head"><h3>Substantial modification</h3><span class="ko">실질적 변경</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A change to an AI system after market placement or service that was not foreseen in the initial conformity assessment and that affects compliance with high-risk requirements or modifies the intended purpose.</p>
+    <p class="def def--ko">시장 출시·서비스 개시 후 AI 시스템에 가해진, 최초 적합성 평가에서 예견되지 않았고 고위험 요구사항 준수에 영향을 주거나 의도된 목적을 변경하는 변경.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(23)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="superintelligence 초지능">
+  <div class="term__head"><h3>Superintelligence</h3><span class="ko">초지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A hypothesized AI that greatly surpasses the best human performance across virtually all cognitive domains; a reference point in catastrophic and loss-of-control risk discussions.</p>
+    <p class="def def--ko">사실상 모든 인지 영역에서 최고 수준의 인간을 크게 능가하는 것으로 상정되는 AI. 파국적·통제 상실 리스크 논의의 준거 개념.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="supply chain attack (ai) ai 공급망 공격">
+  <div class="term__head"><h3>Supply chain attack (AI)</h3><span class="ko">AI 공급망 공격</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Compromise of third-party components in the AI life cycle, including pre-trained models, datasets, adapters, and packages, so downstream systems inherit tampered or vulnerable artifacts (OWASP LLM03:2025; ATLAS AI Supply Chain Compromise).</p>
+    <p class="def def--ko">사전학습 모델, 데이터셋, 어댑터, 패키지 등 AI 수명주기의 제3자 구성요소를 침해하여 하류 시스템이 변조·취약 산출물을 상속하게 하는 공격(OWASP LLM03:2025, ATLAS 기법).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM03:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="sycophancy 아첨(시코펀시)">
+  <div class="term__head"><h3>Sycophancy</h3><span class="ko">아첨(시코펀시)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The tendency of a model to tell users what they want to hear, agreeing with stated views or flattering them at the expense of accuracy; a manipulation and reliability risk.</p>
+    <p class="def def--ko">모델이 정확성을 희생하면서 이용자가 듣고 싶어 하는 말을 하거나 그 견해에 동조·아부하는 경향. 조작·신뢰성 리스크.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="synthetic data 합성 데이터">
+  <div class="term__head"><h3>Synthetic data</h3><span class="ko">합성 데이터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Artificially generated data used to train or evaluate models when real data is scarce or sensitive; quality gaps can degrade generalization and recursive use risks model collapse.</p>
+    <p class="def def--ko">실데이터가 부족하거나 민감할 때 모델 학습·평가에 쓰는 인공 생성 데이터. 품질 격차는 일반화를 저해하고 재귀적 사용은 모델 붕괴를 초래할 수 있다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="system prompt leakage 시스템 프롬프트 유출">
+  <div class="term__head"><h3>System prompt leakage</h3><span class="ko">시스템 프롬프트 유출</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The risk that hidden system prompts, and any secrets improperly stored in them, are extracted from an LLM application, exposing internal logic and enabling further attacks (OWASP LLM07:2025).</p>
+    <p class="def def--ko">숨겨진 시스템 프롬프트와 그 안에 부적절하게 저장된 비밀이 추출되어 내부 로직이 노출되고 후속 공격이 가능해지는 리스크(OWASP LLM07:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM07:2025</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="systemic risk (gpai) 시스템적 리스크(범용 ai)">
+  <div class="term__head"><h3>Systemic risk (GPAI)</h3><span class="ko">시스템적 리스크(범용 AI)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">A risk that is specific to the high-impact capabilities of general-purpose AI models, having a significant impact on the Union market due to their reach, or due to actual or reasonably foreseeable negative effects on public health, safety, public security, fundamental rights, or the society as a whole, that can be propagated at scale across the value chain.</p>
+    <p class="def def--ko">범용 AI 모델의 고영향 역량에 특유한 리스크로서, 그 도달 범위 또는 공중보건·안전·공공안보·기본권·사회 전반에 대한 실제적·합리적으로 예견 가능한 부정적 효과로 인해 시장에 중대한 영향을 미치며 가치사슬 전반에 대규모로 전파될 수 있는 리스크.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(65)</a></p>
+  </div>
+</article><h2 class="letter" id="LT">T</h2><article class="term" data-cat="law" data-name="technical documentation 기술문서">
+  <div class="term__head"><h3>Technical documentation</h3><span class="ko">기술문서</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The documentation that providers of high-risk AI systems must draw up before market placement, demonstrating compliance and enabling authorities to assess conformity (EU AI Act Article 11 and Annex IV).</p>
+    <p class="def def--ko">고위험 AI 시스템 제공자가 시장 출시 전 작성하여 적합성 입증과 당국의 평가를 가능하게 해야 하는 문서(EU 인공지능법 제11조 및 부속서 IV).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 11, Annex IV</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="testing data 시험데이터">
+  <div class="term__head"><h3>Testing data</h3><span class="ko">시험데이터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Data used for providing an independent evaluation of the AI system in order to confirm the expected performance of that system before its placing on the market or putting into service.</p>
+    <p class="def def--ko">시장 출시 또는 서비스 개시 전 시스템의 기대 성능을 확인하기 위하여 독립적 평가에 사용되는 데이터.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(32)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="testing in real-world conditions 실제 조건 시험">
+  <div class="term__head"><h3>Testing in real-world conditions</h3><span class="ko">실제 조건 시험</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Temporary testing of an AI system for its intended purpose in real-world conditions outside a laboratory, to gather reliable data and assess conformity, without qualifying as placing on the market or putting into service (subject to Articles 57 or 60).</p>
+    <p class="def def--ko">신뢰할 수 있는 데이터 확보와 적합성 평가를 위해, 실험실 밖 실제 조건에서 의도된 목적으로 AI 시스템을 임시로 시험하는 것. 제57조·제60조 조건 충족 시 시장 출시·서비스 개시로 보지 않는다.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(57)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="tool use / function calling 도구 사용·함수 호출">
+  <div class="term__head"><h3>Tool use / function calling</h3><span class="ko">도구 사용·함수 호출</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The capability of an AI model to invoke external tools, APIs, or functions to obtain information or perform actions; the mechanism that turns a model into an agent and expands its action surface.</p>
+    <p class="def def--ko">AI 모델이 정보 획득이나 행동 수행을 위해 외부 도구·API·함수를 호출하는 능력. 모델을 에이전트로 만들고 행동 표면을 확장하는 기제.</p>
+    <p class="src"><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATLAS (AI 시스템 적대적 위협 지형) · AI Agent Tool Invocation</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="toxicity 유해 발화(독성)">
+  <div class="term__head"><h3>Toxicity</h3><span class="ko">유해 발화(독성)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Model output that is rude, degrading, hateful, or otherwise harmful to individuals or groups; measured by toxicity benchmarks and mitigated by safety filters and alignment.</p>
+    <p class="def def--ko">무례·비하·혐오 등 개인·집단에 유해한 모델 출력. 독성 벤치마크로 측정되며 안전 필터와 정렬로 완화한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="traceability 추적가능성">
+  <div class="term__head"><h3>Traceability</h3><span class="ko">추적가능성</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The capacity to reconstruct how an AI system produced a given output, supported by logging, documentation, and provenance; a precondition of accountability and auditing.</p>
+    <p class="def def--ko">로깅·문서화·출처증명을 바탕으로 AI 시스템이 특정 출력을 산출한 경위를 재구성할 수 있는 능력. 책임성과 감사의 전제.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.4</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="training data 학습데이터">
+  <div class="term__head"><h3>Training data</h3><span class="ko">학습데이터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Data used for training an AI system through fitting its learnable parameters.</p>
+    <p class="def def--ko">학습 가능한 파라미터의 적합을 통해 AI 시스템을 학습시키는 데 사용되는 데이터.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(29)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="training data (korean framework act) 학습용데이터 (인공지능기본법)">
+  <div class="term__head"><h3>Training data (Korean Framework Act)</h3><span class="ko">학습용데이터 (인공지능기본법)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">Data used for the development and utilization of artificial intelligence. (unofficial translation)</p>
+    <p class="def def--ko">인공지능의 개발ㆍ활용 등에 사용되는 데이터.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제12호</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="transparency 투명성">
+  <div class="term__head"><h3>Transparency</h3><span class="ko">투명성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The extent to which information about an AI system and its outputs is available to individuals interacting with it, including awareness that they are interacting with AI; a NIST trustworthiness characteristic and an obligation under EU AI Act Article 50 and Korean Framework Act Article 31.</p>
+    <p class="def def--ko">상호작용하는 개인이 AI 시스템과 그 출력에 관한 정보를 얻을 수 있는 정도(AI와 상호작용 중임의 인지 포함). NIST 신뢰성 특성이자 EU 인공지능법 제50조, 인공지능기본법 제31조상 의무.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.4</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="transparency obligation (disclosure) 투명성 의무(고지)">
+  <div class="term__head"><h3>Transparency obligation (disclosure)</h3><span class="ko">투명성 의무(고지)</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The duty that providers and deployers disclose AI interaction and AI-generated content in specified cases, e.g., informing users they are interacting with an AI system or labelling synthetic media (EU AI Act Article 50).</p>
+    <p class="def def--ko">특정 경우 제공자·배포자가 AI 상호작용과 AI 생성 콘텐츠를 고지해야 하는 의무. 예를 들어 이용자에게 AI 시스템과 상호작용 중임을 알리거나 합성 미디어를 표시하는 것(EU 인공지능법 제50조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 50</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="trustworthy ai 신뢰할 수 있는 인공지능">
+  <div class="term__head"><h3>Trustworthy AI</h3><span class="ko">신뢰할 수 있는 인공지능</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">AI whose characteristics include being valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; and fair with harmful bias managed (NIST AI RMF trustworthiness characteristics).</p>
+    <p class="def def--ko">타당성·신뢰도, 안전성, 보안·회복탄력성, 책임성·투명성, 설명·해석가능성, 프라이버시 보호, 유해 편향이 관리된 공정성을 특성으로 갖는 AI(NIST AI RMF 신뢰성 특성).</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3</a></p>
+  </div>
+</article><h2 class="letter" id="LU">U</h2><article class="term" data-cat="risk" data-name="unbounded consumption 무제한 소비">
+  <div class="term__head"><h3>Unbounded consumption</h3><span class="ko">무제한 소비</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The risk that an LLM application permits excessive and uncontrolled inference, enabling denial-of-service, economic (denial-of-wallet) damage, or model-extraction reconnaissance (OWASP LLM10:2025).</p>
+    <p class="def def--ko">LLM 애플리케이션이 과도하고 통제되지 않는 추론을 허용하여 서비스 거부, 경제적 피해(지갑 고갈), 모델 추출 정찰을 가능하게 하는 리스크(OWASP LLM10:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM10:2025</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="user (korean framework act) 이용자">
+  <div class="term__head"><h3>User (Korean Framework Act)</h3><span class="ko">이용자</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ko">원문 KO</span></div>
+  <div class="term__body">
+    <p class="def def--en">A person who is provided with an AI product or AI service. (unofficial translation)</p>
+    <p class="def def--ko">인공지능제품 또는 인공지능서비스를 제공받는 자.</p>
+    <p class="src"><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer">인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21) · 제2조 제8호</a></p>
+  </div>
+</article><h2 class="letter" id="LV">V</h2><article class="term" data-cat="gen" data-name="validation data 검증데이터">
+  <div class="term__head"><h3>Validation data</h3><span class="ko">검증데이터</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process in order, inter alia, to prevent underfitting or overfitting.</p>
+    <p class="def def--ko">학습된 AI 시스템을 평가하고, 과소적합·과대적합 방지 등을 위해 비학습 파라미터와 학습 과정을 조정하는 데 사용되는 데이터.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(30)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="validity 타당성">
+  <div class="term__head"><h3>Validity</h3><span class="ko">타당성</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Confirmation, through objective evidence, that requirements for a specific intended use have been fulfilled; &#x27;valid and reliable&#x27; is the first NIST trustworthiness characteristic.</p>
+    <p class="def def--ko">특정 의도된 용도에 대한 요구사항 충족이 객관적 증거로 확인되는 것. &#x27;타당하고 신뢰할 수 있음&#x27;은 NIST의 첫 번째 신뢰성 특성이다.</p>
+    <p class="src"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer">NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1) · §3.1</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="value alignment 가치 정렬">
+  <div class="term__head"><h3>Value alignment</h3><span class="ko">가치 정렬</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The problem and practice of making an AI system&#x27;s goals and behavior consistent with human values and intentions, especially where values are plural, contested, or context-dependent.</p>
+    <p class="def def--ko">AI 시스템의 목표와 행동을 인간의 가치·의도에 부합시키는 문제이자 실천으로, 특히 가치가 복수적·논쟁적·맥락 의존적일 때 중요하다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="value chain (ai value chain) ai 가치사슬">
+  <div class="term__head"><h3>Value chain (AI value chain)</h3><span class="ko">AI 가치사슬</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">The sequence of actors and components from model development through integration to deployment; the EU AI Act allocates responsibilities along this chain (Article 25).</p>
+    <p class="def def--ko">모델 개발부터 통합·배포에 이르는 행위자와 구성요소의 연쇄. EU 인공지능법은 이 사슬을 따라 책임을 배분한다(제25조).</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 25</a></p>
+  </div>
+</article><article class="term" data-cat="risk" data-name="vector and embedding weaknesses 벡터·임베딩 취약점">
+  <div class="term__head"><h3>Vector and embedding weaknesses</h3><span class="ko">벡터·임베딩 취약점</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Weaknesses in how vectors and embeddings are generated, stored, or retrieved in RAG systems, exploitable to inject harmful content, manipulate outputs, or access sensitive information (OWASP LLM08:2025).</p>
+    <p class="def def--ko">RAG 시스템에서 벡터·임베딩의 생성·저장·검색 방식의 취약점으로, 유해 콘텐츠 주입, 출력 조작, 민감정보 접근에 악용될 수 있다(OWASP LLM08:2025).</p>
+    <p class="src"><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer">OWASP LLM 애플리케이션 10대 리스크 2025 · LLM08:2025</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="vision-language-action model (vla) 시각-언어-행동 모델(vla)">
+  <div class="term__head"><h3>Vision-language-action model (VLA)</h3><span class="ko">시각-언어-행동 모델(VLA)</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A model that maps visual observations and language instructions directly to physical actions for robotic control; extends language-model vulnerabilities into physical behavior.</p>
+    <p class="def def--ko">시각 관측과 언어 지시를 로봇 제어를 위한 물리 행동으로 직접 사상하는 모델. 언어모델 취약점을 물리 행동으로 확장한다.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article><h2 class="letter" id="LW">W</h2><article class="term" data-cat="risk" data-name="watermarking (ai content) 워터마킹(ai 콘텐츠)">
+  <div class="term__head"><h3>Watermarking (AI content)</h3><span class="ko">워터마킹(AI 콘텐츠)</span>
+    <span class="cat cat--risk">리스크·보안</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">Embedding detectable statistical or perceptual signals in AI-generated content so that its synthetic origin can later be verified; a transparency and provenance mitigation with known robustness limits.</p>
+    <p class="def def--ko">AI 생성 콘텐츠에 탐지 가능한 통계적·지각적 신호를 삽입하여 합성 출처를 사후 검증할 수 있게 하는 기법. 투명성·출처증명 완화책이나 강건성 한계가 알려져 있다.</p>
+    <p class="src"><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer">NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025) · §2 (mitigations)</a></p>
+  </div>
+</article><article class="term" data-cat="law" data-name="withdrawal of an ai system ai 시스템 철회">
+  <div class="term__head"><h3>Withdrawal of an AI system</h3><span class="ko">AI 시스템 철회</span>
+    <span class="cat cat--law">법·제도</span><span class="tag tag--en">원문 EN</span></div>
+  <div class="term__body">
+    <p class="def def--en">Any measure aiming to prevent an AI system in the supply chain from being made available on the market.</p>
+    <p class="def def--ko">공급망 내 AI 시스템이 시장에 유통되는 것을 막으려는 모든 조치.</p>
+    <p class="src"><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer">EU 인공지능법 제3조 · Art. 3(17)</a></p>
+  </div>
+</article><article class="term" data-cat="gen" data-name="world model 월드 모델">
+  <div class="term__head"><h3>World model</h3><span class="ko">월드 모델</span>
+    <span class="cat cat--gen">일반</span><span class="tag tag--ad">요약</span></div>
+  <div class="term__body">
+    <p class="def def--en">A learned internal model of environment dynamics that an agent uses to predict outcomes and plan actions; central to advanced embodied and agentic systems and to some misgeneralization risks.</p>
+    <p class="def def--ko">에이전트가 결과를 예측하고 행동을 계획하는 데 사용하는, 환경 동역학에 대한 학습된 내부 모델. 고도 체화·에이전트 시스템과 일부 오일반화 리스크의 핵심.</p>
+    <p class="src"><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer">NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary) · glossary</a></p>
+  </div>
+</article>
+  </div>
+  <p class="empty" id="empty">검색 결과가 없습니다.</p>
+  <section class="sources"><h2>출처 (Sources)</h2><ul><li><a href="https://artificialintelligenceact.eu/article/3/" target="_blank" rel="noopener noreferrer"><b>EU 인공지능법 제3조</b></a><br><span>EU AI Act (Regulation (EU) 2024/1689), Article 3 · 확인 2026-08-29<br>영어 정의는 규정 원문 그대로 인용, 한국어는 비공식 번역</span></li><li><a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%B0%9C%EC%A0%84%EA%B3%BC%EC%8B%A0%EB%A2%B0%EA%B8%B0%EB%B0%98%EC%A1%B0%EC%84%B1%EB%93%B1%EC%97%90%EA%B4%80%ED%95%9C%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" rel="noopener noreferrer"><b>인공지능기본법 제2조 (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, 법률 제21311호, 시행 2026.7.21)</b></a><br><span>Korea AI Framework Act, Article 2 (Act No. 21311, in force 21 Jul 2026) · 확인 2026-08-29<br>한국어 정의는 법률 원문 그대로 인용, 영어는 비공식 번역</span></li><li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" target="_blank" rel="noopener noreferrer"><b>NIST AI 위험관리 프레임워크 (AI RMF 1.0, NIST AI 100-1)</b></a><br><span>NIST AI Risk Management Framework 1.0 (NIST AI 100-1) · 확인 2026-07-22<br>영어 정의는 원문 인용 또는 요약, 한국어는 비공식 번역</span></li><li><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final" target="_blank" rel="noopener noreferrer"><b>NIST 적대적 머신러닝 분류·용어 (NIST AI 100-2 E2025)</b></a><br><span>NIST Adversarial Machine Learning: A Taxonomy and Terminology (NIST AI 100-2 E2025) · 확인 2026-08-29<br>보고서 분류·용어집 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://airc.nist.gov/glossary/" target="_blank" rel="noopener noreferrer"><b>NIST 신뢰할 수 있는 AI 용어집 (NIST AI 100-3, AIRC Glossary)</b></a><br><span>NIST, The Language of Trustworthy AI (NIST AI 100-3 / AIRC Glossary) · 확인 2026-08-29<br>용어집 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://atlas.mitre.org/" target="_blank" rel="noopener noreferrer"><b>MITRE ATLAS (AI 시스템 적대적 위협 지형)</b></a><br><span>MITRE ATLAS (Adversarial Threat Landscape for AI Systems) · 확인 2026-08-29<br>전술·기법 지식베이스 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://genai.owasp.org/llm-top-10/" target="_blank" rel="noopener noreferrer"><b>OWASP LLM 애플리케이션 10대 리스크 2025</b></a><br><span>OWASP Top 10 for LLM Applications 2025 · 확인 2026-08-29<br>리스크 항목 정의 기반 요약, 한국어는 비공식 번역</span></li><li><a href="https://ai.kisdi.re.kr/aieth/main/contents.do?menuNo=400028" target="_blank" rel="noopener noreferrer"><b>국가 인공지능 윤리기준 (과학기술정보통신부·정보통신정책연구원(KISDI), 2020)</b></a><br><span>National AI Ethics Standards (MSIT &amp; KISDI, 2020) · 확인 2026-08-29<br>3대 기본원칙·10대 핵심요건 기반, 한국어 원문 준용</span></li><li><a href="https://www.sw.or.kr/AI_act_helpdesk/main.jsp" target="_blank" rel="noopener noreferrer"><b>고영향 인공지능 영향평가 가이드라인 등 (과기정통부, 인공지능기본법 지원데스크)</b></a><br><span>High-Impact AI Impact Assessment Guideline (MSIT, AI Framework Act Help Desk) · 확인 2026-08-29(포털)<br>지원데스크 게시 가이드라인 기준, 요약</span></li><li><a href="https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449" target="_blank" rel="noopener noreferrer"><b>OECD 인공지능 권고 (OECD/LEGAL-0449, 2024 개정)</b></a><br><span>OECD Recommendation on Artificial Intelligence (OECD/LEGAL-0449, as amended 2024) · 확인 2026-08-29(페이지)<br>NIST AI 100-1이 준용한 정의 기준</span></li><li><a href="https://www.iso.org/standard/74296.html" target="_blank" rel="noopener noreferrer"><b>ISO/IEC 표준 (22989 용어, 23894 위험관리, 42001 AI경영시스템)</b></a><br><span>ISO/IEC Standards (22989 Terminology; 23894 Risk Management; 42001 AI Management System) · 확인 표기만<br>표준 명칭 인용(원문 유료), 정의는 요약</span></li></ul></section>
+  <p class="note">표기 규칙: <b>원문 EN</b>은 영어 정의가 출처 원문(또는 준원문)이고 한국어는 비공식 번역, <b>원문 KO</b>는 한국어 정의가 법령·표준 원문이고 영어는 비공식 번역, <b>요약</b>은 양 언어 모두 출처를 간결히 정리한 것입니다. EU 인공지능법 한국어역과 인공지능기본법 영어역은 공식 번역이 아니며, 법적 효력은 각 원문에 있습니다. 확인일 2026-08-29.</p>
+</main>
+<script>
+(function(){
+  var q=document.getElementById('q'),cnt=document.getElementById('count'),empty=document.getElementById('empty');
+  var terms=[].slice.call(document.querySelectorAll('.term')),letters=[].slice.call(document.querySelectorAll('.letter')),curf='all';
+  function apply(){
+    var s=q.value.trim().toLowerCase(),n=0;
+    terms.forEach(function(t){
+      var okc=curf==='all'||t.dataset.cat===curf;
+      var oks=!s||t.dataset.name.indexOf(s)>-1||t.textContent.toLowerCase().indexOf(s)>-1;
+      var show=okc&&oks;t.style.display=show?'':'none';if(show)n++;
+    });
+    letters.forEach(function(h){var el=h.nextElementSibling,vis=false;
+      while(el&&!el.classList.contains('letter')){if(el.classList.contains('term')&&el.style.display!=='none'){vis=true;break;}el=el.nextElementSibling;}
+      h.style.display=vis?'':'none';});
+    cnt.textContent=n+'개 표시';empty.style.display=n?'none':'block';
+  }
+  q.addEventListener('input',apply);
+  document.querySelectorAll('.fbtn').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.fbtn').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');curf=b.dataset.f;apply();});});
+})();
+</script>
+</body></html>
