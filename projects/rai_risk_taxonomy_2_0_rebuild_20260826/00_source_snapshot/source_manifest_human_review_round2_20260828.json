@@ -1,0 +1,40 @@
+{
+  "manifest_version": "1.0",
+  "source_snapshot_date": "2026-08-28",
+  "generated_at_utc": "2026-08-29T04:42:54.697022+00:00",
+  "immutability_policy": "These review exports are read-only inputs; regenerate this manifest only after an explicitly authorised source refresh.",
+  "files": [
+    {
+      "label": "L3",
+      "path": "00_source_snapshot/csv/L3_Human_Review_Round2_KTSPACE_933496461_20260828.csv",
+      "ktspace_page_id": "933496461",
+      "rows": 47,
+      "columns": 7,
+      "sha256": "1fa85a56d6be001ed033975d43cbbcd2e7d57bfffc75b36bd111de3ce47120f5"
+    },
+    {
+      "label": "L4_General",
+      "path": "00_source_snapshot/csv/L4_General_Human_Review_Round2_KTSPACE_932056034_20260828.csv",
+      "ktspace_page_id": "932056034",
+      "rows": 599,
+      "columns": 14,
+      "sha256": "7877908e46f41e5b4735945697208fad026fc67c6e255d21ea03b07ffb1f1f37"
+    },
+    {
+      "label": "L4_Agentic",
+      "path": "00_source_snapshot/csv/L4_Agentic_Human_Review_Round2_KTSPACE_931437538_20260828.csv",
+      "ktspace_page_id": "931437538",
+      "rows": 90,
+      "columns": 11,
+      "sha256": "70fa329299d3b1e0b5d9cd1b182c395d1d66b1aebd73849877345184b0d2f4f0"
+    },
+    {
+      "label": "L4_Physical",
+      "path": "00_source_snapshot/csv/L4_Physical_Human_Review_Round2_KTSPACE_930753013_20260828.csv",
+      "ktspace_page_id": "930753013",
+      "rows": 119,
+      "columns": 9,
+      "sha256": "7f65e49a7da586b82031aa64ec1ea9467634006e2779687c67f7a1f3b016f67b"
+    }
+  ]
+}

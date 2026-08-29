@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "all_input_cards": 798,
+  "comparison_cards": 798,
+  "candidate_pairs": 318003,
+  "top_k": 20,
+  "domain": "All",
+  "same_l3_only": false,
+  "text": "title plus definition, encoded separately in Korean and English",
+  "score": "mean of Korean and English cosine similarity",
+  "model": "BAAI/bge-m3",
+  "model_snapshot": "5617a9f61b028005a4858fdac845db406aefb181",
+  "input_sha256": {
+    "L4_General_Human_Review_Round2_Applied.csv": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+    "L4_Agentic_Human_Review_Round2_Applied.csv": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+    "L4_Physical_Human_Review_Round2_Applied.csv": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916"
+  },
+  "round2_summary_sha256": "c384f4b780b02d8c722e57647b1cb02249948d9c8fb3df9816932f90406b7060",
+  "final_qa_manifest_sha256": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738",
+  "pooling": "CLS",
+  "normalised": true,
+  "self_pairs_excluded": true,
+  "reverse_duplicates_excluded": true,
+  "output": "L4_Top20_Similar_Pairs.csv"
+}

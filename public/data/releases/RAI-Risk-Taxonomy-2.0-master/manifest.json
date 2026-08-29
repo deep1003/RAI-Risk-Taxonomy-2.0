@@ -1,7 +1,7 @@
 {
   "release_id": "RAI-Risk-Taxonomy-2.0-master",
   "release_status": "master",
-  "created_at": "2026-08-26T00:00:00+09:00",
+  "created_at": "2026-08-29T00:00:00+09:00",
   "counts": {
     "l0": 1,
     "l1": 3,
@@ -10,46 +10,53 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 808,
-    "em": 612,
-    "hd": 196,
-    "general": 599,
-    "agentic": 90,
-    "physical": 119
+    "l4": 798,
+    "em": 440,
+    "hd": 358,
+    "general": 630,
+    "agentic": 74,
+    "physical": 94
   },
   "cleaning": {
-    "source_total": 892,
-    "deleted": 65,
-    "merged_away": 20,
-    "split_net_addition": 1,
-    "title_terminology_normalisations": 66,
-    "semantic_near_duplicate_candidates": 66,
-    "semantic_near_duplicate_deletions": 5,
-    "l1_cross_domain_reviewed": 30,
-    "l1_cross_domain_forced_others": 14,
-    "final_total": 808
+    "source_total": 808,
+    "deleted": 4,
+    "merged_away": 37,
+    "split_net_addition": 31,
+    "user_directed_operations": 10,
+    "korean_copyedit_operations": 518,
+    "english_copyedit_operations": 319,
+    "net_reduction": 10,
+    "final_total": 798
   },
   "method": {
-    "algorithm": "Anchor-regularised keyword-augmented constrained EM with BGE-M3 semantic representations",
-    "boundary_policy": "HD assignment to domain-specific Others",
-    "l1_routing_policy": "Confirm L1 before domain-constrained L3 EM; keep eligible no-match risks in the confirmed L1's Others queue",
+    "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
+    "boundary_policy": "Retain reviewed HD decisions and domain-specific Others assignments without automatic reassignment",
+    "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
     "l3_master_precedence": true,
     "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
     "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
-    "semantic_deduplication_policy": "Bilingual similarity generates candidates only; deletion requires same L3 scope and no distinct target or harm mechanism",
-    "representative_keywords_per_language": 3
+    "semantic_deduplication_policy": "Bilingual similarity generates review candidates only and does not trigger automatic deletion or reassignment"
   },
   "human_review": {
-    "review_snapshot_id": "8664c8c74e6b95ad",
+    "review_snapshot_id": "5f38a704b912f89d",
     "candidate_count": 2,
     "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
     "daily_aggregation": true,
     "automatic_reassignment": false,
+    "score_warning": "Candidate scores may be stale after text or hierarchy edits; unavailable scores are displayed as unavailable",
     "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
+  },
+  "score_status_counts": {
+    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 662,
+    "L3_MASTER_VALIDATED": 67,
+    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 61,
+    "L3_MASTER_AI_REWRITE": 8
   },
   "validation": {
     "status": "PASS",
-    "passed": 50,
+    "passed": 30,
     "failed": 0
   },
   "artifacts": {
@@ -62,16 +69,16 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
-      "rows": 599
+      "sha256": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+      "rows": 630
     },
     "L4_Agentic.csv": {
-      "sha256": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
-      "rows": 90
+      "sha256": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+      "rows": 74
     },
     "L4_Physical.csv": {
-      "sha256": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949",
-      "rows": 119
+      "sha256": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+      "rows": 94
     }
   }
 }

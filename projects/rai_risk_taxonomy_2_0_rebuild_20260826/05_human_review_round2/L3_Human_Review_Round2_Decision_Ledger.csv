@@ -1,0 +1,100 @@
+Source_Row_Number,L3_ID,L3_Title_en,Changed_Fields_In_Review,Decision,Review_Note
+2,G_INT_VIOL,Violence,,UNCHANGED,
+3,G_INT_SEX,Sexual Harm and Exploitation,,UNCHANGED,"(SY)Sexual content -> Sexual (Physical 에서는 contents 가 아닐 수 있음) 
+
+> 명칭 및 설명 수정 완료"
+4,G_INT_SELF,Self-harm,,UNCHANGED,
+5,G_INT_ALLOC,Allocative Discrimination,,UNCHANGED,"배분적 피해(allocative), 재현적 피해(representational), 가치 부과·규범 동질화(value imposition)로 구분 필요성 검토 필요
+
+Allocative Discrimination: 보호대상 특성·사회적 지위에 근거한 불공정·차별적 판단이나 대우로 특정 개인·집단에 불리한 결과(자원·기회·서비스)를 배분
+
+
+  . Amazon 채용·Apple Card·Optum·주택대출
+
+Representational Harm and Stereotyping: 집단을 적대적으로 비하하거나 고정관념화·균질화·삭제하는 등 왜곡되게 표상하여, 자원 배분과 무관하게 상징적 피해를 초래
+
+
+  . 고정관념·왜곡 표상·혐오
+
+Value Imposition and Normative Homogenization: 지배·개발자 가치를 중립적 기본값으로 특권화하여 소수·현지·문화 규범을 대체하고 규범적 다양성을 획일화
+
+
+  . 서구/개인주의/세속 규범의 전 세계 부과
+
+> 리스크 분리 완료"
+6,G_INT_REPR,Representational Harm and Stereotyping,,UNCHANGED,"배분적 피해(allocative), 재현적 피해(representational), 가치 부과·규범 동질화(value imposition)로 구분 필요성 검토 필요
+
+Allocative Discrimination: 보호대상 특성·사회적 지위에 근거한 불공정·차별적 판단이나 대우로 특정 개인·집단에 불리한 결과(자원·기회·서비스)를 배분
+
+
+  . Amazon 채용·Apple Card·Optum·주택대출
+
+Representational Harm and Stereotyping: 집단을 적대적으로 비하하거나 고정관념화·균질화·삭제하는 등 왜곡되게 표상하여, 자원 배분과 무관하게 상징적 피해를 초래
+
+
+  . 고정관념·왜곡 표상·혐오
+
+Value Imposition and Normative Homogenization: 지배·개발자 가치를 중립적 기본값으로 특권화하여 소수·현지·문화 규범을 대체하고 규범적 다양성을 획일화
+
+
+  . 서구/개인주의/세속 규범의 전 세계 부과
+
+> 리스크 분리 완료"
+7,G_INT_VALUE,Value Imposition and Normative Homogenization,,UNCHANGED,"배분적 피해(allocative), 재현적 피해(representational), 가치 부과·규범 동질화(value imposition)로 구분 필요성 검토 필요
+
+Allocative Discrimination: 보호대상 특성·사회적 지위에 근거한 불공정·차별적 판단이나 대우로 특정 개인·집단에 불리한 결과(자원·기회·서비스)를 배분
+
+
+  . Amazon 채용·Apple Card·Optum·주택대출
+
+Representational Harm and Stereotyping: 집단을 적대적으로 비하하거나 고정관념화·균질화·삭제하는 등 왜곡되게 표상하여, 자원 배분과 무관하게 상징적 피해를 초래
+
+
+  . 고정관념·왜곡 표상·혐오
+
+Value Imposition and Normative Homogenization: 지배·개발자 가치를 중립적 기본값으로 특권화하여 소수·현지·문화 규범을 대체하고 규범적 다양성을 획일화
+
+
+  . 서구/개인주의/세속 규범의 전 세계 부과
+
+> 리스크 분리 완료"
+8,G_INT_POL,Political Bias and Manipulation,,UNCHANGED,
+9,G_INT_PRIV,Privacy Violation,,UNCHANGED,
+10,G_INT_ILLEGAL,Illegal Conduct,,UNCHANGED,> 리스크 분리 완료
+11,G_INT_UNETH,Unethical Conduct and Manipulation,,UNCHANGED,> 리스크 분리 완료
+12,G_INT_COPY,Copyright Infringement,,UNCHANGED,
+13,G_INT_WEAP,Weaponization,,UNCHANGED,
+14,G_INT_ANTH,Anthropomorphism,,UNCHANGED,
+15,G_INT_REL,Unhealthy Human-AI Relationship,,UNCHANGED,(SY)인간의 자율성 훼손..으로 가면 의인화와 명확히 구별 가능
+16,G_SYS_OREF,Over-Refusal,,UNCHANGED,
+17,G_SYS_OEXT,Over-Extension,,UNCHANGED,
+18,G_SYS_INPUT,Input Comprehension Failure,,UNCHANGED,
+19,G_SYS_MISINFO,Misinformation,,UNCHANGED,
+20,G_SYS_CONTEXT,Context-Awareness Failure,,UNCHANGED,
+21,G_SYS_INCONS,Inconsistency,,UNCHANGED,
+22,G_SYS_OVERCONF,Overconfidence,,UNCHANGED,
+23,G_SYS_CONTEST,Non-Contestability,,UNCHANGED,
+24,G_SYS_SECADV,Security and Adversarial Robustness Failure,,UNCHANGED,
+25,G_SYS_POLICY,System Policy Exposure,,UNCHANGED,
+26,G_SYS_TRANS,Lack of Transparency,,UNCHANGED,
+27,G_SYS_EVAL,Evaluation and Assurance Failure,,UNCHANGED,
+28,G_SOC_ECON,Economic and Employment Disruption,,UNCHANGED,
+29,G_SOC_POWER,Inequality and Power Concentration,,UNCHANGED,
+30,G_SOC_DEMOC,Erosion of Democracy and Civic Order,,UNCHANGED,
+31,G_SOC_ENV,Environmental and Sustainability Impact,,UNCHANGED,
+32,G_SOC_CULT,Cultural and Epistemic Erosion,,UNCHANGED,
+33,G_SOC_GOV,Governance and Accountability Void,,UNCHANGED,
+34,A_SYS_GOAL,Goal Misalignment,,UNCHANGED,
+35,A_SYS_AUTH,Excessive Authority and Agency,,UNCHANGED,
+36,A_SYS_SELFCOR,Self-Correction Failure,,UNCHANGED,
+37,A_SYS_DECEPT,Deception and Scheming,,UNCHANGED,
+38,A_SYS_TRACE,Accountability and Traceability Gap,,UNCHANGED,
+39,A_INT_CASCADE,Cascading Failure and Instability,,UNCHANGED,
+40,A_INT_COORD,Coordination Failure,L3_Description_en; L3_Description_ko,PENDING_MASTER_CHANGE_NOT_APPLIED,
+41,A_INT_CONFLICT,Competitive Conflict,,UNCHANGED,
+42,A_INT_COLLUSION,Collusion,,UNCHANGED,
+43,P_SYS_STATE,Physical State Estimation and Sensor-Fusion Failure,,UNCHANGED,
+44,P_SYS_CONTROL,Unsafe Physical Control and Actuation,,UNCHANGED,
+45,P_SYS_HARDWARE,Hardware and Mechanical Integrity Failure,,UNCHANGED,
+46,P_INT_SAFETY,Human-Robot Physical Safety Failure,,UNCHANGED,
+47,P_INT_TAMPER,Physical Tampering and Sabotage,,UNCHANGED,

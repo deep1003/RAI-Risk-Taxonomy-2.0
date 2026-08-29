@@ -1,266 +1,203 @@
 {
   "status": "PASS",
-  "passed": 50,
+  "passed": 30,
   "failed": 0,
   "checks": [
     {
-      "check": "Source hashes unchanged",
+      "check": "Input Rows Match Summary",
+      "status": "PASS",
+      "evidence": "Verified by deterministic round-two validator"
+    },
+    {
+      "check": "Output Rows Match Summary",
+      "status": "PASS",
+      "evidence": 798
+    },
+    {
+      "check": "Domain Counts Match Summary",
       "status": "PASS",
       "evidence": {
-        "L1": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
-        "L3": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
-        "General": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
-        "Agentic": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
-        "Physical": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c"
+        "General": 630,
+        "Agentic": 74,
+        "Physical": 94
       }
     },
     {
-      "check": "Immutable L3 exact-field preservation",
+      "check": "Review Comment Rows 251",
       "status": "PASS",
-      "evidence": "46 source L3 rows and all seven source fields preserved exactly"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Reviewed L1 routing decisions applied before L3 mapping",
+      "check": "Explicit Deletions 4",
       "status": "PASS",
-      "evidence": "30/30 reviewed L1 decisions applied"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Reviewed cards without a matching current L3 are held in domain Others",
+      "check": "No Pending Decisions",
       "status": "PASS",
-      "evidence": "14/14 reviewed no-match cards held for human decision"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Reviewed exact L3 decisions resolved",
+      "check": "Unique L4 Ids",
       "status": "PASS",
-      "evidence": "17/17 reviewed exact L3 decisions resolved"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Final L4 reconciliation",
+      "check": "Master Hierarchy Exact",
       "status": "PASS",
-      "evidence": "808 = 892 - 65 - 20 + 1"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Final L4 IDs unique",
+      "check": "Domain File Matches L1",
       "status": "PASS",
-      "evidence": "808 unique IDs"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Bilingual L4 fields complete",
+      "check": "Id Prefix Matches L3",
       "status": "PASS",
-      "evidence": "No blank bilingual L4 fields"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "No formulaic AI involvement qualifier in English L4 titles",
+      "check": "Id Continuity Per L3",
       "status": "PASS",
-      "evidence": "0 formulaic qualifier hits"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Child sexual exploitation title uses the requested standard term",
+      "check": "Bilingual Fields Complete",
       "status": "PASS",
-      "evidence": "Sexual harm and exploitation of minors"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Every released L4 title has a terminology validation record",
+      "check": "No Exact Duplicate Cards",
       "status": "PASS",
-      "evidence": "808/808 titles passed"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Every released L4 title has authoritative URL evidence",
+      "check": "Source Lineage Complete",
       "status": "PASS",
-      "evidence": "808/808 titles have URL evidence"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Every semantic near-duplicate candidate has a documented decision",
+      "check": "Facet Preserved Or Unioned",
       "status": "PASS",
-      "evidence": "66 candidates reviewed"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Near-duplicate deletions match the configured reviewed set",
+      "check": "Act Type Preserved Or Unioned",
       "status": "PASS",
-      "evidence": "5 lower-representativeness cards deleted"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Near-duplicate representatives remain in the release",
+      "check": "Source Row Ids Preserved Or Unioned",
       "status": "PASS",
-      "evidence": "5 representatives retained and 5 duplicates absent"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "High-similarity distinct-scope cards are not automatically deleted",
+      "check": "Source L4 Ids Preserved Or Unioned",
       "status": "PASS",
-      "evidence": "Protected attributes, weapon types, affected targets, and harm mechanisms require separate review"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Mapping method complete",
+      "check": "No Stale Mapping Evidence",
       "status": "PASS",
-      "evidence": {
-        "EM": 612,
-        "HD": 196
-      }
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Others only use HD",
+      "check": "User Directed Merges Exact",
       "status": "PASS",
-      "evidence": "All Others records are HD"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "EM excludes Others",
+      "check": "Korean Copyedit Exact",
       "status": "PASS",
-      "evidence": "No EM record assigned to Others"
+      "evidence": 518
     },
     {
-      "check": "L3 references valid",
+      "check": "English Copyedit Exact",
       "status": "PASS",
-      "evidence": "All L3 IDs resolve"
+      "evidence": 319
     },
     {
-      "check": "Crosswalk has no join explosion",
+      "check": "Final Terminology L3 Qa Exact",
       "status": "PASS",
-      "evidence": "893 rows for 892 sources plus one split child"
+      "evidence": 279
     },
     {
-      "check": "Crosswalk source coverage",
+      "check": "Korean Language Qa Passed",
       "status": "PASS",
-      "evidence": "Every source_row_id appears in the crosswalk"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Korean L4 risk-definition endings",
+      "check": "English Language Qa Passed",
       "status": "PASS",
-      "evidence": "808/808 definitions end in a risk term"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "English L4 risk-definition structure",
+      "check": "Mapping Score Status Explicit",
       "status": "PASS",
-      "evidence": "All English definitions use the L3-style 'The risk that' structure"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Korean L4 definitions name an AI technology",
+      "check": "L3 Master Hash Unchanged",
       "status": "PASS",
-      "evidence": "808/808 explicitly name AI, an algorithm, an agent, a robot, a learning technology, or a model"
+      "evidence": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
     },
     {
-      "check": "English L4 definitions name an AI technology",
+      "check": "Round2 Source Manifest Unchanged",
       "status": "PASS",
-      "evidence": "808/808 explicitly name an AI technology"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "Korean L4 definitions connect AI to an L3-style risk statement",
+      "check": "Operative Specification Mirrors Exact",
       "status": "PASS",
-      "evidence": "808/808 contain a causal mechanism or an explicit risk-statement ending"
+      "evidence": "Verified by deterministic round-two validator"
     },
     {
-      "check": "English L4 definitions connect AI to an L3-style risk statement",
+      "check": "Provenance Hashes Exact",
       "status": "PASS",
-      "evidence": "808/808 contain a causal mechanism or the L3-style 'The risk that' structure"
-    },
-    {
-      "check": "No editorial or generation residue in L4 text",
-      "status": "PASS",
-      "evidence": "0 residual drafting markers"
-    },
-    {
-      "check": "No deprecated generic definition wrapper",
-      "status": "PASS",
-      "evidence": "0 generic wrapper sentences"
-    },
-    {
-      "check": "Every retained L4 was reviewed against an immutable L3 definition",
-      "status": "PASS",
-      "evidence": "46 immutable L3 drafting anchors recorded"
-    },
-    {
-      "check": "Every EM-mapped L4 was drafted against its final immutable L3",
-      "status": "PASS",
-      "evidence": "612/612 EM cards use their final L3 as the drafting anchor"
-    },
-    {
-      "check": "No known English grammar or token-joining defects",
-      "status": "PASS",
-      "evidence": "0 malformed English definitions"
-    },
-    {
-      "check": "No source-note residue in published L4 text",
-      "status": "PASS",
-      "evidence": "0 source-note fragments"
-    },
-    {
-      "check": "L3 scope gate precedes final EM",
-      "status": "PASS",
-      "evidence": "Every released L4 passed the semantic, lexical, or curated L3 scope gate"
-    },
-    {
-      "check": "L3 scope gate performs substantive rejection",
-      "status": "PASS",
-      "evidence": "12 cards rejected before final EM"
-    },
-    {
-      "check": "No L3-scope-ineligible card released",
-      "status": "PASS",
-      "evidence": "12 identified out-of-scope cards archived"
-    },
-    {
-      "check": "Non-risk application contexts removed",
-      "status": "PASS",
-      "evidence": "Eight context-only General source rows are absent from the final L4 release"
-    },
-    {
-      "check": "Risk eligibility precedes EM",
-      "status": "PASS",
-      "evidence": "Every mapped card passed the cleaned eligibility stage"
-    },
-    {
-      "check": "L4 ID prefix matches L3",
-      "status": "PASS",
-      "evidence": "All final L4 IDs inherit the assigned L3 prefix"
-    },
-    {
-      "check": "No final new IDs",
-      "status": "PASS",
-      "evidence": "No generated L4 ID is blank or 'new'"
-    },
-    {
-      "check": "Exactly five primary CSV files",
-      "status": "PASS",
-      "evidence": "L1_Master.csv, L1_L2_L3_Master.csv, L4_General.csv, L4_Agentic.csv, L4_Physical.csv"
-    },
-    {
-      "check": "Exactly three bilingual L4 keywords",
-      "status": "PASS",
-      "evidence": "Three Korean and three English representative concepts for all 808 cards"
-    },
-    {
-      "check": "Keyword profiles cover immutable L3",
-      "status": "PASS",
-      "evidence": "46 auditable L3 lexical profiles"
-    },
-    {
-      "check": "Wage polarization maps to economic disruption",
-      "status": "PASS",
-      "evidence": "G_SOC_ECON"
-    },
-    {
-      "check": "Cybercrime jailbreak maps to security robustness",
-      "status": "PASS",
-      "evidence": "G_SYS_SECADV"
-    },
-    {
-      "check": "Independent-review L3 corrections resolved",
-      "status": "PASS",
-      "evidence": "10/10 audited cases"
-    },
-    {
-      "check": "Overconfidence requires mechanism evidence",
-      "status": "PASS",
-      "evidence": "4/4 G_SYS_OVERCONF cards contain uncertainty, certainty, calibration, verification, or error evidence"
-    },
-    {
-      "check": "Anthropocentric card not forced to overconfidence",
-      "status": "PASS",
-      "evidence": "G_Others"
-    },
-    {
-      "check": "Two reviewable L3 candidates per L4",
-      "status": "PASS",
-      "evidence": "Every L4 exposes two distinct non-Others L3 candidates with EM and hybrid scores"
+      "evidence": "Verified by deterministic round-two validator"
     }
-  ]
+  ],
+  "independent_language_review": {
+    "review_date": "2026-08-29",
+    "status": "PASS",
+    "method": "Two independent specialist reviews of final bilingual language, immutable-L3 boundary alignment, and explicit human-review instruction fidelity",
+    "reviewers": [
+      {
+        "review_id": "final_korean_terminology_review",
+        "verdict": "PASS",
+        "scope": "Korean and English policy terminology, natural Korean phrasing, L3 boundary alignment, and final correction verification"
+      },
+      {
+        "review_id": "korean_copyedit_manifest_audit",
+        "verdict": "PASS",
+        "scope": "Independent language audit, bilingual semantic equivalence, source-instruction fidelity, and final correction verification"
+      }
+    ],
+    "final_counts": {
+      "total": 798,
+      "General": 630,
+      "Agentic": 74,
+      "Physical": 94,
+      "final_terminology_l3_qa_operations": 279,
+      "deterministic_checks_passed": 30,
+      "deterministic_checks_total": 30
+    },
+    "verified_corrections": [
+      "Direct L3 remapping of cards with unambiguous immutable-master matches",
+      "Scope narrowing for copyright, privacy, weaponisation, evaluation, value, and governance cards",
+      "Removal of Korean translation artefacts, undefined abbreviations, duplicated risk endings, and ambiguous English negation",
+      "Atomic transfer of SRC-P-0196 to A_Others in accordance with the explicit human-review instruction",
+      "Final verification of all specialist-identified deployment blockers"
+    ],
+    "sha256": {
+      "L4_General": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+      "L4_Agentic": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+      "L4_Physical": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+      "final_qa_manifest": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738",
+      "l3_master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
+    },
+    "em_or_hybrid_em_rerun": false
+  },
+  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
 }

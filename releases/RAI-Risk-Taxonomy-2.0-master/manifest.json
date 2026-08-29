@@ -1,12 +1,15 @@
 {
-  "release_date": "2026-08-26",
-  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/run_rebuild_pipeline.py",
+  "release_date": "2026-08-29",
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "release_round": "human_review_round2",
+  "pipeline_script": "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_round2.py",
   "source_hashes": {
-    "L1": "a78b21fe46904b173e97080c8883f60847941737f1bfff7d65d887aa73b04dbd",
-    "L3": "b154be6ced881cc10d93779447afe3b636bcaeaa6094c399fc4d49076d3812c4",
-    "General": "97a57589bb218a89372bf703cb569c7e5344ff09155dfb74bc624b9a0bdeebe8",
-    "Agentic": "d790d6feda006e0026d582aa0ad0b3d1e8442257eb563583e6077039ab4623cf",
-    "Physical": "d578772484243a6888a2e41afbefb580385debbac2ca70c29c67a1fcebdf349c"
+    "L3_Master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+    "Round2_Source_Manifest": "171eff64979cf27c6821a28cca5bf7338d36ab50c2b5cc869f26dea2a2e587d6",
+    "User_Directed_Operations": "24a49b20c1ef892fdee2835c19966110b36c1128f5fd77620af71426844d8cbe",
+    "Korean_Copyedit_Manifest": "469d1ed03f6cd7ca36fecb9872f09b4c205c4631de9c1555e183d5f3d63e1340",
+    "English_Copyedit_Manifest": "ba2bb0a614112086f2cccfc0ad97efc95fee649c6da13f245912dccabfaf1c5d",
+    "Final_Terminology_L3_QA_Manifest": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738"
   },
   "model": {
     "name": "BAAI/bge-m3",
@@ -17,51 +20,30 @@
     "weights_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
   },
   "mapping_method": {
-    "name": "Anchor-regularised keyword-augmented constrained EM",
-    "l1_decision_precedes_domain_constrained_l3_em": true,
-    "cross_domain_review_count": 30,
-    "no_matching_l3_policy": "HOLD_IN_REVIEWED_L1_OTHERS",
-    "cross_domain_audit_file": "validation/L1_Cross_Domain_Routing_Audit.csv",
-    "anchor_weight": 4.0,
-    "semantic_keyword_weight": 0.025,
-    "lexical_keyword_weight": 0.06,
-    "exclusion_penalty": 0.08,
-    "curated_l3_prior_weight": 0.3,
-    "representative_keywords_per_language": 3
+    "name": "Human-review application over the previous constrained-EM release",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "score_status": "Previous-run scores are retained only where available and are explicitly marked stale after text edits",
+    "l3_master_precedence": true,
+    "automatic_reassignment": false
   },
   "definition_method": {
-    "name": "Immutable-L3-referenced bilingual AI-technology grounding",
-    "provisional_mapping_used_only_as_drafting_anchor": true,
-    "final_mapping_refitted_after_definition_revision": true,
+    "name": "Immutable-L3-referenced bilingual AI-technology and language review",
     "korean_ai_technology_required": true,
     "english_ai_technology_required": true,
     "causal_risk_mechanism_required": true,
-    "l3_scope_anchor_floor": 0.6,
-    "l3_scope_hybrid_floor": 0.65
+    "l3_tone_required": true
   },
   "title_terminology_method": {
-    "name": "Authoritative term-family normalisation against the immutable L3 master",
-    "formulaic_ai_involvement_qualifiers_removed": [
-      "AI-mediated",
-      "AI-facilitated",
-      "AI-assisted",
-      "AI-enabled",
-      "AI-driven",
-      "AI-induced",
-      "AI-amplified",
-      "AI-automated",
-      "AI-related"
-    ],
-    "technical_object_ai_terms_retained": true,
-    "audit_file": "audit/L4_Title_Terminology_Audit.csv"
+    "name": "Human-reviewed policy, legal, and technical terminology normalisation",
+    "formulaic_ai_involvement_qualifiers_removed": true,
+    "technical_object_ai_terms_retained": true
   },
-  "semantic_deduplication_method": {
-    "name": "Bilingual BGE-M3 candidate generation with immutable-L3 and distinctiveness gates",
-    "candidate_similarity_threshold": 0.9,
-    "automatic_deletion_from_similarity_only": false,
-    "distinct_target_or_mechanism_is_retained": true,
-    "candidate_audit_file": "audit/Semantic_Near_Duplicate_Candidates.csv",
-    "decision_audit_file": "audit/Semantic_Near_Duplicate_Decisions.csv"
+  "similarity_review": {
+    "model": "BAAI/bge-m3",
+    "purpose": "Near-duplicate candidate review only; not L3 reassignment",
+    "ranked_pairs": 200,
+    "top_pairs_published": 20,
+    "automatic_deletion": false
   },
   "primary_outputs": {
     "L1_Master.csv": {
@@ -73,101 +55,76 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
-      "rows": 599
+      "sha256": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+      "rows": 630
     },
     "L4_Agentic.csv": {
-      "sha256": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
-      "rows": 90
+      "sha256": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+      "rows": 74
     },
     "L4_Physical.csv": {
-      "sha256": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949",
-      "rows": 119
+      "sha256": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+      "rows": 94
     }
   },
   "summary": {
-    "date": "2026-08-26",
+    "date": "2026-08-29",
+    "round": "human_review_round2",
+    "input_rows": 808,
+    "source_total": 808,
+    "final_total": 798,
+    "cleaned_total": 798,
+    "net_reduction": 10,
+    "explicit_deletions": 4,
+    "deleted": 4,
+    "net_consolidation_after_splits": 6,
+    "merged_away": 37,
+    "split_net_addition": 31,
     "source_counts": {
-      "Agentic": 83,
-      "General": 591,
-      "Physical": 218
+      "General": 599,
+      "Agentic": 90,
+      "Physical": 119
     },
-    "source_total": 892,
-    "deleted": 65,
-    "merged_away": 20,
-    "split_net_addition": 1,
-    "cleaned_total": 808,
     "final_domain_counts": {
-      "Agentic AI": 90,
-      "General AI": 599,
-      "Physical AI": 119
+      "General AI": 630,
+      "Agentic AI": 74,
+      "Physical AI": 94
     },
     "mapping_method_counts": {
-      "Agentic AI": {
-        "EM": 71,
-        "HD": 19
-      },
       "General AI": {
-        "EM": 451,
-        "HD": 148
+        "EM": 338,
+        "HD": 292
+      },
+      "Agentic AI": {
+        "EM": 47,
+        "HD": 27
       },
       "Physical AI": {
-        "EM": 90,
-        "HD": 29
+        "EM": 55,
+        "HD": 39
       }
     },
-    "others_total": 196,
-    "em_total": 612,
-    "mapping_pipeline": "ANCHOR_REGULARISED_KEYWORD_AUGMENTED_EM",
-    "definition_pipeline": "PROVISIONAL_L3_SCOPE_GATE_THEN_BILINGUAL_AI_TECHNOLOGY_GROUNDING_THEN_FINAL_EM",
-    "definition_ai_grounding_rewrites": 260,
-    "title_terminology_normalisations": 66,
-    "title_normalisation_ledger_changes_before_deduplication": 70,
-    "title_terminology_validated": 808,
-    "semantic_near_duplicate_candidates": 66,
-    "semantic_near_duplicate_deletions": 5,
-    "l3_scope_deletions": 12,
-    "l1_cross_domain_reviewed": 30,
-    "l1_cross_domain_forced_others": 14,
-    "keyword_count_per_language": 3,
-    "thresholds": {
-      "General": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      },
-      "Agentic": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      },
-      "Physical": {
-        "score_floor": 0.56,
-        "margin_floor": 0.012,
-        "stability_floor": 0.8,
-        "anchor_score_floor": 0.48,
-        "anchor_weight": 4.0,
-        "semantic_keyword_weight": 0.025,
-        "lexical_keyword_weight": 0.06,
-        "exclusion_penalty": 0.08,
-        "curated_l3_prior_weight": 0.3
-      }
+    "em_total": 440,
+    "hd_total": 358,
+    "others_total": 129,
+    "user_directed_operations": 10,
+    "korean_copyedit_operations": 518,
+    "english_copyedit_operations": 319,
+    "final_terminology_l3_qa_operations": 279,
+    "text_edited_cards": 616,
+    "score_available_from_previous_run": 326,
+    "score_unavailable_after_human_review": 472,
+    "score_status_counts": {
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 662,
+      "L3_MASTER_VALIDATED": 67,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 61,
+      "L3_MASTER_AI_REWRITE": 8
     },
+    "similarity_ranked_pairs": 200,
+    "similarity_top_pairs_published": 20,
     "l3_source_rows": 46,
     "l3_derived_others_rows": 3,
-    "validation_passed": 50,
+    "validation_passed": 30,
     "validation_failed": 0
   },
   "human_review": {
@@ -176,11 +133,93 @@
       "base EM",
       "hybrid EM"
     ],
+    "score_warning": "Scores may be stale after text or hierarchy edits; unavailable scores are shown as unavailable",
     "vote_log": "GitHub Issues",
     "daily_aggregation": true,
     "minimum_unique_reviewers": 3,
     "strict_majority_required": true,
     "automatic_reassignment": false,
     "application_policy": "Only after an explicit user instruction to analyse and apply review logs"
+  },
+  "human_review_round2": {
+    "method": "human-review application only; no EM or Hybrid EM execution",
+    "independent_language_review": {
+      "review_date": "2026-08-29",
+      "status": "PASS",
+      "method": "Two independent specialist reviews of final bilingual language, immutable-L3 boundary alignment, and explicit human-review instruction fidelity",
+      "reviewers": [
+        {
+          "review_id": "final_korean_terminology_review",
+          "verdict": "PASS",
+          "scope": "Korean and English policy terminology, natural Korean phrasing, L3 boundary alignment, and final correction verification"
+        },
+        {
+          "review_id": "korean_copyedit_manifest_audit",
+          "verdict": "PASS",
+          "scope": "Independent language audit, bilingual semantic equivalence, source-instruction fidelity, and final correction verification"
+        }
+      ],
+      "final_counts": {
+        "total": 798,
+        "General": 630,
+        "Agentic": 74,
+        "Physical": 94,
+        "final_terminology_l3_qa_operations": 279,
+        "deterministic_checks_passed": 30,
+        "deterministic_checks_total": 30
+      },
+      "verified_corrections": [
+        "Direct L3 remapping of cards with unambiguous immutable-master matches",
+        "Scope narrowing for copyright, privacy, weaponisation, evaluation, value, and governance cards",
+        "Removal of Korean translation artefacts, undefined abbreviations, duplicated risk endings, and ambiguous English negation",
+        "Atomic transfer of SRC-P-0196 to A_Others in accordance with the explicit human-review instruction",
+        "Final verification of all specialist-identified deployment blockers"
+      ],
+      "sha256": {
+        "L4_General": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+        "L4_Agentic": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+        "L4_Physical": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+        "final_qa_manifest": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738",
+        "l3_master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
+      },
+      "em_or_hybrid_em_rerun": false
+    },
+    "provenance": {
+      "operative_specifications_sha256": {
+        "expert_review_methodology.csv": "10e6bd7140cf96fc6b9c718c99a0fcc065b8baa05802bb79bab807dd3413ccc6",
+        "intent_correction_operations.csv": "14e0380daa1f4e661bd39534508d579d95487f25595a34f04269da2e007c43b0",
+        "expert_review_editorial_operations.csv": "7d1d91d2c0f024d677a77cb89ac1eb171ae0f1fdefd3c80ecfc37de3177dec99",
+        "expert_cross_group_consolidations.csv": "8a6d10564e2091fa79a7ed52b97ffad60e3a47c2b08488a07d21ad21ecbe5bb2",
+        "user_directed_operations.csv": "24a49b20c1ef892fdee2835c19966110b36c1128f5fd77620af71426844d8cbe",
+        "L4_Korean_Copyedit_Approved_20260829.csv": "469d1ed03f6cd7ca36fecb9872f09b4c205c4631de9c1555e183d5f3d63e1340",
+        "L4_English_Copyedit_Approved_20260829.csv": "ba2bb0a614112086f2cccfc0ad97efc95fee649c6da13f245912dccabfaf1c5d",
+        "L4_Final_Terminology_L3_Alignment_Approved_20260829.csv": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738"
+      },
+      "baseline_inputs_sha256": {
+        "L1_L2_L3_Master.csv": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+        "L4_General.csv": "b5f0225bc0a629e1d6eeaeeaa29e681497d627ae0b87b09f88eb0a0af8bb69a9",
+        "L4_Agentic.csv": "4390fbac70a3d29d96b2aedd7ffa6716970285467afd21996138bb53ece47773",
+        "L4_Physical.csv": "23a4a3b714e6864a0d975d556284e1ef93512cf78f580ba710a4c299b3b93949"
+      },
+      "pipeline_scripts_sha256": {
+        "scripts/apply_human_review_round2.py": "89c8549cbefe929748cefdd2a4a56ad7981650eda3a06f0088f1ab617c90077c",
+        "scripts/validate_human_review_round2.py": "106cc3ee3e8a82a8171f60c4b90ec8ae01cecd200209b301e9198f23b1ae6420",
+        "05_human_review_round2/_build_korean_copyedit_manifest.mjs": "40cd95135ba63240a00e4eb9fda5a71a8a0d19cc4b7cf24fca1a3c82f3a4ba25",
+        "05_human_review_round2/_build_english_copyedit_manifest.mjs": "293bc9e005e4a0b38783faf3ca2893952ef08925a485d1ed0bbbd671f02f4fcf",
+        "05_human_review_round2/_edit_user_operations.mjs": "5eff3c00e9060a4c5de05414401a66e14d83ff01133606b3477016bd23e953da"
+      },
+      "output_sha256": {
+        "L4_General_Human_Review_Round2_Applied.csv": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+        "L4_Agentic_Human_Review_Round2_Applied.csv": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+        "L4_Physical_Human_Review_Round2_Applied.csv": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+        "Human_Review_Round2_Decision_Ledger.csv": "28613d059907c48bff3d5a45303ad1e576a7131bf85dc1f6a4a2f28bf21d5565",
+        "L3_Human_Review_Round2_Reference.csv": "1fa85a56d6be001ed033975d43cbbcd2e7d57bfffc75b36bd111de3ce47120f5",
+        "L3_Human_Review_Round2_Decision_Ledger.csv": "396bb71cd2af673086b56fea1ee959b56dad6f1569076ecd210fd04f7d15df18",
+        "user_directed_operations.csv": "24a49b20c1ef892fdee2835c19966110b36c1128f5fd77620af71426844d8cbe",
+        "L4_Korean_Copyedit_Approved_20260829.csv": "469d1ed03f6cd7ca36fecb9872f09b4c205c4631de9c1555e183d5f3d63e1340",
+        "L4_English_Copyedit_Approved_20260829.csv": "ba2bb0a614112086f2cccfc0ad97efc95fee649c6da13f245912dccabfaf1c5d",
+        "L4_Final_Terminology_L3_Alignment_Approved_20260829.csv": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738"
+      }
+    }
   }
 }

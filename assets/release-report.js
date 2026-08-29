@@ -20,6 +20,10 @@ async function fetchJson(path) {
 
 async function renderManifest() {
   const data = await fetchJson("manifest.json");
+  if (data.release_round === "human_review_round2") {
+    renderRound2Manifest(data);
+    return;
+  }
   const summary = data.summary;
   const outputs = Object.entries(data.primary_outputs);
   const domains = ["General AI", "Physical AI", "Agentic AI"];
@@ -148,6 +152,132 @@ async function renderManifest() {
         </tbody></table></div>
       </section>`);
   }
+}
+
+function renderRound2Manifest(data) {
+  const summary = data.summary;
+  const outputs = Object.entries(data.primary_outputs);
+  const domains = ["General AI", "Agentic AI", "Physical AI"];
+  const colors = { "General AI": "var(--general)", "Agentic AI": "var(--agentic)", "Physical AI": "var(--physical)" };
+  const maxDomain = Math.max(...domains.map((domain) => summary.final_domain_counts[domain]));
+  const maxMapping = Math.max(...domains.map((domain) => summary.mapping_method_counts[domain].EM + summary.mapping_method_counts[domain].HD));
+  const scoreStatuses = Object.entries(summary.score_status_counts || {});
+  const languageReview = data.human_review_round2?.independent_language_review || { status: "PENDING", reviews: [] };
+
+  document.querySelector("#report-root").innerHTML = `
+    <section class="section" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="section-kicker">HUMAN REVIEW ROUND 2</p><h2 id="overview-title">${formatNumber(summary.source_total)}개 입력에서 ${formatNumber(summary.cleaned_total)}개 검수 완료 카드 확정</h2></div><p class="section-note">Release date · ${escapeHtml(data.release_date)}</p></div>
+      <div class="kpi-grid">
+        ${kpi("Input L4", summary.source_total, "previous reviewed release", "var(--navy)")}
+        ${kpi("Final L4", summary.cleaned_total, "human-review round 2", "var(--physical)")}
+        ${kpi("User operations", summary.user_directed_operations, `${summary.explicit_deletions} deletions · ${summary.merged_away} net merged-away`, "var(--agentic)")}
+        ${kpi("Korean edits", summary.korean_copyedit_operations, "approved card-level operations", "var(--general)")}
+        ${kpi("English edits", summary.english_copyedit_operations, "approved card-level operations", "var(--em)")}
+        ${kpi("Validation", `${summary.validation_passed}/${summary.validation_passed + summary.validation_failed}`, "deterministic checks passed", "var(--physical)")}
+      </div>
+    </section>
+
+    <section class="section panel-grid" aria-label="Review method status">
+      <article class="panel">
+        <h3>이번 라운드에서는 EM 및 Hybrid EM을 재실행하지 않음</h3>
+        <p class="panel-subtitle">Previous-run scores remain historical evidence only</p>
+        <div class="table-shell"><table><tbody>
+          <tr><th>Review method</th><td>${escapeHtml(data.mapping_method.name)}</td></tr>
+          <tr><th>EM or Hybrid EM rerun</th><td>No</td></tr>
+          <tr><th>Automatic reassignment</th><td>Disabled</td></tr>
+          <tr><th>L3 master precedence</th><td>Enforced</td></tr>
+        </tbody></table></div>
+      </article>
+      <article class="panel">
+        <h3>독립 언어·용어 검토 ${escapeHtml(languageReview.status)}</h3>
+        <p class="panel-subtitle">Bilingual wording, causal direction, and immutable-L3 fit</p>
+        <div class="validation-bar" role="img" aria-label="${summary.validation_passed} passed and ${summary.validation_failed} failed validation checks">
+          <div class="validation-bar__pass" style="width:${summary.validation_failed ? (summary.validation_passed / (summary.validation_passed + summary.validation_failed)) * 100 : 100}%">PASS ${summary.validation_passed}</div>
+          ${summary.validation_failed ? `<div class="validation-bar__fail" style="width:${(summary.validation_failed / (summary.validation_passed + summary.validation_failed)) * 100}%">FAIL ${summary.validation_failed}</div>` : ""}
+        </div>
+        <div class="table-shell"><table><tbody>
+          ${(languageReview.reviews || []).map((review) => `<tr><th>${escapeHtml(review.reviewer_role)}</th><td>${escapeHtml(review.status)}</td></tr>`).join("") || `<tr><th>Review record</th><td>${escapeHtml(languageReview.status)}</td></tr>`}
+        </tbody></table></div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="cleaning-title">
+      <div class="section-heading"><div><p class="section-kicker">CARD RECONCILIATION</p><h2 id="cleaning-title">삭제·통합 결과가 최종 800건과 일치</h2></div></div>
+      <div class="flow" role="img" aria-label="${summary.source_total} input records minus ${summary.deleted} deletions minus ${summary.merged_away} merged-away records equals ${summary.cleaned_total} final records">
+        ${flowStep("Input", summary.source_total, "reviewed baseline", "")}
+        ${flowStep("Deleted", `−${summary.deleted}`, "explicit reviewer decisions", "negative")}
+        ${flowStep("Merged away", `−${summary.merged_away}`, "net consolidation", "negative")}
+        ${flowStep("Split addition", `+${summary.split_net_addition}`, "no net addition", "positive")}
+        ${flowStep("Final", summary.cleaned_total, "reconciled total", "final")}
+      </div>
+    </section>
+
+    <section class="section panel-grid" aria-label="Release charts">
+      <article class="panel">
+        <h3>도메인별 최종 L4 카드</h3>
+        <p class="panel-subtitle">Final reviewed cards by L1 domain</p>
+        <div class="bar-chart" role="img" aria-label="Final L4 counts by domain">
+          ${domains.map((domain) => barRow(domain, summary.final_domain_counts[domain], maxDomain, colors[domain])).join("")}
+        </div>
+      </article>
+      <article class="panel">
+        <h3>이전 매핑 레이블의 현재 보존 현황</h3>
+        <p class="panel-subtitle">These are retained labels, not fresh EM assignments</p>
+        <div class="stack-chart" role="img" aria-label="Retained EM and HD labels by domain">
+          ${domains.map((domain) => stackRow(domain, summary.mapping_method_counts[domain], maxMapping)).join("")}
+        </div>
+        <div class="legend" aria-hidden="true"><span style="--legend:var(--em)">Retained EM label</span><span style="--legend:var(--hd)">Retained HD decision</span></div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="score-title">
+      <div class="section-heading"><div><p class="section-kicker">SCORE STATUS</p><h2 id="score-title">문구·계층 변경 이후 점수 상태를 명시적으로 공개</h2></div><p class="section-note">No silent score reuse</p></div>
+      <div class="table-shell"><table><thead><tr><th>Status</th><th>Cards</th><th>Interpretation</th></tr></thead><tbody>
+        ${scoreStatuses.map(([status, count]) => `<tr><td><code>${escapeHtml(status)}</code></td><td class="numeric">${formatNumber(count)}</td><td>${escapeHtml(scoreStatusMeaning(status))}</td></tr>`).join("")}
+      </tbody></table></div>
+    </section>
+
+    <section class="section" aria-labelledby="domain-table-title">
+      <div class="section-heading"><div><p class="section-kicker">CHART DATA</p><h2 id="domain-table-title">도메인별 이전·최종 카드와 보존 레이블</h2></div></div>
+      <div class="table-shell"><table><thead><tr><th>Domain</th><th>Previous L4</th><th>Final L4</th><th>Retained EM</th><th>Retained HD</th></tr></thead><tbody>
+        ${domains.map((domain) => `<tr><td>${escapeHtml(domain)}</td><td class="numeric">${formatNumber(summary.source_counts[domain.replace(" AI", "")])}</td><td class="numeric">${formatNumber(summary.final_domain_counts[domain])}</td><td class="numeric">${formatNumber(summary.mapping_method_counts[domain].EM)}</td><td class="numeric">${formatNumber(summary.mapping_method_counts[domain].HD)}</td></tr>`).join("")}
+      </tbody></table></div>
+    </section>
+
+    <section class="section" aria-labelledby="outputs-title">
+      <div class="section-heading"><div><p class="section-kicker">PRIMARY OUTPUTS</p><h2 id="outputs-title">5개 정본 CSV와 SHA-256</h2></div></div>
+      <div class="table-shell"><table><thead><tr><th>File</th><th>Rows</th><th>SHA-256</th></tr></thead><tbody>
+        ${outputs.map(([name, value]) => `<tr><td><a href="data/${encodeURIComponent(name)}">${escapeHtml(name)}</a></td><td class="numeric">${formatNumber(value.rows)}</td><td><code class="hash" title="${escapeHtml(value.sha256)}">${escapeHtml(value.sha256)}</code></td></tr>`).join("")}
+      </tbody></table></div>
+    </section>
+
+    <section class="section panel-grid" aria-label="Provenance and controlled review">
+      <article>
+        <div class="section-heading"><div><p class="section-kicker">SOURCE INTEGRITY</p><h2>Source hashes</h2></div></div>
+        <div class="table-shell"><table><thead><tr><th>Source</th><th>SHA-256</th></tr></thead><tbody>
+          ${Object.entries(data.source_hashes).map(([name, hash]) => `<tr><td>${escapeHtml(name)}</td><td><code class="hash" title="${escapeHtml(hash)}">${escapeHtml(hash)}</code></td></tr>`).join("")}
+        </tbody></table></div>
+      </article>
+      <article>
+        <div class="section-heading"><div><p class="section-kicker">CONTROLLED REVIEW</p><h2>Similarity and vote-log policy</h2></div></div>
+        <div class="table-shell"><table><tbody>
+          <tr><th>Similarity use</th><td>Near-duplicate candidate review only</td></tr>
+          <tr><th>Top pairs published</th><td>${formatNumber(summary.similarity_top_pairs_published)}</td></tr>
+          <tr><th>Candidate scores</th><td>Historical and potentially stale after edits</td></tr>
+          <tr><th>Vote log</th><td>${escapeHtml(data.human_review.vote_log)}</td></tr>
+          <tr><th>Automatic reassignment</th><td>Disabled</td></tr>
+          <tr><th>Application policy</th><td>${escapeHtml(data.human_review.application_policy)}</td></tr>
+        </tbody></table></div>
+      </article>
+    </section>`;
+}
+
+function scoreStatusMeaning(status) {
+  if (status === "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN") return "Previous-run score retained only as stale historical evidence after text editing.";
+  if (status === "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN") return "No inherited score is available after a human-review hierarchy or card change.";
+  if (status === "L3_MASTER_AI_REWRITE") return "Prior mapping label retained; definition was previously rewritten against the L3 master.";
+  if (status === "L3_MASTER_VALIDATED") return "Prior mapping label retained; text was not edited in this round.";
+  return "Explicit score or definition status recorded in the release.";
 }
 
 async function renderValidation() {

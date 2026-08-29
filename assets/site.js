@@ -342,8 +342,8 @@ function cardTemplate(card) {
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
   const statusBadges = card.mapping_method === "HD"
-    ? `<span class="status-badge status--decision">HD / Others</span>`
-    : `<span class="status-badge status--em">EM</span>`;
+    ? `<span class="status-badge status--decision">Retained HD</span>`
+    : `<span class="status-badge status--em">Prior EM</span>`;
   const candidates = (card.review_candidates || []).slice(0, 2);
   return `<article class="risk-card" role="button" tabindex="0" data-id="${card.l4_id}" style="--card-accent:${domainColor}" aria-label="${escapeHtml(card.l4_id)} ${escapeHtml(card.label_en)} 상세 보기">
     <div class="risk-card__top"><div class="risk-card__identity"><span class="risk-id risk-id--domain">${card.l4_id}</span><span class="domain-badge"><span aria-hidden="true">${DOMAIN_ICONS[path.l1] || "•"}</span>${escapeHtml(domainLabel)}</span></div>${statusBadges}</div>
@@ -352,7 +352,7 @@ function cardTemplate(card) {
     ${candidates.length === 2 ? `<div class="card-candidates" aria-label="상위 L3 후보 점수">${candidates.map((candidate) => candidateScoreCompact(candidate)).join("")}</div>` : ""}
     <div class="risk-card__bottom">
       <span class="breadcrumb">${escapeHtml(pathLabel)}</span>
-      ${card.hybrid_em_score != null ? `<span class="metric"><small>HYBRID EM</small><strong>${formatMetric(card.hybrid_em_score)}</strong></span>` : `<span class="metric"><small>DECISION</small><strong>HD</strong></span>`}
+      ${card.hybrid_em_score != null ? `<span class="metric"><small>PRIOR HYBRID EM</small><strong>${formatMetric(card.hybrid_em_score)}</strong></span>` : `<span class="metric"><small>SCORE</small><strong>Unavailable</strong></span>`}
     </div>
   </article>`;
 }
@@ -408,8 +408,8 @@ function openCard(l4Id) {
   const domainColor = DOMAIN_COLORS[path.l1] || "#475467";
   const domainLabel = DOMAIN_LABELS[path.l1] || "Unassigned";
   const statusBadges = card.mapping_method === "HD"
-    ? ` <span class="status-badge status--decision">HD / Others</span>`
-    : ` <span class="status-badge status--em">EM</span>`;
+    ? ` <span class="status-badge status--decision">Retained HD</span>`
+    : ` <span class="status-badge status--em">Prior EM</span>`;
   const attributes = [card.facet ? `Facet: ${card.facet}` : "", card.act_type ? `Act-type: ${card.act_type}` : ""].filter(Boolean);
   const keywords = [...(card.keywords_ko || []), ...(card.keywords_en || [])].filter(Boolean);
   const reviewCandidates = (card.review_candidates || []).slice(0, 2);
@@ -418,16 +418,17 @@ function openCard(l4Id) {
     <h2>${bilingualLabel(card.label_en, card.label_ko)}</h2>
     <div class="dialog-path">${path.nodes.length ? path.nodes.map((node) => `${node.node_id} ${bilingualLabel(node.label_en, node.label_ko)}`).join(" › ") : "L3 not assigned"}</div>
     <section class="dialog-section"><h3>Risk definition</h3><p>${escapeHtml(card.definition_en || "정의 정보 없음")}</p>${card.definition_ko ? `<p class="definition-ko">(${escapeHtml(card.definition_ko)})</p>` : ""}</section>
+    <section class="dialog-section"><h3>Score status</h3><p class="definition-ko">${escapeHtml(scoreStatusText(card))}</p></section>
     <div class="dialog-metrics">
       <div><span>Assigned EM score</span><strong>${formatMetric(card.em_score)}</strong></div>
       <div><span>Hybrid EM score</span><strong>${formatMetric(card.hybrid_em_score)}</strong></div>
       <div><span>Hybrid margin</span><strong>${formatMetric(card.hybrid_em_margin)}</strong></div>
       <div><span>EM stability</span><strong>${formatMetric(card.em_stability)}</strong></div>
     </div>
-    ${reviewCandidates.length === 2 ? `<section class="dialog-section review-section"><h3>Human L3 review</h3><p>두 후보의 기본 EM 점수와 Hybrid EM 점수를 비교해 더 적합한 L3를 선택하세요. 선택 시 GitHub 검수 로그 작성 화면이 열리며, 실제 재배치는 자동 실행되지 않습니다.</p><div class="review-candidates">${reviewCandidates.map((candidate) => reviewCandidateTemplate(card, candidate)).join("")}</div></section>` : ""}
+    ${reviewCandidates.length === 2 ? `<section class="dialog-section review-section"><h3>Human L3 review</h3><p>두 후보 점수는 이전 EM 실행의 이력값입니다. 현재 문구와 계층 편집 이후에는 오래된 값일 수 있습니다. 후보를 비교해 더 적합한 L3를 선택하면 GitHub 검수 로그 작성 화면이 열리며, 실제 재배치는 자동 실행되지 않습니다.</p><div class="review-candidates">${reviewCandidates.map((candidate) => reviewCandidateTemplate(card, candidate)).join("")}</div></section>` : ""}
     ${keywords.length ? `<section class="dialog-section"><h3>Representative concepts</h3><div class="tag-row">${keywords.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
     ${attributes.length ? `<section class="dialog-section"><h3>L4 attributes</h3><div class="tag-row">${attributes.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
-    <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)} · ${escapeHtml(card.domain_route_basis)} · ${escapeHtml(card.transformation_action)}</p>${card.definition_l3_anchor_id ? `<p class="definition-ko">Definition anchor: ${escapeHtml(card.definition_l3_anchor_id)} · ${escapeHtml(card.definition_grounding_action || "validated")} · ${formatMetric(card.definition_l3_anchor_score)}</p>` : ""}${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}</section>
+    <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)} · ${escapeHtml(card.domain_route_basis)} · ${escapeHtml(card.transformation_action)}</p><p class="definition-ko">Score/definition status: ${escapeHtml(card.definition_grounding_action || "not recorded")}</p>${card.definition_l3_anchor_id ? `<p class="definition-ko">Definition anchor: ${escapeHtml(card.definition_l3_anchor_id)} · ${formatMetric(card.definition_l3_anchor_score)}</p>` : ""}${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}</section>
   </div>`;
   ui.dialog.showModal();
 }
@@ -457,6 +458,7 @@ function reviewIssueUrl(card, selected) {
     candidate_1: candidates[0] || null,
     candidate_2: candidates[1] || null,
     mapping_method: card.mapping_method,
+    score_status: card.definition_grounding_action,
     page_url: window.location.href.split("#")[0],
     client_created_at: new Date().toISOString(),
     automatic_reassignment_authorised: false,
@@ -464,6 +466,16 @@ function reviewIssueUrl(card, selected) {
   const title = `[L3 review] ${card.source_row_id} -> ${selected.l3_id}`;
   const body = `<!-- ${REVIEW_SCHEMA} -->\n검수자는 아래 기록을 확인한 뒤 이슈를 제출해 주세요. 실제 재배치는 별도 명시 지시가 있을 때만 수행됩니다.\n\n\`\`\`json\n${JSON.stringify(payload, null, 2)}\n\`\`\``;
   return `https://github.com/${REVIEW_REPOSITORY}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+}
+
+function scoreStatusText(card) {
+  if (card.definition_grounding_action === "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN") {
+    return "2차 휴먼검수에서 문구가 수정되었으며 EM 및 Hybrid EM을 재실행하지 않았습니다. 표시 점수는 이전 실행의 참고값입니다.";
+  }
+  if (card.definition_grounding_action === "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN") {
+    return "2차 휴먼검수에서 계층 또는 카드 구성이 변경되었으며 승계 가능한 EM 점수가 없습니다. 이번 라운드에서는 EM 및 Hybrid EM을 재실행하지 않았습니다.";
+  }
+  return "이번 2차 휴먼검수 라운드에서는 EM 및 Hybrid EM을 재실행하지 않았습니다. 표시되는 점수는 이전 실행에서 보존된 참고값입니다.";
 }
 
 function referenceTemplate(reference) {

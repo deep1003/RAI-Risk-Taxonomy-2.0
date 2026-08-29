@@ -1,0 +1,41 @@
+{
+  "review_date": "2026-08-29",
+  "status": "PASS",
+  "method": "Two independent specialist reviews of final bilingual language, immutable-L3 boundary alignment, and explicit human-review instruction fidelity",
+  "reviewers": [
+    {
+      "review_id": "final_korean_terminology_review",
+      "verdict": "PASS",
+      "scope": "Korean and English policy terminology, natural Korean phrasing, L3 boundary alignment, and final correction verification"
+    },
+    {
+      "review_id": "korean_copyedit_manifest_audit",
+      "verdict": "PASS",
+      "scope": "Independent language audit, bilingual semantic equivalence, source-instruction fidelity, and final correction verification"
+    }
+  ],
+  "final_counts": {
+    "total": 798,
+    "General": 630,
+    "Agentic": 74,
+    "Physical": 94,
+    "final_terminology_l3_qa_operations": 279,
+    "deterministic_checks_passed": 30,
+    "deterministic_checks_total": 30
+  },
+  "verified_corrections": [
+    "Direct L3 remapping of cards with unambiguous immutable-master matches",
+    "Scope narrowing for copyright, privacy, weaponisation, evaluation, value, and governance cards",
+    "Removal of Korean translation artefacts, undefined abbreviations, duplicated risk endings, and ambiguous English negation",
+    "Atomic transfer of SRC-P-0196 to A_Others in accordance with the explicit human-review instruction",
+    "Final verification of all specialist-identified deployment blockers"
+  ],
+  "sha256": {
+    "L4_General": "1294906fd5581228fb523ce7ca99a5cd820a617fbc2c68d61051f2340b2f429a",
+    "L4_Agentic": "b2ba05c01efaec28bfef92b965a27400ffaa1dd692328c0c83ed943a5066f783",
+    "L4_Physical": "427863e237442e3439bf99b0612cd50c1577a92b81d70b6d28509dcc21419916",
+    "final_qa_manifest": "790f9f8902845c13613ab66832b022b7f6ca6430fc421cbcc7944cfb02973738",
+    "l3_master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df"
+  },
+  "em_or_hybrid_em_rerun": false
+}

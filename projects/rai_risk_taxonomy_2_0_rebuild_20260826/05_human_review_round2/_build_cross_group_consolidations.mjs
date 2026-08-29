@@ -1,0 +1,46 @@
+import fs from "node:fs/promises";
+import { Workbook } from "@oai/artifact-tool";
+
+const outputPath = new URL("../02_working/specifications/human_review_round2/expert_cross_group_consolidations.csv", import.meta.url);
+const header = [
+  "Consolidation_ID",
+  "Decision_Type",
+  "Target_L3_ID",
+  "L4_Title_ko",
+  "L4_Title_en",
+  "Source_L4_IDs_Before",
+  "Decision_Rationale",
+  "Approval_Status",
+];
+const rows = [
+  ["XGC-001", "EXACT_DUPLICATE_CONSOLIDATION", "G_INT_ALLOC", "보호집단에 대한 불리한 자원 배분", "Adverse resource allocation to protected groups", "G_INT_ALLOC_002|G_INT_REPR_003", "Independent split instructions produced the same atomic allocation-harm card; consolidate explicitly while unioning lineage and attributes.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-002", "EXACT_DUPLICATE_CONSOLIDATION", "G_INT_REPR", "보호집단 고정관념의 재생산", "Reproduction of stereotypes about protected groups", "G_INT_ALLOC_002|G_INT_REPR_003|G_INT_UNETH_018", "Independent split instructions produced the same atomic representational-harm card; the unsupported G_SOC_CULT_010 child is excluded.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-003", "EXACT_DUPLICATE_CONSOLIDATION", "G_SYS_OEXT", "AI 역량의 검증범위 초과 사용", "Use of AI capability beyond its validated scope", "G_INT_ANTH_014|G_INT_PRIV_019", "Independent split instructions produced the same validated-scope exceedance card; consolidate explicitly.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-004", "EXACT_DUPLICATE_CONSOLIDATION", "G_INT_ILLEGAL", "불법적 명예·권리 침해 지원", "Assistance with unlawful reputational or rights violations", "G_INT_COPY_006|G_INT_POL_001", "Independent split instructions produced the same unlawful rights-violation assistance card; consolidate explicitly.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-005", "EXACT_DUPLICATE_CONSOLIDATION", "G_INT_POL", "개인화된 정치적 영향 조작", "Personalised manipulation of political influence", "G_INT_POL_001|G_INT_POL_003|G_INT_POL_009|G_INT_POL_010|G_SOC_DEMOC_001|G_SYS_MISINFO_012", "Six split instructions produced the same political-influence mechanism; consolidate explicitly without changing its L3 assignment.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-006", "EXACT_DUPLICATE_CONSOLIDATION", "G_INT_UNETH", "취약성을 이용한 행동 조작", "Behavioural manipulation through exploitation of vulnerabilities", "G_INT_POL_003|G_INT_UNETH_018|G_SYS_OEXT_013", "Three split instructions produced the same vulnerability-exploitation mechanism; consolidate explicitly.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-007", "EXACT_DUPLICATE_CONSOLIDATION", "G_SOC_DEMOC", "민주적 공론과 시민 신뢰의 침식", "Erosion of democratic discourse and civic trust", "G_INT_POL_003|G_INT_POL_009|G_INT_POL_010|G_SOC_DEMOC_001|G_SYS_MISINFO_012|G_SYS_OEXT_013", "Six split instructions produced the same democratic-discourse harm card; consolidate explicitly.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-008", "EXACT_DUPLICATE_CONSOLIDATION", "G_Others", "저자원 언어에서의 성능·역량 부족", "Insufficient performance and capability for low-resource languages", "G_INT_ALLOC_004|G_SYS_CONTEXT_006", "Two intent-correction splits produced the same boundary card in Others; consolidate explicitly while retaining HD status.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+  ["XGC-009", "EXACT_DUPLICATE_CONSOLIDATION", "P_SYS_CONTROL", "잘못된 상황 해석에 따른 위험한 물리 구동", "Unsafe physical actuation following incorrect situation interpretation", "G_SYS_INPUT_002|G_SYS_INPUT_004", "Two split instructions produced the same physical-control harm mechanism; consolidate explicitly and union cross-domain lineage.", "APPROVED_PIPELINE_INTEGRITY_REVIEW"],
+];
+
+const workbook = await Workbook.create();
+const sheet = workbook.worksheets.add("Consolidations");
+const values = [header, ...rows];
+sheet.getRangeByIndexes(0, 0, values.length, header.length).values = values;
+const inspection = await workbook.inspect({
+  kind: "table",
+  range: `Consolidations!A1:H${values.length}`,
+  include: "values",
+  tableMaxRows: values.length,
+  tableMaxCols: header.length,
+  maxChars: 12000,
+});
+console.log(inspection.ndjson);
+
+function csvCell(value) {
+  const text = String(value ?? "");
+  return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+const csv = values.map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
+await fs.writeFile(outputPath, csv, "utf8");

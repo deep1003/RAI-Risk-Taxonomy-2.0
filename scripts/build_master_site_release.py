@@ -48,14 +48,20 @@ def update_static_html(counts: dict[str, int], validation: dict[str, int | str])
     html = index_path.read_text(encoding="utf-8")
     html = re.sub(r"explore \d+ bilingual L4", f"explore {counts['l4']} bilingual L4", html)
     html = re.sub(r"Master · \d+ L4 Risks", f"Master · {counts['l4']} L4 Risks", html)
-    html = re.sub(r'(<strong id="stat-l4">)\d+(</strong><small>)\d+ EM assignments · \d+ HD/Others assignments',
-                  rf"\g<1>{counts['l4']}\g<2>{counts['em']} EM assignments · {counts['hd']} HD/Others assignments", html)
+    html = re.sub(
+        r'(<strong id="stat-l4">)\d+(</strong><small>).*?(</small>)',
+        rf"\g<1>{counts['l4']}\g<2>{counts['em']} retained EM labels · {counts['hd']} retained HD decisions\g<3>",
+        html,
+    )
     html = re.sub(r"\d+/\d+ QA PASS", f"{validation['passed']}/{validation['passed']} QA PASS", html)
     html = re.sub(r"\d+/\d+ PASS · HTML", f"{validation['passed']}/{validation['passed']} PASS · HTML", html)
     for label, count in (("L4 General", counts["general"]), ("L4 Agentic", counts["agentic"]), ("L4 Physical", counts["physical"])):
         html = re.sub(rf"(<strong>{re.escape(label)}</strong><span>)\d+ rows", rf"\g<1>{count} rows", html)
-    html = re.sub(r"\d+ final L4 cards · \d+ EM · \d+ HD/Others · 49 L3 categories",
-                  f"{counts['l4']} final L4 cards · {counts['em']} EM · {counts['hd']} HD/Others · 49 L3 categories", html)
+    html = re.sub(
+        r"\d+ final L4 cards · .*? · 49 L3 categories",
+        f"{counts['l4']} final L4 cards · {counts['em']} retained EM labels · {counts['hd']} retained HD decisions · 49 L3 categories",
+        html,
+    )
     html = re.sub(r"post-build validation \d+/\d+ PASS",
                   f"post-build validation {validation['passed']}/{validation['passed']} PASS", html)
     index_path.write_text(html, encoding="utf-8")
@@ -168,6 +174,7 @@ def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]
                 "hybrid_em_score": optional_float(row[f"Candidate_{rank}_Hybrid_Score"]),
             }
             for rank in (1, 2)
+            if row[f"Candidate_{rank}_L3_ID"].strip()
         ],
         "ko_top_l3_id": row["KO_Top_L3_ID"] or None,
         "en_top_l3_id": row["EN_Top_L3_ID"] or None,
@@ -204,7 +211,7 @@ def main() -> None:
     manifest = {
         "release_id": RELEASE_ID,
         "release_status": "master",
-        "created_at": "2026-08-26T00:00:00+09:00",
+        "created_at": "2026-08-29T00:00:00+09:00",
         "counts": {
             "l0": 1,
             "l1": len({row["L1_ID"] for row in hierarchy_rows}),
@@ -225,22 +232,22 @@ def main() -> None:
             "deleted": source_summary["deleted"],
             "merged_away": source_summary["merged_away"],
             "split_net_addition": source_summary["split_net_addition"],
-            "title_terminology_normalisations": source_summary["title_terminology_normalisations"],
-            "semantic_near_duplicate_candidates": source_summary["semantic_near_duplicate_candidates"],
-            "semantic_near_duplicate_deletions": source_summary["semantic_near_duplicate_deletions"],
-            "l1_cross_domain_reviewed": source_summary["l1_cross_domain_reviewed"],
-            "l1_cross_domain_forced_others": source_summary["l1_cross_domain_forced_others"],
+            "user_directed_operations": source_summary["user_directed_operations"],
+            "korean_copyedit_operations": source_summary["korean_copyedit_operations"],
+            "english_copyedit_operations": source_summary["english_copyedit_operations"],
+            "net_reduction": source_summary["net_reduction"],
             "final_total": source_summary["cleaned_total"],
         },
         "method": {
-            "algorithm": "Anchor-regularised keyword-augmented constrained EM with BGE-M3 semantic representations",
-            "boundary_policy": "HD assignment to domain-specific Others",
-            "l1_routing_policy": "Confirm L1 before domain-constrained L3 EM; keep eligible no-match risks in the confirmed L1's Others queue",
+            "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
+            "em_or_hybrid_em_executed_in_this_round": False,
+            "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
+            "boundary_policy": "Retain reviewed HD decisions and domain-specific Others assignments without automatic reassignment",
+            "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
             "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
-            "semantic_deduplication_policy": "Bilingual similarity generates candidates only; deletion requires same L3 scope and no distinct target or harm mechanism",
-            "representative_keywords_per_language": source_summary["keyword_count_per_language"],
+            "semantic_deduplication_policy": "Bilingual similarity generates review candidates only and does not trigger automatic deletion or reassignment",
         },
         "human_review": {
             "review_snapshot_id": review_snapshot_id,
@@ -248,8 +255,10 @@ def main() -> None:
             "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
             "daily_aggregation": True,
             "automatic_reassignment": False,
+            "score_warning": "Candidate scores may be stale after text or hierarchy edits; unavailable scores are displayed as unavailable",
             "application_policy": "Only after an explicit user instruction to analyse and apply review logs",
         },
+        "score_status_counts": source_summary["score_status_counts"],
         "validation": {"status": "PASS", "passed": source_summary["validation_passed"],
                        "failed": source_summary["validation_failed"]},
         "artifacts": {
