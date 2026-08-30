@@ -10,10 +10,10 @@
     "l3": 49,
     "l3_immutable": 46,
     "l3_others": 3,
-    "l4": 645,
-    "em": 349,
-    "hd": 296,
-    "general": 503,
+    "l4": 629,
+    "em": 334,
+    "hd": 295,
+    "general": 487,
     "agentic": 65,
     "physical": 77
   },
@@ -25,8 +25,8 @@
     "user_directed_operations": 184,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "net_reduction": 153,
-    "final_total": 645
+    "net_reduction": 169,
+    "final_total": 629
   },
   "method": {
     "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
@@ -87,5 +87,6 @@
   "audit_correction_20260829_ac02": "AC-02: 58 redundant cards absorbed across 8 L3s (two-reviewer consensus); IDs retired permanently, no renumbering",
   "audit_correction_20260829_ac05": "AC-05: populated empty L3s (G_SYS_OREF, P_INT_TAMPER) with 1 split, 1 transfer, 4 new referenced cards",
   "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
-  "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals"
+  "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
+  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)"
 }

@@ -8,8 +8,8 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 
 - L1: 3 domains
 - L3: 49 categories
-- L4: 645 cards
-- General AI: 503 cards
+- L4: 629 cards
+- General AI: 487 cards
 - Agentic AI: 65 cards
 - Physical AI: 77 cards
 - Others assignments: 0
@@ -33,3 +33,4 @@ The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public ca
 - AC-05: Populated the two empty L3 categories. G_SYS_OREF (over-refusal): axis split from A_SYS_GOAL_022 plus two new cards grounded in XSTest, OR-Bench and AgentHarm. P_INT_TAMPER (physical tampering): sensor spoofing card transferred from G_SYS_SECADV plus two new cards grounded in Cao et al. (CCS 2019), NIST SP 800-82r3 and SP 800-193. Every added or changed card carries verified reference links (References column / dialog section). Card total 720 -> 725.
 - AC-06: Added one literature-grounded card each to the two under-populated L3s (G_SYS_INCONS: prompt-format output variability, Sclar et al. ICLR 2024; A_SYS_SELFCOR: intrinsic self-correction failure, Huang et al. ICLR 2024) and absorbed 16 consensus-redundant cards in G_SOC_GOV (-10) and G_INT_UNETH (-6) per two independent reviewers. Card total 725 -> 711.
 - AC-07: MECE curation across all 46 L3 categories by two independent reviewers (consensus only): 64 within-L3 duplicates absorbed into representatives, 18 weakly-attributed cards reattributed to their proper L3 (new IDs; old IDs retired), 2 cards removed. Card total 711 -> 645.
+- AC-08: Decomposed 18 consensus composite cards (two independent reviewers): 17 retired with meaning fragments absorbed into existing detail cards (lineage unions distributed); G_INT_SELF_004 sharpened to the encouragement axis and G_INT_SELF_008 (failure to respond to self-harm/suicide crisis signals) added, grounded in Moore et al., ACM FAccT 2025. Card total 645 -> 629.
