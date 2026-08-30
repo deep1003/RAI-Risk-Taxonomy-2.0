@@ -39,22 +39,32 @@ class MasterSiteReleaseTests(unittest.TestCase):
         )
 
     def test_public_counts_match_reviewed_release(self) -> None:
-        self.assertEqual(len(self.cards), 777)
-        self.assertEqual(self.manifest["counts"]["l3"], 49)
+        self.assertEqual(len(self.cards), 629)
+        self.assertEqual(self.manifest["counts"]["l3"], 50)
+        self.assertEqual(self.manifest["counts"]["l3_master"], 47)
         self.assertEqual(self.manifest["counts"]["l3_immutable"], 46)
         self.assertEqual(self.manifest["counts"]["l3_others"], 3)
-        self.assertEqual(Counter(card["mapping_method"] for card in self.cards), Counter({"EM": 425, "HD": 352}))
+        self.assertEqual(Counter(card["mapping_method"] for card in self.cards), Counter({"EM": 334, "HD": 295}))
         self.assertEqual(
             Counter(card["primary_l3_id"].split("_")[0] for card in self.cards),
-            Counter({"G": 607, "P": 93, "A": 77}),
+            Counter({"G": 487, "P": 77, "A": 65}),
         )
 
     def test_every_card_resolves_to_a_bilingual_l3_node(self) -> None:
         l3 = {node["node_id"]: node for node in self.hierarchy["nodes"] if node["level"] == 3}
-        self.assertEqual(len(l3), 49)
+        self.assertEqual(len(l3), 50)
         self.assertTrue(all(card["primary_l3_id"] in l3 for card in self.cards))
         self.assertTrue(all(card["label_en"] and card["label_ko"] for card in self.cards))
         self.assertTrue(all(card["definition_en"] and card["definition_ko"] for card in self.cards))
+
+    def test_performance_reliability_l3_is_fully_propagated(self) -> None:
+        nodes = [node for node in self.hierarchy["nodes"] if node["node_id"] == "G_SYS_PERF"]
+        self.assertEqual(len(nodes), 1)
+        self.assertEqual(nodes[0]["parent_id"], "G_SYS")
+        self.assertEqual(nodes[0]["label_ko"], "성능·신뢰성 실패")
+        self.assertEqual(nodes[0]["label_en"], "Performance and Reliability Failure")
+        cards = [card for card in self.cards if card["primary_l3_id"] == "G_SYS_PERF"]
+        self.assertEqual([card["l4_id"] for card in cards], [f"G_SYS_PERF_{index:03d}" for index in range(1, 11)])
 
     def test_others_are_hd_assignments_without_equating_hd_and_others(self) -> None:
         others = {"G_Others", "A_Others", "P_Others"}
@@ -66,12 +76,12 @@ class MasterSiteReleaseTests(unittest.TestCase):
         cleaning = self.manifest["cleaning"]
         self.assertEqual(cleaning["source_total"] - cleaning["deleted"] - cleaning["merged_away"] + cleaning["split_net_addition"], cleaning["final_total"])
         self.assertEqual(cleaning["source_total"], 798)
-        self.assertEqual(cleaning["deleted"], 13)
-        self.assertEqual(cleaning["merged_away"], 22)
-        self.assertEqual(cleaning["split_net_addition"], 14)
-        self.assertEqual(cleaning["final_total"], 777)
+        self.assertEqual(cleaning["deleted"], 15)
+        self.assertEqual(cleaning["merged_away"], 177)
+        self.assertEqual(cleaning["split_net_addition"], 23)
+        self.assertEqual(cleaning["final_total"], 629)
         self.assertEqual(cleaning["user_directed_operations"], 184)
-        self.assertEqual(self.manifest["validation"], {"status": "PASS", "passed": 10, "failed": 0})
+        self.assertEqual(self.manifest["validation"], {"status": "PASS", "passed": 5, "failed": 0})
 
     def test_score_statuses_are_explicit_and_reconciled(self) -> None:
         forbidden = {"em_score", "em_margin", "hybrid_em_score", "hybrid_em_margin", "em_stability", "review_candidates", "definition_grounding_action", "definition_l3_anchor_score"}
@@ -81,8 +91,8 @@ class MasterSiteReleaseTests(unittest.TestCase):
         page = (ROOT / "index.html").read_text(encoding="utf-8")
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8")
         self.assertIn(f'public/data/releases/{RELEASE_ID}', script)
-        self.assertIn("777 final L4 cards", page)
-        self.assertIn("10/10 QA PASS", page)
+        self.assertIn("629 final L4 cards", page)
+        self.assertIn("5/5 QA PASS", page)
         self.assertIn("현재 웹 리스크 카드에는 EM, Hybrid EM 또는 관련 점수를 표시하지 않습니다.", page)
         for name in ("L1_Master.csv", "L1_L2_L3_Master.csv", "L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv"):
             self.assertIn(f"releases/{RELEASE_ID}/data/{name}", page)
@@ -120,7 +130,7 @@ class MasterSiteReleaseTests(unittest.TestCase):
     def test_manifest_hashes_match_distribution_manifest(self) -> None:
         source_manifest = json.loads((SOURCE / "manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(self.manifest["artifacts"], source_manifest["primary_outputs"])
-        self.assertEqual(len(read_csv(SOURCE / "data" / "L1_L2_L3_Master.csv")), 49)
+        self.assertEqual(len(read_csv(SOURCE / "data" / "L1_L2_L3_Master.csv")), 50)
 
 
 if __name__ == "__main__":

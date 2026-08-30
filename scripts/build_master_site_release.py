@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ID = "RAI-Risk-Taxonomy-2.0-master"
 SOURCE = ROOT / "releases" / RELEASE_ID
 DATA = SOURCE / "data"
+FULL_DATA = ROOT / "handover" / "RAI-Risk-Taxonomy-2.0-master_20260829" / "01_data"
 OUT = ROOT / "public" / "data" / "releases" / RELEASE_ID
 
 L4_FILES = ("L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv")
@@ -58,10 +59,12 @@ def update_static_html(counts: dict[str, int], validation: dict[str, int | str])
     for label, count in (("L4 General", counts["general"]), ("L4 Agentic", counts["agentic"]), ("L4 Physical", counts["physical"])):
         html = re.sub(rf"(<strong>{re.escape(label)}</strong><span>)\d+ rows", rf"\g<1>{count} rows", html)
     html = re.sub(
-        r"\d+ final L4 cards · .*? · 49 L3 categories",
-        f"{counts['l4']} final L4 cards · {counts['em']} retained EM labels · {counts['hd']} retained HD decisions · 49 L3 categories",
+        r"\d+ final L4 cards · .*? · \d+ L3 categories",
+        f"{counts['l4']} final L4 cards · {counts['em']} retained EM labels · {counts['hd']} retained HD decisions · {counts['l3']} L3 categories",
         html,
     )
+    html = re.sub(r'(<strong id="stat-l3">)\d+(</strong>)', rf"\g<1>{counts['l3']}\g<2>", html)
+    html = re.sub(r"\d+ L3 nodes", f"{counts['l3']} L3 nodes", html)
     html = re.sub(r"post-build validation \d+/\d+ PASS",
                   f"post-build validation {validation['passed']}/{validation['passed']} PASS", html)
     index_path.write_text(html, encoding="utf-8")
@@ -177,17 +180,66 @@ def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]
 
 def main() -> None:
     hierarchy_rows = read_csv(DATA / "L1_L2_L3_Master.csv")
-    card_rows = [row for name in L4_FILES for row in read_csv(DATA / name)]
-    review_snapshot_id = hashlib.sha256(
-        "|".join(sha256(DATA / name) for name in L4_FILES).encode("utf-8")
-    ).hexdigest()[:16]
-    cards = [site_card(row, review_snapshot_id) for row in card_rows]
+    public_rows = [row for name in L4_FILES for row in read_csv(DATA / name)]
+    card_rows = [row for name in L4_FILES for row in read_csv(FULL_DATA / name)]
+    public_by_id = {row["L4_ID"]: row for row in public_rows}
+    full_by_id = {row["L4_ID"]: row for row in card_rows}
+    if set(public_by_id) != set(full_by_id):
+        raise ValueError("Full-column handover and public CSV card IDs differ")
+    core_fields = (
+        "L3_ID", "L4_Title_ko", "L4_Title_en", "L4_Description_ko",
+        "L4_Description_en", "facet", "act-type",
+    )
+    mismatched = [
+        l4_id for l4_id in public_by_id
+        if any(public_by_id[l4_id].get(field, "") != full_by_id[l4_id].get(field, "") for field in core_fields)
+    ]
+    if mismatched:
+        raise ValueError(f"Full/public core fields differ for {len(mismatched)} cards")
+    previous_cards_path = OUT / "cards.json"
+    previous_cards = {}
+    if previous_cards_path.is_file():
+        previous_cards = {
+            card["l4_id"]: card
+            for card in json.loads(previous_cards_path.read_text(encoding="utf-8"))["cards"]
+        }
+    if set(previous_cards) != set(full_by_id):
+        raise ValueError("Existing public card bundle and canonical CSV card IDs differ")
+    cards = [previous_cards[row["L4_ID"]] for row in card_rows]
+    card_core_fields = {
+        "label_ko": "L4_Title_ko",
+        "label_en": "L4_Title_en",
+        "definition_ko": "L4_Description_ko",
+        "definition_en": "L4_Description_en",
+        "primary_l3_id": "L3_ID",
+        "mapping_method": "Mapping_Method",
+    }
+    card_mismatches = [
+        row["L4_ID"]
+        for row, card in zip(card_rows, cards, strict=True)
+        if any(card.get(card_field) != row[csv_field] for card_field, csv_field in card_core_fields.items())
+    ]
+    if card_mismatches:
+        raise ValueError(f"Public card bundle differs from canonical CSVs for {len(card_mismatches)} cards")
+    snapshot_ids = {card["review_snapshot_id"] for card in cards}
+    if len(snapshot_ids) != 1:
+        raise ValueError("Public cards do not share one review snapshot ID")
+    review_snapshot_id = snapshot_ids.pop()
     nodes = hierarchy_nodes(hierarchy_rows)
 
     domain_counts = Counter(row["L1_ID"] for row in card_rows)
     mapping_counts = Counter(row["Mapping_Method"] for row in card_rows)
     manifest_source = json.loads((SOURCE / "manifest.json").read_text(encoding="utf-8"))
     source_summary = manifest_source["summary"]
+    previous_manifest_path = OUT / "manifest.json"
+    previous_manifest = (
+        json.loads(previous_manifest_path.read_text(encoding="utf-8"))
+        if previous_manifest_path.is_file() else {}
+    )
+    score_status_counts = Counter(
+        (row.get("Definition_Grounding_Action") or "NOT_APPLICABLE").strip()
+        for row in card_rows
+    )
     manifest = {
         "release_id": RELEASE_ID,
         "release_status": "master",
@@ -198,6 +250,7 @@ def main() -> None:
             "l2_categories": len(L2_CATEGORY_IDS),
             "l2_domain_paths": len({row["L2_ID"] for row in hierarchy_rows if row["L2_ID"]}),
             "l3": len(hierarchy_rows),
+            "l3_master": sum(row["Master_Status"] != "DERIVED_OTHERS_HD" for row in hierarchy_rows),
             "l3_immutable": sum(row["Master_Status"] == "IMMUTABLE_SOURCE" for row in hierarchy_rows),
             "l3_others": sum(row["Master_Status"] == "DERIVED_OTHERS_HD" for row in hierarchy_rows),
             "l4": len(cards),
@@ -239,7 +292,7 @@ def main() -> None:
             "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
             "application_policy": "Only after an explicit user instruction to analyse and apply review logs",
         },
-        "score_status_counts": source_summary["score_status_counts"],
+        "score_status_counts": dict(score_status_counts),
         "validation": {"status": "PASS", "passed": source_summary["validation_passed"],
                        "failed": source_summary["validation_failed"]},
         "artifacts": {
@@ -247,6 +300,7 @@ def main() -> None:
             for name in ("L1_Master.csv", "L1_L2_L3_Master.csv", *L4_FILES)
         },
     }
+    manifest.update({key: value for key, value in previous_manifest.items() if key.startswith("audit_correction_")})
 
     hierarchy = {
         "release_id": RELEASE_ID,
@@ -258,7 +312,9 @@ def main() -> None:
         ],
     }
     write_json(OUT / "hierarchy.json", hierarchy)
-    write_json(OUT / "cards.json", {"release_id": RELEASE_ID, "cards": cards})
+    # The reviewed card bundle is authoritative here. Rebuilding it from the
+    # reduced public CSVs would discard review/reference fields and create
+    # release-wide formatting churn; validate it above and leave its bytes intact.
     write_json(OUT / "manifest.json", manifest)
     write_json(
         ROOT / "data" / "current.json",

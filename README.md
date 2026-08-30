@@ -1,19 +1,19 @@
 # RAI Risk Taxonomy
 
 Versioned data package for RAI Risk Taxonomy 2.0. The current reviewed master
-release contains 834 bilingual L4 risk cards mapped to 49 L3 categories. It
-includes 769 EM assignments and 65 HD assignments to domain-specific Others
-categories.
+release contains 629 bilingual L4 risk cards mapped to 50 L3 categories. It
+includes 334 retained EM assignments and 295 human-decision assignments; no
+card remains assigned to a domain-specific Others category.
 
 ## Current master release
 
 - Release: `RAI-Risk-Taxonomy-2.0-master`
 - L1: 3 domains
 - L2: 3 dimensions
-- L3: 49 categories, comprising 46 immutable source categories and 3 derived Others categories
-- L4: 834 final cards, comprising 618 General, 85 Agentic, and 131 Physical
-- Mapping: 769 EM and 65 HD/Others assignments
-- Validation: 18 passed, 0 failed
+- L3: 50 categories, comprising 46 immutable source categories, the human-review-created `G_SYS_PERF`, and 3 derived Others categories
+- L4: 629 final cards, comprising 487 General, 65 Agentic, and 77 Physical
+- Mapping: 334 retained EM and 295 human-decision assignments; 0 Others assignments
+- Validation: 5 passed, 0 failed
 - Canonical artifacts: `releases/RAI-Risk-Taxonomy-2.0-master/`
 - Website bundle: `public/data/releases/RAI-Risk-Taxonomy-2.0-master/`
 

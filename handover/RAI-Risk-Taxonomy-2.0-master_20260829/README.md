@@ -23,7 +23,7 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 - `04_web`: public card data, public manifest, and the release homepage snapshot
 - `SHA256SUMS.txt`: integrity checksums for the delivered files
 
-The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public card data. Further remapping or application of human-review votes requires a separate explicit instruction.
+The pre-AC-14 L3 master was extended only by the explicitly approved `G_SYS_PERF`; no other L3 definition changed. No EM or Hybrid EM score is exposed in the public card data. Further remapping or application of human-review votes requires a separate explicit instruction.
 
 ## Audit correction (2026-08-29)
 
