@@ -1,4 +1,5 @@
-﻿Domain,Previous_release,Current_release,Net_change
-General,599,630,31
-Agentic,90,74,-16
-Physical,119,94,-25
+﻿Domain,Previous_release,Audited_release,Net_change,Retained_EM,Retained_HD
+General,630,487,-143,257,230
+Agentic,74,65,-9,36,29
+Physical,94,77,-17,41,36
+Total,798,629,-169,334,295
