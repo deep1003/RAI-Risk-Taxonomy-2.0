@@ -76,7 +76,7 @@
       "rows": 3
     },
     "L1_L2_L3_Master.csv": {
-      "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+      "sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
       "rows": 49
     },
     "L4_General.csv": {
@@ -92,7 +92,7 @@
       "rows": 77
     }
   },
-  "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+  "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
   "review_decisions": 184,
   "semantic_deduplication": {
     "approved_clusters": 10,
@@ -127,7 +127,7 @@
   "source_register_rows": 808,
   "deterministic_replay": "PASS",
   "source_hashes": {
-    "L3_Master": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+    "L3_Master": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
     "Recovery_Decisions": "ed7abf98ebd5825d1ec454e543e019f0989ac6d77da4f3676daf882b3f14ba1a",
     "Instruction_Register": "bfe843387ac40195f40d987e63db3dd19637e1fccb1c2cf84237ab690e33977e"
   },
@@ -247,5 +247,6 @@
   },
   "audit_correction_20260830_ac09": "AC-09: technical reports (KO/EN) rewritten and recompiled against the 629-card release; figures and internal snapshots synchronised; Mapping provenance section removed from the card detail view",
   "audit_correction_20260830_ac10": "AC-10: human-review and References columns dropped from the published CSVs (25 columns); full-column originals retained in the handover and project archive",
-  "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)"
+  "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)",
+  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)"
 }

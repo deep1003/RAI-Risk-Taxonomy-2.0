@@ -11,7 +11,7 @@ Current master: second-round human-review recovery (2026-08-29) followed by the 
 - Final Others assignments: 0
 - Deterministic recovery validation: 5 recorded checks, 5 PASS, 0 FAIL
 - EM and Hybrid EM rerun in this review round: no
-- L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
+- L3 master SHA-256: `1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54`
 
 Prior-run mapping scores are retained only as historical evidence and are not published. The score and keyword columns were removed from the released CSVs by AC-04 and AC-10, so the published files carry 25 columns covering the L0 to L4 hierarchy, bilingual definitions, facet, and act-type.
 

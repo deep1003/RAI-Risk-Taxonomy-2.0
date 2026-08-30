@@ -7,13 +7,13 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 ## Final release
 
 - L1: 3 domains
-- L3: 49 categories
+- L3: 50 categories (47 master + 3 Others)
 - L4: 629 cards
 - General AI: 487 cards
 - Agentic AI: 65 cards
 - Physical AI: 77 cards
 - Others assignments: 0
-- L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
+- L3 master SHA-256: `1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54`
 
 ## Directory structure
 
@@ -38,3 +38,4 @@ The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public ca
 - AC-10: Dropped the human-review and References columns from the published CSVs (25 columns). Both fields remain in this handover's full-column data and in `04_web/cards.json`.
 - AC-11: Attached verified literature references to 160 cards. Six proposal agents, two independent reviewers, then a third-party re-verification of all 131 unique URLs against the arXiv and Crossref APIs; claimed titles matched the resolved records 158/158 and no fabricated citation was found.
 - AC-12: Release metadata sync. `manifest.json` still reported the pre-audit 777-card figures and was rendering the public Release Manifest page from them, so it now carries the 629-card counts with the round-2 stage figures preserved under `round2_pipeline_historical`; the manifest page's renderer, which failed outright on this release, was repaired; the release README was rewritten to the 629-card state; the two AC-07 removals missing from `Deletion_Tombstones.csv` were added (19 rows, matching the disposition ledger); and `SHA256SUMS.txt`, empty since AC-05, was regenerated over all 23 delivered files. No card data changed.
+- AC-14: Created the new L3 category `G_SYS_PERF` (성능·신뢰성 실패 / Performance and Reliability Failure) as explicitly requested in the second-round human review, and reattributed 10 cards to it by two-reviewer consensus (EVAL 6, SECADV 2, CONTEXT 1, OVERCONF 1). Card total unchanged at 629; L3 master now 50 rows and its SHA-256 has changed accordingly.

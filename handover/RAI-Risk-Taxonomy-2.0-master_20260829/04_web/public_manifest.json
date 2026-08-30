@@ -7,8 +7,8 @@
     "l1": 3,
     "l2_categories": 3,
     "l2_domain_paths": 7,
-    "l3": 49,
-    "l3_immutable": 46,
+    "l3": 50,
+    "l3_immutable": 47,
     "l3_others": 3,
     "l4": 629,
     "em": 334,
@@ -67,7 +67,7 @@
       "rows": 3
     },
     "L1_L2_L3_Master.csv": {
-      "sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
+      "sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
       "rows": 49
     },
     "L4_General.csv": {
@@ -88,5 +88,6 @@
   "audit_correction_20260829_ac05": "AC-05: populated empty L3s (G_SYS_OREF, P_INT_TAMPER) with 1 split, 1 transfer, 4 new referenced cards",
   "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
   "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
-  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)"
+  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
+  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)"
 }
