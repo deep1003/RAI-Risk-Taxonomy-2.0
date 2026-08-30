@@ -1,6 +1,6 @@
 # Human Review Intent Audit
 
-Date: 2026-08-30  
+Date: 2026-08-30
 Mode: Read-only audit. No taxonomy, mapping, website, or release data were modified.
 
 ## 1. Scope
@@ -64,4 +64,3 @@ Two additional semantic-review candidates were not confirmed as severe violation
 ## 7. Conclusion
 
 The current release is structurally coherent, but it is not fully compliant with the recorded human-review intent. The three cases above should be treated as decision-governance exceptions. No restoration, remapping, rewriting, or deletion reversal has been performed in this audit.
-

@@ -1,6 +1,6 @@
 # Human Review Intent Audit
 
-Date: 2026-08-30  
+Date: 2026-08-30
 Mode: Read-only audit. No taxonomy, mapping, website, or release data were modified.
 
 ## 1. Scope
