@@ -8,10 +8,10 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 
 - L1: 3 domains
 - L3: 49 categories
-- L4: 711 cards
-- General AI: 551 cards
-- Agentic AI: 78 cards
-- Physical AI: 82 cards
+- L4: 645 cards
+- General AI: 503 cards
+- Agentic AI: 65 cards
+- Physical AI: 77 cards
 - Others assignments: 0
 - L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
 
@@ -32,3 +32,4 @@ The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public ca
 - AC-03: Annotated 237 cards with the verbatim human-review comments and their application results (`human_reviews` in cards.json; two new CSV columns). Cleaned the Mapping provenance display (Korean labels instead of pipeline codes). Fidelity audit: 246 applied / 3 partial / 2 not applied — see HUMAN_COMMENT_FIDELITY_REPORT.
 - AC-05: Populated the two empty L3 categories. G_SYS_OREF (over-refusal): axis split from A_SYS_GOAL_022 plus two new cards grounded in XSTest, OR-Bench and AgentHarm. P_INT_TAMPER (physical tampering): sensor spoofing card transferred from G_SYS_SECADV plus two new cards grounded in Cao et al. (CCS 2019), NIST SP 800-82r3 and SP 800-193. Every added or changed card carries verified reference links (References column / dialog section). Card total 720 -> 725.
 - AC-06: Added one literature-grounded card each to the two under-populated L3s (G_SYS_INCONS: prompt-format output variability, Sclar et al. ICLR 2024; A_SYS_SELFCOR: intrinsic self-correction failure, Huang et al. ICLR 2024) and absorbed 16 consensus-redundant cards in G_SOC_GOV (-10) and G_INT_UNETH (-6) per two independent reviewers. Card total 725 -> 711.
+- AC-07: MECE curation across all 46 L3 categories by two independent reviewers (consensus only): 64 within-L3 duplicates absorbed into representatives, 18 weakly-attributed cards reattributed to their proper L3 (new IDs; old IDs retired), 2 cards removed. Card total 711 -> 645.
