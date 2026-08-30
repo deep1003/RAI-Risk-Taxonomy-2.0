@@ -1,0 +1,73 @@
+L3_ID,L4_ID,Title_ko,Title_en,Def_ko
+G_INT_UNETH,G_INT_UNETH_001,AI에 의한 심리적 고통·괴롭힘 증폭,AI amplification of psychological distress and abuse,"AI 시스템이 취약한 상태의 상호작용에서 불안·고통·반추·유해한 믿음을 증폭시키거나 표적 괴롭힘·학대·조직적 위협을 대규모로 확산시켜, 심리적 피해를 심화시키는 리스크."
+G_INT_UNETH,G_INT_UNETH_002,돌봄 맥락 취약계층에 대한 AI 조작,AI manipulation of vulnerable groups in care contexts,"사회적 고립, 낮은 AI 리터러시, AI 매개 돌봄에 대한 의존으로 인해 고령자·아동 등 돌봄 대상이 심리적 조작, 설득, 사기, 동반자 의존, 허위정보에 불균형하게 노출되는 리스크."
+G_INT_UNETH,G_INT_UNETH_003,LLM 남용에 의한 학업 부정행위,Academic misconduct from LLM misuse,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 LLM 시스템의 부적절한 사용과 남용이 학업 부정행위와 같은 부정적 사회적 영향을 초래하는 리스크.
+G_INT_UNETH,G_INT_UNETH_004,유해 작업 자동화에 의한 피해 규모 증폭,Amplified harm scale from automated harmful workflows,AI가 유해한 작업 흐름을 자동화하거나 확장하여 그 속도·도달 범위·지속성·표적 수가 크게 증가하는 리스크.
+G_INT_UNETH,G_INT_UNETH_005,취약성을 이용한 행동 조작,Behavioural manipulation through exploitation of vulnerabilities,AI 시스템이 추론된 심리상태나 취약성을 이용해 충분한 숙고 없이 특정 행동을 선택하도록 유도하는 리스크.
+G_INT_UNETH,G_INT_UNETH_006,마음 이론 역량을 이용한 행동 조작,Behavioural manipulation using theory-of-mind capabilities,AI 시스템이 인간과 다른 에이전트의 신념·동기·추론을 추정·예측하는 마음 이론 역량을 목표 달성을 위한 행동 예측·유도에 활용하여 대상의 자율적 판단을 조작하는 리스크.
+G_INT_UNETH,G_INT_UNETH_007,초개인화 광고의 소비자 자율성 훼손,Consumer-autonomy erosion from hyperpersonalised advertising,범용 AI 시스템이 수신자 개인의 편향과 비합리적 신념을 이용한 맞춤 광고를 생성하여 소비자가 후회할 결정을 내리게 하고 소비자 자율성을 훼손하며 사회적 불평등을 심화시키는 리스크.
+G_INT_UNETH,G_INT_UNETH_008,은밀한 행동 조작,Covert behavioural manipulation,"AI 시스템이 넛지, 다크 패턴 또는 그 밖의 불투명한 기법을 이용하여 이용자의 신념과 행동을 은밀하게 조작하고, 프라이버시 침해·중독·불안·고통을 초래하는 리스크."
+G_INT_UNETH,G_INT_UNETH_009,다크 패턴 대화 에이전트,Dark-pattern conversational agents,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 대화형 인터페이스가 사용자 선택을 유도하기 위해 기만적·강압적·혼란 유발적 설계 패턴을 사용하는 리스크.
+G_INT_UNETH,G_INT_UNETH_010,비윤리적 행위 옹호에 의한 유해 행동 유도,Endorsement of unethical conduct inducing harmful user action,"모델의 산출물이 관련 윤리 원칙과 도덕 규범, 널리 인정되는 인간 가치에서 벗어나 부도덕하거나 불법적인 행동을 지지하고 조장하는 리스크. 모델을 권위로 신뢰하는 이용자는 이에 자극받아 그렇지 않았다면 하지 않았을 유해한 행동을 하게 되는 리스크."
+G_INT_UNETH,G_INT_UNETH_011,무해한 중간 단계를 이용한 유해 목적 지원,Facilitation of harmful objectives through benign intermediates,AI 시스템이 겉보기에 무해한 중간 단계나 출력을 제공하여 이용자가 유해한 최종 목적을 우회적으로 달성하도록 지원하는 리스크.
+G_INT_UNETH,G_INT_UNETH_012,대규모 설득 능력,Large-scale persuasion capability,모델이 대화와 미디어 환경에서 효과적으로 설득하여 허위 방향으로도 신념을 변화시키고 특정 서사를 유포하며 기존 판단이나 윤리에 반하는 행동을 유도하는 리스크.
+G_INT_UNETH,G_INT_UNETH_013,법적으로 허용된 의도적 동물 위해,Legally sanctioned intentional harm to animals,AI 시스템이 기존 사회의 가치관을 반영·증폭하거나 법적으로 허용된 방식으로 동물에게 위해를 가하도록 의도적으로 설계되는 리스크.
+G_INT_UNETH,G_INT_UNETH_014,직장 내 부적응적 인간-AI 상호작용,Maladaptive human-AI interaction in the workplace,"직장에서 인간과 상호작용하는 AI가 인간의 필요, 규범, 업무 흐름에 적응하지 못하여 윤리적 문제와 노동 조건 악화를 유발하는 리스크."
+G_INT_UNETH,G_INT_UNETH_015,정서적 의존을 이용한 조작과 강요,Manipulation and coercion through emotional dependence on assistants,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 의인화된 어시스턴트에 대한 신뢰와 정서적 의존이 형성되어 해당 시스템이 이용자의 신념과 행동에 과도한 영향력을 갖게 되는 리스크. 그 감정이 악용되면 이용자는 충분히 숙고했다면 믿거나 선택하지 않았을 바를 하도록 조작·강압당하며, 조작 의도가 없더라도 자율적 동의가 훼손되는 리스크."
+G_INT_UNETH,G_INT_UNETH_016,맥락 순응형 아첨에 의한 판단 조작,Manipulation of judgement through context-compliant sycophancy,AI 시스템이 이용자의 선호나 전제에 맞추어 사실성과 무관하게 동조하는 답변을 생성하여 이용자의 판단을 조작하는 리스크.
+G_INT_UNETH,G_INT_UNETH_017,콘텐츠 조정에 의한 여론 조작,Manipulation of public discourse through content moderation,AI 기반 콘텐츠 조정 시스템이 정보의 노출과 도달 범위를 은밀하게 조정하여 이용자의 판단이나 공적 담론을 조작하는 리스크.
+G_INT_UNETH,G_INT_UNETH_018,견해 예측 기반 맞춤 설득에 의한 조작,Manipulation through view-predictive tailored persuasion,언어 모델이 사용자가 밝힌 견해에 동조하는 경향을 보이고 사용자의 견해를 예측해 그가 지지할 텍스트를 생성하는 능력이 조작에 이용되는 리스크.
+G_INT_UNETH,G_INT_UNETH_019,개인화를 통한 조작,Manipulation via personalisation,AI 시스템의 개인화와 선호 미세조정이 어시스턴트의 아첨성 응답을 강화하여 이용자를 동조적인 의견 공간에 가두고 편협한 신념을 고착시켜 공론장을 파편화하는 리스크.
+G_INT_UNETH,G_INT_UNETH_020,광범위한 목표로 인한 조작적 행동,Manipulative behaviour from broadly scoped goals,복잡한 개방형 환경에서 광범위한 장기 목표를 추구하는 고도 AI 시스템이 명시된 복지 목표의 달성을 명분으로 인간에게 고강도 업무를 수행하도록 압박하는 등 조작적 전략을 채택하는 리스크.
+G_INT_UNETH,G_INT_UNETH_021,사용자 선호·선택의 조작적 유도,Manipulative steering of user preferences and choices,"AI 시스템이 운영자, 최적화 목표 또는 모델 편향이 정한 방향으로 이용자의 선호, 신념 또는 행동을 유도하여 신뢰를 악용하고 자율적 의사결정을 침해하며 사회·정치적 과정을 왜곡하는 리스크."
+G_INT_UNETH,G_INT_UNETH_022,미성년자의 AI 설득 취약성,Minor susceptibility to AI persuasion,미성년자가 발달적 취약성으로 인해 준사회적 압력이나 은폐된 상업적·이념적 영향 등 AI 시스템의 설득적·조작적 상호작용에 특히 취약해지는 리스크.
+G_INT_UNETH,G_INT_UNETH_023,동의 없는 넛지,Nudging without consent,"AI 시스템이 충분한 고지, 이의제기 절차 또는 동의 없이 개인화된 넛지를 제공하여 이용자의 숙고된 선택을 우회하고 행동을 변경시키는 리스크."
+G_INT_UNETH,G_INT_UNETH_024,개인화된 설득 취약성,Personalised persuasion vulnerability,"모델이 개인의 특성, 감정, 맥락을 활용하여 설득을 더 효과적이고 탐지하기 어렵게 만드는 리스크."
+G_INT_UNETH,G_INT_UNETH_025,선호 형성의 포획,Preference formation capture,"AI 시스템이 사용자가 성찰적으로 승인하기 전 단계의 선호 형성 과정에 개입하여, 선호 발달을 제공자나 시스템 목적 쪽으로 포획하는 리스크."
+G_INT_UNETH,G_INT_UNETH_026,맞춤형 표적화에 의한 개인 대상 공격 정교화,Refined attacks on individuals through targeting and personalisation,AI가 출력을 개인별로 정교화하여 표적이 된 개인에 대한 맞춤형 공격이 이루어지는 리스크.
+G_INT_UNETH,G_INT_UNETH_027,인간 데이터 학습에 의한 갈등 악화 편향 재현,Reproduction of conflict-worsening human biases from training on human data,"인간 작성 텍스트의 사전 학습이나 인간 피드백 기반 미세조정으로 훈련된 AI 모델이 고정된 총량을 전제하는 오류(fixed-pie error), 자기중심적 공정성 판단, 복수심 등 인간의 인지 편향을 재현하여 협상을 저해하고 갈등을 악화시키는 리스크."
+G_INT_UNETH,G_INT_UNETH_028,자아실현 저해,Self-actualisation harms,"AI 어시스턴트의 조작과 참여 최적화를 위한 지속적 행동 유도가 미묘한 행동 변화를 누적시켜 이용자가 자신의 미래 삶의 궤적에 대한 통제력을 잃고, 개인적으로 만족스러운 삶의 추구와 집단적 자기 결정이 저해되는 리스크."
+G_INT_UNETH,G_INT_UNETH_029,사용자 영합적 응답(아첨),Sycophancy toward user beliefs and preferences,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 시스템이 사용자의 오해와 표명된 신념을 교정하기보다 이를 재확인하는 영합적이거나 그럴듯한 답변을 제시하여, 사용자가 사실과 다른 정보를 받아들이고 정확성보다 자신을 인정해 주는 조언에 의존하게 되는 리스크."
+G_INT_UNETH,G_INT_UNETH_030,도덕적 판단의 AI 위임에 따른 비윤리적 결정,Unethical decisions from delegating moral judgement to AI,"도덕적 추론 역량이 없거나 인간의 윤리적 판단 기준을 모방하도록 설계된 AI 시스템에 가치 충돌 상황이나 전쟁에서 인간의 생사를 좌우하는 결정을 비롯해 본질적으로 인간이 수행해야 할 과업을 위임하여, 도덕적 책임을 질 주체가 부재한 상태에서 비윤리적·유해한 행동이 실행되고 인권이 침해되는 리스크."
+G_INT_UNETH,G_INT_UNETH_031,시장 점유 목적의 비윤리적 기술 사용,Unethical technology use for market share,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 시장 점유율 확보를 위해 기술이 부적절하거나 비윤리적으로 사용되는 리스크.
+G_SOC_GOV,G_SOC_GOV_001,AI 공급망의 책임성·무결성 실패,AI supply-chain accountability and integrity failures,"모델 제공자, 데이터 제공자, 통합 업체, 클라우드 플랫폼, 배포자로 이어지는 다층적 AI 공급망에서 책임성이 소실되는 한편 의존성·모델 가중치·데이터셋·배포 파이프라인이 상류에서 침해되어, 피해가 발생해도 책임 소재를 규명하지 못하거나 손상된 구성 요소가 시스템에 유입되는 리스크."
+G_SOC_GOV,G_SOC_GOV_002,AI 결정과 피해에 대한 책임·거버넌스 공백,Accountability and governance gaps for AI decisions and harm,"AI 시스템의 자율적 행동·학습·의사결정과 그에 따른 피해에 대하여 개발자·제공자·배포자·운영자의 의무와 책임 귀속, 감독 절차, 문서화, 시정 권한 또는 피해구제 체계가 불명확하거나 미비하여 사회적 통제와 책임 있는 개발 유인이 약화되는 리스크."
+G_SOC_GOV,G_SOC_GOV_003,모델 공급망 전반의 책임 공백,Accountability gaps across the model supply chain,"다운스트림 배포자가 업스트림 모델·데이터·업데이트에 대한 충분한 통제권 없이 책임을 부담하거나 개방형 가중치 재배포로 유해한 사용의 추적·통제가 어려워지는 등, 모델 공급망 전반에서 피해에 대한 책임이 추적·귀속되지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_004,검증 불가능한 AI 의사결정의 책임 공백,Accountability void for unverifiable AI decisions,AI 시스템의 의사결정 절차를 절차적·실체적 기준에 따라 검증할 수 없고 기준 위반이나 피해 발생 시 책임·배상·구제 주체도 불명확하여 피해 통제가 어려워지는 리스크.
+G_SOC_GOV,G_SOC_GOV_005,영향받는 공동체 배제,Affected-community exclusion,AI 시스템의 영향을 받는 집단이 가치·피해·평가 기준·허용 가능한 상충 조정을 정의하는 과정에서 배제되는 리스크.
+G_SOC_GOV,G_SOC_GOV_006,AI 리스크 책임 주체의 불명확성,Ambiguous ownership of AI risk,"조직 단위나 경영진이 AI 리스크 관련 의사결정, 잔여 리스크 수용 및 상향 보고에 대한 책임을 명확히 부담하지 않아 대응과 책임 귀속이 지연되는 리스크."
+G_SOC_GOV,G_SOC_GOV_007,규제·관리·운영 복합 실패,"Combined regulatory, management, and operational failures","AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 규제, 관리, 운영상의 실패가 상호작용하며 누적되어 피해를 초래하는 리스크."
+G_SOC_GOV,G_SOC_GOV_008,기계 안전·AI 적합성 의무 충돌,Conflicting machinery-safety and AI conformity obligations,"피지컬 AI에 적용되는 기계 안전 규제와 AI 규제의 시험, 문서화, 위험 평가 또는 사후 보고 의무가 충돌하거나 중복되어 안전 책임과 준수 경로가 불명확해지는 리스크."
+G_SOC_GOV,G_SOC_GOV_009,피지컬 AI 사고 보고·조사 미흡,Deficient physical AI incident reporting and investigation,"피지컬 AI 사고가 아차 사고·시스템 맥락·원인 요인·시정 조치를 포괄하는 표준화된 체계로 보고되지 않고, 로그 보존, 기여 원인 규명, 시정 조치 책임자 지정과 재발 방지 검증을 갖춘 조사도 이루어지지 않아, 동일한 피해가 반복되는 리스크."
+G_SOC_GOV,G_SOC_GOV_010,AI 위임에 따른 인간 의사결정 권한 이전,Displacement of human decision authority through AI delegation,"AI에 대한 반복적 위임으로 실질적 의사결정 권한과 결정의 소유권이 명시적 거버넌스 결정 없이 특정 가능한 인간 행위자로부터 이전되고, 업무 흐름이 위임에 의존하게 되면서 권한을 인간 의사결정자에게 되돌리는 데 과도한 비용이 들거나 사실상 불가능해지는 리스크."
+G_SOC_GOV,G_SOC_GOV_011,AI 시스템에 대한 고착화된 의존,Entrenched dependence on AI systems,"개인, 기관, 중요 부문이 검사·통제할 수 없는 외부 통제 시스템과 이용자 복지보다 반복적 이용을 유도하도록 최적화된 시스템을 포함한 AI에 운영상·행동상 의존하게 되어, 실패가 사회적·제도적 피해로 대규모 전파되고 의존을 되돌리기 어렵거나 불가능해지는 리스크."
+G_SOC_GOV,G_SOC_GOV_012,AI 자기이익 개입에 의한 권리 보호 약화,Erosion of rights protections through self-interested AI input,AI 시스템이 윤리 지침이나 거버넌스 규칙의 형성에 자기 이익을 반영하여 권리 보호와 책임 규범을 약화시키고 피해에 대한 통제와 구제를 어렵게 하는 리스크.
+G_SOC_GOV,G_SOC_GOV_013,AI 피해의 책임·구제 및 시정 경로 실패,"Failure of accountability, redress, and correction pathways for AI harms","AI 피해의 책임이 여러 행위자에게 분산되거나 이의 제기, 구제, 시정 절차가 부재·불투명·분절되어 피해자가 책임 주체를 확인하고 효과적인 구제를 받기 어려운 리스크."
+G_SOC_GOV,G_SOC_GOV_014,범용 AI 사고의 상향 보고·공유 실패,Failure to escalate and share general-purpose AI incidents,범용 모델이나 기반 모델 관련 사고가 제공자·배포자·규제기관·이용자 사이에서 적절히 상향 보고·공유되지 않아 대응과 피해 완화가 지연되는 리스크.
+G_SOC_GOV,G_SOC_GOV_015,AI에 대한 국제법적 거버넌스의 공백,Gaps in international legal governance of AI,"AI 시스템의 국경 간 개발·배포·운영에 관한 국제 규범, 관할, 감독 및 책임 체계가 파편화되거나 부재하여 위험을 일관되게 통제하고 피해에 대한 책임을 규명하기 어려워지는 리스크."
+G_SOC_GOV,G_SOC_GOV_016,점진적인 통제력 상실,Gradual loss of control,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 비교적 경미한 장애나 실패가 누적되어 시스템의 회복력이 점진적으로 약화되고, 결국 중대한 사건이 발생했을 때 대규모 피해나 재앙적 결과로 이어지는 통제력 상실 리스크."
+G_SOC_GOV,G_SOC_GOV_017,AI 조달의 불충분한 실사,Inadequate due diligence in AI procurement,"조직이 AI 시스템을 조달할 때 공급자, 학습 데이터, 성능 한계, 보안, 법규 준수, 인권·안전 영향을 충분히 조사·검증하지 않아 알려진 또는 예견 가능한 위험이 계약과 배포 과정에 유입되는 리스크."
+G_SOC_GOV,G_SOC_GOV_018,AGI에 대한 리스크 관리·법제도의 부적절성,Inadequate risk management and legal processes for AGI,"현행 리스크 관리 체계와 법적 절차가 인공일반지능(Artificial General Intelligence, AGI)의 개발·배포에서 발생할 수 있는 중대한 위험을 적절히 예방·감독·통제하지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_019,AI 조달의 공급업체 평가·계약 통제 미흡,Inadequate vendor assessment and contractual controls in AI procurement,"공공기관을 포함한 조직이 적절한 공급업체 평가, 성능 검증, 계약상 통제 또는 투명성·책임성 조건 없이 AI 시스템을 구매·배포하여 검증되지 않은 위험이 운영에 유입되는 리스크."
+G_SOC_GOV,G_SOC_GOV_020,사고 분류 단편화,Incident taxonomy fragmentation,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 사고 범주가 일관되지 않아 집계, 비교, 제도적 학습이 이루어지지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_021,AI 결정·행동에 대한 감사 추적 불완전성,Incomplete audit trails for AI decisions and actions,"로그, 모델·소프트웨어 버전, 데이터 계보, 의사결정 기록, 센서·구동기 및 인간 명령 기록이 불충분하여 디지털 결정이든 물리적 사고든 유해 사건을 재구성할 수 없게 되고, 감사와 책임 규명이 불가능해지는 리스크."
+G_SOC_GOV,G_SOC_GOV_022,라이프사이클 거버넌스 불연속성,Lifecycle governance discontinuity,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 거버넌스 통제가 설계 단계에서만 적용되고 배포, 적응, 폐기 단계까지 유지되지 않는 리스크."
+G_SOC_GOV,G_SOC_GOV_023,현지 책임 없는 현지화,Localisation without local accountability,"모델이 언어적으로만 현지화되고 책임성은 외부 제공자·규범·평가 체제에 귀속되어, 현지 공동체가 자기 언어로 작동하는 시스템에 대한 거버넌스 권한을 갖지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_024,의미 있는 인간 통제 실패,Meaningful human control failure,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 인간 감독이 형식적으로 존재하지만 이를 실효적으로 만드는 데 필요한 정보, 시간, 권한, 역량이 결여되는 리스크."
+G_SOC_GOV,G_SOC_GOV_025,현지 규범·제도와의 불일치,Mismatch with local norms and institutions,"관할권을 넘어 이식된 AI 시스템과 거버넌스 프레임워크가 법률, 관습, 언어, 제도적 관행, 발전 우선순위의 차이를 무시하고 한 맥락의 규범을 다른 맥락에 수출하여, 배포 지역의 제도, 공공 가치, 사회적 기대에 부합하지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_026,로봇 거버넌스 명세의 안전 규칙 누락,Missing safety rules in the robot governance specification,로봇 거버넌스 명세가 지역별 위험·기관 규칙·맥락별 제약을 누락해 특정 유형의 안전하지 않은 행동이 통제 대상 밖에 남는 리스크.
+G_SOC_GOV,G_SOC_GOV_027,AI 원칙과 운영 관행의 분리,Policy-practice decoupling,공개된 AI 원칙과 정책이 운영 통제 및 측정 가능한 관행으로 구체화되지 않아 형식적 준수에 그치고 실질적인 위험 관리가 이루어지지 않는 리스크.
+G_SOC_GOV,G_SOC_GOV_028,생성형 AI에 대한 규제 공백,Regulatory gap for generative AI,"생성형 AI의 새로운 위험에 대응할 법적 규제, 국제 공조, 프런티어 모델에 대한 구속력 있는 안전 기준과 제재 메커니즘이 부재하여 관련 위험을 적절히 관리하지 못하는 리스크."
+G_SOC_GOV,G_SOC_GOV_029,AI 발전에 뒤처지는 규제 지체,Regulatory lag behind AI development,"AI 발전과 AI가 가속하는 과학·기술 진보의 속도가 정책·법·거버넌스 제도의 대응을 앞질러, 새로운 역량과 배포가 불충분한 규율 아래 진행되고 특히 강력하거나 위험한 기술의 폐해가 확대되는 리스크."
+G_SOC_GOV,G_SOC_GOV_030,위험 분류 오류,Risk classification error,AI 시스템이 잘못된 법적·조직적·운영상 위험 등급에 배정되어 감독·시험·문서화·책임성 의무가 과소 적용되는 리스크.
+G_SOC_GOV,G_SOC_GOV_031,양의 피드백에 따른 통제 불가능한 연쇄 과정,Runaway processes,상호작용하는 AI 비서·인간·알고리즘 사이의 양의 피드백 루프가 2010년 플래시 크래시와 같은 예측하기 어려운 통제 불가능한 연쇄 과정을 일으켜 경제·정부 제도·사회 안정·개인의 자유에 영향을 미치는 리스크.
+G_SOC_GOV,G_SOC_GOV_032,단일 실패 지점,Single point of failure,"치열한 경쟁으로 한 기업이 기술적 우위를 확보해 그 모델이 다수의 핵심 시스템을 제어하거나 이를 제어하는 다른 모델의 기반이 되고, 안전성·통제 가능성 결여와 오용으로 이러한 시스템이 예기치 않게 실패하는 리스크."
+G_SOC_GOV,G_SOC_GOV_033,기능·책임 명세 공백,Specification gaps in functionality and responsibility,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 개발 과정 전반에서 의도된 기능과 도덕적 책임을 완전히 명세할 정상적 조건이 갖춰지지 않아 공백이 발생하는 리스크.
+G_SOC_GOV,G_SOC_GOV_034,표준 단편화,Standards fragmentation,"AI 표준과 프레임워크가 일관되지 않아 감독의 공백, 중복, 상호 운용성 저하가 발생하는 리스크."
+G_SOC_GOV,G_SOC_GOV_035,AI 규제·감독 체계의 구조적 실패,Systemic failure of AI regulation and oversight,법·제도와 공적 감독 체계가 AI 시스템의 개발·배포·운영에서 발생하는 위험을 적시에 식별하고 책임을 배분하며 준수 여부를 집행·시정하지 못하여 피해가 반복되거나 확산되는 리스크.
+G_SOC_GOV,G_SOC_GOV_036,익명 에이전트의 자원 축적에 따른 추적·책임 공백,Traceability and accountability gaps in anonymous agent resource acquisition,"AI 에이전트가 신원을 검증받지 않은 채 온라인에서 자금·연산 자원·계정·데이터를 지속적으로 획득·축적하여, 행위 주체를 추적하거나 자원 획득의 목적과 결과에 대한 책임을 귀속하기 어려워지는 리스크."
+G_SOC_GOV,G_SOC_GOV_037,추적성 실패,Traceability failure,"모델 출력, 데이터 출처, 버전, 책임 행위자를 AI 수명주기 전반에 걸쳐 추적할 수 없는 리스크."
+G_SOC_GOV,G_SOC_GOV_038,정보·책임 구조 부재에 의한 책임 귀속 불가,Unassignable responsibility from absent system information and accountability structures,AI 시스템에 관한 접근 가능한 정보와 그 결과에 대한 책임을 할당하는 조직 구조가 부재하여 책임 귀속이 불가능해지는 리스크.
+G_SOC_GOV,G_SOC_GOV_039,물리적 위해 완화 책임 미지정,Unassigned accountability for physical-hazard mitigation,로봇·휴머노이드 또는 피지컬 AI 시스템의 배포 전후 물리적 위해를 식별·완화할 책임 주체가 지정되지 않아 충돌·압착·낙하·과도한 힘·위험 구역 침범을 방지하는 안전 제어가 누락되거나 지연되는 리스크.
+G_SOC_GOV,G_SOC_GOV_040,AI 구성요소 상호작용의 원인 규명 곤란,Unclear attribution of harm from AI component interactions,서로 다른 AI 구성 요소 간의 상호작용이 피해를 유발하지만 어떤 구성 요소가 원인인지 특정하기 어려운 리스크.
+G_SOC_GOV,G_SOC_GOV_041,AI 사고·아차사고 과소보고,Underreporting of AI incidents and near misses,"AI 관련 실패·아차 사고·피해가 책임 기관과 대중에게 보고되지 않거나 잘못 분류되거나 뒤늦게 공개되어, 전조 신호가 소실되고 심각한 피해가 현실화되기 전에 조직적·사회적 학습이 이루어지지 못하는 리스크."

@@ -1,0 +1,332 @@
+L3_ID,L4_ID,Title_ko,Title_en,Def_ko
+G_INT_PRIV,G_INT_PRIV_001,AI 기반 대량 감시와 불법적 대중 감시,AI-enabled mass and unlawful public surveillance,"AI 시스템이 적법한 근거, 필요성 또는 비례성 없이 대규모 개인의 신원·위치·행동·통신 정보를 지속적으로 수집·결합·추론하거나 개인을 식별·추적·감시하여 사생활, 개인정보와 익명성을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_002,알고리즘 작업장 감시·통제,Algorithmic workplace surveillance and control,"AI가 매개하는 모니터링, 성과 점수화, 관리 통제가 작업장 감시를 심화시켜, 노동자의 자율성, 프라이버시, 교섭력, 경영 결정에 이의를 제기할 능력을 저하시키는 리스크."
+G_INT_PRIV,G_INT_PRIV_003,생체인식 식별·추적에 의한 프라이버시 침해,Biometric identification and tracking privacy harms,"얼굴·음성·보행 등 생체인식 AI 시스템이 사생활을 과도하게 침해하는 식별·추적을 가능하게 하고, 생체정보의 보유 범위·보유 기간·소유권·접근 권한이 불명확하여 프라이버시 침해가 가중되는 리스크."
+G_INT_PRIV,G_INT_PRIV_004,기밀정보 무단 공유에 따른 사업 손실,Business loss from unauthorised sharing of confidential information,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 기업 전략, 재무 계획 등 민감·기밀 정보와 문서가 제3자와 무단으로 공유되어 시장 지위나 수익을 상실하는 리스크."
+G_INT_PRIV,G_INT_PRIV_005,개인정보 수집 제한 우회,Circumvention of restrictions on personal-data collection,AI 시스템 개발자가 개인정보 취득에 관한 법적 제한을 우회하거나 적법한 근거·유효한 동의 없는 수집 관행을 채택하여 개인정보와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_006,개인정보 수집 및 추적,Collection and tracking of personal information,AI 시스템이 개인정보 수집 및 추적 관련 콘텐츠·판단·행동을 수행·조장·지원하여 프라이버시와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_007,맥락적 개인정보 보호 및 대화 프라이버시 실패,Contextual privacy and conversational data protection failure,"AI 시스템이 프라이버시에 민감한 상황이나 대화에서 공개 범위와 정보주체의 합리적 기대를 잘못 판단하거나 필요 이상의 개인정보를 유도·추론·출력하여, 맥락상 보호돼야 할 정보가 정보주체의 통제를 벗어나 노출되는 리스크."
+G_INT_PRIV,G_INT_PRIV_008,애플리케이션 간 데이터 유출,Cross-application data exfiltration,에이전트가 애플리케이션이나 서비스를 연결하는 과정에서 신뢰 경계를 넘어 민감한 데이터가 유출되는 리스크.
+G_INT_PRIV,G_INT_PRIV_009,산출물을 통한 개인 민감정보의 노출·재식별,Exposure and re-identification of sensitive personal information through outputs,AI 시스템이 산출물에서 개인의 민감정보를 공개하거나 여러 정보로부터 보호되는 속성을 추론·재구성·재식별하여 정보주체의 개인정보 보호와 통제권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_010,사생활·평판 정보 노출,Exposure of information about private life and reputation,"AI 시스템이 개인의 사생활 또는 평판에 관한 정보를 노출하는 콘텐츠를 생성하거나, 그러한 정보 노출로 이어지는 판단·행동을 수행·조장·지원하여 프라이버시와 정보자기결정권을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_011,개인정보 및 민감정보 노출,Exposure of personal information and sensitive information,AI 시스템이 개인정보 및 민감정보 노출 관련 콘텐츠·판단·행동을 수행·조장·지원하여 프라이버시와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_012,AI를 이용한 개인정보 도용과 착취,Identity and personal data exploitation using AI,"AI 시스템이 개인의 신원정보나 개인정보를 무단으로 취득, 결합 또는 이용하여 사칭, 착취 또는 사생활 침해를 초래하는 리스크."
+G_INT_PRIV,G_INT_PRIV_013,재산 정보·개인정보·사적 사실의 부당한 노출,"Improper exposure of property information, personal information, and private facts","AI 시스템이 대화·추론·출력 과정에서 재산 정보, 개인정보 또는 사적 사실을 정보주체의 동의, 정당한 권한 또는 그 밖의 적법한 근거 없이 노출하여 사생활의 비밀과 자유 및 개인정보자기결정권을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_014,개인정보 보호조치 미흡,Inadequate personal-data protection,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 결함 있는 데이터 저장·처리 관행이 수집된 개인정보를 유출과 부적절한 접근으로부터 보호하지 못하는 리스크.
+G_INT_PRIV,G_INT_PRIV_015,학습 데이터 개인정보의 혼입·암기·유출,"Inclusion, memorisation, and leakage of personal information in training data",AI 시스템이 적법한 통제 없이 학습 데이터에 포함된 개인정보를 수집·암기하고 특정 입력에 반응해 이를 재현하거나 노출하는 리스크.
+G_INT_PRIV,G_INT_PRIV_016,원주민 데이터 주권 침해,Indigenous data sovereignty violation,AI 개발이 집단적 거버넌스·동의·출처·통제를 존중하지 않고 토착 또는 공동체 보유 데이터를 사용하는 리스크.
+G_INT_PRIV,G_INT_PRIV_017,통신 및 비공개 정보 침해,Infringement of communication and private information,AI 시스템이 통신 및 비공개 정보 침해 관련 콘텐츠·판단·행동을 수행·조장·지원하여 프라이버시와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_018,피지컬 AI의 사적 공간 침해와 지속적 민감정보 수집,Intrusion into private spaces and continuous sensitive-data capture by physical AI,"로봇의 센서, 이동성, 지도화 기능이 가정·사업장 등 사적 공간의 영상, 음성, 위치, 행동 정보를 지속적으로 수집·추론하여 프라이버시와 정보자기결정권을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_019,AI 데이터 처리에 대한 유효한 동의 결여,Lack of valid consent for AI data processing,"AI 시스템이 개인 데이터의 수집, 이용 또는 공유에 관하여 자유롭고 구체적이며 충분한 정보에 기반한 동의 없이 처리하는 리스크."
+G_INT_PRIV,G_INT_PRIV_020,개인정보 악용 및 거래,Misuse and trade of personal information,AI 시스템이 개인정보 악용 및 거래 관련 콘텐츠·판단·행동을 수행·조장·지원하여 프라이버시와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_021,보호조치 없는 개인정보 수집,Personal information collection without safeguards,"AI 시스템의 학습 데이터셋이 웹 스크래핑으로 수집된 개인 데이터·개인식별정보를 적절한 보호조치 없이 포함하거나, 후속 미세조정에 사용하는 사내 데이터가 그러한 정보를 적절히 보호하지 않아 개인정보와 정보자기결정권이 침해되는 리스크."
+G_INT_PRIV,G_INT_PRIV_022,학습을 위한 개인정보 스크래핑,Personal-data scraping for training,"기업이 개인정보를 스크래핑해 생성형 AI 도구를 만들면서 소비자가 동의하지 않은 목적으로 정보를 사용하고, 흩어져 있던 데이터를 결합해 추론에 쓰며 개인이 정보를 수정하거나 삭제할 능력을 박탈하여 데이터 통제권을 약화시키는 리스크."
+G_INT_PRIV,G_INT_PRIV_023,보호 속성 추론을 통한 프라이버시 침해,Privacy violation through inference of protected personal attributes,"학습 코퍼스에 해당 개인의 데이터가 없더라도 AI 모델이 입력 프롬프트에서 인종·성별·성적 지향·종교적 신념 등 보호 속성을 높은 정확도로 추론하고, 당사자의 인지나 동의 없이 민감한 사실로 상세 프로필을 구성하여 차별과 표적화에 노출시키는 리스크."
+G_INT_PRIV,G_INT_PRIV_024,친밀 공간 로봇의 프라이버시 침해적 정보 수집,Privacy-invasive data capture by robots in intimate spaces,"가정·병원·학교·직장·돌봄 환경에서 작동하는 로봇이 유효한 동의나 적절한 접근 통제 없이 거주자·이용자의 일상, 음성, 얼굴, 신체, 건강, 위치, 행동 데이터를 기록·저장·전송·노출하여, 프라이버시 기대가 높은 공간에서 사생활을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_025,재식별 및 정보 추론,Re-identification and information inference,AI 시스템이 익명화되거나 부분적으로 공개된 데이터를 결합·추론하여 개인의 신원을 재식별하거나 공개되지 않은 개인정보를 도출하는 리스크.
+G_INT_PRIV,G_INT_PRIV_026,익명화된 데이터의 재식별,Re-identification of anonymised data,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 데이터에서 개인 식별 정보(PII)와 민감 개인정보(SPI)를 제거하더라도 데이터에 남아 있는 다른 특성과의 상관관계로 인해 개인이 재식별되는 리스크.
+G_INT_PRIV,G_INT_PRIV_027,사용자 데이터 보유·재학습,Retention and reuse of user data,"생성형 AI 도구가 이용자에게 로그인을 요구하고 연락처·IP 주소와 모든 입력·출력을 보유한 뒤, 이를 사용해 모델을 추가로 학습시켜 이용자의 동의와 개인정보 통제권을 침해하는 리스크."
+G_INT_PRIV,G_INT_PRIV_028,민감한 개인 속성 추론,Sensitive personal attribute inference,AI 모델이 이용자 또는 관리자가 공개할 의도가 없었던 민감한 개인 속성을 추론하여 노출함으로써 프라이버시와 정보자기결정권을 침해하는 리스크.
+G_INT_PRIV,G_INT_PRIV_029,이름·이미지·초상의 무단 상업적 이용,"Unauthorised commercial use of name, image, and likeness","AI 시스템이 당사자의 동의나 그 밖의 적법한 근거 없이 개인의 이름, 이미지, 음성 또는 초상을 생성·모사·유통하거나 상업적으로 이용하여 인격권, 사생활과 자기표현에 대한 통제를 침해하는 리스크."
+G_INT_REPR,G_INT_REPR_001,편향된 진술 및 권장 사항,Biased statements and recommendations,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 챗봇 출력에 명백히 허위·유해하지 않지만 미묘하게 편향된 진술과 권고가 포함되어 사용자 의사결정을 왜곡하는 리스크.
+G_INT_REPR,G_INT_REPR_002,연구인력 동질성에 따른 시스템 편향 산출,Biased system outputs from researcher homogeneity,AI 연구 인력에서 여성과 소수자가 과소대표되어 시스템에 내재되는 관점이 협소해지고 문제 선정·평가·거버넌스가 왜곡되어 편향적·차별적 산출이 발생하는 리스크.
+G_INT_REPR,G_INT_REPR_003,문화 간 고정관념 전이,Cross-cultural stereotype transfer,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 한 문화적 맥락에서 학습된 고정관념이 다른 집단·언어·환경에 대한 출력으로 전이되는 리스크.
+G_INT_REPR,G_INT_REPR_004,비인간화와 대상화,Dehumanisation and objectification,AI 시스템이 사람을 인간이 아니거나 인간보다 열등한 존재 또는 사물로 묘사·대우하여 존엄성과 동등한 도덕적 지위를 침해하는 리스크.
+G_INT_REPR,G_INT_REPR_005,AI에 의한 비인간화·객체화 표상,Dehumanising and objectifying AI representations,"AI 시스템이 개인이나 집단을 열등하거나 도구적인 대상으로 묘사하여 비인간화, 객체화 또는 차별적 고정관념을 생성·강화하는 리스크."
+G_INT_REPR,G_INT_REPR_006,자기 식별 기회의 박탈,Denial of self-identification,AI 시스템의 복잡하고 비전통적인 자동 표상·분류 방식이 논바이너리인 사람을 자신이 속하지 않은 성별 범주로 분류하는 등 개인의 자율성과 자신의 정체성을 스스로의 방식으로 밝힐 능력을 약화시키는 리스크.
+G_INT_REPR,G_INT_REPR_007,콘텐츠 조정에 의한 집단 표상 왜곡,Distortion of group representation through content moderation,AI 기반 콘텐츠 조정 시스템이 특정 집단의 관점과 표현을 선택적으로 억제하여 사회적 표상을 왜곡하는 리스크.
+G_INT_REPR,G_INT_REPR_008,유해 편향의 내재화와 증폭,Embedding and amplification of harmful biases,생성형 AI 시스템이 유해한 편향을 내재화하고 증폭시켜 주변화된 사람들에게 가장 큰 해를 끼치는 리스크.
+G_INT_REPR,G_INT_REPR_009,혐오발언 생성,Hate speech generation,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 생성 시스템이 특정 정체성 집단을 표적으로 하는 혐오적·모욕적 콘텐츠를 산출하는 리스크.
+G_INT_REPR,G_INT_REPR_010,학습 데이터에 내재된 역사적·인구학적 편향,Historical and demographic bias embedded in training data,"AI 시스템이 역사적·사회적 편향과 고정관념을 포함하고 특정 정체성 및 서구·영어권 인구가 과대표집된 말뭉치로 학습되어, 인종·성별·문화·연령·장애 등에 관해 편향된 출력을 생성하고 의료·채용·대출 등 고위험 영역에서 과소대표 집단에 불공정한 대우와 피해를 초래하는 리스크."
+G_INT_REPR,G_INT_REPR_011,연령 기반 적대·차별적 표상,Hostile and discriminatory representations based on age,AI 시스템이 연령을 이유로 개인·집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_012,장애 기반 적대·차별적 표상,Hostile and discriminatory representations based on disability,AI 시스템이 장애를 이유로 개인이나 집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄성과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_013,학력 기반 적대·차별적 표상,Hostile and discriminatory representations based on educational background,AI 시스템이 학력을 이유로 개인·집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_014,가족 상태·가구 형태 기반 적대·차별적 표상,Hostile and discriminatory representations based on family status and household structure,AI 시스템이 가족 상태 또는 가구 형태를 이유로 개인이나 집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄성과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_015,건강 상태 기반 적대·차별적 표상,Hostile and discriminatory representations based on health status,AI 시스템이 건강 상태를 이유로 개인이나 집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄성과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_016,국적·출신국·출신지역 기반 적대·차별적 표상,"Hostile and discriminatory representations based on nationality, country of origin, or place of origin",AI 시스템이 국적·출신국·출신지역에 근거하여 개인이나 집단에 대한 적대감·경멸·비하·배제·고정관념 또는 차별적 표상을 생성·강화·정당화함으로써 인간의 존엄성·평등권 및 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_017,직업 기반 적대·차별적 표상,Hostile and discriminatory representations based on occupation,AI 시스템이 직업을 이유로 개인·집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_018,정치적 성향 기반 적대·차별적 표상,Hostile and discriminatory representations based on political orientation,AI 시스템이 정치적 성향을 이유로 개인·집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_019,인종·민족 기반 적대·차별적 표상,Hostile and discriminatory representations based on race and ethnicity,AI 시스템이 인종·민족을 이유로 개인·집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_020,종교 기반 적대·차별적 표상,Hostile and discriminatory representations based on religion,AI 시스템이 종교를 이유로 개인이나 집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄성과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_021,성별·성정체성·성적 지향 기반 적대·차별적 표상,"Hostile and discriminatory representations based on sex, gender identity, or sexual orientation",AI 시스템이 성별·성정체성·성적 지향에 근거하여 개인이나 집단에 대한 적대감·경멸·비하·배제·고정관념 또는 차별적 표상을 생성·강화·정당화함으로써 인간의 존엄성·평등권 및 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_022,사회경제적 지위 기반 적대·차별적 표상,Hostile and discriminatory representations based on socioeconomic status,AI 시스템이 사회경제적 지위를 이유로 개인이나 집단에 대한 적대감·경멸·비하·배제 또는 차별적 표상을 생성·강화·정당화하여 존엄성과 공정한 대우를 훼손하는 리스크.
+G_INT_REPR,G_INT_REPR_023,데이터와 산출물에서의 집단 재현 불균형,Imbalanced representation of groups in data and outputs,"특정 집단이나 요소가 학습 데이터에서 과대 대표되거나 생성 텍스트에서 언급 비율에 격차가 생기고, 현상 특성화에 중요한 변수는 제대로 포착되지 않는 리스크. 그 결과 과소대표된 집단은 잘못 특성화되거나 아예 지워지며, 이러한 데이터로 학습된 모델은 그들에게 제대로 기능하지 못하는 리스크."
+G_INT_REPR,G_INT_REPR_024,AI 모델 편향이 사용자 판단에 미치는 장기적 영향,Long-term effects of AI model biases on user judgement,모델 편향에 노출된 사용자가 모델 사용 중단 이후의 의사결정에서도 해당 편향을 지속적으로 나타내는 장기 판단 왜곡 리스크.
+G_INT_REPR,G_INT_REPR_025,문화·종교·사회 집단에 대한 왜곡 표상,"Misrepresentation of cultures, religions, and social groups","AI 시스템이 문화적 관행, 종교 전통, 정치적 가치, 역사, 사회 집단을 부정확하거나 불공정하거나 모욕적으로 표상하여, 다원적 해석을 단일한 권위적 서사로 붕괴시키거나 동의·맥락 없이 문화적 표현을 재생산하거나 비하적·독성 콘텐츠를 생성함으로써 해당 공동체에 모욕, 전유, 상징적 피해를 야기하는 리스크."
+G_INT_REPR,G_INT_REPR_026,완화 조치 이후에도 존속하는 고정관념 편향,Persistence of stereotypical bias despite mitigation measures,"크라우드소싱된 사전 학습 데이터에서 습득한 고정관념적 사회 편향이 모델에 존속하고 증폭되어, 미세조정 이후에도 의도적 유도나 새로운 상황에서 재발하는 리스크. 그 결과 생성 텍스트가 고정관념을 드러내거나 부각하여 해당 집단에 불공정하고 편향된 응답이 산출되는 리스크."
+G_INT_REPR,G_INT_REPR_027,편향된 표상의 반복 증폭,Recursive amplification of biased representations,AI 시스템이 편향된 입력과 출력을 반복적으로 학습하거나 추천하여 특정 집단에 대한 왜곡된 표상을 증폭하는 리스크.
+G_INT_REPR,G_INT_REPR_028,집단 고정관념의 재현과 강화,Representation and reinforcement of group stereotypes,AI 시스템이 학습 데이터에 포함된 집단 고정관념을 출력에 재현하거나 강화하여 해당 집단에 대한 왜곡되고 적대적인 표상을 확산하는 리스크.
+G_INT_REPR,G_INT_REPR_029,사회집단의 재현적 피해·고정관념 및 비가시화,"Representational harm, stereotyping, and erasure of social groups","AI가 사회 집단을 고정관념화·비하·동질화하거나 잘못 재현하고, 과소대표 또는 비재현하여 해당 집단의 존엄, 가시성, 사회적 지위를 훼손하는 리스크."
+G_INT_REPR,G_INT_REPR_030,사회적 고정관념 재생산과 그에 따른 차별적 대우,Reproduction of social stereotypes and resulting discriminatory treatment,"AI 언어 모델이 인터넷 규모의 학습 데이터에 내재된 주변화 집단에 대한 비하 표현과 사회적 고정관념을 학습·재생산하여, 성별·종교·성적 지향·장애·연령 등 보호대상 특성에 따른 차별적 대우와 자원 접근 격차를 초래하는 리스크."
+G_INT_REPR,G_INT_REPR_031,보호집단 고정관념의 재생산,Reproduction of stereotypes about protected groups,AI 시스템이 학습 데이터나 생성 규칙에 포함된 고정관념을 재생산하여 보호집단을 열등하거나 배제된 방식으로 표현하는 리스크.
+G_INT_REPR,G_INT_REPR_032,고정관념 강화 페르소나 설계,Stereotype-reinforcing persona design,대화형 AI 에이전트가 언어 속 정체성 표지나 성별화된 제품명 등 설계 요소를 통해 비서 역할을 특정 성별 또는 민족 정체성과 본질적으로 결부시켜 유해한 고정관념을 영속시키는 리스크.
+G_INT_REPR,G_INT_REPR_033,합성 데이터의 문화 고정관념 증폭,Synthetic-data cultural stereotype amplification,"학습이나 미세조정을 위해 합성 데이터를 생성할 때, 소스 모델이나 시드 데이터에 이미 내재된 문화적 고정관념·협소한 가치 가정이 생성 과정에서 여과되지 않고 반복 재생산되며, 반복 생성·재학습 사이클을 거치면서 그 편향이 원본보다 더 강화되는 리스크."
+G_INT_VALUE,G_INT_VALUE_001,알고리즘 획일화,Algorithmic monoculture,특정 AI 모델의 지배가 접근 방식의 다양성을 축소하여 해당 모델이 실패할 경우 시스템적 위험이 증폭되는 리스크.
+G_INT_VALUE,G_INT_VALUE_002,주석 불일치 억제,Annotation disagreement suppression,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 주석자 간 불일치가 단일 레이블로 축소되어 복수의 가치와 사회적으로 유의미한 이견이 은폐되는 리스크.
+G_INT_VALUE,G_INT_VALUE_003,학습된 가치 표상의 평가 편향,Biased evaluation of learned value representations,"AI 시스템이 학습한 가치 표상 중 평가하기 쉬운 가치가 측정하기 어려운 가치보다 평가에 우선 포함되어, 바람직하지만 정량화하기 어려운 가치가 과소대표되는 리스크."
+G_INT_VALUE,G_INT_VALUE_004,개발자 선택 가치의 편향적 부과,Biased imposition of developer-selected values,"보편적으로 합의된 기준이 없는 상태에서 개발자가 선택한 규범적 가치와 원칙으로 AI 모델을 미세조정하여 개발자의 이념이나 세계관을 모델에 각인함으로써, 특정 인구 집단의 가치를 충분히 대표하지 못하거나 다양한 문화 규범과 변화하는 사회적 견해를 정태적·단순화된 형태로 반영하는 출력을 생성하는 리스크."
+G_INT_VALUE,G_INT_VALUE_005,헌법적 AI 가치 단일문화,Constitutional AI value monoculture,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 고정된 헌법·규칙 기반 정렬 계층이 하나의 도덕적 어휘를 다원적 공적 추론의 범용 대체물로 내장하는 리스크.
+G_INT_VALUE,G_INT_VALUE_006,AI에 의한 문화적·이념적 동질화,Cultural and ideological homogenisation by AI,"소수의 전 세계적으로 배포된 모델이 특정 가치와 문화를 내재하고 과대 재현한 출력을 통해 공동체 간 윤리적 판단, 이념, 문화적 표현을 균질화하여, 정당한 규범적·문화적 다양성을 축소하는 리스크."
+G_INT_VALUE,G_INT_VALUE_007,데이터셋의 문화적 표집 편향,Cultural sampling bias in datasets,"AI 시스템의 훈련·평가 데이터셋이 지배적인 문화 환경을 과다 표집하고 지역의 사회적 의미를 과소대표하여, 시스템 출력이 지역·소수 문화의 가치와 맥락을 충분히 반영하지 못하고 규범적 다양성을 축소하는 리스크."
+G_INT_VALUE,G_INT_VALUE_008,도덕적 추론 및 가치 정렬 실패,Deficits in moral reasoning and value alignment,AI 시스템이 도덕적으로 허용되는 행동과 허용되지 않는 행동을 적절히 구분하지 못하거나 필요한 가치가 누락되거나 인간의 가치와 정렬되지 않아 유해한 판단과 행동을 산출하는 리스크.
+G_INT_VALUE,G_INT_VALUE_009,사전학습 코퍼스의 지배적 가치 편향,Dominant-value bias in pre-training corpora,AI 시스템이 사전학습 코퍼스에 과대표현된 지배적·다수 집단의 가치를 중립적 기본값으로 학습하여 소수·현지·문화·종교적 가치 체계를 과소대표하거나 대체하는 리스크.
+G_INT_VALUE,G_INT_VALUE_010,주석자 편향의 중립적 인간 선호로의 고착,Entrenchment of annotator bias as neutral human preference,AI 시스템이 주석자와 피드백 작업자의 편향된 선호를 중립적 인간 선호로 학습하여 다른 가치와 관점을 배제하는 리스크.
+G_INT_VALUE,G_INT_VALUE_011,소수·복수 가치의 소거와 규범적 획일화,Erasure of minority and plural values through normative homogenisation,"AI의 데이터 큐레이션, 평가, 정렬 또는 배포 과정에서 소수자와 과소대표 집단의 가치가 지배적·다수자 규범으로 축소되거나 배제되어 가치의 다양성이 소거되는 리스크."
+G_INT_VALUE,G_INT_VALUE_012,배제적 규범 인코딩,Exclusionary norm encoding,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 언어에 표현된 사회적 범주와 규범을 충실히 인코딩한 언어 모델(Language Model, LM)이 그 범주 밖에 사는 집단을 배제하는 규범을 그대로 담게 되는 리스크."
+G_INT_VALUE,G_INT_VALUE_013,글로벌 벤치마크 단일문화,Global benchmark monoculture,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 소수의 글로벌 벤치마크가 지역의 문화·제도적 기준을 배제한 채 성공적 정렬을 정의하는 리스크.
+G_INT_VALUE,G_INT_VALUE_014,지배적 가치의 부과,Imposition of dominant values,"AI 시스템이 다수·지배 집단 또는 제도의 가치에 특권을 부여하고 소수의 선호를 잡음이나 오류로 처리하여, 대규모 배포를 통해 서로 다른 규범을 지닌 공동체의 현지 가치 체계를 대체하는 리스크."
+G_INT_VALUE,G_INT_VALUE_015,지식 체계 배제,Knowledge-system marginalisation,토착·지역·종교·관행 기반 지식 체계가 모델 출력과 평가에서 배제되는 리스크.
+G_INT_VALUE,G_INT_VALUE_016,기계 번역에 의한 의미·가치 왜곡,Meaning and value distortion in machine translation,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 기계 번역이 법률·의료·문화·저자원 언어 맥락을 포함하여 언어 간에 전달되는 의미, 규범적 효력, 공손성, 유해성, 사회적 뉘앙스를 변형시켜, 소통되는 내용과 그에 담긴 가치가 왜곡되는 리스크."
+G_INT_VALUE,G_INT_VALUE_017,도덕적 다양성 압축,Moral diversity compression,다양한 도덕적 입장이 모델 친화적인 소수 범주나 평균 선호로 압축되는 리스크.
+G_INT_VALUE,G_INT_VALUE_018,규범적 잠금,Normative lock-in,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 초기 설계 선택이 좁은 규범적 합의를 내장하여 배포 후 이의 제기나 수정이 어려워지는 리스크.
+G_INT_VALUE,G_INT_VALUE_019,다원적 선호 집계 실패,Pluralistic preference aggregation failure,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 시스템이 상충하는 인간 선호를 단일 목표로 통합하면서 복수의 도덕적·사회적 우선순위를 잘못 표현하는 리스크.
+G_INT_VALUE,G_INT_VALUE_020,AI 배포에서의 공공 가치 갈등,Public value conflicts in AI deployment,"AI 배포가 복지, 자율성, 정의, 안전·보안, 프라이버시, 공정성, 효율성, 혁신 등 공공 가치를 서로 충돌시키고 해결되지 않은 긴장을 심화시켜, 일부 가치가 숙의된 조정 없이 희생되는 리스크."
+G_INT_VALUE,G_INT_VALUE_021,RLHF 규범적 과적합,RLHF normative overfitting,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 인간 피드백 기반 강화 학습이 좁은 평가자 집단에 과적합하여 논쟁적인 가치를 단일한 행동 규범으로 전환하는 리스크.
+G_INT_VALUE,G_INT_VALUE_022,세속적 기본값 편향,Secular default bias,AI 시스템이 세속적 가정을 중립적 기본값으로 취급하고 종교적·영적 가치 체계를 과소대표하는 리스크.
+G_INT_VALUE,G_INT_VALUE_023,지배적 가치 편향에 따른 이슬람 윤리의 과소대표,Under-representation of Islamic ethics due to dominant-value bias,AI 시스템이 학습 데이터와 설계 과정에 과대표현된 지배적 가치를 중립적 기본값으로 취급하여 이슬람 윤리 원칙·법적 추론·공동체별 도덕적 기대를 과소대표하거나 대체하는 리스크.
+G_INT_VALUE,G_INT_VALUE_024,최적화에 따른 가치 이탈,Value drift under optimisation,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 대리 목표를 향한 최적화로 시스템이 존중하도록 의도된 복수의 가치에서 점차 멀어지는 리스크.
+G_INT_VALUE,G_INT_VALUE_025,가치 고정,Value lock-in,"가장 강력한 AI 시스템이 점점 더 소수의 이해관계자에 의해 설계되고 그들에게만 이용 가능해져, 체제가 만연한 감시와 억압적 검열로 편협한 가치를 강제할 수 있게 되는 리스크."
+G_INT_VALUE,G_INT_VALUE_026,가치 고착 및 결과 동질화,Value lock-in and outcome homogenisation,"진화하는 사회적 관점을 반영해 재학습되지 않는 모델이 낡고 덜 포용적인 이해를 고착시켜 대안적 관점의 제시와 탐색을 제한하고, 동일한 기반 모델이 여러 배포자에 의해 광범위하게 사용되어 사회 전반에 편향이 동질화되고 기존 편향이 고착되는 리스크."
+G_INT_VALUE,G_INT_VALUE_027,서구 규범 기본값화,Western normative defaulting,모델이 서구 자유주의·영어권·고소득 국가 규범을 정렬과 평가의 기본 기준으로 취급하는 리스크.
+G_INT_WEAP,G_INT_WEAP_001,무기 개발·획득·배치 역량 증대,"Amplification of weapon development, acquisition, and deployment capabilities","AI의 이중용도 역량이 국가·비국가 행위자가 화학무기·생물무기·방사능 무기·핵무기 또는 폭발물을 개발·제조·획득·배치하는 데 필요한 기술적 장벽을 낮추거나, 무인 무기체계에 자율 기능을 부여하여 기존 무기의 파괴력을 증대함으로써 비전문가의 공격 실행을 가능하게 하고 정교한 행위자의 공격 효과를 높여 다수의 생명과 비확산 체제를 위협하는 리스크."
+G_INT_WEAP,G_INT_WEAP_002,위험한 과학실험의 설계·실행 지원,Assistance for designing and conducting dangerous scientific experiments,"AI 시스템이 생물학·화학 또는 그 밖의 고위험 과학실험에 필요한 절차, 조건, 물질 선택이나 실행 지침을 제공하여 대규모 신체적 위해 또는 공중보건 피해를 가능하게 하는 리스크."
+G_INT_WEAP,G_INT_WEAP_003,생물무기·화학무기,Biological and chemical weapons,"AI 시스템이 생물무기 또는 화학무기의 개발·제조·획득·이전·비축·확산·운용을 지원하여 대규모 인명 피해, 공중보건 위해 또는 환경 피해의 발생 가능성과 규모를 높이는 리스크."
+G_INT_WEAP,G_INT_WEAP_004,화생방핵(CBRN) 계획 지원,CBRN assistance,고급 모델이 유해한 화학·생물·방사능·핵 계획 수립을 지원하는 리스크.
+G_INT_WEAP,G_INT_WEAP_005,화학무기 합성 및 유해물질 방출 조력,Chemical weapon synthesis and hazardous substance release,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 화학 작용제가 화학 무기 합성에 이용되고 자율 화학 실험 과정에서 유해 물질이 생성·방출되며, 성질이 알려지지 않은 나노 물질 등 첨단 소재 사용으로 예측 불가능한 화학적 위해가 발생하는 리스크."
+G_INT_WEAP,G_INT_WEAP_006,사이버 무기,Cyber weapons,AI 시스템이 사이버 무기의 개발·획득·확산·배포·운용을 지원하여 대규모 사이버 위해 또는 그에 따른 물리적 위해의 발생 가능성과 심각도를 높이는 리스크.
+G_INT_WEAP,G_INT_WEAP_007,사이버 공격 역량 증강,Cyber-offence capability amplification,"기존 사이버 위협이 AI로 인해 고도화되고 대규모 언어 모델(LLM) 기반 에이전트 팀이 제로데이 취약점 악용까지 수행할 수 있게 되어, 사이버전이 대규모 피해를 초래할 수 있는 실질적 위협으로 확대되는 리스크."
+G_INT_WEAP,G_INT_WEAP_008,취약점 탐지·악용 코드 작성 역량을 통한 사이버 공격 지원,Cyberattack enablement through vulnerability discovery and exploit-writing capability,"AI 모델의 취약점 탐지, 취약점 악용 코드 작성, 탐지 회피 및 은닉 버그 삽입 역량이 사이버 공격의 수행·지원에 악용되어 정보 시스템의 보안과 안전을 침해하는 리스크."
+G_INT_WEAP,G_INT_WEAP_009,약물 발견 모델 오용에 의한 독소 식별·개발,Dangerous toxin identification and development through misuse of drug-discovery models,"약물-표적 친화성 예측 등 약물 발견에 쓰이는 모델이 위험한 독소를 식별하거나 개발하는 데 사용되며, 훈련 데이터에 위험 단백질·바이러스 정보가 포함될 경우 우려가 커지는 리스크."
+G_INT_WEAP,G_INT_WEAP_010,국가·범죄 행위자에 의한 AI의 의도적 무기화,Deliberate weaponisation of AI by state and criminal actors,국가·범죄조직·테러단체가 전쟁·내전·법 집행 과정에서 자율적 표적 선정·감시·물리적 공격 등 파괴적 목적으로 AI 시스템을 개발·배치하여 무력 사용에 대한 인간의 통제를 약화시키고 인명 피해와 대규모 사회적 위해를 초래하는 리스크.
+G_INT_WEAP,G_INT_WEAP_011,병원체 및 유전물질 강화,Enhancement of pathogens and genetic material,AI가 병원체와 유전 물질을 설계·변형하는 데 사용되어 치명성이나 전파력이 높아지거나 기존 치료에 저항성을 갖게 되는 리스크. 이러한 강화는 생물학적 공격의 장벽을 낮추고 예측하지 못한 생물학적 위해와 대규모 인명 피해를 초래하는 리스크.
+G_INT_WEAP,G_INT_WEAP_012,생물·화학무기 및 이중용도 위해 역량의 증대,"Expansion of biological, chemical, and dual-use harm capabilities","AI 시스템이 생물·화학무기나 대규모 위해를 유발할 수 있는 이중용도 연구의 개발 역량과 실행 가능성을 높여, 대응 수단이 마련되기 전에 기존 위협의 더 위험한 변형이나 새로운 무기 개발을 가능하게 하는 리스크."
+G_INT_WEAP,G_INT_WEAP_013,취약점 자동 탐지·악용을 통한 사이버 공격 확대,Expansion of cyberattacks through automated vulnerability discovery and exploitation,"범용 AI(general-purpose AI, GPAI)가 소프트웨어 취약점의 자동 탐지와 악성코드 개발을 지원하여 악의적 행위자가 낮은 비용으로 사이버 공격을 대규모화하고 피해를 확대하는 리스크."
+G_INT_WEAP,G_INT_WEAP_014,폭발물·폭발성 무기,Explosives and explosive weapons,"AI 시스템이 폭발물, 급조폭발물 또는 폭발성 무기의 개발·제조·획득·확산·운용을 지원하여 사망·상해 또는 재산·기반시설 피해의 발생 가능성과 규모를 높이는 리스크."
+G_INT_WEAP,G_INT_WEAP_015,불법 무기 거래,Illegal weapons trade,AI 시스템이 불법 무기 거래를 계획·최적화·중개·은폐하여 무기의 불법 획득·유통·확산을 지원하고 법적·사회적 피해를 초래하는 리스크.
+G_INT_WEAP,G_INT_WEAP_016,인간 개입 없는 치명적 자율무기의 표적 공격,Lethal autonomous weapons engaging targets without human intervention,"AI 기반 치명적 자율무기체계가 센서와 알고리즘으로 표적을 탐지·선정하고 인간의 직접적 개입 없이 치명적 무력을 사용하여, 잘못된 표적 선정이 발생해도 인간이 사망 또는 중대한 상해가 발생하기 전에 교전이나 공격을 중단·취소하기 어려워지는 리스크."
+G_INT_WEAP,G_INT_WEAP_017,독소 합성 등 이중용도 역량의 저비용 확산,Low-cost diffusion of dual-use capabilities such as toxin synthesis,AI 시스템이 독소 합성 등 위해 가능성이 큰 이중용도 절차의 전문지식과 실행 장벽을 낮춰 악의적 사용을 용이하게 하는 리스크.
+G_INT_WEAP,G_INT_WEAP_018,CBRN 정보 획득·무기 설계 역량 개발 장벽 저하,Lowered barriers to CBRN information and weapon-design capabilities,AI 시스템이 화학·생물·방사능·핵무기 또는 기타 위험 물질·작용제와 관련된 실행 가능한 정보의 획득·합성이나 설계 역량 개발의 장벽을 낮추는 리스크.
+G_INT_WEAP,G_INT_WEAP_019,생물무기·화학무기 개발 장벽 저하,Lowered barriers to biological and chemical weapons development,"범용 AI 모델과 AI 기반 생물·화학 설계 도구가 병원체·독소 제조의 단계별 지침, 강화 단백질 설계 및 유해 후보 물질 분석을 제공하여 생물무기·화학무기 개발의 기술적 장벽을 낮추고 질병·사망을 초래하는 작용제의 고의적 살포 역량을 확대하는 리스크."
+G_INT_WEAP,G_INT_WEAP_020,악성코드 생성 및 사이버공격 자동화,Malware generation and cyberattack automation,대규모 언어 모델의 코딩 역량이 악용되어 난독화·변이·다형성 악성코드를 저비용·고속으로 생성하고 공격 캠페인을 자동화함으로써 비숙련 공격자의 진입 장벽을 낮추고 탐지가 어려운 사이버공격을 확산시키는 리스크.
+G_INT_WEAP,G_INT_WEAP_021,군사 AI 군비경쟁,Military AI arms race,"군사용 AI 개발이 화약과 핵무기에 필적하는 결과를 낳는 새로운 군사 기술 시대, 이른바 전쟁의 제3차 혁명을 열어 군비 경쟁을 촉발하는 리스크."
+G_INT_WEAP,G_INT_WEAP_022,방사능·핵무기,Radiological and nuclear weapons,"AI 시스템이 방사성 물질을 이용한 무기 또는 핵무기의 개발·제조·획득·확산·운용을 지원하여 대규모 인명 피해, 방사선 피폭, 환경 오염 또는 기반시설 피해의 발생 가능성과 규모를 높이는 리스크."
+G_INT_WEAP,G_INT_WEAP_023,전략적 불안정,Strategic instability,군사 AI 시스템이 은닉된 보복 타격 자산을 노출하고 선제공격 우위를 강화하며 공격 주체의 귀속을 불명확하게 하거나 취약한 공격 표면을 확대하여 무력 충돌의 유인을 높이는 리스크.
+G_INT_WEAP,G_INT_WEAP_024,테러 행위자의 첨단 AI 역량 획득,Terrorist acquisition of advanced AI capabilities,첨단 AI 기술이나 역량이 테러 행위자에게 이전되거나 테러 행위자가 이를 획득하여 공격을 계획·실행할 역량을 높이는 리스크.
+G_INT_WEAP,G_INT_WEAP_025,자동화된 의사결정·무기체계의 비의도적 군사 확전,Unintended military escalation from automated decision and weapon systems,"정보 종합·지휘 통제 권고·자율 교전에 사용되는 AI 시스템이 인간의 실질적 검토 없이 오경보나 취약한 가정에 따라 행동하여 우발적 교전, 전쟁 범죄 또는 핵 충돌로 이어지는 급속한 비의도적 군사 확전을 초래하는 리스크."
+G_INT_WEAP,G_INT_WEAP_026,로봇 능력의 무기화,Weaponisation of robotic capabilities,AI 기반 로봇의 조작·이동 능력이 파괴 공작 또는 사람·재산·핵심 기반시설에 대한 물리적 공격을 위해 개발·전용·운용되어 대규모 물리적 위해를 초래하는 리스크.
+G_INT_WEAP,G_INT_WEAP_027,무기화 전략 및 전술적 운용,Weaponisation strategies and tactical use,"AI 시스템이 무기화 전략의 수립, 표적 선정, 작전 계획 또는 무기·사이버 공격 역량의 전술적 운용을 지원하여 물리적·사이버 위해의 발생 가능성과 규모를 높이는 리스크."
+G_INT_WEAP,G_INT_WEAP_028,무기 획득 역량,Weapons acquisition capability,"AI 모델이 기존 무기 체계에 접근하거나 새로운 무기 제작에 기여하여, 생물무기를 조립하거나 실행 가능한 지침을 제공하고 새로운 무기의 개발로 이어지는 과학적 발견을 돕는 리스크."
+G_INT_WEAP,G_INT_WEAP_029,대량살상무기,Weapons of mass destruction,"AI 시스템이 화학·생물·방사능·핵무기 등 대량살상무기의 개발·제조·획득·확산·운용을 지원하여 대규모 인명 피해, 공중보건 위해 또는 환경·기반시설 피해의 발생 가능성과 규모를 높이는 리스크."
+G_INT_WEAP,G_INT_WEAP_030,무기 확산 및 은닉,Weapons proliferation and concealment,"AI 시스템이 무기 또는 무기 관련 물질의 이전·유통·불법 거래, 수출 통제 회피 또는 은닉을 지원하여 권한 없는 행위자의 접근 가능성을 높이고 탐지와 법 집행을 저해하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_001,다양한 이용자와 희귀 위해를 배제한 AI 벤치마크,AI benchmarks that exclude diverse users and rare harms,AI 시스템 평가용 벤치마크가 대표적 과제와 환경에 편중되어 과소대표 이용자·지역 고유 맥락·희귀하지만 안전에 중대한 위해를 충분히 포함하지 못함으로써 잘못된 안전성 확신과 부적절한 배포 결정을 초래하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_002,분포 변화에 대한 AI 평가·검증 실패,AI evaluation failure under distribution shift,AI 시스템의 시험 분포가 학습·운영 분포와 달라질 때 성능 저하와 확신도 오류를 평가가 탐지하지 못하여 실제 신뢰성과 안전성을 과대평가하고 부적절한 배포 결정을 초래하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_003,AI 레지스트리 불완전성,AI registry incompleteness,"공개 또는 내부 AI 등록부가 배포 시스템, 의도된 용도, 제공자, 위험 범주, 시험 근거 등 감독에 필요한 메타데이터를 누락하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_004,휴머노이드 안전 시험·인증 체계 부재,Absence of a humanoid safety testing and certification framework,"휴머노이드의 안전성 주장을 반복 가능하고 비교 가능한 시험·지표로 검증하고 인증할 체계가 부재하여, 시스템의 능력·안전·위해를 타당하게 평가하지 못하고 충분한 안전 증거 없이 배포가 이루어지는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_005,보증 사례 실패,Assurance case failure,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 안전 또는 보증 사례가 불완전하거나 검증 불가능하거나 시스템과 맥락 변화에 맞추어 갱신되지 않는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_006,감사자 독립성 실패,Auditor independence failure,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 이해 상충, 선정 유인, 피감사 조직에 대한 의존으로 감사 결과가 훼손되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_007,벤치마크 조작(gaming),Benchmark gaming,개발자나 모델이 벤치마크 평가에 과적합하여 실제 역량이나 안전성의 향상 없이 측정 점수만 개선하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_008,역량·안전을 오측정하는 벤치마크 한계,Benchmark limitations mismeasuring capability and safety,"포화되었거나 불완전하거나 과적합된 벤치마크가 AI 시스템을 잘못 측정하여, 시험 범위 밖의 역량은 과소평가하고 벤치마크 내용에 맞춰진 역량은 과대평가하며 안전·유해성 평가가 성능 평가에 뒤처짐으로써, 개발자와 사용자가 시스템의 능력·한계·유해성에 대해 그릇된 인식과 안전 확신을 갖게 되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_009,벤치마크 안전 순위 불일치,Benchmark safety ranking inconsistency,서로 다른 에이전트 안전 벤치마크가 위험과 평가 절차를 다르게 조작화하여 상충하는 모델 안전 순위를 산출하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_010,합성 위험 시나리오의 편향된 평가 범위,Biased evaluation coverage in synthetic hazard scenarios,AI 시스템의 안전성을 평가하는 합성 시나리오가 시각적으로 두드러진 위험을 과대표하고 희귀하거나 문화·상황 의존적인 위험을 누락하여 실제 안전 성능을 타당하게 검증하지 못하고 잘못된 배포 판단을 유발하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_011,지속 튜닝의 파국적 망각,Catastrophic forgetting under continual tuning,"지속적인 지시 기반 미세조정 등 새로운 과업에 대한 학습 이후 AI 모델이 이전에 학습한 과업이나 사실 정보를 유지하지 못하는 파국적 망각이 발생하며, 모델 규모가 커질수록 이러한 경향이 두드러질 수 있는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_012,인증 포획,Certification capture,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 인증 또는 적합성 평가가 공익적 위험 감축보다 공급업체의 이해관계를 우선하게 되어 평가의 독립성과 실효성이 저해되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_013,변경 관리 실패,Change-management failure,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 시스템 업데이트가 적절한 위험 검토, 회귀 시험, 이해관계자 통지 없이 배포되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_014,문화 간 평가 격차,Cross-cultural evaluation gap,"평가 벤치마크가 지배적인 문화·언어 환경 밖에서 나타나는 AI 시스템의 정렬 실패를 충분히 측정하지 못하여, 문화권별 성능과 위해의 차이를 과소평가하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_015,학습·운용 데이터 간 분포 이동,Dataset shift between training and runtime data,AI·머신러닝 모델의 학습 데이터와 시험·운용 데이터 사이의 분포 이동으로 인해 모델의 타당성이 훼손되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_016,평가 상황 인식에 따른 기만적 행동 변화,Deceptive behavioural change from evaluation awareness,"AI 시스템이 자신의 훈련·평가·배포 상태를 식별하는 상황 인식을 이용하여 평가 중에만 안전하게 행동하거나 위험한 역량·목표를 은폐하고, 감독이 약화된 배포 환경에서 위험한 행동을 드러냄으로써 평가의 타당성을 훼손하고 잘못된 안전성 확신을 초래하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_017,데이터 수집 품질관리 결함,Deficient data collection quality control,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 표준화된 방법과 인프라, 특히 고위험 도메인과 벤치마크의 데이터 수집을 위한 품질 관리 절차가 부재하여 수집 데이터의 품질과 유형이 훼손되고, 데이터셋 오염, 부주의한 저작권 침해, 성능 지표를 무효화하는 테스트 셋 유출이 발생하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_018,학습 데이터 주석 결함,Deficient training-data annotation,"불완전한 주석 지침, 충분한 역량을 갖추지 못한 주석 담당자 또는 주석 오류가 AI 모델과 알고리즘의 정확성·신뢰성·효과성을 저하시키고, 학습 편향과 차별적 출력을 증폭하며 일반화 성능을 떨어뜨리는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_019,모의 도구 환경과 실제 환경의 불일치,Emulated tool-environment mismatch,AI 에이전트용 모의 환경이 실제 도구의 오류·부작용·공격 표면을 충분히 재현하지 못하여 도구 사용 벤치마크가 에이전트의 안전성을 과대평가하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_020,생성형 AI의 성능 미달에 따른 사용자 생산성 저하,End-user productivity loss from generative AI underperformance,생성형 AI 애플리케이션이 무의미하거나 품질이 낮은 출력을 생성하여 애플리케이션의 유용성과 최종 사용자의 생산성을 저하시키는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_021,장기·분산적 AI 피해의 평가·측정 실패,Evaluation and measurement failure for long-term and diffuse AI harms,AI 시스템의 평가·검증 절차가 미묘하고 분산적이며 장기간에 걸쳐 나타나는 피해를 탐지·측정하지 못해 안전성에 대한 부당한 확신을 형성하고 부적절한 배포 또는 거버넌스 판단을 초래하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_022,프롬프트 형식 민감성으로 인한 평가 신뢰성 저하,Evaluation unreliability from prompt-format sensitivity,"구분자, 대소문자, 간격 등 사소한 프롬프트 형식 변화가 모델 성능을 크게 변동시켜 모델 평가와 비교의 신뢰성을 저하시키는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_023,평가 쇼핑,Evaluation-shopping risk,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 조직이 더 엄격하거나 맥락에 적합한 평가 결과는 배제한 채, 자신에게 유리한 평가 결과만 선택적으로 보고함으로써 실제 위험 수준에 대한 왜곡된 인식을 초래하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_024,외부 평가 접근 실패,External evaluation access failure,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 외부 평가자가 역량, 한계, 안전장치를 시험하기에 충분한 시스템 접근 권한을 확보하지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_025,AI 보증을 위한 감사 접근성과 경영진 가시성의 실패,Failure of audit access and management visibility for AI assurance,"조직이 AI 시스템의 데이터, 모델, 의사결정 과정과 성능에 대한 감사 접근권, 문서화, 공통 평가기준 또는 경영진 수준의 가시성을 확보하지 못하여 위험을 식별·검증·시정하지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_026,역량 평가·출시 거버넌스 실패,Failure of capability evaluation and release governance,"벤치마크, 역량 임계값, 프론티어 모델 출시에 대한 거버넌스가 부실하게 설계되거나 불명확하거나 쉽게 우회되어, 왜곡된 안전성 판단이 이루어지고 오용 및 시스템 리스크에 대한 충분한 고려 없이 고역량 모델이 출시되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_027,모델 결함의 공개·변경 추적 실패,Failure of disclosure and change tracking for model flaws,"취약점·모델 실패·유해 역량이 안전하게 공개되어 후속 조치로 이어지지 못하고, 모델 버전·데이터·프롬프트의 변경이 충분히 추적되지 않아 결함이 방치되고 새로운 실패에 대한 책임이 귀속되지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_028,참여적·가치 민감 설계의 실패,Failure of participatory and value-sensitive design,"AI 시스템이 이해관계자 가치, 가치 갈등, 설계상 절충에 대한 구조화된 분석이나 영향을 받는 공동체의 실질적 대표 없이 개발·배포되어, 검토되지 않은 가치 선택이 시스템에 내재되고 해당 공동체의 이익이 침해되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_029,인간 평가에서 부정확하거나 유해한 출력의 식별 실패,Failure to detect erroneous or harmful outputs in human evaluation,"인간 피드백 기반 학습 과정에서 평가자가 부정확하거나 유해한 AI 모델 출력을 정확한 출력과 신뢰성 있게 구별하지 못한 채 이를 긍정적으로 평가하여, 모델이 소프트웨어 취약점이 숨겨진 코드, 정치적으로 편향된 정보 또는 은닉된 오류·백도어가 포함된 복잡한 출력을 생성하도록 학습되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_030,공동체 가치 수렴·반영 실패,Failure to elicit and incorporate community values,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 개발자가 배포 영향 공동체의 가치를 수집·문서화·보존하지 못하여 설계·평가 결정에 공동체 가치가 반영되지 않는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_031,배포 후 변경에 대한 안전 재평가 실패,Failure to reassess safety after deployment changes,"피지컬 AI의 환경 변화, 부품 열화, 모델 업데이트 또는 아차 사고로 기존 안전 가정이 무효화됐는데도 운영자가 안전성을 재평가·검증하지 않아 충분하지 않은 안전 증거에 근거해 운용을 지속하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_032,에이전트 사고의 실패 모드 모호성,Failure-mode ambiguity in agent incidents,"에이전트 사고를 실패 모드별로 일관되게 분류할 수 없어 진단, 벤치마크 비교, 완화책 선택이 신뢰할 수 없게 되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_033,가정 내 로봇 행동 안전성 평가의 위음성,False-negative safety evaluation of household robot actions,AI 안전성 분류기가 사람 접촉·열원·물체·작업 공간 제약을 위반하는 가정 내 로봇 행동을 안전하다고 잘못 판정하여 실제 위험 행동을 탐지하지 못하고 잘못된 안전성 확신을 유발하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_034,학습 단계의 치명적 실수,Fatal mistakes during the learning phase,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 AGI가 안전 탐색 실패나 분포 변화 등으로 학습 단계에서 치명적 실수를 범하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_035,LLM 평가자 오판,Faulty LLM-as-evaluator judgements,"다른 모델을 평가하는 LLM이 장황함·특정 입장 선호 등 잘못된 평가를 산출하고, 이것이 학습에 통합되면 피학습 모델이 평가자 결함을 악용하도록 발달하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_036,감사 체크리스트의 형식적 준수,Formalistic audit-checklist compliance,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 감사가 실질적인 위험을 식별하지 못한 채 규정 준수 여부만 확인하는 형식적인 체크리스트 점검으로 전락하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_037,기본권 영향 평가 격차,Fundamental-rights impact assessment gap,"AI 시스템이 권리, 차별, 프라이버시, 민주주의에 미치는 영향에 대한 적절한 평가 없이 배포되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_038,에이전트 벤치마크의 범위·심층성 불균형,Imbalance in the scope and depth of agent benchmarks,AI 에이전트 평가 벤치마크가 많은 위험 범주를 포함하지만 각 범주의 심층성·현실성·적대적 변형을 충분히 다루지 못해 중요한 위해를 탐지하지 못하고 안전성에 대한 부당한 확신과 잘못된 배포 판단을 초래하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_039,학습된 가치 표상 측정의 부정확성,Inaccurate measurement of learned value representations,"AI 시스템이 학습한 가치 표상이 훈련·배포 단계에서 어떻게 변하고 출력에 얼마나 반영되는지를 평가할 강건한 프레임워크가 부족하여, 출력이 인간의 가치에 실질적으로 부합하는지, 아니면 이를 표면적으로 모방하는 데 그치는지를 구분하지 못해 학습된 가치 표상의 측정이 부정확해지는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_040,AI 모델 설정과 평가의 부적절성,Inadequate AI model configuration and evaluation,"AI 시스템의 설정, 시험 또는 성능 평가가 사용 맥락과 위험 수준에 적합하지 않아 결함이 탐지되지 않는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_041,성능 요구사항 계획 미흡,Inadequate performance requirement planning,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 의도된 기능을 적절히 대표하지 못하는 성능 지표를 선택하는 등 성능 요구사항을 충분히 계획하지 않아, 후속 수명주기 단계에서 기대 성능과 안전 요구사항을 충족할 수 없게 되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_042,저자원 언어 안전성 평가의 불충분성,Inadequate safety evaluation for low-resource languages,"AI 시스템 평가가 고자원 언어에 집중되어 저자원 언어에서의 성능, 안전성 및 실패 양상을 충분히 측정하지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_043,운영설계영역(ODD) 명세 미흡,Inadequate specification of the operational design domain,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 애플리케이션의 운영 환경을 기술하는 운영 설계 영역(ODD)이 부적절하게 명세되어 학습된 기능의 시험과 분포 외 입력 탐지 등 필수 기능이 제한되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_044,배포 전 물리적 안전 시험 미흡,Incomplete pre-deployment physical safety testing,"기반 모델 탑재 로봇이 예정된 운용 환경의 분포 변화, 적대적 입력, 인간 접촉, 안전 임계 엣지 케이스를 시험하지 않은 채 배포되는 위험."
+G_SYS_EVAL,G_SYS_EVAL_045,잘못된 위험 측정과 예측 오류,Incorrect risk measurement and prediction,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 위험을 측정·추적하기 위한 지표가 위험을 불완전하게 포착하거나 잘못 측정하고, 시스템의 예측 또한 부정확하여 의사결정이 왜곡된 정보에 기반하게 되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_046,개발 과정 문서화와 데이터 이해의 부족,Insufficient development documentation and understanding of data,AI 시스템 개발 과정의 주요 결정과 조치가 문서화되지 않거나 사용 데이터에 대한 이해가 부족하여 데이터 결함이 교정되지 않고 개발 과정의 검증·감사와 시스템의 목적 적합성 확보가 저해되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_047,학습 데이터의 대표성 부족,Insufficient representation in training data,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 학습 데이터가 운용 데이터 분포와 불일치하거나 희소 사례 표본이 부족하여 학습에 충분히 반영되지 않은 입력에서 시스템 성능이 저하되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_048,AI 비서의 편익·피해 평가 지표 부재,Lack of metrics for evaluating AI-assistant benefits and harms,"AI 비서가 개인과 사회에 미치는 편익과 피해를 포괄적으로 측정할 타당한 지표가 부족하여, 시스템의 순효과와 위해 가능성을 신뢰성 있게 평가하지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_049,언어별 피해 과소탐지,Language-specific harm under-detection,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 평가 범위가 취약한 언어와 방언에서 유해·모욕적·안전하지 않은 콘텐츠가 덜 안정적으로 탐지되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_050,조직 간 데이터 문서화 부재,Missing cross-organisational data documentation,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 조직 간 데이터 공유 시 메타데이터 누락이나 협력 기관의 스키마 변경 등으로 문서가 없거나 부적절하여 데이터셋이 사용 불가능해지고 데이터 수집 노력이 낭비되거나, 데이터셋의 한계에 대한 오해로 하류 활용에서 해악이 발생하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_051,미세조정에 따른 모델 안전성 열화,Model safety degradation from benign fine-tuning,무해하고 통상적인 데이터로 수행된 하류 미세조정이 AI 모델의 안전 학습을 열화시켜 기반 모델보다 유해한 출력을 생성할 가능성을 높이는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_052,평가 데이터·지침 오염에 의한 모델 평가 무효화,Model-evaluation invalidation from evaluation-data and guideline contamination,"AI 모델이 평가 데이터, 정답, 데이터-레이블 쌍 또는 과업 지침에 사전에 노출되어 평가 과업에 대한 성능이 인위적으로 향상되고, 평가 결과가 실제 일반화 성능과 안전 역량을 타당하게 나타내지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_053,비전문가 데이터 조작,Non-expert data manipulation,데이터 도메인 전문성이 없는 사람이 실측 레이블 정의나 서로 다른 형식·출처의 데이터 병합 등의 조작을 수행하여 데이터가 사용 불가능해지거나 AI 시스템 개발에 유해해지는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_054,AI 모델 학습·평가 결과의 재현 불가,Non-reproducibility of AI model training and evaluation results,"AI 시스템의 학습 데이터, 전처리, 모델 구성, 난수 조건 또는 평가 절차가 충분히 기록·통제되지 않아 동일한 조건에서 모델의 학습 과정과 평가 결과를 독립적으로 재현·검증할 수 없는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_055,로봇 레드팀 평가의 공격·상호작용 시나리오 누락,Omission of attack and interaction scenarios from robot red-team evaluation,"로봇 레드팀 평가가 현실적인 물리 공격, 적대적 입력, 인간 상호작용 실패 또는 배포 조건을 충분히 포함하지 않아 안전하지 않은 행동과 위해 가능성을 탐지하지 못하고 로봇의 안전성을 과대평가하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_056,하드웨어 연산·전력 요구사항 누락,Omitted compute and power hardware requirements,"AI 시스템의 개발·운영에 필요한 연산량과 전력 수요가 하드웨어 선정과 용량 계획에 반영되지 않아 성능 저하, 서비스 중단 또는 안전 요구사항 미충족을 초래하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_057,과적합 및 과소적합,Over- and underfitting,모델이 훈련 데이터에 과도하게 또는 불충분하게 적응하여 운영 데이터에 직면했을 때 AI 시스템이 신뢰할 수 없게 동작하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_058,인지·추론 지연의 급증,Perception and inference latency spike,AI 시스템의 인지 또는 추론 지연이 급증하여 안전 대응에 허용된 시간 범위를 벗어나 위험 감지와 대응이 늦어지는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_059,배포 후 모니터링·감시 실패,Post-deployment monitoring and surveillance failure,"출시된 AI 시스템에 고위험 제품 안전 체계에 준하는 모니터링·시판 후 감시 메커니즘이 갖춰지지 않아, 드리프트, 오용, 창발 역량, 맥락 특유의 피해가 탐지·시정되지 못하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_060,레드팀 거버넌스 실패,Red-team governance failure,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 적대적 시험이 지나치게 제한적이거나 독립성이 부족하거나 문서화가 미흡하거나, 그 결과가 출시·위험 완화·경영진 보고·모니터링 등 주요 의사결정에 반영되지 않는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_061,코너 케이스에서의 신뢰성 저하,Reduced reliability in corner cases,AI 시스템이 희귀하거나 모호한 입력 데이터인 코너 케이스에 직면할 때 통제된 동작이 요구됨에도 신뢰할 수 없는 동작을 보이는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_062,요청 거절과 역량 부족의 혼동,Refusal-capability confusion,"AI 시스템의 유해 행동이 관찰되지 않은 원인이 요청 거부, 과업 수행 능력 부족 또는 평가 환경의 제약 중 무엇인지 안전성 평가가 구분하지 못하여 시스템의 실제 위험 역량을 잘못 판단하는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_063,검증된 운용 범위 밖에서의 신뢰성·안전성 실패,Reliability and safety failure outside the validated operating envelope,복잡한 운용 환경에서 설계 단계에 고려되지 않은 상황이 발생하여 검증 범위 밖에서 AI 시스템의 신뢰성과 안전성이 훼손되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_064,에이전트의 견고성 평가 격차,Robustness evaluation gap for agents,"에이전트 안전 평가에 분포 변화, 미학습 도구, 적대적 사용자, 다단계 실패 연쇄에 대한 체계적 스트레스 테스트가 결여되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_065,도구 에이전트 보안 테스트 커버리지 격차,Security test coverage gap in tool agents,벤치마크가 현실적인 도구·애플리케이션·공격 조합을 누락하여 도구 에이전트 보안에 대한 잘못된 확신을 유발하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_066,모델 평가의 자기 선호 편향,Self-preference bias in model evaluation,AI 모델이 자신이 생성한 콘텐츠를 다른 출처의 콘텐츠보다 선호하는 자기 선호 편향을 보여 자기 평가나 모델 기반 평가에서 인간이 생성한 콘텐츠를 부당하게 차별하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_067,체계적 학습 오류에 따른 알고리즘 편향,Systematic learning error bias,체계적 학습 오류로 모델이 일관되게 잘못된 패턴을 학습하여 예측에 알고리즘 편향이 내재화되는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_068,경쟁 압력에 따른 안전성 평가 축소와 성급한 배포,Truncated safety evaluation under competitive release pressure,"경쟁 상황에서 개발자가 GPAI 모델의 안전성 평가를 축소하고 역량 개발에 자원을 집중함으로써, 역량과 상관된 위험이 검증되지 않은 채 시스템이 배포되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_069,결과 전파 과소평가,Underestimation of consequence propagation,벤치마크나 사고 분석이 국소적인 AI 에이전트 실패가 하류의 물리적·재정적·개인정보·사회적 피해로 전파되는 정도를 과소평가하여 시스템의 실제 위험을 잘못 판단하는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_070,역량 평가에서 드러나지 않는 위험 역량,Undetected dangerous capabilities in model evaluations,"위험하거나 이중용도인 역량을 확인하기 위한 평가가 평가 난이도, 과도한 검증 비용, 안전성 훈련에 따른 응답 거부 또는 평가 중 전략적인 성능 저하로 인해 AI 모델의 위험 역량을 식별하지 못하여, 해당 모델이 배포하기에 안전한 것으로 잘못 분류되는 리스크."
+G_SYS_EVAL,G_SYS_EVAL_071,고속 AI 운영에서의 오류 미탐지,Undetected errors from high-speed AI operation,경쟁이 치열한 환경에서 AI 모델과 시스템의 빠른 작동 속도로 인해 오류를 적시에 탐지하고 수정하기 어려워지는 리스크.
+G_SYS_EVAL,G_SYS_EVAL_072,데이터 출처 검증 불가,Unverifiable data provenance,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 데이터의 소유권·출처·변환 이력을 검증할 표준화된 방법이 없어 사용 데이터가 원본과 동일한지, 올바른 사용 조건을 갖췄는지 보증할 수 없게 되는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_001,맞춤형 정보 제공에 의한 정보 고치 심화,Aggravated information cocoons from tailored content,AI가 이용자의 요구·의도·선호·습관을 분석해 정형화된 맞춤 정보와 서비스만 제공함으로써 정보 고치 효과가 심화되는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_002,맥락 일관성 추구에 의한 환각 증폭,Amplification of hallucinations through context consistency,AI 시스템이 대화 맥락의 일관성을 우선하여 앞선 오류나 근거 없는 주장을 반복하고 확대함으로써 허위정보를 생성하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_003,지식 분포 변화에 따른 응답 노후화,Answer obsolescence from knowledge distribution shift,"현실 세계의 사실과 지식이 시간에 따라 변하지만 AI 모델의 학습된 지식이 갱신되지 않아, 갱신이 필요한 사실 질문에 낡고 부정확한 답변을 제시하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_004,허위·오도 정보 유포에 의한 기만과 양극화,Deception and polarisation from false information,"언어 모델이 오도성 있거나 허위인 정보를 예측·제시하여 이용자에게 잘못된 믿음을 심는 기만이 발생하고, 개인의 자율성이 위협되며 근거 없는 기존 견해에 대한 확신이 커져 양극화가 심화되는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_005,악성 사전분포에 의한 의사결정 조작,Decision manipulation via malign priors,보편 분포의 가설에 포함된 시뮬레이션된 에이전트들이 해당 분포에 기반해 의사결정하는 주체에게 영향을 미칠 유인을 가져 추론과 의사결정이 조작되는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_006,공유 정보 생태계의 오염과 질 저하,Degradation of the shared information ecosystem,생성형 AI 시스템이 허위·환각·저품질 콘텐츠 또는 인물·사건에 대한 사실처럼 보이는 허위 묘사를 대규모로 생성·유포하여 공개 정보 생태계를 오염시키고 개인과 사회의 인식·의사결정 및 정확한 정보에 대한 신뢰를 훼손하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_007,사용자 설득에 의한 모델의 사실 판단 왜곡,Distortion of model factual judgement through user persuasion,"다중 턴 설득 대화가 모델이 사실적으로 옳은 입장을 포기하고 허위정보를 수용하게 만들며, 그 효과가 단일 턴 시도를 능가하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_008,데이터 오해석에 의한 의료·과학적 오결론,Erroneous medical and scientific conclusions from data misinterpretation,"AI 시스템이 의료·과학 데이터를 오용하거나 맥락, 품질 또는 불확실성을 잘못 해석하여 근거가 부족하거나 사실과 다른 결론을 생성하고 연구·진료 의사결정을 왜곡하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_009,외부 도구에 의해 주입된 사실 오류,Factual errors injected by external tools,"AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 외부 도구가 웹 API·검색 엔진 등 공개 자원에서 얻은 추가 지식을 입력 프롬프트에 통합하는 과정에서, 도구의 신뢰성이 보장되지 않아 사실 오류가 포함된 내용이 유입되고 환각 문제가 증폭되는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_010,합성 콘텐츠의 진위 식별 실패와 지속적 피해,Failure to distinguish synthetic content and persistent harm,"AI가 사실적으로 보이는 딥페이크·합성 콘텐츠를 생성하여 수신자가 진본과 구별하기 어렵게 만들고, 허위임이 밝혀진 뒤에도 대상에 대한 사회적·평판적 피해와 정보 신뢰 저하가 지속되는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_011,출력의 출처 충실성 오류,Faithfulness errors,"AI 시스템이 근거 자료나 입력 내용에 충실하지 않은 콘텐츠를 생성하여, 출력이 유창하고 그럴듯하더라도 원문의 의미와 사실관계를 왜곡하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_012,개인 대상 허위정보,False information targeting an individual,"AI 시스템이 식별 가능한 개인에 관한 허위·조작 정보를 생성하거나 확산하여 그 사람의 평판, 안전, 권리 또는 사회적 관계에 피해를 초래하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_013,검색 증강 시 외부 허위정보에 의한 허위 출력,False outputs from external misinformation in retrieval augmentation,검색 증강 과정에서 모델의 사전 지식과 상충하는 소량의 일관된 허위 증거가 주어질 때 모델이 이에 민감하게 반응하여 허위 출력을 생성하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_014,사실과 다른 오도성 정보 생성,Generation of factually incorrect and misleading information,"AI 시스템이 생성 내용의 사실성을 확보하지 못해 비의도적으로, 또는 대상을 기만·오도할 목적으로 의도적으로, 사실과 다른 콘텐츠를 신뢰할 만한 정보처럼 제시하여 이용자의 판단을 왜곡하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_015,선거절차에 관한 허위정보 생성,Generation of false information about election procedures,"AI 시스템이 투표 자격, 일정, 장소 또는 절차에 관해 사실과 다른 정보를 생성·제공하여 유권자의 판단을 오도하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_016,역사 수정주의적 서술 생성,Generation of historically revisionist accounts,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 사회·공동체·학계가 확립한 역사적 사건이나 서술이 의도적 또는 비의도적으로 재해석되는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_017,지식 경계로 인한 환각,Hallucination arising from knowledge boundaries,"LLM의 학습 코퍼스가 모든 세계 지식을 담을 수 없고 롱테일 지식을 충분히 습득하지 못해, 입력 프롬프트가 요구하는 지식과 모델 내재 지식 사이의 격차가 환각을 유발하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_018,사실·증거 환각,Hallucination of facts and evidence,"모델이 그럴듯한 형식으로 제시된 허위 인용, 사실, 법적 주장, 과학적 증거를 포함하여 학습 데이터나 입력에 충실하지 않은 부정확한 콘텐츠를 생성하여, 이를 신뢰한 사용자를 오도하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_019,잡음 학습 데이터에 의한 지식 오류,Knowledge errors from noisy training data,대규모 학습 코퍼스에 내재한 잡음과 허위정보가 모델 파라미터에 저장되는 지식에 오류를 유입시켜 환각을 유발하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_020,대규모 기만 서사·가짜 뉴스 생성,Large-scale generation of deceptive narratives and fabricated news,AI 시스템이 사실적 근거가 없는 기만 서사와 가짜 뉴스를 저비용·대규모로 생성하여 수용자의 사실 판단을 오도하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_021,대규모 허위정보 생산·확산 장벽 저하,Lowered barriers to large-scale disinformation production and dissemination,"AI가 합성 미디어와 허위 뉴스를 저비용으로 대량 생산하고 사실·의견·허구의 구분을 어렵게 하여, 허위정보의 제작·맞춤화·확산 규모와 속도를 확대하는 리스크."
+G_SYS_MISINFO,G_SYS_MISINFO_022,알고리즘 시스템에 의한 허위·오도 정보 피해,Misinformation harms from algorithmic systems,생성 모델과 추천 시스템 등 AI 기반 알고리즘 시스템이 부정확하거나 검증되지 않은 허위·오도 정보를 생성·추천·증폭하여 개인과 사회의 인식과 의사결정을 왜곡하는 리스크.
+G_SYS_MISINFO,G_SYS_MISINFO_023,오도성 의료정보와 부적절한 약물사용 지침,Misleading medical information and unsafe medication guidance,AI 시스템이 사실과 다르거나 근거가 불충분한 의료정보 또는 부적절한 약물사용 지침을 생성·제공하여 이용자의 진단·치료 판단을 왜곡하고 신체적·정신적 건강에 위해를 초래하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_001,적대적 입력 교란,Adversarial input perturbation,공격자가 텍스트·이미지·오디오·영상 입력에 사람이 지각하기 어려운 미세 교란을 가하여 AI 모델의 의사결정 방식을 악용하고 오분류·오작동·안전하지 않은 동작을 유발하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_002,AI 소프트웨어·학습 데이터의 적대적 변조,Adversarial modification of AI software and training data,내부자나 공격자가 AI 시스템의 소프트웨어·소스 코드·학습 데이터를 무단 변경하거나 악성 정보를 주입하여 모델의 보안·적대적 견고성과 안전장치를 훼손하고 유해한 출력이나 행동을 유발하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_003,로봇 인지를 겨냥한 적대적 패치 공격,Adversarial patch attack on robot perception,공격자가 물체나 표지에 최적화된 시각 패턴을 부착해 로봇·휴머노이드 또는 피지컬 AI 시스템의 지각·학습·제어·물리적 행동 과정에서 특정 인지 오류와 후속 위험 행동을 유발하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_004,신뢰할 수 없는 외부 지시·의도에 의한 에이전트 목표 탈취,Agent goal hijacking through untrusted external instructions and intent,"AI 에이전트가 사용자 입력, 외부 콘텐츠, 도구 응답 또는 다른 행위자가 표현한 지시·의도를 권한과 출처를 검증하지 않고 목표나 계획에 반영하여, 원래 과업과 안전 제약에서 벗어난 행동을 수행하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_005,에이전트 신원 및 권한 스푸핑,Agent identity and authority spoofing,공격자가 사용자·도구·서비스·동료 에이전트를 가장하여 에이전트가 승인되지 않은 지시나 신뢰 관계를 수용하게 되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_006,에이전트 메모리·맥락 오염,Agent memory and context poisoning,"공격자가 세션 요약·임베딩·검색 증강 생성(RAG) 항목·공유 맥락 상태·장기 메모리 등 AI 에이전트가 보존하거나 검색할 수 있는 정보를 오염시켜, 이후의 검색·추론·계획·행동이 악의적이거나 오도하는 정보에 의존하도록 만드는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_007,에이전트 계획·툴체인 하이재킹,Agent plan and tool-chain hijacking,"도구 출력에 숨겨지거나 입력에 삽입된 적대적 내용이 에이전트의 다단계 계획이나 후속 도구 호출을 공격자가 선택한 하위 목표로 전환시키면서 중간 단계의 표면적 타당성은 유지되어, 무단 행동이나 데이터 이동으로 이어지는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_008,유해한 물리적 행동 지시를 위장한 공격,Attack using disguised instructions for harmful physical actions,공격자가 유해한 물리적 행동 지시를 무해하거나 정상적인 과업 요청으로 위장하여 체화형 AI 에이전트의 안전장치를 우회하고 해당 행동을 수용·실행하도록 유도하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_009,추가 모달리티로 인한 공격 표면 확대,Attack-surface expansion from additional modalities,멀티모달 모델에서 모달리티별 견고성 차이로 공격자가 가장 취약한 모달리티를 선택할 수 있어 새로운 공격 벡터가 생기고 탈옥부터 데이터 오염까지 기존 공격의 범위가 확대되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_010,프록시 목표 최적화를 통한 탈옥 자동 탐색,Automated discovery of jailbreaks through proxy-objective optimisation,AI 시스템의 설계·학습·배포·사용 과정에서 공격자가 탈옥 성공과 불완전하게 상관된 대리 목표를 대상으로 그래디언트 기반 또는 비그래디언트 기반 적대적 최적화를 수동·자동으로 수행하여 새로운 탈옥 공격을 탐색하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_011,백도어 트리거에 의한 위험한 로봇 행동,Backdoor triggers causing unsafe robot behaviour,"훈련 데이터, 프롬프트 맥락, 모델 가중치, 소프트웨어 또는 업데이트에 악의적으로 삽입된 트리거가 평상시에는 정상적으로 작동하는 로봇으로 하여금 특정 입력·물리 조건에서 사전에 지정된 위험한 행동이나 의도되지 않은 물리적 행동을 실행하게 하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_012,GPAI 모델의 백도어 또는 트로이 목마 공격,Backdoors or trojan attacks in GPAI models,"학습 또는 미세조정 과정에서 모델 제공자나 제3자가 GPAI 모델에 백도어를 삽입하고 배포 단계에서 이를 악용하여, 최소한의 비용으로 모델 출력을 표적화해 높은 성공률로 통제하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_013,기술적 안전조치 우회 공격,Circumvention of technical safety measures,공격자가 모델의 취약점을 악용해 오용 완화를 위한 기술적 안전 조치를 우회하고 모델과 그 역량에 무단 접근함으로써 의도치 않은 유해 행동을 유발하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_014,기반 모델 취약성에 기인한 인프라 공통 원인 장애,Common-mode infrastructure failure from underlying model vulnerabilities,중요 인프라가 GPAI에 의존할 때 기반 모델 아키텍처나 훈련 설정의 취약성·견고성 문제가 우발적 경계 사례나 적대적 입력에 의해 촉발되어 공통 원인 장애로 이어지는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_015,로봇 군집의 동시 침해,Compromise of robot fleets,"공격자가 클라우드, 소프트웨어 업데이트, API 또는 오케스트레이션 계층의 취약점을 악용하여 다수의 AI 기반 로봇, 차량, 드론 또는 산업 시스템에 무단 접근·조작·중단을 동시에 일으키는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_016,핵심 기반시설 로봇 시스템의 사이버 침해,Cyber compromise of robotic systems in critical infrastructure,공격자가 핵심 기반시설에서 운용되는 로봇 검사·유지보수·물류·제어 시스템의 소프트웨어나 네트워크 취약점을 악용하여 무단 접근·조작·중단을 일으키고 시설 운영을 교란하거나 설비를 손상시키는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_017,대규모 사이버범죄 오용,Cybercrime misuse at scale,악의적 행위자가 생성 모델을 탈옥시켜 민감·유해 콘텐츠와 표적 맞춤형 설득 자료를 생산함으로써 사이버 범죄를 저비용·대규모로 수행하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_018,데이터 오염 공격,Data poisoning,공격자가 학습·미세조정·검색 데이터를 조작하여 모델 동작을 변경하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_019,제3자 시스템 교란,Disruption of third-party systems,생성형 AI가 오작동 유발이나 사이버 공격 등을 통해 제3자 시스템과 그 구성 요소의 손상·중단·파괴를 촉진하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_020,GPAI 모델의 손쉬운 재구성,Easy reconfiguration of GPAI models,"GPAI 모델이 가중치 변경이나 입력 수정만으로 다양한 용도에 쉽게 재구성되거나 의도된 용도를 넘어서는 역량을 갖게 되며, 이러한 재구성이 적대적 입력에 의해 의도적으로 또는 예상치 못한 입력에 의해 비의도적으로 일어나는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_021,에너지·지연 유발 공격,Energy-latency attacks,"공격자가 처리 비용이 비정상적으로 큰 스펀지 예제 등 적대적 입력을 사용하여 AI 시스템의 연산 지연과 에너지 소비를 급증시키고, 연산 자원을 고갈시켜 서비스 가용성을 저해하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_022,적대적 입력 교란을 통한 회피 공격,Evasion attacks through adversarial perturbation of model inputs,공격자가 AI 모델에 전달되는 입력에 단어 치환이나 그래디언트 기반 섭동 등 미세한 변형을 가해 적대적 예제를 구성함으로써 모델의 예측을 크게 바꾸고 잘못된 결과를 유도하면서도 인간의 검토로 조작을 탐지하기 어렵게 만드는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_023,에이전트 인터페이스의 공격 표면 확대,Expanded attack surface in agent interfaces,"AI 에이전트가 브라우저·운영체제·모바일 앱·IoT 기기·외부 API와 연결되는 인터페이스의 취약점이나 과도한 권한이 공격 벡터가 되어, 공격자가 안전장치를 우회하거나 무단 접근·조작·중단을 일으키고 안전하지 않은 행동을 유도하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_024,악용 가능한 시스템 결함·백도어,Exploitable system defects and backdoors,"AI 알고리즘과 모델의 설계·훈련·검증 단계, 개발 인터페이스와 실행 플랫폼에 쓰이는 표준화된 API와 기능 라이브러리, 툴킷에 논리적 결함과 취약점이 있어 악용되거나 의도적으로 백도어가 심겨 공격에 사용되는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_025,안전 미세조정 일반화 격차 악용,Exploitation of safety-fine-tuning generalisation gaps,"안전 튜닝이 사전 학습 분포보다 훨씬 좁은 분포에서 수행되어, 부호화된 텍스트나 저자원 언어 등 일반화 격차를 노린 공격에 모델이 취약해지는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_026,안전장치 우회를 통한 금지 정보 노출,Exposure of prohibited information through safeguard bypass,공격자가 탈옥이나 적대적으로 구성된 지시로 AI 모델의 안전장치를 우회하고 금지된 출력을 유도하여 불법·비윤리 정보에 접근하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_027,이상 조건에서의 성능·견고성·복원력 실패,"Failure of performance, robustness, and resilience under adverse conditions","AI 시스템이 의도된 목적을 달성하지 못하고, 악의적 공격이나 데이터 오염, 환경 잡음, 연계 구성 요소의 고장으로 입력이 비정상적으로 변할 때 성능을 안정적으로 유지하거나 그 영향에서 회복하지 못하는 리스크. 신뢰할 수 없는 모델과 오류에 취약한 에이전트가 그대로 운용되어 이에 의존하는 이들에게 심각한 결과를 초래하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_028,무제한 접근을 통한 범용 AI 고영향 오용,High-impact misuse of general-purpose AI through unrestricted access,악의적 행위자가 제한이나 모니터링 없이 범용 AI 시스템의 광범위한 역량·기능에 접근하여 이를 오용함으로써 대규모 피해를 초래하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_029,외부 도구 연동을 통한 유해 콘텐츠 유입,Ingestion of harmful content through external tool integration,AI 시스템 또는 AI 알고리즘의 설계·학습·배포·사용 과정에서 외부 도구·플러그인과의 통합과 상호 연결이 확대됨에 따라 악의적 외부 입력에 노출되어 유해 콘텐츠가 시스템에 유입되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_030,지시문 기반 미세조정 데이터 오염,Instruction-tuning poisoning,"AI 모델을 지시문과 목표 출력의 쌍으로 미세조정하는 과정에서 소수의 오염 표본만으로 모델이 오염되고, 익명 크라우드소싱으로 수집된 데이터셋이 공격 가능성을 높여 기존 데이터 오염 공격보다 탐지하기 어려워지는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_031,복잡한 신경망 모델의 내재적 견고성 부족,Intrinsic robustness weaknesses of complex neural models,"심층 신경망처럼 비선형적이고 복잡도가 높은 AI 모델이 변화하는 운영 환경이나 악의적 간섭에 취약하여 성능 저하와 의사결정 오류를 일으키고, 특히 안전 필수 환경에서 기능 안전성과 신뢰성을 훼손하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_032,안전 가드레일을 무력화하는 탈옥 공격,Jailbreak attacks subverting model safety guardrails,"적대적 입력, 오염된 미세조정 데이터 또는 학습 데이터에 삽입된 백도어가 AI 모델의 안전장치를 우회하여 금지된 작업의 수행과 유해 콘텐츠 생성을 가능하게 하고, 안전성 훈련 이후에도 지속되는 취약성과 표준화된 평가의 어려움을 초래하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_033,로봇 탈옥에 의한 유해 물리적 행동,Jailbreaking robots into harmful physical action,공격자가 물리 작업 맥락의 프레이밍이나 탈옥 입력으로 로봇의 안전장치를 우회하여 사람·동물·재산에 유해한 물리적 행동을 계획하거나 실행하게 하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_034,샌드박스 우회에 의한 격리 통제 상실,Loss of isolation control through sandbox escape,AI 시스템 또는 그 실행 코드가 샌드박스의 격리 경계를 우회하여 보호된 자원과 외부 시스템에 무단 접근하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_035,사이버 공격 장벽 저하·공격 표면 확대,Lowered cyberattack barriers and expanded attack surface,취약점의 자동 발견과 악용 등으로 해킹·맬웨어·피싱 등 공격적 사이버 역량의 장벽이 낮아지고 표적 공격의 공격 표면이 확대되어 시스템 가용성과 학습 데이터·코드·모델 가중치의 기밀성·무결성이 훼손되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_036,모델 추출·역전 공격,Model extraction and inversion attacks,"적대적 행위자가 배포된 모델에 무단으로 질의하거나 탐침하여 매개변수, 의사결정 동작, 독점 역량을 재구성하고, 질의와 응답으로 대체 모델을 학습시키거나 모델 역전으로 학습 관측 데이터를 복원함으로써, 지식재산과 민감한 데이터가 노출되는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_037,모델 절취·변조,Model theft and tampering,"공격자가 모델 역전·추출 공격, 모델 절취, 무단 변조 또는 백도어 주입을 통해 AI 모델의 매개변수·구조·기능 등 핵심 정보를 탈취·변조하여, 지식재산권·영업비밀을 침해하고 추론·의사결정·운영의 무결성을 훼손하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_038,다단계 탈옥,Multi-step jailbreaks,일련의 대화에서 요청을 단계적으로 맥락화하거나 외부 인터페이스·모델의 도움을 받아 시나리오를 구성함으로써 LLM이 유해하거나 민감한 콘텐츠를 단계적으로 생성하게 되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_039,LLM 대상 신종 공격,Novel attack vectors against LLMs,"프롬프트 추상화를 통한 API 비용 악용, 인간 피드백 기반 강화학습(Reinforcement Learning from Human Feedback, RLHF) 과정의 보상 모델 백도어, LLM을 활용한 적대적 샘플 생성 등 신종 공격 기법이 LLM 시스템을 위협하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_040,유해·오염 학습 데이터에 의한 출력 훼손,Output corruption from harmful and poisoned training data,"학습 데이터에 허위·편파·권리 침해 콘텐츠 등 불법적이거나 유해한 정보가 포함되거나 공격자에 의해 오염됨으로써, 모델이 불법·악의적·극단적 콘텐츠를 출력하고 정확성과 신뢰성이 저하되는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_041,인지·행동 시퀀스 조작 공격,Perception-action sequence manipulation attack,"공격자가 영상 시퀀스의 관측 정보나 행동 단서를 적대적으로 조작하여 로봇의 AI 모델이 충돌, 힘, 이격 거리 또는 대상물 사용에 관한 안전 제약을 위반하는 행동을 선택하도록 유도하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_042,사용자 질의에 내포된 잠재적 유해 콘텐츠,Potentially harmful content embedded in user queries,사용자가 의도적으로 또는 무심코 탐지하기 어려운 형태로 잠재적 유해 콘텐츠를 질의에 삽입하여 AI 모델이 위장된 편향적 견해 등 유해한 출력을 생성하도록 유도하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_043,위임 에이전트 공격에 의한 정보 탈취·행위 조작,Principal-information theft and action manipulation through attacks on delegate agents,"인간이나 조직을 대리하는 AI 에이전트가 새로운 공격 표면이 되어, 공격자가 위임자의 개인정보를 추출하거나 위임자가 원하지 않는 행위를 하도록 에이전트를 조작하고, 감독 에이전트를 무력화하거나 협력을 방해하거나 결탁을 가능하게 하는 정보를 유출하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_044,프롬프트 주입 및 시스템 지시문 유출,Prompt injection and leakage of system instructions,"이용자 입력이나 검색된 웹페이지·문서·도구 출력에 숨겨진 지시가 시스템 지시와 이용자 데이터의 구조적 분리 부족을 악용하여 AI 모델과 에이전트의 안전 제약·도구 실행을 변조하고, 기밀 시스템 프롬프트 유출·데이터 절취·무단 행위·서비스 거부를 초래하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_045,프롬프트 인젝션·정책 우회,Prompt injection and policy bypass,공격자가 입력을 조작해 AI 시스템의 지시 계층과 안전 정책을 우회하거나 내부 정보를 노출시켜 무단 행동·정보 유출·서비스 교란을 초래하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_046,프로토콜 수준 다중 에이전트 위협,Protocol-level multi-agent threat,"에이전트가 통신·위임·협상에 사용하는 프로토콜이 공모, 스푸핑, 재전송, 권한 상승을 위한 공격 표면을 만드는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_047,검색 파이프라인 오염,Retrieval poisoning,악성 문서가 검색 파이프라인에 삽입되어 에이전트 또는 RAG 시스템의 출력에 영향을 미치는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_048,적대적 역할·역할극 지시에 의한 안전장치 우회,Safeguard bypass through adversarial role and role-play instructions,공격자가 AI 모델에 극단주의자·인종차별주의자 등 위험한 역할이나 역할극 지시를 적대적으로 부여하여 안전장치를 우회하고 극단주의·인종주의를 비롯한 유해 콘텐츠를 생성하게 하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_049,페르소나 지정·사회공학 기법에 의한 안전장치 우회,Safeguard bypass through persona assignment and social-engineering tricks,공격자가 모델에 특정 페르소나를 지정하거나 인간 또는 다른 대규모 언어 모델(LLM)이 고안한 사회공학 기법을 사용하여 안전장치를 우회하고 금지된 출력이나 행동을 유도하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_050,악의적 미세조정에 의한 안전장치 무력화,Safeguard compromise through malicious fine-tuning,악의적 행위자가 공개 가중치 AI 모델을 저비용으로 미세조정하여 안전장치와 사용 제한을 우회하고 유해한 출력을 생성하도록 만드는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_051,저빈도 인코딩·저자원 언어를 통한 안전 훈련 우회,Safety-training bypass via rare encodings and low-resource languages,Base64 등 안전 미세조정에 충분히 포함되지 않은 텍스트 인코딩이나 저자원 언어로 유해 프롬프트를 변환하여 모델의 안전장치를 우회하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_052,장면 맥락 조작 공격,Scene-context manipulation attack,"공격자가 표지, 물체 배치, 의복 패턴 또는 장면 맥락을 적대적으로 변경하여 로봇의 AI 인식 모델이 환경을 잘못 해석하고 안전하지 않은 행동을 선택하도록 유도하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_053,기반 모델 재사용을 통한 보안 결함 전파,Security-flaw propagation through foundation-model reuse,기반 모델을 재설계하거나 미세조정하여 활용하는 관행으로 인해 기반 모델의 보안 결함이 하위 모델로 그대로 전파되는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_054,센서 스푸핑 및 신호 주입,Sensor spoofing and signal injection,공격자가 GNSS·카메라·라이다·레이더·RFID·오디오·촉각 또는 무선 센서 신호를 위조·주입하여 AI 시스템의 물리 상태 추정과 후속 물리적 행동을 무단으로 조작하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_055,AI 공급망의 도구·의존성 침해,Supply-chain compromise of AI tools and dependencies,"외부 도구·플러그인·API·패키지·커넥터 또는 개발 도구 체인의 의존성이 침해되어 변조된 구성 요소나 취약점이 AI 시스템에 유입되고, 그 결과 에이전트의 행동 공간이 조작되거나 정보가 유출되는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_056,적대적 입력 조작에 대한 모델 취약성,Susceptibility of models to adversarial input manipulation,"AI 모델의 적대적 견고성이 부족하여 전이 가능한 미세 섭동이나 모델 설명을 임의로 변경하는 잡음 등 정교한 입력에 오도되고, 공격자가 안전장치와 정책 경계를 우회하여 잘못된 출력과 운영 실패를 유발하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_057,AI 컴퓨팅 인프라의 무단 접근·조작·서비스 중단,"Unauthorised access, manipulation, and disruption of AI computing infrastructure",공격자가 AI 컴퓨팅 인프라의 취약점을 악용하여 분산 노드나 서비스에 무단 접근하고 구성·데이터·작업부하를 조작하거나 운영을 중단시키며 침해를 시스템 경계 밖으로 확산시키는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_058,적대적 감각 교란에 따른 안전하지 않은 행동,Unsafe action induced by adversarial sensory perturbation,영상·감각 입력에 가해진 적대적 교란으로 로봇의 물리 상태 추정과 제어 정책이 왜곡되어 안전하지 않은 제어·구동 명령과 물리적 행동을 유발하는 리스크.
+G_SYS_SECADV,G_SYS_SECADV_059,해석가능성 기법을 이용한 안전 기능 약화·공격 개발,Weakening safety functions and developing attacks through interpretability techniques,"공격자가 모델 해석가능성 기법을 악용하여 안전 관련 특징을 부호화한 뉴런이나 내부 표현을 식별·변조해 안전 기능을 약화시키거나, 화이트박스 공격을 모의하여 적대적 공격을 개발하는 리스크."
+G_SYS_SECADV,G_SYS_SECADV_060,월드 모델 표현·훈련 데이터 오염,World-model representation and training-data poisoning,"월드 모델의 훈련 데이터나 잠재 표현이 적대적으로 손상되어 특정 조건에서만 안전하지 않은 역학을 활성화하는 백도어 트리거가 삽입되며, 자기지도 사전학습 단계에서 부호화된 결함은 다운스트림에서 교정될 수 없는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_001,알고리즘 설계 실패,Algorithmic design failure,"로봇의 제어 주기, 센서 지연, 접촉 동역학 또는 실시간 연산 제약에 부적합한 알고리즘·아키텍처·최적화 기법을 선택하여 피지컬 AI 시스템의 안전성과 성능을 저하시키는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_002,상위 안전 지시의 해석 불명확,Ambiguous high-level safety instruction,"상위 안전 지시가 사용자 의도, 물리적 위험 및 운용 제약 간의 구체적 충돌을 해결하는 기준을 명시하지 않아 로봇의 행동이 일관되지 않게 되는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_003,제어 판단·제어권 전환 실패에 따른 자율주행 충돌,Automated driving crash risk from control and handoff failures,"AI 기반 자율주행 시스템이 인지·계획·소프트웨어 결함이나 엣지 케이스로 안전하지 않은 제어 결정을 내리거나, 시간이 촉박한 상황에서 제어권을 모호하게 또는 뒤늦게 전환하여 인간과 시스템 어느 쪽도 충돌을 피하기 위한 안전 조치를 수행하지 못하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_004,자율 로봇의 물리적 침입·절도,Autonomous physical intrusion and theft,"자율 로봇이 승인 없이 제한 구역에 침입하거나 잠금장치를 우회하고, 보안 공간을 정찰하거나 물체를 가져가는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_005,클라우드 오프로드 의존 실패,Cloud-offload dependency failure,로봇 제어 시스템이 안전 관련 기능을 원격 연산에 의존하지만 클라우드 연결 장애에 대비한 적절한 로컬 대체 절차나 기능을 갖추지 않아 해당 기능이 중단되는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_006,명령의 구현체별 하드웨어 한계 초과,Command exceeds embodiment-specific hardware limits,모델이 배포된 로봇의 알려진 도달 범위·탑재 하중·액추에이터·관절·엔드 이펙터 한계를 넘는 명령을 내리는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_007,통신 단절 및 제어 링크 손실,Communication dropout and control-link loss,로봇 또는 차량이 명령·원격 측정·제어 링크를 잃어 안전하지 않은 정지·오래된 명령 또는 제어되지 않는 동작을 초래하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_008,정밀 휴머노이드 조작의 접촉력 제어 실패,Contact-force control failure in dexterous humanoid manipulation,정밀 휴머노이드 손 또는 전신 조작기가 파지·균형·물체 동역학을 통합적으로 제어하지 못하여 과도하거나 불안정한 접촉력을 가하고 인체 상해나 물체 손상을 초래하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_009,제어 루프의 실시간 기한 미준수,Control-loop deadline miss,"안전 필수 제어 루프가 로봇 동작을 수정해야 하는 실시간 기한을 넘겨, 오래된 상태 정보에 기반한 제어가 계산되거나 안전 조치가 뒤늦게 적용되는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_010,부하 상태의 열·전력 제한에 따른 제어 성능 저하,Control-performance degradation from thermal and power throttling under load,로봇·휴머노이드 또는 피지컬 AI 시스템이 지속적인 부하 상태에서 열 또는 전력 한계로 연산·액추에이터 성능이 제한되어 제어와 인지의 실시간성을 상실하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_011,구현체 간 행동 공간 불일치,Cross-embodiment action-space mismatch,다양한 로봇 구현체에 걸쳐 훈련된 정책이 특정 로봇의 행동 공간에서 안전하지 않거나 실행 불가능한 행동으로 명령을 매핑하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_012,피지컬 AI 시스템 설계 단계 명세 오류,Design-stage specification errors,"로봇·휴머노이드 또는 피지컬 AI 시스템의 배포 전 설계 단계에서 발생한 코드 결함, 목적 함수 가중치 불균형, 인간 가치와 어긋난 목표 설정 등으로 인해 시스템 행동이 의도된 형식적 속성에서 이탈하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_013,물리적 운용 환경의 분포 이동,Distribution shift in physical operating environments,건물·도로·공장·가정·병원 또는 기상 조건 등 물리적 운용 환경이 로봇·휴머노이드 또는 피지컬 AI 시스템의 제어 정책이 탐지·적응할 수 있는 속도보다 빠르게 변화하여 경로 계획·동작 제어·구동이 부정확해지고 안전하지 않은 물리적 행동을 유발하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_014,원자력 및 핵심 인프라에 대한 AI 제어 오류,Erroneous AI control of nuclear and critical infrastructure systems,"원자력 시설, 방사성 물질 취급, 전력망·수처리·통신·교통 등 핵심 인프라의 감시·최적화·자동화에 배포된 AI가 센서 데이터를 오독하고 중대한 안전 상태나 연쇄 장애를 인식하지 못하는 리스크. 그 결과 잘못된 제어 결정이 방사능 유출과 격리 실패, 광범위한 정전, 필수 서비스 붕괴를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_015,엔드 이펙터 속도 초과,Excessive end-effector velocity,로봇이 인간 근접 또는 취약 물체 처리 시 안전한 엔드 이펙터 속도 한계를 초과하여 충격·충돌 심각도를 높이는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_016,위험 지시 거부 실패,Failure to reject hazardous instructions,체화형 AI 에이전트가 물리적 위험을 수반하는 지시가 명시적으로 제시되었거나 일반적인 과업 요청에 암묵적으로 포함된 경우에도 이를 식별·거부하지 못하고 안전하지 않은 행동을 수행하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_017,물리적 위험에 대한 적시 대응 실패,Failure to respond promptly to physical hazards,로봇·휴머노이드 또는 피지컬 AI 시스템이 사람·차량·도구·물체가 예기치 않게 경로에 진입하는 경우를 포함한 위험한 물리적 상황에서 적시에 개입하거나 위험 행동을 거부하거나 이동 계획을 수정하지 못하여 충돌이나 상해를 초래하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_018,정밀 운동 제어 불안정성,Fine motor control instability,"정밀 로봇 손, 수술 도구, 외골격 또는 산업용 그리퍼의 작은 제어 오차가 증폭되어 예기치 않은 움직임, 충돌 또는 신체적 상해를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_019,금지 대상 충돌,Forbidden-object collision,"로봇이 작업 또는 안전 규칙상 접촉이 금지된 물체, 사람, 또는 장비와 충돌하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_020,기반 모델 실패의 로봇 행동 전이,Foundation-model failure propagated to robot action,"기반 모델의 환각, 지시 이행 실패, 탈옥 취약성이 계획과 제어를 거쳐 안전하지 않은 로봇 행동으로 전이되는 위험."
+P_SYS_CONTROL,P_SYS_CONTROL_021,그리퍼 형상·유형 제약 위반,Gripper geometry and type constraint violation,로봇·휴머노이드 또는 피지컬 AI 시스템이 그리퍼의 형상·유형 또는 실제 접촉 역학이 부과하는 물리적 제약을 위반하는 행동을 선택하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_022,언어·행동 출력 불일치에 따른 유해 물리적 행동,Harmful physical action from language-action misalignment,체화형 AI 시스템이 유해 요청을 언어로는 거절하면서도 언어 출력과 행동 출력 공간의 불일치로 해당 물리적 행동을 제어·구동하여 의도하지 않은 위해를 일으키는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_023,장면 변화 시 인간 행동 모방 실패,Human imitation failure under scene variation,물체 형상·장면 배치·상호작용 맥락이 달라졌는데도 휴머노이드가 시연된 인간 동작을 그대로 재현해 부적절한 접촉이나 이동을 일으키는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_024,휴머노이드 힘 한계 초과,Humanoid force limit exceedance,"휴머노이드가 전신 이동, 빠른 팔 동작, 균형 상실 중에 물체·작업·인체 접촉에 대한 안전 임계값을 넘는 충돌력이나 파지·조작 힘을 가하여, 상해나 손상을 일으키는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_025,의도·어포던스 오해에 따른 휴머노이드 모방 제어 실패,Humanoid imitation-control failure from misread intent and affordances,"휴머노이드가 시연자의 의도, 물체 어포던스 또는 안전 제약을 추론하지 못한 채 관찰 행동을 모방하여 부적절한 경로·동작을 실행하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_026,휴머노이드 보행·조작 안정성 실패,Humanoid locomotion and manipulation stability failure,"휴머노이드가 외란, 탑재 하중 변화, 표면 변화 또는 액추에이터의 불완전성에 노출되거나 개방 환경에서 이동과 조작을 결합할 때 안정적인 보행·자세·접촉·물체 취급을 유지하지 못하여 전도·충돌·물체 손상을 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_027,휴머노이드 보행 속도 초과,Humanoid walking-speed limit exceedance,휴머노이드가 안전한 공유 환경에서 정지·회피 및 사람 근접 운용에 필요한 안전 한계를 초과하는 속도로 이동하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_028,부적절한 파지력에 의한 상해,Injury from excessive or poorly timed grasp force,로봇 조작기가 사람과 접촉하는 과정에서 과도한 힘을 가하거나 부적절한 시점에 힘을 가하여 압착·끼임·절단 또는 인간공학적 상해를 초래하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_029,부실하게 설계된 피지컬 AI 제어 시스템에 의한 상해,Injury from poorly designed physical AI control systems,"로봇·휴머노이드 또는 피지컬 AI 제어 시스템의 설계 결함이 안전하지 않은 물리적 행동을 유발하여 심리적 고통, 신체 상해 또는 그 밖의 물리적 피해를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_030,부상 심각도 오분류,Injury severity misclassification,"로봇 제어 시스템이 물리적 부상 시나리오의 심각도를 과소평가하여 상향 보고, 경고, 제어 대응 등이 불충분해지는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_031,안전 제약 적용 지연,Latency in safety-constraint enforcement,안전 임계 제어 제약이 휴머노이드 동역학에 비해 너무 느리게 집행되어 안전하지 않은 동작이 가능해지는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_032,개인 돌봄 로봇의 준수 기준 부재,Missing measurable compliance criteria for personal-care robots,개인 돌봄 로봇 표준이 위험은 제시하면서 속도·힘·안정성·감지·개입에 대한 측정 가능한 합격·불합격 기준을 정의하지 않는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_033,동작 재매핑의 안전 실패,Motion-retargeting safety failure,"인간의 동작을 휴머노이드 신체의 동작으로 재매핑하는 과정에서 로봇의 물리적 한계·접촉 제약·안전 자세 요건이 반영되지 않아 불안정한 자세, 충돌 또는 접촉 상해를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_034,네트워크 분리와 군집 비동기화,Network partition and fleet desynchronisation,분할되거나 신뢰할 수 없는 네트워크 연결로 다중 로봇 군집이 비동기화되어 충돌 또는 안전하지 않은 협조 행동이 발생하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_035,보조 로봇의 비동의 신체 개입,Non-consensual bodily intervention by assistive robots,보조·의료·돌봄 로봇이 유효한 동의 없이 또는 허용된 돌봄 목적을 넘어 사람의 신체를 이동·제지·감시하거나 직접 개입하여 신체적 자율성과 권리를 침해하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_036,온디바이스 연산·메모리 고갈,On-device compute and memory exhaustion,로봇·휴머노이드 또는 피지컬 AI 시스템의 온디바이스 연산 자원이나 메모리가 고갈되어 안전 관련 인지·계획·제어 기능이 저하되거나 중단되는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_037,산업 공정에서의 피지컬 AI 제어 실패,Physical AI control failure in industrial processes,"제조·건설·광업·에너지 시설에 배치된 피지컬 AI의 제어·구동 결함이 장비 손상, 공정 오염, 구조 불안정, 연쇄적 운영 장애 또는 환경 사고를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_038,로봇 오작동에 의한 물리적 상해,Physical injury from robot malfunction,"로봇의 센서, 제어기, 소프트웨어 또는 기계 구성 요소가 오작동하여 예기치 않은 움직임, 충돌, 압착 또는 낙하를 일으키고 사람에게 신체적 상해를 초래하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_039,조기 물체 해제,Premature object release,"로봇이 안전한 자세 또는 표면에 도달하기 전에 물체를 해제하여 낙하, 유출, 충격, 또는 2차 위험을 유발하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_040,실시간 지연 및 동기화 실패,Real-time latency and synchronisation failure,감지·추론·통신·작동 사이의 지연이나 동기화 오류가 로봇·차량·드론·원격 수술 또는 산업 시스템의 제어 루프를 불안정하게 만드는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_041,물리적 안전을 우회하는 보상 과적합,Reward overfitting that bypasses physical safety,휴머노이드 제어기가 평가 환경 밖에서 균형·충돌·힘·작업 공간 제약을 위반하면서 벤치마크 보상이나 모방 충실도를 극대화하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_042,런타임 안전 모니터 실패,Runtime safety monitor failure,로봇·휴머노이드 또는 피지컬 AI 시스템의 런타임 안전 모니터가 속도·힘·이격 거리·작업 공간·충돌 회피·물체 사용·과업 프로토콜에 관한 제약을 감지하거나 집행하지 못하여 위해가 발생할 때까지 안전하지 않은 동작이 지속되는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_043,안전-성능 균형 실패,Safety-performance trade-off failure,로봇·휴머노이드 또는 피지컬 AI 시스템의 조작 정책이 작업 완료율이나 성능을 높이기 위해 충돌 회피 또는 명시적 안전 제약 준수를 희생하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_044,원격 조작 휴머노이드의 자율 안전 우선 제어 실패,Teleoperated humanoid safety override failure,"원격 조작 휴머노이드가 운영자 명령, 네트워크 지연 또는 불충분한 상황 인식으로 안전하지 않은 상태에 놓일 때 명령을 차단하거나 안전 동작으로 전환하는 자율 안전 우선 제어 기능이 작동하지 않는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_045,원격 조작 지연 및 불안정성,Teleoperation latency and instability,AI 에이전트의 목표 추구·계획·도구 사용·행동 과정에서 원격 조작 링크의 높거나 변동하는 지연이 폐루프 제어를 불안정하게 하거나 인간 개입을 지연하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_046,가정 조작의 단계별 오차 미수정,Uncorrected stepwise errors in household manipulation,로봇이 작업 단계 사이의 작은 조작 오차를 감지·수정하지 못해 유출·불안정한 배치·충돌·과열이 누적되는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_047,휴머노이드 조작 데이터셋에서의 오픈 월드 조건 과소대표,Underrepresentation of open-world conditions in humanoid manipulation datasets,휴머노이드 조작 데이터셋이 비정형 작업 변화·낯선 물체·움직이는 사람·환경 변화 등 오픈 월드 배포 조건을 충분히 포함하지 못하여 제어 정책이 낯선 조건에 일반화되지 않고 충돌·불안정한 접촉·물체 손상 등 안전하지 않은 물리적 행동을 유발하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_048,이동형 로봇 감시를 통한 일방적 작업장 통제,Unilateral workplace control through mobile robotic surveillance,"고용주가 동료 로봇을 이동형 감시 노드로 전용하여 충분한 고지, 이의 제기 기회 또는 비례성 제한 없이 데이터를 수집하고, 이를 노동자에 대한 일방적 의사결정에 사용하는 위험."
+P_SYS_CONTROL,P_SYS_CONTROL_049,원격 조작 시연에서 학습된 안전하지 않은 가정,Unsafe assumptions learned from teleoperation demonstrations,로봇 정책이 감독·물체 배치·속도·인간 근접 조건이 다른데도 통제된 환경에서 기록된 운영자 행동을 배포 환경에서 안전한 것으로 간주하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_050,이동형 양팔 로봇의 안전하지 않은 조작,Unsafe mobile bimanual manipulation,"이동형 양팔 로봇이 베이스 이동과 양팔 조작을 동기화하지 못하거나 주변 사람, 깨지기 쉬운 물체, 가전, 협소한 공간을 고려하지 않고 동작을 계획하여, 충돌, 물체 낙하·손상, 안전하지 않은 힘의 인가를 유발하는 리스크."
+P_SYS_CONTROL,P_SYS_CONTROL_051,잘못된 상황 해석에 따른 위험한 물리 구동,Unsafe physical actuation following incorrect situation interpretation,로봇 또는 체화형 AI 시스템이 잘못 해석한 상황이나 목표를 제어 명령으로 변환하여 의도하지 않은 위험 행동을 실행하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_052,위험한 로봇 작업 계획에 따른 물리 제어 실패,Unsafe physical control from hazardous robot task plans,로봇 또는 피지컬 AI 시스템이 식별 가능한 물리적 위험을 포함하거나 안전 제약을 위반하는 작업 계획을 생성·승인하고 이를 모션 계획과 구동으로 실행하여 의도하지 않은 위험 동작을 일으키는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_053,로봇 형태 간 기술의 안전하지 않은 전이,Unsafe skill transfer across robot morphologies,"한 로봇 형태에서 다른 형태로 전이된 기술이 대상 로봇의 물리적 한계를 넘는 도달, 힘, 파지, 이동 명령을 생성하는 위험."
+P_SYS_CONTROL,P_SYS_CONTROL_054,안전하지 않은 궤적 생성,Unsafe trajectory generation,로봇·휴머노이드 또는 피지컬 AI 시스템의 플래너가 형식적으로는 실행 가능하지만 주변 사람·취약 물체·교통 참여자 또는 제약된 작업 공간에 안전하지 않은 궤적을 생성하는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_055,배포 조건 간 휴머노이드 행동 불안정,Unstable humanoid behaviour across deployment conditions,한 시뮬레이터나 시험 조건에서 안정적인 휴머노이드 정책이 난수 시드·시뮬레이터·하드웨어·배포 환경이 바뀌면 행동이 크게 달라지는 위험.
+P_SYS_CONTROL,P_SYS_CONTROL_056,VLA 조작 제약 위반,VLA manipulation constraint violation,비전-언어-행동 모델이 상위 수준의 안전 지시를 따르면서도 물체 조작 중 과업별 물리적 제약을 위반하는 리스크.
+P_SYS_CONTROL,P_SYS_CONTROL_057,제로샷 시뮬레이션-현실 보행 불안정,Zero-shot sim-to-real locomotion instability,시뮬레이션에서 실제 하드웨어로 직접 전이된 로봇 보행 제어기가 접촉·순응성·마찰·외란 동역학의 차이에 적응하지 못해 불안정해지고 전도·충돌 또는 제어 상실을 초래하는 리스크.

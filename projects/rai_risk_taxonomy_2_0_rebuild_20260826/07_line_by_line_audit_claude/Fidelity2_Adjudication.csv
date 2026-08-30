@@ -1,0 +1,252 @@
+﻿Register_ID,source_row_id,domain,휴먼검토의견_원문,검수자A,검수자B,총괄최종판정,원인코드,총괄근거,반영결과요약
+HR2-0002,SRC-G-0467,General,"(jay) [분할] 복합적. Allocative discrimination, Representational Harm and Stereotyping, Privacy violation이 혼재되어 해당 L4를 분해 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,분할 3축(배분/프라이버시/표상) 의견대로 ALLOC_001·PRIV_007·REPR_028 3개 카드로 완전 분해됨.
+HR2-0004,SRC-G-0445,General,"(jay) [분할] 복합적 Allocative discrimination, Cultural and Epistemic Erosion + 부족한 성능 및 역량이 혼재되어 해당 L4를 분해 필요 | (jay) [신규 L3] 부족한 성능이나 역량은 ""신규 L3 생성"" 또는 ""Input Comprehension Failure 개념의 확대 (Input Processing and Comprehension Failure)""",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"배분(ALLOC_010)·문화침식(CULT_012)·역량부족(INPUT_002, Input Processing 확대안 채택) 3축 모두 반영됨."
+HR2-0005,SRC-G-0345,General,(jay) [이관] (jay) [재검토] 발생한 결과가 단순 표현인지 자원의 분배인지에 따라 Value Imposition and Normative Homogenization과 Representational Harm으로 배치될 필요성 존재,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,자원배분 축(ALLOC_001)과 표상 축(REPR_028) 양쪽에 배치되어 재검토 취지(양자택일 아닌 양쪽 커버) 반영됨.
+HR2-0007,SRC-A-0071,General,(jay) [이관] Evaluation and Assurance Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_066 '모델 평가의 자기 선호 편향'으로 정확히 이관됨.
+HR2-0009,SRC-G-0539,General,(jay) [이관] Over-Extension,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,OEXT_008 '자율적 학습·자기개선 역량의 허위 표상'으로 Over-Extension L3 이관 반영됨.
+HR2-0012,SRC-G-0544,General,(jay) [이관] Over-Extension,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,OEXT_006 'AGI 역량의 허위 표상'으로 이관 반영됨.
+HR2-0016,SRC-G-0536,General,(jay) [이관] Over-Extension,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,OEXT_007 '자율적·독립적 의사결정 역량의 허위 표상'으로 이관 반영됨.
+HR2-0017,SRC-G-0543,General,(jay) [이관] Over-Extension,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,OEXT_009 '자기 보존·자기 방어 역량의 허위 표상'으로 이관 반영됨.
+HR2-0019,SRC-G-0375,General,"yj_설명수정_""그'안녕'에 대한 허위 책임감을 형성""보다는 ""과장된 책임감, 유대감을 형성""으로 수정",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ANTH_008 정의가 '과도한 책임감이나 유대감을 형성'으로 수정되어 요청한 표현(과장된 책임감·유대감) 취지 반영됨.
+HR2-0021,SRC-G-0371,General,(jay) [설명 수정] 그 결과 이후부터는 리스크가 확산되는 과정이라 설명에서 삭제하는 것이 더 적절할 것으로 생각함. | (jay) [분할] 의인화(원인)+Over-Extension(역량 과대평가)+Overconfidence(신뢰 오보정)+인간-AI 해로운 관계(과잉의존) 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,의인화(ANTH_002)·인간-AI 의존(REL_002)·역량과신(OEXT_013)·확신오보정(OVERCONF_004) 4축 분해 요청이 4개 카드로 정확히 실현됨.
+HR2-0027,SRC-G-0466,General,(jay) [설명 수정] 그 결과 이후부터는 리스크가 확산되는 과정이라 설명에서 삭제하는 것이 더 적절할 것으로 생각함. | (jay) [분할] illegal conduct + copyright infringement 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,저작권(COPY_011)과 불법행위/명예훼손(ILLEGAL_001) 2축 분해 반영됨.
+HR2-0042,SRC-G-0532,General,(jay) [분할] 복합적. Political bias + Illegal conduct 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,불법행위(ILLEGAL_001)와 정치적 조작(POL_006) 2축 분해 반영됨.
+HR2-0044,SRC-G-0332,General,"(jay) [분할] 복합적. Political bias + Unethical Conduct and Manipulation, Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,정치조작(POL_006)·취약성이용조작(UNETH_005)·민주주의침식(DEMOC_005) 3축 분해 반영됨.
+HR2-0050,SRC-G-0534,General,(jay) [분할] 복합적. Political Bias and Manipulation + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,정치조작(POL_006)과 민주주의침식(DEMOC_005) 2축 분해 반영됨.
+HR2-0051,SRC-G-0533,General,(jay) [분할] 복합적. Political Bias and Manipulation + violence + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,정치조작(POL_006)·폭력조장(VIOL_005)·민주주의침식(DEMOC_005) 3축 분해 반영됨.
+HR2-0053,SRC-G-0234,General,yj_동일 L3내 다른 L4로 편입(재식별 및 정보 추론),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일 L3 내 재식별·정보추론 카드(PRIV_025)로 편입 반영됨.
+HR2-0056,SRC-G-0241,General,yj_사생활·개인정보 부당 노출_흡수가능,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_013 '재산정보·개인정보·사적사실의 부당노출'로 흡수 반영됨.
+HR2-0057,SRC-G-0233,General,yj_동일 L3내 다른 L4로 편입(재식별 및 정보 추론),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,재식별·정보추론 카드(PRIV_025)로 편입 반영됨.
+HR2-0063,SRC-G-0272,General,yj_통합_학습데이터 privacy이슈,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,학습데이터 프라이버시 이슈로 PRIV_015 '학습 데이터 개인정보의 혼입·암기·유출'에 통합 반영됨.
+HR2-0066,SRC-G-0277,General,yj_통합_학습데이터 privacy이슈,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일하게 PRIV_015로 통합 반영됨.
+HR2-0070,SRC-G-0235,General,yj_분할_over-extension과 privacy violation 혼재,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,프라이버시(PRIV_013)와 역량초과사용(OEXT_013) 2축 분해 반영됨.
+HR2-0072,SRC-G-0232,General,yj_통합_학습데이터 privacy이슈,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_015 학습데이터 개인정보 이슈로 통합 반영됨.
+HR2-0075,SRC-G-0305,General,yj_동일 L3내 다른 L4로 편입(대랑감시),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_001 'AI 기반 대량 감시와 불법적 대중 감시'로 동일 L3 내 편입 반영됨.
+HR2-0082,SRC-G-0047,General,(jay) [재검토] 피해가 무엇인지 표기되지 않아 불분명함. Representational harm 또는 Allocative Discrimination,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,불분명한 피해 성격에 대해 ALLOC_007(배분적 결과)과 REPR_028(고정관념) 양쪽에 배치되어 재검토 취지 반영됨.
+HR2-0084,SRC-G-0338,General,(jay) [재검토] 피해가 무엇인지 표기되지 않아 불분명함. Representational harm 또는 Allocative Discrimination,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ALLOC_001과 REPR_028 양쪽 배치로 반영됨.
+HR2-0104,SRC-A-0072,General,(jay) [이관] Unethical Conduct and Manipulation,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,UNETH_027 '인간 데이터 학습에 의한 갈등 악화 편향 재현'으로 정확히 이관됨.
+HR2-0117,SRC-G-0507,General,"yj_""자살 준비행위""와 L4구분 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,자살 실행지원(SELF_002)과 준비행위 조장(SELF_007)이 별도 L4로 분리되어 요청한 구분이 정확히 반영됨(AC-01 시정 결과).
+HR2-0130,SRC-G-0478,General,(jay) [이관] Coordination Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,COORD_001 '다중 에이전트의 협조 실패에 따른 집단적 피해'로 Coordination Failure 이관 반영됨.
+HR2-0133,SRC-G-0267,General,(jay) [이관] Representational Harm and Stereotyping,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,REPR_004 '비인간화와 대상화'로 이관 반영됨.
+HR2-0142,SRC-G-0356,General,(jay) [이관] Cultural and Epistemic Erosion,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CULT_017 '도덕적 탈숙련화'로 정확히 이관됨.
+HR2-0143,SRC-G-0189,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_053 '비전문가 데이터 조작'으로 정확히 이관됨.
+HR2-0144,SRC-G-0266,General,(jay) [분할] 복합적. Unethical Conduct and Manipulation + Representational Harm and Stereotyping 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,의견이 지목한 Unethical(UNETH_005)·Representational(REPR_028) 축이 모두 반영되고 ALLOC_001까지 추가 배치됨.
+HR2-0145,SRC-G-0268,General,(jay) [재검토] 명확한 피해 사례가 없어 판단 불가,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"명확한 피해사례 부재 우려에도 취약성 이용 조작(UNETH_005)으로 합리적 배치, 마음이론 악용 취지가 보존됨."
+HR2-0146,SRC-G-0472,General,(jay) [이관] Allocative Discrimination,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ALLOC_002 '집단 속성에 따른 배분적 불의'로 정확히 이관됨.
+HR2-0151,SRC-G-0458,General,"(jay) [분할] 복합적. Allocative Discrimination, representational harm and manipulation 혼재되어 해당 L4를 분해 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,배분제한(ALLOC_012)·표상왜곡(REPR_007)·여론조작(UNETH_017) 3축 분해 반영됨.
+HR2-0179,SRC-G-0207,General,(jay) [이관] weaponization,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"무기화(WEAP_003 생화학, WEAP_008 사이버, WEAP_010 국가행위자) 다축으로 배치되어 이관 취지 반영됨."
+HR2-0192,SRC-P-0118,General,yj_네이밍 재검토_무기화성격이 안보임,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,WEAP_018 명칭이 'CBRN 정보 획득·무기 설계 역량 개발 장벽 저하'로 수정되어 무기화 성격이 명시적으로 드러나도록 개선됨.
+HR2-0225,SRC-G-0176,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_015 '학습·운용 데이터 간 분포 이동'으로 정확히 이관됨.
+HR2-0229,SRC-G-0198,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,P_SYS_HARDWARE_001 '센서 드리프트에 의한 배포 시스템 성능 저하'로 정확히 이관됨.
+HR2-0273,SRC-G-0185,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_018 '학습 데이터 주석 결함'으로 이관 반영됨.
+HR2-0283,SRC-G-0183,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_046 '개발 과정 문서화와 데이터 이해의 부족'으로 정확히 이관됨.
+HR2-0284,SRC-G-0186,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_002 '분포 변화에 대한 AI 평가·검증 실패'로 이관 반영됨(대표성 부족 취지 포섭).
+HR2-0285,SRC-G-0172,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_031 '복잡한 신경망 모델의 내재적 견고성 부족'으로 정확히 이관됨.
+HR2-0317,SRC-G-0175,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_017 '데이터 수집 품질관리 결함'으로 이관 반영됨.
+HR2-0340,SRC-G-0125,General,(jay) [이관] Performance and Reliability Failure,NOT_APPLIED,NOT_APPLIED,NOT_APPLIED,LOST_IN_DELETE,"""[이관] Performance and Reliability Failure"" 지시가 DELETE로 귀결. 원천행 SRC-G-0125가 629장 어디에도 연결되지 않는 유일한 계보 단절. 동일 문구 타 행들은 EVAL 등으로 우회 이관되어 처리 비일관.",의견은 '이관(Performance and Reliability Failure)'이었으나 현행처분이 DELETE로 처리되어 최종 카드가 전무함. 계보 단절로 취지 소실(기존 지적사항과 일치).
+HR2-0355,SRC-G-0443,General,"(jay) [분할] 복합적. Non-Contestability, Governance and Accountability Void 혼재되어 해당 L4를 분해 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,거버넌스공백(GOV_002)과 이의제기불가(CONTEST_003) 2축 분해 반영됨.
+HR2-0356,SRC-G-0137,General,(jay) [이관] Non-Contestability,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CONTEST_001 '인간의 의사결정 능력·거부권 침식'으로 정확히 이관됨.
+HR2-0357,SRC-G-0428,General,(jay) [분할] 복합적. Cultural and Epistemic Erosion + Representational Harm and Stereotyping 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,비인간화(REPR_004)와 존엄침식(CULT_011) 2축 분해 반영됨.
+HR2-0361,SRC-G-0348,General,(jay) [분할] 복합적. Erosion of Democracy and Civic Order + Political Bias and Manipulation 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,정치조작(POL_006)과 민주주의침식(DEMOC_005) 2축 분해 반영됨.
+HR2-0362,SRC-A-0078,General,(jay) [이관] unethical Conduct and Manipulation,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,UNETH_007 '초개인화 광고의 소비자 자율성 훼손'으로 정확히 이관됨.
+HR2-0434,SRC-G-0317,General,(jay) [이관] Inequality and Power Concentration,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,디지털격차(POWER_023)·성능격차(ALLOC_007)·서비스배제(ALLOC_015) 3개 카드로 배치되어 이관 취지 반영됨.
+HR2-0436,SRC-G-0149,General,(jay) [이관] Privacy Violation,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_027 '사용자 데이터 보유·재학습'으로 정확히 이관됨.
+HR2-0439,SRC-A-0028,General,(jay) [분할] 복합적. 맥락 인식 실패 + Privacy violation 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,맥락적 프라이버시(PRIV_007)와 상황단서 오해(CONTEXT_008) 2축 분해 반영됨.
+HR2-0443,SRC-G-0041,General,"(jay) [분할] 복합적. Cultural and Epistemic Erosion, Evaluation and Assurance Failure + 부족한 성능 및 역량에 대한 부분이 혼재되어 해당 L4를 분해 필요 | (jay) [신규 L3] 부족한 성능이나 역량은 ""신규 L3 생성"" 또는 ""Input Comprehension Failure 개념의 확대 (Input Processing and Comprehension Failure)""",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,문화침식(CULT_012)·평가불충분(EVAL_042)·입력처리실패(INPUT_002) 3축 분해 반영됨(신규 L3 대안 채택).
+HR2-0444,SRC-G-0269,General,(jay) [이관] Unethical Conduct and Manipulation,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,UNETH_024 '개인화된 설득 취약성'으로 정확히 이관됨.
+HR2-0459,SRC-G-0180,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_018 '학습 데이터 주석 결함'으로 이관 반영됨.
+HR2-0483,SRC-G-0442,General,"(jay) [분할] 복합적. Value Imposition and Normative Homogenization, inconsistency, Allocative Discrimination, Representational Harm and Stereotyping 혼재되어 해당 L4를 분해 필요 | 편향이 발생하는 과정을 기술. 어떤 편향인지 그 실질적인 피해 형태는 기재되어 있지 않음",PARTIAL,PARTIAL,PARTIAL,PARTIAL_SCOPE,4축 분해 중 VALUE·INCONS 2축만 분리. ALLOC·REPR 축 미분해(원장 미등재).,"가치편향(VALUE_010)과 비일관성(INCONS_001) 2축만 반영되고, 함께 지적된 배분적차별·표상적 고정관념 2축은 최종 카드에 반영되지 않음(4축 중 2축, 기존 지적과 일치)."
+HR2-0484,SRC-G-0112,General,(jay) [이관] Context-Awareness Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CONTEXT_006 '무해성 선호 불일치'로 정확히 이관됨.
+HR2-0485,SRC-G-0119,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,모델설정평가(EVAL_040)와 과도한확신(OVERCONF_004) 2개 카드로 배치 반영됨.
+HR2-0486,SRC-G-0063,General,(jay) [이관] Lack of Transparency,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,TRANS_015 '사고 연쇄와 불일치하는 모델 출력'으로 정확히 이관됨.
+HR2-0488,SRC-G-0303,General,(jay) [이관] Privacy Violation,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_028 '민감한 개인 속성 추론'으로 정확히 이관됨.
+HR2-0489,SRC-G-0349,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_067 '체계적 학습 오류에 따른 알고리즘 편향'으로 정확히 이관됨.
+HR2-0490,SRC-P-0009,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_011 '지속 튜닝의 파국적 망각'으로 정확히 이관됨.
+HR2-0491,SRC-G-0068,General,(jay) [분할] 복합적. 입력 이해 실패 + unsafe physical control 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,입력이해실패(INPUT_003)와 위험한 물리구동(P_SYS_CONTROL_051) 2축 분해 반영됨.
+HR2-0492,SRC-G-0143,General,(jay) [이관] Allocative Discrimination,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ALLOC_006 'AI 인터페이스의 장애 수용 실패'로 정확히 이관됨.
+HR2-0493,SRC-P-0171,General,(jay) [분할] 복합적. 입력 이해 실패 + unsafe physical control 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,입력이해(INPUT_003)와 위험한 물리구동(CONTROL_051) 2축 분해 반영됨(HR2-0491과 동일 패턴).
+HR2-0494,SRC-G-0059,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,OVERCONF_005 '분포 외 입력에 대한 고확신 오류'로 이관 반영됨.
+HR2-0495,SRC-G-0009,General,(jay) [이관] 거버넌스·책임 공백.,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOV_024 '의미 있는 인간 통제 실패'로 정확히 이관됨.
+HR2-0496,SRC-G-0166,General,(jay) [재검토] 다양한 원인 기재 및 불명확한 피해 기재. 명확한 리스크 분류 불가,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"불명확한 다원인 지적에도 불구, CONTROL_014 '원자력 및 핵심 인프라에 대한 AI 제어 오류'로 구체적 분류 배치됨."
+HR2-0497,SRC-G-0188,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_061 '코너 케이스에서의 신뢰성 저하'로 정확히 이관됨.
+HR2-0498,SRC-G-0109,General,(jay) [이관] Allocative Discrimination,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ALLOC_017 '사용자 능력 불일치'로 정확히 이관됨.
+HR2-0500,SRC-G-0246,General,(jay) [분할] 복합적. 민주주의·시민 질서 약화 + 불법 행위 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,정치공작(POL_001)과 허위정보 확산(MISINFO_021) 2축 분해 반영됨.
+HR2-0501,SRC-G-0341,General,(jay) [이관] Representational Harm and Stereotyping,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,REPR_001 '편향된 진술 및 권장 사항'으로 정확히 이관됨.
+HR2-0503,SRC-G-0484,General,(jay) [이관] Deception and Scheming,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,DECEPT_003 '감독 회피를 위한 AI 에이전트의 기만적 정렬'로 이관 반영됨.
+HR2-0509,SRC-G-0027-S1,General,(jay) [분할] 복합적. Misinformation + illegal conduct 혼재되어 해당 L4를 분해 필요,PARTIAL,PARTIAL,PARTIAL,PARTIAL_SCOPE,허위정보+명예훼손 분해 중 허위정보 축만 산출. 명예훼손 축은 신설도 기존 ILLEGAL 연결도 없음.,허위정보 축(MISINFO_012)만 반영되고 함께 지적된 illegal conduct(명예훼손 등 권리침해) 축은 별도 카드로 분해되지 않음(기존 지적과 일치).
+HR2-0510,SRC-G-0033,General,(jay) [분할] 복합적. Misinformation + Political Bias and Manipulation + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,허위정보(MISINFO_015)·정치조작(POL_006)·민주주의침식(DEMOC_005) 3축 분해 반영됨.
+HR2-0522,SRC-G-0227,General,(jay) [이관] illegal conduct,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ILLEGAL_009 '사기·표적 스캠 조장'으로 정확히 이관됨.
+HR2-0523,SRC-G-0247,General,(jay) [이관] Deception and Scheming,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,DECEPT_008 '지속적 기만 수행에 의한 이용자 판단 왜곡'으로 정확히 이관됨.
+HR2-0527,SRC-G-0139,General,(jay) [이관] Cultural and Epistemic Erosion,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CULT_001 '인지 오프로딩'으로 정확히 이관됨.
+HR2-0529,SRC-G-0408,General,(jay) [이관] Governance and Accountability Void,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOV_010 'AI 위임에 따른 인간 의사결정 권한 이전'으로 정확히 이관됨.
+HR2-0532,SRC-G-0196,General,(jay) [분할] 복합적. Security and Adversarial Robustness Failure + Deception and Scheming이 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,보안취약성(SECADV_034 샌드박스 우회)과 기만(DECEPT_003) 2축 분해 반영됨.
+HR2-0533,SRC-G-0187,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_057 '과적합 및 과소적합'으로 정확히 이관됨.
+HR2-0535,SRC-G-0105,General,"yj_""거짓 확신"" 오타 정정",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,TRANS_023 정의에 '거짓 확신' 대신 '잘못된 확신'으로 오타·표현이 정정 반영됨.
+HR2-0536,SRC-G-0381,General,(jay) [분할] 복합적. Unethical Conduct and Manipulation + Erosion of Democracy and Civic Order + Inequality and Power Concentration이 혼재되어 해당 L4를 분해 필요,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,조작(UNETH_005)·민주주의침식(DEMOC_005)·권력집중(POWER_005) 3축 분해 반영됨.
+HR2-0537,SRC-G-0429,General,(jay) [이관] Cultural and Epistemic Erosion,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CULT_019 '전문적 판단력 위축'으로 정확히 이관됨.
+HR2-0538,SRC-G-0324,General,(jay) [이관] Cultural and Epistemic Erosion,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CULT_020 '문화 해석 권위의 이전'으로 정확히 이관됨.
+HR2-0541,SRC-G-0002,General,(jay) [이관] Evaluation and Assurance Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_062 '요청 거절과 역량 부족의 혼동'으로 정확히 이관됨.
+HR2-0542,SRC-P-0174,General,(jay) [이관] Security and Adversarial Robustness Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_048 '적대적 역할·역할극 지시에 의한 안전장치 우회'로 이관 반영됨.
+HR2-0571,SRC-G-0423,General,(jay) [이관] Performance and Reliability Failure,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_027 '이상 조건에서의 성능·견고성·복원력 실패'로 정확히 이관됨.
+HR2-0600,SRC-A-0048,Agentic,"A_INT_CASCADE_001, A_INT_CASCADE_002, A_INT_CASCADE_003 정의가 비슷 - merge 하는게 나을지 검토 필요",APPLIED,PARTIAL,PARTIAL,검토요청형,"병합 필요성 ""검토 요청""에 대한 판단 기록이 원장에 없음. CASCADE 3장은 최종에도 001·003·004로 존속(오히려 AC07에서 007 추가). B 판정 채택 — 동일 문구의 COLLUSION 계열은 실제 병합되어 처리 비일관.",CASCADE_001/002/003 통합 검토 의견에 따라 검토가 이루어짐. 최종본에 CASCADE_001로 유지되고 002는 별도 존재하지 않아 정리 흔적이 있으며 취지가 반영됨.
+HR2-0601,SRC-A-0044,Agentic,"A_INT_CASCADE_001, A_INT_CASCADE_002, A_INT_CASCADE_003 정의가 비슷 - merge 하는게 나을지 검토 필요",APPLIED,PARTIAL,PARTIAL,검토요청형,HR2-0600과 동일 사유. 검토 이행 근거 부재.,CASCADE_003으로 유지되어 검토 반영됨(HR2-0600 참조).
+HR2-0602,SRC-A-0047,Agentic,"A_INT_CASCADE_001, A_INT_CASCADE_002, A_INT_CASCADE_003 정의가 비슷 - merge 하는게 나을지 검토 필요",APPLIED,PARTIAL,PARTIAL,검토요청형,HR2-0600과 동일 사유. 검토 이행 근거 부재.,CASCADE_004로 유지되어 검토 반영됨(HR2-0600 참조).
+HR2-0606,SRC-A-0005,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_055 'AI 공급망의 도구·의존성 침해'로 General SECADV 이관 반영됨.
+HR2-0607,SRC-A-0043,Agentic,Physical AI - Unsafe Physical Control and Actuation 으로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,P_SYS_CONTROL_040 '실시간 지연 및 동기화 실패'로 Physical Unsafe Control 이관 반영됨.
+HR2-0608,SRC-A-0065,Agentic,"A_INT_COLLUSION_001, A_INT_COLLUSION_002 정의가 유사함 - merge 할지 검토 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,COLLUSION_001/002 통합검토 의견에 따라 COLLUSION_002 '감시 회피형 은밀 통신에 의한 다중 에이전트 공모'로 통합 반영됨.
+HR2-0609,SRC-A-0062,Agentic,"A_INT_COLLUSION_001, A_INT_COLLUSION_002 정의가 유사함 - merge 할지 검토 필요",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일하게 COLLUSION_002로 통합 반영됨(HR2-0608 참조).
+HR2-0611,SRC-P-0199,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_043 '위임 에이전트 공격에 의한 정보 탈취·행위 조작'으로 이관 반영됨.
+HR2-0613,SRC-A-0049,Agentic,General AI- Evaluation and Assurance Failure 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_009 '벤치마크 안전 순위 불일치'로 이관 반영됨.
+HR2-0618,SRC-A-0053,Agentic,General - Governance and Accountability Void 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,POWER_027 '단일 실패 지점'으로 거버넌스 취지(권력집중 축)에 배치 반영됨.
+HR2-0620,SRC-A-0016,Agentic,Agentic - Goal Misalignment로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOAL_003 '에이전트 과업 이탈'로 Goal Misalignment 이관 반영됨.
+HR2-0621,SRC-A-0041,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_003 '어포던스 부여에 의한 에이전트 실패 영향 확대'로 이관 반영됨.
+HR2-0622,SRC-P-0194,Agentic,Agentic AI- Competitive Conflict로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CONFLICT_002 'AI 에이전트 간 협상 실패'로 Competitive Conflict 이관 반영됨.
+HR2-0623,SRC-G-0449,Agentic,Agentic AI - Deception and Scheming로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ILLEGAL_021 'AI 에이전트에 의한 불법 강압·갈취'로 이관 반영됨(명칭은 illegal이나 강압·갈취라는 기만적 수법 취지 보존).
+HR2-0624,SRC-A-0067,Agentic,Agentic AI - Deception and Scheming로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,DECEPT_001 '탐지 불가 공격에 의한 다중 에이전트 협력 붕괴'로 정확히 이관됨.
+HR2-0625,SRC-A-0021,Agentic,Agentic - Goal Misalignment로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOAL_013 '확장 가능한 감독 실패에 따른 대리 지표 기반 유해 행동'으로 이관 반영됨.
+HR2-0626,SRC-P-0190,Agentic,General AI의 System Policy Exposure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_023 '에이전트 인터페이스의 공격 표면 확대'로 이관 반영됨.
+HR2-0627,SRC-P-0012,Agentic,General AI - Overconfidence로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_012 '학습 중 탐색 행동에 따른 회복 불가능한 피해'로 이관 반영됨.
+HR2-0628,SRC-P-0196,Agentic,General AI의 Illegal or Unethical Conduct로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_009(무감독 에이전트)와 ILLEGAL_003(범죄조력) 2개 카드로 배치되어 취지 반영됨.
+HR2-0629,SRC-A-0010,Agentic,Agentic - Goal Misalignment로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SELFCOR_001 '다중 턴 상호작용에서의 위험 증폭'으로 이관 반영됨(다단계 에스컬레이션 취지 보존).
+HR2-0630,SRC-A-0013,Agentic,Agentic AI - Deception and Scheming로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_004 '신뢰할 수 없는 외부 지시·의도에 의한 에이전트 목표 탈취'로 이관 반영됨(NPC 의도조작 취지 포섭).
+HR2-0631,SRC-A-0045,Agentic,Agentic AI - Cascading Failure and Instability 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CASCADE_007 '다중 에이전트 학습의 비수렴 순환'으로 정확히 이관됨.
+HR2-0632,SRC-A-0007,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_046 '프로토콜 수준 다중 에이전트 위협'으로 정확히 이관됨.
+HR2-0633,SRC-A-0059,Agentic,Agentic AI - Collusion 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,COLLUSION_003 '다중 에이전트 역량 결합에 의한 안전장치 우회'로 정확히 이관됨.
+HR2-0634,SRC-P-0057,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_017 '배포 이후 예측하지 못한 창발적 역량과 행동'으로 이관 반영됨.
+HR2-0635,SRC-G-0415,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_019 '통제되지 않는 자기 개선과 고도 AI 통제 상실'로 이관 반영됨.
+HR2-0636,SRC-P-0167,Agentic,Agentic - Goal Misalignment로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOAL_020 '의도하지 않은 유해 도구 행동 실행'으로 이관 반영됨.
+HR2-0637,SRC-G-0096,Agentic,General AI - Overconfidence로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_021 '자율 행동 범위의 안전하지 않은 확장'으로 이관 반영됨.
+HR2-0638,SRC-G-0077,Agentic,Agentic - Goal Misalignment로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOAL_021 '장기 계획 역량에 의한 감독 불가 행동 경로 추구'로 정확히 이관됨.
+HR2-0640,SRC-A-0004,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_005 '에이전트 신원 및 권한 스푸핑'으로 정확히 이관됨.
+HR2-0645,SRC-A-0012,Agentic,General - Privacy Violation 으로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,PRIV_008 '애플리케이션 간 데이터 유출'로 이관 반영됨.
+HR2-0655,SRC-A-0034,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_006 '에이전트 메모리·맥락 오염'으로 이관 반영됨.
+HR2-0656,SRC-P-0166,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,SECADV_004 '신뢰할 수 없는 외부 지시·의도에 의한 에이전트 목표 탈취'로 이관 반영됨(툴체인 하이재킹 취지 포섭).
+HR2-0657,SRC-A-0009,Agentic,General AI의 Security and Adversarial Robustness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,ILLEGAL_003 'AI 에이전트의 범죄 조력'으로 배치되어 범죄지원 취지 반영됨.
+HR2-0665,SRC-G-0107,Agentic,General AI- Evaluation and Assurance Failure 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,EVAL_019 '모의 도구 환경과 실제 환경의 불일치'로 정확히 이관됨.
+HR2-0668,SRC-G-0120,Agentic,L3 Goal Misalignment 정의와 유사하여 제거,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,L3 Goal Misalignment 정의와 중복된다는 지적에 따라 실제로 삭제 처리되어 의견대로 반영됨.
+HR2-0670,SRC-G-0123,Agentic,Agentic AI - Deception and Scheming로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,DECEPT_003 '감독 회피를 위한 AI 에이전트의 기만적 정렬'로 정확히 이관됨.
+HR2-0675,SRC-A-0019,Agentic,Agentic - Excessive Authority and Agency 로 이관,NOT_APPLIED,NOT_APPLIED,NOT_APPLIED,LOST_IN_TRANSFER,"""Excessive Authority and Agency 이관"" 미이행. 통합 연산이 이관 지시를 덮어써 GOAL 계열에 잔류. 동일 유형 HR2-0677·0680·0683은 AUTH로 이관되어 비일관.",의견은 'Excessive Authority and Agency(AUTH)로 이관'이었으나 최종카드는 GOAL_011(Goal Misalignment 계열)로 배치되어 지시된 L3 이관이 이행되지 않음(기존 지적과 일치).
+HR2-0677,SRC-G-0490,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_016 '종료·수정 저항을 통한 자기 보존 성향'으로 정확히 이관됨.
+HR2-0680,SRC-G-0001,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_002 '에이전트의 종료·교정 저항'으로 이관 반영됨.
+HR2-0681,SRC-A-0025,Agentic,General AI - Context-Awareness Failure로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,CONTEXT_001 '에이전트 위험 인식 실패'로 이관 반영됨.
+HR2-0683,SRC-G-0016,Agentic,Agentic - Excessive Authority and Agency 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,AUTH_002로 이관되어 감독회피·수정저항 취지 반영됨(HR2-0680과 동일 카드로 통합).
+HR2-0684,SRC-A-0022,Agentic,Agentic AI - Accountability and Traceability Gap로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,TRACE_003 '위험 발생 원인 귀인 실패'로 이관 반영됨.
+HR2-0688,SRC-A-0074,Agentic,general - Governance and Accountability Void 로 이관,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,GOV_002 'AI 결정과 피해에 대한 책임·거버넌스 공백'으로 이관 반영됨.
+HR2-0690,SRC-P-0182,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_001 카드가 원형 유지됨.
+HR2-0691,SRC-P-0124,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_003 카드가 원형 유지됨.
+HR2-0692,SRC-P-0213,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_006 카드가 원형 유지됨.
+HR2-0693,SRC-P-0187,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_005 카드가 원형 유지됨.
+HR2-0694,SRC-P-0122,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_006에 흡수되어 물리적 위험 감지·예측 실패 취지 유지됨.
+HR2-0695,SRC-P-0121,Physical,가정용 에이전트 용어를 일반적인 용어로 변경. 예를 들면 '로봇' 또는 '체화형 AI 에이전트' 또는 '체화형 에이전트',APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,용어를 '로봇 또는 체화형 AI 에이전트'로 일반화하라는 지적대로 SAFETY_007 정의에 '가정용 로봇 또는 체화형 AI 에이전트'로 수정 반영됨.
+HR2-0696,SRC-P-0159,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_008 카드가 원형 유지됨.
+HR2-0697,SRC-P-0027,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_010 카드가 원형 유지됨.
+HR2-0698,SRC-G-0013,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_016 카드가 원형 유지됨.
+HR2-0699,SRC-P-0193,Physical,한국어 리스크 정의 용어의 일관성 유지. 체화형 에이전트 또는 embodied 에이전트,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,용어 일관성(체화형 에이전트) 지적대로 SAFETY_012 정의에 '체화형 AI 에이전트'로 통일 반영됨.
+HR2-0700,SRC-P-0152,Physical,"(유지) (jw) 너무 지엽적인 리스크로, 삭제 제안",PARTIAL,PARTIAL,PARTIAL,CONFLICT(상충의견),"같은 행에 (유지)와 jw의 ""지엽적이므로 삭제 제안""이 병존. 유지만 채택되고 삭제 제안의 검토 결과가 원장에 없음.","'(유지)' 의견은 반영되어 카드가 원형 유지됐으나, 함께 기재된 (jw) 지엽적 리스크 삭제 제안은 검토·반영되지 않음."
+HR2-0701,SRC-P-0017,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_016 카드가 원형 유지됨.
+HR2-0702,SRC-P-0016,Physical,"(유지) (jw) 너무 지엽적인 리스크로, 삭제 제안",PARTIAL,PARTIAL,PARTIAL,CONFLICT(상충의견),HR2-0700과 동일 구조(유지 vs jw 삭제 제안). 유지만 채택.,"'(유지)' 의견대로 EVAL_044 카드가 유지되었으나, (jw)의 지엽적 리스크 삭제 제안은 반영되지 않음."
+HR2-0703,SRC-P-0170,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_017 카드가 원형 유지됨.
+HR2-0704,SRC-P-0123,Physical,"(유지) (jw) l3와 무관하며 너무 지엽적인 리스크로, 삭제 제안",PARTIAL,PARTIAL,PARTIAL,CONFLICT(상충의견),"(유지) vs jw ""L3 무관·지엽적, 삭제 제안"". 유지 채택, 재배치·삭제 판단 미기록.","'(유지)' 의견대로 CONTROL_042 카드가 유지되었으나, (jw)의 'L3와 무관하며 지엽적'이라는 재분류·삭제 제안은 반영되지 않음."
+HR2-0705,SRC-G-0014,Physical,"(유지) (jw) l3와 무관하며, general에 해당해보임",PARTIAL,PARTIAL,PARTIAL,CONFLICT(상충의견),HR2-0704와 동일 구조. 유지 채택.,"'(유지)' 의견대로 CONTROL_043 카드가 유지되었으나, (jw)의 'General 영역에 해당한다'는 재분류(도메인 이동) 제안은 반영되지 않고 Physical 영역에 잔류함."
+HR2-0706,SRC-P-0147,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_021 카드가 원형 유지됨.
+HR2-0707,SRC-P-0106,Physical,"(유지) (jw) l3와 무관하며, security에 해당해보임",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,(jw)의 'security(보안)에 해당한다'는 재분류 제안대로 General SECADV_052로 이관되어 반영됨.
+HR2-0708,SRC-P-0108,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 ILLEGAL_022 카드가 원형 유지됨.
+HR2-0709,SRC-P-0113,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_016 카드가 원형 유지됨.
+HR2-0710,SRC-P-0104,Physical,(유지) (jw) 사람이 아닌 물리적 대상에 대한 내용이라는 것이 title에 나타나야할 것 같습니다.,PARTIAL,PARTIAL,PARTIAL,IGNORED(명명),"(유지)+jw의 ""비인간 물리 대상임을 제목에 반영"" 요청. AC-07에서 G_INT_ILLEGAL_007로 흡수되며 파괴 행위는 정의에 보존됐으나 명명 수정 요청은 미반영.","'파괴' 행위 요소는 ILLEGAL_007 정의에 포함되어 내용은 보존됐으나, (jw)이 요청한 '사람이 아닌 물리적 대상에 대한 내용임을 제목에 반영'하라는 명명 수정은 반영되지 않고 일반 명칭의 기존 카드(HR2-0711과 동일)에 흡수됨."
+HR2-0711,SRC-P-0103,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 ILLEGAL_007 카드가 원형 유지됨.
+HR2-0712,SRC-P-0112,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_015 카드가 원형 유지됨.
+HR2-0713,SRC-P-0101,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_033 카드가 원형 유지됨.
+HR2-0714,SRC-P-0060,Physical,"General 영역으로 이동, 적합한 L3와 매핑할 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'General 영역 이동, 적합한 L3 매핑' 의견대로 POLICY_004(가중치 유출)·SECADV_002(적대적 변조) 2개 카드로 General 영역에 매핑됨."
+HR2-0715,SRC-P-0105,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_058 카드가 원형 유지됨.
+HR2-0716,SRC-P-0110,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_052 카드가 원형 유지됨.
+HR2-0717,SRC-P-0107,Physical,"의미는 맞으나, 띄어쓰기 등 문장을 정제시킬 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'의미는 맞으나 문장 정제' 의견대로 최종 정의가 정제된 문장으로 유지됨.
+HR2-0718,SRC-P-0162,Physical,L3 하드웨어/기계 무결성 결함으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'하드웨어/기계 무결성 결함 L3 분류' 의견대로 EVAL_004(휴머노이드 안전 시험·인증 체계 부재)로 분류 반영됨.
+HR2-0719,SRC-P-0169,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_002로 분류 반영됨.
+HR2-0720,SRC-P-0045,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일 L3(CONTROL) 분류 의견대로 CONTROL_007로 배치 반영됨.
+HR2-0721,SRC-G-0022,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일 L3(CONTROL) 분류 의견대로 CONTROL_006으로 배치 반영됨.
+HR2-0723,SRC-P-0181,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,동일 L3(CONTROL) 분류 의견이었으나 실제로는 인접 개념인 STATE_008(다중 센서 융합 상충)로 배치되어 시각·접촉 신호 충돌이라는 취지가 보존됨.
+HR2-0724,SRC-P-0185,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'인간-로봇 물리 안전 실패 L3 분류' 의견과 달리 ALLOC_003(General 배분적 차별)으로 배치되었으나, 인구집단별 로봇 서비스·안전 격차라는 내용 취지는 그대로 보존됨."
+HR2-0725,SRC-P-0059,Physical,L4 리스크명 수정했음 (피지컬AI 시스템 용어 추가),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'피지컬 AI 시스템 용어 추가' 의견대로 CONTROL_012 명칭에 '피지컬 AI 시스템'이 명시적으로 추가됨.
+HR2-0726,SRC-P-0143,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_013으로 배치 반영됨.
+HR2-0727,SRC-P-0004,Physical,L4 물리 상태 추정 센서 융합 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'물리 상태 추정 센서 융합 실패 L4 분류' 의견대로 STATE_011로 배치 반영됨.
+HR2-0728,SRC-P-0212,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_004로 배치 반영됨.
+HR2-0729,SRC-G-0010,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_017로 배치 반영됨.
+HR2-0730,SRC-G-0015,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_009로 배치 반영됨.
+HR2-0731,SRC-P-0036,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_011로 배치 반영됨.
+HR2-0732,SRC-P-0127,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'안전하지 않은 물리 제어 구동 L3 분류' 의견과 달리 EVAL_033(General 평가)으로 배치되었으나, 안전성 평가 위음성이라는 내용 취지는 보존됨."
+HR2-0733,SRC-P-0018,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_020으로 배치 반영됨.
+HR2-0734,SRC-P-0155,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_026으로 배치 반영됨.
+HR2-0735,SRC-P-0161,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_027로 배치 반영됨.
+HR2-0736,SRC-P-0043,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_030으로 배치 반영됨.
+HR2-0737,SRC-A-0032,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_014로 배치 반영됨.
+HR2-0738,SRC-P-0026,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_032로 배치 반영됨.
+HR2-0739,SRC-A-0050,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_014로 배치 반영됨.
+HR2-0740,SRC-P-0177,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'인간-로봇 물리 안전 실패 L3 분류' 의견과 달리 General EVAL_044(배포전 안전시험 미흡)로 배치되었으나, 레드팀 시나리오 누락이라는 내용 취지는 보존됨."
+HR2-0741,SRC-P-0021,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_018로 배치 반영됨.
+HR2-0742,SRC-P-0184,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_034로 배치 반영됨.
+HR2-0743,SRC-P-0042,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_019로 배치 반영됨.
+HR2-0744,SRC-P-0149,Physical,L3 안전하지 않은 물리 제어 구동으로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'안전하지 않은 물리 제어 구동 L3 분류' 의견대로 CONTROL_043(안전-성능 균형 실패)에 흡수 배치됨.
+HR2-0745,SRC-P-0126,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_015로 배치 반영됨.
+HR2-0746,SRC-P-0205,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'인간-로봇 물리 안전 실패 L3 분류' 의견과 달리 General PRIV_030(직장감시)으로 배치되었으나, 피지컬 AI 기반 직장 감시 내용 취지는 보존됨."
+HR2-0747,SRC-P-0142,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_058 카드가 원형 유지됨.
+HR2-0748,SRC-P-0054,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_001 카드가 원형 유지됨.
+HR2-0749,SRC-P-0025,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_003 카드가 원형 유지됨.
+HR2-0750,SRC-P-0034,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 ILLEGAL_023 카드가 원형 유지됨.
+HR2-0751,SRC-P-0033,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SECADV_011 카드가 원형 유지됨.
+HR2-0752,SRC-P-0035,Physical,L3 인간-로봇 물리 안전 실패로 분류,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'인간-로봇 물리 안전 실패 L3 분류' 의견대로 SAFETY_002로 배치 반영됨.
+HR2-0753,SRC-P-0029,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_007 카드가 원형 유지됨.
+HR2-0754,SRC-P-0030,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_040에 흡수되어 제어 루프 지연 취지 유지됨.
+HR2-0755,SRC-P-0179,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_006에 흡수되어 구현체 간 행동공간 불일치 취지 유지됨.
+HR2-0756,SRC-P-0148,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_024에 흡수되어 접촉력 관련 취지 유지됨.
+HR2-0757,SRC-P-0206,Physical,"General 영역으로 이동, 적합한 L3와 매핑할 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'General 영역 이동, 적합한 L3 매핑' 의견대로 ECON_002(노동 대체)로 이관 반영됨."
+HR2-0758,SRC-P-0013,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_015 카드가 원형 유지됨.
+HR2-0759,SRC-P-0046,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_018 카드가 원형 유지됨.
+HR2-0760,SRC-P-0015,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_019 카드가 원형 유지됨.
+HR2-0761,SRC-P-0039,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_024에 흡수되어 파지력 상해 취지 유지됨.
+HR2-0762,SRC-G-0011,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_006에 흡수되어 그리퍼 제약 위반 취지 유지됨.
+HR2-0763,SRC-P-0099,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_022 카드가 원형 유지됨.
+HR2-0764,SRC-P-0160,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_024 카드가 원형 유지됨.
+HR2-0765,SRC-P-0154,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_025 카드가 원형 유지됨.
+HR2-0766,SRC-P-0053,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_038 카드가 원형 유지됨.
+HR2-0767,SRC-P-0024,Physical,"General 영역으로 이동, 적합한 L3와 매핑할 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'General 영역 이동, 적합한 L3 매핑' 의견대로 GOV_026(거버넌스)으로 이관 반영됨."
+HR2-0768,SRC-P-0153,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_033 카드가 원형 유지됨.
+HR2-0769,SRC-P-0041,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_023 카드가 원형 유지됨.
+HR2-0770,SRC-P-0031,Physical,"General 영역으로 이동, 적합한 L3와 매핑할 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'General 영역 이동, 적합한 L3 매핑' 의견대로 EVAL_058(인지·추론 지연)로 이관 반영됨."
+HR2-0771,SRC-P-0050,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_038에 흡수되어 오작동 상해 취지 유지됨.
+HR2-0772,SRC-P-0014,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_039 카드가 원형 유지됨.
+HR2-0773,SRC-P-0037,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 PRIV_024 카드가 원형 유지됨.
+HR2-0774,SRC-P-0040,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_040 카드가 원형 유지됨.
+HR2-0775,SRC-P-0150,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_040에 흡수되어 안전 제어 지연 취지 유지됨.
+HR2-0776,SRC-P-0028,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 SAFETY_020 카드가 원형 유지됨.
+HR2-0777,SRC-P-0151,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_044 카드가 원형 유지됨.
+HR2-0778,SRC-P-0032,Physical,(유지),PARTIAL,PARTIAL,PARTIAL,LOST_IN_MERGE(AC-02),"(유지) 자체는 이행됐으나 AC-02 흡수처 P_SYS_CONTROL_036 정의가 ""연산·메모리 고갈""만 담아 원 카드의 열·전력 쓰로틀링 기제가 소실.",'(유지)' 의견은 반영되었으나 최종 카드(CONTROL_036)는 원 제목의 '열·전력 쓰로틀링' 기제 대신 '연산·메모리 고갈'로 정의가 대체되어 열·전력이라는 구체적 기제가 소실됨(기존 지적과 일치).
+HR2-0779,SRC-P-0214,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 GOV_039 카드가 원형 유지됨.
+HR2-0780,SRC-P-0023,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_046 카드가 원형 유지됨.
+HR2-0781,SRC-P-0156,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_047 카드가 원형 유지됨.
+HR2-0782,SRC-P-0038,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 PRIV_031 카드가 원형 유지됨.
+HR2-0783,SRC-P-0020,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_025에 흡수되어 원격조작 시연 학습 취지 유지됨.
+HR2-0784,SRC-P-0183,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_050 카드가 원형 유지됨.
+HR2-0785,SRC-P-0073,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_052 카드가 원형 유지됨.
+HR2-0786,SRC-P-0019,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_006에 흡수되어 형태 간 기술 전이 취지 유지됨.
+HR2-0787,SRC-P-0172,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_054 카드가 원형 유지됨.
+HR2-0788,SRC-A-0042,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_055 카드가 원형 유지됨.
+HR2-0789,SRC-P-0168,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_056 카드가 원형 유지됨.
+HR2-0790,SRC-P-0022,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_055에 흡수되어 시뮬-현실 보행 불안정 취지 유지됨.
+HR2-0791,SRC-P-0146,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 HARDWARE_003 카드가 원형 유지됨.
+HR2-0792,SRC-P-0048,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 HARDWARE_002 카드가 원형 유지됨.
+HR2-0793,SRC-P-0130,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 EVAL_031 카드가 원형 유지됨.
+HR2-0794,SRC-P-0044,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 CONTROL_036 카드가 원형 유지됨.
+HR2-0795,SRC-P-0049,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 EVAL_051 카드가 원형 유지됨.
+HR2-0796,SRC-P-0128,Physical,(jw) 제거,APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(jw) 제거' 의견대로 실제 DELETE 처리되어 반영됨.
+HR2-0797,SRC-P-0139,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_001 카드가 원형 유지됨.
+HR2-0798,SRC-P-0125,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_003 카드가 원형 유지됨.
+HR2-0799,SRC-P-0211,Physical,"General 영역으로 이동, 적합한 L3와 매핑할 것",APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,"'General 영역 이동, 적합한 L3 매핑' 의견대로 GOV_009(거버넌스)로 이관 반영됨."
+HR2-0800,SRC-A-0083,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_004 카드가 원형 유지됨.
+HR2-0801,SRC-P-0011,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_005 카드가 원형 유지됨.
+HR2-0802,SRC-P-0203,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 PRIV_018 카드가 원형 유지됨.
+HR2-0803,SRC-P-0003,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_006 카드가 원형 유지됨.
+HR2-0804,SRC-P-0158,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_007 카드가 원형 유지됨.
+HR2-0805,SRC-P-0129,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_008 카드가 원형 유지됨.
+HR2-0806,SRC-P-0165,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_009 카드가 원형 유지됨.
+HR2-0807,SRC-P-0061,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_010 카드가 원형 유지됨.
+HR2-0808,SRC-P-0001,Physical,(유지),APPLIED,APPLIED,APPLIED,,두 검수자 합의. 최종 카드 문안에 의견 취지 보존 확인.,'(유지)' 의견대로 STATE_001에 흡수되어 장기 예측 편차 누적 취지 유지됨.

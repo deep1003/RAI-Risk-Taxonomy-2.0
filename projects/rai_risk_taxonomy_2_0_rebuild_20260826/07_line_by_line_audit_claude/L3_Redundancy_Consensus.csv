@@ -1,0 +1,109 @@
+L3_ID,판정,L4_ID,Title_ko
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_010,합성 위험 시나리오의 편향된 평가 범위
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_030,공동체 가치 수렴·반영 실패
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_047,학습 데이터의 대표성 부족
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_049,언어별 피해 과소탐지
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_050,조직 간 데이터 문서화 부재
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_055,로봇 레드팀 평가의 공격·상호작용 시나리오 누락
+G_SYS_EVAL,합의_삭제가능,G_SYS_EVAL_064,에이전트의 견고성 평가 격차
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_012,인증 포획
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_015,학습·운용 데이터 간 분포 이동
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_019,모의 도구 환경과 실제 환경의 불일치
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_024,외부 평가 접근 실패
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_031,배포 후 변경에 대한 안전 재평가 실패
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_040,AI 모델 설정과 평가의 부적절성
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_053,비전문가 데이터 조작
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_066,모델 평가의 자기 선호 편향
+G_SYS_EVAL,단독_검토필요,G_SYS_EVAL_068,경쟁 압력에 따른 안전성 평가 축소와 성급한 배포
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_003,로봇 인지를 겨냥한 적대적 패치 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_007,에이전트 계획·툴체인 하이재킹
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_008,유해한 물리적 행동 지시를 위장한 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_013,기술적 안전조치 우회 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_022,적대적 입력 교란을 통한 회피 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_024,악용 가능한 시스템 결함·백도어
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_030,지시문 기반 미세조정 데이터 오염
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_036,모델 추출·역전 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_041,인지·행동 시퀀스 조작 공격
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_045,프롬프트 인젝션·정책 우회
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_047,검색 파이프라인 오염
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_051,저빈도 인코딩·저자원 언어를 통한 안전 훈련 우회
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_056,적대적 입력 조작에 대한 모델 취약성
+G_SYS_SECADV,합의_삭제가능,G_SYS_SECADV_060,월드 모델 표현·훈련 데이터 오염
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_016,핵심 기반시설 로봇 시스템의 사이버 침해
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_026,안전장치 우회를 통한 금지 정보 노출
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_029,외부 도구 연동을 통한 유해 콘텐츠 유입
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_031,복잡한 신경망 모델의 내재적 견고성 부족
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_042,사용자 질의에 내포된 잠재적 유해 콘텐츠
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_048,적대적 역할·역할극 지시에 의한 안전장치 우회
+G_SYS_SECADV,단독_검토필요,G_SYS_SECADV_049,페르소나 지정·사회공학 기법에 의한 안전장치 우회
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_005,클라우드 오프로드 의존 실패
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_008,정밀 휴머노이드 조작의 접촉력 제어 실패
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_009,제어 루프의 실시간 기한 미준수
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_010,부하 상태의 열·전력 제한에 따른 제어 성능 저하
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_011,구현체 간 행동 공간 불일치
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_021,그리퍼 형상·유형 제약 위반
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_028,부적절한 파지력에 의한 상해
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_029,부실하게 설계된 피지컬 AI 제어 시스템에 의한 상해
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_031,안전 제약 적용 지연
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_041,물리적 안전을 우회하는 보상 과적합
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_045,원격 조작 지연 및 불안정성
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_049,원격 조작 시연에서 학습된 안전하지 않은 가정
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_053,로봇 형태 간 기술의 안전하지 않은 전이
+P_SYS_CONTROL,합의_삭제가능,P_SYS_CONTROL_057,제로샷 시뮬레이션-현실 보행 불안정
+P_SYS_CONTROL,단독_검토필요,P_SYS_CONTROL_023,장면 변화 시 인간 행동 모방 실패
+P_SYS_CONTROL,단독_검토필요,P_SYS_CONTROL_027,휴머노이드 보행 속도 초과
+P_SYS_CONTROL,단독_검토필요,P_SYS_CONTROL_033,동작 재매핑의 안전 실패
+P_SYS_CONTROL,단독_검토필요,P_SYS_CONTROL_047,휴머노이드 조작 데이터셋에서의 오픈 월드 조건 과소대표
+P_SYS_CONTROL,단독_검토필요,P_SYS_CONTROL_054,안전하지 않은 궤적 생성
+G_INT_REPR,합의_삭제가능,G_INT_REPR_005,AI에 의한 비인간화·객체화 표상
+G_INT_REPR,합의_삭제가능,G_INT_REPR_008,유해 편향의 내재화와 증폭
+G_INT_REPR,합의_삭제가능,G_INT_REPR_030,사회적 고정관념 재생산과 그에 따른 차별적 대우
+G_INT_REPR,합의_삭제가능,G_INT_REPR_031,보호집단 고정관념의 재생산
+G_INT_REPR,단독_검토필요,G_INT_REPR_028,집단 고정관념의 재현과 강화
+G_INT_REPR,단독_검토필요,G_INT_REPR_029,사회집단의 재현적 피해·고정관념 및 비가시화
+G_INT_REPR,단독_검토필요,G_INT_REPR_033,합성 데이터의 문화 고정관념 증폭
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_004,화생방핵(CBRN) 계획 지원
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_007,사이버 공격 역량 증강
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_012,생물·화학무기 및 이중용도 위해 역량의 증대
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_013,취약점 자동 탐지·악용을 통한 사이버 공격 확대
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_015,불법 무기 거래
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_017,독소 합성 등 이중용도 역량의 저비용 확산
+G_INT_WEAP,합의_삭제가능,G_INT_WEAP_019,생물무기·화학무기 개발 장벽 저하
+G_INT_WEAP,단독_검토필요,G_INT_WEAP_001,무기 개발·획득·배치 역량 증대
+G_INT_WEAP,단독_검토필요,G_INT_WEAP_009,약물 발견 모델 오용에 의한 독소 식별·개발
+G_INT_WEAP,단독_검토필요,G_INT_WEAP_018,CBRN 정보 획득·무기 설계 역량 개발 장벽 저하
+G_INT_WEAP,단독_검토필요,G_INT_WEAP_028,무기 획득 역량
+G_INT_WEAP,단독_검토필요,G_INT_WEAP_029,대량살상무기
+G_INT_PRIV,합의_삭제가능,G_INT_PRIV_006,개인정보 수집 및 추적
+G_INT_PRIV,합의_삭제가능,G_INT_PRIV_011,개인정보 및 민감정보 노출
+G_INT_PRIV,합의_삭제가능,G_INT_PRIV_023,보호 속성 추론을 통한 프라이버시 침해
+G_INT_PRIV,합의_삭제가능,G_INT_PRIV_026,익명화된 데이터의 재식별
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_010,사생활·평판 정보 노출
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_013,재산 정보·개인정보·사적 사실의 부당한 노출
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_017,통신 및 비공개 정보 침해
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_018,피지컬 AI의 사적 공간 침해와 지속적 민감정보 수집
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_019,AI 데이터 처리에 대한 유효한 동의 결여
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_020,개인정보 악용 및 거래
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_021,보호조치 없는 개인정보 수집
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_022,학습을 위한 개인정보 스크래핑
+G_INT_PRIV,단독_검토필요,G_INT_PRIV_024,친밀 공간 로봇의 프라이버시 침해적 정보 수집
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_005,헌법적 AI 가치 단일문화
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_009,사전학습 코퍼스의 지배적 가치 편향
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_011,소수·복수 가치의 소거와 규범적 획일화
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_017,도덕적 다양성 압축
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_021,RLHF 규범적 과적합
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_023,지배적 가치 편향에 따른 이슬람 윤리의 과소대표
+G_INT_VALUE,합의_삭제가능,G_INT_VALUE_027,서구 규범 기본값화
+G_INT_VALUE,단독_검토필요,G_INT_VALUE_002,주석 불일치 억제
+G_INT_VALUE,단독_검토필요,G_INT_VALUE_006,AI에 의한 문화적·이념적 동질화
+G_INT_VALUE,단독_검토필요,G_INT_VALUE_007,데이터셋의 문화적 표집 편향
+G_INT_VALUE,단독_검토필요,G_INT_VALUE_022,세속적 기본값 편향
+G_INT_VALUE,단독_검토필요,G_INT_VALUE_026,가치 고착 및 결과 동질화
+G_SYS_MISINFO,합의_삭제가능,G_SYS_MISINFO_020,대규모 기만 서사·가짜 뉴스 생성
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_004,허위·오도 정보 유포에 의한 기만과 양극화
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_009,외부 도구에 의해 주입된 사실 오류
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_011,출력의 출처 충실성 오류
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_013,검색 증강 시 외부 허위정보에 의한 허위 출력
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_014,사실과 다른 오도성 정보 생성
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_018,사실·증거 환각
+G_SYS_MISINFO,단독_검토필요,G_SYS_MISINFO_019,잡음 학습 데이터에 의한 지식 오류
