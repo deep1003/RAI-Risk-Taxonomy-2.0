@@ -16,12 +16,12 @@
   },
   "summary": {
     "source_total": 798,
-    "cleaned_total": 777,
-    "final_total": 777,
-    "deleted": 13,
-    "explicit_deletions": 17,
-    "merged_away": 22,
-    "split_net_addition": 14,
+    "cleaned_total": 629,
+    "final_total": 629,
+    "deleted": 15,
+    "explicit_deletions": 19,
+    "merged_away": 177,
+    "split_net_addition": 23,
     "semantic_deduplication_clusters": 10,
     "semantic_duplicates_retired": 13,
     "semantic_split_reviewed": 10,
@@ -30,17 +30,10 @@
     "scope_granularity_reviewed": 8,
     "scope_granularity_retired": 7,
     "scope_granularity_new": 1,
-    "net_reduction": 21,
+    "net_reduction": 169,
     "user_directed_operations": 184,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "score_status_counts": {
-      "NOT_APPLICABLE": 162,
-      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 516,
-      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
-      "L3_MASTER_VALIDATED": 51,
-      "L3_MASTER_AI_REWRITE": 7
-    },
     "validation_passed": 10,
     "validation_failed": 0,
     "others_total": 0,
@@ -50,22 +43,22 @@
       "Physical": 94
     },
     "final_domain_counts": {
-      "General AI": 607,
-      "Agentic AI": 77,
-      "Physical AI": 93
+      "General AI": 487,
+      "Agentic AI": 65,
+      "Physical AI": 77
     },
     "mapping_method_counts": {
       "General AI": {
-        "EM": 326,
-        "HD": 281
+        "EM": 257,
+        "HD": 230
       },
       "Agentic AI": {
-        "EM": 44,
-        "HD": 33
+        "EM": 36,
+        "HD": 29
       },
       "Physical AI": {
-        "EM": 55,
-        "HD": 38
+        "EM": 41,
+        "HD": 36
       }
     },
     "similarity_top_pairs_published": 20,
@@ -87,16 +80,16 @@
       "rows": 49
     },
     "L4_General.csv": {
-      "sha256": "32e11a45781d45f370e6cf9ca860dd1e350332f039ddf939bcbadeb91a4e2b84",
-      "rows": 607
+      "sha256": "597ab5544856787eb9d0e1c4fb5b9783383cbaae0cea6d95d1d38c51b6de37a4",
+      "rows": 487
     },
     "L4_Agentic.csv": {
-      "sha256": "538a059f14f1101a12972ee3e18e298285129b08f933643b4fb85efc68eda0f2",
-      "rows": 77
+      "sha256": "4612dfa7a9cbc904969652e46cd2f949c1bed5a4244d4f59337ee4a5fef08102",
+      "rows": 65
     },
     "L4_Physical.csv": {
-      "sha256": "3a5bd0628881d45ee2646d4d52de2a863d65e747bf795837c738cd268ba5f706",
-      "rows": 93
+      "sha256": "5c9106eeaeb5976e91c36220a5620ef27d1f5e39a999c0bcce3bd8fbeb54bf05",
+      "rows": 77
     }
   },
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
@@ -178,5 +171,81 @@
   "audit_correction_20260829_ac05": "AC-05: populated empty L3s (G_SYS_OREF, P_INT_TAMPER) with 1 split, 1 transfer, 4 new referenced cards",
   "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
   "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
-  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)"
+  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
+  "round2_pipeline_historical": {
+    "final_total": 777,
+    "deleted": 13,
+    "explicit_deletions": 17,
+    "merged_away": 22,
+    "split_net_addition": 14,
+    "net_reduction": 21,
+    "final_domain_counts": {
+      "General AI": 607,
+      "Agentic AI": 77,
+      "Physical AI": 93
+    },
+    "mapping_method_counts": {
+      "General AI": {
+        "EM": 326,
+        "HD": 281
+      },
+      "Agentic AI": {
+        "EM": 44,
+        "HD": 33
+      },
+      "Physical AI": {
+        "EM": 55,
+        "HD": 38
+      }
+    },
+    "score_status_counts": {
+      "NOT_APPLICABLE": 162,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 516,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
+      "L3_MASTER_VALIDATED": 51,
+      "L3_MASTER_AI_REWRITE": 7
+    },
+    "note": "State immediately after the round-2 semantic curation pipeline and before audit corrections AC-01..AC-08. Score statuses are historical EM labels; the score columns were removed from the published release by AC-04/AC-10 and cannot be recomputed for the current card set."
+  },
+  "audit_corrections": {
+    "log": "validation/Audit_Correction_Log.csv",
+    "method": "Two independent reviewer agents judged every candidate without seeing each other's output; only the consensus (intersection) was applied, with a third-party adjudicator resolving disagreements against the evidence.",
+    "card_count_trajectory": [
+      {
+        "step": "round2_pipeline",
+        "cards": 777
+      },
+      {
+        "step": "AC-01",
+        "cards": 778
+      },
+      {
+        "step": "AC-02",
+        "cards": 720
+      },
+      {
+        "step": "AC-05",
+        "cards": 725
+      },
+      {
+        "step": "AC-06",
+        "cards": 711
+      },
+      {
+        "step": "AC-07",
+        "cards": 645
+      },
+      {
+        "step": "AC-08",
+        "cards": 629
+      },
+      {
+        "step": "AC-09..AC-11",
+        "cards": 629
+      }
+    ]
+  },
+  "audit_correction_20260830_ac09": "AC-09: technical reports (KO/EN) rewritten and recompiled against the 629-card release; figures and internal snapshots synchronised; Mapping provenance section removed from the card detail view",
+  "audit_correction_20260830_ac10": "AC-10: human-review and References columns dropped from the published CSVs (25 columns); full-column originals retained in the handover and project archive",
+  "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)"
 }

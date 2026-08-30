@@ -1,4 +1,4 @@
-Register_ID,source_row_id,Deleted_L4_ID,Title_ko,Reason
+﻿Register_ID,source_row_id,Deleted_L4_ID,Title_ko,Reason
 HR2-0226,SRC-G-0491,G_Others_016,AI 시스템 사고로 인한 사망,사망은 독립 위해 기제가 아닌 포괄적 결과이므로 삭제
 HR2-0230,SRC-G-0482,G_Others_018,경제·사회·정치 안보의 불안정화,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
 HR2-0232,SRC-G-0481,G_Others_019,동물 복지를 경시하는 개발·투자 편중,상호재검토 최종권고: 원문 휴먼검수와 immutable L3 master를 우선하여 DELETE 확정.
@@ -16,3 +16,5 @@ HR2-0128,SRC-G-0220,G_INT_UNETH_002,도덕적 프레이밍을 통한 AI 조작,A
 HR2-0305,SRC-G-0221,G_Others_106,도덕적 세계관 배제,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
 HR2-0668,SRC-G-0120,A_SYS_GOAL_008,목표 드리프트,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
 HR2-0796,SRC-P-0128,P_SYS_STATE_001,악천후 인지 실패,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
+HR2-0244,SRC-G-0489,G_SYS_EVAL_020,생성형 AI의 성능 미달에 따른 사용자 생산성 저하,"AC-07 MECE 큐레이션에서 리뷰어 2인 합의로 제거. 생산성 저하는 독립 위해 기제가 아닌 성능 미달의 파생 결과이며, 평가 실패 축은 G_SYS_EVAL의 다른 카드가 포괄."
+HR2-0504,SRC-G-0352,G_SYS_MISINFO_005,악성 사전분포에 의한 의사결정 조작,AC-07 MECE 큐레이션에서 리뷰어 2인 합의로 제거. 사전분포 조작은 학습 데이터 오염·조작 축의 하위 기제로 기존 카드에 포괄되며 독립 축을 이루지 못함.

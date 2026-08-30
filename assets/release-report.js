@@ -20,7 +20,7 @@ async function fetchJson(path) {
 
 async function renderManifest() {
   const data = await fetchJson("manifest.json");
-  if (data.release_round === "human_review_round2") {
+  if (String(data.release_round || "").startsWith("human_review_round2")) {
     renderRound2Manifest(data);
     return;
   }
@@ -169,7 +169,7 @@ function renderRound2Manifest(data) {
       <div class="section-heading"><div><p class="section-kicker">HUMAN REVIEW ROUND 2</p><h2 id="overview-title">${formatNumber(summary.source_total)}개 입력에서 ${formatNumber(summary.cleaned_total)}개 검수 완료 카드 확정</h2></div><p class="section-note">Release date · ${escapeHtml(data.release_date)}</p></div>
       <div class="kpi-grid">
         ${kpi("Input L4", summary.source_total, "previous reviewed release", "var(--navy)")}
-        ${kpi("Final L4", summary.cleaned_total, "human-review round 2", "var(--physical)")}
+        ${kpi("Final L4", summary.cleaned_total, "after round 2 and audit corrections", "var(--physical)")}
         ${kpi("User operations", summary.user_directed_operations, `${summary.explicit_deletions} deletions · ${summary.merged_away} net merged-away`, "var(--agentic)")}
         ${kpi("Korean edits", summary.korean_copyedit_operations, "approved card-level operations", "var(--general)")}
         ${kpi("English edits", summary.english_copyedit_operations, "approved card-level operations", "var(--em)")}
@@ -207,7 +207,7 @@ function renderRound2Manifest(data) {
         ${flowStep("Input", summary.source_total, "reviewed baseline", "")}
         ${flowStep("Deleted", `−${summary.deleted}`, "explicit reviewer decisions", "negative")}
         ${flowStep("Merged away", `−${summary.merged_away}`, "net consolidation", "negative")}
-        ${flowStep("Split addition", `+${summary.split_net_addition}`, "no net addition", "positive")}
+        ${flowStep("Added", `+${summary.split_net_addition}`, "splits, restorations and new cards", "positive")}
         ${flowStep("Final", summary.cleaned_total, "reconciled total", "final")}
       </div>
     </section>
@@ -230,12 +230,13 @@ function renderRound2Manifest(data) {
       </article>
     </section>
 
+    ${scoreStatuses.length ? `
     <section class="section" aria-labelledby="score-title">
       <div class="section-heading"><div><p class="section-kicker">SCORE STATUS</p><h2 id="score-title">문구·계층 변경 이후 점수 상태를 명시적으로 공개</h2></div><p class="section-note">No silent score reuse</p></div>
       <div class="table-shell"><table><thead><tr><th>Status</th><th>Cards</th><th>Interpretation</th></tr></thead><tbody>
         ${scoreStatuses.map(([status, count]) => `<tr><td><code>${escapeHtml(status)}</code></td><td class="numeric">${formatNumber(count)}</td><td>${escapeHtml(scoreStatusMeaning(status))}</td></tr>`).join("")}
       </tbody></table></div>
-    </section>
+    </section>` : ""}
 
     <section class="section" aria-labelledby="domain-table-title">
       <div class="section-heading"><div><p class="section-kicker">CHART DATA</p><h2 id="domain-table-title">도메인별 이전·최종 카드와 보존 레이블</h2></div></div>

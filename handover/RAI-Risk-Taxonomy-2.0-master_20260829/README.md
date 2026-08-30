@@ -1,7 +1,7 @@
 # RAI Risk Taxonomy 2.0 Master Handover
 
 Release date: 2026-08-29  
-Git commit: `8a948f8`  
+Release commit: `8a948f8` (audit corrections AC-01 to AC-12 were applied on top of it)  
 Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 
 ## Final release
@@ -34,3 +34,7 @@ The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public ca
 - AC-06: Added one literature-grounded card each to the two under-populated L3s (G_SYS_INCONS: prompt-format output variability, Sclar et al. ICLR 2024; A_SYS_SELFCOR: intrinsic self-correction failure, Huang et al. ICLR 2024) and absorbed 16 consensus-redundant cards in G_SOC_GOV (-10) and G_INT_UNETH (-6) per two independent reviewers. Card total 725 -> 711.
 - AC-07: MECE curation across all 46 L3 categories by two independent reviewers (consensus only): 64 within-L3 duplicates absorbed into representatives, 18 weakly-attributed cards reattributed to their proper L3 (new IDs; old IDs retired), 2 cards removed. Card total 711 -> 645.
 - AC-08: Decomposed 18 consensus composite cards (two independent reviewers): 17 retired with meaning fragments absorbed into existing detail cards (lineage unions distributed); G_INT_SELF_004 sharpened to the encouragement axis and G_INT_SELF_008 (failure to respond to self-harm/suicide crisis signals) added, grounded in Moore et al., ACM FAccT 2025. Card total 645 -> 629.
+- AC-09: Rewrote and recompiled the Korean and English Technical Reports against the 629-card release, refreshed the figures, synchronised every internal snapshot, and removed the Mapping provenance section from the card detail view.
+- AC-10: Dropped the human-review and References columns from the published CSVs (25 columns). Both fields remain in this handover's full-column data and in `04_web/cards.json`.
+- AC-11: Attached verified literature references to 160 cards. Six proposal agents, two independent reviewers, then a third-party re-verification of all 131 unique URLs against the arXiv and Crossref APIs; claimed titles matched the resolved records 158/158 and no fabricated citation was found.
+- AC-12: Release metadata sync. `manifest.json` still reported the pre-audit 777-card figures and was rendering the public Release Manifest page from them, so it now carries the 629-card counts with the round-2 stage figures preserved under `round2_pipeline_historical`; the manifest page's renderer, which failed outright on this release, was repaired; the release README was rewritten to the 629-card state; the two AC-07 removals missing from `Deletion_Tombstones.csv` were added (19 rows, matching the disposition ledger); and `SHA256SUMS.txt`, empty since AC-05, was regenerated over all 23 delivered files. No card data changed.

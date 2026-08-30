@@ -13,5 +13,6 @@
     "exact_duplicates": 0,
     "others": 0
   },
-  "failure_examples": {}
+  "failure_examples": {},
+  "stage": "Round-2 human-review recovery pipeline. The card counts below are the state at the end of that stage (777 cards) and are retained as a stage record; the released taxonomy holds 629 cards after audit corrections AC-01 to AC-12."
 }

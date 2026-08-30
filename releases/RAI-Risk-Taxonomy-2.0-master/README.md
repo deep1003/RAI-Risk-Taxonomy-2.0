@@ -1,17 +1,26 @@
 # RAI Risk Taxonomy 2.0 master release
 
-Current master: second-round human-review recovery, 2026-08-29.
+Current master: second-round human-review recovery (2026-08-29) followed by the independent line-by-line audit and corrections AC-01 to AC-12 (2026-08-30).
 
 - L3 master: 46 immutable source categories plus 3 derived Others queues
-- L4: 777 cards
-- General / Agentic / Physical: 607 / 77 / 93
-- Approved row-level decisions: 166
-- Delete / merge / split decisions: 14 / 14 / 19
-- Remap / rewrite-and-retain decisions: 80 / 39
+- L4: 629 cards
+- General / Agentic / Physical: 487 / 65 / 77
+- Retained mapping labels: EM 334 / HD 295
+- Cards with a verified literature reference: 160
+- Every L3 holds at least 3 cards; no L3 is empty
 - Final Others assignments: 0
 - Deterministic recovery validation: 10 PASS, 0 FAIL
 - EM and Hybrid EM rerun in this review round: no
+- L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
 
-Prior-run mapping scores are retained only as historical evidence. Cards edited in this round are explicitly marked as stale, and cards whose hierarchy or cardinality changed expose no inherited score.
+Prior-run mapping scores are retained only as historical evidence and are not published. The score and keyword columns were removed from the released CSVs by AC-04 and AC-10, so the published files carry 25 columns covering the L0 to L4 hierarchy, bilingual definitions, facet, and act-type.
 
-Canonical CSVs are under `data/`. The 808-row instruction register, 166 approved decisions, lineage edges, deletion tombstones, application log, semantic-deduplication log, and validation record are under `validation/`. Ten user-approved semantic consolidation clusters retired 13 non-representative cards after two independent specialist reviews.
+## Round-2 pipeline (historical)
+
+The round-2 recovery produced 777 cards from 798 input cards through 166 approved row-level decisions: delete / merge / split 14 / 14 / 19, remap / rewrite-and-retain 80 / 39. Those stage figures are preserved under `round2_pipeline_historical` in `manifest.json`.
+
+## Audit corrections
+
+An independent line-by-line audit took the release from 777 to 629 cards. Every judgement was made by two reviewer agents working without sight of each other's output, and only the consensus was applied; disagreements went to a third-party adjudicator who checked the evidence directly. The full trajectory and the rationale for each step are in `validation/Audit_Correction_Log.csv`.
+
+Canonical CSVs are under `data/`. The 808-row instruction register, approved decisions, lineage edges, deletion tombstones, application log, semantic-deduplication log, correction log, and validation record are under `validation/`.

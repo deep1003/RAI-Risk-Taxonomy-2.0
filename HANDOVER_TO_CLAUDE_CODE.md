@@ -6,7 +6,7 @@
 
 ## 0. 30초 요약
 
-Codex가 만든 777장 릴리스를 **독립 검수(AC-01~AC-11)** 해서 현재 **629장**으로 정리했다. 모든 판단은 "리뷰어 에이전트 2인 독립 판정 → 합의(교집합)만 적용" 원칙으로 수행했고, 각 단계의 판정 원장이 리포지토리에 남아 있다. 데이터·웹·보고서·로컬 파일은 전부 동기화된 상태이며, **지금 당장 해야 할 필수 작업은 없다.** 남은 것은 사용자 결정 대기 중인 시정 후보들이다.
+Codex가 만든 777장 릴리스를 **독립 검수(AC-01~AC-12)** 해서 현재 **629장**으로 정리했다. 모든 판단은 "리뷰어 에이전트 2인 독립 판정 → 합의(교집합)만 적용" 원칙으로 수행했고, 각 단계의 판정 원장이 리포지토리에 남아 있다. 데이터·웹·보고서·로컬 파일은 전부 동기화된 상태이며, **지금 당장 해야 할 필수 작업은 없다.** 남은 것은 사용자 결정 대기 중인 시정 후보들이다.
 
 ---
 
@@ -28,7 +28,7 @@ Codex가 만든 777장 릴리스를 **독립 검수(AC-01~AC-11)** 해서 현재
 - `public/data/releases/.../cards.json` — 웹 카드 데이터(629장, `references`·`human_reviews` 필드 포함)
 - `projects/rai_risk_taxonomy_2_0_rebuild_20260826/07_line_by_line_audit_claude/` — **검수 원장 일체**(54개 파일)
 - `projects/.../08_full_csv_archive_20260829/` — 컬럼 축소 이전 전체 컬럼 원본 보관
-- `releases/.../validation/Audit_Correction_Log.csv` — AC-01~AC-11 시정 이력(핸드오버 03_validation에도 동일본)
+- `releases/.../validation/Audit_Correction_Log.csv` — AC-01~AC-12 시정 이력(핸드오버 03_validation에도 동일본)
 - `CLAUDE.md` — 작업 메모리(세션 간 컨텍스트). **새 세션은 이 파일을 먼저 읽을 것.**
 
 ---
@@ -75,6 +75,7 @@ Codex가 만든 777장 릴리스를 **독립 검수(AC-01~AC-11)** 해서 현재
 | AC-09 | 기술보고서 KO/EN 전면 갱신·재컴파일, 전 파일 동기화, Mapping provenance 섹션 제거 | 629 |
 | AC-10 | 공개 CSV에서 휴먼리뷰·References 컬럼 제거(25컬럼) | 629 |
 | AC-11 | 160장에 검증된 레퍼런스 부착 | 629 |
+| AC-12 | 릴리스 메타데이터 동기화: manifest 2벌 777→629 갱신, 렌더 실패하던 Release Manifest 페이지 복구, releases README 재작성, 툼스톤 2건 보완(19건), 빈 SHA256SUMS 재생성(23항목) | 629 |
 
 ---
 
@@ -112,6 +113,7 @@ Codex가 만든 777장 릴리스를 **독립 검수(AC-01~AC-11)** 해서 현재
 2. **읽을 때도** `encoding='utf-8-sig'`로 열어야 첫 컬럼명에 `﻿`가 붙지 않는다.
 3. **공개 CSV vs 전체 컬럼본**: 공개 CSV에는 `source_row_id`, `References` 등이 없다. 코드에서 `row['source_row_id']`를 무조건 참조하면 KeyError가 난다(실제 발생). 컬럼 존재 여부를 확인하고 쓸 것.
 4. **동기화 대상이 많다**: 데이터 1건을 바꾸면 ①릴리스 CSV ②핸드오버 01_data ③cards.json 2벌(public + handover 04_web) ④manifest 4종 ⑤원장(Disposition·Lineage) ⑥index.html 2벌 수치 ⑦README ⑧SHA256SUMS ⑨핸드오버 zip 을 모두 갱신해야 한다. 누락하면 사이트 수치와 데이터가 어긋난다.
+   AC-01~AC-11 동안 실제로 이 목록의 뒷부분이 누락됐다. `releases/.../manifest.json`과 `handover/03_validation/manifest.json`은 777장에 머물러 공개 Release Manifest 페이지에 잘못된 수치를 렌더했고, `releases/.../README.md`도 777장 기준이었으며, `SHA256SUMS.txt`는 AC-05 이후 0바이트였고, `Deletion_Tombstones.csv`에는 AC-07 제거 2건이 빠져 있었다. AC-12에서 전부 시정했다. **manifest를 고칠 때는 `assets/release-report.js`가 그 JSON을 렌더한다는 점을 같이 확인할 것** — 필드가 어긋나면 페이지가 통째로 실패한다.
 5. **Claude Code에서는 git이 정상 동작한다.** 이전 세션(샌드박스)은 `.git` 잠금 파일 unlink가 막혀 `commit-tree` plumbing으로 커밋했고, push는 사용자 Mac에서 실행해야 했다. Claude Code는 로컬이므로 그냥 `git add/commit/push` 하면 된다. 만약 `.git/*.lock` 잔재로 막히면 `find .git -name '*.lock' -delete`.
 6. **작업용 워크트리 `.audit_fix_wt/`가 리포 안에 남아 있다.** 불필요하면 `git worktree remove .audit_fix_wt --force`. 백업 브랜치 `codex-wip-backup-20260830`에는 Codex의 미커밋 작업분이 보존돼 있다.
 7. **레퍼런스 링크 검증**: 일반 web fetch 도구는 arXiv/Crossref 같은 JSON·XML API에 빈 응답을 준다. Claude Code에서는 `curl`로 `http://export.arxiv.org/api/query?id_list=...` 와 `https://api.crossref.org/works/{DOI}` 를 직접 호출해 제목을 대조하면 된다. **"실재하는 DOI + 조작된 제목"이 LLM 인용의 지배적 실패 유형**이므로 반드시 제목 대조까지 할 것.

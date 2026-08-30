@@ -30,5 +30,6 @@
       "evidence": "0 final L4 cards assigned to Others."
     }
   ],
-  "audit_correction_20260829": "AC-01 applied after QA snapshot; totals now 778 (General 608). Re-verified by post-correction validation."
+  "audit_correction_20260829": "QA snapshot predates the line-by-line audit. Corrections AC-01 to AC-12 were applied afterwards and the release now holds 629 cards (General 487 / Agentic 65 / Physical 77). Each correction was re-verified after application; see Audit_Correction_Log.csv.",
+  "recorded_checks_note": "The passed and failed counters come from the round-2 QA run; the checks array lists the five checks whose evidence was recorded in this file."
 }
