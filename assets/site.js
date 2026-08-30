@@ -413,6 +413,7 @@ function openCard(l4Id) {
     ${keywords.length ? `<section class="dialog-section"><h3>Representative concepts</h3><div class="tag-row">${keywords.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
     ${attributes.length ? `<section class="dialog-section"><h3>L4 attributes</h3><div class="tag-row">${attributes.map((value) => `<span class="axis-tag">${escapeHtml(value)}</span>`).join("")}</div></section>` : ""}
     <section class="dialog-section"><h3>Mapping provenance</h3><p>${escapeHtml(card.mapping_method)}${card.transformation_action ? ` · ${escapeHtml(card.transformation_action)}` : ""}</p>${card.hd_reason ? `<p class="definition-ko">${escapeHtml(card.hd_reason)}</p>` : ""}${(card.human_reviews || []).map((h) => `<div class="human-review-block"><p class="definition-ko"><strong>휴먼 리뷰</strong> ${escapeHtml(h.comment)}</p><p class="definition-ko"><strong>반영 결과</strong> ${escapeHtml(h.result)}</p></div>`).join("")}</section>
+    ${(card.references || []).length ? `<section class="dialog-section"><h3>References</h3>${card.references.map((r) => `<p class="definition-ko"><a href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.label)}</a></p>`).join("")}</section>` : ""}
   </div>`;
   ui.dialog.showModal();
 }

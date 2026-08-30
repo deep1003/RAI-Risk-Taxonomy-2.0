@@ -8,10 +8,10 @@ Public site: <https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/>
 
 - L1: 3 domains
 - L3: 49 categories
-- L4: 720 cards
-- General AI: 564 cards
+- L4: 725 cards
+- General AI: 566 cards
 - Agentic AI: 77 cards
-- Physical AI: 79 cards
+- Physical AI: 82 cards
 - Others assignments: 0
 - L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
 
@@ -30,3 +30,4 @@ The L3 master is unchanged. No EM or Hybrid EM score is exposed in the public ca
 - AC-01: Restored the standalone card `G_INT_SELF_007` (Promotion of and concrete assistance for preparatory conduct for suicide) and narrowed `G_INT_SELF_004`, per the hard rule separating suicide preparation from execution (line-by-line audit FAIL-F1, two-reviewer consensus). Card total 777 -> 778. See `03_validation/Audit_Correction_Log.csv`.
 - AC-02: Absorbed 58 semantically redundant L4 cards across 8 large L3 categories (two independent reviewers, consensus-only set; representative cards keep the union of lineage). Retired IDs are permanent gaps; no renumbering. Card total 778 -> 720. See `03_validation/Audit_Correction_Log.csv`.
 - AC-03: Annotated 237 cards with the verbatim human-review comments and their application results (`human_reviews` in cards.json; two new CSV columns). Cleaned the Mapping provenance display (Korean labels instead of pipeline codes). Fidelity audit: 246 applied / 3 partial / 2 not applied — see HUMAN_COMMENT_FIDELITY_REPORT.
+- AC-05: Populated the two empty L3 categories. G_SYS_OREF (over-refusal): axis split from A_SYS_GOAL_022 plus two new cards grounded in XSTest, OR-Bench and AgentHarm. P_INT_TAMPER (physical tampering): sensor spoofing card transferred from G_SYS_SECADV plus two new cards grounded in Cao et al. (CCS 2019), NIST SP 800-82r3 and SP 800-193. Every added or changed card carries verified reference links (References column / dialog section). Card total 720 -> 725.
