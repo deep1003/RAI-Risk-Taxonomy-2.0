@@ -134,7 +134,12 @@
      "result": "G_INT_ALLOC_003(인구집단별 로봇 서비스·안전 격차)으로 이관됨(지정한 물리 안전 L3 대신 배분 차별 L3 채택)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Hundt et al. 2022",
+     "url": "https://doi.org/10.1145/3531146.3533138"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -368,7 +373,12 @@
      "result": "접근 배제(G_INT_ALLOC_010)·문화 침식(G_SOC_CULT_012)·저자원 언어 입력 처리 실패(G_SYS_INPUT_002)의 3축으로 분할되고, 성능 축은 신규 L3 대신 입력 이해 실패 L3 확대안이 채택됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Joshi et al. 2020",
+     "url": "https://doi.org/10.18653/v1/2020.acl-main.560"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -560,7 +570,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0002:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Abercrombie et al., Mirages",
+     "url": "https://arxiv.org/abs/2305.09800"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -596,7 +611,12 @@
    "transformation_action": "사용자 지시 통합",
    "transformation_rationale": "User directed G_INT_ANTH_001 to be absorbed into G_INT_ANTH_002; the representative preserves emotions, empathy, social-relationship capacity, judgement distortion, trust, dependence, and attachment.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Abercrombie et al., Mirages",
+     "url": "https://arxiv.org/abs/2305.09800"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -890,7 +910,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 명칭 용어 표준화 · 한국어 교정",
    "transformation_rationale": "Formulaic AI involvement removed from the risk title; the harm or failure is named using an immutable-L3-compatible term family documented by authoritative institutions | KOC-0011:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Henderson et al., Foundation Models and Fair Use",
+     "url": "https://arxiv.org/abs/2303.15715"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -926,7 +951,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 의미 분할",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0013:ORTHOGRAPHY | EOC-0007:ENGLISH_ORTHOGRAPHY | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Samuelson, Generative AI Meets Copyright",
+     "url": "https://doi.org/10.1126/science.adi0656"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -962,7 +992,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 의미 분할",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0028:SENTENCE_RECONSTRUCTION | EOC-0023:ENGLISH_ORTHOGRAPHY | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards. | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Carlini et al., Extracting Training Data from Large Language Models",
+     "url": "https://arxiv.org/abs/2012.07805"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -1423,7 +1458,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0017:TERMINOLOGY_AND_SYNTAX | EOC-0012:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hazell 2023",
+     "url": "https://arxiv.org/abs/2305.06972"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -1459,7 +1499,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0146:GRAMMAR_AND_ORTHOGRAPHY | FQA-207:REMAP_PER_REVIEW:괴롭힘·명예훼손·협박·갈취의 수행·조력은 불법 행위 L3의 행위 기제와 직접 일치한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Chesney & Citron 2019",
+     "url": "https://www.californialawreview.org/print/deep-fakes-a-looming-challenge-for-privacy-democracy-and-national-security"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -1873,7 +1918,12 @@
      "result": "G_INT_POL_001(자동화된 표적 영향 공작)과 G_SYS_MISINFO_021(대규모 허위정보 생산·확산 장벽 저하)로 분할됨(지정한 민주주의·불법행위 축 대신 정치 조작·허위정보 축 채택)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Ferrara et al. (2016)",
+     "url": "https://arxiv.org/abs/1407.5225"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -1909,7 +1959,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0018:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Feng et al. (2023)",
+     "url": "https://arxiv.org/abs/2305.08283"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2048,7 +2103,12 @@
      "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식)·G_SYS_MISINFO_015(선거절차에 관한 허위정보 생성))로 분할 반영됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Matz et al. (2017)",
+     "url": "https://doi.org/10.1073/pnas.1710966114"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2084,7 +2144,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 명칭 용어 표준화 · 한국어 교정",
    "transformation_rationale": "Formulaic AI involvement removed from the risk title; the harm or failure is named using an immutable-L3-compatible term family documented by authoritative institutions | KOC-0022:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Lazer et al. (2018)",
+     "url": "https://doi.org/10.1126/science.aao2998"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2353,7 +2418,12 @@
      "result": "의견 취지대로 2개 카드(G_INT_PRIV_007(맥락적 개인정보 보호 및 대화 프라이버시 실패)·G_SYS_CONTEXT_008(사회·상황적 단서의 오해))로 분할 반영됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Nissenbaum 2004",
+     "url": "https://digitalcommons.law.uw.edu/wlr/vol79/iss1/10"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2431,7 +2501,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 의미 분할",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0028:SENTENCE_RECONSTRUCTION | EOC-0023:ENGLISH_ORTHOGRAPHY | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Carlini et al. 2021",
+     "url": "https://arxiv.org/abs/2012.07805"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2638,7 +2713,12 @@
      "result": "의견대로 학습 데이터 프라이버시 통합 카드 G_INT_PRIV_015로 통합됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Carlini et al. 2021",
+     "url": "https://arxiv.org/abs/2012.07805"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2674,7 +2754,12 @@
    "transformation_action": "유지 · 동료 검토 · 용어·L3 최종 QA · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | FQA-289:LANGUAGE_REFINEMENT:원주민 집단을 가리키는 국제 정책 표기 관행에 따라 Indigenous를 대문자로 표기한다. | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Carroll et al. 2020",
+     "url": "https://doi.org/10.5334/dsj-2020-043"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2985,7 +3070,12 @@
      "result": "의견대로 동일 L3 내 G_INT_PRIV_025(재식별 및 정보 추론)로 편입됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Shokri et al. 2017",
+     "url": "https://arxiv.org/abs/1610.05820"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3333,7 +3423,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "상태 기술→피해 결과를 명시해 L4 리스크로 재정의 | KOC-0114:ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "West, Whittaker & Crawford (2019)",
+     "url": "https://ainowinstitute.org/publication/discriminating-systems-gender-race-and-power-in-ai-2"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3452,7 +3547,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0039:SENTENCE_RECONSTRUCTION | EOC-0030:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Keyes (2018)",
+     "url": "https://doi.org/10.1145/3274357"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3494,7 +3594,12 @@
      "result": "의견 취지대로 3개 카드(G_INT_ALLOC_012(콘텐츠 조정에 의한 집단별 접근 제한)·G_INT_REPR_007(콘텐츠 조정에 의한 집단 표상 왜곡)·G_INT_UNETH_017(콘텐츠 조정에 의한 여론 조작))로 분할 반영됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Sap et al. (2019)",
+     "url": "https://aclanthology.org/P19-1163/"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3566,7 +3671,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0041:SENTENCE_RECONSTRUCTION",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Bender et al. (2021)",
+     "url": "https://doi.org/10.1145/3442188.3445922"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3638,7 +3748,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0042:TERMINOLOGY_AND_SYNTAX | EOC-0032:ENGLISH_ORTHOGRAPHY | FQA-026:LANGUAGE_REFINEMENT:보호 특성별 카드를 분리 유지하면서 동일한 영문 위험 명칭 구조로 통일한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hutchinson et al. (2020)",
+     "url": "https://arxiv.org/abs/2005.00813"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3890,7 +4005,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0040:ENGLISH_ORTHOGRAPHY | FQA-032:LANGUAGE_REFINEMENT:보호 특성별 카드를 분리 유지하면서 동일한 영문 위험 명칭 구조로 통일한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Caliskan, Bryson & Narayanan (2017)",
+     "url": "https://doi.org/10.1126/science.aal4230"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3926,7 +4046,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0045:TERMINOLOGY_AND_SYNTAX | EOC-0041:ENGLISH_ORTHOGRAPHY | FQA-033:LANGUAGE_REFINEMENT:보호 특성별 카드를 분리 유지하면서 동일한 영문 위험 명칭 구조로 통일한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Abid, Farooqi & Zou (2021)",
+     "url": "https://arxiv.org/abs/2101.05783"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -3962,7 +4087,12 @@
    "transformation_action": "사용자 지시 통합 · 영어 교정",
    "transformation_rationale": "User directed G_INT_REPR_008 to be absorbed into G_INT_REPR_009; the representative retains all protected characteristics, representational-harm mechanisms, and protected interests from both cards in the tone of the immutable G_INT_REPR master. | EOC-0035:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Bolukbasi et al. (2016)",
+     "url": "https://arxiv.org/abs/1607.06520"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4034,7 +4164,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0047:ORTHOGRAPHY | EOC-0043:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Buolamwini & Gebru (2018)",
+     "url": "https://proceedings.mlr.press/v81/buolamwini18a.html"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4142,7 +4277,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0048:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Gonen & Goldberg (2019)",
+     "url": "https://arxiv.org/abs/1903.03862"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4178,7 +4318,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영 · 휴먼검수 분할",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0113:ORTHOGRAPHY | EOC-0085:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Zhao et al. (2017)",
+     "url": "https://arxiv.org/abs/1707.09457"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4240,7 +4385,12 @@
      "result": "의견 취지대로 3개 카드(G_INT_ALLOC_001(보호집단에 대한 불리한 자원 배분)·G_INT_REPR_028(집단 고정관념의 재현과 강화)·G_INT_UNETH_005(취약성을 이용한 행동 조작))로 분할 반영됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Nadeem, Bethke & Reddy (2021)",
+     "url": "https://arxiv.org/abs/2004.09456"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4276,7 +4426,12 @@
    "transformation_action": "통합 대표 · 문안 정비 · 동료 검토 · 한국어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0049:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Blodgett et al. (2020)",
+     "url": "https://aclanthology.org/2020.acl-main.485/"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5179,7 +5334,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0068:SENTENCE_RECONSTRUCTION | EOC-0060:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Gray et al. 2018",
+     "url": "https://doi.org/10.1145/3173574.3174108"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5287,7 +5447,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0116:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hackenburg et al. 2025",
+     "url": "https://doi.org/10.1126/science.aea3884"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5773,7 +5938,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0198:GRAMMAR_AND_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Sharma et al. 2023",
+     "url": "https://arxiv.org/abs/2310.13548"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5881,7 +6051,12 @@
    "transformation_action": "문안 정비 · 동료 검토",
    "transformation_rationale": "Peer-review spacing restoration",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kleinberg & Raghavan (2021)",
+     "url": "https://doi.org/10.1073/pnas.2018340118"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5917,7 +6092,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0110:GRAMMAR_AND_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Davani, Díaz & Prabhakaran (2022)",
+     "url": "https://arxiv.org/abs/2110.05719"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -5989,7 +6169,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 용어·L3 최종 QA · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0085:ORTHOGRAPHY | FQA-037:LANGUAGE_REFINEMENT:L3 마스터의 가치 부과 개념을 제목에 직접 반영하고 AI 모델·개발자 가치·대표성 결손의 인과관계를 한영에서 일치시킨다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Santurkar et al. (2023)",
+     "url": "https://arxiv.org/abs/2303.17548"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6025,7 +6210,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0066:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Bommasani et al. (2021)",
+     "url": "https://arxiv.org/abs/2108.07258"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6061,7 +6251,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0084:GRAMMAR_AND_ORTHOGRAPHY | FQA-055:LANGUAGE_REFINEMENT:데이터셋과 표집이라는 표준 용어를 사용하고 문화적 과다 표집에서 규범적 다양성 축소로 이어지는 인과를 가치 부과 L3에 맞추어 직접 기술한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Joshi et al. (2020)",
+     "url": "https://arxiv.org/abs/2004.09095"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6139,7 +6334,12 @@
      "result": "G_INT_VALUE_010(주석자 편향의 중립적 인간 선호로의 고착)과 G_SYS_INCONS_001(인간 피드백 기준의 비일관성) 2축으로 분할됨. (부분반영: VALUE·INCONS 축만 분리, ALLOC·REPR 축 미분리)"
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Denton et al. (2021)",
+     "url": "https://arxiv.org/abs/2112.04554"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6247,7 +6447,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Sorensen et al. (2024)",
+     "url": "https://arxiv.org/abs/2402.05070"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6391,7 +6596,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0182:GRAMMAR_AND_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Sorensen et al. (2024)",
+     "url": "https://arxiv.org/abs/2402.05070"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6499,7 +6709,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0093:TERMINOLOGY_AND_SYNTAX | EOC-0069:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Skalse et al. (2022)",
+     "url": "https://arxiv.org/abs/2209.13085"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6571,7 +6786,12 @@
    "transformation_action": "문안 정비 · 동료 검토",
    "transformation_rationale": "Peer-review spacing restoration",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Ribeiro et al. (2020), Auditing Radicalization Pathways on YouTube, ACM FAccT 2020",
+     "url": "https://doi.org/10.1145/3351095.3372879"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7051,7 +7271,12 @@
      "result": "의견대로 G_INT_WEAP_003(생물무기·화학무기)·G_INT_WEAP_008(취약점 탐지·악용 코드 작성 역량을 통한 사이버 공격 지원)·G_INT_WEAP_010(국가·범죄 행위자에 의한 AI의 의도적 무기화)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Bhatt et al. 2023",
+     "url": "https://arxiv.org/abs/2312.04724"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7087,7 +7312,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-236:LANGUAGE_REFINEMENT:한글 명칭과 정의에 포함된 독소 개발 의미가 영문 명칭에서 누락되지 않도록 identification and development로 일치시킨다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Urbina et al. 2022",
+     "url": "https://doi.org/10.1038/s42256-022-00465-9"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7129,7 +7359,12 @@
      "result": "의견대로 G_INT_WEAP_003(생물무기·화학무기)·G_INT_WEAP_008(취약점 탐지·악용 코드 작성 역량을 통한 사이버 공격 지원)·G_INT_WEAP_010(국가·범죄 행위자에 의한 AI의 의도적 무기화)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Brundage et al. 2018",
+     "url": "https://arxiv.org/abs/1802.07228"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7165,7 +7400,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 명칭 용어 표준화",
    "transformation_rationale": "Formulaic AI involvement removed from the risk title; the harm or failure is named using an immutable-L3-compatible term family documented by authoritative institutions",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Sandbrink 2023",
+     "url": "https://arxiv.org/abs/2306.13952"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7279,7 +7519,12 @@
      "result": "무기화 성격이 드러나도록 G_INT_WEAP_018(CBRN 정보 획득·무기 설계 역량 개발 장벽 저하)로 재명명됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Sandbrink 2023",
+     "url": "https://arxiv.org/abs/2306.13952"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7687,7 +7932,12 @@
      "result": "의견대로 G_SOC_CULT_001(인지 오프로딩)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Risko & Gilbert 2016",
+     "url": "https://doi.org/10.1016/j.tics.2016.07.002"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -8064,7 +8314,12 @@
    "transformation_action": "문안 정비 · 동료 검토",
    "transformation_rationale": "Peer-review spacing restoration",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Shumailov et al. 2023/2024",
+     "url": "https://arxiv.org/abs/2305.17493"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -8406,7 +8661,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | FQA-287:LANGUAGE_REFINEMENT:단순히 영향을 가한다는 순환 정의를 제거하고 영향력 작전의 자동화·확대, 조작 서사 주입, 정보 무결성 저하를 명시한다. | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Goldstein et al. 2023",
+     "url": "https://arxiv.org/abs/2301.04246"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -8478,7 +8738,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0161:GRAMMAR_AND_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Ferrara et al. 2016",
+     "url": "https://doi.org/10.1145/2818717"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -8736,7 +9001,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0215:SENTENCE_RECONSTRUCTION | FQA-258:LANGUAGE_REFINEMENT:산업 자체가 대체된다는 오류를 제거하고 생성형 AI가 업무를 자동화·대체하여 산업 구조와 고용을 교란하는 인과를 명확히 한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Eloundou et al. (2023), GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+     "url": "https://arxiv.org/abs/2303.10130"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -8880,7 +9150,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0217:SENTENCE_RECONSTRUCTION",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Frey & Osborne (2017), The Future of Employment: How Susceptible Are Jobs to Computerisation?, Technological Forecasting and Social Change",
+     "url": "https://doi.org/10.1016/j.techfore.2016.08.019"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -9132,7 +9407,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0227:SENTENCE_RECONSTRUCTION",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Strubell et al. (2019), Energy and Policy Considerations for Deep Learning in NLP, ACL",
+     "url": "https://arxiv.org/abs/1906.02243"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -9168,7 +9448,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 영어 교정 · L3 이관(AC-07)",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | EOC-0166:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Amodei et al. (2016), Concrete Problems in AI Safety, arXiv preprint",
+     "url": "https://arxiv.org/abs/1606.06565"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -9240,7 +9525,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 범위 정합 문안 정비",
    "transformation_rationale": "Definition narrowed to the subject, mechanism, and adverse outcome of the immutable L3 master",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Li et al. (2023), Making AI Less Thirsty: Uncovering and Addressing the Secret Water Footprint of AI Models, arXiv preprint",
+     "url": "https://arxiv.org/abs/2304.03271"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -9312,7 +9602,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0223:GRAMMAR_AND_ORTHOGRAPHY | FQA-260:LANGUAGE_REFINEMENT:아산화질소가 아닌 산화질소를 탄소 배출 원인으로 기술한 과학적 오류를 제거하고 온실가스 배출이라는 정책 표준 용어로 정제한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Patterson et al. (2021), Carbon Emissions and Large Neural Network Training, arXiv preprint",
+     "url": "https://arxiv.org/abs/2104.10350"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -9731,7 +10026,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0236:GRAMMAR_AND_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kulveit et al. 2025",
+     "url": "https://arxiv.org/abs/2501.16946"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -10175,7 +10475,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · L3 이관(AC-07)",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0240:SENTENCE_RECONSTRUCTION",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kirilenko et al. 2017",
+     "url": "https://doi.org/10.1111/jofi.12498"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -10583,7 +10888,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-266:LANGUAGE_REFINEMENT:명칭을 정의에서 반복하는 동어반복을 제거하고 접근 격차가 개발·감사·활용 주체를 제한하는 결과를 직접 기술한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Ahmed & Wahed (2020), The De-democratization of AI: Deep Learning and the Compute Divide in Artificial Intelligence Research",
+     "url": "https://arxiv.org/abs/2010.15581"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -10733,7 +11043,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0118:ORTHOGRAPHY | EOC-0089:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Bommasani et al. (2021), On the Opportunities and Risks of Foundation Models",
+     "url": "https://arxiv.org/abs/2108.07258"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -10769,7 +11084,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 명칭 용어 표준화 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Formulaic AI involvement removed from the risk title; the harm or failure is named using an immutable-L3-compatible term family documented by authoritative institutions | KOC-0129:ORTHOGRAPHY | FQA-225:REMAP_PER_REVIEW:강대 행위자의 통제가 약소 공동체로부터 강대 행위자에게 이동하는 것처럼 읽히던 방향 오류를 고치고 권력 집중 L3에 배치한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kwet (2019), Digital Colonialism: US Empire and the New Imperialism in the Global South, Race & Class",
+     "url": "https://doi.org/10.1177/0306396818823172"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -11135,7 +11455,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0257:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Green 2022",
+     "url": "https://arxiv.org/abs/2109.05067"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -11213,7 +11538,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0169:GRAMMAR_AND_ORTHOGRAPHY | FQA-354:REMAP_PER_REVIEW:Two independent expert reviews confirmed that SRC-G-0136 directly matches the immutable G_SYS_CONTEST definition; any supplied wording narrows the card to that scope.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Citron 2008",
+     "url": "https://openscholarship.wustl.edu/law_lawreview/vol85/iss6/2/"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -11627,7 +11957,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0179:TERMINOLOGY_AND_SYNTAX | EOC-0125:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Shi et al. (2023)",
+     "url": "https://arxiv.org/abs/2302.00093"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -11963,7 +12298,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-204:REMAP_PER_REVIEW:포화·불완전·과적합 벤치마크가 역량과 안전을 오측정하는 기제는 평가·검증 실패에 직접 해당한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Raji et al. (2021), AI and the Everything in the Whole Wide World Benchmark, NeurIPS Datasets and Benchmarks Track",
+     "url": "https://arxiv.org/abs/2111.15366"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12047,7 +12387,12 @@
      "result": "G_SYS_EVAL_011(지속 튜닝의 파국적 망각)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "French (1999), Catastrophic forgetting in connectionist networks, Trends in Cognitive Sciences",
+     "url": "https://doi.org/10.1016/S1364-6613(99)01294-2"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12233,7 +12578,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 의미 중복 통합",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0271:SENTENCE_RECONSTRUCTION | EOC-0194:ENGLISH_ORTHOGRAPHY | User-approved semantic consolidation after two independent specialist reviews; channel, example, or narrower restatement merged while preserving material meaning.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Greenblatt et al. (2024), Alignment faking in large language models, arXiv preprint",
+     "url": "https://arxiv.org/abs/2412.14093"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12436,7 +12786,12 @@
    "transformation_action": "문안 수정 · 문안 정비 · 동료 검토 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0195:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Sclar et al. (2024), Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design, ICLR",
+     "url": "https://arxiv.org/abs/2310.11324"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12688,7 +13043,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "영문 정의 장문: 축약 필요 | KOC-0178:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Casper et al. (2023), Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback, arXiv preprint",
+     "url": "https://arxiv.org/abs/2307.15217"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12844,7 +13204,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영 · L3 이관(AC-07)",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0143:GRAMMAR_AND_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Amodei et al., Concrete Problems in AI Safety",
+     "url": "https://arxiv.org/abs/1606.06565"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -12880,7 +13245,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0197:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Zheng et al. (2023), Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS",
+     "url": "https://arxiv.org/abs/2306.05685"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -13383,7 +13753,12 @@
      "result": "유지 의견대로 내용이 보존되어 G_SYS_EVAL_051(미세조정에 따른 모델 안전성 열화)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Qi et al. (2024), Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!, ICLR",
+     "url": "https://arxiv.org/abs/2310.03693"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -13419,7 +13794,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정 · 범위 조정 큐레이션",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0265:SENTENCE_RECONSTRUCTION | EOC-0191:ENGLISH_ORTHOGRAPHY | User-approved L4 scope and granularity curation: overbroad or example-specific wording was removed; unique meaning and immutable source lineage were retained in a measurable mechanism-level card. | User-approved L4 scope and granularity curation: overbroad or example-specific wording was removed; unique meaning and immutable source lineage were retained in a measurable mechanism-level card.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Golchin & Surdeanu (2024), Time Travel in LLMs: Tracing Data Contamination in Large Language Models, ICLR",
+     "url": "https://arxiv.org/abs/2308.08493"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -13497,7 +13877,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 범위 조정 큐레이션",
    "transformation_rationale": "Peer-review spacing restoration | User-approved L4 scope and granularity curation: overbroad or example-specific wording was removed; unique meaning and immutable source lineage were retained in a measurable mechanism-level card.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Gundersen & Kjensmo (2018), State of the Art: Reproducibility in Artificial Intelligence, AAAI",
+     "url": "https://doi.org/10.1609/aaai.v32i1.11503"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -13887,7 +14272,12 @@
      "result": "의견대로 G_SYS_EVAL_066(모델 평가의 자기 선호 편향)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Panickssery et al. (2024), LLM Evaluators Recognize and Favor Their Own Generations, NeurIPS",
+     "url": "https://arxiv.org/abs/2404.13076"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14037,7 +14427,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0285:SENTENCE_RECONSTRUCTION | FQA-045:LANGUAGE_REFINEMENT:중복된 위험 문장을 평가 실패와 잘못된 안전 분류가 연결되는 하나의 인과 문장으로 통합하고 이중용도 표기를 통일한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Shevlane et al. (2023), Model evaluation for extreme risks, arXiv preprint",
+     "url": "https://arxiv.org/abs/2305.15324"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14109,7 +14504,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정 · 범위 조정 큐레이션",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0286:GRAMMAR_AND_ORTHOGRAPHY | EOC-0200:ENGLISH_ORTHOGRAPHY | User-approved L4 scope and granularity curation: overbroad or example-specific wording was removed; unique meaning and immutable source lineage were retained in a measurable mechanism-level card.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Longpre et al. (2023), The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI, NeurIPS",
+     "url": "https://arxiv.org/abs/2310.16787"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14151,7 +14551,12 @@
      "result": "G_INT_VALUE_010(주석자 편향의 중립적 인간 선호로의 고착)과 G_SYS_INCONS_001(인간 피드백 기준의 비일관성) 2축으로 분할됨. (부분반영: VALUE·INCONS 축만 분리, ALLOC·REPR 축 미분리)"
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Plank (2022)",
+     "url": "https://arxiv.org/abs/2211.02570"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14187,7 +14592,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA · 의미 분할",
    "transformation_rationale": "Peer-review spacing restoration | FQA-275:LANGUAGE_REFINEMENT:same and consistent 및 chats within a conversation이라는 비문을 비교 단위가 분명한 문장으로 교정한다. | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Elazar et al. (2021)",
+     "url": "https://arxiv.org/abs/2102.01017"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14420,7 +14830,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 용어·L3 최종 QA · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0111:GRAMMAR_AND_ORTHOGRAPHY | FQA-284:LANGUAGE_REFINEMENT:knowledge bases shift라는 부정확한 주어를 현실의 사실·지식 변화와 모델 지식의 정체라는 대비로 바로잡는다. | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Lazaridou et al., Mind the Gap",
+     "url": "https://arxiv.org/abs/2102.01951"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14672,7 +15087,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0142:SENTENCE_RECONSTRUCTION | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Maynez et al., On Faithfulness and Factuality",
+     "url": "https://arxiv.org/abs/2005.00661"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14750,7 +15170,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0296:ORTHOGRAPHY | EOC-0206:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Pan et al., On the Risk of Misinformation Pollution",
+     "url": "https://arxiv.org/abs/2305.13661"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14864,7 +15289,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0298:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Huang et al., Survey on Hallucination in LLMs",
+     "url": "https://arxiv.org/abs/2311.05232"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -14978,7 +15408,12 @@
      "result": "G_INT_POL_001(자동화된 표적 영향 공작)과 G_SYS_MISINFO_021(대규모 허위정보 생산·확산 장벽 저하)로 분할됨(지정한 민주주의·불법행위 축 대신 정치 조작·허위정보 축 채택)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Goldstein et al., Generative Language Models and Automated Influence Operations",
+     "url": "https://arxiv.org/abs/2301.04246"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15476,7 +15911,12 @@
      "result": "정의 재작성으로 '거짓 확신' 오타 문제가 해소된 G_SYS_OEXT_011(설명가능성 기법의 검증 범위 초과 과신)로 반영됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Kaur et al. (2020), Interpreting Interpretability: Understanding Data Scientists' Use of Interpretability Tools for Machine Learning, CHI 2020",
+     "url": "https://doi.org/10.1145/3313831.3376219"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15667,7 +16107,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요 | KOC-0315:ORTHOGRAPHY | EOC-0214:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kadavath et al., Language Models (Mostly) Know What They Know",
+     "url": "https://arxiv.org/abs/2207.05221"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15703,7 +16148,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 의미 분할",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0037:ORTHOGRAPHY | EOC-0027:ENGLISH_ORTHOGRAPHY | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards. | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Buçinca et al., To Trust or to Think",
+     "url": "https://arxiv.org/abs/2102.09692"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15745,7 +16195,12 @@
      "result": "의견대로 의인화(G_INT_ANTH_007)·해로운 정서적 의존(G_INT_REL_002)·역량 과대사용(G_SYS_OEXT_013)·과신(G_SYS_OVERCONF_004)의 4축으로 분할됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Kadavath et al., Language Models (Mostly) Know What They Know",
+     "url": "https://arxiv.org/abs/2207.05221"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15787,7 +16242,12 @@
      "result": "G_SYS_OVERCONF_005(분포 외 입력에 대한 고확신 오류)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Hendrycks & Gimpel, Baseline for Detecting OOD Examples",
+     "url": "https://arxiv.org/abs/1610.02136"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15967,7 +16427,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0319:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Tramèr et al. 2016",
+     "url": "https://arxiv.org/abs/1609.02943"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16039,7 +16504,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0321:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Perez & Ribeiro 2022",
+     "url": "https://arxiv.org/abs/2211.09527"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16075,7 +16545,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0322:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Carlini et al. 2021",
+     "url": "https://arxiv.org/abs/2012.07805"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16111,7 +16586,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0323:TERMINOLOGY_AND_SYNTAX | EOC-0218:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Goodfellow et al. (2015), Explaining and Harnessing Adversarial Examples, ICLR 2015",
+     "url": "https://arxiv.org/abs/1412.6572"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16147,7 +16627,12 @@
    "transformation_action": "문안 수정 · 문안 정비 · 동료 검토 · L3 범위 정합 문안 정비 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Definition narrowed to the subject, mechanism, and adverse outcome of the immutable L3 master | KOC-0324:ORTHOGRAPHY | EOC-0219:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Gu et al. (2019), BadNets: Evaluating Backdooring Attacks on Deep Neural Networks, IEEE Access",
+     "url": "https://arxiv.org/abs/1708.06733"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16278,7 +16763,12 @@
      "result": "의견대로 G_SYS_SECADV_006(에이전트 메모리·맥락 오염)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Zou et al. (2024), PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models, USENIX Security 2025",
+     "url": "https://arxiv.org/abs/2402.07867"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16314,7 +16804,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0325:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Qi et al. (2023), Visual Adversarial Examples Jailbreak Aligned Large Language Models, AAAI 2024",
+     "url": "https://arxiv.org/abs/2306.13213"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16350,7 +16845,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0326:TERMINOLOGY_AND_SYNTAX | EOC-0220:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Zou et al. (2023), Universal and Transferable Adversarial Attacks on Aligned Language Models",
+     "url": "https://arxiv.org/abs/2307.15043"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16428,7 +16928,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0327:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Rando & Tramèr (2024), Universal Jailbreak Backdoors from Poisoned Human Feedback, ICLR 2024",
+     "url": "https://arxiv.org/abs/2311.14455"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16620,7 +17125,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0331:ORTHOGRAPHY | EOC-0223:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Biggio et al. (2012), Poisoning Attacks against Support Vector Machines, ICML 2012",
+     "url": "https://arxiv.org/abs/1206.6389"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16728,7 +17238,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0226:ORTHOGRAPHY | EOC-0165:ENGLISH_ORTHOGRAPHY | FQA-218:REMAP_PER_REVIEW:스펀지 예제를 이용한 자원 고갈과 서비스 가용성 저하는 환경 영향이 아니라 적대적 입력 공격에 해당한다. | User-approved semantic splitting after source-instruction and L3-master review; distinct mechanisms were separated and already represented meanings were absorbed without duplicating cards.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Shumailov et al. (2021), Sponge Examples: Energy-Latency Attacks on Neural Networks, IEEE EuroS&P 2021",
+     "url": "https://arxiv.org/abs/2006.03463"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16806,7 +17321,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0225:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Wei et al. (2023), Jailbroken: How Does LLM Safety Training Fail?, NeurIPS 2023",
+     "url": "https://arxiv.org/abs/2307.02483"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -16842,7 +17362,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0187:TERMINOLOGY_AND_SYNTAX | EOC-0128:ENGLISH_ORTHOGRAPHY | FQA-212:REMAP_PER_REVIEW:금지 출력 유도는 안전 통제의 역이용이 아니라 안전장치 우회라는 보안·적대적 견고성 실패 기제다. | User-approved L4 scope and granularity curation: overbroad or example-specific wording was removed; unique meaning and immutable source lineage were retained in a measurable mechanism-level card.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Shen et al. (2024), 'Do Anything Now': Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models, ACM CCS 2024",
+     "url": "https://arxiv.org/abs/2308.03825"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17118,7 +17643,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0341:ORTHOGRAPHY | EOC-0228:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Russinovich et al. (2024), Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack",
+     "url": "https://arxiv.org/abs/2404.01833"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17232,7 +17762,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0343:SENTENCE_RECONSTRUCTION | EOC-0230:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Greshake et al. (2023), Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection, ACM AISec 2023",
+     "url": "https://arxiv.org/abs/2302.12173"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17316,7 +17851,12 @@
      "result": "의견대로 G_SYS_SECADV_048(적대적 역할·역할극 지시에 의한 안전장치 우회)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Shah et al. (2023), Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation",
+     "url": "https://arxiv.org/abs/2311.03348"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17388,7 +17928,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 범위 정합 문안 정비 · 한국어 교정",
    "transformation_rationale": "Definition narrowed to the subject, mechanism, and adverse outcome of the immutable L3 master | KOC-0345:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Qi et al. (2024), Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!, ICLR 2024",
+     "url": "https://arxiv.org/abs/2310.03693"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17632,7 +18177,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0174:ORTHOGRAPHY | FQA-211:REMAP_PER_REVIEW:모델 내부 분석을 이용해 안전 기능을 약화시키거나 공격을 개발하는 기제는 보안·적대적 견고성 실패에 해당한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Arditi et al. (2024), Refusal in Language Models Is Mediated by a Single Direction, NeurIPS 2024",
+     "url": "https://arxiv.org/abs/2406.11717"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17668,7 +18218,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-054:LANGUAGE_REFINEMENT:프로젝트 용어집의 설명가능성 표기를 일관되게 적용한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Slack et al. (2020), Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods, AIES 2020",
+     "url": "https://arxiv.org/abs/1911.02508"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17776,7 +18331,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0134:ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Roger & Greenblatt (2023), Preventing Language Models From Hiding Their Reasoning",
+     "url": "https://arxiv.org/abs/2310.18512"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17848,7 +18408,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영 · 휴먼검수 분할",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0154:ORTHOGRAPHY | EOC-0109:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "European Parliament and Council (2024), Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 50(1)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17998,7 +18563,12 @@
      "result": "의견대로 G_SYS_TRANS_015(사고 연쇄와 불일치하는 모델 출력)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Turpin et al. (2023), Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting, NeurIPS 2023",
+     "url": "https://arxiv.org/abs/2305.04388"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18070,7 +18640,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-360:REMAP_PER_REVIEW:Two independent expert reviews confirmed that SRC-G-0146 directly matches the immutable G_SYS_TRANS definition; any supplied wording narrows the card to that scope.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "European Parliament and Council (2024), Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 50(2) and (4)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18178,7 +18753,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 휴먼검수 L3 재배정 · 용어·L3 최종 QA",
    "transformation_rationale": "분량 초과: L3 수준 1문장으로 축약 필요; 영문 정의 장문: 축약 필요 | KOC-0201:SENTENCE_RECONSTRUCTION | FQA-233:REMAP_PER_REVIEW:검증되지 않은 내부 연결 수 수치를 제거하고 설명·추적·검증의 한계를 투명성 부족 L3에 맞게 정제한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Rudin (2019), Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead, Nature Machine Intelligence",
+     "url": "https://doi.org/10.1038/s42256-019-0048-x"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18376,7 +18956,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 도메인 교차 검토 · 명칭 용어 표준화 · 한국어 교정",
    "transformation_rationale": "Formulaic AI involvement removed from the risk title; the harm or failure is named using an immutable-L3-compatible term family documented by authoritative institutions | KOC-0393:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kirilenko et al. 2017",
+     "url": "https://doi.org/10.1111/jofi.12498"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18526,7 +19111,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 영어 교정",
    "transformation_rationale": "Peer-review spacing restoration | EOC-0243:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Calvano et al. (2020), Artificial Intelligence, Algorithmic Pricing, and Collusion, American Economic Review",
+     "url": "https://doi.org/10.1257/aer.20190623"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18573,7 +19163,12 @@
      "result": "의견대로 COLLUSION_001·002가 A_INT_COLLUSION_002(감시 회피형 은밀 통신에 의한 다중 에이전트 공모)로 통합됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Motwani et al. (2024), Secret Collusion among AI Agents: Multi-Agent Deception via Steganography, arXiv preprint",
+     "url": "https://arxiv.org/abs/2402.07510"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18651,7 +19246,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0395:ORTHOGRAPHY | EOC-0244:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hammond et al. (2025), Multi-Agent Risks from Advanced AI",
+     "url": "https://arxiv.org/abs/2502.14143"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18693,7 +19293,12 @@
      "result": "의견대로 A_INT_CONFLICT_002(AI 에이전트 간 협상 실패)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Hammond et al. (2025), Multi-Agent Risks from Advanced AI",
+     "url": "https://arxiv.org/abs/2502.14143"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18729,7 +19334,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0396:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hammond et al. (2025), Multi-Agent Risks from Advanced AI",
+     "url": "https://arxiv.org/abs/2502.14143"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18771,7 +19381,12 @@
      "result": "의견대로 A_INT_COORD_001(다중 에이전트의 협조 실패에 따른 집단적 피해)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Dafoe et al. (2020)",
+     "url": "https://arxiv.org/abs/2012.08630"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18807,7 +19422,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0397:TERMINOLOGY_AND_SYNTAX | EOC-0246:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Dafoe et al. (2020)",
+     "url": "https://arxiv.org/abs/2012.08630"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18843,7 +19463,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 범위 정합 문안 정비",
    "transformation_rationale": "Definition narrowed to the subject, mechanism, and adverse outcome of the immutable L3 master",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Dafoe et al. (2020)",
+     "url": "https://arxiv.org/abs/2012.08630"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18915,7 +19540,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0399:ORTHOGRAPHY | EOC-0247:ENGLISH_ORTHOGRAPHY | FQA-105:LANGUAGE_REFINEMENT:독립 언어·용어 감사에서 확인된 문법·호응·전문용어 또는 한영 의미 불일치를 최소 수정하고 기존 L3와 위해 기제를 보존한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hu et al. (2020)",
+     "url": "https://arxiv.org/abs/2003.02979"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18951,7 +19581,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0409:TERMINOLOGY_AND_SYNTAX",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hardy, The Confused Deputy",
+     "url": "https://doi.org/10.1145/54289.871709"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -18993,7 +19628,12 @@
      "result": "의견대로 A_SYS_AUTH_002(에이전트의 종료·교정 저항)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Hadfield-Menell et al., The Off-Switch Game",
+     "url": "https://arxiv.org/abs/1611.08219"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19035,7 +19675,12 @@
      "result": "의견대로 A_SYS_AUTH_003(어포던스 부여에 의한 에이전트 실패 영향 확대)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Chan et al., Harms from Increasingly Agentic Algorithmic Systems",
+     "url": "https://arxiv.org/abs/2302.10329"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19107,7 +19752,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0410:TERMINOLOGY_AND_SYNTAX",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Fang et al., LLM Agents can Autonomously Exploit One-day Vulnerabilities",
+     "url": "https://arxiv.org/abs/2404.08144"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19143,7 +19793,12 @@
    "transformation_action": "통합 대표 · 문안 정비 · 동료 검토 · 도메인 교차 검토",
    "transformation_rationale": "Peer-review spacing restoration",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Kinniment et al., Evaluating Language-Model Agents on Realistic Autonomous Tasks",
+     "url": "https://arxiv.org/abs/2312.11671"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19299,7 +19954,12 @@
      "result": "A_SYS_AUTH_012(학습 중 탐색 행동에 따른 회복 불가능한 피해)로 이관됨(지정한 Overconfidence 대신 과잉 권한 L3 채택)."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Amodei et al., Concrete Problems in AI Safety",
+     "url": "https://arxiv.org/abs/1606.06565"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19341,7 +20001,12 @@
      "result": "의견대로 A_SYS_AUTH_016(종료·수정 저항을 통한 자기 보존 성향)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Omohundro, The Basic AI Drives",
+     "url": "https://doi.org/10.1201/9781351251389-3"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19383,7 +20048,12 @@
      "result": "의견대로 A_SYS_AUTH_017(배포 이후 예측하지 못한 창발적 역량과 행동)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Wei et al., Emergent Abilities of Large Language Models",
+     "url": "https://arxiv.org/abs/2206.07682"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19533,7 +20203,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Ruan et al., Identifying the Risks of LM Agents with an LM-Emulated Sandbox",
+     "url": "https://arxiv.org/abs/2309.15817"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19575,7 +20250,12 @@
      "result": "의견대로 A_SYS_DECEPT_001(탐지 불가 공격에 의한 다중 에이전트 협력 붕괴)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Motwani et al. (2024), Secret Collusion among AI Agents: Multi-Agent Deception via Steganography",
+     "url": "https://arxiv.org/abs/2402.07510"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19647,7 +20327,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 범위 정합 문안 정비",
    "transformation_rationale": "Definition narrowed to the subject, mechanism, and adverse outcome of the immutable L3 master",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Greenblatt et al. 2024",
+     "url": "https://arxiv.org/abs/2412.14093"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19725,7 +20410,12 @@
      "result": "의견대로 A_SYS_DECEPT_008(지속적 기만 수행에 의한 이용자 판단 왜곡)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Park et al. 2023",
+     "url": "https://arxiv.org/abs/2308.14752"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19875,7 +20565,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0138:SENTENCE_RECONSTRUCTION | EOC-0101:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hendrycks et al. (2023), An Overview of Catastrophic AI Risks, arXiv preprint",
+     "url": "https://arxiv.org/abs/2306.12001"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -19911,7 +20606,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0423:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Bostrom (2012), The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents, Minds and Machines",
+     "url": "https://doi.org/10.1007/s11023-012-9281-3"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20025,7 +20725,12 @@
    "transformation_action": "통합 대표 · 문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0424:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Turner et al. (2021), Optimal Policies Tend to Seek Power, NeurIPS",
+     "url": "https://arxiv.org/abs/1912.01683"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20067,7 +20772,12 @@
      "result": "의견대로 A_SYS_GOAL_013(확장 가능한 감독 실패에 따른 대리 지표 기반 유해 행동)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Bowman et al. (2022), Measuring Progress on Scalable Oversight for Large Language Models, arXiv preprint",
+     "url": "https://arxiv.org/abs/2211.03540"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20103,7 +20813,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0425:SENTENCE_RECONSTRUCTION | EOC-0265:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Hubinger et al. (2019), Risks from Learned Optimization in Advanced Machine Learning Systems, arXiv preprint",
+     "url": "https://arxiv.org/abs/1906.01820"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20175,7 +20890,12 @@
    "transformation_action": "통합 대표 · 문안 정비 · 동료 검토 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Amodei et al. (2016), Concrete Problems in AI Safety, arXiv preprint",
+     "url": "https://arxiv.org/abs/1606.06565"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20522,7 +21242,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정 · 영어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0435:ORTHOGRAPHY | EOC-0268:ENGLISH_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Matthias, The Responsibility Gap",
+     "url": "https://doi.org/10.1007/s10676-004-3422-1"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -21933,7 +22658,12 @@
      "result": "유지 의견대로 내용이 보존되어 P_SYS_CONTROL_016(위험 지시 거부 실패)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Yin et al., SafeAgentBench",
+     "url": "https://arxiv.org/abs/2412.13178"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -22452,7 +23182,12 @@
      "result": "의견대로 P_SYS_CONTROL_032(개인 돌봄 로봇의 준수 기준 부재)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "ISO 13482:2014",
+     "url": "https://www.iso.org/standard/53820.html"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -23452,7 +24187,12 @@
      "result": "유지 의견대로 내용이 보존되어 P_SYS_HARDWARE_003(하드웨어 결함에 따른 의도하지 않은 동작 변화)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Ziegler & Lanford 1979",
+     "url": "https://doi.org/10.1126/science.206.4420.776"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -23667,7 +24407,12 @@
      "result": "유지 의견대로 내용이 보존되어 P_SYS_STATE_006(위치 추정 누적 오차)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Cadena et al. (2016)",
+     "url": "https://arxiv.org/abs/1606.05830"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
