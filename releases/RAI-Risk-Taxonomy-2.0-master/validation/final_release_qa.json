@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "passed": 10,
+  "passed": 5,
   "failed": 0,
   "l3_master_sha256": "e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df",
   "checks": [
@@ -31,5 +31,5 @@
     }
   ],
   "audit_correction_20260829": "QA snapshot predates the line-by-line audit. Corrections AC-01 to AC-12 were applied afterwards and the release now holds 629 cards (General 487 / Agentic 65 / Physical 77). Each correction was re-verified after application; see Audit_Correction_Log.csv.",
-  "recorded_checks_note": "The passed and failed counters come from the round-2 QA run; the checks array lists the five checks whose evidence was recorded in this file."
+  "recorded_checks_note": "The passed and failed counters were previously the literal 10 written by build_human_review_recovery_release.py and matched neither the recorded checks nor the validator. They now equal the checks recorded here. validate_human_review_recovery.py evaluates fifteen check categories, but it collects them in a defaultdict, so only categories that were touched during the run are serialised: three of them, plus two appended by the release builder, gives the five below. Every category the validator evaluated passed. The current release is covered by the separate line-by-line audit recorded in Audit_Correction_Log.csv."
 }

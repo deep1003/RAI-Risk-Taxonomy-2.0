@@ -9,7 +9,7 @@ Current master: second-round human-review recovery (2026-08-29) followed by the 
 - Cards with a verified literature reference: 160
 - Every L3 holds at least 3 cards; no L3 is empty
 - Final Others assignments: 0
-- Deterministic recovery validation: 10 PASS, 0 FAIL
+- Deterministic recovery validation: 5 recorded checks, 5 PASS, 0 FAIL
 - EM and Hybrid EM rerun in this review round: no
 - L3 master SHA-256: `e9439ced64fb49c1496f1955013b5f038ecc7d271b9d6c9704f1e1bf6b0094df`
 
