@@ -2080,27 +2080,27 @@
     {
      "source_row_id": "SRC-G-0332",
      "comment": "(jay) [분할] 복합적. Political bias + Unethical Conduct and Manipulation, Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_INT_UNETH_005(취약성을 이용한 행동 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_POL_006(개인화된 정치적 영향 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0534",
      "comment": "(jay) [분할] 복합적. Political Bias and Manipulation + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 2개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_POL_006(개인화된 정치적 영향 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0533",
      "comment": "(jay) [분할] 복합적. Political Bias and Manipulation + violence + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_INT_VIOL_003(폭력과 극단주의 실행의 조장)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_POL_006(개인화된 정치적 영향 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0348",
      "comment": "(jay) [분할] 복합적. Erosion of Democracy and Civic Order + Political Bias and Manipulation 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 2개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_POL_006(개인화된 정치적 영향 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0033",
      "comment": "(jay) [분할] 복합적. Misinformation + Political Bias and Manipulation + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식)·G_SYS_MISINFO_015(선거절차에 관한 허위정보 생성))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_POL_006(개인화된 정치적 영향 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": [
@@ -3270,7 +3270,7 @@
     {
      "source_row_id": "SRC-G-0371",
      "comment": "(jay) [설명 수정] 그 결과 이후부터는 리스크가 확산되는 과정이라 설명에서 삭제하는 것이 더 적절할 것으로 생각함. | (jay) [분할] 의인화(원인)+Over-Extension(역량 과대평가)+Overconfidence(신뢰 오보정)+인간-AI 해로운 관계(과잉의존) 혼재되어 해당 L4를 분해 필요",
-     "result": "의견대로 의인화(G_INT_ANTH_007)·해로운 정서적 의존(G_INT_REL_002)·역량 과대사용(G_SYS_OEXT_013)·과신(G_SYS_OVERCONF_004)의 4축으로 분할됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_REL_002(AI와의 지속적 상호작용에 따른 해로운 정서적·사회적 의존)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": []
@@ -5243,7 +5243,7 @@
     {
      "source_row_id": "SRC-G-0332",
      "comment": "(jay) [분할] 복합적. Political bias + Unethical Conduct and Manipulation, Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_INT_UNETH_005(취약성을 이용한 행동 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_UNETH_005(취약성을 이용한 행동 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0266",
@@ -5253,7 +5253,7 @@
     {
      "source_row_id": "SRC-G-0381",
      "comment": "(jay) [분할] 복합적. Unethical Conduct and Manipulation + Erosion of Democracy and Civic Order + Inequality and Power Concentration이 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_UNETH_005(취약성을 이용한 행동 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식)·G_SOC_POWER_005(대규모 인구에 대한 AI 영향력의 집중))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_INT_UNETH_005(취약성을 이용한 행동 조작)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": []
@@ -10519,7 +10519,7 @@
     {
      "source_row_id": "SRC-A-0053",
      "comment": "General - Governance and Accountability Void 로 이관",
-     "result": "의견대로 G_SOC_GOV_032(단일 실패 지점)로 이관됨."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SOC_POWER_027(단일 실패 지점)에 최종 귀속함."
     }
    ],
    "references": []
@@ -10968,7 +10968,7 @@
     {
      "source_row_id": "SRC-G-0381",
      "comment": "(jay) [분할] 복합적. Unethical Conduct and Manipulation + Erosion of Democracy and Civic Order + Inequality and Power Concentration이 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_UNETH_005(취약성을 이용한 행동 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식)·G_SOC_POWER_005(대규모 인구에 대한 AI 영향력의 집중))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_SOC_POWER_005(대규모 인구에 대한 AI 영향력의 집중)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": []
@@ -12384,7 +12384,7 @@
     {
      "source_row_id": "SRC-P-0009",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_011(지속 튜닝의 파국적 망각)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_002(지속 튜닝의 파국적 망각)에 최종 귀속함."
     }
    ],
    "references": [
@@ -12539,7 +12539,7 @@
     {
      "source_row_id": "SRC-G-0176",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_015(학습·운용 데이터 간 분포 이동)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_003(학습·운용 데이터 간 분포 이동)에 최종 귀속함."
     }
    ],
    "references": []
@@ -12664,12 +12664,12 @@
     {
      "source_row_id": "SRC-G-0185",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_018(학습 데이터 주석 결함)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_004(학습 데이터 주석 결함)에 최종 귀속함."
     },
     {
      "source_row_id": "SRC-G-0180",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_018(학습 데이터 주석 결함)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_004(학습 데이터 주석 결함)에 최종 귀속함."
     }
    ],
    "references": []
@@ -13433,7 +13433,7 @@
     {
      "source_row_id": "SRC-G-0119",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_040(AI 모델 설정과 평가의 부적절성)·G_SYS_OVERCONF_008(정량화되지 않은 예측 불확실성)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_EVAL_040(AI 모델 설정과 평가의 부적절성)에 최종 귀속함."
     }
    ],
    "references": []
@@ -13589,7 +13589,7 @@
     {
      "source_row_id": "SRC-P-0016",
      "comment": "(유지) (jw) 너무 지엽적인 리스크로, 삭제 제안",
-     "result": "G_SYS_EVAL_044(배포 전 물리적 안전 시험 미흡)로 이관·존치됨."
+     "result": "유지와 삭제 제안을 함께 검토한 결과, 배포 전 물리적 안전 시험의 누락은 독립적으로 검증 가능한 평가·보증 실패이므로 G_SYS_EVAL_044(배포 전 물리적 안전 시험 미흡)로 이관·유지함."
     },
     {
      "source_row_id": "SRC-P-0177",
@@ -13957,7 +13957,7 @@
     {
      "source_row_id": "SRC-G-0187",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_057(과적합 및 과소적합)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_005(과적합 및 과소적합)에 최종 귀속함."
     }
    ],
    "references": []
@@ -14113,7 +14113,7 @@
     {
      "source_row_id": "SRC-G-0188",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_EVAL_061(코너 케이스에서의 신뢰성 저하)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_006(코너 케이스에서의 신뢰성 저하)에 최종 귀속함."
     }
    ],
    "references": []
@@ -15214,7 +15214,7 @@
     {
      "source_row_id": "SRC-G-0033",
      "comment": "(jay) [분할] 복합적. Misinformation + Political Bias and Manipulation + Erosion of Democracy and Civic Order 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 3개 카드(G_INT_POL_006(개인화된 정치적 영향 조작)·G_SOC_DEMOC_004(민주적 공론과 시민 신뢰의 침식)·G_SYS_MISINFO_015(선거절차에 관한 허위정보 생성))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_SYS_MISINFO_015(선거절차에 관한 허위정보 생성)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": []
@@ -15908,7 +15908,7 @@
     {
      "source_row_id": "SRC-G-0105",
      "comment": "yj_\"거짓 확신\" 오타 정정",
-     "result": "정의 재작성으로 '거짓 확신' 오타 문제가 해소된 G_SYS_OEXT_011(설명가능성 기법의 검증 범위 초과 과신)로 반영됨."
+     "result": "휴먼검수 의견의 유지·문안 수정 취지가 현행 G_SYS_TRANS_023(설명가능성 기법의 검증 범위 초과 과신)에 반영됨."
     }
    ],
    "references": [
@@ -15991,7 +15991,7 @@
     {
      "source_row_id": "SRC-G-0371",
      "comment": "(jay) [설명 수정] 그 결과 이후부터는 리스크가 확산되는 과정이라 설명에서 삭제하는 것이 더 적절할 것으로 생각함. | (jay) [분할] 의인화(원인)+Over-Extension(역량 과대평가)+Overconfidence(신뢰 오보정)+인간-AI 해로운 관계(과잉의존) 혼재되어 해당 L4를 분해 필요",
-     "result": "의견대로 의인화(G_INT_ANTH_007)·해로운 정서적 의존(G_INT_REL_002)·역량 과대사용(G_SYS_OEXT_013)·과신(G_SYS_OVERCONF_004)의 4축으로 분할됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_SYS_OEXT_013(AI 역량의 검증 범위 초과 사용)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-G-0235",
@@ -16192,7 +16192,7 @@
     {
      "source_row_id": "SRC-G-0371",
      "comment": "(jay) [설명 수정] 그 결과 이후부터는 리스크가 확산되는 과정이라 설명에서 삭제하는 것이 더 적절할 것으로 생각함. | (jay) [분할] 의인화(원인)+Over-Extension(역량 과대평가)+Overconfidence(신뢰 오보정)+인간-AI 해로운 관계(과잉의존) 혼재되어 해당 L4를 분해 필요",
-     "result": "의견대로 의인화(G_INT_ANTH_007)·해로운 정서적 의존(G_INT_REL_002)·역량 과대사용(G_SYS_OEXT_013)·과신(G_SYS_OVERCONF_004)의 4축으로 분할됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_SYS_OVERCONF_004(불확실 상황에서의 과도한 확신)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": [
@@ -16239,7 +16239,7 @@
     {
      "source_row_id": "SRC-G-0059",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_OVERCONF_005(분포 외 입력에 대한 고확신 오류)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_008(분포 외 입력에 대한 고확신 오류)에 최종 귀속함."
     }
    ],
    "references": [
@@ -17406,7 +17406,7 @@
     {
      "source_row_id": "SRC-G-0423",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_SECADV_027(이상 조건에서의 성능·견고성·복원력 실패)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_009(이상 조건에서의 성능·견고성·복원력 실패)에 최종 귀속함."
     }
    ],
    "references": []
@@ -17520,7 +17520,7 @@
     {
      "source_row_id": "SRC-G-0172",
      "comment": "(jay) [이관] Performance and Reliability Failure",
-     "result": "G_SYS_SECADV_031(복잡한 신경망 모델의 내재적 견고성 부족)로 이관됨(지정한 '성능·신뢰성 실패' L3 부재로 기존 L3에 배치)."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_SYS_PERF_010(복잡한 신경망 모델의 내재적 견고성 부족)에 최종 귀속함."
     }
    ],
    "references": []
@@ -17604,7 +17604,7 @@
     {
      "source_row_id": "SRC-G-0196",
      "comment": "(jay) [분할] 복합적. Security and Adversarial Robustness Failure + Deception and Scheming이 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 2개 카드(A_SYS_DECEPT_007(격리 통제 회피를 위한 기만적 행동)·G_SYS_SECADV_034(샌드박스 우회에 의한 격리 통제 상실))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 G_SYS_SECADV_034(샌드박스 우회에 의한 격리 통제 상실)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     }
    ],
    "references": []
@@ -19873,7 +19873,7 @@
     {
      "source_row_id": "SRC-P-0196",
      "comment": "General AI의 Illegal or Unethical Conduct로 이관",
-     "result": "무감독 권한(A_SYS_AUTH_009)과 불법행위 악용(G_INT_ILLEGAL_012)의 2축으로 분할되어 이관 취지가 반영됨."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 A_SYS_AUTH_009(무감독 AI 에이전트의 과도한 행위 권한)에 최종 귀속함."
     }
    ],
    "references": []
@@ -22173,7 +22173,7 @@
     {
      "source_row_id": "SRC-P-0205",
      "comment": "L3 인간-로봇 물리 안전 실패로 분류",
-     "result": "의견대로 P_INT_SAFETY_022(피지컬 AI 기반 직장 감시)로 이관됨."
+     "result": "이관 의견을 현행 L3 마스터와 후속 큐레이션 결과에 대조하여 G_INT_PRIV_030(피지컬 AI 기반 직장 감시)에 최종 귀속함."
     }
    ],
    "references": []
@@ -22341,7 +22341,7 @@
     {
      "source_row_id": "SRC-P-0034",
      "comment": "(유지)",
-     "result": "유지 의견대로 내용이 보존되어 P_SYS_CONTROL_004(자율 로봇의 물리적 침입·절도)로 존치됨."
+     "result": "휴먼검수 의견의 유지·문안 수정 취지가 현행 G_INT_ILLEGAL_023(자율 로봇의 물리적 침입·절도)에 반영됨."
     }
    ],
    "references": []
@@ -22912,7 +22912,7 @@
     {
      "source_row_id": "SRC-P-0152",
      "comment": "(유지) (jw) 너무 지엽적인 리스크로, 삭제 제안",
-     "result": "유지 의견에 따라 P_SYS_CONTROL_023(장면 변화 시 인간 행동 모방 실패)으로 존치됨."
+     "result": "유지와 삭제 제안을 함께 검토한 결과, 장면 변화에 따른 안전하지 않은 모방 제어라는 측정 가능한 기제가 있어 P_SYS_CONTROL_023(장면 변화 시 인간 행동 모방 실패)으로 유지함."
     }
    ],
    "references": []
@@ -23310,7 +23310,7 @@
     {
      "source_row_id": "SRC-P-0041",
      "comment": "(유지)",
-     "result": "유지 의견대로 내용이 보존되어 P_SYS_CONTROL_035(보조 로봇의 비동의 신체 개입)로 존치됨."
+     "result": "휴먼검수 의견의 유지·문안 수정 취지가 현행 P_INT_SAFETY_023(보조 로봇의 비동의 신체 개입)에 반영됨."
     }
    ],
    "references": []
@@ -23581,7 +23581,7 @@
     {
      "source_row_id": "SRC-P-0123",
      "comment": "(유지) (jw) l3와 무관하며 너무 지엽적인 리스크로, 삭제 제안",
-     "result": "P_SYS_CONTROL_042(런타임 안전 모니터 실패)로 L3 재배치되어 존치됨."
+     "result": "유지와 L3 부적합·삭제 제안을 함께 검토한 결과, 런타임 안전 모니터의 제약 감지·집행 실패는 안전하지 않은 물리 제어·구동과 직접 관련되므로 P_SYS_CONTROL_042(런타임 안전 모니터 실패)로 유지함."
     }
    ],
    "references": []
@@ -23623,7 +23623,7 @@
     {
      "source_row_id": "SRC-G-0014",
      "comment": "(유지) (jw) l3와 무관하며, general에 해당해보임",
-     "result": "P_SYS_CONTROL_043(안전-성능 균형 실패)으로 L3 재배치되어 존치됨."
+     "result": "유지와 General AI 이관 제안을 함께 검토한 결과, 충돌 회피와 물리적 안전 제약을 희생하는 로봇 조작 정책의 문제이므로 P_SYS_CONTROL_043(안전-성능 균형 실패)으로 유지함."
     },
     {
      "source_row_id": "SRC-P-0149",
@@ -23796,7 +23796,7 @@
     {
      "source_row_id": "SRC-P-0038",
      "comment": "(유지)",
-     "result": "유지 의견대로 내용이 보존되어 P_SYS_CONTROL_048(이동형 로봇 감시를 통한 일방적 작업장 통제)로 존치됨."
+     "result": "휴먼검수 의견의 유지·문안 수정 취지가 현행 G_INT_PRIV_031(이동형 로봇 감시를 통한 일방적 작업장 통제)에 반영됨."
     }
    ],
    "references": []
@@ -23880,7 +23880,7 @@
     {
      "source_row_id": "SRC-G-0068",
      "comment": "(jay) [분할] 복합적. 입력 이해 실패 + unsafe physical control 혼재되어 해당 L4를 분해 필요",
-     "result": "의견 취지대로 2개 카드(G_SYS_INPUT_004(물리 상식과 상황 입력의 오해)·P_SYS_CONTROL_051(잘못된 상황 해석에 따른 위험한 물리 구동))로 분할 반영됨."
+     "result": "휴먼검수에서 분리하도록 지적한 의미 중 현행 카드에 해당하는 축은 P_SYS_CONTROL_051(잘못된 상황 해석에 따른 위험한 물리 구동)에 반영됨. 후속 통합·분해·재배정으로 퇴역한 카드 ID는 현행 결과에서 제외함."
     },
     {
      "source_row_id": "SRC-P-0171",
