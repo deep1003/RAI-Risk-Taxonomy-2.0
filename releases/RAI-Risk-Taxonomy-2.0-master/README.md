@@ -1,6 +1,6 @@
 # RAI Risk Taxonomy 2.0 master release
 
-Current master: second-round human-review recovery (2026-08-29) followed by the independent line-by-line audit and corrections AC-01 to AC-12 (2026-08-30).
+Current master: second-round human-review recovery (2026-08-29) followed by the independent line-by-line audit and corrections through AC-17 (2026-08-31).
 
 - L3 master: 46 immutable source categories plus 3 derived Others queues
 - L4: 629 cards

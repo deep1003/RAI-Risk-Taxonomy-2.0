@@ -90,5 +90,7 @@
   "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
   "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
   "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
-  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)"
+  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)",
+  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; no L4 card or taxonomy content changed.",
+  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176."
 }

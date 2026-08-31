@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import shutil
+import zipfile
 from pathlib import Path
 
 import pandas as pd
@@ -18,6 +19,8 @@ PUBLIC_CARDS = ROOT / "public/data/releases/RAI-Risk-Taxonomy-2.0-master/cards.j
 HANDOVER_ROOT = ROOT / "handover/RAI-Risk-Taxonomy-2.0-master_20260829"
 HANDOVER_CARDS = HANDOVER_ROOT / "04_web/cards.json"
 RELEASE_VALIDATION = ROOT / "releases/RAI-Risk-Taxonomy-2.0-master/validation"
+PUBLIC_MANIFEST = ROOT / "public/data/releases/RAI-Risk-Taxonomy-2.0-master/manifest.json"
+HANDOVER_ZIP = ROOT / "handover/RAI-Risk-Taxonomy-2.0-master_20260829.zip"
 CSV_DIRS = (
     ROOT / "projects/rai_risk_taxonomy_2_0_rebuild_20260826/03_outputs/release",
     ROOT / "projects/rai_risk_taxonomy_2_0_rebuild_20260826/07_human_review_recovery_applied",
@@ -102,6 +105,15 @@ def refresh_checksums() -> int:
         for path in files
     ]
     checksum_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return len(files)
+
+
+def sync_public_manifest_and_handover_zip() -> int:
+    shutil.copy2(HANDOVER_ROOT / "04_web/public_manifest.json", PUBLIC_MANIFEST)
+    files = sorted(path for path in HANDOVER_ROOT.rglob("*") if path.is_file())
+    with zipfile.ZipFile(HANDOVER_ZIP, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+        for path in files:
+            archive.write(path, path.relative_to(HANDOVER_ROOT.parent))
     return len(files)
 
 
@@ -191,6 +203,7 @@ def main() -> None:
     csv_files = sync_full_csvs(payload)
     write_validation_report(payload, verified)
     checksum_files = refresh_checksums()
+    zip_files = sync_public_manifest_and_handover_zip()
 
     cards_with_references = sum(bool(card.get("references")) for card in payload["cards"])
     reference_entries = sum(len(card.get("references", [])) for card in payload["cards"])
@@ -199,6 +212,7 @@ def main() -> None:
     print(f"reference entries: {reference_entries}")
     print(f"full-column CSV files synchronized: {csv_files}")
     print(f"handover checksums refreshed: {checksum_files}")
+    print(f"public manifest synchronized and handover ZIP rebuilt: {zip_files} files")
 
 
 if __name__ == "__main__":
