@@ -295,7 +295,12 @@
      "result": "재검토 의견 취지대로 배분 결과(G_INT_ALLOC_007)와 표상 피해(G_INT_REPR_028)로 분리 배치되어 피해 유형이 명확해짐."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Kaur et al. 2024",
+     "url": "https://doi.org/10.1161/circheartfailure.123.010879"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -2909,7 +2914,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0031:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Menard et al. 2025",
+     "url": "https://doi.org/10.1111/isj.12544"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -4503,7 +4513,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0053:ORTHOGRAPHY | FQA-246:LANGUAGE_REFINEMENT:합성 데이터 생성·여과 실패·반복 재학습에 따른 증폭이라는 한글 정의의 위해 경로를 영문에 복원한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Yuan et al. 2025",
+     "url": "https://doi.org/10.1177/18344909251355673"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6292,7 +6307,12 @@
    "transformation_action": "통합 대표 · 문안 정비 · 동료 검토 · 한국어 교정 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0124:TERMINOLOGY_AND_SYNTAX | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Huang et al. 2025",
+     "url": "https://doi.org/10.1007/s43681-024-00624-1"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -6637,7 +6657,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 2차 휴먼검수 반영",
    "transformation_rationale": "Peer-review spacing restoration | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "de Fine Licht et al. 2025",
+     "url": "https://doi.org/10.1016/j.giq.2025.102033"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7596,7 +7621,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 용어·L3 최종 QA",
    "transformation_rationale": "Peer-review spacing restoration | FQA-239:LANGUAGE_REFINEMENT:명칭과 한글 정의의 핵심인 군사 AI 군비경쟁의 촉발·가속 의미를 영문 정의에 명시한다.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Haner et al. 2019",
+     "url": "https://doi.org/10.1111/1758-5899.12713"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -7936,6 +7966,10 @@
     {
      "label": "Risko & Gilbert 2016",
      "url": "https://doi.org/10.1016/j.tics.2016.07.002"
+    },
+    {
+     "label": "Chirayath et al. 2025",
+     "url": "https://doi.org/10.3389/fpsyg.2025.1699320"
     }
    ]
   },
@@ -8009,7 +8043,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · 한국어 교정 · 영어 교정 · 2차 휴먼검수 반영 · 휴먼검수 분할",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0113:ORTHOGRAPHY | EOC-0085:ENGLISH_ORTHOGRAPHY | Second-round human-review instruction applied without EM.",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Rettberg et al. 2025",
+     "url": "https://doi.org/10.12688/openreseurope.20576.1"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -10558,7 +10597,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0241:GRAMMAR_AND_ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Königs et al. 2022",
+     "url": "https://doi.org/10.1007/s10676-022-09643-0"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -11088,6 +11132,10 @@
     {
      "label": "Kwet (2019), Digital Colonialism: US Empire and the New Imperialism in the Global South, Race & Class",
      "url": "https://doi.org/10.1177/0306396818823172"
+    },
+    {
+     "label": "Ahmed et al. 2026",
+     "url": "https://doi.org/10.3389/feduc.2026.1720563"
     }
    ]
   },
@@ -12391,6 +12439,10 @@
     {
      "label": "French (1999), Catastrophic forgetting in connectionist networks, Trends in Cognitive Sciences",
      "url": "https://doi.org/10.1016/S1364-6613(99)01294-2"
+    },
+    {
+     "label": "Mondesire et al. 2023",
+     "url": "https://doi.org/10.3390/electronics12030706"
     }
    ]
   },
@@ -13007,7 +13059,12 @@
    "transformation_action": "문안 수정 · 문안 정비 · 동료 검토 · 한국어 교정 · 감사 시정 AC-02",
    "transformation_rationale": "Peer-review spacing restoration | KOC-0276:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Zhu et al. 2018",
+     "url": "https://doi.org/10.1145/3274463"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -15091,6 +15148,10 @@
     {
      "label": "Maynez et al., On Faithfulness and Factuality",
      "url": "https://arxiv.org/abs/2005.00661"
+    },
+    {
+     "label": "Papageorgiou et al. 2025",
+     "url": "https://doi.org/10.3390/bdcc9120309"
     }
    ]
   },
@@ -16590,6 +16651,10 @@
     {
      "label": "Goodfellow et al. (2015), Explaining and Harnessing Adversarial Examples, ICLR 2015",
      "url": "https://arxiv.org/abs/1412.6572"
+    },
+    {
+     "label": "Ruan et al. 2025",
+     "url": "https://doi.org/10.1109/jiot.2025.3558522"
     }
    ]
   },
@@ -17053,7 +17118,12 @@
      "result": "유지 의견대로 내용이 보존되어 G_SYS_SECADV_016(핵심 기반시설 로봇 시스템의 사이버 침해)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Riggs et al. 2023",
+     "url": "https://doi.org/10.3390/s23084060"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -17129,6 +17199,10 @@
     {
      "label": "Biggio et al. (2012), Poisoning Attacks against Support Vector Machines, ICML 2012",
      "url": "https://arxiv.org/abs/1206.6389"
+    },
+    {
+     "label": "Zhu et al. 2023",
+     "url": "https://doi.org/10.3390/s23094509"
     }
    ]
   },
@@ -17766,6 +17840,10 @@
     {
      "label": "Greshake et al. (2023), Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection, ACM AISec 2023",
      "url": "https://arxiv.org/abs/2302.12173"
+    },
+    {
+     "label": "Gulyamov et al. 2026",
+     "url": "https://doi.org/10.3390/info17010054"
     }
    ]
   },
@@ -18644,6 +18722,10 @@
     {
      "label": "European Parliament and Council (2024), Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 50(2) and (4)",
      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    },
+    {
+     "label": "Li et al. 2025",
+     "url": "https://doi.org/10.1177/27523543251317572"
     }
    ]
   },
@@ -18878,7 +18960,12 @@
      "result": "통합 검토 결과 상이한 메커니즘으로 판단되어 A_INT_CASCADE_003(혼돈적 다중 에이전트 동역학)으로 별도 존치되고 정의가 차별화됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Bloembergen et al. 2015",
+     "url": "https://doi.org/10.1613/jair.4818"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -20931,7 +21018,12 @@
    "transformation_action": "문안 정비 · 동료 검토 · L3 정합 검토 · 한국어 교정",
    "transformation_rationale": "Bilingual definition grounded in an explicit AI technology, causal mechanism, and immutable L3 scope | KOC-0429:ORTHOGRAPHY",
    "human_reviews": [],
-   "references": []
+   "references": [
+    {
+     "label": "Thananjeyan et al. 2021",
+     "url": "https://doi.org/10.1109/lra.2021.3070252"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -22789,7 +22881,12 @@
      "result": "유지 의견대로 내용이 보존되어 P_SYS_CONTROL_019(금지 대상 충돌)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Brunn et al. 1996",
+     "url": "https://doi.org/10.1108/01439919610108828"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -23056,7 +23153,12 @@
      "result": "의견대로 P_SYS_CONTROL_026(휴머노이드 보행·조작 안정성 실패)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Ji et al. 2025",
+     "url": "https://doi.org/10.1016/j.birob.2025.100213"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -23140,7 +23242,12 @@
      "result": "의견대로 P_SYS_CONTROL_030(부상 심각도 오분류)로 이관됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Rezapour et al. 2021",
+     "url": "https://doi.org/10.1016/j.iatssr.2020.07.004"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",
@@ -24538,7 +24645,12 @@
      "result": "유지 의견대로 내용이 보존되어 P_SYS_STATE_009(가림에 의한 충돌)로 존치됨."
     }
    ],
-   "references": []
+   "references": [
+    {
+     "label": "Lim et al. 2020",
+     "url": "https://doi.org/10.1109/tmech.2020.2975573"
+    }
+   ]
   },
   {
    "release_id": "RAI-Risk-Taxonomy-2.0-master",

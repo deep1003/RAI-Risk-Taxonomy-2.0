@@ -257,5 +257,6 @@
   "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)",
   "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)",
   "audit_correction_20260830_ac15": "AC-15: synchronized the 50-node hierarchy, current artifact row counts and SHA-256 hashes, public manifest, active handover checksums, and master-site regression tests.",
-  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; original comments, taxonomy content, mappings, lineage, and the 629-card count were unchanged."
+  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; original comments, taxonomy content, mappings, lineage, and the 629-card count were unchanged.",
+  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176."
 }

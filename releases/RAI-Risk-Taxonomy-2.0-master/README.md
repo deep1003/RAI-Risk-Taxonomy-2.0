@@ -6,7 +6,7 @@ Current master: second-round human-review recovery (2026-08-29) followed by the 
 - L4: 629 cards
 - General / Agentic / Physical: 487 / 65 / 77
 - Retained mapping labels: EM 334 / HD 295
-- Cards with a verified literature reference: 160
+- Cards with a verified literature reference: 176
 - Every L3 holds at least 3 cards; no L3 is empty
 - Final Others assignments: 0
 - Deterministic recovery validation: 5 recorded checks, 5 PASS, 0 FAIL
