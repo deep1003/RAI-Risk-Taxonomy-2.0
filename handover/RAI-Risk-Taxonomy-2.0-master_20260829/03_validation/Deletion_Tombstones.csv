@@ -18,3 +18,9 @@ HR2-0668,SRC-G-0120,A_SYS_GOAL_008,목표 드리프트,ALREADY_DELETED_BY_EXPLIC
 HR2-0796,SRC-P-0128,P_SYS_STATE_001,악천후 인지 실패,ALREADY_DELETED_BY_EXPLICIT_HUMAN_REVIEW
 HR2-0244,SRC-G-0489,G_SYS_EVAL_020,생성형 AI의 성능 미달에 따른 사용자 생산성 저하,"AC-07 MECE 큐레이션에서 리뷰어 2인 합의로 제거. 생산성 저하는 독립 위해 기제가 아닌 성능 미달의 파생 결과이며, 평가 실패 축은 G_SYS_EVAL의 다른 카드가 포괄."
 HR2-0504,SRC-G-0352,G_SYS_MISINFO_005,악성 사전분포에 의한 의사결정 조작,AC-07 MECE 큐레이션에서 리뷰어 2인 합의로 제거. 사전분포 조작은 학습 데이터 오염·조작 축의 하위 기제로 기존 카드에 포괄되며 독립 축을 이루지 못함.
+HR3-0001,SRC-P-0035,P_INT_SAFETY_002,아동의 과신·모방에 따른 위험한 로봇 상호작용,Reviewer-directed deletion because the child-specific scenario is overly narrow. Original third-round comment: [수정] 지엽적이므로 삭제할것
+HR3-0002,SRC-G-0166;SRC-G-0168,P_SYS_CONTROL_014,원자력 및 핵심 인프라에 대한 AI 제어 오류,Reviewer-directed deletion because the nuclear and critical-infrastructure scenario is overly narrow. Original third-round comment: [수정] 지엽적이므로 삭제
+HR3-0003,SRC-P-0044; SRC-P-0032,P_SYS_CONTROL_036,온디바이스 연산·메모리 고갈,Reviewer-directed deletion. Original third-round comment: 삭제
+HR3-0004,SRC-P-0014,P_SYS_CONTROL_039,조기 물체 해제,Reviewer-directed deletion because premature object release is overly narrow. Original third-round comment: [수정] 지엽적이므로 삭제
+HR3-0005,SRC-P-0139; SRC-P-0001,P_SYS_STATE_001,장기 계획에서 월드 모델의 상태 예측 오차 누적,Reviewer-directed deletion because the long-horizon world-model scenario is overly narrow. Original third-round comment: [수정] 지엽적이므로 삭제
+HR3-0006,SRC-P-0011,P_SYS_STATE_005,분포 이탈 입력에서의 월드 모델 오출력 악용,Reviewer-directed deletion because the sim-to-real adversarial scenario is overly narrow. Original third-round comment: [수정] 지엽적이므로 삭제

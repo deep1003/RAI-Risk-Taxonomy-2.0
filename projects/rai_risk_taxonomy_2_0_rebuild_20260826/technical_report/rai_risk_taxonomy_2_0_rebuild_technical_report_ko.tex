@@ -2,11 +2,22 @@
 \usepackage[margin=22mm]{geometry}\usepackage{fontspec}\usepackage{graphicx}\usepackage{booktabs}\usepackage{xcolor}\usepackage{hyperref}\usepackage{longtable}\usepackage{array}\usepackage{fancyhdr}\usepackage{titling}\setlength{\droptitle}{8mm}
 \setmainfont{Noto Sans CJK KR}\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}\pagestyle{fancy}\fancyhf{}\rhead{RAI Risk Taxonomy 2.0}\lhead{Audited Master Release}\cfoot{\thepage}\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
-\title{RAI Risk Taxonomy 2.0\\검수 완료 마스터 릴리스 기술보고서}\author{Human-review recovery and independent audit release}\date{2026년 8월 29일}\maketitle
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{42mm}
+\begin{center}
+{\LARGE RAI Risk Taxonomy 2.0\\[3pt]검수 완료 마스터 릴리스 기술보고서}\par
+\vspace{9mm}
+{\large Human-review recovery and independent audit release}\par
+\vspace{6mm}
+{\large 2026년 9월 1일}\par
+\vspace{9mm}
+\end{center}
+\end{titlepage}
 \par\section*{요약}
-본 보고서는 두 단계의 작업을 기록한다. 첫째, 798개 기준선 L4 카드에 2차 휴먼 검수 지시(808행 등록부, 검토의견 251건)를 행 단위로 재적용하여 777장의 복구 릴리스를 산출했다. 둘째, 이 릴리스에 대해 독립 검수 파이프라인(AC-01~AC-08)을 적용했다. 검수는 리뷰어 에이전트 2인의 독립 전수 판정과 합의제(교집합만 적용)로 수행했으며, 하드 원칙 위반 시정, 의미 중복 흡수, 전체 L3의 MECE 큐레이션(중복·귀속력), 복합 카드 분해, 미달 L3의 문헌 근거 보강을 포함한다. 이번 단계에서도 EM 또는 Hybrid EM은 재실행하지 않았다. \textbf{최종 결과는 L4 카드 629장이며 General 487, Agentic 65, Physical 77이다. 46개 L3 전부가 3장 이상의 L4를 보유하고 Others 배정은 0건이다.}
+본 보고서는 세 단계의 작업을 기록한다. 첫째, 798개 기준선 L4 카드에 2차 휴먼 검수 지시(808행 등록부, 검토의견 251건)를 행 단위로 재적용하여 777장의 복구 릴리스를 산출했다. 둘째, 독립 검수 파이프라인 AC-01부터 AC-17까지를 적용하여 629장의 검수 마스터를 산출했다. 셋째, KTSPACE 3차 검수의 629행을 수정 전에 모두 읽고, 비어 있지 않은 검토의견 30건을 재배치·정의 수정 19건, 삭제 6건, 동일 L3 내 범위 일반화 5건으로 해석·적용했다. 모호한 사례는 전문 리뷰어 2인이 독립 검토하고 제3자가 최종 판정했다. 어떤 단계에서도 EM 또는 Hybrid EM을 재실행하지 않았다. \textbf{최종 결과는 L4 카드 623장이며 General 492, Agentic 66, Physical 65이다. 47개 실질 L3는 모두 카드를 보유하고, 3개 Others 배정은 0건이며, 50행 L3 마스터는 3차 검수 전과 바이트 단위로 동일하다.}
 \par\section{복구 원칙}
-기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. L3는 신설하거나 수정하지 않았으며 SHA-256 해시를 고정했다. 휴먼검토의견 251건의 반영 충실성은 별도 검토에서 반영 246, 부분반영 3, 미반영 2로 판정되었고, 각 카드에 검토의견 원문과 반영 결과를 기재했다.
+기준 커밋의 유효한 편집과 사용자 승인 통합은 보존했다. 2차 검수 원문의 삭제, 통합, 분리, 재배정, 정의 수정 지시만 source\_row\_id 계보를 통해 적용했다. 복구 단계에서는 L3 마스터를 보존했으나, 이후 AC-14에서 명시적으로 승인된 G\_SYS\_PERF 카테고리만 신설하고 마스터 해시를 갱신했다. 휴먼검토의견 251건의 반영 충실성은 별도 검토에서 반영 246, 부분반영 3, 미반영 2로 판정되었고, 각 카드에 검토의견 원문과 반영 결과를 기재했다.
 \par\section{적용 결과}
 \begin{table}[h]\centering\begin{tabular}{lr}\toprule 조치 & 검수행 수\\\midrule 재배정 & 80\\정의 수정 후 유지 & 39\\분리 & 19\\통합 & 14\\삭제 & 14\\\bottomrule\end{tabular}\caption{승인된 166건의 휴먼 검수 조치(복구 단계)}\end{table}
 \begin{figure}[h]\centering\includegraphics[width=.82\linewidth]{../figures/human_review_recovery_domain_counts.png}\caption{도메인별 최종 L4 카드 수}\end{figure}
@@ -22,8 +33,13 @@ AC-06 & 미달 L3 문헌 근거 보강 2장, 거버넌스·조작 계열 합의 
 AC-07 & 전체 L3 MECE 큐레이션: 흡수 64, 귀속 이관 18, 제거 2 & 711$\to$645\\
 AC-08 & 합의 복합 카드 18장 분해(17장 조각 귀속 후 폐기, 위기 대응 실패 카드 신설) & 645$\to$629\\
 \bottomrule\end{tabular}\caption{감사 시정 요약}\end{table}
+2차 휴먼 검수는 "부족한 성능·역량"을 다루는 신규 L3의 생성을 명시적으로 요청했다(2건의 신규 L3 요청과 17건의 이관 지시). 이 요청은 L3 마스터 불변 원칙과 충돌하여 보류되어 있었으나, 사용자 승인에 따라 AC-14에서 \textbf{성능·신뢰성 실패(Performance and Reliability Failure)} 카테고리를 신설하고 리뷰어 2인 합의로 10장을 이관했다. L3 마스터는 47개 마스터 범주와 3개 Others로 구성되며, 마스터 해시는 이에 따라 갱신되었다.
 \begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{../figures/audit_corrections_trajectory.png}\caption{감사 시정에 따른 카드 수 변화}\end{figure}
 신설·수정 카드는 검증된 문헌 출처를 References로 보유한다(XSTest, OR-Bench, AgentHarm, Cao et al. CCS 2019, NIST SP 800-82r3, NIST SP 800-193, Sclar et al. ICLR 2024, Huang et al. ICLR 2024, Moore et al. FAccT 2025). 자해·자살 계열은 준비, 실행, 조장, 위기 대응 실패의 네 축으로 분리 유지된다.
+\par\section{3차 휴먼 검수(AC-18)}
+3개 원천 표는 General 487행, Agentic 65행, Physical 77행으로 총 629행이다. General 13행과 Physical 17행에 검토의견이 있었고 Agentic의 검토의견 셀은 모두 비어 있었다. 의견이 없는 599행은 내부 전체 컬럼 마스터에서 바이트 단위로 유지했다. 의견이 있는 30행은 수정 전에 현재 카드 의미와 변경되지 않은 L3 마스터에 대조하여 의도를 해석했다.
+\begin{table}[h]\centering\begin{tabular}{lr}\toprule 3차 검수 조치 & 카드 수\\\midrule 재배치 및 정의 수정 & 19\\삭제 & 6\\동일 L3 내 범위 일반화 & 5\\통합 & 0\\분할 & 0\\신규 L4 또는 L3 & 0\\\bottomrule\end{tabular}\caption{3차 휴먼 검수 조치}\end{table}
+전문 리뷰어 2인은 명시적 삭제와 대상 카테고리를 독립적으로 판정하고 모호한 사례를 별도로 검토했다. 최종 판정자는 \texttt{G\_INT\_SELF\_006}을 \texttt{G\_SYS\_CONTEXT}로 이동했다. 이는 원문의 맥락 부적합 콘텐츠 기제를 보존하면서 근거 없는 악의적 조작 의도를 추가하지 않기 위한 결정이다. \texttt{P\_INT\_SAFETY\_007}은 통합 지시가 없으므로 범위만 일반화하고 독립 카드로 유지했다. 두 리뷰어는 \texttt{P\_INT\_SAFETY\_004}가 Physical Safety와 충돌하며 \texttt{G\_INT\_UNETH}에 속한다는 데 합의했다. Physical에서 General로 이동한 모든 카드는 물리적 기제와 결과를 명칭·정의에 보존했다. 기존·신규 ID 대응과 삭제 6건은 3차 검수 결정 원장에 기록했다.
 \par\section{배포 구성}
-최종 배포는 L1 CSV 1개, L1/L2/L3 CSV 1개, General, Agentic, Physical L4 CSV 3개로 구성한다. 공개 CSV는 계층 정의(한·영), facet, act-type, 휴먼 검토의견 원문·반영 결과, References의 28개 컬럼이며, 스코어링·키워드 컬럼을 포함한 전체 컬럼 원본은 핸드오버 패키지와 아카이브에 보관한다. 검증 폴더에는 808행 지시 등록부, 계보 간선, 삭제 기록, 통합·분해·큐레이션 로그와 감사 시정 로그(Audit\_Correction\_Log)를 보존한다. 카드 상세의 Mapping provenance에는 한국어 라벨과 휴먼 리뷰·반영 결과, References 링크가 표시된다.
+최종 배포는 L1 CSV 1개, L1/L2/L3 CSV 1개, General, Agentic, Physical L4 CSV 3개로 구성한다. 공개 L4 CSV는 계층 정의(한·영), facet, act-type의 25개 컬럼을 제공한다. 내부 전체 컬럼 원본은 휴먼 검토의견, 반영 결과, 계보, References와 역사적 스코어 필드를 보존하며 웹사이트에는 어떤 스코어도 표시하지 않는다. 검증 폴더에는 629행 3차 검수 결정 원장, 30행 적용 로그, 검증 기록, 방법론 문서, 기존·신규 ID 대응표, 삭제 기록, 이전 검수 등록부와 감사 시정 로그를 보존한다.
 \end{document}

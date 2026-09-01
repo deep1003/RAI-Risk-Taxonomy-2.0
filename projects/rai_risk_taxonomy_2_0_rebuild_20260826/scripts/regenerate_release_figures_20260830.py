@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the release figure set and the domain table on the 629-card basis.
+"""Regenerate the release figure set and the domain table on the 623-card basis.
 
 Every figure is derived from the released artifacts only:
   - handover/.../01_data/L4_*.csv        (full-column card data)
@@ -35,7 +35,7 @@ DOMAINS = ['General AI', 'Agentic AI', 'Physical AI']
 SHORT = ['General', 'Agentic', 'Physical']
 DCOL = {'General AI': NATURE_COLORS[0], 'Agentic AI': NATURE_COLORS[1], 'Physical AI': NATURE_COLORS[2]}
 
-# Figures that cannot be rebuilt truthfully on the 629 basis.
+# Figures that cannot be rebuilt truthfully on the current basis.
 RETIRE = {
     'em_quality_diagnostics.png': 'EM score, margin and stability distributions; the score columns were removed by AC-04/AC-10 and EM must not be rerun.',
     'em_baseline_comparison.png': 'Pre-keyword baseline versus keyword-augmented EM outcomes; a pipeline-history comparison that no longer describes the released set.',
@@ -87,7 +87,7 @@ def main():
     final = [sum(1 for c in cards if c['_domain'] == d) for d in DOMAINS]
     source = [s['source_counts'][d.replace(' AI', '')] for d in DOMAINS]
     total = sum(final)
-    assert total == s['final_total'] == 629, (total, s['final_total'])
+    assert total == s['final_total'] == 623, (total, s['final_total'])
 
     # 1. Domain counts, previous release versus current release ---------------
     fig, ax = plt.subplots(figsize=(W2, W2 * 0.42))
@@ -200,7 +200,7 @@ def main():
 
     # 6. Consolidation volume per audit correction ----------------------------
     traj = {a['step']: a['cards'] for a in manifest['audit_corrections']['card_count_trajectory']}
-    order = ['AC-01', 'AC-02', 'AC-05', 'AC-06', 'AC-07', 'AC-08']
+    order = ['AC-01', 'AC-02', 'AC-05', 'AC-06', 'AC-07', 'AC-08', 'AC-18']
     prev = traj['round2_pipeline']; deltas = []
     for k in order:
         deltas.append(traj[k] - prev); prev = traj[k]
@@ -249,7 +249,7 @@ def main():
     (ARCH / 'README.md').write_text(
         '# Retired figures (pre-audit)\n\n'
         'These figures describe the pipeline before the line-by-line audit and cannot be '
-        'rebuilt on the 629-card basis. Each depends on EM or Hybrid EM scores, on similarity '
+        'rebuilt on the current 623-card basis. Each depends on EM or Hybrid EM scores, on similarity '
         'scores, or on mapping score status. Those columns were removed from the release by '
         'AC-04 and AC-10, publishing score status was withdrawn by AC-12, and rerunning EM is '
         'not permitted. They are kept here as a record of the earlier rounds.\n\n'

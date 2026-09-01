@@ -1,0 +1,88 @@
+{
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "review_round": "human_review_round3",
+  "date": "2026-09-01",
+  "method": "Deterministic semantic interpretation and application of human-review comments; no EM or Hybrid EM",
+  "source_rows": 629,
+  "commented_rows": 30,
+  "uncommented_rows": 599,
+  "actions": {
+    "MOVE_REWRITE": 19,
+    "DELETE": 6,
+    "RENAME_REWRITE": 5,
+    "MERGE": 0,
+    "SPLIT": 0,
+    "NEW_L4": 0,
+    "NEW_L3": 0
+  },
+  "counts": {
+    "General": 492,
+    "Agentic": 66,
+    "Physical": 65,
+    "total": 623
+  },
+  "mapping_method_counts": {
+    "General": {
+      "EM": 250,
+      "HD": 242
+    },
+    "Agentic": {
+      "HD": 30,
+      "EM": 36
+    },
+    "Physical": {
+      "EM": 35,
+      "HD": 30
+    }
+  },
+  "id_crosswalk": {
+    "G_INT_ALLOC_017": "G_SYS_CONTEXT_012",
+    "G_INT_SELF_006": "G_SYS_CONTEXT_013",
+    "G_INT_UNETH_013": "G_INT_VIOL_012",
+    "G_INT_VALUE_001": "G_SOC_GOV_043",
+    "G_INT_VALUE_008": "G_INT_UNETH_032",
+    "G_SOC_GOV_012": "A_SYS_DECEPT_009",
+    "G_SYS_EVAL_051": "G_SYS_PERF_011",
+    "G_SYS_EVAL_053": "G_SYS_PERF_012",
+    "G_SYS_OEXT_002": "G_SOC_CULT_024",
+    "G_SYS_OEXT_003": "G_SYS_EVAL_075",
+    "G_SYS_OEXT_004": "G_SYS_PERF_013",
+    "G_SYS_OEXT_005": "G_SYS_PERF_014",
+    "G_SYS_TRANS_013": "G_SYS_OEXT_014",
+    "P_INT_SAFETY_001": "P_INT_SAFETY_001",
+    "P_INT_SAFETY_004": "G_INT_UNETH_033",
+    "P_INT_SAFETY_007": "P_INT_SAFETY_007",
+    "P_INT_SAFETY_011": "P_INT_SAFETY_011",
+    "P_INT_SAFETY_014": "G_SYS_EVAL_076",
+    "P_INT_SAFETY_019": "G_SYS_PERF_015",
+    "P_INT_SAFETY_023": "P_INT_SAFETY_023",
+    "P_SYS_CONTROL_020": "G_SYS_SECADV_060",
+    "P_SYS_CONTROL_032": "G_SYS_EVAL_077",
+    "P_SYS_STATE_004": "P_SYS_STATE_004",
+    "P_SYS_STATE_010": "G_SYS_PERF_016"
+  },
+  "deleted_ids": [
+    "P_INT_SAFETY_002",
+    "P_SYS_CONTROL_014",
+    "P_SYS_CONTROL_036",
+    "P_SYS_CONTROL_039",
+    "P_SYS_STATE_001",
+    "P_SYS_STATE_005"
+  ],
+  "l3_master_rows": 50,
+  "l3_master_sha256_before": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "l3_master_sha256_after": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "l3_master_unchanged": true,
+  "duplicate_final_l4_ids": 0,
+  "others_assignments": 0,
+  "reviewers": [
+    "Independent expert reviewer A",
+    "Independent expert reviewer B"
+  ],
+  "adjudication": {
+    "G_INT_SELF_006": "G_SYS_CONTEXT selected to preserve the source mechanism without inventing manipulative intent.",
+    "P_INT_SAFETY_007": "Retained as a distinct generalised card because no merge was explicitly requested.",
+    "P_INT_SAFETY_004": "Moved to G_INT_UNETH by two-reviewer consensus and L3-master precedence."
+  },
+  "status": "PASS"
+}

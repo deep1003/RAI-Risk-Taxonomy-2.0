@@ -92,7 +92,7 @@ class SiteV2Tests(unittest.TestCase):
         self.assertIn("전체 AI 리스크 분류 현황", page)
         self.assertNotIn("글로벌 AI 리스크 분류 현황", page)
         self.assertNotIn("coverage-note", page)
-        for level, count in (("l1", "3"), ("l2", "3"), ("l3", "49"), ("l4", "808")):
+        for level, count in (("l1", "3"), ("l2", "3"), ("l3", "50"), ("l4", "623")):
             self.assertIn(f'id="stat-{level}">{count}', page)
 
     def test_domain_navigation_uses_links_without_counts(self) -> None:

@@ -127,7 +127,7 @@ class V218SynchronizationTest(unittest.TestCase):
             / "reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex"
         ).read_text(encoding="utf-8")
         self.assertIn("REVIEWED MASTER RELEASE", index)
-        self.assertIn("808 final L4 cards", index)
+        self.assertIn("623 final L4 cards", index)
         self.assertIn('public/data/releases/RAI-Risk-Taxonomy-2.0-master', site_js)
         self.assertIn('public/data/releases/v2.18.0-rc', space_js)
         self.assertIn("release candidate v2.18.0-rc", report)

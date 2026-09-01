@@ -1,6 +1,6 @@
 # Retired figures (pre-audit)
 
-These figures describe the pipeline before the line-by-line audit and cannot be rebuilt on the 629-card basis. Each depends on EM or Hybrid EM scores, on similarity scores, or on mapping score status. Those columns were removed from the release by AC-04 and AC-10, publishing score status was withdrawn by AC-12, and rerunning EM is not permitted. They are kept here as a record of the earlier rounds.
+These figures describe the pipeline before the line-by-line audit and cannot be rebuilt on the current 623-card basis. Each depends on EM or Hybrid EM scores, on similarity scores, or on mapping score status. Those columns were removed from the release by AC-04 and AC-10, publishing score status was withdrawn by AC-12, and rerunning EM is not permitted. They are kept here as a record of the earlier rounds.
 
 - `em_quality_diagnostics.png` — EM score, margin and stability distributions; the score columns were removed by AC-04/AC-10 and EM must not be rerun.
 - `em_baseline_comparison.png` — Pre-keyword baseline versus keyword-augmented EM outcomes; a pipeline-history comparison that no longer describes the released set.

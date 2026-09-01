@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ID = "RAI-Risk-Taxonomy-2.0-master"
+REVIEW_SNAPSHOT_ID = "human-review-round3-20260901"
 SOURCE = ROOT / "releases" / RELEASE_ID
 DATA = SOURCE / "data"
 FULL_DATA = ROOT / "handover" / "RAI-Risk-Taxonomy-2.0-master_20260829" / "01_data"
@@ -49,6 +50,10 @@ def update_static_html(counts: dict[str, int], validation: dict[str, int | str])
     html = index_path.read_text(encoding="utf-8")
     html = re.sub(r"explore \d+ bilingual L4", f"explore {counts['l4']} bilingual L4", html)
     html = re.sub(r"Master · \d+ L4 Risks", f"Master · {counts['l4']} L4 Risks", html)
+    html = re.sub(r"REVIEWED MASTER RELEASE · \d{4}-\d{2}-\d{2}", "REVIEWED MASTER RELEASE · 2026-09-01", html)
+    html = re.sub(r'assets/site\.css\?v=[^"\']+', "assets/site.css?v=master-20260901-ac18", html)
+    html = re.sub(r'assets/site\.js\?v=[^"\']+', "assets/site.js?v=master-20260901-ac18", html)
+    html = html.replace("<strong>2차 휴먼검수 라운드</strong>", "<strong>3차 휴먼검수 반영</strong>")
     html = re.sub(
         r'(<strong id="stat-l4">)\d+(</strong><small>).*?(</small>)',
         rf"\g<1>{counts['l4']}\g<2>{counts['em']} retained EM labels · {counts['hd']} retained HD decisions\g<3>",
@@ -196,35 +201,8 @@ def main() -> None:
     ]
     if mismatched:
         raise ValueError(f"Full/public core fields differ for {len(mismatched)} cards")
-    previous_cards_path = OUT / "cards.json"
-    previous_cards = {}
-    if previous_cards_path.is_file():
-        previous_cards = {
-            card["l4_id"]: card
-            for card in json.loads(previous_cards_path.read_text(encoding="utf-8"))["cards"]
-        }
-    if set(previous_cards) != set(full_by_id):
-        raise ValueError("Existing public card bundle and canonical CSV card IDs differ")
-    cards = [previous_cards[row["L4_ID"]] for row in card_rows]
-    card_core_fields = {
-        "label_ko": "L4_Title_ko",
-        "label_en": "L4_Title_en",
-        "definition_ko": "L4_Description_ko",
-        "definition_en": "L4_Description_en",
-        "primary_l3_id": "L3_ID",
-        "mapping_method": "Mapping_Method",
-    }
-    card_mismatches = [
-        row["L4_ID"]
-        for row, card in zip(card_rows, cards, strict=True)
-        if any(card.get(card_field) != row[csv_field] for card_field, csv_field in card_core_fields.items())
-    ]
-    if card_mismatches:
-        raise ValueError(f"Public card bundle differs from canonical CSVs for {len(card_mismatches)} cards")
-    snapshot_ids = {card["review_snapshot_id"] for card in cards}
-    if len(snapshot_ids) != 1:
-        raise ValueError("Public cards do not share one review snapshot ID")
-    review_snapshot_id = snapshot_ids.pop()
+    review_snapshot_id = REVIEW_SNAPSHOT_ID
+    cards = [site_card(row, review_snapshot_id) for row in card_rows]
     nodes = hierarchy_nodes(hierarchy_rows)
 
     domain_counts = Counter(row["L1_ID"] for row in card_rows)
@@ -243,7 +221,7 @@ def main() -> None:
     manifest = {
         "release_id": RELEASE_ID,
         "release_status": "master",
-        "created_at": "2026-08-29T00:00:00+09:00",
+        "created_at": "2026-09-01T00:00:00+09:00",
         "counts": {
             "l0": 1,
             "l1": len({row["L1_ID"] for row in hierarchy_rows}),
@@ -272,16 +250,16 @@ def main() -> None:
             "final_total": source_summary["cleaned_total"],
         },
         "method": {
-            "algorithm": "Deterministic application of second-round human review over the previous constrained-EM release",
+            "algorithm": "Deterministic semantic interpretation and application of third-round human-review comments over the reviewed master release",
             "em_or_hybrid_em_executed_in_this_round": False,
             "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
-            "boundary_policy": "Apply approved human-review dispositions and require zero final Others assignments",
-            "l1_routing_policy": "Apply explicit human-review routing decisions and preserve the reviewed hierarchy",
+            "boundary_policy": "Apply every non-empty third-round human-review comment and require zero final Others assignments",
+            "l1_routing_policy": "Apply explicit human-review routing decisions and preserve Physical AI mechanisms and consequences when cards move to General AI",
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
             "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
-            "semantic_deduplication_policy": "Ten user-approved consolidation clusters retired 13 non-representative cards; a subsequent mechanism-level review split ten compound cards, retired two umbrella cards, and created seven distinct cards while preserving source lineage",
-            "scope_granularity_policy": "Eight user-approved scope and granularity cases retired seven overbroad or example-specific cards, created one independently measurable reproducibility card, and narrowed one physical-safety card",
+            "semantic_deduplication_policy": "No merge was performed in round 3 because no third-round comment explicitly authorised one",
+            "scope_granularity_policy": "Round 3 applied six explicit deletions and five same-L3 scope generalisations without creating a new L4 or L3",
         },
         "human_review": {
             "review_snapshot_id": review_snapshot_id,
@@ -290,7 +268,7 @@ def main() -> None:
             "daily_aggregation": True,
             "automatic_reassignment": False,
             "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
-            "application_policy": "Only after an explicit user instruction to analyse and apply review logs",
+            "application_policy": "All 629 review rows were read; the 30 non-empty comments were interpreted and applied under the user's explicit instruction, with two independent expert reviews for ambiguous cases",
         },
         "score_status_counts": dict(score_status_counts),
         "validation": {"status": "PASS", "passed": source_summary["validation_passed"],
@@ -312,9 +290,7 @@ def main() -> None:
         ],
     }
     write_json(OUT / "hierarchy.json", hierarchy)
-    # The reviewed card bundle is authoritative here. Rebuilding it from the
-    # reduced public CSVs would discard review/reference fields and create
-    # release-wide formatting churn; validate it above and leave its bytes intact.
+    write_json(OUT / "cards.json", {"release_id": RELEASE_ID, "cards": cards})
     write_json(OUT / "manifest.json", manifest)
     write_json(
         ROOT / "data" / "current.json",

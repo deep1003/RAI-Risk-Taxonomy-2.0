@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "passed": 5,
+  "passed": 10,
   "failed": 0,
   "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
   "checks": [
@@ -20,16 +20,51 @@
       "evidence": 0
     },
     {
-      "check": "Deterministic Replay",
+      "check": "Round3 Source Coverage",
       "status": "PASS",
-      "evidence": "Two clean executions produced identical L4 SHA-256 hashes."
+      "evidence": {
+        "ledger_rows": 629,
+        "commented_rows": 30
+      }
     },
     {
-      "check": "Others Elimination",
+      "check": "Round3 Action Reconciliation",
       "status": "PASS",
-      "evidence": "0 final L4 cards assigned to Others."
+      "evidence": {
+        "MOVE_REWRITE": 19,
+        "RENAME_REWRITE": 5,
+        "DELETE": 6
+      }
+    },
+    {
+      "check": "Deleted Cards Absent",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "Public Full Core Match",
+      "status": "PASS",
+      "evidence": 623
+    },
+    {
+      "check": "L3 Master Unchanged",
+      "status": "PASS",
+      "evidence": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54"
+    },
+    {
+      "check": "Final Card Counts",
+      "status": "PASS",
+      "evidence": {
+        "L1_G": 492,
+        "L1_A": 66,
+        "L1_P": 65
+      }
+    },
+    {
+      "check": "No Unauthorised New Category",
+      "status": "PASS",
+      "evidence": 50
     }
   ],
-  "audit_correction_20260829": "QA snapshot predates the line-by-line audit. Corrections AC-01 to AC-12 were applied afterwards and the release now holds 629 cards (General 487 / Agentic 65 / Physical 77). Each correction was re-verified after application; see Audit_Correction_Log.csv.",
-  "recorded_checks_note": "The passed and failed counters were previously the literal 10 written by build_human_review_recovery_release.py and matched neither the recorded checks nor the validator. They now equal the checks recorded here. validate_human_review_recovery.py evaluates fifteen check categories, but it collects them in a defaultdict, so only categories that were touched during the run are serialised: three of them, plus two appended by the release builder, gives the five below. Every category the validator evaluated passed. The current release is covered by the separate line-by-line audit recorded in Audit_Correction_Log.csv."
+  "round3_note": "All 629 review rows were read. The 30 non-empty comments were applied without EM: 19 reassignments, 6 deletions, and 5 same-L3 generalisations. No merge, split, new L4, or new L3 was introduced."
 }
