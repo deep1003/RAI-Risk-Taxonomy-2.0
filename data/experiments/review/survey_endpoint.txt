@@ -1,1 +1,1 @@
-PASTE_APPS_SCRIPT_EXEC_URL_HERE
+https://script.google.com/macros/s/AKfycbz50rPxsK-s-zYzeZrH-5CGou10RDdXajHUqML__KE8Wf0zfzSoukGhaVDl9Rd41Yce/exec
