@@ -132,6 +132,17 @@ function prog(){
   document.getElementById('ptxt').textContent=d+' / '+n;
   document.getElementById('pfill').style.width=(n?100*d/n:0)+'%';
 }
+function resetSurvey(rater){
+  try{localStorage.removeItem(KEY());localStorage.removeItem('pair_rater');
+      sessionStorage.setItem('pair_done',rater);}catch(e){}
+  setTimeout(()=>location.reload(),1400);
+}
+try{
+  const dn=sessionStorage.getItem('pair_done');
+  if(dn){sessionStorage.removeItem('pair_done');
+    document.getElementById('rmsg').textContent=dn+' 님 제출 완료 ✓ 감사합니다.';
+    document.getElementById('rmsg').style.color='#0f6e56';}
+}catch(e){}
 document.getElementById('rstart').onclick=()=>{
   const v=document.getElementById('rname').value.trim();
   if(!v){alert('실명을 입력해 주십시오.');return}
@@ -175,7 +186,8 @@ function submitViaIssue(c){
    +'?title='+encodeURIComponent('[pair-judgments] '+c.rater)
    +'&labels=pair-judgments&body='+encodeURIComponent(body);
   if(url.length<7500){window.open(url,'_blank');
-    stamp('GitHub 이슈 창이 열립니다 — Submit new issue를 누르면 완료');}
+    stamp('GitHub 창에서 Create를 누르면 완료됩니다');
+    resetSurvey(c.rater);}
   else{try{navigator.clipboard.writeText(body);}catch(e){}
     window.open('https://github.com/'+REPO+'/issues/new?title='
       +encodeURIComponent('[pair-judgments] '+c.rater)+'&labels=pair-judgments','_blank');
@@ -194,8 +206,8 @@ document.getElementById('submit').onclick=async()=>{
         body:JSON.stringify(c)});
       const res=await r.json();
       if(res.ok){btn.textContent='제출 완료 ✓';
-        stamp('저장됨 — 누적 '+res.rows+'건. 수정 후 다시 제출해도 됩니다(최신본 사용).');
-        return;}
+        stamp('저장됨 — 누적 '+res.rows+'건');
+        resetSurvey(c.rater);return;}
       throw new Error(res.error||'server error');
     }catch(err){
       btn.disabled=false;btn.textContent='GitHub으로 제출 · Submit';

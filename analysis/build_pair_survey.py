@@ -274,6 +274,17 @@ function prog(){
   document.getElementById('ptxt').textContent=d+' / '+n;
   document.getElementById('pfill').style.width=(n?100*d/n:0)+'%';
 }
+function resetSurvey(rater){
+  try{localStorage.removeItem(KEY());localStorage.removeItem('pair_rater');
+      sessionStorage.setItem('pair_done',rater);}catch(e){}
+  setTimeout(()=>location.reload(),1400);
+}
+try{
+  const dn=sessionStorage.getItem('pair_done');
+  if(dn){sessionStorage.removeItem('pair_done');
+    document.getElementById('rmsg').textContent=dn+' \ub2d8 \uc81c\ucd9c \uc644\ub8cc \u2713 \uac10\uc0ac\ud569\ub2c8\ub2e4.';
+    document.getElementById('rmsg').style.color='#0f6e56';}
+}catch(e){}
 document.getElementById('rstart').onclick=()=>{
   const v=document.getElementById('rname').value.trim();
   if(!v){alert('실명을 입력해 주십시오.');return}
@@ -317,7 +328,8 @@ function submitViaIssue(c){
    +'?title='+encodeURIComponent('[pair-judgments] '+c.rater)
    +'&labels=pair-judgments&body='+encodeURIComponent(body);
   if(url.length<7500){window.open(url,'_blank');
-    stamp('GitHub \uc774\uc288 \ucc3d\uc774 \uc5f4\ub9bd\ub2c8\ub2e4 \u2014 Submit new issue\ub97c \ub204\ub974\uba74 \uc644\ub8cc');}
+    stamp('GitHub \ucc3d\uc5d0\uc11c Create\ub97c \ub204\ub974\uba74 \uc644\ub8cc\ub429\ub2c8\ub2e4');
+    resetSurvey(c.rater);}
   else{try{navigator.clipboard.writeText(body);}catch(e){}
     window.open('https://github.com/'+REPO+'/issues/new?title='
       +encodeURIComponent('[pair-judgments] '+c.rater)+'&labels=pair-judgments','_blank');
@@ -336,8 +348,8 @@ document.getElementById('submit').onclick=async()=>{
         body:JSON.stringify(c)});
       const res=await r.json();
       if(res.ok){btn.textContent='\uc81c\ucd9c \uc644\ub8cc \u2713';
-        stamp('\uc800\uc7a5\ub428 \u2014 \ub204\uc801 '+res.rows+'\uac74. \uc218\uc815 \ud6c4 \ub2e4\uc2dc \uc81c\ucd9c\ud574\ub3c4 \ub429\ub2c8\ub2e4(\ucd5c\uc2e0\ubcf8 \uc0ac\uc6a9).');
-        return;}
+        stamp('\uc800\uc7a5\ub428 \u2014 \ub204\uc801 '+res.rows+'\uac74');
+        resetSurvey(c.rater);return;}
       throw new Error(res.error||'server error');
     }catch(err){
       btn.disabled=false;btn.textContent='GitHub\uc73c\ub85c \uc81c\ucd9c \u00b7 Submit';
