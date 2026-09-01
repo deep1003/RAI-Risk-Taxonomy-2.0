@@ -1,0 +1,12 @@
+{
+ "received_at": "2026-09-01T11:10:03.553Z",
+ "rater": "YS_01",
+ "saved_at": "2026-09-01T11:09:56.219Z",
+ "survey_sha": "4b24cc8f78258fb1",
+ "verdicts": "sdddddddsddddddddddsdddddddddsddddddsddddsuddddsdddddddddddddsdddddddsddddddsddsddddddddddddddddddsddddddddddddddddddddddddddsddddddddd",
+ "notes": {
+  "P043": "명칭과 정의가 서로 다른 위험을 가리켜 분류체계상 대표 개념과 계층 위치를 일관되게 확정할 수 없음."
+ },
+ "_issue": "store",
+ "_created": "2026-09-01T11:10:03.553Z"
+}

@@ -1,0 +1,12 @@
+{
+ "received_at": "2026-09-01T11:10:00.612Z",
+ "rater": "SY_01",
+ "saved_at": "2026-09-01T11:09:54.866Z",
+ "survey_sha": "4b24cc8f78258fb1",
+ "verdicts": "sdddddddsddddddddddddddddddddsddddddsddddsuddddsdddddddddddddsdddddddsddddddsddsddddddddddddddddddsddddddddddddddddddddddddddsddddddddd",
+ "notes": {
+  "P043": "한국어 명칭과 정의의 개념 범위가 불일치하여 비교 대상 리스크의 의미와 규범적 범위를 확정할 수 없음."
+ },
+ "_issue": "store",
+ "_created": "2026-09-01T11:10:00.612Z"
+}

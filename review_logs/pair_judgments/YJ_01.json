@@ -1,0 +1,12 @@
+{
+ "received_at": "2026-09-01T11:10:02.315Z",
+ "rater": "YJ_01",
+ "saved_at": "2026-09-01T11:09:54.849Z",
+ "survey_sha": "4b24cc8f78258fb1",
+ "verdicts": "sdddddddsddddddddddddddddddddsddddddsddddsuddddsdddddddddddddsdddddddsddddddsddsddddddddddddddddddsddddddddddddddddddddddddddsddddddddd",
+ "notes": {
+  "P043": "명칭은 허위정보 피해를, 정의는 대체 금융데이터의 편향과 금융 꼬리위험을 기술하여 피해 대상과 실현 경로를 하나로 확정할 수 없음."
+ },
+ "_issue": "store",
+ "_created": "2026-09-01T11:10:02.315Z"
+}
