@@ -6,7 +6,9 @@ the fenced JSON block from each body, validates it against the survey, and
 writes one JSON file per rater (latest submission wins) plus a combined CSV.
 
 Usage:  python3 scripts/collect_pair_judgments.py [--issues-json FILE]
-        (without --issues-json it queries the public GitHub API directly)
+                                                  [--endpoint URL --key KEY]
+        Default: GitHub issues.  With --endpoint, pulls from the Apps Script
+        store (survey_endpoint.txt + read key) and merges both sources.
 """
 import json, re, csv, sys, argparse, urllib.request, pathlib
 
@@ -43,12 +45,27 @@ def parse(body):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--issues-json')
+    ap.add_argument('--endpoint')
+    ap.add_argument('--key', default='rai-pairs-2026')
     a = ap.parse_args()
     issues = (json.load(open(a.issues_json)) if a.issues_json else fetch_issues())
     if a.issues_json and issues and isinstance(issues[0], list):   # gh --slurp
         issues = [x for page in issues for x in page]
 
     subs = {}
+    if a.endpoint:
+        req = urllib.request.Request(
+            a.endpoint + '?key=' + a.key,
+            headers={'User-Agent': 'pair-judgment-collector'})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            store = json.loads(r.read())
+        for d in store.get('responses', []):
+            v = d.get('verdicts', '')
+            if not d.get('rater') or len(v) != N_PAIRS: continue
+            d['_issue'] = 'store'; d['_created'] = d.get('received_at', '')
+            key = d['rater'].strip().lower()
+            if key not in subs or d['_created'] > subs[key]['_created']:
+                subs[key] = d
     for it in issues:
         if 'pull_request' in it: continue
         if not (it.get('title') or '').startswith('[pair-judgments]'): continue
