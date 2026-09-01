@@ -89,3 +89,31 @@
 - 문안 수정 0건(보수 원칙). 공개 25컬럼 CSV는 불변, References는 핸드오버 전체 컬럼본 + cards.json(웹 카드 상세 References 섹션)에 존재. site.js cache v=ac11.
 - 미부착 469장: 정면 대응 권위 문헌 미확인분(특히 P_SYS_CONTROL·P_INT_SAFETY 로봇 안전 계열)은 사용자 지시대로 공란 유지.
 - 리포지토리에 검수 원장 일체(06/07/08 폴더 + CLAUDE.md) 커밋 완료(53ab073).
+
+## Physical L4 → L3 재귀속 검토 (2026-08-30 완료, **적용 보류 — 휴먼 검수 후 진행**)
+- 리뷰어 2인 독립 검토(Physical 77장 전수): A 14건 / B 19건 제안, 양측 동시 지목 12건. 원장: `07_line_by_line_audit_claude/PHYS_Reattr_Consensus.csv` (+Reviewer_A/B, 입력 PHYS_Cards_Input.csv, L3 카탈로그 PHYS_L3_Catalogue.csv).
+- Top 5 (목적지 합의·HIGH): ①P_SYS_CONTROL_020 기반모델 실패 전이→G_SYS_SECADV(정의 괄호조항과 문자 일치) ②P_INT_SAFETY_014 벤치마크 누락→G_SYS_EVAL ③P_SYS_CONTROL_032 돌봄로봇 기준 부재→G_SYS_EVAL ④P_INT_SAFETY_019 접근성 배제→G_INT_ALLOC(장애 기반 배분 차별) ⑤P_INT_SAFETY_021·003·005 로봇 자체 제어 실패→P_SYS_CONTROL(도메인 내 이동).
+- 목적지 상이 3건(총괄 판정 필요): SAFETY_004(REL vs UNETH), CONTROL_012(GOAL vs PERF), CONTROL_055(EVAL vs INCONS). 단독 A2/B7건은 NOTE.
+- **사용자 지시: 휴먼 검수가 끝난 다음에 적용(AC-15 예정).** 적용 시 P_INT_SAFETY 21→최대 13 감소 주의(3장 이상 가드는 문제없음), 이관은 새 ID 부여·구 ID 결번 방식.
+- 별도 미결: AC-14(신규 L3 G_SYS_PERF, 커밋 0635a94)와 그림 복원 커밋(0138349)이 로컬 main에만 있고 **push 실패(GitHub 토큰 만료, gh auth refresh 필요)** — 사이트는 아직 6c7263f 상태.
+
+## General·Agentic L4 → L3 재귀속 검토 (2026-08-30 완료, **적용 보류 — Physical과 함께 휴먼 검수 후 AC-15**)
+- 리뷰어 2인 독립 검토(G 487 + A 65 = 552장 전수): A 14건 / B 8건 제안, 양측 지목 7건(목적지 일치 6). 원장: `07_line_by_line_audit_claude/GA_Reattr_Consensus.csv` (+Reviewer_A/B, 입력 GA_Cards_General/Agentic.csv).
+- Top 5 (목적지 합의): ①EVAL_051 미세조정 안전성 열화→G_SYS_PERF(HIGH/HIGH) ②EVAL_058 인지·추론 지연 급증→PERF(HIGH/HIGH) ③GOV_036 익명 에이전트 추적·책임 공백→A_SYS_TRACE(정의 문언 일치) ④EVAL_067 체계적 학습 오류 편향→PERF ⑤EVAL_056 하드웨어 용량계획 누락→PERF. 그 외 합의: UNETH_013 동물 위해→VIOL(VIOL 정의에 동물 명시).
+- 패턴: AC-14 신설 G_SYS_PERF의 잔존 유입 후보가 EVAL에 4건 더 있음(051·058·067·056). OEXT_002는 목적지 상이(A:UNETH/B:CULT — 총괄 판정 필요). 단독 A7/B1은 NOTE.
+- Physical 재귀속(합의 12건)과 묶어서 휴먼 검수 완료 후 AC-15로 일괄 적용 예정.
+
+## 휴먼검수 3차 반영 검증 (2026-09-01, 커밋 a2700ce — 검증 완료 ALL PASS)
+- 3차 원천: 00_source_snapshot/csv/L4_*_Round3_KTSPACE_*_20260901.csv (629행 전수, "휴먼검수 3차 의견" 30건: G13/A0/P17). 원장: releases/.../validation/Human_Review_Round3_{Decision_Ledger(629행)·Application_Log(30건)·Validation_Record·Methodology} + 09_human_review_round3/ (pre-round3 아카이브 포함).
+- 적용: MOVE_REWRITE 19 / DELETE 6 / RENAME_REWRITE 5 → **629→623장(G492/A66/P65, EM321/HD302)**. Physical L3: CONTROL 35/SAFETY 17/STATE 7/HARDWARE 3/TAMPER 3.
+- 검증: 의견 verbatim 30/30, 무의견 599행 NO_CHANGE, 리뷰어 2인+총괄 기록 완비, 크로스워크 24건 무결(이동 19 Before 소멸·After 존재, RENAME 5 동일 ID), 툼스톤 25, L3 마스터 50행 SHA 1ab58e1d 유지, 하드 원칙 유지(SELF 4축·REPR 12·PERF 16장), 전 L3 3장 이상, 동기화(공개 CSV·cards.json·manifest·index 623 일치, SHA256SUMS OK).
+- **AC-15 대기 목록과의 중첩**: 3차가 우리 합의 5건을 이행(UNETH_013→VIOL, EVAL_051→PERF, SAFETY_014→EVAL, CONTROL_020→SECADV, CONTROL_032→EVAL) + SAFETY_004→UNETH(B안 채택) + 단독 2건(EVAL_053, OEXT_004→PERF). SAFETY_019는 우리 합의(ALLOC)와 다르게 PERF로 갔으나 **3차 휴먼 의견이 명시적으로 "기능·성능 결함 관점 General L3" 지시** — 휴먼 지시 우선으로 정당.
+- HR2-0778 잔여 시정(CONTROL_036 열·전력 문구)은 3차에서 카드 자체가 "삭제" 지시로 소멸 → **사안 종결(superseded)**.
+- **AC-15 잔여(3차 미이행분)**: PHYS SAFETY_021·003·005→CONTROL(도메인 내), SAFETY_008→AUTH / GA EVAL_058·067·056→PERF, GOV_036→A_SYS_TRACE. 여전히 사용자 승인 대기.
+
+## Physical 2차 비판 검토 (2026-09-01, 3차 반영 후 65장 기준 — 적용 대기)
+- 리뷰어 2인 독립(A 20장/B 26장 플래그). 원장: `07_line_by_line_audit_claude/PHYS2_Consensus.csv` (+PHYS2_Reviewer_A/B, 입력 PHYS2_Cards_Input.csv).
+- **합의 REMAP 5건**: SAFETY_003(CBF 필터)·005(충돌회피·지오펜싱)·018(시연 학습)·021(전신 이동 충돌)→P_SYS_CONTROL(사람 무관 로봇 자체 제어 결함, CONTROL 기존 카드와 중복 지적), SAFETY_008(역할·권한 집행 실패)→A_SYS_AUTH. ※AC-15 잔여 목록과 3건 일치(003·005·021), 018은 신규.
+- **문안 결함(기계 확인)**: 정의 종결이 "~하는 위험."인 카드 **17장**(표준은 "~하는 리스크.") — 의미 불변 일괄 치환 가능. 그 외: CONTROL_002 제목-정의 불일치(해석 실패 vs 명세 설계 결함), HARDWARE_001 KO 제목이 EN(distribution drift)보다 좁음, CONTROL_038 '기계 구성 요소' 문구가 HARDWARE와 경계 중첩, CONTROL_023 모호어 "부적절한".
+- 충돌 1건: CONTROL_055(A:PERF vs B:INCONS — 배포조건 간 행동 불안정). B단독 4건은 CONTROL→SAFETY 역방향(사람 언급 카드) — CONTROL L3 예외조항 위반 패턴, 총괄 판정 필요. A단독 1건 CONTROL_047→PERF.
+- 적용 시 SAFETY 17→12, AUTH 유입 1. 전 L3 3장 이상 유지됨. 사용자 승인 대기(AC-15 후보와 병합 권장).

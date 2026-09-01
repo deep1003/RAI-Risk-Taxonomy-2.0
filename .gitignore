@@ -37,3 +37,7 @@ data/experiments/tau_tiers_v2_19/
 .virtual_documents/
 HANDOVER_taxonomy_pipeline.md
 data/experiments/review/tau_selection_report.html
+data/experiments/review/pair_survey_key.csv
+.perf_wt/
+Percolation theory.pptx
+~$*.pptx
