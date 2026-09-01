@@ -1,0 +1,317 @@
+{
+  "release_date": "2026-09-01",
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "release_round": "human_review_round3_plus_ac19_physical_minimum_corrections",
+  "pipeline_scripts": [
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_deduplication_20260829.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_splitting_20260829.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_scope_granularity_curation_20260829.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_round3_20260901.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_physical_minimal_corrections_ac19_20260901.py"
+  ],
+  "mapping_method": {
+    "name": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "l3_master_precedence": true,
+    "automatic_reassignment": false
+  },
+  "summary": {
+    "source_total": 798,
+    "cleaned_total": 623,
+    "final_total": 623,
+    "deleted": 21,
+    "explicit_deletions": 25,
+    "merged_away": 177,
+    "split_net_addition": 23,
+    "semantic_deduplication_clusters": 10,
+    "semantic_duplicates_retired": 13,
+    "semantic_split_reviewed": 10,
+    "semantic_split_new_cards": 7,
+    "semantic_split_retired_umbrellas": 2,
+    "scope_granularity_reviewed": 8,
+    "scope_granularity_retired": 7,
+    "scope_granularity_new": 1,
+    "net_reduction": 175,
+    "user_directed_operations": 217,
+    "korean_copyedit_operations": 0,
+    "english_copyedit_operations": 0,
+    "validation_passed": 11,
+    "validation_failed": 0,
+    "others_total": 0,
+    "source_counts": {
+      "General": 630,
+      "Agentic": 74,
+      "Physical": 94
+    },
+    "final_domain_counts": {
+      "General AI": 494,
+      "Agentic AI": 66,
+      "Physical AI": 63
+    },
+    "mapping_method_counts": {
+      "General AI": {
+        "EM": 250,
+        "HD": 244
+      },
+      "Agentic AI": {
+        "HD": 30,
+        "EM": 36
+      },
+      "Physical AI": {
+        "EM": 35,
+        "HD": 28
+      }
+    },
+    "similarity_top_pairs_published": 20,
+    "recovery_actions": {
+      "SPLIT": 19,
+      "MERGE": 14,
+      "REMAP": 80,
+      "REWRITE_KEEP": 39,
+      "DELETE": 14
+    },
+    "score_status_counts": {
+      "L3_MASTER_VALIDATED": 35,
+      "NOT_APPLICABLE": 131,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 395,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 31,
+      "HUMAN_REVIEW_ROUND3_NO_EM_RERUN": 24,
+      "HUMAN_REVIEWED_AC19": 2,
+      "L3_MASTER_AI_REWRITE": 5
+    }
+  },
+  "primary_outputs": {
+    "L1_Master.csv": {
+      "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
+      "rows": 3
+    },
+    "L1_L2_L3_Master.csv": {
+      "sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+      "rows": 50
+    },
+    "L4_General.csv": {
+      "sha256": "a7fdfa08e3306ba24554a63b8de9a45eefb9a636f2129fe0d2869a7f6782c53f",
+      "rows": 494
+    },
+    "L4_Agentic.csv": {
+      "sha256": "a9b45fac271649cb72e5cdbc786b6509abfdbdd9d198bc00517556309894b23f",
+      "rows": 66
+    },
+    "L4_Physical.csv": {
+      "sha256": "573f03079364de5ca8f3906bf98fe355dbd0ba2e4a2679555f21caa7ffc6b0a6",
+      "rows": 63
+    }
+  },
+  "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "review_decisions": 184,
+  "semantic_deduplication": {
+    "approved_clusters": 10,
+    "retired_cards": 13,
+    "input_cards": 791,
+    "output_cards": 778,
+    "reviewers": 2,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Deduplication_Log.csv"
+  },
+  "semantic_splitting": {
+    "reviewed_composite_cards": 10,
+    "retired_umbrella_cards": 2,
+    "new_distinct_cards": 7,
+    "net_addition": 5,
+    "input_cards": 778,
+    "output_cards": 783,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Semantic_Split_Application_Log.csv"
+  },
+  "scope_granularity_curation": {
+    "reviewed_cards": 8,
+    "retired_cards": 7,
+    "new_cards": 1,
+    "rewritten_cards": 4,
+    "net_change": -6,
+    "input_cards": 783,
+    "output_cards": 777,
+    "approval": "USER_APPROVED_20260829",
+    "log": "Scope_Granularity_Curation_Log.csv"
+  },
+  "source_register_rows": 808,
+  "deterministic_replay": "PASS",
+  "source_hashes": {
+    "L3_Master": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+    "Recovery_Decisions": "ed7abf98ebd5825d1ec454e543e019f0989ac6d77da4f3676daf882b3f14ba1a",
+    "Instruction_Register": "bfe843387ac40195f40d987e63db3dd19637e1fccb1c2cf84237ab690e33977e"
+  },
+  "human_review": {
+    "vote_log": "Not used in this recovery round",
+    "application_policy": "Applied only under explicit user instructions dated 2026-08-29",
+    "automatic_reassignment": false
+  },
+  "human_review_round2": {
+    "independent_language_review": {
+      "status": "PASS",
+      "reviews": [
+        {
+          "reviewer_role": "Methodology and intent specialist",
+          "status": "PASS"
+        },
+        {
+          "reviewer_role": "Lineage and data-integrity specialist",
+          "status": "PASS"
+        }
+      ]
+    },
+    "semantic_deduplication_review": {
+      "status": "PASS",
+      "reviewers": 2,
+      "user_approved": true
+    },
+    "semantic_splitting_review": {
+      "status": "PASS",
+      "user_approved": true,
+      "reviewed_composite_cards": 10
+    },
+    "scope_granularity_review": {
+      "status": "PASS",
+      "user_approved": true,
+      "reviewed_cards": 8
+    }
+  },
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv",
+  "audit_correction_20260829_ac02": "AC-02: 58 redundant cards absorbed across 8 L3s (two-reviewer consensus); IDs retired permanently, no renumbering",
+  "audit_correction_20260829_ac05": "AC-05: populated empty L3s (G_SYS_OREF, P_INT_TAMPER) with 1 split, 1 transfer, 4 new referenced cards",
+  "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
+  "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
+  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
+  "round2_pipeline_historical": {
+    "final_total": 777,
+    "deleted": 13,
+    "explicit_deletions": 17,
+    "merged_away": 22,
+    "split_net_addition": 14,
+    "net_reduction": 21,
+    "final_domain_counts": {
+      "General AI": 607,
+      "Agentic AI": 77,
+      "Physical AI": 93
+    },
+    "mapping_method_counts": {
+      "General AI": {
+        "EM": 326,
+        "HD": 281
+      },
+      "Agentic AI": {
+        "EM": 44,
+        "HD": 33
+      },
+      "Physical AI": {
+        "EM": 55,
+        "HD": 38
+      }
+    },
+    "score_status_counts": {
+      "NOT_APPLICABLE": 162,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 516,
+      "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 41,
+      "L3_MASTER_VALIDATED": 51,
+      "L3_MASTER_AI_REWRITE": 7
+    },
+    "note": "State immediately after the round-2 semantic curation pipeline and before audit corrections AC-01..AC-08. Score statuses are historical EM labels; the score columns were removed from the published release by AC-04/AC-10 and cannot be recomputed for the current card set."
+  },
+  "audit_corrections": {
+    "log": "validation/Audit_Correction_Log.csv",
+    "method": "Two independent reviewer agents judged every candidate without seeing each other's output; only the consensus (intersection) was applied, with a third-party adjudicator resolving disagreements against the evidence.",
+    "card_count_trajectory": [
+      {
+        "step": "round2_pipeline",
+        "cards": 777
+      },
+      {
+        "step": "AC-01",
+        "cards": 778
+      },
+      {
+        "step": "AC-02",
+        "cards": 720
+      },
+      {
+        "step": "AC-05",
+        "cards": 725
+      },
+      {
+        "step": "AC-06",
+        "cards": 711
+      },
+      {
+        "step": "AC-07",
+        "cards": 645
+      },
+      {
+        "step": "AC-08",
+        "cards": 629
+      },
+      {
+        "step": "AC-09..AC-11",
+        "cards": 629
+      },
+      {
+        "step": "AC-18",
+        "cards": 623
+      },
+      {
+        "step": "AC-19",
+        "cards": 623
+      }
+    ]
+  },
+  "audit_correction_20260830_ac09": "AC-09: technical reports (KO/EN) rewritten and recompiled against the 629-card release; figures and internal snapshots synchronised; Mapping provenance section removed from the card detail view",
+  "audit_correction_20260830_ac10": "AC-10: human-review and References columns dropped from the published CSVs (25 columns); full-column originals retained in the handover and project archive",
+  "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)",
+  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)",
+  "audit_correction_20260830_ac15": "AC-15: synchronized the 50-node hierarchy, current artifact row counts and SHA-256 hashes, public manifest, active handover checksums, and master-site regression tests.",
+  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; original comments, taxonomy content, mappings, lineage, and the 629-card count were unchanged.",
+  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176.",
+  "human_review_round3": {
+    "source_rows": 629,
+    "commented_rows": 30,
+    "uncommented_rows": 599,
+    "actions": {
+      "reassigned_and_rewritten": 19,
+      "deleted": 6,
+      "same_l3_generalised": 5,
+      "merged": 0,
+      "split": 0,
+      "new_l4": 0,
+      "new_l3": 0
+    },
+    "independent_expert_reviewers": 2,
+    "adjudicated_disagreements": [
+      "G_INT_SELF_006",
+      "P_INT_SAFETY_007"
+    ],
+    "l3_master_unchanged": true,
+    "em_or_hybrid_em_executed": false,
+    "decision_ledger": "validation/Human_Review_Round3_Decision_Ledger.csv",
+    "application_log": "validation/Human_Review_Round3_Application_Log.csv",
+    "validation_record": "validation/Human_Review_Round3_Validation_Record.json"
+  },
+  "audit_correction_20260901_ac18": "AC-18: applied all 30 non-empty third-round human-review comments after reading all 629 rows; 19 cards were reassigned and rewritten, 6 deleted, and 5 generalised within the same L3. No EM, merge, split, new L4, or new L3 was used.",
+  "audit_correction_20260901_ac19": "AC-19: after two independent Physical AI audits and explicit user approval, P_SYS_HARDWARE_001 was moved to G_SYS_PERF_017, P_INT_TAMPER_001 was moved to G_SYS_SECADV_061, and the Korean cosmic-ray terminology in P_SYS_HARDWARE_003 was corrected. No card was deleted, merged, split, or newly created, and EM was not rerun.",
+  "physical_minimum_corrections_ac19": {
+    "cross_domain_reassignments": 2,
+    "korean_definition_corrections": 1,
+    "counts": {
+      "General": 494,
+      "Agentic": 66,
+      "Physical": 63,
+      "total": 623
+    },
+    "id_crosswalk": {
+      "P_SYS_HARDWARE_001": "G_SYS_PERF_017",
+      "P_INT_TAMPER_001": "G_SYS_SECADV_061"
+    },
+    "l3_master_unchanged": true,
+    "em_or_hybrid_em_executed": false,
+    "validation_record": "validation/Physical_Minimal_Corrections_AC19_Validation.json"
+  }
+}

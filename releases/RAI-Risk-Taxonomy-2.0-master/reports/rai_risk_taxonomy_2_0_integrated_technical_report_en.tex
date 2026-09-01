@@ -1,0 +1,635 @@
+% !TEX program = xelatex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{authblk}
+
+\definecolor{deepblue}{HTML}{244A7C}
+\definecolor{pale}{HTML}{F3F6FA}
+\definecolor{linegrey}{HTML}{D5DDE7}
+\definecolor{accent}{HTML}{A65A16}
+\hypersetup{colorlinks=true,linkcolor=deepblue,citecolor=deepblue,urlcolor=deepblue,pdfauthor={Youngsam Chun, Sooyoung Kim, Jinhee Jeong, Jaehyun Kim}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RAI Risk Taxonomy 2.0}
+\rhead{Integrated Technical Report}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist{nosep,leftmargin=1.7em}
+\captionsetup{font=small,labelfont=bf}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\code}[1]{\texttt{\small\detokenize{#1}}}
+\newcommand{\riskid}[1]{\texttt{\detokenize{#1}}}
+\newtcolorbox{examplebox}[1]{
+  enhanced,
+  breakable,
+  colback=pale,
+  colframe=deepblue,
+  boxrule=0.8pt,
+  arc=1.5mm,
+  title={Example: #1},
+  fonttitle=\sffamily\bfseries,
+  coltitle=white,
+  attach boxed title to top left={xshift=4mm,yshift=-2mm},
+  boxed title style={colback=deepblue,colframe=deepblue,arc=1mm},
+  top=4mm
+}
+\newtcolorbox{decisionbox}[1]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=accent,
+  boxrule=0.7pt,
+  arc=1mm,
+  title={#1},
+  fonttitle=\sffamily\bfseries,
+  coltitle=accent
+}
+
+\title{\bfseries RAI Risk Taxonomy 2.0:\\An Auditable Human-in-the-Loop Pipeline for Consolidating, Splitting, and Reassigning AI Risk Cards}
+\author[1]{Youngsam Chun\textsuperscript{\textdagger}\thanks{Corresponding author: \href{mailto:ys.chun@kt.com}{ys.chun@kt.com}}}
+\author[1]{Sooyoung Kim\textsuperscript{\textdagger}}
+\author[1]{Yunjin Park}
+\author[1]{Jungwon Yoon}
+\author{Jihwan Chang}
+\author[1]{Jinhee Jeong}
+\author[1]{Jaehyun Kim}
+\affil[1]{Responsible AI Department, Frontier AI Lab, KT Corporation, Seoul, Republic of Korea}
+\date{1 September 2026}
+
+\begin{document}
+\maketitle
+\begin{center}
+\small\textsuperscript{\textdagger}These authors contributed equally to this work and share first authorship.
+\end{center}
+
+\begin{abstract}
+This technical report documents the complete, versioned construction of RAI Risk Taxonomy 2.0 from evidence acquisition to the current audited master. The historical evidence space comprised 3,906,767 records across papers, policy reports, and patents. A source-governed AI-risk view contained 82,971 records and supported an earlier 1,660-card analytical release. A later rebuild established a 798-card baseline and applied bilingual risk-formulation repair, semantic mapping, two rounds of line-by-line human review recovery, independent duplicate and composite-card audits, scope and granularity curation, a third-round review, and a final Physical AI boundary audit. The present master contains 623 active L4 cards: 494 General AI, 66 Agentic AI, and 63 Physical AI cards. Its L3 master contains 47 substantive categories and three unassigned Others queues. This report formalises the decision criteria for merge, reassignment, split, deletion, and rewrite operations; provides boxed, traceable examples; quantifies the difference between historical algorithmic mapping and observed human intervention; and specifies validation gates for lineage, semantics, schema, and release synchronisation. The annex reports the complete final L1--L3 structure, L4 counts, and an illustrative L4 card for every L3. The report is accompanied by a complete Overleaf bundle with vector figures, 600 dpi raster figures, figure-source tables, and a hashed source inventory.
+\end{abstract}
+
+\noindent\textbf{Keywords:} AI risk taxonomy; responsible AI; human review; semantic curation; Physical AI; Agentic AI; auditability; risk classification.
+
+\section{Introduction}
+
+AI risk taxonomies are governance instruments rather than neutral lists. They determine which harms are visible, how organisations allocate control responsibilities, and which cases receive evaluation or mitigation. A useful taxonomy must therefore satisfy at least four conditions. It must represent recognised risk mechanisms, maintain distinctions that matter for governance, provide stable and traceable identifiers, and remain revisable when evidence or expert review shows that a boundary is wrong. These requirements are consistent with risk-management and taxonomy-development principles in NIST AI RMF, ISO/IEC 23894, and the information-systems taxonomy literature \citep{nist2023,iso23894,nickerson2013}.
+
+RAI Risk Taxonomy 2.0 was developed to cover General AI, Agentic AI, and Physical AI within one hierarchy. Its most difficult problems were not the naming of high-level domains but the treatment of L4 cards. Source cards varied in granularity, mixed several meanings, duplicated one another, described outcomes without an AI causal mechanism, or were placed in a domain because of surface vocabulary rather than their primary failure mechanism. These problems became especially visible when cards about bodily harm or public-space obstruction were automatically attracted to Physical AI or Violence even though the underlying risk was a general performance, security, or contextual-awareness failure.
+
+This report has three objectives. First, it integrates the earlier technical report, semantic-space paper, the Physical AI project design memorandum supplied with this task, and the complete review and correction ledgers into one versioned account. Second, it states operational decision rules for merge, split, reassignment, deletion, and definition repair. Third, it presents the current release without treating historical embedding scores as semantic ground truth.
+
+\subsection{Status of the source documents}
+
+The attached 14-page ERA-Cambridge project PDF was used as a scholarly source for the conceptual distinction between Physical AI and embodied AI, the perception-action loop, physical actuation, functional safety, and the capability-governance mismatch. It was not treated as an instruction set. The prior taxonomy technical report and semantic-space paper describe a historical 1,660-card release. The present 623-card master is a later audited rebuild. These two snapshots are intentionally reported separately because their counts, category sets, and validation questions are not interchangeable.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig01_end_to_end_workflow.pdf}
+\caption{Versioned construction of RAI Risk Taxonomy 2.0. The earlier evidence-to-registry pipeline and the later human-review rebuild use different statistical units and release snapshots.}
+\label{fig:workflow}
+\end{figure}
+
+\section{Conceptual and Governance Foundations}
+
+\subsection{Risk, harm, and causal mechanism}
+
+The taxonomy treats an L4 card as an operational risk formulation, not merely a topic. A valid card identifies an AI-related causal role, an observable failure or harmful conduct, an affected object or protected interest, and a consequence that can be evaluated. This stance follows the distinction between risk sources, events, and consequences in risk management, while recognising that AI harms can arise from system design, use, interaction, institutional deployment, or autonomous action \citep{nist2023,weidinger2022,slattery2024}.
+
+Names and definitions were written in a policy and standards register informed by risk-management, fundamental-rights, and technical-governance sources \citep{nist2023,iso23894,euaiact2024,reuel2024}. English names avoid decorative prefixes such as ``AI-mediated'' when the underlying concept already has an established name. Definitions nevertheless state how an AI system, algorithm, agent, robot, humanoid, machine-learning process, or embodied system produces or amplifies the risk. Korean and English definitions are required to be semantically equivalent rather than literal word-for-word translations.
+
+\subsection{General, Agentic, and Physical AI}
+
+The L1 distinction is causal and technological. General AI covers risks arising from models and AI systems whose primary inputs and outputs are digital content, predictions, decisions, or evaluations. Agentic AI requires autonomous goal pursuit, consequential action, tool use, delegation, multi-agent interaction, or resistance to oversight. Physical AI requires a material perception-action loop in which sensing, control, actuation, mechanical integrity, or physical human-system interaction is constitutive of the risk. Vision-language-action systems make this boundary especially important because digital model failures can be realised as physical action, while machinery risk assessment and functional-safety guidance provide a separate vocabulary for hazards and controls \citep{brohan2023,kim2024openvla,guiochet2017,iso12100,iso5469}.
+
+A physical consequence alone does not make a risk Physical AI. Conversely, a card can remain in General AI while explicitly preserving a robot or embodied-system context if the primary mechanism is benchmark incompleteness, performance degradation, adversarial-input security, or governance failure. This causal-mechanism rule is central to the cross-domain corrections documented below.
+
+\section{Evidence Acquisition and Source Construction}
+
+\subsection{Integrated evidence space}
+
+The historical construction stage used an integrated evidence space of 3,906,767 records: 1,749,159 papers, 125,372 policy reports, and 2,032,236 patents. Records were standardised within source type, required valid titles, and were deduplicated within type and category. A source-governed Physical AI risk view contained 82,971 records: 50,375 papers, 938 policy reports, and 31,658 patents. The 82,971 records are an evidence view, not a one-to-one parent table for L4 cards.
+
+\begin{table}[H]
+\centering
+\caption{Integrated evidence sources used in the historical construction stage.}
+\label{tab:evidence}
+\begin{tabular}{lrrr}
+\toprule
+Evidence view & Papers & Policy reports & Patents \\
+\midrule
+AI & 1,749,159 & 125,372 & 2,032,236 \\
+Physical AI risks & 50,375 & 938 & 31,658 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\textwidth]{figures/fig02_evidence_funnel.pdf}
+\caption{Historical evidence-to-registry funnel. The unit changes from documentary evidence to card candidates and registered concepts.}
+\label{fig:funnel}
+\end{figure}
+
+\subsection{From evidence to candidate cards}
+
+Evidence records were filtered through reviewed risk-source collections and record-type inclusion rules. Candidate descriptions were standardised into bilingual labels and definitions, exact duplicates were removed, and labels that simply repeated an L3 name without specifying a distinct mechanism were excluded or rewritten. The historical technical report records 1,725 exact-deduplicated candidates, 1,711 registered identifiers, and 1,660 active cards after registry-preserving consolidation. A related semantic-space manuscript reports 1,726 candidates. Because the archived technical release is the governing source for the funnel figure, this report uses 1,725 and records the one-card discrepancy rather than silently reconciling it.
+
+The later rebuild did not simply continue that count series. It froze a 798-card operational baseline derived from the working master and original KTSPACE exports. The baseline consisted of 630 General, 74 Agentic, and 94 Physical cards. Original PDFs and CSVs were preserved separately. Source row identifiers, review comments, facet, and act-type fields were retained so that later edits could be traced even when L4 IDs changed.
+
+\section{Hierarchy and Data Model}
+
+The current taxonomy uses five levels. L0 is Responsible AI. L1 contains General AI, Agentic AI, and Physical AI. L2 distinguishes System, Interaction, and Societal Impact where applicable. L3 defines governed risk families. L4 is the atomic operational card.
+
+The final L3 master contains 50 rows: 47 substantive categories and three Others queues. No active card is assigned to Others. Public L4 CSVs contain 25 columns covering bilingual hierarchy IDs, names, definitions, facet, and act-type. Internal full-column CSVs retain review comments, lineage, references, and historical mapping provenance. EM scores and score-status panels are not exposed on public risk cards.
+
+\begin{decisionbox}{L3 master precedence}
+If an instruction prompt or reviewer suggestion conflicts with the defined boundary of the L3 master, the L3 master prevails unless a separately authorised L3 revision is recorded. This prevents an L4 comment from silently changing the category system. The single approved structural exception was the addition of \emph{Performance and Reliability Failure} under AC-14, after explicit approval and a new L3 hash.
+\end{decisionbox}
+
+\section{Historical Semantic Mapping}
+
+\subsection{Bilingual representation and constrained EM}
+
+Historical L4-to-L3 mapping concatenated the Korean and English card names and definitions. BGE-M3 encoded the text into normalised 1,024-dimensional vectors \citep{chen2024}. L3 seeds used the same bilingual fields. A complementary TF-IDF signal represented English keywords. The historical hybrid score for card $i$ and category $k$ was
+
+\begin{equation}
+S_{ik}=0.60\cos(x_i,\mu_k)+0.30\cos(x_i,s_k)+0.10\cos(t_i,q_k),
+\end{equation}
+
+where $x_i$ is the card embedding, $\mu_k$ is the current category centroid, $s_k$ is the L3 seed embedding, and $t_i$ and $q_k$ are TF-IDF vectors. Centroids were updated iteratively from assigned members, the L3 seed, and approved prior members. Domain constraints prevented unrestricted competition: an Agentic destination required autonomous action, and Physical destinations required a constitutive physical mechanism.
+
+\subsection{Why semantic similarity was not sufficient}
+
+The embedding procedure was useful for candidate ranking and inconsistency detection, but it could not determine semantic truth. Generic words such as \emph{life}, \emph{safety}, \emph{emergency}, and \emph{first aid} could pull a neutral emergency-response description toward Violence. Economic and cyber-security cards could be sent to Others when the category definition was short or when the centroid was dominated by unrelated members. Keyword anchors improved candidate recall but introduced their own risk of lexical overfitting.
+
+The corrective rule was therefore to separate three questions: whether the text is a valid AI risk formulation, what its primary causal mechanism is, and which L3 definition governs that mechanism. Similarity scores could support the third question only after the first two had passed. Human review was mandatory for low-margin, unstable, cross-domain, or instruction-conflict cases.
+
+\subsection{Status of EM in the current master}
+
+No EM or Hybrid EM was re-run during the second-round recovery, AC-01 to AC-19, or the third-round review. The labels EM and HD in internal data are historical provenance markers. They do not mean that current text has a fresh score, and no score is shown on the website. The current master is justified by explicit reviewer decisions, adjudication, lineage, and validation gates rather than by inherited numeric scores.
+
+\subsection{Difference between algorithmic mapping and human review}
+
+The archived 1,660-card experiment provides the only directly measured algorithmic baseline. On all active cards, the assigned category appeared among the algorithm's top one, two, three, and five candidates in 71.9\%, 85.3\%, 91.3\%, and 95.2\% of cases, respectively. On the released subset, the corresponding figures were 81.6\%, 91.2\%, 94.6\%, and 97.2\%. The iterative procedure reached a fixed point, but mapping robustness depended on perturbation size: stability was 95.0\% at $\sigma=0.01$ and 75.0\% at $\sigma=0.05$ for the full set. The median margin was only 0.0168 for all active cards and 0.0310 for the released subset. A related semantic-space analysis found that 27.7\% of cards occupied overlapping communities, which is consistent with substantive boundary cases rather than a perfectly partitioned risk space \citep{chun2026semantic}.
+
+Human intervention remained material even after candidate ranking. In Round 2, 80 of 808 reviewed source rows were reassigned (9.9\%). In Round 3, 19 of 629 rows were reassigned (3.0\%). The AC-19 Physical audit reassigned two of 65 reviewed Physical cards (3.1\%). These percentages are stage-specific and must not be added because the same lineage can appear in successive snapshots. They measure observed intervention, not a direct error rate for one frozen classifier.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/fig08_algorithm_human_reliability.pdf}
+\caption{Archived algorithmic candidate-retrieval performance and observed human-review intervention. The panels use different denominators and answer different questions; they are juxtaposed to show capability and residual governance burden, not to claim a single accuracy estimate.}
+\label{fig:algorithm-human}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Reliability interpretation for algorithmic L4 clustering.}
+\label{tab:reliability}
+\begin{tabular}{L{0.31\textwidth}L{0.16\textwidth}L{0.43\textwidth}}
+\toprule
+Dimension & Assessment & Interpretation \\
+\midrule
+Computational convergence & High & The archived EM procedure reached a fixed point. \\
+Candidate retrieval & High & The approved category was within the archived top five for 95.2--97.2\% of cases. \\
+Direct top-one assignment & Moderate & Top-one agreement of 71.9--81.6\% is insufficient for unsupervised publication. \\
+Perturbation robustness & Moderate & Stability declined from 95.0\% to 75.0\% as embedding noise increased. \\
+Causal and governance validity & Human review required & Similarity does not determine AI-risk eligibility, causal domain, legal distinction, or operational atomicity. \\
+Current 623-card score validity & Not estimated & The current wording and hierarchy were not subjected to a fresh EM run. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Three-round algorithm--human mapping integrity}
+
+To compare the three review rounds without treating unlike artefacts as identical, mapping integrity is defined as the share of reviewed rows whose incoming L3 assignment was retained:
+
+\begin{equation}
+I_r = 1 - \frac{M_r}{N_r},
+\end{equation}
+
+where $N_r$ is the number of rows reviewed in round $r$ and $M_r$ is the number receiving an L3 reassignment. Round 1 permits a direct comparison: the algorithmic Top-1 category was retained for 612 of 808 rows and replaced by an HD assignment for 196. Rounds 2 and 3 are incremental audits. Their incoming assignments already incorporated the algorithm and all earlier human decisions, and no fresh EM run was performed. Their values therefore measure stability under additional review, not independent algorithm accuracy.
+
+\begin{table}[H]
+\centering
+\caption{Algorithm-supported mapping integrity across three human-review rounds.}
+\label{tab:three-round-integrity}
+\begin{tabular}{L{0.12\textwidth}L{0.33\textwidth}rrrr}
+\toprule
+Round & Comparison basis & Reviewed & L3 changed & Retained & Mapping gap \\
+\midrule
+1 & Direct algorithmic Top-1 vs adjudicated L3 & 808 & 196 & 75.7\% & 24.3\% \\
+2 & Incoming algorithm-supported, Round-1-audited mapping & 808 & 80 & 90.1\% & 9.9\% \\
+3 & Incoming cumulative mapping after prior audit & 629 & 19 & 97.0\% & 3.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/fig11_three_round_algorithm_human_integrity.pdf}
+\caption{Mapping retention and human reassignment across three review rounds. Only Round 1 is a direct algorithm-versus-human comparison. The later bars show incremental disagreement with a cumulatively curated incoming mapping.}
+\label{fig:three-round-integrity}
+\end{figure}
+
+The mapping gap fell from 24.3\% in Round 1 to 9.9\% in Round 2 and 3.0\% in Round 3. Mapping retention consequently increased by 14.4 percentage points between Rounds 1 and 2 and by a further 6.9 points in Round 3, for a total increase of 21.3 points. This pattern supports convergence of the reviewed taxonomy, but it does not show that the algorithm learned from the reviews because it was not retrained or rerun. It shows that progressively fewer incoming assignments were rejected by subsequent reviewers.
+
+Classification integrity is also narrower than full taxonomy integrity. Round 2 recorded 166 interventions, of which 80 were L3 reassignments and 86 were rewrites, splits, merges, or deletions. Round 3 recorded 30 interventions, of which 19 were reassignments and 11 were deletions or same-L3 generalisations. The first-round source schema preserves the 196 algorithm-to-HD mapping differences but does not provide a directly comparable ledger for all non-mapping edits. High L3 retention must therefore not be interpreted as proof that the card wording, atomicity, eligibility, and domain scope were already correct.
+
+\section{Human-Review Transformation Protocol}
+
+\subsection{Decision precedence}
+
+Every reviewed row was interpreted using the following order:
+
+\begin{enumerate}
+\item explicit human-review instruction;
+\item the defined L3 boundary and L3-master precedence;
+\item preservation of the source card's non-redundant meaning;
+\item AI-risk eligibility and atomicity;
+\item authoritative terminology and bilingual equivalence;
+\item semantic similarity as supporting evidence only.
+\end{enumerate}
+
+Ambiguous or conflicting cases were reviewed independently by two specialist reviewers. Only consensus decisions or a documented adjudication were applied. Operations were implemented through deterministic scripts and decision ledgers, not by manual editing of public CSV files.
+
+\subsection{Merge criterion}
+
+Cards were merged only when they described the same operational construct. Equivalence required alignment on the primary causal mechanism, affected object, harmful outcome, and measurement or governance response. Shared vocabulary alone was insufficient. The retained representative had to preserve all non-redundant terms, meanings, source-row lineage, facet values, and act-type values from retired cards. Retired IDs were not reused.
+
+Protected-group distinctions were intentionally preserved when they represented separate governance and measurement constructs. Political identity; race, ethnicity, nationality, and national origin; disability; and gender, gender identity, and sexual orientation were not collapsed merely because their definitions used parallel discrimination language.
+
+\begin{examplebox}{Merging semantically equivalent surveillance cards}
+\textbf{Before.} \riskid{G_INT_PRIV_001} and \riskid{G_INT_PRIV_030} separately described AI-enabled mass surveillance and unlawful public surveillance. Their causal mechanism, protected interest, scale, and expected controls were equivalent.\\
+\textbf{Decision.} The cards were consolidated under \riskid{G_INT_PRIV_001}, titled \emph{AI-enabled mass and unlawful public surveillance}. The revised definition preserves large-scale collection, combination, inference, identification, tracking, and monitoring without a lawful basis, necessity, or proportionality.\\
+\textbf{Why merge.} The second card did not supply an independently measurable mechanism. Keeping both would double-count the same privacy risk.
+\end{examplebox}
+
+\subsection{Split criterion}
+
+A card was split when it contained two or more independently measurable mechanisms, harms, actors, lifecycle stages, or L3 destinations. A list of examples within one mechanism did not automatically require a split. The decisive test was whether the components would require different evidence, controls, or category assignments. If a component already had a valid card, the meaning and lineage were absorbed into that card rather than creating a duplicate. A new L4 card was allowed only when an authorised split contained a distinct component not already represented. No new L4 card was created during Round 3 or AC-19.
+
+\begin{examplebox}{Separating intellectual-property and personality-rights mechanisms}
+\textbf{Before.} \riskid{G_INT_COPY_005} combined intellectual-property infringement with unauthorised use of a person's name, image, voice, or likeness.\\
+\textbf{Decision.} The intellectual-property branch was assigned to \riskid{G_INT_COPY_003}, \emph{Copyright, trademark, and patent infringement}. The personality-rights branch became \riskid{G_INT_PRIV_029}, \emph{Unauthorised commercial use of name, image, and likeness}.\\
+\textbf{Why split.} The protected rights, legal bases, evidence, and remedies differ. Treating the two as one L4 card would make both measurement and mitigation ambiguous.
+\end{examplebox}
+
+\begin{examplebox}{Decomposing a cultural and epistemic umbrella}
+\textbf{Before.} \riskid{G_SOC_CULT_021} mixed erosion of human writing capability with pollution of scholarly literature.\\
+\textbf{Decision.} The meanings were separated into \riskid{G_SOC_CULT_018}, \emph{Pollution of scholarly literature by AI-generated content}, and \riskid{G_SOC_CULT_013}, which covers erosion of human writing capacity.\\
+\textbf{Why split.} One mechanism concerns individual capability substitution; the other concerns contamination of a collective knowledge infrastructure.
+\end{examplebox}
+
+\subsection{Reassignment criterion}
+
+Reassignment was based on the primary failure mechanism rather than the most visible consequence or the source domain. The target L3 had to explain why the risk occurs, not merely where harm appears. Physical context was retained in the name and definition when it was substantively important, even if the card moved to General AI. Moving a card across L1 or L3 required a new target-compatible L4 ID and an old-to-new crosswalk.
+
+\begin{examplebox}{Pedestrian-path obstruction moved from Physical AI to General AI}
+\textbf{Before.} \riskid{P_INT_SAFETY_019}, \emph{Obstruction of public passage and accessibility exclusion}, was classified under Physical AI Safety because the visible consequence involved a robot blocking pavements, ramps, entrances, or pedestrian guidance.\\
+\textbf{Human-review instruction.} Move the card to General AI and map it to a category defined from functional and performance failure.\\
+\textbf{After.} \riskid{G_SYS_PERF_015}, \emph{Robot performance and accessibility failure in public-space operation}: ``The risk that a service robot operating in public space fails to reliably meet path-planning, position-keeping, clear-passage, or accessibility requirements, thereby obstructing or encroaching on pavements, ramps, entrances, or pedestrian guidance and restricting mobility and access for disabled people and other pedestrians.''\\
+\textbf{Why reassign.} The physical obstruction is the consequence and deployment context. The primary causal mechanism is failure to satisfy general performance and reliability requirements. The new card preserves the embodied context without misclassifying the mechanism as physical interaction safety.
+\end{examplebox}
+
+\begin{examplebox}{Security mechanism retained despite physical action}
+\textbf{Before.} \riskid{P_INT_TAMPER_001}, \emph{Sensor spoofing and signal injection}, was placed under physical tampering.\\
+\textbf{After.} \riskid{G_SYS_SECADV_061} under \emph{Security and Adversarial Robustness Failure}. The definition retains GNSS, camera, lidar, radar, RFID, audio, tactile, and wireless signals and their potential to manipulate physical-state estimation and subsequent physical action.\\
+\textbf{Why reassign.} Spoofing and signal injection are adversarial-input security attacks. Physical action is a downstream consequence, not the governing mechanism.
+\end{examplebox}
+
+\begin{examplebox}{General governance wording moved to Agentic deception}
+\textbf{Before.} \riskid{G_SOC_GOV_012} described an AI system weakening rights protection through self-interested intervention.\\
+\textbf{After.} \riskid{A_SYS_DECEPT_009}, \emph{Manipulation and concealment of governance rules for self-interest}.\\
+\textbf{Why reassign.} The operative mechanism is strategic, self-interested manipulation and concealment by an autonomous system. It therefore requires the Agentic Deception and Scheming category rather than a general governance-gap category.
+\end{examplebox}
+
+\subsection{Deletion criterion}
+
+Deletion was used conservatively when a card was not an independent AI risk formulation, was a broad consequence without a causal mechanism, was an unauthorised duplicate after consolidation, was too narrow to justify a distinct control, or could not be made consistent with the L3 master without inventing content. Deletion did not erase evidence. Source-row lineage and a tombstone recorded the title, identifier, and reason.
+
+\begin{examplebox}{Deleting a scenario that was too narrow}
+\riskid{P_INT_SAFETY_002}, \emph{Dangerous robot interaction caused by child over-trust and imitation}, was deleted in Round 3 after an explicit reviewer instruction. The card described a single population and scenario rather than a distinct mechanism not already covered by broader human-robot safety and over-trust cards. Its ID remains in the deletion tombstone register and is not reused.
+\end{examplebox}
+
+\subsection{Rewrite and retention criterion}
+
+Cards were retained and rewritten when the mechanism was valid but the name was vague, the scope was too narrow, the Korean and English texts were not equivalent, or the definition lacked an explicit AI causal role. Rewrites followed the tone of the L3 master and used recognised terminology. They did not introduce a new mechanism merely to save an invalid card.
+
+\begin{examplebox}{Terminology correction without semantic movement}
+\riskid{P_SYS_HARDWARE_003} remained under Hardware and Mechanical Integrity Failure. Its Korean definition had translated \emph{cosmic ray} as a homonymous term meaning spacecraft. AC-19 corrected it to the Korean term for cosmic radiation while leaving the ID, hierarchy, and English definition unchanged. This is a controlled terminology correction, not a reassignment.
+\end{examplebox}
+
+\section{Review Rounds and Audit Corrections}
+
+\subsection{Second-round recovery}
+
+The second-round source register contained 808 rows and 251 non-empty verbatim reviewer comments. The working baseline contained 798 L4 cards. Every source row received a final disposition. The recovery stage applied 166 requested actions: 80 reassignments, 39 rewrite-and-keep decisions, 19 splits, 14 merges, and 14 deletions. Lineage was matched by source-row identifiers rather than assuming that IDs remained unchanged.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{figures/fig05_review_operations.pdf}
+\caption{Second-round human-review instructions applied by operation. Counts refer to reviewed source rows, not net card-count changes.}
+\label{fig:operations}
+\end{figure}
+
+\subsection{Independent audit corrections}
+
+After recovery, line-by-line auditing identified remaining duplicates, composite cards, empty or underpopulated categories, scope problems, and one violation of the required separation between suicide preparation and execution. AC-01 restored that distinction. AC-02 absorbed 58 consensus duplicates. AC-05 populated empty L3 categories using approved transfers and referenced cards. AC-06 reinforced underpopulated categories and absorbed 16 governance and manipulation duplicates. AC-07 conducted a full MECE audit, absorbing 64 cards, reassigning 18, and removing two. AC-08 decomposed 18 consensus composite cards, primarily by reattributing their meaning to existing atomic cards.
+
+Subsequent corrections synchronised public and internal schemas, removed score fields from public pages, attached verified references, and created the approved Performance and Reliability Failure category. The audit process reduced the master from 798 to 629 cards before Round 3.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig03_rebuild_trajectory.pdf}
+\caption{Card-count trajectory. Increases reflect authorised splits or category reinforcement; decreases reflect deduplication, umbrella decomposition, scope curation, and explicit deletion.}
+\label{fig:trajectory}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/fig09_domain_review_trajectory.pdf}
+\caption{Domain composition at traceable review milestones. Changes combine deletion, absorption, authorised decomposition, and cross-domain reassignment, so adjacent differences should not be read as reassignment counts alone.}
+\label{fig:domain-trajectory}
+\end{figure}
+
+\subsection{Third-round human review}
+
+All 629 rows in three third-round tables were read before transformation. Thirty rows contained comments and 599 contained no requested change. The commented rows produced 19 reassign-and-rewrite decisions, six deletions, and five same-L3 generalisations. There were no merges, splits, new L4 cards, or new L3 categories in this round. Two independent reviews and adjudication were used for ambiguous cases. The result was 623 cards: 492 General, 66 Agentic, and 65 Physical.
+
+\subsection{Physical AI minimum corrections, AC-19}
+
+Two independent semantic audits then examined all Physical AI cards against the frozen L3 master. The user approved only three high-confidence minimum changes. Sensor and distribution drift moved from \riskid{P_SYS_HARDWARE_001} to \riskid{G_SYS_PERF_017}; sensor spoofing moved from \riskid{P_INT_TAMPER_001} to \riskid{G_SYS_SECADV_061}; and the cosmic-radiation Korean terminology was corrected in \riskid{P_SYS_HARDWARE_003}. No card was created, split, merged, or deleted. The total remained 623 while the distribution became 494 General, 66 Agentic, and 63 Physical.
+
+\subsection{Boundary cases and the largest disagreements}
+
+Physical AI produced the highest concentration of third-round comments: 17 of 77 Physical rows (22.1\%), compared with 13 of 487 General rows (2.7\%) and none of 65 Agentic rows. Six Round 3 decisions moved Physical cards to General AI, and AC-19 added two more. Seven of these eight moves entered a General System category and one entered General Interaction. The recurrent issue was not whether the card mentioned a robot, sensor, public space, or bodily consequence. It was whether sensing and actuation constituted the failure mechanism, or whether the governing construct was instead general performance, evaluation, security, or content-related risk.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/fig10_round3_review_pressure.pdf}
+\caption{Third-round review pressure by source domain. Physical AI had the smallest reviewed set but the highest share of commented rows.}
+\label{fig:review-pressure}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Recurring boundary questions resolved by human review.}
+\label{tab:boundaries}
+\begin{tabular}{L{0.22\textwidth}L{0.34\textwidth}L{0.34\textwidth}}
+\toprule
+Boundary & Similarity-based tendency & Human-review perspective \\
+\midrule
+Physical vs General & Physical objects, injury, sensors, or public space attract Physical categories. & The parent follows the constitutive failure mechanism, not the deployment setting or consequence. \\
+General vs Agentic & Goal, planning, or autonomy vocabulary attracts Agentic categories. & Agentic placement requires consequential autonomous goal pursuit, delegation, tool use, or resistance to control. \\
+Interaction vs System & User-facing consequences attract Interaction. & System design, evaluation, security, or performance remains System even when a person experiences the consequence. \\
+Valid risk vs topic description & Harm-related nouns produce a plausible category score. & A card must state an AI causal role and an observable failure, conduct, affected interest, or consequence. \\
+Single parent vs overlapping concepts & The highest score implies one definitive cluster. & The operational hierarchy uses one parent, while secondary conceptual relations can remain analytically valid. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The strongest documented reviewer disagreement concerned \riskid{G_INT_SELF_006}. One reviewer favoured reassignment to unethical interaction or deletion, while the other favoured a contextual-awareness failure. Adjudication selected \riskid{G_SYS_CONTEXT_013} because the source meaning concerned contextually inappropriate output and did not establish manipulative intent. This case shows that reviewers can agree that an assignment is wrong while disagreeing about the causal interpretation that should replace it.
+
+Other high-visibility disagreements exposed lexical failure modes. An emergency and disaster response card was attracted to Violence by words such as \emph{life}, \emph{safety}, \emph{emergency}, \emph{CPR}, and \emph{first aid}, although it did not formulate a valid General AI interaction risk; it was ultimately removed. By contrast, wage polarisation associated with AI adoption belonged in \riskid{G_SOC_ECON_012}, and cybercrime misuse at scale belonged in \riskid{G_SYS_SECADV_017}. Human reviewers relied on economic distribution and malicious system exploitation as governing constructs, not merely on the nearest centroid. These disagreements support a qualified reliability claim: algorithmic clustering is dependable for retrieval and audit triage, but not for final causal classification without human adjudication.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.47\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/fig04_final_domain_counts.pdf}
+\caption{Final L1 composition.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.47\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/fig06_domain_routing_matrix.pdf}
+\caption{Reviewed routing, excluding deletions.}
+\end{subfigure}
+\caption{Final domain composition and the concentration of recent cross-domain corrections.}
+\label{fig:domains}
+\end{figure}
+
+\section{Results}
+
+\subsection{Final release composition}
+
+The audited master contains 623 L4 cards. General AI accounts for 494 cards, Agentic AI for 66, and Physical AI for 63. The reduction from the 798-card rebuild baseline reconciles as 177 cards retired through merge or absorption, 21 removed as non-retained risk formulations, and a net addition of 23 from authorised splitting and decomposition: $798-177-21+23=623$. This equation describes card-level disposition. Counts of reviewer instructions are larger because one source row can contribute meaning or lineage to multiple output cards.
+
+\begin{table}[H]
+\centering
+\caption{Final audited master, 1 September 2026.}
+\label{tab:final}
+\begin{tabular}{lrr}
+\toprule
+L1 domain & Active L4 cards & Share \\
+\midrule
+General AI & 494 & 79.3\% \\
+Agentic AI & 66 & 10.6\% \\
+Physical AI & 63 & 10.1\% \\
+\midrule
+Total & 623 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 50-row L3 master contains 47 substantive categories and three Others queues. Every substantive L3 contains at least one card, and no active L4 is assigned to Others. The current L3 hash is \nolinkurl{1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54}.
+
+\subsection{What changed in the Physical AI boundary}
+
+The most consequential result is a narrower and more causal definition of Physical AI risk. The Physical branch now concentrates on sensing, world-state estimation, control, actuation, mechanical integrity, and physical interaction when those mechanisms are constitutive. Cards involving robots remain eligible for General AI when the governing mechanism is benchmark failure, evaluation failure, performance degradation, adversarial security, or institutional governance. This prevents the taxonomy from treating every risk with a physical consequence as a Physical AI risk.
+
+The pedestrian-path obstruction example demonstrates the value of this rule. It preserves accessibility and public-space consequences while locating the card under performance and reliability. The same reasoning moved rare-condition benchmark omissions to General Evaluation and Assurance Failure, foundation-model security vulnerabilities with physical-action consequences to General Security and Adversarial Robustness Failure, and sensor drift to General Performance and Reliability Failure.
+
+\section{Validation and Reproducibility}
+
+\subsection{Validation gates}
+
+The current release passed eleven automated gates. These included unique IDs, zero exact duplicates, zero Others assignments, complete Round 3 coverage, action reconciliation, absence of deleted IDs, equality of the public and full-data core fields, an unchanged L3 master during Round 3 and AC-19, correct domain totals, no unauthorised category creation, and exact presence of all AC-19 corrections.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig07_validation_chain.pdf}
+\caption{Auditable validation chain. Semantic approval and data integrity are separate gates.}
+\label{fig:validation}
+\end{figure}
+
+\subsection{Lineage and deletion controls}
+
+Every reassignment records the old ID, new ID, old and new hierarchy, reviewer comment, interpretation, independent judgements, adjudication, and result. Every deletion has a tombstone. Merged and deleted identifiers are not recycled. Source-row lineage is preserved as a many-to-many relation so that a split can distribute one source card across several atomic cards and a merge can combine several source rows under one representative.
+
+\subsection{Public and internal data separation}
+
+The release contains one L1 CSV, one L1/L2/L3 CSV, and three domain-specific L4 CSVs. Public files expose the current taxonomy and attributes without EM scores, score status, review comments, or provenance details. Internal full-column files retain those fields for audit. This separation allows public use without discarding decision evidence.
+
+\subsection{Source and build reproducibility}
+
+The Overleaf bundle accompanying this report contains the manuscript source, bibliography, vector PDF figures, 600 dpi PNG figures, source tables, a deterministic figure-generation script, and a source inventory with SHA-256 hashes. The original source PDF is referenced by hash but is not modified. The report can be compiled with XeLaTeX and BibTeX.
+
+\section{Discussion}
+
+\subsection{Methodological implications}
+
+The project shows that taxonomy construction should not be reduced to clustering. Embeddings are useful for discovery, candidate ranking, and duplicate detection. Human review is required to decide whether two texts instantiate the same governance construct, whether a physical outcome changes the responsible domain, and whether a composite card should be split or absorbed. The strongest operational design is therefore hybrid in a broader sense: computational retrieval and consistency checks support, but do not replace, explicit semantic decisions.
+
+The report also shows why L4 atomicity matters. A broad umbrella can inflate apparent coverage while making evaluation impossible. Conversely, excessive fragmentation can create near-duplicates and unstable assignments. Merge and split are therefore dual operations governed by the same question: does each surviving card correspond to one distinct mechanism that can be evidenced, evaluated, and mitigated?
+
+\subsection{Limitations}
+
+First, the 3,906,767-record evidence space and the 623-card current master are connected through versioned curation rather than a simple one-record-to-one-card derivation. Second, the current release preserves historical EM and HD provenance labels even though scores were not recomputed after later text edits. They must not be interpreted as current confidence estimates. Third, line-by-line review improves fidelity to documented human intent but does not establish severity, probability, or completeness of the risk universe. Fourth, the taxonomy remains a single-parent hierarchy even though many risks have secondary relationships. Cross-links and multi-label analytical views should supplement, not silently replace, the operational parent assignment.
+
+\section{Conclusion}
+
+RAI Risk Taxonomy 2.0 now has a traceable construction history from large-scale evidence collection through semantic mapping, rebuild, human-review recovery, independent audit, and release synchronisation. The current master contains 623 bilingual, AI-grounded L4 cards under 47 substantive L3 categories. The decisive methodological advance is not a new similarity score. It is an auditable decision protocol that distinguishes semantic equivalence from surface similarity, causal mechanism from visible consequence, and valid atomic risks from broad outcomes or narrow scenarios. The boxed cases show how this protocol changes practical classification, particularly where Physical AI context had previously obscured a General performance, security, evaluation, or governance mechanism.
+
+\section*{Data and Code Availability}
+
+The public release is available at \url{https://deep1003.github.io/RAI-Risk-Taxonomy-2.0/}. The local release package contains the public CSVs, full audit records, validation ledgers, and report assets. This manuscript's exact source inventory is provided in \code{source_inventory.csv}.
+
+\section*{Author Contributions}
+
+Youngsam Chun and Sooyoung Kim contributed equally to this work and share first authorship. Youngsam Chun is the corresponding author. The author order is Youngsam Chun, Sooyoung Kim, Yunjin Park, Jungwon Yoon, Jihwan Chang, Jinhee Jeong, and Jaehyun Kim. A detailed CRediT contribution statement should be confirmed by all authors before external submission.
+
+\section*{Competing Interests}
+
+The authors declare no competing interests for this technical report.
+
+\appendix
+\section{Decision Checklist}
+
+\begin{longtable}{L{0.16\textwidth}L{0.36\textwidth}L{0.38\textwidth}}
+\caption{Operational decision checklist for L4 transformations.}\label{tab:checklist}\\
+\toprule
+Operation & Required condition & Mandatory record \\
+\midrule
+\endfirsthead
+\toprule
+Operation & Required condition & Mandatory record \\
+\midrule
+\endhead
+Merge & Same causal mechanism, affected object, harmful outcome, and control construct; no protected-group boundary lost & Representative ID, retired IDs, revised bilingual text, lineage union, attribute union, rationale \\
+Split & Two or more independently measurable mechanisms, harms, actors, stages, or L3 destinations & Source ID, component meanings, target IDs, lineage distribution, no-duplicate check \\
+Reassign & Target L3 explains the primary cause more directly than the current L3; physical consequence alone is insufficient & Old-to-new ID crosswalk, before/after hierarchy, preserved context, reviewer basis \\
+Delete & No independent AI causal mechanism; unauthorised duplicate; broad outcome; unjustifiably narrow scenario; or impossible L3 fit without invention & Tombstone, source row, title, reason, non-reuse of ID \\
+Rewrite and retain & Mechanism valid but wording, scope, bilingual equivalence, or AI grounding is defective & Changed fields, approved terminology, semantic-equivalence check \\
+\bottomrule
+\end{longtable}
+
+\section{Release Reconciliation}
+
+\begin{table}[H]
+\centering
+\caption{Major rebuild stages and active-card totals.}
+\begin{tabular}{lr}
+\toprule
+Stage & Active L4 cards \\
+\midrule
+Rebuild baseline & 798 \\
+Review recovery before semantic curation & 791 \\
+Semantic deduplication & 778 \\
+Semantic splitting & 783 \\
+Scope and granularity curation & 777 \\
+AC-01 to AC-08 audited master & 629 \\
+Third-round review & 623 \\
+AC-19 final master & 623 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Traceable L1 composition by selected review milestone.}
+\label{tab:domain-stages}
+\begin{tabular}{lrrrr}
+\toprule
+Stage & General & Agentic & Physical & Total \\
+\midrule
+Rebuild baseline & 630 & 74 & 94 & 798 \\
+Round 2 recovery & 607 & 77 & 93 & 777 \\
+AC-08 audited master & 487 & 65 & 77 & 629 \\
+Round 3 & 492 & 66 & 65 & 623 \\
+AC-19 final master & 494 & 66 & 63 & 623 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Observed mapping and broader intervention by review stage.}
+\label{tab:intervention-stages}
+\begin{tabular}{lrrrr}
+\toprule
+Stage & Rows reviewed & Recorded interventions & L3 changed & L3 change rate \\
+\midrule
+Round 1 & 808 & 196* & 196 & 24.3\% \\
+Round 2 & 808 & 166 & 80 & 9.9\% \\
+Round 3 & 629 & 30 & 19 & 3.0\% \\
+AC-19 Physical audit & 65 & 3 & 2 & 3.1\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+*For Round 1, the recoverable count is the set of algorithmic Top-1 assignments replaced by HD. Non-mapping first-round edits are not available in the same decision-ledger schema. The reduction in intervention across rounds is consistent with convergence of the reviewed artefact, but it is not a longitudinal error curve. The reviewed populations, available operations, and domain composition changed between stages. In particular, the third-round concentration of comments in Physical AI shows that a small overall intervention rate can coexist with a difficult local boundary.
+
+\section{Final Hierarchy Summary}
+
+Table~\ref{tab:final-l2} records the final L1 and L2 composition after aligning each card to the frozen L3 master's parent path. Table~\ref{tab:hierarchy-annex} then provides all 50 L3 rows, the number of final L4 descendants, and one illustrative final L4 card. This is a complete hierarchy-level annex rather than a reproduction of all 623 L4 records; the full bilingual card list remains in the three release CSVs.
+
+\begin{table}[H]
+\centering
+\caption{Final L1 and L2 composition aligned to the L3 master.}
+\label{tab:final-l2}
+\begin{tabular}{llr}
+\toprule
+L1 & L2 & Active L4 cards \\
+\midrule
+General AI & Interaction & 203 \\
+General AI & System & 198 \\
+General AI & Societal Impact & 93 \\
+Agentic AI & System & 47 \\
+Agentic AI & Interaction & 19 \\
+Physical AI & System & 44 \\
+Physical AI & Interaction & 19 \\
+\midrule
+Total & & 623 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The master-aligned calculation detected two release-schema inconsistencies. \nolinkurl{A_SYS_GOAL_023} and \nolinkurl{A_SYS_AUTH_024} have L3 parents under \nolinkurl{A_SYS} in the frozen master but retain stale \nolinkurl{A_INT} values in their public L2 fields. The annex counts them under Agentic System. The underlying taxonomy files were not silently changed while preparing this report; these rows are recorded as release-schema QA items for a separately authorised correction.
+
+{\footnotesize
+\input{tables/appendix_hierarchy_summary.tex}
+}
+
+\begingroup
+\small
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+
+\end{document}

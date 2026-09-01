@@ -1,0 +1,11 @@
+L1_ID,L1_Title_en,L2_ID,L2_Title_en,L4_Count
+L1_A,Agentic AI,,,0
+L1_A,Agentic AI,A_INT,Interaction,19
+L1_A,Agentic AI,A_SYS,System,47
+L1_G,General AI,,,0
+L1_G,General AI,G_INT,Interaction,203
+L1_G,General AI,G_SOC,Societal Impact,93
+L1_G,General AI,G_SYS,System,198
+L1_P,Physical AI,,,0
+L1_P,Physical AI,P_INT,Interaction,19
+L1_P,Physical AI,P_SYS,System,44

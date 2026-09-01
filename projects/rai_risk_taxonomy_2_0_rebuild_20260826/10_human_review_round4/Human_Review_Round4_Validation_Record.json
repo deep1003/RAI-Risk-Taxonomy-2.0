@@ -1,0 +1,71 @@
+{
+  "correction_id": "AC-20",
+  "date": "2026-09-01",
+  "method": "Fourth-round human-review interpretation with two independent expert reviews and user adjudication; no EM or Hybrid EM",
+  "source_rows": 623,
+  "review_state": {
+    "general_no_objection": 473,
+    "general_split": 2,
+    "general_move": 8,
+    "general_discussion": 9,
+    "agentic_blank": 66,
+    "physical_stay": 61,
+    "physical_special": 4
+  },
+  "actions": {
+    "explicit_splits": 2,
+    "explicit_moves": 8,
+    "discussion_rows": 9,
+    "cross_domain_moves": 1,
+    "merged_duplicate_cards": 2,
+    "lineage_backed_split_children": 1,
+    "new_de_novo_cards": 0,
+    "l3_revisions": 1,
+    "already_applied_verified": 3,
+    "structural_l3_master_alignment_rows": 2
+  },
+  "l3_revision": {
+    "L3_ID": "G_SYS_POLICY",
+    "before": "System Policy Exposure",
+    "after": "Confidential Information Disclosure",
+    "user_approved": true
+  },
+  "counts": {
+    "General": 492,
+    "Agentic": 67,
+    "Physical": 63,
+    "total": 622
+  },
+  "id_crosswalk": {
+    "G_INT_ILLEGAL_004": "G_INT_WEAP_031",
+    "G_INT_ANTH_010": "G_INT_REL_008",
+    "G_SYS_OEXT_012": "G_SYS_PERF_018",
+    "G_SYS_TRANS_019": "G_SOC_GOV_044",
+    "G_SYS_EVAL_058": "G_SYS_PERF_020",
+    "G_SYS_EVAL_059": "G_SOC_GOV_045",
+    "G_SYS_EVAL_067": "G_SYS_PERF_021",
+    "G_SOC_POWER_020": "G_SOC_GOV_046",
+    "G_INT_COPY_004": "G_SYS_POLICY_009",
+    "G_INT_COPY_013": "G_SYS_POLICY_010",
+    "G_SYS_SECADV_017": "G_INT_WEAP_032",
+    "G_SYS_SECADV_034": "A_SYS_AUTH_025",
+    "G_SYS_EVAL_056": "G_SYS_PERF_019",
+    "P_INT_SAFETY_003": "P_SYS_CONTROL_057",
+    "G_SYS_SECADV_033": "G_SYS_SECADV_060",
+    "G_SYS_SECADV_048": "G_SYS_SECADV_049"
+  },
+  "retired_ids": [
+    "G_SYS_SECADV_033",
+    "G_SYS_SECADV_048"
+  ],
+  "l3_master_rows": 50,
+  "l3_master_sha256_before": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "l3_master_sha256_after": "a1c19788dbbf4cd579bf166eeb297bed7e870212590262481254a6f8b8673cee",
+  "duplicate_l4_ids": 0,
+  "others_assignments": 0,
+  "status": "PASS",
+  "structural_l3_master_alignment_ids": [
+    "A_SYS_GOAL_023",
+    "A_SYS_AUTH_024"
+  ]
+}

@@ -1,0 +1,51 @@
+﻿L1_ID,L1_Title_en,L2_ID,L2_Title_en,L3_ID,L3_Title_en,L4_Count,Representative_L4_ID,Representative_L4_Title_en
+L1_G,General AI,G_INT,Interaction,G_INT_VIOL,Violence,11,G_INT_VIOL_001,Algorithmic radicalisation
+L1_G,General AI,G_INT,Interaction,G_INT_SEX,Sexual Harm and Exploitation,9,G_INT_SEX_002,Explicit sexual content generation in non-permitted contexts
+L1_G,General AI,G_INT,Interaction,G_INT_SELF,Self-harm,7,G_INT_SELF_001,Concealment and avoidance strategies for self-harm
+L1_G,General AI,G_INT,Interaction,G_INT_ALLOC,Allocative Discrimination,12,G_INT_ALLOC_001,Adverse resource allocation to protected groups
+L1_G,General AI,G_INT,Interaction,G_INT_REPR,Representational Harm and Stereotyping,29,G_INT_REPR_001,Biased statements and recommendations
+L1_G,General AI,G_INT,Interaction,G_INT_VALUE,Value Imposition and Normative Homogenization,16,G_INT_VALUE_002,Annotation disagreement suppression
+L1_G,General AI,G_INT,Interaction,G_INT_POL,Political Bias and Manipulation,7,G_INT_POL_001,Automated targeted influence operations
+L1_G,General AI,G_INT,Interaction,G_INT_PRIV,Privacy Violation,26,G_INT_PRIV_001,AI-enabled mass and unlawful public surveillance
+L1_G,General AI,G_INT,Interaction,G_INT_ILLEGAL,Illegal Conduct,17,G_INT_ILLEGAL_001,Assistance with unlawful reputational or rights violations
+L1_G,General AI,G_INT,Interaction,G_INT_UNETH,Unethical Conduct and Manipulation,25,G_INT_UNETH_002,AI manipulation of vulnerable groups in care contexts
+L1_G,General AI,G_INT,Interaction,G_INT_COPY,Copyright Infringement,8,G_INT_COPY_001,Circumvention of DRM and copyright protection technologies
+L1_G,General AI,G_INT,Interaction,G_INT_WEAP,Weaponization,22,G_INT_WEAP_002,Assistance for designing and conducting dangerous scientific experiments
+L1_G,General AI,G_INT,Interaction,G_INT_ANTH,Anthropomorphism,7,G_INT_ANTH_001,Anthropomorphic misrepresentation of capacity for ethical judgement
+L1_G,General AI,G_INT,Interaction,G_INT_REL,Unhealthy Human-AI Relationship,6,G_INT_REL_001,Excessive functional dependence on AI systems in daily life
+L1_G,General AI,G_SYS,System,G_SYS_OREF,Over-Refusal,3,G_SYS_OREF_001,Unjustified refusal of legitimate requests due to intent misclassification in safety controls
+L1_G,General AI,G_SYS,System,G_SYS_OEXT,Over-Extension,7,G_SYS_OEXT_001,AI advice beyond validated professional scope
+L1_G,General AI,G_SYS,System,G_SYS_INPUT,Input Comprehension Failure,3,G_SYS_INPUT_001,Errors from poor prompt quality
+L1_G,General AI,G_SYS,System,G_SYS_MISINFO,Misinformation,19,G_SYS_MISINFO_002,Amplification of hallucinations through context consistency
+L1_G,General AI,G_SYS,System,G_SYS_CONTEXT,Context-Awareness Failure,12,G_SYS_CONTEXT_001,Agent risk-awareness failure
+L1_G,General AI,G_SYS,System,G_SYS_INCONS,Inconsistency,3,G_SYS_INCONS_001,Inconsistency in human-feedback standards
+L1_G,General AI,G_SYS,System,G_SYS_OVERCONF,Overconfidence,5,G_SYS_OVERCONF_001,Advice given on insufficient information
+L1_G,General AI,G_SYS,System,G_SYS_CONTEST,Non-Contestability,4,G_SYS_CONTEST_001,Erosion of human decision-making capacity and veto
+L1_G,General AI,G_SYS,System,G_SYS_SECADV,Security and Adversarial Robustness Failure,36,G_SYS_SECADV_001,Adversarial input perturbation
+L1_G,General AI,G_SYS,System,G_SYS_POLICY,Confidential Information Disclosure,9,G_SYS_POLICY_001,Confidential information in training data disclosed through outputs
+L1_G,General AI,G_SYS,System,G_SYS_TRANS,Lack of Transparency,16,G_SYS_TRANS_001,Bias concealment through manipulated explanations
+L1_G,General AI,G_SYS,System,G_SYS_EVAL,Evaluation and Assurance Failure,56,G_SYS_EVAL_001,AI benchmarks that exclude diverse users and rare harms
+L1_G,General AI,G_SYS,System,G_SYS_PERF,Performance and Reliability Failure,21,G_SYS_PERF_001,Performance degradation from irrelevant context
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_ECON,Economic and Employment Disruption,8,G_SOC_ECON_001,Displacement of human creative work by synthetic substitutes
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_POWER,Inequality and Power Concentration,19,G_SOC_POWER_001,AI provider lock-in
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_DEMOC,Erosion of Democracy and Civic Order,9,G_SOC_DEMOC_001,AI-enabled censorship and suppression of public discourse
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_ENV,Environmental and Sustainability Impact,9,G_SOC_ENV_001,Battery fire and hazardous end-of-life waste
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_CULT,Cultural and Epistemic Erosion,19,G_SOC_CULT_001,Cognitive offloading risk
+L1_G,General AI,G_SOC,Societal Impact,G_SOC_GOV,Governance and Accountability Void,32,G_SOC_GOV_002,Accountability and governance gaps for AI decisions and harm
+L1_A,Agentic AI,A_SYS,System,A_SYS_GOAL,Goal Misalignment,18,A_SYS_GOAL_003,Agent task drift
+L1_A,Agentic AI,A_SYS,System,A_SYS_AUTH,Excessive Authority and Agency,18,A_SYS_AUTH_001,Agent privilege compromise
+L1_A,Agentic AI,A_SYS,System,A_SYS_SELFCOR,Self-Correction Failure,3,A_SYS_SELFCOR_001,Multi-turn risk escalation
+L1_A,Agentic AI,A_SYS,System,A_SYS_DECEPT,Deception and Scheming,6,A_SYS_DECEPT_001,Collapse of multi-agent cooperation from undetectable attacks
+L1_A,Agentic AI,A_SYS,System,A_SYS_TRACE,Accountability and Traceability Gap,3,A_SYS_TRACE_001,Accountability implementation gap in autonomous agents
+L1_A,Agentic AI,A_INT,Interaction,A_INT_CASCADE,Cascading Failure and Instability,8,A_INT_CASCADE_001,Abrupt performance collapse from phase transitions in multi-agent systems
+L1_A,Agentic AI,A_INT,Interaction,A_INT_COORD,Coordination Failure,5,A_INT_COORD_001,Collective harm from multi-agent coordination failure
+L1_A,Agentic AI,A_INT,Interaction,A_INT_CONFLICT,Competitive Conflict,3,A_INT_CONFLICT_001,Accelerated adaptation toward harmful equilibria under selection pressure
+L1_A,Agentic AI,A_INT,Interaction,A_INT_COLLUSION,Collusion,3,A_INT_COLLUSION_001,Emergent collusion among AI agents
+L1_P,Physical AI,P_SYS,System,P_SYS_STATE,Physical State Estimation and Sensor-Fusion Failure,7,P_SYS_STATE_003,Contact-rich manipulation force-sensing failure
+L1_P,Physical AI,P_SYS,System,P_SYS_CONTROL,Unsafe Physical Control and Actuation,36,P_SYS_CONTROL_001,Algorithmic design failure
+L1_P,Physical AI,P_SYS,System,P_SYS_HARDWARE,Hardware and Mechanical Integrity Failure,2,P_SYS_HARDWARE_002,Erroneous execution from hardware faults
+L1_P,Physical AI,P_INT,Interaction,P_INT_SAFETY,Human-Robot Physical Safety Failure,16,P_INT_SAFETY_001,Mistiming or inappropriate manner of physical intervention by embodied systems
+L1_P,Physical AI,P_INT,Interaction,P_INT_TAMPER,Physical Tampering and Sabotage,2,P_INT_TAMPER_002,Physical disabling of safety interlocks and emergency stops
+L1_G,General AI,,,G_Others,Others and human decision,0,,
+L1_A,Agentic AI,,,A_Others,Others and human decision,0,,
+L1_P,Physical AI,,,P_Others,Others and human decision,0,,

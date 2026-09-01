@@ -7,17 +7,19 @@ import csv
 import hashlib
 import json
 import re
+import shutil
 from collections import Counter
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ID = "RAI-Risk-Taxonomy-2.0-master"
-REVIEW_SNAPSHOT_ID = "human-review-round3-ac19-20260901"
+REVIEW_SNAPSHOT_ID = "human-review-round4-ac20-20260901"
 SOURCE = ROOT / "releases" / RELEASE_ID
 DATA = SOURCE / "data"
 FULL_DATA = ROOT / "handover" / "RAI-Risk-Taxonomy-2.0-master_20260829" / "01_data"
 OUT = ROOT / "public" / "data" / "releases" / RELEASE_ID
+GOLDEN_LEDGER = SOURCE / "validation" / "L4_Golden_Reference_Ledger.csv"
 
 L4_FILES = ("L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv")
 L2_CATEGORY_IDS = {
@@ -51,9 +53,10 @@ def update_static_html(counts: dict[str, int], validation: dict[str, int | str])
     html = re.sub(r"explore \d+ bilingual L4", f"explore {counts['l4']} bilingual L4", html)
     html = re.sub(r"Master · \d+ L4 Risks", f"Master · {counts['l4']} L4 Risks", html)
     html = re.sub(r"REVIEWED MASTER RELEASE · \d{4}-\d{2}-\d{2}", "REVIEWED MASTER RELEASE · 2026-09-01", html)
-    html = re.sub(r'assets/site\.css\?v=[^"\']+', "assets/site.css?v=master-20260901-ac19", html)
-    html = re.sub(r'assets/site\.js\?v=[^"\']+', "assets/site.js?v=master-20260901-ac19", html)
-    html = html.replace("<strong>2차 휴먼검수 라운드</strong>", "<strong>3차 휴먼검수 반영</strong>")
+    html = re.sub(r'assets/site\.css\?v=[^"\']+', "assets/site.css?v=master-20260901-ac20", html)
+    html = re.sub(r'assets/site\.js\?v=[^"\']+', "assets/site.js?v=master-20260901-ac20", html)
+    html = html.replace("<strong>2차 휴먼검수 라운드</strong>", "<strong>4차 휴먼검수 반영</strong>")
+    html = html.replace("<strong>3차 휴먼검수 반영</strong>", "<strong>4차 휴먼검수 반영</strong>")
     html = re.sub(
         r'(<strong id="stat-l4">)\d+(</strong><small>).*?(</small>)',
         rf"\g<1>{counts['l4']}\g<2>{counts['em']} retained EM labels · {counts['hd']} retained HD decisions\g<3>",
@@ -155,6 +158,10 @@ def hierarchy_nodes(rows: list[dict[str, str]]) -> list[dict[str, object]]:
 
 def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]:
     mapping_method = row["Mapping_Method"]
+    try:
+        references = json.loads(row.get("References") or "[]")
+    except json.JSONDecodeError as error:
+        raise ValueError(f"Invalid References JSON for {row['L4_ID']}") from error
     return {
         "release_id": RELEASE_ID,
         "review_snapshot_id": review_snapshot_id,
@@ -169,17 +176,9 @@ def site_card(row: dict[str, str], review_snapshot_id: str) -> dict[str, object]
         "decision_required": mapping_method == "HD",
         "keywords_ko": [row.get(f"L4_Keyword_{index}_ko", "") for index in range(1, 4)],
         "keywords_en": [row.get(f"L4_Keyword_{index}_en", "") for index in range(1, 4)],
-        "hd_reason": row["HD_Reason"] or None,
         "facet": row["facet"] or None,
         "act_type": row["act-type"] or None,
-        "source_row_id": row["source_row_id"],
-        "source_domain": row["Source_Domain"],
-        "source_l4_id": row["Source_L4_ID"] or None,
-        "source_l4_ids": row["Source_L4_IDs"] or None,
-        "source_instruction_prompt": row["Source_Instruction_Prompt"] or None,
-        "domain_route_basis": row["Domain_Route_Basis"],
-        "transformation_action": row["Transformation_Action"],
-        "transformation_rationale": row["Transformation_Rationale"],
+        "references": references,
     }
 
 
@@ -202,6 +201,9 @@ def main() -> None:
     if mismatched:
         raise ValueError(f"Full/public core fields differ for {len(mismatched)} cards")
     review_snapshot_id = REVIEW_SNAPSHOT_ID
+    golden_rows = read_csv(GOLDEN_LEDGER)
+    golden_tiers = Counter(row["source_quality_tier"] for row in golden_rows)
+    golden_link_status = Counter(row["verification_status"] for row in golden_rows)
     cards = [site_card(row, review_snapshot_id) for row in card_rows]
     nodes = hierarchy_nodes(hierarchy_rows)
 
@@ -250,16 +252,16 @@ def main() -> None:
             "final_total": source_summary["cleaned_total"],
         },
         "method": {
-            "algorithm": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
+            "algorithm": "Deterministic interpretation of fourth-round human-review intent and user-approved AC-20 adjudication",
             "em_or_hybrid_em_executed_in_this_round": False,
-            "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
-            "boundary_policy": "Apply every non-empty third-round human-review comment and require zero final Others assignments",
-            "l1_routing_policy": "Apply explicit human-review routing decisions and preserve Physical AI mechanisms and consequences when cards move to General AI",
+            "score_policy": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
+            "boundary_policy": "Apply every non-empty fourth-round human-review comment, actively adjudicate all nine General discussion rows, and require zero final Others assignments",
+            "l1_routing_policy": "Apply explicit human-review routing decisions, including the General-to-Agentic sandbox-escape transfer, and preserve reviewed cross-domain lineage",
             "l3_master_precedence": True,
             "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
             "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
-            "semantic_deduplication_policy": "No merge was performed in round 3 because no third-round comment explicitly authorised one",
-            "scope_granularity_policy": "Round 3 applied six explicit deletions and five same-L3 scope generalisations without creating a new L4 or L3",
+            "semantic_deduplication_policy": "Two discussion cards were merged into existing semantic survivors, with secondary meanings preserved through lineage links",
+            "scope_granularity_policy": "Round 4 applied two explicit splits, eight explicit moves, nine discussion adjudications, and one lineage-backed split child without a de novo unrelated L4 or a new L3",
         },
         "human_review": {
             "review_snapshot_id": review_snapshot_id,
@@ -268,7 +270,16 @@ def main() -> None:
             "daily_aggregation": True,
             "automatic_reassignment": False,
             "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
-            "application_policy": "All 629 review rows were read; the 30 non-empty comments were interpreted and applied under the user's explicit instruction, with two independent expert reviews for ambiguous cases",
+            "application_policy": "All 623 review rows were read. General contained 473 no-objection, 2 split, 8 move, and 9 discussion decisions. Physical contained 61 stay and 4 special decisions. The 66 blank Agentic rows were excluded from approval. Two independent expert reviews informed ambiguous-case adjudication.",
+        },
+        "golden_references": {
+            "cards_with_reference": len(golden_rows),
+            "cards_with_direct_quote": sum(bool(row["direct_quote"].strip()) for row in golden_rows),
+            "unique_source_urls": len({row["ref_url"] for row in golden_rows}),
+            "source_quality_tiers": dict(golden_tiers),
+            "link_verification_status": dict(golden_link_status),
+            "public_human_review_comments_exposed": False,
+            "ledger": f"releases/{RELEASE_ID}/validation/L4_Golden_Reference_Ledger.csv",
         },
         "score_status_counts": dict(score_status_counts),
         "validation": {"status": "PASS", "passed": source_summary["validation_passed"],
@@ -301,6 +312,15 @@ def main() -> None:
         },
     )
     update_static_html(manifest["counts"], manifest["validation"])
+    handover_web = ROOT / "handover" / "RAI-Risk-Taxonomy-2.0-master_20260829" / "04_web"
+    handover_web.mkdir(parents=True, exist_ok=True)
+    for source, name in (
+        (ROOT / "index.html", "index.html"),
+        (OUT / "cards.json", "cards.json"),
+        (OUT / "hierarchy.json", "hierarchy.json"),
+        (OUT / "manifest.json", "public_manifest.json"),
+    ):
+        shutil.copy2(source, handover_web / name)
     print(json.dumps(manifest["counts"], ensure_ascii=False, indent=2))
 
 

@@ -1,0 +1,4 @@
+stage,rows_reviewed,rows_with_comment_or_change,reassignments,comment_or_change_rate,reassignment_rate
+Round 2,808,251,80,31.064356435643564,9.900990099009901
+Round 3,629,30,19,4.769475357710652,3.0206677265500796
+AC-19 Physical audit,65,3,2,4.615384615384616,3.076923076923077

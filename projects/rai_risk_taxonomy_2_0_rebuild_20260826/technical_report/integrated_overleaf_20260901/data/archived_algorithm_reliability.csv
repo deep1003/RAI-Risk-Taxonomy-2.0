@@ -1,0 +1,7 @@
+diagnostic,all_active_percent,released_subset_percent
+Top-1 containment,71.9,81.6
+Top-2 containment,85.3,91.2
+Top-3 containment,91.3,94.6
+Top-5 containment,95.2,97.2
+Stability at sigma=0.01,95.0,96.0
+Stability at sigma=0.05,75.0,80.7

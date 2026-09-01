@@ -1,0 +1,11 @@
+source_role,path,sha256,version_note
+Original Physical AI design report,/Users/deep1003/Downloads/_71202069f7a526321d473c9716710d2dc4ca4e-ERA-Cambridge Proect (7)-230826-042038 (1).pdf,c3bf108d6ff74bb9cb5d3659d7ed87cc5ec9d025b44f45d8cc4d4ec8930fd12c,14-page Confluence export dated 2026-08-23
+Prior Technical Report PDF,/Users/deep1003/data3/RAI-Risk-Taxonomy/output/pdf/rai_risk_taxonomy_technical_report_2_0_en.pdf,65ace7a25f94a0311b0cac195bc905a3f5c11dd9355f4f482e93f0cae94bd06b,Historical evidence and semantic-mapping report
+Prior Technical Report source,/Users/deep1003/data3/RAI-Risk-Taxonomy/reports/latex/rai_risk_taxonomy_technical_report_2_0_en.tex,909860044d2c634c91178ba571ccb1c41dd4f86375ea1b6b26d26ad3322d2e36,Historical LaTeX source
+Semantic-space paper,/Users/deep1003/data3/RAI-Risk-Taxonomy/paper_semantic_space/AI_Risk_Semantic_Space_main.pdf,d918125d84eb2c6113f8d2141f43e108caa12e50342fee3896836fad8d9fee91,Historical 1660-card analysis
+Current release manifest,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/manifest.json,92e34c6c11c9a596756a70a132c4a22117688ca3db82795705c579fcfda20324,623-card audited master
+Audit correction log,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/validation/Audit_Correction_Log.csv,c4012ede2709a4080a4ddc9db2b9fb4b38462d4abe7258e2ba41eb2885ee2188,AC-01 through AC-19 register
+Round-2 decision ledger,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/validation/Human_Review_Round2_Decision_Ledger.csv,28613d059907c48bff3d5a45303ad1e576a7131bf85dc1f6a4a2f28bf21d5565,808 source rows
+Round-3 decision ledger,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/validation/Human_Review_Round3_Decision_Ledger.csv,0d7a78b0079b4064be9c401f8a760c14d82ab750a6d013bc2d3049807969a155,629 reviewed rows
+Physical minimum-correction ledger,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/validation/Physical_Minimal_Corrections_AC19_Ledger.csv,d4841e87d6f3319ecbcbf79254d5128e095845e21afe909379bbfe7160f803fd,Three user-approved changes
+L3 master,/Users/deep1003/data3/RAI-Risk-Taxonomy/releases/RAI-Risk-Taxonomy-2.0-master/data/L1_L2_L3_Master.csv,1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54,50 rows including three Others queues

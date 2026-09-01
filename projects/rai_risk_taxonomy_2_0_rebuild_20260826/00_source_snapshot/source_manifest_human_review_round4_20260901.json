@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-09-01T16:46:09+09:00",
+  "capture_method": "Chrome authenticated DOM table extraction",
+  "normalisation": {
+    "encoding": "UTF-8 with BOM",
+    "column_count": 26,
+    "review_column": "휴먼검수 4차 의견",
+    "note": "The source header was '검토' on General and '휴먼검수' on Agentic and Physical. Only this header label was normalised; cell contents were preserved."
+  },
+  "sources": [
+    {
+      "domain": "General",
+      "page_id": "937139849",
+      "url": "https://ktspace.atlassian.net/wiki/spaces/AI2X/pages/937139849/General+-+4",
+      "rows": 492,
+      "sha256": "e3ccc29f184741d724bcd0b4e07cc8093e77aaca0b355fe4563e50520b50ab8f",
+      "file": "csv/L4_General_Human_Review_Round4_KTSPACE_937139849_20260901.csv"
+    },
+    {
+      "domain": "Agentic",
+      "page_id": "937205808",
+      "url": "https://ktspace.atlassian.net/wiki/spaces/AI2X/pages/937205808/Agentic+-+4",
+      "rows": 66,
+      "sha256": "93d237bca7fe7f5bd709497bfc49dba724ce0904146f6fdfe892a50032f1582c",
+      "file": "csv/L4_Agentic_Human_Review_Round4_KTSPACE_937205808_20260901.csv",
+      "review_state": "All 66 review cells are blank in the source page; this is not interpreted as approval."
+    },
+    {
+      "domain": "Physical",
+      "page_id": "938216713",
+      "url": "https://ktspace.atlassian.net/wiki/spaces/AI2X/pages/938216713/Physical+-+4",
+      "rows": 65,
+      "sha256": "33c6789ab09e1e57a350c38bd0a92546599a3974564eb9acff92637e5a555d9f",
+      "file": "csv/L4_Physical_Human_Review_Round4_KTSPACE_938216713_20260901.csv"
+    }
+  ]
+}

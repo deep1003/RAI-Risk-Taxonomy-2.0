@@ -1,0 +1,4 @@
+review_round,comparison_basis,source_artifact,reviewed_rows,mapping_changes,mapping_retained,all_recorded_interventions,non_mapping_interventions,mapping_retention_pct,mapping_gap_pct,all_intervention_pct
+Round 1,Direct algorithmic Top-1 vs adjudicated L3,03_outputs/audit/EM_Card_Diagnostics.csv,808,196,612,196,not separately reconstructable,75.74257425742574,24.257425742574256,24.257425742574256
+Round 2,"Incoming algorithm-supported, Round-1-audited mapping",06_human_review_recovery/Human_Review_Round2_Recovery_Decisions.csv,808,80,728,166,86,90.0990099009901,9.900990099009901,20.544554455445542
+Round 3,Incoming cumulative mapping after prior audit,09_human_review_round3/Human_Review_Round3_Validation_Record.json,629,19,610,30,11,96.97933227344993,3.0206677265500796,4.769475357710652

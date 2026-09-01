@@ -327,13 +327,13 @@
       "node_id": "G_SYS_POLICY",
       "level": 3,
       "parent_id": "G_SYS",
-      "label_ko": "시스템 정책 노출",
-      "label_en": "System Policy Exposure",
-      "description_ko": "AI 시스템이 시스템 프롬프트·내부 정책·안전장치·구조·학습/평가 데이터·보안 메커니즘 등 기밀 시스템 정보를 노출·추론·우회·악용되도록 하거나 이를 보호하지 못하는 리스크\n\n(보호대상 시스템 정보의 노출 자체를 다루며, 보다 광범위한 적대적 침해를 다루는 \"Security and Adversarial Robustness Failure\"와 구별).",
-      "description_en": "The risk that an AI system discloses, or fails to protect, confidential system information—including prompts, internal policies, safeguards, architecture, training or evaluation data, and security mechanisms—allowing it to be extracted, inferred, bypassed, or exploited \n\n(this concerns disclosure of protected system information itself, as distinct from the broader adversarial compromise covered under \"Security and Adversarial Robustness Failure\").",
+      "label_ko": "기밀정보 노출",
+      "label_en": "Confidential Information Disclosure",
+      "description_ko": "AI 시스템이 시스템 프롬프트·내부 정책·안전장치·모델 구조·학습/평가 데이터·모델 자산·기업 영업비밀 등 보호되는 비공개 기밀정보를 권한 없이 노출·추론·추출·공유하거나 이를 충분히 보호하지 못하여 보안, 지식재산권과 정당한 경제적 이익을 침해하는 리스크. 개인정보 침해는 개인정보 침해에서, 적대적 입력·탈옥·무단 접근과 같은 실제 침해는 보안·적대적 견고성 실패에서 분류한다.",
+      "description_en": "The risk that an AI system discloses, infers, extracts, or shares protected non-public confidential information without authorisation, or fails to protect it, including system prompts, internal policies, safeguards, model architecture, training or evaluation data, model assets, or business trade secrets, thereby compromising security, intellectual-property rights, or legitimate economic interests. Personal-data harms are classified under Privacy and Data Protection Failure, while actual compromise through adversarial input, jailbreak, or unauthorised access is classified under Security and Adversarial Robustness Failure.",
       "sequence": 24,
       "status": "active",
-      "master_status": "IMMUTABLE_SOURCE"
+      "master_status": "REVISED_BY_HUMAN_REVIEW_ROUND4"
     },
     {
       "node_id": "G_SYS_TRANS",

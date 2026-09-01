@@ -1,86 +1,107 @@
 {
   "status": "PASS",
-  "passed": 11,
+  "passed": 16,
   "failed": 0,
-  "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "release_round": "human_review_round4",
+  "l3_master_sha256": "a1c19788dbbf4cd579bf166eeb297bed7e870212590262481254a6f8b8673cee",
   "checks": [
     {
-      "check": "Duplicate Ids",
+      "check": "Unique L4 IDs",
       "status": "PASS",
       "evidence": 0
     },
     {
-      "check": "Exact Duplicates",
+      "check": "Exact duplicate L4 cards",
       "status": "PASS",
       "evidence": 0
     },
     {
-      "check": "Others",
-      "status": "PASS",
-      "evidence": 0
-    },
-    {
-      "check": "Round3 Source Coverage",
+      "check": "Final card counts",
       "status": "PASS",
       "evidence": {
-        "ledger_rows": 629,
-        "commented_rows": 30
-      }
-    },
-    {
-      "check": "Round3 Action Reconciliation",
-      "status": "PASS",
-      "evidence": {
-        "MOVE_REWRITE": 19,
-        "RENAME_REWRITE": 5,
-        "DELETE": 6
-      }
-    },
-    {
-      "check": "Deleted Cards Absent",
-      "status": "PASS",
-      "evidence": []
-    },
-    {
-      "check": "Public Full Core Match",
-      "status": "PASS",
-      "evidence": 623
-    },
-    {
-      "check": "L3 Master Unchanged",
-      "status": "PASS",
-      "evidence": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54"
-    },
-    {
-      "check": "Final Card Counts",
-      "status": "PASS",
-      "evidence": {
-        "L1_G": 494,
-        "L1_A": 66,
+        "L1_G": 492,
+        "L1_A": 67,
         "L1_P": 63
       }
     },
     {
-      "check": "No Unauthorised New Category",
+      "check": "Zero final Others assignments",
       "status": "PASS",
-      "evidence": 50
+      "evidence": 0
     },
     {
-      "check": "AC19 Minimum Corrections",
+      "check": "Round4 source coverage",
       "status": "PASS",
       "evidence": {
-        "moved_ids_present": [
-          "G_SYS_PERF_017",
-          "G_SYS_SECADV_061"
-        ],
-        "old_ids_absent": [
-          "P_INT_TAMPER_001",
-          "P_SYS_HARDWARE_001"
-        ],
-        "cosmic_ray_ko_corrected": true
+        "source": 623,
+        "ledger": 623
       }
+    },
+    {
+      "check": "General review-state reconciliation",
+      "status": "PASS",
+      "evidence": {
+        "no_objection": 473,
+        "total": 492
+      }
+    },
+    {
+      "check": "Agentic blank-state preservation",
+      "status": "PASS",
+      "evidence": 66
+    },
+    {
+      "check": "Physical review-state reconciliation",
+      "status": "PASS",
+      "evidence": {
+        "stay": 61,
+        "total": 65
+      }
+    },
+    {
+      "check": "Round4 result-column coverage",
+      "status": "PASS",
+      "evidence": 622
+    },
+    {
+      "check": "Public and full core-field match",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "L3 master metadata alignment",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "Confidential Information Disclosure expansion",
+      "status": "PASS",
+      "evidence": "Confidential Information Disclosure"
+    },
+    {
+      "check": "Discussion dispositions present",
+      "status": "PASS",
+      "evidence": {
+        "required_missing": [],
+        "retired_present": []
+      }
+    },
+    {
+      "check": "No rerun scores on Round4-changed cards",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "Reference target integrity",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "Lineage target integrity",
+      "status": "PASS",
+      "evidence": []
     }
   ],
-  "round3_note": "All 629 review rows were read. The 30 non-empty comments were applied without EM: 19 reassignments, 6 deletions, and 5 same-L3 generalisations. No merge, split, new L4, or new L3 was introduced.",
-  "ac19_note": "Two user-approved cross-domain reassignments and one Korean cosmic-ray terminology correction were applied without changing the 623-card total or the L3 master."
+  "round4_note": "All 623 rows were read without EM. General: 473 no-objection, 2 split, 8 move, 9 discussion. Agentic: 66 blank values excluded from approval. Physical: 61 stay, 4 special. All discussion rows were adjudicated and recorded in a dedicated Korean result column.",
+  "structural_sync_note": "Two pre-existing Agentic parent-metadata mismatches were synchronized to the unchanged L3 master without inferring human approval or changing L3 placement."
 }

@@ -1,0 +1,44 @@
+ref_url,http_status,final_url,error
+https://aiverifyfoundation.sg/downloads/Cataloguing_LLM_Evaluations.pdf,200,https://aiverifyfoundation.sg/downloads/Cataloguing_LLM_Evaluations.pdf,
+https://arxiv.org/abs/2406.13843,200,https://arxiv.org/abs/2406.13843,
+https://arxiv.org/abs/2407.01294,200,https://arxiv.org/abs/2407.01294,
+https://arxiv.org/abs/2410.23472,200,https://arxiv.org/abs/2410.23472,
+https://arxiv.org/abs/2502.14143,200,https://arxiv.org/abs/2502.14143,
+https://arxiv.org/abs/2503.05731,200,https://arxiv.org/abs/2503.05731,
+https://assets.publishing.service.gov.uk/media/65395abae6c968000daa9b25/frontier-ai-capabilities-risks-report.pdf,200,https://assets.publishing.service.gov.uk/media/6a3c02f9d52550a19950f3cf/frontier-ai-capabilities-risks-report_l.pdf,
+https://assets.publishing.service.gov.uk/media/653bc393d10f3500139a6ac5/future-risks-of-frontier-ai-annex-a.pdf,200,https://assets.publishing.service.gov.uk/media/653bc393d10f3500139a6ac5/future-risks-of-frontier-ai-annex-a.pdf,
+https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf,200,https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf,
+https://assets.publishing.service.gov.uk/media/679a0c48a77d250007d313ee/International_AI_Safety_Report_2025_accessible_f.pdf,200,https://internationalaisafetyreport.org/,
+https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Risk-Management-Framework-v1.0-en.pdf,200,https://concordia-ai.com/wp-content/uploads/2025/07/Frontier-AI-Risk-Management-Framework-v1.0-en.pdf,
+https://dl.acm.org/doi/pdf/10.1145/3514094.3534131,403,https://dl.acm.org/doi/pdf/10.1145/3514094.3534131,HTTP Error 403: Forbidden
+https://doi.org/10.1007/978-3-031-04435-9_54,200,https://link.springer.com/chapter/10.1007/978-3-031-04435-9_54?error=cookies_not_supported&code=1ba639a9-74c7-4621-aa87-e56650d7781d,
+https://doi.org/10.1007/978-3-031-49008-8_8,200,https://link.springer.com/chapter/10.1007/978-3-031-49008-8_8?error=cookies_not_supported&code=3c3dec86-ede8-4fb7-b471-8e7776270e80,
+https://doi.org/10.1007/978-981-99-9836-4_27,200,https://link.springer.com/chapter/10.1007/978-981-99-9836-4_27?error=cookies_not_supported&code=b416aac7-6a99-43e7-b636-4c160b1f57ac,
+https://doi.org/10.1016/j.dss.2022.113800,200,https://linkinghub.elsevier.com/retrieve/pii/S0167923622000719,
+https://doi.org/10.1016/j.eswa.2023.122442,200,https://linkinghub.elsevier.com/retrieve/pii/S0957417423029445,
+https://doi.org/10.1016/j.ssci.2020.104667,200,https://linkinghub.elsevier.com/retrieve/pii/S0925753520300643,
+https://doi.org/10.1080/01900692.2020.1749851,403,https://www.tandfonline.com/doi/full/10.1080/01900692.2020.1749851,HTTP Error 403: Forbidden
+https://doi.org/10.1080/0952813X.2021.1964003,403,https://www.tandfonline.com/doi/full/10.1080/0952813X.2021.1964003,HTTP Error 403: Forbidden
+https://doi.org/10.1080/15228053.2023.2233814,403,https://www.tandfonline.com/doi/full/10.1080/15228053.2023.2233814,HTTP Error 403: Forbidden
+https://doi.org/10.1108/IJOES-05-2023-0107,403,https://www.emerald.com/ijoes/article/41/1/45/1240986/Ethical-issues-in-the-development-of-artificial,HTTP Error 403: Forbidden
+https://doi.org/10.1109/PICMET.2016.7806752,202,https://ieeexplore.ieee.org/document/7806752/,
+https://doi.org/10.1111/basr.12336,403,https://onlinelibrary.wiley.com/doi/10.1111/basr.12336,HTTP Error 403: Forbidden
+https://doi.org/10.1145/3531146.3533088,403,https://dl.acm.org/doi/10.1145/3531146.3533088,HTTP Error 403: Forbidden
+https://doi.org/10.1145/3560107.3560298,403,https://dl.acm.org/doi/10.1145/3560107.3560298,HTTP Error 403: Forbidden
+https://doi.org/10.1145/3600211.3604673,403,https://dl.acm.org/doi/10.1145/3600211.3604673,HTTP Error 403: Forbidden
+https://doi.org/10.1145/3806048,403,https://dl.acm.org/doi/10.1145/3806048,HTTP Error 403: Forbidden
+https://doi.org/10.1609/aaai.v38i21.30348,200,https://ojs.aaai.org/index.php/AAAI/article/view/30348,
+https://doi.org/10.1609/aies.v8i2.36655,200,https://ojs.aaai.org/index.php/AIES/article/view/36655,
+https://doi.org/10.3390/app12084054,403,https://www.mdpi.com/2076-3417/12/8/4054,HTTP Error 403: Forbidden
+https://doi.org/10.3390/ijerph19063641,403,https://www.mdpi.com/1660-4601/19/6/3641,HTTP Error 403: Forbidden
+https://doi.org/10.48550/arXiv.1511.03246,200,https://arxiv.org/abs/1511.03246,
+https://epic.org/documents/generating-harms-generative-ais-impact-paths-forward/,200,https://epic.org/documents/generating-harms-generative-ais-impact-paths-forward/,
+https://icml.cc/virtual/2025/51008,200,https://icml.cc/virtual/2025/51008,
+https://link.springer.com/article/10.1007/s13347-023-00627-6,200,https://link.springer.com/article/10.1007/s13347-023-00627-6?error=cookies_not_supported&code=7d8282d7-48b8-4467-9943-65b6f40ffa93,
+https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf,200,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf,
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4629460,403,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4629460,HTTP Error 403: Forbidden
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4918704,403,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4918704,HTTP Error 403: Forbidden
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5030173,403,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5030173,HTTP Error 403: Forbidden
+https://www.interface-eu.org/storage/archive/files/snv_governing_general_purpose_ai_pdf.pdf,200,https://www.interface-eu.org/storage/archive/files/snv_governing_general_purpose_ai_pdf.pdf,
+https://www.mitre.org/sites/default/files/2024-10/PR-24-2767-Emerging-Risks-Mitigations-Public-Chatbots-LILAC-v1.pdf?utm_source=chatgpt.com,403,https://www.mitre.org/sites/default/files/2024-10/PR-24-2767-Emerging-Risks-Mitigations-Public-Chatbots-LILAC-v1.pdf?utm_source=chatgpt.com,HTTP Error 403: Forbidden
+https://www.tc260.org.cn/upload/2024-09-09/1725849192841090989.pdf,200,https://www.tc260.org.cn/upload/2024-09-09/1725849192841090989.pdf,
