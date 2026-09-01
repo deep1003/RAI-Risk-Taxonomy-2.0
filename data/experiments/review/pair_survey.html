@@ -165,18 +165,9 @@ function compact(){
           verdicts:v.join(''),notes:notes};
 }
 function issueBody(c){
-  return '### Pair-judgment submission
-
-'
-   +'- rater: '+c.rater+'
-- saved_at: '+c.saved_at+'
-- survey_sha: '+c.survey_sha+'
-
-'
-   +'```json
-'+JSON.stringify(c,null,1)+'
-```
-';
+  return '### Pair-judgment submission\n\n'
+   +'- rater: '+c.rater+'\n- saved_at: '+c.saved_at+'\n- survey_sha: '+c.survey_sha+'\n\n'
+   +'```json\n'+JSON.stringify(c,null,1)+'\n```\n';
 }
 function submitViaIssue(c){
   const body=issueBody(c);

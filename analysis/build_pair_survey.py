@@ -176,7 +176,7 @@ main{max-width:860px;margin:0 auto;padding:16px 20px 90px}
 </style></head><body>
 <header><h1>리스크 카드 쌍 판정 · Merge-precision pair judgment</h1>
 <div class=sub>두 카드가 <b>같은 리스크의 다른 표현</b>인지, <b>서로 구별되는 리스크</b>인지 판정합니다.
-카드 출처·유사도·알고리즘 판정은 공개되지 않습니다(맹검). 순서는 판정자마다 다르게 제시됩니다. 완료 후 <b>GitHub으로 제출</b>을 누르면 응답이 저장소 이슈로 기록되고 매일 자동 집계됩니다(GitHub 계정 필요). 계정이 없으면 Export JSON 파일을 이메일로 보내 주십시오.</div>
+카드 출처·유사도·알고리즘 판정은 공개되지 않습니다(맹검). 순서는 판정자마다 다르게 제시됩니다. 완료 후 <b>제출</b>을 누르면 응답이 즉시 서버에 누적 저장됩니다(계정 불필요). 같은 이름으로 다시 제출하면 최신본이 사용됩니다.</div>
 </header><main>
 
 <div class=intro>
@@ -202,7 +202,7 @@ If unsure, choose "cannot decide" and leave a note.
 <div id=list></div>
 </main>
 <div id=bbar><span id=ptxt>0 / 0</span><div id=pbar><div id=pfill></div></div>
-<button id=submit>GitHub으로 제출 · Submit</button>
+<button id=submit>제출 · Submit</button>
 <button id=exp style="background:#3a6ea5">Export JSON (backup)</button>
 <label for=impf style="padding:4px 10px;border:1px solid #888;border-radius:4px;background:#3a3a3a;cursor:pointer">Import JSON</label>
 <input id=impf type=file accept=".json" hidden>
@@ -290,8 +290,11 @@ document.getElementById('exp').onclick=()=>{
 };
 
 const REPO='deep1003/RAI-Risk-Taxonomy-2.0';
+let ENDPOINT='';
+fetch('survey_endpoint.txt',{cache:'no-store'}).then(r=>r.text()).then(t=>{
+  t=t.trim(); if(t&&t.startsWith('https://')) ENDPOINT=t;
+}).catch(()=>{});
 function compact(){
-  // 135-char verdict string in P001..P135 order: s / d / u / - (unanswered)
   const map={same:'s',distinct:'d',undecided:'u'};
   const v=Array(ITEMS.length).fill('-'); const notes={};
   const d=collect();
@@ -304,26 +307,45 @@ function compact(){
           verdicts:v.join(''),notes:notes};
 }
 function issueBody(c){
-  return '### Pair-judgment submission\n\n'
-   +'- rater: '+c.rater+'\n- saved_at: '+c.saved_at+'\n- survey_sha: '+c.survey_sha+'\n\n'
-   +'```json\n'+JSON.stringify(c,null,1)+'\n```\n';
+  return '### Pair-judgment submission\\n\\n'
+   +'- rater: '+c.rater+'\\n- saved_at: '+c.saved_at+'\\n- survey_sha: '+c.survey_sha+'\\n\\n'
+   +'```json\\n'+JSON.stringify(c,null,1)+'\\n```\\n';
+}
+function submitViaIssue(c){
+  const body=issueBody(c);
+  const url='https://github.com/'+REPO+'/issues/new'
+   +'?title='+encodeURIComponent('[pair-judgments] '+c.rater)
+   +'&labels=pair-judgments&body='+encodeURIComponent(body);
+  if(url.length<7500){window.open(url,'_blank');
+    stamp('GitHub \uc774\uc288 \ucc3d\uc774 \uc5f4\ub9bd\ub2c8\ub2e4 \u2014 Submit new issue\ub97c \ub204\ub974\uba74 \uc644\ub8cc');}
+  else{try{navigator.clipboard.writeText(body);}catch(e){}
+    window.open('https://github.com/'+REPO+'/issues/new?title='
+      +encodeURIComponent('[pair-judgments] '+c.rater)+'&labels=pair-judgments','_blank');
+    stamp('\ubcf8\ubb38\uc744 \uc774\uc288\uc5d0 \ubd99\uc5ec\ub123\uc73c\uc2ed\uc2dc\uc624 (\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428)');}
 }
 document.getElementById('submit').onclick=async()=>{
   const c=compact();
   const done=[...c.verdicts].filter(x=>x!=='-').length;
   if(done<ITEMS.length&&!confirm(done+' / '+ITEMS.length+' \ud310\uc815\ub428. \uadf8\ub798\ub3c4 \uc81c\ucd9c\ud560\uae4c\uc694?'))return;
-  const body=issueBody(c);
-  const url='https://github.com/'+REPO+'/issues/new'
-   +'?title='+encodeURIComponent('[pair-judgments] '+c.rater)
-   +'&labels=pair-judgments'
-   +'&body='+encodeURIComponent(body);
-  if(url.length<7500){window.open(url,'_blank');
-    stamp('GitHub \uc774\uc288 \ucc3d\uc774 \uc5f4\ub9bd\ub2c8\ub2e4 \u2014 Submit new issue\ub97c \ub204\ub974\uba74 \uc644\ub8cc');}
-  else{
-    try{await navigator.clipboard.writeText(body);}catch(e){}
-    window.open('https://github.com/'+REPO+'/issues/new?title='
-      +encodeURIComponent('[pair-judgments] '+c.rater)+'&labels=pair-judgments','_blank');
-    stamp('\ubcf8\ubb38\uc774 \ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428 \u2014 \uc774\uc288 \ubcf8\ubb38\uc5d0 \ubd99\uc5ec\ub123\uc73c\uc2ed\uc2dc\uc624');}
+  const btn=document.getElementById('submit');
+  if(ENDPOINT){
+    btn.disabled=true;btn.textContent='\uc800\uc7a5 \uc911\u2026';
+    try{
+      const r=await fetch(ENDPOINT,{method:'POST',
+        headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body:JSON.stringify(c)});
+      const res=await r.json();
+      if(res.ok){btn.textContent='\uc81c\ucd9c \uc644\ub8cc \u2713';
+        stamp('\uc800\uc7a5\ub428 \u2014 \ub204\uc801 '+res.rows+'\uac74. \uc218\uc815 \ud6c4 \ub2e4\uc2dc \uc81c\ucd9c\ud574\ub3c4 \ub429\ub2c8\ub2e4(\ucd5c\uc2e0\ubcf8 \uc0ac\uc6a9).');
+        return;}
+      throw new Error(res.error||'server error');
+    }catch(err){
+      btn.disabled=false;btn.textContent='GitHub\uc73c\ub85c \uc81c\ucd9c \u00b7 Submit';
+      stamp('\uc11c\ubc84 \uc800\uc7a5 \uc2e4\ud328('+err.message+') \u2014 GitHub \uc774\uc288\ub85c \uc804\ud658\ud569\ub2c8\ub2e4');
+      submitViaIssue(c);return;
+    }
+  }
+  submitViaIssue(c);
 };
 document.getElementById('impf').addEventListener('change',e=>{
   const f=e.target.files[0];if(!f)return;const rd=new FileReader();
