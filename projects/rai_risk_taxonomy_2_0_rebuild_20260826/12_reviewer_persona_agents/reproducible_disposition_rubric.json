@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "scale": {"minimum": 0, "maximum": 4},
+  "features": [
+    "ai_risk_validity",
+    "rewrite_recoverability",
+    "causal_specificity",
+    "l3_current_fit",
+    "l3_alternative_fit",
+    "semantic_redundancy",
+    "conceptual_distinctness",
+    "multi_mechanism",
+    "cross_category_span",
+    "granularity_narrowness",
+    "affected_party_clarity",
+    "impact_pathway_clarity",
+    "bilingual_scope_alignment"
+  ],
+  "hard_gates": [
+    {"id": "GATE_INVALID", "when": "ai_risk_validity<=1 AND rewrite_recoverability<=1", "required_consideration": ["DELETE", "ESCALATE"]},
+    {"id": "GATE_SPLIT", "when": "multi_mechanism>=3 AND cross_category_span>=3", "required_consideration": ["SPLIT"]},
+    {"id": "GATE_MERGE", "when": "semantic_redundancy>=3 AND conceptual_distinctness<=1", "required_consideration": ["MERGE"]},
+    {"id": "GATE_MOVE", "when": "l3_current_fit<=1 AND l3_alternative_fit>=3 AND alternative_l3_named=true", "required_consideration": ["MOVE"]},
+    {"id": "GATE_RECOVER_NARROW", "when": "granularity_narrowness>=3 AND rewrite_recoverability>=3", "required_consideration": ["REWRITE", "MERGE"]}
+  ],
+  "agent_precedence": {
+    "YS_ARCHITECT": ["GATE_INVALID", "GATE_SPLIT", "GATE_MERGE", "GATE_MOVE", "GATE_RECOVER_NARROW", "KEEP"],
+    "JH_MECHANISM": ["GATE_INVALID", "GATE_SPLIT", "GATE_MOVE", "GATE_MERGE", "GATE_RECOVER_NARROW", "KEEP"],
+    "JW_BOUNDARY": ["GATE_INVALID", "GATE_RECOVER_NARROW", "GATE_MERGE", "GATE_MOVE", "GATE_SPLIT", "KEEP"],
+    "YJ_CONTEXT": ["GATE_INVALID", "GATE_SPLIT", "GATE_MOVE", "GATE_MERGE", "GATE_RECOVER_NARROW", "KEEP"],
+    "SY_CONCEPT": ["GATE_INVALID", "GATE_MERGE", "GATE_SPLIT", "GATE_MOVE", "GATE_RECOVER_NARROW", "KEEP"]
+  },
+  "calibration_cases": [
+    {"l4_id": "P_INT_SAFETY_002", "expected_action": "DELETE"},
+    {"l4_id": "P_INT_SAFETY_001", "expected_action": "REWRITE"},
+    {"l4_id": "G_INT_REPR_010", "expected_action": "SPLIT"},
+    {"l4_id": "G_INT_PRIV_002", "expected_action": "SPLIT"},
+    {"l4_id": "G_SYS_SECADV_034", "expected_action": "MOVE"},
+    {"l4_id": "P_SYS_HARDWARE_001", "expected_action": "MOVE"},
+    {"l4_id": "G_SYS_SECADV_048", "expected_action": "MERGE"},
+    {"l4_id": "G_SYS_SECADV_017", "expected_action": "SPLIT"}
+  ],
+  "minimum_calibration_pass": 7,
+  "automatic_application": false
+}

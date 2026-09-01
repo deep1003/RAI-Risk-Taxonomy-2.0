@@ -1,0 +1,46 @@
+name: Aggregate pair-judgment submissions
+
+on:
+  schedule:
+    - cron: "53 16 * * *"    # 01:53 Asia/Seoul
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: aggregate-pair-judgments
+  cancel-in-progress: false
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Export issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate --slurp \
+            "repos/${GITHUB_REPOSITORY}/issues?state=all&per_page=100" \
+            > "${RUNNER_TEMP}/issues.json"
+
+      - name: Collect pair judgments
+        run: |
+          python3 scripts/collect_pair_judgments.py \
+            --issues-json "${RUNNER_TEMP}/issues.json"
+
+      - name: Commit updated judgment exports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add review_logs/pair_judgments
+          if git diff --cached --quiet; then
+            echo "No new submissions"
+          else
+            git commit -m "chore: update pair-judgment submissions"
+            git push
+          fi
