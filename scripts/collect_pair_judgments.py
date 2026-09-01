@@ -40,6 +40,7 @@ def parse(body):
     v = d.get('verdicts', '')
     if not d.get('rater') or len(v) != N_PAIRS: return None
     if set(v) - set('sdu-'): return None
+    if d['rater'].strip().startswith('__'): return None   # internal test raters
     return d
 
 def main():
@@ -62,6 +63,7 @@ def main():
         for d in store.get('responses', []):
             v = d.get('verdicts', '')
             if not d.get('rater') or len(v) != N_PAIRS: continue
+            if d['rater'].strip().startswith('__'): continue
             d['_issue'] = 'store'; d['_created'] = d.get('received_at', '')
             key = d['rater'].strip().lower()
             if key not in subs or d['_created'] > subs[key]['_created']:
