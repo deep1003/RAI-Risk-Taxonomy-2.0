@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ID = "RAI-Risk-Taxonomy-2.0-master"
-REVIEW_SNAPSHOT_ID = "human-review-round3-20260901"
+REVIEW_SNAPSHOT_ID = "human-review-round3-ac19-20260901"
 SOURCE = ROOT / "releases" / RELEASE_ID
 DATA = SOURCE / "data"
 FULL_DATA = ROOT / "handover" / "RAI-Risk-Taxonomy-2.0-master_20260829" / "01_data"
@@ -51,8 +51,8 @@ def update_static_html(counts: dict[str, int], validation: dict[str, int | str])
     html = re.sub(r"explore \d+ bilingual L4", f"explore {counts['l4']} bilingual L4", html)
     html = re.sub(r"Master · \d+ L4 Risks", f"Master · {counts['l4']} L4 Risks", html)
     html = re.sub(r"REVIEWED MASTER RELEASE · \d{4}-\d{2}-\d{2}", "REVIEWED MASTER RELEASE · 2026-09-01", html)
-    html = re.sub(r'assets/site\.css\?v=[^"\']+', "assets/site.css?v=master-20260901-ac18", html)
-    html = re.sub(r'assets/site\.js\?v=[^"\']+', "assets/site.js?v=master-20260901-ac18", html)
+    html = re.sub(r'assets/site\.css\?v=[^"\']+', "assets/site.css?v=master-20260901-ac19", html)
+    html = re.sub(r'assets/site\.js\?v=[^"\']+', "assets/site.js?v=master-20260901-ac19", html)
     html = html.replace("<strong>2차 휴먼검수 라운드</strong>", "<strong>3차 휴먼검수 반영</strong>")
     html = re.sub(
         r'(<strong id="stat-l4">)\d+(</strong><small>).*?(</small>)',
@@ -250,7 +250,7 @@ def main() -> None:
             "final_total": source_summary["cleaned_total"],
         },
         "method": {
-            "algorithm": "Deterministic semantic interpretation and application of third-round human-review comments over the reviewed master release",
+            "algorithm": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
             "em_or_hybrid_em_executed_in_this_round": False,
             "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
             "boundary_policy": "Apply every non-empty third-round human-review comment and require zero final Others assignments",

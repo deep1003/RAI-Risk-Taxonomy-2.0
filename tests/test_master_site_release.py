@@ -47,7 +47,7 @@ class MasterSiteReleaseTests(unittest.TestCase):
         self.assertEqual(Counter(card["mapping_method"] for card in self.cards), Counter({"EM": 321, "HD": 302}))
         self.assertEqual(
             Counter(card["primary_l3_id"].split("_")[0] for card in self.cards),
-            Counter({"G": 492, "A": 66, "P": 65}),
+            Counter({"G": 494, "A": 66, "P": 63}),
         )
 
     def test_every_card_resolves_to_a_bilingual_l3_node(self) -> None:
@@ -64,7 +64,7 @@ class MasterSiteReleaseTests(unittest.TestCase):
         self.assertEqual(nodes[0]["label_ko"], "성능·신뢰성 실패")
         self.assertEqual(nodes[0]["label_en"], "Performance and Reliability Failure")
         cards = [card for card in self.cards if card["primary_l3_id"] == "G_SYS_PERF"]
-        self.assertEqual([card["l4_id"] for card in cards], [f"G_SYS_PERF_{index:03d}" for index in range(1, 17)])
+        self.assertEqual([card["l4_id"] for card in cards], [f"G_SYS_PERF_{index:03d}" for index in range(1, 18)])
 
     def test_others_are_hd_assignments_without_equating_hd_and_others(self) -> None:
         others = {"G_Others", "A_Others", "P_Others"}
@@ -80,8 +80,8 @@ class MasterSiteReleaseTests(unittest.TestCase):
         self.assertEqual(cleaning["merged_away"], 177)
         self.assertEqual(cleaning["split_net_addition"], 23)
         self.assertEqual(cleaning["final_total"], 623)
-        self.assertEqual(cleaning["user_directed_operations"], 214)
-        self.assertEqual(self.manifest["validation"], {"status": "PASS", "passed": 10, "failed": 0})
+        self.assertEqual(cleaning["user_directed_operations"], 217)
+        self.assertEqual(self.manifest["validation"], {"status": "PASS", "passed": 11, "failed": 0})
 
     def test_score_statuses_are_explicit_and_reconciled(self) -> None:
         forbidden = {"em_score", "em_margin", "hybrid_em_score", "hybrid_em_margin", "em_stability", "review_candidates", "definition_grounding_action", "definition_l3_anchor_score"}
@@ -92,7 +92,7 @@ class MasterSiteReleaseTests(unittest.TestCase):
         script = (ROOT / "assets" / "site.js").read_text(encoding="utf-8")
         self.assertIn(f'public/data/releases/{RELEASE_ID}', script)
         self.assertIn("623 final L4 cards", page)
-        self.assertIn("10/10 QA PASS", page)
+        self.assertIn("11/11 QA PASS", page)
         self.assertIn("현재 웹 리스크 카드에는 EM, Hybrid EM 또는 관련 점수를 표시하지 않습니다.", page)
         for name in ("L1_Master.csv", "L1_L2_L3_Master.csv", "L4_General.csv", "L4_Agentic.csv", "L4_Physical.csv"):
             self.assertIn(f"releases/{RELEASE_ID}/data/{name}", page)

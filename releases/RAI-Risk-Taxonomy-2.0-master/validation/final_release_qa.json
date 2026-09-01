@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "passed": 10,
+  "passed": 11,
   "failed": 0,
   "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
   "checks": [
@@ -55,16 +55,32 @@
       "check": "Final Card Counts",
       "status": "PASS",
       "evidence": {
-        "L1_G": 492,
+        "L1_G": 494,
         "L1_A": 66,
-        "L1_P": 65
+        "L1_P": 63
       }
     },
     {
       "check": "No Unauthorised New Category",
       "status": "PASS",
       "evidence": 50
+    },
+    {
+      "check": "AC19 Minimum Corrections",
+      "status": "PASS",
+      "evidence": {
+        "moved_ids_present": [
+          "G_SYS_PERF_017",
+          "G_SYS_SECADV_061"
+        ],
+        "old_ids_absent": [
+          "P_INT_TAMPER_001",
+          "P_SYS_HARDWARE_001"
+        ],
+        "cosmic_ray_ko_corrected": true
+      }
     }
   ],
-  "round3_note": "All 629 review rows were read. The 30 non-empty comments were applied without EM: 19 reassignments, 6 deletions, and 5 same-L3 generalisations. No merge, split, new L4, or new L3 was introduced."
+  "round3_note": "All 629 review rows were read. The 30 non-empty comments were applied without EM: 19 reassignments, 6 deletions, and 5 same-L3 generalisations. No merge, split, new L4, or new L3 was introduced.",
+  "ac19_note": "Two user-approved cross-domain reassignments and one Korean cosmic-ray terminology correction were applied without changing the 623-card total or the L3 master."
 }

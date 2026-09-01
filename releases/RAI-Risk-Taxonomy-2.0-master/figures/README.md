@@ -11,23 +11,22 @@ Categorical charts carry the global mean as a dashed grey reference line.
 Labels are in English because the Korean and English Technical Reports share one
 figure set.
 
-## Current release (629 cards)
+## Current release (623 cards)
 
 | Figure | Shows | Basis |
 |---|---|---|
-| `domain_counts_before_after.png` | Cards per domain, previous release against the audited release | 798 → 629 |
-| `round2_domain_counts.png` | Net change per domain over the same interval | −143 / −9 / −17 |
-| `cleaning_reconciliation.png` | Waterfall closing the card count | 798 − 15 − 177 + 23 = 629 |
-| `mapping_method_by_domain.png` | Retained EM and HD labels per domain | EM 334 / HD 295 |
-| `largest_l3_categories.png` | Ten largest L3 categories in each domain | 46 L3s, each ≥ 3 cards |
-| `audit_consolidation_by_correction.png` | Net card change contributed by each audit correction | AC-01 to AC-08 |
-| `audit_corrections_trajectory.png` | Card count across the corrections | 777 → 629 |
-| `human_review_recovery_domain_counts.png` | Final cards per domain | 487 / 65 / 77 |
+| `domain_counts_before_after.png` | Cards per domain, previous release against the audited release | 798 → 623 |
+| `round2_domain_counts.png` | Net change per domain over the same interval | −136 / −8 / −31 |
+| `cleaning_reconciliation.png` | Waterfall closing the card count | 798 − 21 − 177 + 23 = 623 |
+| `mapping_method_by_domain.png` | Retained EM and HD labels per domain | EM 321 / HD 302 |
+| `largest_l3_categories.png` | Ten largest L3 categories in each domain | 47 substantive L3s populated; two hold 2 cards |
+| `audit_consolidation_by_correction.png` | Net card change contributed by each audit correction | AC-01 to AC-19 |
+| `audit_corrections_trajectory.png` | Historical card count across AC-01 to AC-08 | 777 → 629 |
+| `human_review_recovery_domain_counts.png` | Historical pre-round-3 domain counts | 487 / 65 / 77 |
 
 `audit_corrections_trajectory.png` and `human_review_recovery_domain_counts.png`
-were produced by AC-09, are already correct on the 629 basis, and are the two
-figures the Technical Reports embed; they are left untouched so the delivered
-PDFs stay valid.
+are preserved as historical AC-09 figures. The current Technical Reports use
+`domain_counts_before_after.png` and `audit_consolidation_by_correction.png`.
 
 ## Stage record
 
@@ -37,7 +36,7 @@ PDFs stay valid.
 
 ## Retired
 
-`archive_pre_audit/` holds the figures that cannot be rebuilt on the 629 basis,
+`archive_pre_audit/` holds the figures that cannot be rebuilt on the 623 basis,
 with the reason for each in its own README. They depend on EM or Hybrid EM
 scores, on similarity scores, or on mapping score status, none of which are
 published: AC-04 and AC-10 removed those columns from the release, AC-12

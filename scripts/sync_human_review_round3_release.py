@@ -48,13 +48,16 @@ def update_manifest() -> None:
         raise ValueError("L3 master changed during round-3 synchronisation")
 
     manifest["release_date"] = "2026-09-01"
-    manifest["release_round"] = "human_review_round3_application"
+    manifest["release_round"] = "human_review_round3_plus_ac19_physical_minimum_corrections"
     script = "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_round3_20260901.py"
     manifest.setdefault("pipeline_scripts", [])
     if script not in manifest["pipeline_scripts"]:
         manifest["pipeline_scripts"].append(script)
+    ac19_script = "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_physical_minimal_corrections_ac19_20260901.py"
+    if ac19_script not in manifest["pipeline_scripts"]:
+        manifest["pipeline_scripts"].append(ac19_script)
     manifest["mapping_method"] = {
-        "name": "Deterministic semantic interpretation and application of third-round human-review comments",
+        "name": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
         "em_or_hybrid_em_executed_in_this_round": False,
         "l3_master_precedence": True,
         "automatic_reassignment": False,
@@ -66,8 +69,8 @@ def update_manifest() -> None:
     summary["deleted"] = 21
     summary["explicit_deletions"] = 25
     summary["net_reduction"] = 175
-    summary["user_directed_operations"] = 214
-    summary["validation_passed"] = 10
+    summary["user_directed_operations"] = 217
+    summary["validation_passed"] = 11
     summary["validation_failed"] = 0
     summary["others_total"] = 0
     summary["final_domain_counts"] = {
@@ -116,9 +119,28 @@ def update_manifest() -> None:
         "19 cards were reassigned and rewritten, 6 deleted, and 5 generalised within the same L3. "
         "No EM, merge, split, new L4, or new L3 was used."
     )
+    manifest["audit_correction_20260901_ac19"] = (
+        "AC-19: after two independent Physical AI audits and explicit user approval, "
+        "P_SYS_HARDWARE_001 was moved to G_SYS_PERF_017, P_INT_TAMPER_001 was moved to "
+        "G_SYS_SECADV_061, and the Korean cosmic-ray terminology in P_SYS_HARDWARE_003 was corrected. "
+        "No card was deleted, merged, split, or newly created, and EM was not rerun."
+    )
+    manifest["physical_minimum_corrections_ac19"] = {
+        "cross_domain_reassignments": 2,
+        "korean_definition_corrections": 1,
+        "counts": {"General": 494, "Agentic": 66, "Physical": 63, "total": 623},
+        "id_crosswalk": {
+            "P_SYS_HARDWARE_001": "G_SYS_PERF_017",
+            "P_INT_TAMPER_001": "G_SYS_SECADV_061",
+        },
+        "l3_master_unchanged": True,
+        "em_or_hybrid_em_executed": False,
+        "validation_record": "validation/Physical_Minimal_Corrections_AC19_Validation.json",
+    }
     trajectory = manifest.get("audit_corrections", {}).get("card_count_trajectory", [])
-    trajectory = [item for item in trajectory if item.get("step") != "AC-18"]
+    trajectory = [item for item in trajectory if item.get("step") not in {"AC-18", "AC-19"}]
     trajectory.append({"step": "AC-18", "cards": 623})
+    trajectory.append({"step": "AC-19", "cards": 623})
     manifest.setdefault("audit_corrections", {})["card_count_trajectory"] = trajectory
     write_json(path, manifest)
 
@@ -145,8 +167,9 @@ def update_qa() -> None:
         {"check": "Deleted Cards Absent", "status": "PASS" if deleted.isdisjoint(full_by_id) else "FAIL", "evidence": sorted(deleted & set(full_by_id))},
         {"check": "Public Full Core Match", "status": "PASS" if set(public_by_id) == set(full_by_id) and all(all(public_by_id[key][field] == full_by_id[key][field] for field in core_fields) for key in full_by_id) else "FAIL", "evidence": len(full_by_id)},
         {"check": "L3 Master Unchanged", "status": "PASS" if sha256(DATA / "L1_L2_L3_Master.csv") == L3_HASH else "FAIL", "evidence": sha256(DATA / "L1_L2_L3_Master.csv")},
-        {"check": "Final Card Counts", "status": "PASS" if Counter(row["L1_ID"] for row in full) == Counter({"L1_G": 492, "L1_A": 66, "L1_P": 65}) else "FAIL", "evidence": dict(Counter(row["L1_ID"] for row in full))},
+        {"check": "Final Card Counts", "status": "PASS" if Counter(row["L1_ID"] for row in full) == Counter({"L1_G": 494, "L1_A": 66, "L1_P": 63}) else "FAIL", "evidence": dict(Counter(row["L1_ID"] for row in full))},
         {"check": "No Unauthorised New Category", "status": "PASS" if len(read_csv(DATA / "L1_L2_L3_Master.csv")) == 50 else "FAIL", "evidence": len(read_csv(DATA / "L1_L2_L3_Master.csv"))},
+        {"check": "AC19 Minimum Corrections", "status": "PASS" if {"G_SYS_PERF_017", "G_SYS_SECADV_061", "P_SYS_HARDWARE_003"}.issubset(full_by_id) and {"P_SYS_HARDWARE_001", "P_INT_TAMPER_001"}.isdisjoint(full_by_id) and "우주 방사선(cosmic ray)" in full_by_id["P_SYS_HARDWARE_003"]["L4_Description_ko"] else "FAIL", "evidence": {"moved_ids_present": sorted({"G_SYS_PERF_017", "G_SYS_SECADV_061"} & set(full_by_id)), "old_ids_absent": sorted({"P_SYS_HARDWARE_001", "P_INT_TAMPER_001"} - set(full_by_id)), "cosmic_ray_ko_corrected": "우주 방사선(cosmic ray)" in full_by_id["P_SYS_HARDWARE_003"]["L4_Description_ko"]}},
     ]
     failed = sum(check["status"] != "PASS" for check in checks)
     qa = {
@@ -156,6 +179,7 @@ def update_qa() -> None:
         "l3_master_sha256": L3_HASH,
         "checks": checks,
         "round3_note": "All 629 review rows were read. The 30 non-empty comments were applied without EM: 19 reassignments, 6 deletions, and 5 same-L3 generalisations. No merge, split, new L4, or new L3 was introduced.",
+        "ac19_note": "Two user-approved cross-domain reassignments and one Korean cosmic-ray terminology correction were applied without changing the 623-card total or the L3 master.",
     }
     write_json(VALIDATION / "final_release_qa.json", qa)
 
@@ -165,20 +189,24 @@ def update_readmes() -> None:
     text = root_path.read_text(encoding="utf-8")
     text = re.sub(r"contains \d+ bilingual L4 risk cards", "contains 623 bilingual L4 risk cards", text)
     text = re.sub(r"includes \d+ retained EM assignments and \d+ human-decision assignments", "includes 321 retained EM assignments and 302 human-decision assignments", text)
-    text = re.sub(r"L4: \d+ final cards, comprising \d+ General, \d+ Agentic, and \d+ Physical", "L4: 623 final cards, comprising 492 General, 66 Agentic, and 65 Physical", text)
+    text = re.sub(r"L4: \d+ final cards, comprising \d+ General, \d+ Agentic, and \d+ Physical", "L4: 623 final cards, comprising 494 General, 66 Agentic, and 63 Physical", text)
     text = re.sub(r"Mapping: \d+ retained EM and \d+ human-decision assignments", "Mapping: 321 retained EM and 302 human-decision assignments", text)
+    text = re.sub(r"Validation: \d+ passed, \d+ failed", "Validation: 11 passed, 0 failed", text)
     note = "\nThe 2026-09-01 third-round human review read all 629 reviewed rows and applied all 30 non-empty comments without EM: 19 semantic reassignments, 6 deletions, and 5 scope generalisations. No merge, split, new L4, or new L3 was introduced.\n"
     if note.strip() not in text:
         text = text.replace("## Current master release\n", "## Current master release\n" + note)
+    ac19_note = "\nAC-19 applied two user-approved cross-domain corrections and one Korean terminology correction after two independent Physical AI audits. The release remains 623 cards: 494 General, 66 Agentic, and 63 Physical. The L3 master remains unchanged and EM was not rerun.\n"
+    if ac19_note.strip() not in text:
+        text = text.replace("## Current master release\n", "## Current master release\n" + ac19_note)
     root_path.write_text(text, encoding="utf-8")
 
     release_path = RELEASE / "README.md"
     text = release_path.read_text(encoding="utf-8")
-    text = re.sub(r"Current master:.*", "Current master: third-round human-review application (2026-09-01), following the second-round recovery and audit corrections AC-01 through AC-18.", text, count=1)
+    text = re.sub(r"Current master:.*", "Current master: third-round human-review application (2026-09-01), following the second-round recovery and audit corrections AC-01 through AC-19.", text, count=1)
     text = re.sub(r"- L4: \d+ cards", "- L4: 623 cards", text)
-    text = re.sub(r"- General / Agentic / Physical: \d+ / \d+ / \d+", "- General / Agentic / Physical: 492 / 66 / 65", text)
+    text = re.sub(r"- General / Agentic / Physical: \d+ / \d+ / \d+", "- General / Agentic / Physical: 494 / 66 / 63", text)
     text = re.sub(r"- Retained mapping labels: EM \d+ / HD \d+", "- Retained mapping labels: EM 321 / HD 302", text)
-    text = re.sub(r"- Deterministic recovery validation: \d+ recorded checks, \d+ PASS, \d+ FAIL", "- Deterministic round-3 validation: 10 recorded checks, 10 PASS, 0 FAIL", text)
+    text = re.sub(r"- Deterministic (?:recovery|round-3) validation: \d+ recorded checks, \d+ PASS, \d+ FAIL", "- Deterministic AC-19 validation: 11 recorded checks, 11 PASS, 0 FAIL", text)
     section = """
 ## Round-3 human review
 
@@ -187,6 +215,13 @@ All 629 rows from the three KTSPACE review pages were read before transformation
 """
     if "## Round-3 human review" not in text:
         text = text.replace("## Round-2 pipeline (historical)\n", section + "## Round-2 pipeline (historical)\n")
+    ac19_section = """## AC-19 Physical AI minimum corrections
+
+Two existing cards were reassigned across domains after two independent semantic audits and explicit user approval: `P_SYS_HARDWARE_001` became `G_SYS_PERF_017`, and `P_INT_TAMPER_001` became `G_SYS_SECADV_061`. The Korean definition of `P_SYS_HARDWARE_003` was corrected from `우주선(cosmic ray)` to `우주 방사선(cosmic ray)`. No card was deleted, merged, split, or newly created, and EM was not rerun. The 50-row L3 master remained byte-identical.
+
+"""
+    if "## AC-19 Physical AI minimum corrections" not in text:
+        text = text.replace("## Round-2 pipeline (historical)\n", ac19_section + "## Round-2 pipeline (historical)\n")
     release_path.write_text(text, encoding="utf-8")
 
 

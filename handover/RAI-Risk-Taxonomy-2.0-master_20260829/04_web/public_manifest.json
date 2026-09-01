@@ -14,23 +14,23 @@
     "l4": 623,
     "em": 321,
     "hd": 302,
-    "general": 492,
+    "general": 494,
     "agentic": 66,
-    "physical": 65
+    "physical": 63
   },
   "cleaning": {
     "source_total": 798,
     "deleted": 21,
     "merged_away": 177,
     "split_net_addition": 23,
-    "user_directed_operations": 214,
+    "user_directed_operations": 217,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
     "net_reduction": 175,
     "final_total": 623
   },
   "method": {
-    "algorithm": "Deterministic semantic interpretation and application of third-round human-review comments over the reviewed master release",
+    "algorithm": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
     "em_or_hybrid_em_executed_in_this_round": false,
     "score_policy": "Previous-run scores are historical evidence only and are explicitly marked stale or unavailable after review edits",
     "boundary_policy": "Apply every non-empty third-round human-review comment and require zero final Others assignments",
@@ -42,7 +42,7 @@
     "scope_granularity_policy": "Round 3 applied six explicit deletions and five same-L3 scope generalisations without creating a new L4 or L3"
   },
   "human_review": {
-    "review_snapshot_id": "human-review-round3-20260901",
+    "review_snapshot_id": "human-review-round3-ac19-20260901",
     "candidate_count": 2,
     "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
     "daily_aggregation": true,
@@ -52,15 +52,16 @@
   },
   "score_status_counts": {
     "L3_MASTER_VALIDATED": 35,
-    "NOT_APPLICABLE": 132,
-    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 396,
+    "NOT_APPLICABLE": 131,
+    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 395,
     "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 31,
     "HUMAN_REVIEW_ROUND3_NO_EM_RERUN": 24,
+    "HUMAN_REVIEWED_AC19": 2,
     "L3_MASTER_AI_REWRITE": 5
   },
   "validation": {
     "status": "PASS",
-    "passed": 10,
+    "passed": 11,
     "failed": 0
   },
   "artifacts": {
@@ -73,16 +74,16 @@
       "rows": 50
     },
     "L4_General.csv": {
-      "sha256": "f8eac455e5e4dac3d8a77528c869c4ba0e87835f815677e661215a2c9e75afc6",
-      "rows": 492
+      "sha256": "a7fdfa08e3306ba24554a63b8de9a45eefb9a636f2129fe0d2869a7f6782c53f",
+      "rows": 494
     },
     "L4_Agentic.csv": {
       "sha256": "a9b45fac271649cb72e5cdbc786b6509abfdbdd9d198bc00517556309894b23f",
       "rows": 66
     },
     "L4_Physical.csv": {
-      "sha256": "0a1ae8e5dff64d327d154997a2d125ec97ebac96f01125c9e55baced6e2aacf6",
-      "rows": 65
+      "sha256": "573f03079364de5ca8f3906bf98fe355dbd0ba2e4a2679555f21caa7ffc6b0a6",
+      "rows": 63
     }
   },
   "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv",

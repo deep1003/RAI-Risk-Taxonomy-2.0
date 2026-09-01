@@ -1,16 +1,17 @@
 {
   "release_date": "2026-09-01",
   "release_id": "RAI-Risk-Taxonomy-2.0-master",
-  "release_round": "human_review_round3_application",
+  "release_round": "human_review_round3_plus_ac19_physical_minimum_corrections",
   "pipeline_scripts": [
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_recovery.py",
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_deduplication_20260829.py",
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_semantic_splitting_20260829.py",
     "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_scope_granularity_curation_20260829.py",
-    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_round3_20260901.py"
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_human_review_round3_20260901.py",
+    "projects/rai_risk_taxonomy_2_0_rebuild_20260826/scripts/apply_physical_minimal_corrections_ac19_20260901.py"
   ],
   "mapping_method": {
-    "name": "Deterministic semantic interpretation and application of third-round human-review comments",
+    "name": "Deterministic semantic interpretation of third-round human review plus user-approved AC-19 minimum corrections",
     "em_or_hybrid_em_executed_in_this_round": false,
     "l3_master_precedence": true,
     "automatic_reassignment": false
@@ -32,10 +33,10 @@
     "scope_granularity_retired": 7,
     "scope_granularity_new": 1,
     "net_reduction": 175,
-    "user_directed_operations": 214,
+    "user_directed_operations": 217,
     "korean_copyedit_operations": 0,
     "english_copyedit_operations": 0,
-    "validation_passed": 10,
+    "validation_passed": 11,
     "validation_failed": 0,
     "others_total": 0,
     "source_counts": {
@@ -44,14 +45,14 @@
       "Physical": 94
     },
     "final_domain_counts": {
-      "General AI": 492,
+      "General AI": 494,
       "Agentic AI": 66,
-      "Physical AI": 65
+      "Physical AI": 63
     },
     "mapping_method_counts": {
       "General AI": {
         "EM": 250,
-        "HD": 242
+        "HD": 244
       },
       "Agentic AI": {
         "HD": 30,
@@ -59,7 +60,7 @@
       },
       "Physical AI": {
         "EM": 35,
-        "HD": 30
+        "HD": 28
       }
     },
     "similarity_top_pairs_published": 20,
@@ -72,10 +73,11 @@
     },
     "score_status_counts": {
       "L3_MASTER_VALIDATED": 35,
-      "NOT_APPLICABLE": 132,
-      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 396,
+      "NOT_APPLICABLE": 131,
+      "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 395,
       "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 31,
       "HUMAN_REVIEW_ROUND3_NO_EM_RERUN": 24,
+      "HUMAN_REVIEWED_AC19": 2,
       "L3_MASTER_AI_REWRITE": 5
     }
   },
@@ -89,16 +91,16 @@
       "rows": 50
     },
     "L4_General.csv": {
-      "sha256": "f8eac455e5e4dac3d8a77528c869c4ba0e87835f815677e661215a2c9e75afc6",
-      "rows": 492
+      "sha256": "a7fdfa08e3306ba24554a63b8de9a45eefb9a636f2129fe0d2869a7f6782c53f",
+      "rows": 494
     },
     "L4_Agentic.csv": {
       "sha256": "a9b45fac271649cb72e5cdbc786b6509abfdbdd9d198bc00517556309894b23f",
       "rows": 66
     },
     "L4_Physical.csv": {
-      "sha256": "0a1ae8e5dff64d327d154997a2d125ec97ebac96f01125c9e55baced6e2aacf6",
-      "rows": 65
+      "sha256": "573f03079364de5ca8f3906bf98fe355dbd0ba2e4a2679555f21caa7ffc6b0a6",
+      "rows": 63
     }
   },
   "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
@@ -255,6 +257,10 @@
       {
         "step": "AC-18",
         "cards": 623
+      },
+      {
+        "step": "AC-19",
+        "cards": 623
       }
     ]
   },
@@ -289,5 +295,23 @@
     "application_log": "validation/Human_Review_Round3_Application_Log.csv",
     "validation_record": "validation/Human_Review_Round3_Validation_Record.json"
   },
-  "audit_correction_20260901_ac18": "AC-18: applied all 30 non-empty third-round human-review comments after reading all 629 rows; 19 cards were reassigned and rewritten, 6 deleted, and 5 generalised within the same L3. No EM, merge, split, new L4, or new L3 was used."
+  "audit_correction_20260901_ac18": "AC-18: applied all 30 non-empty third-round human-review comments after reading all 629 rows; 19 cards were reassigned and rewritten, 6 deleted, and 5 generalised within the same L3. No EM, merge, split, new L4, or new L3 was used.",
+  "audit_correction_20260901_ac19": "AC-19: after two independent Physical AI audits and explicit user approval, P_SYS_HARDWARE_001 was moved to G_SYS_PERF_017, P_INT_TAMPER_001 was moved to G_SYS_SECADV_061, and the Korean cosmic-ray terminology in P_SYS_HARDWARE_003 was corrected. No card was deleted, merged, split, or newly created, and EM was not rerun.",
+  "physical_minimum_corrections_ac19": {
+    "cross_domain_reassignments": 2,
+    "korean_definition_corrections": 1,
+    "counts": {
+      "General": 494,
+      "Agentic": 66,
+      "Physical": 63,
+      "total": 623
+    },
+    "id_crosswalk": {
+      "P_SYS_HARDWARE_001": "G_SYS_PERF_017",
+      "P_INT_TAMPER_001": "G_SYS_SECADV_061"
+    },
+    "l3_master_unchanged": true,
+    "em_or_hybrid_em_executed": false,
+    "validation_record": "validation/Physical_Minimal_Corrections_AC19_Validation.json"
+  }
 }

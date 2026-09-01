@@ -1,15 +1,15 @@
 # RAI Risk Taxonomy 2.0 master release
 
-Current master: third-round human-review application (2026-09-01), following the second-round recovery and audit corrections AC-01 through AC-18.
+Current master: third-round human-review application (2026-09-01), following the second-round recovery and audit corrections AC-01 through AC-19.
 
 - L3 master: 46 immutable source categories plus 3 derived Others queues
 - L4: 623 cards
-- General / Agentic / Physical: 492 / 66 / 65
+- General / Agentic / Physical: 494 / 66 / 63
 - Retained mapping labels: EM 321 / HD 302
 - Cards with a verified literature reference: 176
-- Every L3 holds at least 3 cards; no L3 is empty
+- Every substantive L3 remains populated; `P_SYS_HARDWARE` and `P_INT_TAMPER` each hold 2 cards after AC-19
 - Final Others assignments: 0
-- Deterministic round-3 validation: 10 recorded checks, 10 PASS, 0 FAIL
+- Deterministic AC-19 validation: 11 recorded checks, 11 PASS, 0 FAIL
 - EM and Hybrid EM rerun in this review round: no
 - L3 master SHA-256: `1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54`
 
@@ -19,6 +19,10 @@ Prior-run mapping scores are retained only as historical evidence and are not pu
 ## Round-3 human review
 
 All 629 rows from the three KTSPACE review pages were read before transformation. The 30 non-empty comments produced 19 reassignments with definition revision, 6 deletions, and 5 same-L3 scope generalisations. Two independent expert reviewers assessed ambiguous cases, followed by third-party adjudication. No EM or Hybrid EM was run, and no merge, split, new L4, or new L3 was introduced. The final release contains 623 cards.
+
+## AC-19 Physical AI minimum corrections
+
+Two existing cards were reassigned across domains after two independent semantic audits and explicit user approval: `P_SYS_HARDWARE_001` became `G_SYS_PERF_017`, and `P_INT_TAMPER_001` became `G_SYS_SECADV_061`. The Korean definition of `P_SYS_HARDWARE_003` was corrected from `우주선(cosmic ray)` to `우주 방사선(cosmic ray)`. No card was deleted, merged, split, or newly created, and EM was not rerun. The 50-row L3 master remained byte-identical.
 
 ## Round-2 pipeline (historical)
 

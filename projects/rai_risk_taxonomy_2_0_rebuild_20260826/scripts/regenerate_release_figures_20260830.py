@@ -200,7 +200,7 @@ def main():
 
     # 6. Consolidation volume per audit correction ----------------------------
     traj = {a['step']: a['cards'] for a in manifest['audit_corrections']['card_count_trajectory']}
-    order = ['AC-01', 'AC-02', 'AC-05', 'AC-06', 'AC-07', 'AC-08', 'AC-18']
+    order = ['AC-01', 'AC-02', 'AC-05', 'AC-06', 'AC-07', 'AC-08', 'AC-18', 'AC-19']
     prev = traj['round2_pipeline']; deltas = []
     for k in order:
         deltas.append(traj[k] - prev); prev = traj[k]

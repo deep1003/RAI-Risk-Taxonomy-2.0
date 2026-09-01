@@ -1,0 +1,27 @@
+{
+  "correction_id": "AC-19",
+  "date": "2026-09-01",
+  "method": "Two independent semantic audits followed by user approval and deterministic application; no EM or Hybrid EM",
+  "actions": {
+    "cross_domain_reassignments": 2,
+    "korean_definition_corrections": 1,
+    "deletions": 0,
+    "merges": 0,
+    "splits": 0,
+    "new_l4": 0,
+    "new_l3": 0
+  },
+  "id_crosswalk": {
+    "P_SYS_HARDWARE_001": "G_SYS_PERF_017",
+    "P_INT_TAMPER_001": "G_SYS_SECADV_061"
+  },
+  "counts": {
+    "General": 494,
+    "Agentic": 66,
+    "Physical": 63,
+    "total": 623
+  },
+  "l3_master_sha256": "1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54",
+  "l3_master_unchanged": true,
+  "status": "PASS"
+}

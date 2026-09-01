@@ -7,15 +7,17 @@ card remains assigned to a domain-specific Others category.
 
 ## Current master release
 
+AC-19 applied two user-approved cross-domain corrections and one Korean terminology correction after two independent Physical AI audits. The release remains 623 cards: 494 General, 66 Agentic, and 63 Physical. The L3 master remains unchanged and EM was not rerun.
+
 The 2026-09-01 third-round human review read all 629 reviewed rows and applied all 30 non-empty comments without EM: 19 semantic reassignments, 6 deletions, and 5 scope generalisations. No merge, split, new L4, or new L3 was introduced.
 
 - Release: `RAI-Risk-Taxonomy-2.0-master`
 - L1: 3 domains
 - L2: 3 dimensions
 - L3: 50 categories, comprising 46 immutable source categories, the human-review-created `G_SYS_PERF`, and 3 derived Others categories
-- L4: 623 final cards, comprising 492 General, 66 Agentic, and 65 Physical
+- L4: 623 final cards, comprising 494 General, 66 Agentic, and 63 Physical
 - Mapping: 321 retained EM and 302 human-decision assignments; 0 Others assignments
-- Validation: 5 passed, 0 failed
+- Validation: 11 passed, 0 failed
 - Canonical artifacts: `releases/RAI-Risk-Taxonomy-2.0-master/`
 - Website bundle: `public/data/releases/RAI-Risk-Taxonomy-2.0-master/`
 
