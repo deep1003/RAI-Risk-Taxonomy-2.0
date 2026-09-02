@@ -1,4 +1,4 @@
-﻿L1_ID,L1_Title_en,L2_ID,L2_Title_en,L3_ID,L3_Title_en,L4_Count,Representative_L4_ID,Representative_L4_Title_en
+L1_ID,L1_Title_en,L2_ID,L2_Title_en,L3_ID,L3_Title_en,L4_Count,Representative_L4_ID,Representative_L4_Title_en
 L1_G,General AI,G_INT,Interaction,G_INT_VIOL,Violence,11,G_INT_VIOL_001,Algorithmic radicalisation
 L1_G,General AI,G_INT,Interaction,G_INT_SEX,Sexual Harm and Exploitation,9,G_INT_SEX_002,Explicit sexual content generation in non-permitted contexts
 L1_G,General AI,G_INT,Interaction,G_INT_SELF,Self-harm,7,G_INT_SELF_001,Concealment and avoidance strategies for self-harm
@@ -24,8 +24,8 @@ L1_G,General AI,G_SYS,System,G_SYS_CONTEST,Non-Contestability,4,G_SYS_CONTEST_00
 L1_G,General AI,G_SYS,System,G_SYS_SECADV,Security and Adversarial Robustness Failure,36,G_SYS_SECADV_001,Adversarial input perturbation
 L1_G,General AI,G_SYS,System,G_SYS_POLICY,Confidential Information Disclosure,9,G_SYS_POLICY_001,Confidential information in training data disclosed through outputs
 L1_G,General AI,G_SYS,System,G_SYS_TRANS,Lack of Transparency,16,G_SYS_TRANS_001,Bias concealment through manipulated explanations
+L1_G,General AI,G_SYS,System,G_SYS_PERF,Out-of-Domain Performance Degradation,21,G_SYS_PERF_001,Performance degradation from irrelevant context
 L1_G,General AI,G_SYS,System,G_SYS_EVAL,Evaluation and Assurance Failure,56,G_SYS_EVAL_001,AI benchmarks that exclude diverse users and rare harms
-L1_G,General AI,G_SYS,System,G_SYS_PERF,Performance and Reliability Failure,21,G_SYS_PERF_001,Performance degradation from irrelevant context
 L1_G,General AI,G_SOC,Societal Impact,G_SOC_ECON,Economic and Employment Disruption,8,G_SOC_ECON_001,Displacement of human creative work by synthetic substitutes
 L1_G,General AI,G_SOC,Societal Impact,G_SOC_POWER,Inequality and Power Concentration,19,G_SOC_POWER_001,AI provider lock-in
 L1_G,General AI,G_SOC,Societal Impact,G_SOC_DEMOC,Erosion of Democracy and Civic Order,9,G_SOC_DEMOC_001,AI-enabled censorship and suppression of public discourse
@@ -46,6 +46,3 @@ L1_P,Physical AI,P_SYS,System,P_SYS_CONTROL,Unsafe Physical Control and Actuatio
 L1_P,Physical AI,P_SYS,System,P_SYS_HARDWARE,Hardware and Mechanical Integrity Failure,2,P_SYS_HARDWARE_002,Erroneous execution from hardware faults
 L1_P,Physical AI,P_INT,Interaction,P_INT_SAFETY,Human-Robot Physical Safety Failure,16,P_INT_SAFETY_001,Mistiming or inappropriate manner of physical intervention by embodied systems
 L1_P,Physical AI,P_INT,Interaction,P_INT_TAMPER,Physical Tampering and Sabotage,2,P_INT_TAMPER_002,Physical disabling of safety interlocks and emergency stops
-L1_G,General AI,,,G_Others,Others and human decision,0,,
-L1_A,Agentic AI,,,A_Others,Others and human decision,0,,
-L1_P,Physical AI,,,P_Others,Others and human decision,0,,

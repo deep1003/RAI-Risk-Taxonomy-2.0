@@ -7,10 +7,10 @@
     "l1": 3,
     "l2_categories": 3,
     "l2_domain_paths": 7,
-    "l3": 50,
+    "l3": 47,
     "l3_master": 47,
     "l3_immutable": 45,
-    "l3_others": 3,
+    "l3_others": 0,
     "l4": 622,
     "em": 309,
     "hd": 313,
@@ -88,15 +88,15 @@
       "rows": 3
     },
     "L1_L2_L3_Master.csv": {
-      "sha256": "a1c19788dbbf4cd579bf166eeb297bed7e870212590262481254a6f8b8673cee",
-      "rows": 50
+      "sha256": "24d1e3bb3485cc29bc9604f516310c07358f58eee340054e5eea0d62d2410efa",
+      "rows": 47
     },
     "L4_General.csv": {
-      "sha256": "e83bb0a91f4b1d02d0aa7a6185a5f0b7ed3ae3e8bbeddea7b193f271ffb73917",
+      "sha256": "a097c3bcd98a35e3ef305ad183243d3ba70d503f4dec5bd8ab7ebbb3d0bb5eca",
       "rows": 492
     },
     "L4_Agentic.csv": {
-      "sha256": "70ad88494efacaccaba6d4b2a18ffadb8ca8c4beb7041b7e653d5af80d667d0f",
+      "sha256": "63fee8d9e4db5bab5105302c799bb6b473118891409ac45adb80b1b0a96ef86a",
       "rows": 67
     },
     "L4_Physical.csv": {
@@ -111,6 +111,21 @@
   "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
   "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
   "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)",
-  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; no L4 card or taxonomy content changed.",
-  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176."
+  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; original comments, taxonomy content, mappings, lineage, and the 629-card count were unchanged.",
+  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176.",
+  "audit_correction_20260830_ac09": "AC-09: technical reports (KO/EN) rewritten and recompiled against the 629-card release; figures and internal snapshots synchronised; Mapping provenance section removed from the card detail view",
+  "audit_correction_20260830_ac10": "AC-10: human-review and References columns dropped from the published CSVs (25 columns); full-column originals retained in the handover and project archive",
+  "audit_correction_20260830_ac11": "AC-11: verified literature references attached to 160 cards after six proposal agents, two independent reviewers, and a third-party re-verification of every unique URL (no citation fabrication found)",
+  "audit_correction_20260830_ac15": "AC-15: synchronized the 50-node hierarchy, current artifact row counts and SHA-256 hashes, public manifest, active handover checksums, and master-site regression tests.",
+  "audit_correction_20260901_ac18": "AC-18: applied all 30 non-empty third-round human-review comments after reading all 629 rows; 19 cards were reassigned and rewritten, 6 deleted, and 5 generalised within the same L3. No EM, merge, split, new L4, or new L3 was used.",
+  "audit_correction_20260901_ac19": "AC-19: after two independent Physical AI audits and explicit user approval, P_SYS_HARDWARE_001 was moved to G_SYS_PERF_017, P_INT_TAMPER_001 was moved to G_SYS_SECADV_061, and the Korean cosmic-ray terminology in P_SYS_HARDWARE_003 was corrected. No card was deleted, merged, split, or newly created, and EM was not rerun.",
+  "audit_correction_20260903_l3_47_sync": "Removed the three derived Others rows and synchronised the 47-row formal L3 reference across the master CSVs, surviving L4 hierarchy fields, report data, and website bundle. No L4 card was created, deleted, merged, split, or reassigned in this operation.",
+  "l3_master_47_sync": {
+    "formal_l3_rows": 47,
+    "derived_others_rows": 0,
+    "active_others_assignments": 0,
+    "l4_total": 622,
+    "l3_master_sha256": "24d1e3bb3485cc29bc9604f516310c07358f58eee340054e5eea0d62d2410efa",
+    "em_or_hybrid_em_executed": false
+  }
 }

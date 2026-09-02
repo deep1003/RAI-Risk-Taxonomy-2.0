@@ -290,6 +290,9 @@ def main() -> None:
         },
     }
     manifest.update({key: value for key, value in previous_manifest.items() if key.startswith("audit_correction_")})
+    manifest.update({key: value for key, value in manifest_source.items() if key.startswith("audit_correction_")})
+    if "l3_master_47_sync" in manifest_source:
+        manifest["l3_master_47_sync"] = manifest_source["l3_master_47_sync"]
 
     hierarchy = {
         "release_id": RELEASE_ID,
@@ -303,6 +306,11 @@ def main() -> None:
     write_json(OUT / "hierarchy.json", hierarchy)
     write_json(OUT / "cards.json", {"release_id": RELEASE_ID, "cards": cards})
     write_json(OUT / "manifest.json", manifest)
+    public_validation = OUT / "validation"
+    public_validation.mkdir(parents=True, exist_ok=True)
+    l3_sync_validation = SOURCE / "validation" / "L3_Master_47_Sync_Validation_20260903.json"
+    if l3_sync_validation.is_file():
+        shutil.copy2(l3_sync_validation, public_validation / l3_sync_validation.name)
     write_json(
         ROOT / "data" / "current.json",
         {

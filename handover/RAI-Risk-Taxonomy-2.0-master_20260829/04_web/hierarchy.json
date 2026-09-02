@@ -329,8 +329,8 @@
       "parent_id": "G_SYS",
       "label_ko": "기밀정보 노출",
       "label_en": "Confidential Information Disclosure",
-      "description_ko": "AI 시스템이 시스템 프롬프트·내부 정책·안전장치·모델 구조·학습/평가 데이터·모델 자산·기업 영업비밀 등 보호되는 비공개 기밀정보를 권한 없이 노출·추론·추출·공유하거나 이를 충분히 보호하지 못하여 보안, 지식재산권과 정당한 경제적 이익을 침해하는 리스크. 개인정보 침해는 개인정보 침해에서, 적대적 입력·탈옥·무단 접근과 같은 실제 침해는 보안·적대적 견고성 실패에서 분류한다.",
-      "description_en": "The risk that an AI system discloses, infers, extracts, or shares protected non-public confidential information without authorisation, or fails to protect it, including system prompts, internal policies, safeguards, model architecture, training or evaluation data, model assets, or business trade secrets, thereby compromising security, intellectual-property rights, or legitimate economic interests. Personal-data harms are classified under Privacy and Data Protection Failure, while actual compromise through adversarial input, jailbreak, or unauthorised access is classified under Security and Adversarial Robustness Failure.",
+      "description_ko": "AI 시스템이 시스템 프롬프트·내부 정책·안전장치·모델 구조·학습/평가 데이터·모델 가중치·기업 영업비밀 등 보호되는 비공개 기밀정보를 권한 없이 노출·추론·추출·공유하거나 이를 충분히 보호하지 못하여, 기밀성과 정당한 경제적 이익을 침해하는 리스크\n\n(개인정보·민감정보의 노출은 \"Privacy Violation\", 제3자의 저작권·상표·특허 등 지식재산권 침해 자체는 \"Copyright Infringement\", 적대적 입력·탈옥·무단 접근과 같은 실제 침해는 \"Security and Adversarial Robustness Failure\"에서 다룸).",
+      "description_en": "The risk that an AI system, without authorisation, discloses, infers, extracts, shares, or fails to adequately protect non-public confidential information, including system prompts, internal policies, safeguards, model architecture, training or evaluation data, model weights, and corporate trade secrets, thereby compromising confidentiality and legitimate economic interests.\n\n(Exposure of personal or sensitive information is covered under \"Privacy Violation\"; infringement of third-party copyright, trademarks, patents, or other intellectual-property rights is covered under \"Copyright Infringement\"; actual compromises such as adversarial inputs, jailbreaks, or unauthorised access are covered under \"Security and Adversarial Robustness Failure\".)",
       "sequence": 24,
       "status": "active",
       "master_status": "REVISED_BY_HUMAN_REVIEW_ROUND4"
@@ -348,6 +348,18 @@
       "master_status": "IMMUTABLE_SOURCE"
     },
     {
+      "node_id": "G_SYS_PERF",
+      "level": 3,
+      "parent_id": "G_SYS",
+      "label_ko": "운영영역 이탈 성능 저하",
+      "label_en": "Out-of-Domain Performance Degradation",
+      "description_ko": "AI 시스템이 검증된 운영영역(validated operating domain)을 벗어난 조건 — 데이터 분포 이동(drift), 저자원·희소 입력, 코너 케이스, 또는 시스템의 검증된 역량 범위를 넘어선 배치 등 — 에서 일반화에 실패하여 성능과 신뢰성이 저하되고, 부정확하거나 불안정한 결과를 산출하는 리스크\n\n(개별 입력의 의미적 오해는 \"Input Comprehension Failure\", 동일·유사 입력에 대한 출력 변동은 \"Inconsistency\", 불확실성 하의 부당한 확신은 \"Overconfidence\", 검증된 역량을 넘어 수행 가능한 것처럼 표상하는 문제는 \"Over-Extension\"에서 다룸. 또한 성능 저하가 보호대상 특성·사회집단과 체계적으로 연동되어 불리한 자원·기회·서비스 배분으로 이어지는 경우는 \"Allocative Discrimination\", 집단에 대한 비하·고정관념적 표현으로 나타나는 경우는 \"Representational Harm and Stereotyping\"에서 다루며, 본 범주는 특정 보호집단과 무관한 일반화·강건성 실패에 한정한다).",
+      "description_en": "The risk that an AI system fails to generalise under conditions outside its validated operating domain, including data-distribution shift or drift, low-resource or sparse inputs, corner cases, or deployment beyond its validated capabilities, thereby degrading performance and reliability and producing inaccurate or unstable outcomes.\n\n(Misinterpretation of an individual input is covered under \"Input Comprehension Failure\"; output variation for identical or substantively similar inputs under \"Inconsistency\"; unjustified certainty under uncertainty under \"Overconfidence\"; and claims or actions beyond validated capability under \"Over-Extension\". Where performance degradation is systematically associated with protected characteristics or social groups and leads to adverse allocation of resources, opportunities, services, or access, it is covered under \"Allocative Discrimination\"; where it manifests as degrading or stereotypical representations of groups, it is covered under \"Representational Harm and Stereotyping\". This category is limited to generalisation and robustness failures not systematically associated with a specific protected group.)",
+      "sequence": 26,
+      "status": "active",
+      "master_status": "ADDED_BY_HUMAN_REVIEW_AC14"
+    },
+    {
       "node_id": "G_SYS_EVAL",
       "level": 3,
       "parent_id": "G_SYS",
@@ -355,21 +367,9 @@
       "label_en": "Evaluation and Assurance Failure",
       "description_ko": "평가 지표의 타당성·포괄성·맥락 정합성 부족이나 결과의 비신뢰성·재현 불가, 실제 동작 미탐지 등으로 AI 시스템의 능력·안전·리스크를 타당하게 측정·검증·감사하지 못하여, 잘못된 안전성 확신에 근거해 배포·거버넌스 의사결정이 이루어지는 리스크.",
       "description_en": "The risk that an AI system's capabilities, safety, or risks cannot be validly measured, verified, or audited—because evaluations lack construct validity, coverage, or contextual fidelity, produce unreliable or non-reproducible results, or fail to detect actual behavior—leading to false assurance and unsafe deployment or governance decisions.",
-      "sequence": 26,
-      "status": "active",
-      "master_status": "IMMUTABLE_SOURCE"
-    },
-    {
-      "node_id": "G_SYS_PERF",
-      "level": 3,
-      "parent_id": "G_SYS",
-      "label_ko": "성능·신뢰성 실패",
-      "label_en": "Performance and Reliability Failure",
-      "description_ko": "AI 시스템이 학습·검증 과정의 결함이나 운용 조건의 변화로 인해 요구되는 정확성·일반화·안정성을 달성하지 못하여, 배포 환경에서 성능이 저하되거나 신뢰할 수 없는 산출을 내는 리스크.",
-      "description_en": "The risk that an AI system fails to achieve the required accuracy, generalisation, or stability, owing to defects in training and validation or to changes in operating conditions, so that its performance degrades or its outputs become unreliable in deployment.",
       "sequence": 27,
       "status": "active",
-      "master_status": "ADDED_BY_HUMAN_REVIEW_AC14"
+      "master_status": "IMMUTABLE_SOURCE"
     },
     {
       "node_id": "G_SOC",
@@ -568,8 +568,8 @@
       "parent_id": "A_INT",
       "label_ko": "협조 실패",
       "label_en": "Coordination Failure",
-      "description_ko": "협력하려는 의도를 가진 여러 에이전트가 균형(equilibrium) 선택의 불일치나 상대에 대한 사전 정보 부족으로 행동을 신뢰성 있게 맞추지 못하여 협력이 실패하고 집단적으로 나쁜 결과에 이르는 리스크.",
-      "description_en": "The risk that multiple agents intending to cooperate fail to reliably align their actions—due to mismatched equilibria or a lack of prior information about one another—resulting in failed cooperation and collectively poor outcomes.",
+      "description_ko": "여러 에이전트가 균형(equilibrium) 선택의 불일치나 상대에 대한 사전 정보 부족으로 행동을 신뢰성 있게 맞추지 못하여 협력이 실패하고 집단적으로 나쁜 결과에 이르는 리스크.",
+      "description_en": "The risk that multiple agents fail to reliably align their actions because of mismatched equilibrium selection or insufficient prior information about one another, resulting in failed cooperation and collectively poor outcomes.",
       "sequence": 40,
       "status": "active",
       "master_status": "IMMUTABLE_SOURCE"
@@ -692,42 +692,6 @@
       "sequence": 47,
       "status": "active",
       "master_status": "IMMUTABLE_SOURCE"
-    },
-    {
-      "node_id": "G_Others",
-      "level": 3,
-      "parent_id": "L1_G",
-      "label_ko": "기타·판단 보류",
-      "label_en": "Others and human decision",
-      "description_ko": "기존 L3 마스터 범주에 신뢰성 있게 구분하기 어려워 인간 결정이 필요한 경계성 리스크.",
-      "description_en": "Boundary risks that cannot be assigned reliably to an existing L3 master category and require human decision.",
-      "sequence": 48,
-      "status": "active",
-      "master_status": "DERIVED_OTHERS_HD"
-    },
-    {
-      "node_id": "A_Others",
-      "level": 3,
-      "parent_id": "L1_A",
-      "label_ko": "기타·판단 보류",
-      "label_en": "Others and human decision",
-      "description_ko": "기존 L3 마스터 범주에 신뢰성 있게 구분하기 어려워 인간 결정이 필요한 경계성 리스크.",
-      "description_en": "Boundary risks that cannot be assigned reliably to an existing L3 master category and require human decision.",
-      "sequence": 49,
-      "status": "active",
-      "master_status": "DERIVED_OTHERS_HD"
-    },
-    {
-      "node_id": "P_Others",
-      "level": 3,
-      "parent_id": "L1_P",
-      "label_ko": "기타·판단 보류",
-      "label_en": "Others and human decision",
-      "description_ko": "기존 L3 마스터 범주에 신뢰성 있게 구분하기 어려워 인간 결정이 필요한 경계성 리스크.",
-      "description_en": "Boundary risks that cannot be assigned reliably to an existing L3 master category and require human decision.",
-      "sequence": 50,
-      "status": "active",
-      "master_status": "DERIVED_OTHERS_HD"
     }
   ],
   "canonical_l2_categories": [

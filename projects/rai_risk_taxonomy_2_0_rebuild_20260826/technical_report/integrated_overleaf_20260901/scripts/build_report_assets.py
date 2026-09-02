@@ -58,7 +58,7 @@ boxes = [
     (3.90, 2.35, 1.55, 1.10, "Candidate\nconstruction", "1,725 candidates"),
     (5.75, 2.35, 1.55, 1.10, "Registry and\nsemantic mapping", "1,660 active (archive)"),
     (7.60, 2.35, 1.55, 1.10, "Rebuild\nbaseline", "798 cards"),
-    (9.45, 2.35, 1.55, 1.10, "Audited\nmaster", "623 cards"),
+    (9.45, 2.35, 1.55, 1.10, "Audited\nmaster", "622 cards"),
 ]
 for x, y, w, h, title, subtitle in boxes:
     patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.04,rounding_size=0.08",
@@ -111,6 +111,7 @@ trajectory = pd.DataFrame([
     ("AC-08", 629),
     ("Round 3 / AC-18", 623),
     ("AC-19", 623),
+    ("Round 4 / current", 622),
 ], columns=["stage", "cards"])
 trajectory.to_csv(DATA / "rebuild_card_trajectory.csv", index=False)
 fig, ax = plt.subplots(figsize=(10.6, 4.8))
@@ -128,7 +129,7 @@ finish(fig, "fig03_rebuild_trajectory")
 
 
 # Figure 4. Final domain composition.
-domain = pd.DataFrame({"domain": ["General AI", "Agentic AI", "Physical AI"], "cards": [494, 66, 63]})
+domain = pd.DataFrame({"domain": ["General AI", "Agentic AI", "Physical AI"], "cards": [492, 67, 63]})
 domain.to_csv(DATA / "final_domain_counts.csv", index=False)
 fig, ax = plt.subplots(figsize=(7.8, 4.2))
 bars = ax.bar(domain.domain, domain.cards, color=[COLORS["General"], COLORS["Agentic"], COLORS["Physical"]], width=0.62)
@@ -137,7 +138,7 @@ ax.set_title("Final audited master by L1 domain", loc="left", weight="bold")
 ax.spines[["top", "right"]].set_visible(False)
 ax.grid(axis="y", alpha=0.25)
 for b, v in zip(bars, domain.cards):
-    ax.text(b.get_x()+b.get_width()/2, v+8, f"{v}\n({v/623:.1%})", ha="center", fontsize=9)
+    ax.text(b.get_x()+b.get_width()/2, v+8, f"{v}\n({v/622:.1%})", ha="center", fontsize=9)
 ax.set_ylim(0, 560)
 finish(fig, "fig04_final_domain_counts")
 
@@ -272,6 +273,7 @@ stages = pd.DataFrame([
     ("AC-08 audited", 487, 65, 77),
     ("Round 3", 492, 66, 65),
     ("AC-19 final", 494, 66, 63),
+    ("Round 4 / current", 492, 67, 63),
 ], columns=["stage", "General", "Agentic", "Physical"])
 stages.to_csv(DATA / "domain_counts_by_review_stage.csv", index=False)
 fig, ax = plt.subplots(figsize=(10.0, 5.0))

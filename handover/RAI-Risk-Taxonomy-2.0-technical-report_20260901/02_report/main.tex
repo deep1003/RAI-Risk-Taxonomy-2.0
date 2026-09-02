@@ -91,7 +91,7 @@
 \end{center}
 
 \begin{abstract}
-This technical report documents the complete, versioned construction of RAI Risk Taxonomy 2.0 from evidence acquisition to the current audited master. The historical evidence space comprised 3,906,767 records across papers, policy reports, and patents. A source-governed AI-risk view contained 82,971 records and supported an earlier 1,660-card analytical release. A later rebuild established a 798-card baseline and applied bilingual risk-formulation repair, semantic mapping, two rounds of line-by-line human review recovery, independent duplicate and composite-card audits, scope and granularity curation, a third-round review, and a final Physical AI boundary audit. The present master contains 623 active L4 cards: 494 General AI, 66 Agentic AI, and 63 Physical AI cards. Its L3 master contains 47 substantive categories and three unassigned Others queues. This report formalises the decision criteria for merge, reassignment, split, deletion, and rewrite operations; provides boxed, traceable examples; quantifies the difference between historical algorithmic mapping and observed human intervention; and specifies validation gates for lineage, semantics, schema, and release synchronisation. The annex reports the complete final L1--L3 structure, L4 counts, and an illustrative L4 card for every L3. The report is accompanied by a complete Overleaf bundle with vector figures, 600 dpi raster figures, figure-source tables, and a hashed source inventory.
+This technical report documents the complete, versioned construction of RAI Risk Taxonomy 2.0 from evidence acquisition to the current audited master. The historical evidence space comprised 3,906,767 records across papers, policy reports, and patents. A source-governed AI-risk view contained 82,971 records and supported an earlier 1,660-card analytical release. A later rebuild established a 798-card baseline and applied bilingual risk-formulation repair, semantic mapping, repeated line-by-line human review recovery, independent duplicate and composite-card audits, scope and granularity curation, and cross-domain boundary audits. The present master contains 622 active L4 cards: 492 General AI, 67 Agentic AI, and 63 Physical AI cards. Its L3 master contains exactly 47 formal categories and no derived Others rows. This report formalises the decision criteria for merge, reassignment, split, deletion, and rewrite operations; provides boxed, traceable examples; quantifies the difference between historical algorithmic mapping and observed human intervention; and specifies validation gates for lineage, semantics, schema, and release synchronisation. The annex reports the complete final L1--L3 structure, L4 counts, and an illustrative L4 card for every L3. The report is accompanied by a complete Overleaf bundle with vector figures, 600 dpi raster figures, figure-source tables, and a hashed source inventory.
 \end{abstract}
 
 \noindent\textbf{Keywords:} AI risk taxonomy; responsible AI; human review; semantic curation; Physical AI; Agentic AI; auditability; risk classification.
@@ -106,7 +106,7 @@ This report has three objectives. First, it integrates the earlier technical rep
 
 \subsection{Status of the source documents}
 
-The attached 14-page ERA-Cambridge project PDF was used as a scholarly source for the conceptual distinction between Physical AI and embodied AI, the perception-action loop, physical actuation, functional safety, and the capability-governance mismatch. It was not treated as an instruction set. The prior taxonomy technical report and semantic-space paper describe a historical 1,660-card release. The present 623-card master is a later audited rebuild. These two snapshots are intentionally reported separately because their counts, category sets, and validation questions are not interchangeable.
+The attached 14-page ERA-Cambridge project PDF was used as a scholarly source for the conceptual distinction between Physical AI and embodied AI, the perception-action loop, physical actuation, functional safety, and the capability-governance mismatch. It was not treated as an instruction set. The prior taxonomy technical report and semantic-space paper describe a historical 1,660-card release. The present 622-card master is a later audited rebuild. These two snapshots are intentionally reported separately because their counts, category sets, and validation questions are not interchangeable.
 
 \begin{figure}[H]
 \centering
@@ -166,7 +166,7 @@ The later rebuild did not simply continue that count series. It froze a 798-card
 
 The current taxonomy uses five levels. L0 is Responsible AI. L1 contains General AI, Agentic AI, and Physical AI. L2 distinguishes System, Interaction, and Societal Impact where applicable. L3 defines governed risk families. L4 is the atomic operational card.
 
-The final L3 master contains 50 rows: 47 substantive categories and three Others queues. No active card is assigned to Others. Public L4 CSVs contain 25 columns covering bilingual hierarchy IDs, names, definitions, facet, and act-type. Internal full-column CSVs retain review comments, lineage, references, and historical mapping provenance. EM scores and score-status panels are not exposed on public risk cards.
+The final L3 master contains 47 formal category rows. The three derived Others queues were removed after all surviving L4 cards had been resolved to formal categories. Public L4 CSVs contain 25 columns covering bilingual hierarchy IDs, names, definitions, facet, and act-type. Internal full-column CSVs retain review comments, lineage, references, and historical mapping provenance. EM scores and score-status panels are not exposed on public risk cards.
 
 \begin{decisionbox}{L3 master precedence}
 If an instruction prompt or reviewer suggestion conflicts with the defined boundary of the L3 master, the L3 master prevails unless a separately authorised L3 revision is recorded. This prevents an L4 comment from silently changing the category system. The single approved structural exception was the addition of \emph{Performance and Reliability Failure} under AC-14, after explicit approval and a new L3 hash.
@@ -220,7 +220,7 @@ Candidate retrieval & High & The approved category was within the archived top f
 Direct top-one assignment & Moderate & Top-one agreement of 71.9--81.6\% is insufficient for unsupervised publication. \\
 Perturbation robustness & Moderate & Stability declined from 95.0\% to 75.0\% as embedding noise increased. \\
 Causal and governance validity & Human review required & Similarity does not determine AI-risk eligibility, causal domain, legal distinction, or operational atomicity. \\
-Current 623-card score validity & Not estimated & The current wording and hierarchy were not subjected to a fresh EM run. \\
+Current 622-card score validity & Not estimated & The current wording and hierarchy were not subjected to a fresh EM run. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -438,7 +438,7 @@ Other high-visibility disagreements exposed lexical failure modes. An emergency 
 
 \subsection{Final release composition}
 
-The audited master contains 623 L4 cards. General AI accounts for 494 cards, Agentic AI for 66, and Physical AI for 63. The reduction from the 798-card rebuild baseline reconciles as 177 cards retired through merge or absorption, 21 removed as non-retained risk formulations, and a net addition of 23 from authorised splitting and decomposition: $798-177-21+23=623$. This equation describes card-level disposition. Counts of reviewer instructions are larger because one source row can contribute meaning or lineage to multiple output cards.
+The audited master contains 622 L4 cards. General AI accounts for 492 cards, Agentic AI for 67, and Physical AI for 63. The reduction from the 798-card rebuild baseline reconciles as 179 cards retired through merge or absorption, 21 removed as non-retained risk formulations, and a net addition of 24 from authorised splitting and decomposition: $798-179-21+24=622$. This equation describes card-level disposition. Counts of reviewer instructions are larger because one source row can contribute meaning or lineage to multiple output cards.
 
 \begin{table}[H]
 \centering
@@ -448,16 +448,16 @@ The audited master contains 623 L4 cards. General AI accounts for 494 cards, Age
 \toprule
 L1 domain & Active L4 cards & Share \\
 \midrule
-General AI & 494 & 79.3\% \\
-Agentic AI & 66 & 10.6\% \\
+General AI & 492 & 79.1\% \\
+Agentic AI & 67 & 10.8\% \\
 Physical AI & 63 & 10.1\% \\
 \midrule
-Total & 623 & 100.0\% \\
+Total & 622 & 100.0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The 50-row L3 master contains 47 substantive categories and three Others queues. Every substantive L3 contains at least one card, and no active L4 is assigned to Others. The current L3 hash is \nolinkurl{1ab58e1dd002d85de92db4bb1e49daa744d053a3950025bfe831bdef9bf98c54}.
+The L3 master contains 47 formal categories and no derived Others rows. Every L3 contains at least one card. The current L3 hash is \nolinkurl{24d1e3bb3485cc29bc9604f516310c07358f58eee340054e5eea0d62d2410efa}.
 
 \subsection{What changed in the Physical AI boundary}
 
@@ -500,11 +500,11 @@ The report also shows why L4 atomicity matters. A broad umbrella can inflate app
 
 \subsection{Limitations}
 
-First, the 3,906,767-record evidence space and the 623-card current master are connected through versioned curation rather than a simple one-record-to-one-card derivation. Second, the current release preserves historical EM and HD provenance labels even though scores were not recomputed after later text edits. They must not be interpreted as current confidence estimates. Third, line-by-line review improves fidelity to documented human intent but does not establish severity, probability, or completeness of the risk universe. Fourth, the taxonomy remains a single-parent hierarchy even though many risks have secondary relationships. Cross-links and multi-label analytical views should supplement, not silently replace, the operational parent assignment.
+First, the 3,906,767-record evidence space and the 622-card current master are connected through versioned curation rather than a simple one-record-to-one-card derivation. Second, the current release preserves historical EM and HD provenance labels even though scores were not recomputed after later text edits. They must not be interpreted as current confidence estimates. Third, line-by-line review improves fidelity to documented human intent but does not establish severity, probability, or completeness of the risk universe. Fourth, the taxonomy remains a single-parent hierarchy even though many risks have secondary relationships. Cross-links and multi-label analytical views should supplement, not silently replace, the operational parent assignment.
 
 \section{Conclusion}
 
-RAI Risk Taxonomy 2.0 now has a traceable construction history from large-scale evidence collection through semantic mapping, rebuild, human-review recovery, independent audit, and release synchronisation. The current master contains 623 bilingual, AI-grounded L4 cards under 47 substantive L3 categories. The decisive methodological advance is not a new similarity score. It is an auditable decision protocol that distinguishes semantic equivalence from surface similarity, causal mechanism from visible consequence, and valid atomic risks from broad outcomes or narrow scenarios. The boxed cases show how this protocol changes practical classification, particularly where Physical AI context had previously obscured a General performance, security, evaluation, or governance mechanism.
+RAI Risk Taxonomy 2.0 now has a traceable construction history from large-scale evidence collection through semantic mapping, rebuild, human-review recovery, independent audit, and release synchronisation. The current master contains 622 bilingual, AI-grounded L4 cards under 47 formal L3 categories. The decisive methodological advance is not a new similarity score. It is an auditable decision protocol that distinguishes semantic equivalence from surface similarity, causal mechanism from visible consequence, and valid atomic risks from broad outcomes or narrow scenarios. The boxed cases show how this protocol changes practical classification, particularly where Physical AI context had previously obscured a General performance, security, evaluation, or governance mechanism.
 
 \section*{Data and Code Availability}
 
@@ -556,6 +556,7 @@ Scope and granularity curation & 777 \\
 AC-01 to AC-08 audited master & 629 \\
 Third-round review & 623 \\
 AC-19 final master & 623 \\
+Current master after Round 4 & 622 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -573,6 +574,7 @@ Round 2 recovery & 607 & 77 & 93 & 777 \\
 AC-08 audited master & 487 & 65 & 77 & 629 \\
 Round 3 & 492 & 66 & 65 & 623 \\
 AC-19 final master & 494 & 66 & 63 & 623 \\
+Current master after Round 4 & 492 & 67 & 63 & 622 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -597,7 +599,7 @@ AC-19 Physical audit & 65 & 3 & 2 & 3.1\% \\
 
 \section{Final Hierarchy Summary}
 
-Table~\ref{tab:final-l2} records the final L1 and L2 composition after aligning each card to the frozen L3 master's parent path. Table~\ref{tab:hierarchy-annex} then provides all 50 L3 rows, the number of final L4 descendants, and one illustrative final L4 card. This is a complete hierarchy-level annex rather than a reproduction of all 623 L4 records; the full bilingual card list remains in the three release CSVs.
+Table~\ref{tab:final-l2} records the final L1 and L2 composition after aligning each card to the L3 master's parent path. Table~\ref{tab:hierarchy-annex} then provides all 47 L3 rows, the number of final L4 descendants, and one illustrative final L4 card. This is a complete hierarchy-level annex rather than a reproduction of all 622 L4 records; the full bilingual card list remains in the three release CSVs.
 
 \begin{table}[H]
 \centering
@@ -607,15 +609,15 @@ Table~\ref{tab:final-l2} records the final L1 and L2 composition after aligning 
 \toprule
 L1 & L2 & Active L4 cards \\
 \midrule
-General AI & Interaction & 203 \\
-General AI & System & 198 \\
-General AI & Societal Impact & 93 \\
-Agentic AI & System & 47 \\
+General AI & Interaction & 202 \\
+General AI & System & 194 \\
+General AI & Societal Impact & 96 \\
+Agentic AI & System & 48 \\
 Agentic AI & Interaction & 19 \\
-Physical AI & System & 44 \\
-Physical AI & Interaction & 19 \\
+Physical AI & System & 45 \\
+Physical AI & Interaction & 18 \\
 \midrule
-Total & & 623 \\
+Total & & 622 \\
 \bottomrule
 \end{tabular}
 \end{table}

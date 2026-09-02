@@ -1,6 +1,6 @@
 # RAI Risk Taxonomy 2.0 Technical Report Handover
 
-Handover date: 1 September 2026
+Handover date: 3 September 2026
 
 This package contains the final English integrated technical report, its Overleaf source bundle, the public taxonomy CSVs used by the report, and the principal review and validation tables.
 
@@ -8,9 +8,10 @@ This package contains the final English integrated technical report, its Overlea
 
 - Title: *RAI Risk Taxonomy 2.0: An Auditable Human-in-the-Loop Pipeline for Consolidating, Splitting, and Reassigning AI Risk Cards*
 - Length: 19 pages
-- Final L4 total: 623
-- Domain totals: General AI 494, Agentic AI 66, Physical AI 63
-- Substantive L3 categories: 47
+- Final L4 total: 622
+- Domain totals: General AI 492, Agentic AI 67, Physical AI 63
+- Formal L3 categories: 47
+- Derived Others rows: 0
 - Others assignments: 0
 
 ## Authors
@@ -34,7 +35,7 @@ This package contains the final English integrated technical report, its Overlea
 ## Methodological caveats
 
 - Only Round 1 is a direct algorithmic Top-1 versus adjudicated-L3 comparison. Rounds 2 and 3 are incremental audits of mappings that already contain prior human decisions.
-- EM and Hybrid EM were not rerun on the current 623-card wording and hierarchy.
+- EM and Hybrid EM were not rerun on the current 622-card wording and hierarchy.
 - The report discloses two stale public L2 fields, `A_SYS_GOAL_023` and `A_SYS_AUTH_024`, as release-schema QA items. They were not silently corrected during report preparation.
 
 ## Compilation
@@ -44,4 +45,3 @@ Extract the ZIP in `03_overleaf`, upload the resulting directory to Overleaf, an
 ```bash
 latexmk -xelatex -bibtex main.tex
 ```
-

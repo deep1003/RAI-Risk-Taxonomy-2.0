@@ -3,7 +3,7 @@
   "passed": 16,
   "failed": 0,
   "release_round": "human_review_round4",
-  "l3_master_sha256": "a1c19788dbbf4cd579bf166eeb297bed7e870212590262481254a6f8b8673cee",
+  "l3_master_sha256": "24d1e3bb3485cc29bc9604f516310c07358f58eee340054e5eea0d62d2410efa",
   "checks": [
     {
       "check": "Unique L4 IDs",
@@ -103,5 +103,5 @@
     }
   ],
   "round4_note": "All 623 rows were read without EM. General: 473 no-objection, 2 split, 8 move, 9 discussion. Agentic: 66 blank values excluded from approval. Physical: 61 stay, 4 special. All discussion rows were adjudicated and recorded in a dedicated Korean result column.",
-  "structural_sync_note": "Two pre-existing Agentic parent-metadata mismatches were synchronized to the unchanged L3 master without inferring human approval or changing L3 placement."
+  "structural_sync_note": "Two pre-existing Agentic parent-metadata mismatches were synchronized during Round 4. On 3 September 2026, the three derived Others rows were removed and the surviving hierarchy fields were synchronized to the 47-row formal L3 reference without changing any L4 placement."
 }

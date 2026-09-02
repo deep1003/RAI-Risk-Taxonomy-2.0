@@ -1,23 +1,23 @@
 # RAI Risk Taxonomy
 
 Versioned data package for RAI Risk Taxonomy 2.0. The current reviewed master
-release contains 623 bilingual L4 risk cards mapped to 50 L3 categories. It
-includes 321 retained EM assignments and 302 human-decision assignments; no
-card remains assigned to a domain-specific Others category.
+release contains 622 bilingual L4 risk cards mapped to 47 L3 categories. It
+includes 309 retained EM assignments and 313 human-decision assignments. The
+three derived Others rows have been removed from the L3 master.
 
 ## Current master release
 
-AC-19 applied two user-approved cross-domain corrections and one Korean terminology correction after two independent Physical AI audits. The release remains 623 cards: 494 General, 66 Agentic, and 63 Physical. The L3 master remains unchanged and EM was not rerun.
+The current master incorporates the fourth-round human review and the final L3 reference synchronisation. It contains 622 cards: 492 General, 67 Agentic, and 63 Physical. The L3 master contains only the 47 formal categories; the three derived Others rows have been removed. EM was not rerun.
 
 The 2026-09-01 third-round human review read all 629 reviewed rows and applied all 30 non-empty comments without EM: 19 semantic reassignments, 6 deletions, and 5 scope generalisations. No merge, split, new L4, or new L3 was introduced.
 
 - Release: `RAI-Risk-Taxonomy-2.0-master`
 - L1: 3 domains
 - L2: 3 dimensions
-- L3: 50 categories, comprising 46 immutable source categories, the human-review-created `G_SYS_PERF`, and 3 derived Others categories
-- L4: 623 final cards, comprising 494 General, 66 Agentic, and 63 Physical
-- Mapping: 321 retained EM and 302 human-decision assignments; 0 Others assignments
-- Validation: 11 passed, 0 failed
+- L3: 47 formal categories, with no derived Others rows
+- L4: 622 final cards, comprising 492 General, 67 Agentic, and 63 Physical
+- Mapping provenance: 309 retained EM labels and 313 human-decision labels; 0 Others assignments
+- Validation: 16 passed, 0 failed
 - Canonical artifacts: `releases/RAI-Risk-Taxonomy-2.0-master/`
 - Website bundle: `public/data/releases/RAI-Risk-Taxonomy-2.0-master/`
 

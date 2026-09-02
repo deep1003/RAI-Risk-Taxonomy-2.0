@@ -1,0 +1,116 @@
+{
+  "release_id": "RAI-Risk-Taxonomy-2.0-master",
+  "release_status": "master",
+  "created_at": "2026-09-01T00:00:00+09:00",
+  "counts": {
+    "l0": 1,
+    "l1": 3,
+    "l2_categories": 3,
+    "l2_domain_paths": 7,
+    "l3": 50,
+    "l3_master": 47,
+    "l3_immutable": 45,
+    "l3_others": 3,
+    "l4": 622,
+    "em": 309,
+    "hd": 313,
+    "general": 492,
+    "agentic": 67,
+    "physical": 63
+  },
+  "cleaning": {
+    "source_total": 798,
+    "deleted": 21,
+    "merged_away": 179,
+    "split_net_addition": 24,
+    "user_directed_operations": 240,
+    "korean_copyedit_operations": 0,
+    "english_copyedit_operations": 0,
+    "net_reduction": 176,
+    "final_total": 622
+  },
+  "method": {
+    "algorithm": "Deterministic interpretation of fourth-round human-review intent and user-approved AC-20 adjudication",
+    "em_or_hybrid_em_executed_in_this_round": false,
+    "score_policy": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
+    "boundary_policy": "Apply every non-empty fourth-round human-review comment, actively adjudicate all nine General discussion rows, and require zero final Others assignments",
+    "l1_routing_policy": "Apply explicit human-review routing decisions, including the General-to-Agentic sandbox-escape transfer, and preserve reviewed cross-domain lineage",
+    "l3_master_precedence": true,
+    "definition_policy": "Each bilingual L4 definition explicitly names an AI technology and is reviewed against an immutable L3 drafting anchor",
+    "title_policy": "Formulaic AI involvement modifiers are removed; technical-object AI terms are retained and authoritative terminology families are audited",
+    "semantic_deduplication_policy": "Two discussion cards were merged into existing semantic survivors, with secondary meanings preserved through lineage links",
+    "scope_granularity_policy": "Round 4 applied two explicit splits, eight explicit moves, nine discussion adjudications, and one lineage-backed split child without a de novo unrelated L4 or a new L3"
+  },
+  "human_review": {
+    "review_snapshot_id": "human-review-round4-ac20-20260901",
+    "candidate_count": 2,
+    "vote_log": "GitHub Issues with marker rai-taxonomy-human-review-v1",
+    "daily_aggregation": true,
+    "automatic_reassignment": false,
+    "score_warning": "No EM, Hybrid EM, margin, stability, or candidate score is exposed on public risk cards",
+    "application_policy": "All 623 review rows were read. General contained 473 no-objection, 2 split, 8 move, and 9 discussion decisions. Physical contained 61 stay and 4 special decisions. The 66 blank Agentic rows were excluded from approval. Two independent expert reviews informed ambiguous-case adjudication."
+  },
+  "golden_references": {
+    "cards_with_reference": 622,
+    "cards_with_direct_quote": 622,
+    "unique_source_urls": 43,
+    "source_quality_tiers": {
+      "B_IDENTIFIED_RESEARCH_PAPER": 257,
+      "A_OFFICIAL_REPORT": 100,
+      "A_PEER_REVIEWED": 249,
+      "A_INSTITUTIONAL_REPORT": 16
+    },
+    "link_verification_status": {
+      "PASS_LIVE": 464,
+      "PASS_ACCESS_CONTROLLED": 158
+    },
+    "public_human_review_comments_exposed": false,
+    "ledger": "releases/RAI-Risk-Taxonomy-2.0-master/validation/L4_Golden_Reference_Ledger.csv"
+  },
+  "score_status_counts": {
+    "L3_MASTER_VALIDATED": 32,
+    "NOT_APPLICABLE": 124,
+    "STALE_AFTER_TEXT_EDIT_NO_EM_RERUN": 383,
+    "STALE_AFTER_HUMAN_REVIEW_NO_EM_RERUN": 31,
+    "HUMAN_REVIEW_ROUND3_NO_EM_RERUN": 23,
+    "HUMAN_REVIEW_ROUND4_NO_EM_RERUN": 22,
+    "HUMAN_REVIEWED_AC19": 2,
+    "L3_MASTER_AI_REWRITE": 5
+  },
+  "validation": {
+    "status": "PASS",
+    "passed": 16,
+    "failed": 0
+  },
+  "artifacts": {
+    "L1_Master.csv": {
+      "sha256": "c7f614bc5862f91b889b688b9f46f443e3467c8a5bb4a88fc5f5cab67742e47d",
+      "rows": 3
+    },
+    "L1_L2_L3_Master.csv": {
+      "sha256": "a1c19788dbbf4cd579bf166eeb297bed7e870212590262481254a6f8b8673cee",
+      "rows": 50
+    },
+    "L4_General.csv": {
+      "sha256": "e83bb0a91f4b1d02d0aa7a6185a5f0b7ed3ae3e8bbeddea7b193f271ffb73917",
+      "rows": 492
+    },
+    "L4_Agentic.csv": {
+      "sha256": "70ad88494efacaccaba6d4b2a18ffadb8ca8c4beb7041b7e653d5af80d667d0f",
+      "rows": 67
+    },
+    "L4_Physical.csv": {
+      "sha256": "ecfbc49545041576358f44def31efbd5ba1eb13deb6bc7ea9b178f7507b15d9a",
+      "rows": 63
+    }
+  },
+  "audit_correction_20260829": "AC-01: G_INT_SELF_007 restored (suicide preparatory/execution separation); see Audit_Correction_Log.csv",
+  "audit_correction_20260829_ac02": "AC-02: 58 redundant cards absorbed across 8 L3s (two-reviewer consensus); IDs retired permanently, no renumbering",
+  "audit_correction_20260829_ac05": "AC-05: populated empty L3s (G_SYS_OREF, P_INT_TAMPER) with 1 split, 1 transfer, 4 new referenced cards",
+  "audit_correction_20260829_ac06": "AC-06: +2 referenced cards for under-3 L3s; -16 consensus-redundant cards in GOV/UNETH",
+  "audit_correction_20260829_ac07": "AC-07: MECE curation across all L3s — 64 consensus absorptions, 18 reattributions, 2 removals",
+  "audit_correction_20260829_ac08": "AC-08: 17 consensus composite cards decomposed into existing detail cards and retired; SELF_004 sharpened; SELF_008 crisis-response failure card added (referenced)",
+  "audit_correction_20260830_ac14": "AC-14: new L3 G_SYS_PERF (Performance and Reliability Failure) created per human review; 10 cards reattributed; L3 master 49->50 rows (47 master + 3 Others)",
+  "audit_correction_20260831_ac16": "AC-16: corrected 35 human-review result annotations against current surviving L4 cards; no L4 card or taxonomy content changed.",
+  "audit_correction_20260831_ac17": "AC-17: added 24 directly matched peer-reviewed journal references, verified through OpenAlex, Crossref, and live DOI resolution; reference-bearing cards increased from 160 to 176."
+}

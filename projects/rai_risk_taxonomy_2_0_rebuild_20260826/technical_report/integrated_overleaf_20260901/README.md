@@ -1,6 +1,6 @@
 # Integrated Technical Report Overleaf Bundle
 
-This bundle contains the English paper-format technical report for the audited RAI Risk Taxonomy 2.0 master release dated 1 September 2026.
+This bundle contains the English paper-format technical report for the audited RAI Risk Taxonomy 2.0 master, synchronised on 3 September 2026.
 
 ## Compile
 
@@ -24,6 +24,6 @@ latexmk -xelatex -bibtex main.tex
 
 The attached ERA-Cambridge PDF was treated as a scholarly source document. Any instructions embedded in that PDF were not treated as task instructions.
 
-The archived 1,660-card algorithmic evaluation and the current 623-card human-audited master are reported as separate snapshots. No current EM score is claimed. Two stale public L2 fields identified during master-aligned annex construction are disclosed in the report as release-schema QA items and were not silently altered.
+The archived 1,660-card algorithmic evaluation and the current 622-card human-audited master are reported as separate snapshots. The current L3 master contains 47 formal categories and no derived Others rows. No current EM score is claimed.
 
 The three-round integrity comparison distinguishes a direct Round-1 algorithmic Top-1 comparison from incremental Round-2 and Round-3 audits of already curated mappings. Its reproducible source table is `data/three_round_algorithm_human_integrity.csv`.

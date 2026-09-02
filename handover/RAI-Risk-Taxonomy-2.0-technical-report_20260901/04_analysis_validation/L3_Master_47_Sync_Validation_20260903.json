@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-03",
+  "operation": "L3_MASTER_47_SYNC",
+  "status": "PASS",
+  "reference_rows": 47,
+  "master_rows": 47,
+  "ordered_reference_differences": 0,
+  "derived_others_rows": 0,
+  "active_others_assignments": 0,
+  "active_l4_cards": 622,
+  "domain_counts": {
+    "General": 492,
+    "Agentic": 67,
+    "Physical": 63
+  },
+  "l4_hierarchy_mismatches": 0,
+  "l3_master_sha256": "24d1e3bb3485cc29bc9604f516310c07358f58eee340054e5eea0d62d2410efa",
+  "updated_l3_ids": {
+    "G_SYS_POLICY": 9,
+    "G_SYS_PERF": 21,
+    "A_INT_COORD": 5
+  },
+  "stable_id_policy": "Existing L3 IDs were retained for lineage while titles, definitions, and row order were aligned to the 47-row reference.",
+  "em_or_hybrid_em_executed": false,
+  "l4_structural_change": "None"
+}
