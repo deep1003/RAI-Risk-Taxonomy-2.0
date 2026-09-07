@@ -51,27 +51,6 @@ a{color:inherit}
 .sources li{font-size:12.5px;color:var(--muted)}.sources li a{color:var(--general);text-decoration:none}
 .note{font-size:12px;color:var(--muted);margin-top:18px;padding:12px 14px;background:#fffaf0;border:1px solid #f4e2c0;border-radius:10px}
 @media(max-width:640px){.sources ul{grid-template-columns:1fr}.term__head .ko{width:100%}.count{width:100%;margin:4px 0 0}}
-.l3-proposals{scroll-margin-top:118px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:22px 0 26px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
-.l3-proposals h2{margin:0 0 6px;font-size:21px;color:var(--navy)}
-.l3-proposals .lead{margin:0;color:var(--muted);font-size:13.5px}
-.proposal-summary{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
-.proposal-pill{background:#eef2fb;color:#26428f;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
-.proposal-domain{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}
-.proposal-domain h3{margin:0 0 8px;font-size:16px}
-.proposal-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-.proposal-table{width:100%;border-collapse:collapse;min-width:880px;font-size:12.5px;line-height:1.45}
-.proposal-table th{background:#f8fafc;color:#344054;text-align:left;font-size:11.5px;letter-spacing:.02em}
-.proposal-table th,.proposal-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-.proposal-table tr:last-child td{border-bottom:0}
-.proposal-table .pid{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#344054;white-space:nowrap}
-.proposal-table .ko-name{color:var(--navy);font-weight:650}
-.proposal-table .reason{color:var(--muted)}
-.proposal-status{display:inline-block;border-radius:999px;padding:2px 7px;font-size:10.5px;font-weight:700;white-space:nowrap}
-.proposal-status--change{background:#fff1e6;color:#9a3412}
-.proposal-status--retain{background:#ecfdf3;color:#027a48}
-.proposal-source{margin:12px 0 0;font-size:12px;color:var(--muted)}
-.proposal-source a{color:var(--general);text-decoration:none}.proposal-source a:hover{text-decoration:underline}
-@media(max-width:640px){.l3-proposals{padding:16px 13px}.l3-proposals h2{font-size:18px}.proposal-table{font-size:12px}}
 </style>
 </head>
 <body>
@@ -93,91 +72,8 @@ a{color:inherit}
       </div>
       <span class="count" id="count">379개 표시</span>
     </div>
-    <div class="letterbar"><a href="#L3NAMES">L3 제안</a><a href="#LA">A</a><a href="#LB">B</a><a href="#LC">C</a><a href="#LD">D</a><a href="#LE">E</a><a href="#LF">F</a><a href="#LG">G</a><a href="#LH">H</a><a href="#LI">I</a><a href="#LJ">J</a><a href="#LL">L</a><a href="#LM">M</a><a href="#LN">N</a><a href="#LO">O</a><a href="#LP">P</a><a href="#LR">R</a><a href="#LS">S</a><a href="#LT">T</a><a href="#LU">U</a><a href="#LV">V</a><a href="#LW">W</a></div>
+    <div class="letterbar"><a href="#LA">A</a><a href="#LB">B</a><a href="#LC">C</a><a href="#LD">D</a><a href="#LE">E</a><a href="#LF">F</a><a href="#LG">G</a><a href="#LH">H</a><a href="#LI">I</a><a href="#LJ">J</a><a href="#LL">L</a><a href="#LM">M</a><a href="#LN">N</a><a href="#LO">O</a><a href="#LP">P</a><a href="#LR">R</a><a href="#LS">S</a><a href="#LT">T</a><a href="#LU">U</a><a href="#LV">V</a><a href="#LW">W</a></div>
   </div>
-<!-- L3_NAME_PROPOSALS_START -->
-<section class="l3-proposals" id="L3NAMES" aria-labelledby="l3-proposal-title">
-  <h2 id="l3-proposal-title">L3 리스크 명칭 정비 제안</h2>
-  <p class="lead">Before는 첨부된 최종 L3 목록의 현행 명칭이며, After는 정의 범위, 관찰 가능한 위해, 한·영 개념 대응을 기준으로 정비한 검토안입니다. 이 표는 현행 L3 마스터를 변경하지 않습니다.</p>
-  <div class="proposal-summary">
-    <span class="proposal-pill">전체 47개</span>
-    <span class="proposal-pill">개정 제안 24개</span>
-    <span class="proposal-pill">유지 23개</span>
-  </div>
-  <section class="proposal-domain">
-    <h3>General AI <span class="ko-name">범용 AI</span> · 33개</h3>
-    <div class="proposal-table-wrap"><table class="proposal-table">
-      <thead><tr><th>ID</th><th>Before</th><th>After</th><th>판정</th><th>제안 근거</th></tr></thead>
-      <tbody>
-      <tr><td class="pid">G_INT_VIOL</td><td>Violence<br><span class="ko-name">폭력</span></td><td>Violence Promotion and Facilitation<br><span class="ko-name">폭력 조장·지원</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">AI가 폭력을 생성·미화하거나 실행을 지원한다는 정의의 직접 피해를 명시</td></tr>
-      <tr><td class="pid">G_INT_SEX</td><td>Sexual Harm and Exploitation<br><span class="ko-name">성적 위해·착취</span></td><td>Sexual Harm and Exploitation<br><span class="ko-name">성적 위해·착취</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_SELF</td><td>Self-harm<br><span class="ko-name">자해</span></td><td>Self-harm<br><span class="ko-name">자해</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_ALLOC</td><td>Allocative Discrimination<br><span class="ko-name">배분적 차별</span></td><td>Allocative Discrimination<br><span class="ko-name">배분적 차별</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_REPR</td><td>Representational Harm and Stereotyping<br><span class="ko-name">재현적 피해·고정관념</span></td><td>Representational Harm and Stereotyping<br><span class="ko-name">재현적 피해·고정관념</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_VALUE</td><td>Value Imposition and Normative Homogenization<br><span class="ko-name">가치 부과·규범 동질화</span></td><td>Value Imposition and Normative Homogenization<br><span class="ko-name">가치 부과·규범 동질화</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_POL</td><td>Political Bias and Manipulation<br><span class="ko-name">정치적 편향·조작</span></td><td>Political Bias and Manipulation<br><span class="ko-name">정치적 편향·조작</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_PRIV</td><td>Privacy Violation<br><span class="ko-name">개인정보 침해</span></td><td>Privacy and Personal Information Infringement<br><span class="ko-name">개인정보·프라이버시 침해</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">개인정보 처리 위험과 사생활·자기결정권 침해를 함께 포섭</td></tr>
-      <tr><td class="pid">G_INT_ILLEGAL</td><td>Illegal Conduct<br><span class="ko-name">불법 행위</span></td><td>Illegal Conduct Facilitation<br><span class="ko-name">불법 행위 조장·지원</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">AI가 불법 행위를 가능하게 하거나 지원하는 작동 관계를 명시</td></tr>
-      <tr><td class="pid">G_INT_UNETH</td><td>Unethical Conduct and Manipulation<br><span class="ko-name">비윤리 행위·조작</span></td><td>Unethical Conduct and Manipulation<br><span class="ko-name">비윤리 행위·조작</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_COPY</td><td>Copyright Infringement<br><span class="ko-name">저작권 침해</span></td><td>Copyright Infringement<br><span class="ko-name">저작권 침해</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_INT_WEAP</td><td>Weaponization<br><span class="ko-name">무기화</span></td><td>Weaponization and Harmful Capability Enablement<br><span class="ko-name">무기화·유해 역량 지원</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">무기 자체뿐 아니라 사이버·CBRN 등 유해 역량 지원 범위를 명시</td></tr>
-      <tr><td class="pid">G_INT_ANTH</td><td>Anthropomorphism<br><span class="ko-name">의인화</span></td><td>Misleading Anthropomorphism<br><span class="ko-name">오인 유발 의인화</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">의인화 일반이 아니라 능력·감정·정체성에 관한 오인 위험으로 한정</td></tr>
-      <tr><td class="pid">G_INT_REL</td><td>Unhealthy Human-AI Relationship<br><span class="ko-name">인간-AI의 해로운 관계</span></td><td>Harmful Human-AI Relationships<br><span class="ko-name">해로운 인간-AI 관계</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">영문과 한국어의 위해 강도와 복수 관계 범위를 일치</td></tr>
-      <tr><td class="pid">G_SYS_OREF</td><td>Over-Refusal<br><span class="ko-name">과도한 거절</span></td><td>Excessive Refusal<br><span class="ko-name">과도한 거절</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">불필요한 하이픈을 제거하고 현행 한국어와 직접 대응</td></tr>
-      <tr><td class="pid">G_SYS_OEXT</td><td>Over-Extension<br><span class="ko-name">역량 초과 수행</span></td><td>Capability Overreach<br><span class="ko-name">역량 범위 초과 수행</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">검증된 역량 범위를 넘어 수행한다는 측정 가능한 실패 조건을 명시</td></tr>
-      <tr><td class="pid">G_SYS_INPUT</td><td>Input Comprehension Failure<br><span class="ko-name">입력 이해 실패</span></td><td>Input Comprehension Failure<br><span class="ko-name">입력 이해 실패</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SYS_MISINFO</td><td>Misinformation<br><span class="ko-name">허위정보</span></td><td>False and Misleading Information<br><span class="ko-name">허위·오인 정보</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">사실과 다른 정보와 오인을 유발하는 정보를 함께 포섭</td></tr>
-      <tr><td class="pid">G_SYS_CONTEXT</td><td>Context-Awareness Failure<br><span class="ko-name">맥락 인식 실패</span></td><td>Contextual Understanding Failure<br><span class="ko-name">맥락 이해 실패</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">단순 인식보다 대화·사용자·제약조건의 이해 실패라는 정의에 정합화</td></tr>
-      <tr><td class="pid">G_SYS_INCONS</td><td>Inconsistency<br><span class="ko-name">비일관성</span></td><td>Output Inconsistency<br><span class="ko-name">출력 비일관성</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">동일·유사 입력에서 발생하는 출력 변동이라는 관찰 대상을 명시</td></tr>
-      <tr><td class="pid">G_SYS_OVERCONF</td><td>Overconfidence<br><span class="ko-name">과도한 확신</span></td><td>Unwarranted Confidence<br><span class="ko-name">근거 없는 확신</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">확신 일반이 아니라 근거·불확실성과 불일치하는 표현 위험으로 한정</td></tr>
-      <tr><td class="pid">G_SYS_CONTEST</td><td>Non-Contestability<br><span class="ko-name">이의제기 차단</span></td><td>Lack of Contestability<br><span class="ko-name">이의제기 가능성 부족</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">절대적 차단보다 이의제기·정정·구제 수단의 불충분성을 포섭</td></tr>
-      <tr><td class="pid">G_SYS_SECADV</td><td>Security and Adversarial Robustness Failure<br><span class="ko-name">보안·적대적 견고성 실패</span></td><td>Security and Adversarial Robustness Failure<br><span class="ko-name">보안·적대적 견고성 실패</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SYS_POLICY</td><td>Confidential Information Disclosure<br><span class="ko-name">기밀정보 노출</span></td><td>Confidential Information Disclosure<br><span class="ko-name">기밀정보 노출</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SYS_TRANS</td><td>Lack of Transparency<br><span class="ko-name">투명성 부족</span></td><td>Lack of Transparency<br><span class="ko-name">투명성 부족</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SYS_PERF</td><td>Out-of-Domain Performance Degradation<br><span class="ko-name">운영영역 이탈 성능 저하</span></td><td>Out-of-Domain Performance Degradation<br><span class="ko-name">운영영역 이탈 성능 저하</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SYS_EVAL</td><td>Evaluation and Assurance Failure<br><span class="ko-name">평가·검증 실패</span></td><td>Evaluation and Assurance Failure<br><span class="ko-name">평가·검증 실패</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SOC_ECON</td><td>Economic and Employment Disruption<br><span class="ko-name">경제·고용 충격</span></td><td>Economic and Employment Disruption<br><span class="ko-name">경제·고용 충격</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SOC_POWER</td><td>Inequality and Power Concentration<br><span class="ko-name">불평등·권력 집중</span></td><td>Inequality and Power Concentration<br><span class="ko-name">불평등·권력 집중</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SOC_DEMOC</td><td>Erosion of Democracy and Civic Order<br><span class="ko-name">민주주의·시민 질서 약화</span></td><td>Erosion of Democracy and Civic Order<br><span class="ko-name">민주주의·시민 질서 약화</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SOC_ENV</td><td>Environmental and Sustainability Impact<br><span class="ko-name">환경·지속가능성 영향</span></td><td>Environmental and Sustainability Harm<br><span class="ko-name">환경·지속가능성 위해</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">긍정적 영향도 포함할 수 있는 impact 대신 위험 범주임을 명시</td></tr>
-      <tr><td class="pid">G_SOC_CULT</td><td>Cultural and Epistemic Erosion<br><span class="ko-name">문화·지식 생태계 침식</span></td><td>Cultural and Epistemic Erosion<br><span class="ko-name">문화·지식 생태계 침식</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">G_SOC_GOV</td><td>Governance and Accountability Void<br><span class="ko-name">거버넌스·책임 공백</span></td><td>Governance and Accountability Gaps<br><span class="ko-name">거버넌스·책임성 공백</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">거버넌스와 책임성의 제도적 공백을 병렬로 명확화</td></tr>
-      </tbody>
-    </table></div>
-  </section>
-  <section class="proposal-domain">
-    <h3>Agentic AI <span class="ko-name">에이전틱 AI</span> · 9개</h3>
-    <div class="proposal-table-wrap"><table class="proposal-table">
-      <thead><tr><th>ID</th><th>Before</th><th>After</th><th>판정</th><th>제안 근거</th></tr></thead>
-      <tbody>
-      <tr><td class="pid">A_SYS_GOAL</td><td>Goal Misalignment<br><span class="ko-name">목표 불일치</span></td><td>Goal Misalignment<br><span class="ko-name">목표 불일치</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">A_SYS_AUTH</td><td>Excessive Authority and Agency<br><span class="ko-name">과도한 권한·자율성</span></td><td>Excessive Authority and Autonomous Agency<br><span class="ko-name">과도한 권한·자율적 행위능력</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">권한과 독립적으로 행동하는 능력을 구분하여 agency의 의미를 보존</td></tr>
-      <tr><td class="pid">A_SYS_SELFCOR</td><td>Self-Correction Failure<br><span class="ko-name">자기 교정 실패</span></td><td>Self-Correction Failure<br><span class="ko-name">자기 교정 실패</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">A_SYS_DECEPT</td><td>Deception and Scheming<br><span class="ko-name">기만·책략</span></td><td>Deception and Scheming<br><span class="ko-name">기만·책략</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">A_SYS_TRACE</td><td>Accountability and Traceability Gap<br><span class="ko-name">책임 소재·추적 불명확</span></td><td>Accountability and Traceability Gaps<br><span class="ko-name">책임 소재·추적성 공백</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">책임 주체와 행위 기록 추적의 두 결함을 병렬로 명시</td></tr>
-      <tr><td class="pid">A_INT_CASCADE</td><td>Cascading Failure and Instability<br><span class="ko-name">연쇄 실패·불안정</span></td><td>Cascading Failure and Instability<br><span class="ko-name">연쇄 실패·불안정</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">A_INT_COORD</td><td>Coordination Failure<br><span class="ko-name">협조 실패</span></td><td>Coordination and Cooperation Failure<br><span class="ko-name">조정·협력 실패</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">다중 에이전트의 조정과 공동 수행 실패를 함께 포섭</td></tr>
-      <tr><td class="pid">A_INT_CONFLICT</td><td>Competitive Conflict<br><span class="ko-name">경쟁적 갈등</span></td><td>Adversarial Agent Conflict<br><span class="ko-name">에이전트 간 경쟁적 갈등</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">일반 경쟁이 아니라 에이전트 간 적대적 상호작용으로 범위를 한정</td></tr>
-      <tr><td class="pid">A_INT_COLLUSION</td><td>Collusion<br><span class="ko-name">담합·결탁</span></td><td>Agent Collusion<br><span class="ko-name">에이전트 간 담합·결탁</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">시장 일반의 담합과 구별되는 다중 에이전트 행위를 명시</td></tr>
-      </tbody>
-    </table></div>
-  </section>
-  <section class="proposal-domain">
-    <h3>Physical AI <span class="ko-name">피지컬 AI</span> · 5개</h3>
-    <div class="proposal-table-wrap"><table class="proposal-table">
-      <thead><tr><th>ID</th><th>Before</th><th>After</th><th>판정</th><th>제안 근거</th></tr></thead>
-      <tbody>
-      <tr><td class="pid">P_SYS_STATE</td><td>Physical State Estimation and Sensor-Fusion Failure<br><span class="ko-name">물리 상태 추정·센서 융합 실패</span></td><td>Physical State Estimation and Sensor-Fusion Failure<br><span class="ko-name">물리 상태 추정·센서 융합 실패</span></td><td><span class="proposal-status proposal-status--retain">유지</span></td><td class="reason">현행 명칭이 정의 범위와 한·영 개념 대응을 충분히 반영</td></tr>
-      <tr><td class="pid">P_SYS_CONTROL</td><td>Unsafe Physical Control and Actuation<br><span class="ko-name">안전하지 않은 물리 제어·구동</span></td><td>Unsafe Physical Control and Actuation Failure<br><span class="ko-name">불안전한 물리 제어·구동 실패</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">물리적 제어 출력과 구동 계통의 실패라는 위험 형태를 명시</td></tr>
-      <tr><td class="pid">P_SYS_HARDWARE</td><td>Hardware and Mechanical Integrity Failure<br><span class="ko-name">하드웨어·기계 무결성 결함</span></td><td>Hardware and Mechanical Integrity Failure<br><span class="ko-name">하드웨어·기계적 무결성 실패</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">영문 failure와 한국어 실패를 맞추고 기계적 무결성의 의미를 보존</td></tr>
-      <tr><td class="pid">P_INT_SAFETY</td><td>Human-Robot Physical Safety Failure<br><span class="ko-name">인간-로봇 물리 안전 실패</span></td><td>Human-Robot Physical Safety Failure<br><span class="ko-name">인간-로봇 물리적 안전 실패</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">physical의 수식 범위를 자연스러운 한국어로 정비</td></tr>
-      <tr><td class="pid">P_INT_TAMPER</td><td>Physical Tampering and Sabotage<br><span class="ko-name">물리적 변조·파괴</span></td><td>Physical Tampering and Sabotage<br><span class="ko-name">물리적 변조·파괴 행위</span></td><td><span class="proposal-status proposal-status--change">개정 제안</span></td><td class="reason">sabotage를 단순 파손보다 의도적 파괴 행위로 명확화</td></tr>
-      </tbody>
-    </table></div>
-  </section>
-  <p class="proposal-source">출처: 사용자가 제공한 <strong>AI2X-L3 최종 리스트 (2026-09-07)</strong>. <a href="data/glossary/l3_name_proposals_20260907.csv">Before/After 제안 데이터(CSV)</a> · <a href="data/glossary/l3_name_proposals_20260907.json">감사 데이터(JSON)</a></p>
-</section>
-<!-- L3_NAME_PROPOSALS_END -->
   <div id="list">
 <h2 class="letter" id="LA">A</h2>
 <article class="term" data-cat="risk" data-name="abuse attack (aml) 오용 공격">
