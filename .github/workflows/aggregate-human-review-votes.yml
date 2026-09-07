@@ -34,6 +34,7 @@ jobs:
           python3 scripts/aggregate_human_review_votes.py \
             --issues-json "${RUNNER_TEMP}/review_issues.json" \
             --cards-json public/data/releases/RAI-Risk-Taxonomy-2.0-master/cards.json \
+            --lineage-csv releases/RAI-Risk-Taxonomy-2.0-master/validation/Source_Output_Lineage_Edges.csv \
             --output-dir review_logs
 
       - name: Commit changed log exports

@@ -39,6 +39,39 @@ def flatten_issues(payload) -> list[dict]:
     return payload if isinstance(payload, list) else []
 
 
+def card_index(cards: list[dict], lineage_csv: Path | None) -> tuple[dict[str, dict], set[str]]:
+    """Index current cards by immutable source row, using lineage when needed.
+
+    The public golden-set payload intentionally omits internal provenance fields.
+    Historical review issues still identify cards by source_row_id, so the
+    release lineage ledger is the authoritative bridge. Split sources pointing
+    to multiple current cards are rejected as ambiguous instead of guessed.
+    """
+    by_source = {
+        card["source_row_id"]: card
+        for card in cards
+        if card.get("source_row_id")
+    }
+    ambiguous: set[str] = set()
+    if not lineage_csv:
+        return by_source, ambiguous
+
+    by_l4 = {card.get("l4_id"): card for card in cards if card.get("l4_id")}
+    with lineage_csv.open(encoding="utf-8-sig", newline="") as handle:
+        for edge in csv.DictReader(handle):
+            source_row_id = (edge.get("source_row_id") or "").strip()
+            card = by_l4.get((edge.get("L4_ID") or "").strip())
+            if not source_row_id or not card:
+                continue
+            previous = by_source.get(source_row_id)
+            if previous and previous.get("l4_id") != card.get("l4_id"):
+                ambiguous.add(source_row_id)
+                by_source.pop(source_row_id, None)
+            elif source_row_id not in ambiguous:
+                by_source[source_row_id] = card
+    return by_source, ambiguous
+
+
 def extract_payload(body: str) -> dict:
     if MARKER not in (body or ""):
         raise ValueError("SCHEMA_MARKER_MISSING")
@@ -59,6 +92,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--issues-json", type=Path, required=True)
     parser.add_argument("--cards-json", type=Path, required=True)
+    parser.add_argument("--lineage-csv", type=Path)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--min-reviewers", type=int, default=3)
     args = parser.parse_args()
@@ -66,7 +100,7 @@ def main() -> None:
     issues = flatten_issues(load_json(args.issues_json))
     cards_doc = load_json(args.cards_json)
     cards = cards_doc["cards"]
-    cards_by_source = {card["source_row_id"]: card for card in cards}
+    cards_by_source, ambiguous_sources = card_index(cards, args.lineage_csv)
 
     audit_rows: list[dict] = []
     valid_rows: list[dict] = []
@@ -87,6 +121,10 @@ def main() -> None:
         try:
             payload = extract_payload(body)
             source_row_id = payload.get("source_row_id")
+            if not source_row_id:
+                raise ValueError("SOURCE_ROW_ID_MISSING")
+            if source_row_id in ambiguous_sources:
+                raise ValueError("SOURCE_ROW_AMBIGUOUS_IN_CURRENT_RELEASE")
             card = cards_by_source.get(source_row_id)
             if not card:
                 raise ValueError("SOURCE_ROW_NOT_IN_CURRENT_RELEASE")
@@ -94,7 +132,10 @@ def main() -> None:
                 raise ValueError("RELEASE_ID_MISMATCH")
             if payload.get("review_snapshot_id") != card.get("review_snapshot_id"):
                 raise ValueError("STALE_REVIEW_SNAPSHOT")
-            candidates = {candidate["l3_id"] for candidate in card.get("review_candidates", [])[:2]}
+            review_candidates = card.get("review_candidates") or []
+            if len(review_candidates) < 2:
+                raise ValueError("CURRENT_RELEASE_REVIEW_CANDIDATES_UNAVAILABLE")
+            candidates = {candidate["l3_id"] for candidate in review_candidates[:2]}
             selected_l3_id = payload.get("selected_l3_id")
             if selected_l3_id not in candidates:
                 raise ValueError("SELECTED_L3_NOT_CURRENT_CANDIDATE")
@@ -109,10 +150,10 @@ def main() -> None:
                 "current_l3_id": card["primary_l3_id"],
                 "selected_l3_id": selected_l3_id,
                 "selected_rank": payload.get("selected_rank"),
-                "candidate_1_l3_id": card["review_candidates"][0]["l3_id"],
-                "candidate_1_em_score": card["review_candidates"][0]["em_score"],
-                "candidate_2_l3_id": card["review_candidates"][1]["l3_id"],
-                "candidate_2_em_score": card["review_candidates"][1]["em_score"],
+                "candidate_1_l3_id": review_candidates[0]["l3_id"],
+                "candidate_1_em_score": review_candidates[0]["em_score"],
+                "candidate_2_l3_id": review_candidates[1]["l3_id"],
+                "candidate_2_em_score": review_candidates[1]["em_score"],
                 "automatic_reassignment_authorised": False,
             }
             valid_rows.append(row)
