@@ -272,9 +272,22 @@ function renderPlot() {
   els.plot.appendChild(edgeFragment);
 
   const nodeFragment = document.createDocumentFragment();
-  state.filtered.forEach((point) => {
+  const selected = state.filtered.find((point) => point.id === state.selectedId);
+  const drawOrder = selected
+    ? [...state.filtered.filter((point) => point.id !== state.selectedId), selected]
+    : state.filtered;
+  drawOrder.forEach((point) => {
     const circle = document.createElementNS(SVG_NS, "circle");
     const xy = scaledCoordinates(point.network, bounds);
+    if (point.id === state.selectedId) {
+      const halo = document.createElementNS(SVG_NS, "circle");
+      halo.setAttribute("cx", xy.x);
+      halo.setAttribute("cy", xy.y);
+      halo.setAttribute("r", radiusForPoint(point) + 6);
+      halo.setAttribute("class", "selected-halo");
+      halo.setAttribute("aria-hidden", "true");
+      nodeFragment.appendChild(halo);
+    }
     circle.setAttribute("cx", xy.x);
     circle.setAttribute("cy", xy.y);
     circle.setAttribute("r", radiusForPoint(point));
@@ -600,13 +613,22 @@ function renderCcdf(svg, points, metric, title, xLabel) {
     <text x="16" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90 16 ${margin.top + plotHeight / 2})" class="diagnostic-label">P(X ≥ x) · log scale</text>
   `;
   svg.querySelectorAll("[data-risk-id]").forEach((element) => {
-    element.addEventListener("click", () => {
+    const activateDiagnosticNode = () => {
+      const id = element.dataset.riskId;
       state.analysisView = "network";
       els.viewButtons.forEach((button) => {
         button.classList.toggle("active", button.dataset.analysisView === "network");
       });
-      selectPoint(element.dataset.riskId);
       renderActiveView();
+      activatePoint(id);
+    };
+    element.setAttribute("role", "button");
+    element.setAttribute("tabindex", "0");
+    element.addEventListener("click", activateDiagnosticNode);
+    element.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      activateDiagnosticNode();
     });
   });
 }

@@ -392,6 +392,13 @@ select {
   stroke-width: 3;
 }
 
+.selected-halo {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: #111827;
+  stroke-width: 2.5;
+  pointer-events: none;
+}
+
 .centroid {
   pointer-events: none;
 }
