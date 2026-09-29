@@ -70,10 +70,10 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function bilingual(en, ko) {
-  if (!ko) return escapeHtml(en);
-  return `${escapeHtml(en)} (${escapeHtml(ko)})`;
-}
+const REFERENCE_TITLES_EN = new Map([
+  ["OECD AI Incidents Monitor; 지능형로봇법 점검 제도", "OECD AI Incidents Monitor; Intelligent Robot Act review system"],
+  ["개인정보보호법 (Personal Information Protection Act, KR)", "Personal Information Protection Act (Republic of Korea)"],
+]);
 
 function classForDomain(domain) {
   if (domain === "Physical AI") return "physical";
@@ -110,7 +110,7 @@ function populateFilters() {
     els.l3,
     uniqueSorted(
       state.points,
-      (point) => `${point.path.l3_label_en} (${point.path.l3_label_ko})`,
+      (point) => point.path.l3_label_en,
     ),
     "All L3 categories",
   );
@@ -214,7 +214,7 @@ function applyFilters() {
     if (query && !pointText(point).includes(query)) return false;
     if (domain && point.path.l1_label_en !== domain) return false;
     if (l2 && point.path.l2_label_en !== l2) return false;
-    if (l3 && `${point.path.l3_label_en} (${point.path.l3_label_ko})` !== l3) return false;
+    if (l3 && point.path.l3_label_en !== l3) return false;
     if (hold === "hold" && !point.decision_required) return false;
     if (hold === "nonhold" && point.decision_required) return false;
     return true;
@@ -466,27 +466,27 @@ function renderDetails(point) {
     .join(" · ");
   const refs = point.references
     .map((ref) => {
-      const title = escapeHtml(ref.title || "Reference");
+      const title = escapeHtml(REFERENCE_TITLES_EN.get(ref.title) || ref.title || "Reference");
       const url = escapeHtml(ref.url || "#");
       const type = escapeHtml(ref.type || "reference");
       return `<a href="${url}" target="_blank" rel="noopener noreferrer">${title} ↗</a><small>${type}</small>`;
     })
     .join("");
   const reviewPath = point.semantic_review_path
-    ? `<div class="path"><strong>Semantic review path</strong><br>${bilingual(point.semantic_review_path.l2_label_en, point.semantic_review_path.l2_label_ko)} › ${bilingual(point.semantic_review_path.l3_label_en, point.semantic_review_path.l3_label_ko)}</div>`
+    ? `<div class="path"><strong>Semantic review path</strong><br>${escapeHtml(point.semantic_review_path.l2_label_en)} › ${escapeHtml(point.semantic_review_path.l3_label_en)}</div>`
     : "";
   els.cardDetails.innerHTML = `
     <div class="badge-row">
       <span class="badge">${escapeHtml(point.id)}</span>
-      <span class="badge ${domainClass}">${bilingual(point.path.l1_label_en, point.path.l1_label_ko)}</span>
+      <span class="badge ${domainClass}">${escapeHtml(point.path.l1_label_en)}</span>
       ${point.decision_required ? '<span class="badge hold">HOLD</span>' : ""}
     </div>
-    <h3>${bilingual(point.label_en, point.label_ko)}</h3>
+    <h3>${escapeHtml(point.label_en)}</h3>
     <div class="path">
       <strong>Taxonomy path</strong><br>
-      ${bilingual(point.path.l1_label_en, point.path.l1_label_ko)} ›
-      ${bilingual(point.path.l2_label_en, point.path.l2_label_ko)} ›
-      ${bilingual(point.path.l3_label_en, point.path.l3_label_ko)}
+      ${escapeHtml(point.path.l1_label_en)} ›
+      ${escapeHtml(point.path.l2_label_en)} ›
+      ${escapeHtml(point.path.l3_label_en)}
     </div>
     ${reviewPath}
     <div class="systems-card">
@@ -497,7 +497,6 @@ function renderDetails(point) {
     <div class="definition">
       <strong>Risk definition</strong>
       <p>${escapeHtml(point.definition_en)}</p>
-      ${point.definition_ko ? `<p>${escapeHtml(point.definition_ko)}</p>` : ""}
     </div>
     <div class="metrics">
       <div class="metric"><span>Severity</span><strong>${formatNumber(point.severity)}</strong></div>
